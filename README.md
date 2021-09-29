@@ -22,10 +22,24 @@
 ## Download/Install Postgres
 https://www.postgresql.org/download/
 
+### Create database
+`psql -U postgres`
+Then enter in your password. (You may have to add postgres to your path variable)
+
+Create the database
+`CREATE DATABASE fastDB;` you can then quit with `exit;`
+
 ## Copy settings
 `cp backend/settings.example backend/settings.py`
 
 Change password in `settings.py` to same password used in Postgres installation
+
+## Make Migrations
+`python manage.py makemigrations backend`
+
+Then
+
+`python manage.py migrate backend`
 
 ## Create superuser
 `python manage.py createsuperuser`

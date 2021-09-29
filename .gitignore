@@ -8,6 +8,7 @@ media
 venv/
 backend/settings.py
 db/
+migrations/
 
 # Backup files
 *.bak 
