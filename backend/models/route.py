@@ -1,6 +1,6 @@
 from django.db import models
 
-from backend.models import Driver
+from backend.models.driver import Driver
 
 
 class Route(models.Model):

@@ -10,5 +10,3 @@ class Availability(models.Model):
     thursday = models.BooleanField()
     friday = models.BooleanField()
     saturday = models.BooleanField()
-
-    driver = models.ForeignKey('Driver', on_delete=models.CASCADE)
