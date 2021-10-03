@@ -1,5 +1,4 @@
 from django.db import models
-# from backend.models import driver as DriverModel
 
 
 class Availability(models.Model):
@@ -10,3 +9,5 @@ class Availability(models.Model):
     thursday = models.BooleanField()
     friday = models.BooleanField()
     saturday = models.BooleanField()
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
+    modified_on = models.DateTimeField(auto_now=True, editable=False)
