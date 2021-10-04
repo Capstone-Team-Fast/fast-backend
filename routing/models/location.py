@@ -24,3 +24,21 @@ class Location(StructuredNode):
 
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
+    def __init__(self, uid, address, city, state, zipcode, is_center, created_on, modified_on):
+        self.uid = uid
+        self.address = address
+        self.city = city
+        self.state = state
+        self.zipcode = zipcode
+        self.is_center = is_center
+        self.created_on = created_on
+        self.modified_on = modified_on
+
+    def __hash__(self):
+        return hash((Location.address, Location.city, Location.state, Location.zipcode))
+
+    def __eq__(self, other):
+        if not isinstance(other, type(self)):
+            return NotImplemented
+        return (self.address == other.address and self.city == other.city
+                and self.state == other.state and self.zipcode == other.zipcode)
