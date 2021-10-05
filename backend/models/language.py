@@ -1,8 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Language(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, unique=True)
-
-    user = models.ManyToManyField(User)
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
+    modified_on = models.DateTimeField(auto_now=True, editable=False)

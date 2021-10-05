@@ -1,3 +1,12 @@
+#Team Fast Backend
+This project's goal is to create a framework that has been designed to efficiently route delivery drivers coming from a single location. It also provides an easy-to-use interface (on the frontend) for managers that create routes, as well as the drivers that deliver using those routes. 
+
+##Milestone 1 Release Notes
+Many of the backend features are currently still in development. Right now all of the models are working in the database and we have begun work on the serializers and views. The serializers will be able to transform python objects to JSON and vice versa. The views will handle our API routes and the type of request (get, post, put, etc.).
+
+Currently, our only working API route is `/locations/`
+
+#Installation
 ## Install and update Python
 
 ## Create a virtual environment
