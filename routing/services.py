@@ -1,5 +1,5 @@
 # https://docs.mapbox.com/api/search/geocoding/
-from routing import models
+from routing.models.location import Location
 
 
 class GeocodeService:
@@ -7,20 +7,20 @@ class GeocodeService:
 
 
 class DistanceMatrixService:
-    @staticmethod
-    def get_distance_matrix(location1: models.Location, location2: models.Location):
-        pass
 
-    @staticmethod
-    def get_distance_matrix(locations: list, location: models.Location):
+    def __init__(self, url=''):
+        self.url = url
+
+    def build_distance_matrix(self, locations: list, location: Location):
+        # list is empty
+        # list is not empty
         pass
 
 
 class DurationMatrixService:
-    @staticmethod
-    def get_duration_matrix(location1: models.Location, location2: models.Location):
-        pass
 
-    @staticmethod
-    def get_duration_matrix(locations: list, location: models.Location):
+    def __init__(self, url=''):
+        self.url = url
+
+    def build_duration_matrix(self, locations: list, location: Location):
         pass

@@ -19,23 +19,15 @@ class Location(StructuredNode):
     zipcode = IntegerProperty(index=True, required=True)
     is_center = BooleanProperty(index=True, default=False)
     # coordinates = PointProperty(unique_index=True, crs='wgs-84')
+    latitude = FloatProperty(index=True)
+    longitude = FloatProperty(index=True)
     created_on = DateTimeProperty()
     modified_on = DateTimeProperty()
 
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
-    def __init__(self, uid, address, city, state, zipcode, is_center, created_on, modified_on):
-        self.uid = uid
-        self.address = address
-        self.city = city
-        self.state = state
-        self.zipcode = zipcode
-        self.is_center = is_center
-        self.created_on = created_on
-        self.modified_on = modified_on
-
     def __hash__(self):
-        return hash((Location.address, Location.city, Location.state, Location.zipcode))
+        return hash((self.address, self.city, self.state, self.zipcode))
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
