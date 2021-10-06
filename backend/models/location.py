@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Location(models.Model):
+    id = models.AutoField(primary_key=True)
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=250)
     state = models.CharField(max_length=50)
