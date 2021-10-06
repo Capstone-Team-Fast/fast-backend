@@ -18,6 +18,5 @@ class Driver(StructuredNode):
 
     locations = RelationshipTo('routing.models.location.Location', 'SERVES')
     available = RelationshipTo('routing.models.availability.Availability', 'AVAILABLE_ON')
-    # availability = models.ForeignKey(Availability, on_delete=models.CASCADE)
-    # languages = models.ManyToManyField(to=Language)
+    languages = RelationshipTo('routing.models.language.Language', 'SPEAKS')
 

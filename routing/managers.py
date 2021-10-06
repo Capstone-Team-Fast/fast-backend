@@ -1,5 +1,6 @@
 import neomodel
 
+from routing import services
 from routing.models.location import Location
 
 
@@ -31,3 +32,29 @@ class LocationManager:
             return NotImplemented
         self.locations.add(location)
 
+    def add_collection(self, locations):
+        if not locations:
+            return TypeError
+
+        for location in locations:
+            if len(self.locations) == 0:
+                self.add(location)
+            else:
+                if not (location in self.locations):
+                    services.DistanceMatrixService.get_distance_matrix(list(self.locations), location)
+                    self.add(location)
+
+    def is_fully_connected(self):
+        pass
+
+    def get_distance(self, location1, location2):
+        pass
+
+    def get_duration(self, location1, location2):
+        pass
+
+    def get_properties(self):
+        pass
+
+    def size(self):
+        return len(self.locations)
