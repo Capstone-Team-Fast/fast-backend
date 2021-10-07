@@ -5,7 +5,9 @@ from routing.models.location import Location
 
 
 class DriverManager:
-    pass
+    def __init__(self):
+        self.drivers = list()
+
 
 
 class LocationManager:
