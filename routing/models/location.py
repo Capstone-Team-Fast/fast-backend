@@ -1,8 +1,5 @@
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, DateTimeProperty, \
-    UniqueIdProperty, RelationshipTo, Relationship, StructuredRel
-
-
-# from neomodel.contrib.spatial_properties import PointProperty
+    UniqueIdProperty, Relationship, StructuredRel
 
 
 class Weight(StructuredRel):
@@ -25,7 +22,6 @@ class Location(StructuredNode):
     created_on = DateTimeProperty()
     modified_on = DateTimeProperty()
 
-
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
     def __init__(self, *args, **kwargs):
@@ -40,3 +36,21 @@ class Location(StructuredNode):
             return NotImplemented
         return (self.address == other.address and self.city == other.city
                 and self.state == other.state and self.zipcode == other.zipcode)
+
+
+class Pair:
+    def __init__(self, location1: Location, location2: Location):
+        self.location1 = location1
+        self.location2 = location2
+
+    def get_first(self):
+        return self.location1
+
+    def get_second(self):
+        return self.location2
+
+    def get_pair(self):
+        return self.location1, self.location2
+
+    def is_assignable(self):
+        return not (self.location1.is_assigned or self.location2.is_assigned)

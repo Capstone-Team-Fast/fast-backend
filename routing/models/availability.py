@@ -1,4 +1,4 @@
-from neomodel import StructuredNode, StringProperty, ArrayProperty
+from neomodel import StructuredNode, StringProperty
 
 
 class Availability(StructuredNode):

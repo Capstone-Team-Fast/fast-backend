@@ -113,3 +113,15 @@ class LocationManager:
     def __set_locations(self):
         for location in Location.nodes.all():
             self.add(location)
+
+
+class RouteManager:
+    """
+    Uses constraints to build routes and assign them to drivers
+    """
+    def __init__(self, db_connection, drivers: list, locations: list):
+        self.locationManager = LocationManager(db_connection=db_connection)
+        self.drivers = drivers
+        self.locations = locations
+
+
