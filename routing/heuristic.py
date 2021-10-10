@@ -1,2 +1,5 @@
 class Heuristic:
-    pass
+
+    def __init__(self):
+        self.drivers = list()
+

@@ -18,13 +18,19 @@ class Location(StructuredNode):
     state = StringProperty(index=True, required=True)
     zipcode = IntegerProperty(index=True, required=True)
     is_center = BooleanProperty(index=True, default=False)
+    demand = IntegerProperty(index=True)
     # coordinates = PointProperty(unique_index=True, crs='wgs-84')
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
     created_on = DateTimeProperty()
     modified_on = DateTimeProperty()
 
+
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
+
+    def __init__(self, *args, **kwargs):
+        super(Location, self).__init__(args, kwargs)
+        self.is_assigned = False
 
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))

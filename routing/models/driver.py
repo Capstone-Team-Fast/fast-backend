@@ -3,6 +3,7 @@ from datetime import datetime
 from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
 
 from route import Route
+from routing.models.location import Location
 
 
 class Driver(StructuredNode):
@@ -21,9 +22,12 @@ class Driver(StructuredNode):
     is_available_on = RelationshipTo('routing.models.availability.Availability', 'AVAILABLE_ON')
     speaks = RelationshipTo('routing.models.language.Language', 'SPEAKS')
 
-    def __init__(self):
-        super(Driver, self).__init__()
-        self.route = Route()
+    def __init__(self, departure: Location, *args, **kwargs):
+        super(Driver, self).__init__(*args, **kwargs)
+        self.route = Route(departure=departure)
+
+    def add_location(self, location: Location):
+        if
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))
