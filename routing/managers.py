@@ -1,13 +1,14 @@
+from heapq import heappush, heapify, heappop
+
 import neomodel
 
 from routing import services
-from routing.models.location import Location
+from routing.models.location import Location, Pair
 
 
 class DriverManager:
     def __init__(self):
         self.drivers = list()
-
 
 
 class LocationManager:
@@ -119,9 +120,32 @@ class RouteManager:
     """
     Uses constraints to build routes and assign them to drivers
     """
-    def __init__(self, db_connection, drivers: list, locations: list):
+
+    def __init__(self, db_connection: str, drivers: list, locations: list):
         self.locationManager = LocationManager(db_connection=db_connection)
         self.drivers = drivers
         self.locations = locations
 
 
+class SavingsManager:
+    def __init__(self, db_connection: str, depot: Location, locations: list):
+        self.depot = depot
+        self.heap = self.__heapify(locations=locations)
+        self.locationManager = LocationManager(db_connection=db_connection)
+
+    def __heapify(self, locations: list):
+        heap = []
+        heapify(heap)
+        for i in range(len(locations)):
+            for j in range(i + 1, len(locations)):
+                pair = Pair(locations[i], locations[j])
+                savings = self.locationManager.get_distance_savings(depot=self.depot, location1=pair.location1,
+                                                                    location2=pair.location2)
+                heappush(heap, (-1 * savings, pair))
+        return heap
+
+    def __next__(self):
+        if len(self.heap) >= 0:
+            savings, pair = heappop(self.heap)
+            return -1 * savings, pair
+        raise StopIteration
