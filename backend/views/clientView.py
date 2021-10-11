@@ -1,47 +1,48 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from backend.models.location import Location
-from backend.serializers.locationSerializer import LocationSerializer
-from rest_framework import status
 from django.http import Http404
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from backend.models import Client
+from backend.serializers.clientSerializer import ClientSerializer
 
 
-class LocationView(APIView):
+class ClientView(APIView):
 
     def get_object(self, pk):
         try:
-            return Location.objects.get(pk=pk)
-        except Location.DoesNotExist:
+            return Client.objects.get(pk=pk)
+        except Client.DoesNotExist:
             raise Http404
 
     def get(self, request, pk, format=None):
-        location = self.get_object(pk)
-        serializer = LocationSerializer(location)
+        client = self.get_object(pk)
+        serializer = ClientSerializer(client)
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        serializer = LocationSerializer(data=request.data)
+        serializer = ClientSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def put(self, request, pk, format=None):
-        location = self.get_object(pk)
-        serializer = LocationSerializer(location, data=request.data)
+        client = self.get_object(pk)
+        serializer = ClientSerializer(client, data=request.data)
         if serializer.is_valid():
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk, format=None):
-        location = self.get_object(pk)
-        location.delete()
+        client = self.get_object(pk)
+        client.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class LocationListView(APIView):
+class ClientListView(APIView):
 
     def get(self, request, format=None):
-        locations = Location.objects.all()
-        serializer = LocationSerializer(locations, many=True)
+        clients = Client.objects.all()
+        serializer = ClientSerializer(clients, many=True)
         return Response(serializer.data)
