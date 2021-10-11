@@ -12,4 +12,3 @@ class Location(models.Model):
     longitude = models.DecimalField(max_digits=18, decimal_places=15, editable=False)
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
     modified_on = models.DateTimeField(auto_now=True, editable=False)
-
