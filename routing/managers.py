@@ -20,11 +20,11 @@ class LocationManager:
         self.distanceMatrixService = services.DistanceMatrixService()
         self.durationMatrixService = services.DurationMatrixService()
 
-    def delete(self, location: Location):
+    def remove(self, location: Location):
         if len(self.locations) == 0:
             raise StopIteration
         if not isinstance(location, Location):
-            return NotImplemented
+            raise NotImplemented
         self.locations.remove(location)
 
     def get_locations(self) -> list:
@@ -32,7 +32,7 @@ class LocationManager:
 
     def add(self, location: Location):
         if not isinstance(location, Location):
-            return NotImplemented
+            raise NotImplemented
         if location not in self.locations:
             self.distanceMatrixService.build_distance_matrix(list(self.locations), location)
             self.durationMatrixService.build_duration_matrix(list(self.locations), location)
@@ -40,7 +40,7 @@ class LocationManager:
 
     def add_collection(self, locations: list):
         if not locations:
-            return TypeError
+            raise ValueError
 
         for location in locations:
             if len(self.locations) == 0:

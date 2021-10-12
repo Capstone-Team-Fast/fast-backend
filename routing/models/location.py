@@ -39,6 +39,8 @@ class Location(StructuredNode):
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):
+        if not (isinstance(location1, Location) and isinstance(location2, Location)):
+            return NotImplemented
         self.location1 = location1
         self.location2 = location2
 
