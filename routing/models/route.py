@@ -4,14 +4,12 @@ from datetime import datetime
 
 from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, IntegerProperty
 
-from routing.models.driver import Driver
-
 working_dir = os.path.abspath(os.path.join('.'))
 if working_dir not in sys.path:
     sys.path.append(working_dir)
 
 from routing.managers import LocationManager
-from routing.models.location import Location, Pair
+from routing.models.location import Location
 
 
 class Route(StructuredNode):
@@ -24,7 +22,7 @@ class Route(StructuredNode):
     assigned_to = RelationshipTo('routing.models.driver.Driver', 'ASSIGNED_TO')
 
     def __init__(self, departure: Location, *args, **kwargs):
-        super(Route, self).__init__(args, kwargs)
+        super(Route, self).__init__(*args, **kwargs)
         self.locations = list()
         self.locations.append(departure)
         self.departure = departure
@@ -33,10 +31,9 @@ class Route(StructuredNode):
         self.total_distance = 0
         self.previous = self.departure
         self.is_open = True
-        self.driver = None
 
     def add(self, location: Location):
-        if location and not location.is_assigned:
+        if self.is_open and location and not location.is_assigned:
             self.locations.append(location)
             location.is_assigned = True
             self.total_duration += LocationManager.get_duration(location1=self.previous, location2=location)
@@ -61,11 +58,10 @@ class Route(StructuredNode):
         return self.total_quantity
 
     def get_driver(self):
-        return self.driver
+        return None
 
-    def assign_to(self, driver: Driver):
-        self.driver = driver
-        return self.driver is not None
+    def assign_to(self):
+        return None
 
     def get_created_on(self):
         return self.created_on

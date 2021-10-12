@@ -13,20 +13,22 @@ class DriverManager:
 
 class LocationManager:
 
-    def __init__(self, db_connection: neomodel.db):
+    def __init__(self, db_connection: neomodel.db, depot: Location):
+        self.depot = depot
         self.locations = set()
         self.connection = db_connection
         self.distanceMatrixService = services.DistanceMatrixService()
         self.durationMatrixService = services.DurationMatrixService()
-        self.__set_locations()
 
     def delete(self, location: Location):
+        if len(self.locations) == 0:
+            raise StopIteration
         if not isinstance(location, Location):
             return NotImplemented
         self.locations.remove(location)
 
-    def get_locations(self):
-        return self.locations
+    def get_locations(self) -> list:
+        return list(self.locations)
 
     def add(self, location: Location):
         if not isinstance(location, Location):
@@ -47,10 +49,16 @@ class LocationManager:
                 if location not in self.locations:
                     self.add(location)
 
+    def set_depot(self, depot: Location):
+        self.depot = depot
+
     def is_fully_connected(self):
-        pass
+        return False
 
     def get_distance(self, location1: Location, location2: Location):
+        if location1 == location2:
+            return 0.0
+
         if location1 in self.locations and location2 in self.locations:
             return location1.neighbor.relationship(location2).distance
 
@@ -63,6 +71,9 @@ class LocationManager:
         return location1.neighbor.relationship(location2).distance
 
     def get_duration(self, location1: Location, location2: Location):
+        if location1 == location2:
+            return 0.0
+
         if location1 in self.locations and location2 in self.locations:
             return location1.neighbor.relationship(location2).duration
 
@@ -73,27 +84,27 @@ class LocationManager:
             self.add(location2)
         return location1.neighbor.relationship(location2).duration
 
-    def get_distance_savings(self, depot: Location, location1: Location, location2: Location):
-        if depot in self.locations and location1 in self.locations and location2 in self.locations:
-            return self.__get_distance_saved(depot, location1, location2)
-        if depot not in self.locations:
-            self.add(depot)
+    def get_distance_savings(self, location1: Location, location2: Location):
+        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
+            return self.__get_distance_saved(location1, location2)
+        if self.depot not in self.locations:
+            self.add(self.depot)
         if location1 not in self.locations:
             self.add(location1)
         if location2 not in self.locations:
             self.add(location2)
-        return self.__get_distance_saved(depot, location1, location2)
+        return self.__get_distance_saved(location1, location2)
 
-    def get_duration_savings(self, depot: Location, location1: Location, location2: Location):
-        if depot in self.locations and location1 in self.locations and location2 in self.locations:
-            return self.__get_duration_saved(depot, location1, location2)
-        if depot not in self.locations:
-            self.add(depot)
+    def get_duration_savings(self, location1: Location, location2: Location):
+        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
+            return self.__get_duration_saved(location1, location2)
+        if self.depot not in self.locations:
+            self.add(self.depot)
         if location1 not in self.locations:
             self.add(location1)
         if location2 not in self.locations:
             self.add(location2)
-        return self.__get_duration_saved(depot, location1, location2)
+        return self.__get_duration_saved(location1, location2)
 
     def get_properties(self):
         pass
@@ -101,19 +112,39 @@ class LocationManager:
     def size(self):
         return len(self.locations)
 
-    def __get_distance_saved(self, depot: Location, location1: Location, location2: Location):
-        return (depot.neighbor.relationship(location1).distance
-                + depot.neighbor.relationship(location2).distance
+    def __get_distance_saved(self, location1: Location, location2: Location):
+        return (self.depot.neighbor.relationship(location1).distance
+                + self.depot.neighbor.relationship(location2).distance
                 - location1.neighbor.relationship(location2).distance)
 
-    def __get_duration_saved(self, depot: Location, location1: Location, location2: Location):
-        return (depot.neighbor.relationship(location1).duration
-                + depot.neighbor.relationship(location2).duration
+    def __get_duration_saved(self, location1: Location, location2: Location):
+        return (self.depot.neighbor.relationship(location1).duration
+                + self.depot.neighbor.relationship(location2).duration
                 - location1.neighbor.relationship(location2).duration)
 
-    def __set_locations(self):
-        for location in Location.nodes.all():
-            self.add(location)
+
+class SavingsManager:
+    def __init__(self, db_connection: str, depot: Location, locations: list):
+        self.depot = depot
+        self.heap = self.__heapify(locations=locations)
+        self.locationManager = LocationManager(db_connection=db_connection)
+
+    def __heapify(self, locations: list):
+        heap = []
+        heapify(heap)
+        for i in range(len(locations)):
+            for j in range(i + 1, len(locations)):
+                pair = Pair(locations[i], locations[j])
+                savings = self.locationManager.get_distance_savings(depot=self.depot, location1=pair.location1,
+                                                                    location2=pair.location2)
+                heappush(heap, (-1 * savings, pair))
+        return heap
+
+    def __next__(self):
+        if len(self.heap) >= 0:
+            savings, pair = heappop(self.heap)
+            return -1 * savings, pair
+        raise StopIteration
 
 
 class RouteManager:
@@ -144,27 +175,3 @@ class RouteManager:
 
     def build_routes(self):
         pass
-
-
-class SavingsManager:
-    def __init__(self, db_connection: str, depot: Location, locations: list):
-        self.depot = depot
-        self.heap = self.__heapify(locations=locations)
-        self.locationManager = LocationManager(db_connection=db_connection)
-
-    def __heapify(self, locations: list):
-        heap = []
-        heapify(heap)
-        for i in range(len(locations)):
-            for j in range(i + 1, len(locations)):
-                pair = Pair(locations[i], locations[j])
-                savings = self.locationManager.get_distance_savings(depot=self.depot, location1=pair.location1,
-                                                                    location2=pair.location2)
-                heappush(heap, (-1 * savings, pair))
-        return heap
-
-    def __next__(self):
-        if len(self.heap) >= 0:
-            savings, pair = heappop(self.heap)
-            return -1 * savings, pair
-        raise StopIteration

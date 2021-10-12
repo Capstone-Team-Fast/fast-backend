@@ -16,7 +16,6 @@ class Location(StructuredNode):
     zipcode = IntegerProperty(index=True, required=True)
     is_center = BooleanProperty(index=True, default=False)
     demand = IntegerProperty(index=True)
-    # coordinates = PointProperty(unique_index=True, crs='wgs-84')
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
     created_on = DateTimeProperty()
@@ -25,7 +24,7 @@ class Location(StructuredNode):
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
     def __init__(self, *args, **kwargs):
-        super(Location, self).__init__(args, kwargs)
+        super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
 
     def __hash__(self):
