@@ -42,6 +42,7 @@ class Driver(StructuredNode):
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
         """
+        pass
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))

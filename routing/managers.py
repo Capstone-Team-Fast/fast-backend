@@ -121,10 +121,29 @@ class RouteManager:
     Uses constraints to build routes and assign them to drivers
     """
 
-    def __init__(self, db_connection: str, drivers: list, locations: list):
-        self.locationManager = LocationManager(db_connection=db_connection)
+    def __init__(self, db_connection: str, depot: str, drivers: list, locations: list):
         self.drivers = drivers
         self.locations = locations
+        self.locationManager = LocationManager(db_connection=db_connection)
+        self.savingsManager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
+        self.drivers_heap = []
+
+    def insert(self, pair: Pair):
+        if len(self.locations) == 1:
+            for location in pair.get_pair():
+                self.add(location)
+        elif pair.get_first() and pair.get_second():
+            location1, location2 = pair.get_pair()
+            if (location1 in self.locations ^ location2 in self.locations) and pair.is_assignable():
+                if location1 in self.locations and not location1.is_interior(self) and not location2.is_assigned:
+                    self.add(location2)
+                elif location2 in self.locations and not location2.is_interior(self) and not location1.is_assigned:
+                    self.add(location1)
+
+        # After insertion update drivers_heap so that retrieving driver with shortest distance is constant
+
+    def build_routes(self):
+        pass
 
 
 class SavingsManager:
