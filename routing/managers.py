@@ -17,14 +17,15 @@ class LocationManager:
         self.depot = depot
         self.locations = set()
         self.connection = db_connection
-        self.distanceMatrixService = services.DistanceMatrixService()
-        self.durationMatrixService = services.DurationMatrixService()
+        self.geocode_service = services.GeocodeService()
+        self.distance_matrix_service = services.DistanceMatrixService()
+        self.duration_matrix_service = services.DurationMatrixService()
 
     def remove(self, location: Location):
         if len(self.locations) == 0:
             raise StopIteration
         if not isinstance(location, Location):
-            raise NotImplemented
+            raise ValueError
         self.locations.remove(location)
 
     def get_locations(self) -> list:
@@ -32,10 +33,12 @@ class LocationManager:
 
     def add(self, location: Location):
         if not isinstance(location, Location):
-            raise NotImplemented
+            raise ValueError
         if location not in self.locations:
-            self.distanceMatrixService.build_distance_matrix(list(self.locations), location)
-            self.durationMatrixService.build_duration_matrix(list(self.locations), location)
+            location.latitude, location.longitude = self.geocode_service.get_geocode(location=location)
+            location.save()
+            self.distance_matrix_service.build_distance_matrix(list(self.locations), location)
+            self.duration_matrix_service.build_duration_matrix(list(self.locations), location)
             self.locations.add(location)
 
     def add_collection(self, locations: list):

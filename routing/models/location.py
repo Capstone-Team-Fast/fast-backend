@@ -18,8 +18,8 @@ class Location(StructuredNode):
     demand = IntegerProperty(index=True)
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
-    created_on = DateTimeProperty()
-    modified_on = DateTimeProperty()
+    created_on = DateTimeProperty(index=True)
+    modified_on = DateTimeProperty(index=True)
 
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
@@ -36,11 +36,15 @@ class Location(StructuredNode):
         return (self.address == other.address and self.city == other.city
                 and self.state == other.state and self.zipcode == other.zipcode)
 
+    def __str__(self):
+        return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
+                                                             zipcode=self.zipcode)
+
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):
         if not (isinstance(location1, Location) and isinstance(location2, Location)):
-            return NotImplemented
+            raise ValueError
         self.location1 = location1
         self.location2 = location2
 
