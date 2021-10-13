@@ -11,33 +11,33 @@ class GeocodeService:
     __DEFAULT_URL = 'http://dev.virtualearth.net/REST/v1/Locations'
     __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
 
-    def __init__(self, base_url: str = ''):
-        self.__base_url = GeocodeService.__DEFAULT_URL if base_url == '' else base_url
-
-    def get_geocode(self, location: Location, payload=None, headers=None):
+    @staticmethod
+    def get_geocode(location: Location, payload=None, headers=None):
         if payload is None:
             payload = {}
         if headers is None:
             headers = {}
-        response = self.__request_geocode(location=location, payload=payload, headers=headers)
-        return self.__extract_coordinates(response)
+        response = GeocodeService.__request_geocode(location=location, payload=payload, headers=headers)
+        return GeocodeService.__get_coordinates(response)
 
-    def __request_geocode(self, location: Location, payload=None, headers=None):
+    @staticmethod
+    def __request_geocode(location: Location, payload=None, headers=None):
         if payload is None:
             payload = {}
         if headers is None:
             headers = {}
         encoded_location = quote(string=str(location), safe='')
-        url = "{BASE_URL}?query={QUERY_STRING}&key={API_KEY}".format(BASE_URL=self.__base_url,
+        url = "{BASE_URL}?query={QUERY_STRING}&key={API_KEY}".format(BASE_URL=GeocodeService.__DEFAULT_URL,
                                                                      QUERY_STRING=encoded_location,
-                                                                     API_KEY=self.__API_KEY)
+                                                                     API_KEY=GeocodeService.__API_KEY)
         payload = payload
         headers = headers
         response = requests.request("GET", url, headers=headers, data=payload)
 
         return response.json()
 
-    def __extract_coordinates(self, response: dict):
+    @staticmethod
+    def __get_coordinates(response: dict):
         if 'resourceSets' in response.keys():
             resource_sets = response['resourceSets'][0] if len(response['resourceSets']) > 0 else None
             if resource_sets and 'resources' in resource_sets:
@@ -54,21 +54,48 @@ class GeocodeService:
         raise GeocodeError('API Error')
 
 
-class DistanceMatrixService:
+class MatrixService:
+    """
+    This class defines the logic for retrieving distance and duration matrices of a list of locations.
+    """
+    __DEFAULT_URL = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix'
+    __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
+    __duration_matrix = []
+    __distance_matrix = []
 
-    def __init__(self, url=''):
-        self.url = url
+    @staticmethod
+    def __request_matrices(start: Location, end: list, travel_mode: str = 'driving', chunk_size: int = 25):
+        if start.latitude is None or start.longitude is None:
+            start.latitude, start.longitude = GeocodeService.get_geocode(start)
+            start = start.save()
 
-    def build_distance_matrix(self, locations: list, location: Location):
-        # list is empty
-        # list is not empty
+        origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
+
+        for index in range(0, len(end), chunk_size):
+            if index + chunk_size < len(end):
+                chunks = end[index:index + chunk_size]
+            else:
+                chunks = end[index:]
+
+            destinations = [{'latitude': location.latitude, 'longitude': location.longitude} for location in chunks]
+
+            url = '{BASE_URL}?key={API_KEY}'.format(BASE_URL=MatrixService.__DEFAULT_URL,
+                                                    API_KEY=MatrixService.__API_KEY)
+            data = {
+                'origins': origins,
+                'destinations': destinations,
+                'travelMode': travel_mode,
+            }
+            headers = {
+                'Content-Length': 450,
+                'Content-Type': 'application/json'
+            }
+            requests.get(url=url, data=data, headers=headers)
+
+    @staticmethod
+    def build_duration_matrix(start: Location, end: list):
         pass
 
-
-class DurationMatrixService:
-
-    def __init__(self, url=''):
-        self.url = url
-
-    def build_duration_matrix(self, locations: list, location: Location):
+    @staticmethod
+    def build_distance_matrix(start: Location, end: list):
         pass

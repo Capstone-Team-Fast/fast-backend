@@ -2,8 +2,8 @@ from heapq import heappush, heapify, heappop
 
 import neomodel
 
-from routing import services
 from routing.models.location import Location, Pair
+from routing.services import GeocodeService, MatrixService
 
 
 class DriverManager:
@@ -17,9 +17,6 @@ class LocationManager:
         self.depot = depot
         self.locations = set()
         self.connection = db_connection
-        self.geocode_service = services.GeocodeService()
-        self.distance_matrix_service = services.DistanceMatrixService()
-        self.duration_matrix_service = services.DurationMatrixService()
 
     def remove(self, location: Location):
         if len(self.locations) == 0:
@@ -35,10 +32,12 @@ class LocationManager:
         if not isinstance(location, Location):
             raise ValueError
         if location not in self.locations:
-            location.latitude, location.longitude = self.geocode_service.get_geocode(location=location)
-            location.save()
-            self.distance_matrix_service.build_distance_matrix(list(self.locations), location)
-            self.duration_matrix_service.build_duration_matrix(list(self.locations), location)
+            if location.latitude is None or location.longitude is None:
+                location.latitude, location.longitude = GeocodeService.get_geocode(location=location)
+                location = location.save()
+
+            MatrixService.build_distance_matrix(start=location, end=list(self.locations))
+            MatrixService.build_duration_matrix(start=location, end=list(self.locations))
             self.locations.add(location)
 
     def add_collection(self, locations: list):
@@ -54,9 +53,6 @@ class LocationManager:
 
     def set_depot(self, depot: Location):
         self.depot = depot
-
-    def is_fully_connected(self):
-        return False
 
     def get_distance(self, location1: Location, location2: Location):
         if location1 == location2:
@@ -130,7 +126,7 @@ class SavingsManager:
     def __init__(self, db_connection: str, depot: Location, locations: list):
         self.depot = depot
         self.heap = self.__heapify(locations=locations)
-        self.locationManager = LocationManager(db_connection=db_connection)
+        self.locationManager = LocationManager(db_connection=db_connection, depot=depot)
 
     def __heapify(self, locations: list):
         heap = []
@@ -138,8 +134,7 @@ class SavingsManager:
         for i in range(len(locations)):
             for j in range(i + 1, len(locations)):
                 pair = Pair(locations[i], locations[j])
-                savings = self.locationManager.get_distance_savings(depot=self.depot, location1=pair.location1,
-                                                                    location2=pair.location2)
+                savings = self.locationManager.get_distance_savings(location1=pair.location1, location2=pair.location2)
                 heappush(heap, (-1 * savings, pair))
         return heap
 
@@ -155,10 +150,10 @@ class RouteManager:
     Uses constraints to build routes and assign them to drivers
     """
 
-    def __init__(self, db_connection: str, depot: str, drivers: list, locations: list):
+    def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list):
         self.drivers = drivers
         self.locations = locations
-        self.locationManager = LocationManager(db_connection=db_connection)
+        self.locationManager = LocationManager(db_connection=db_connection, depot=depot)
         self.savingsManager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
         self.drivers_heap = []
 
@@ -168,7 +163,7 @@ class RouteManager:
                 self.add(location)
         elif pair.get_first() and pair.get_second():
             location1, location2 = pair.get_pair()
-            if (location1 in self.locations ^ location2 in self.locations) and pair.is_assignable():
+            if ((location1 in self.locations) ^ (location2 in self.locations)) and pair.is_assignable():
                 if location1 in self.locations and not location1.is_interior(self) and not location2.is_assigned:
                     self.add(location2)
                 elif location2 in self.locations and not location2.is_interior(self) and not location1.is_assigned:
@@ -177,4 +172,7 @@ class RouteManager:
         # After insertion update drivers_heap so that retrieving driver with shortest distance is constant
 
     def build_routes(self):
+        pass
+
+    def add(self, location):
         pass
