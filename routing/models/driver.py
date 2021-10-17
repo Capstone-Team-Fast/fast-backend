@@ -33,15 +33,16 @@ class Driver(StructuredNode):
     is_available_on = RelationshipTo('routing.models.availability.Availability', 'AVAILABLE_ON')
     speaks = RelationshipTo('routing.models.language.Language', 'SPEAKS')
 
-    def __init__(self, departure: Location, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
-        self.route = Route(departure=departure)
+        self.route = None
 
     def get_availability(self, location: Location):
         """
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
         """
+        self.speaks.relationship.values()
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))
