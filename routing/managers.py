@@ -1,9 +1,10 @@
+import enum
 from heapq import heappush, heapify, heappop
 
 import neomodel
 
 from routing.models.location import Location, Pair
-from routing.services import GeocodeService, MatrixService
+from routing.services import BingGeocodeService, BingMatrixService
 
 
 class DriverManager:
@@ -33,11 +34,11 @@ class LocationManager:
             raise ValueError
         if location not in self.locations:
             if location.latitude is None or location.longitude is None:
-                location.latitude, location.longitude = GeocodeService.get_geocode(location=location)
+                location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
                 location = location.save()
 
-            MatrixService.build_distance_matrix(start=location, end=list(self.locations))
-            MatrixService.build_duration_matrix(start=location, end=list(self.locations))
+            BingMatrixService.build_distance_matrix(start=location, end=list(self.locations))
+            BingMatrixService.build_duration_matrix(start=location, end=list(self.locations))
             self.locations.add(location)
 
     def add_collection(self, locations: list):
@@ -133,9 +134,11 @@ class SavingsManager:
         heapify(heap)
         for i in range(len(locations)):
             for j in range(i + 1, len(locations)):
-                pair = Pair(locations[i], locations[j])
-                savings = self.locationManager.get_distance_savings(location1=pair.location1, location2=pair.location2)
-                heappush(heap, (-1 * savings, pair))
+                if locations[i] != locations[j]:
+                    pair = Pair(locations[i], locations[j])
+                    savings = self.locationManager.get_distance_savings(location1=pair.location1,
+                                                                        location2=pair.location2)
+                    heappush(heap, (-1 * savings, pair))
         return heap
 
     def __next__(self):
@@ -150,6 +153,18 @@ class RouteManager:
     Uses constraints to build routes and assign them to drivers
     """
 
+    class State(enum.Enum):
+        IDLE = 0
+        HARD_SOLVING = 1
+        SOFT_SOLVING = 2
+        SOLVED = 3
+        INFEASIBLE = 4
+
+    class Alphabet(enum.Enum):
+        FALSE = 0
+        TRUE = 1
+        DONE = 2
+
     def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list):
         self.drivers = drivers
         self.locations = locations
@@ -157,7 +172,7 @@ class RouteManager:
         self.savingsManager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
         self.drivers_heap = []
 
-    def insert(self, pair: Pair):
+    def insert(self, pair: Pair) -> State:
         if len(self.locations) == 1:
             for location in pair.get_pair():
                 self.add(location)

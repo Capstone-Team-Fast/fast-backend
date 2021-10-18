@@ -1,13 +1,22 @@
 # https://docs.mapbox.com/api/search/geocoding/
 import os
+from abc import ABC
 from urllib.parse import quote
+
+import requests
 
 from routing.exceptions import GeocodeError
 from routing.models.location import Location
-import requests
 
 
-class GeocodeService:
+class GeocodeService(ABC):
+
+    @staticmethod
+    def get_geocode(location: Location, payload=None, headers=None):
+        pass
+
+
+class BingGeocodeService(GeocodeService):
     __DEFAULT_URL = 'http://dev.virtualearth.net/REST/v1/Locations'
     __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
 
@@ -17,8 +26,8 @@ class GeocodeService:
             payload = {}
         if headers is None:
             headers = {}
-        response = GeocodeService.__request_geocode(location=location, payload=payload, headers=headers)
-        return GeocodeService.__get_coordinates(response)
+        response = BingGeocodeService.__request_geocode(location=location, payload=payload, headers=headers)
+        return BingGeocodeService.__get_coordinates(response)
 
     @staticmethod
     def __request_geocode(location: Location, payload=None, headers=None):
@@ -27,9 +36,9 @@ class GeocodeService:
         if headers is None:
             headers = {}
         encoded_location = quote(string=str(location), safe='')
-        url = "{BASE_URL}?query={QUERY_STRING}&key={API_KEY}".format(BASE_URL=GeocodeService.__DEFAULT_URL,
+        url = "{BASE_URL}?query={QUERY_STRING}&key={API_KEY}".format(BASE_URL=BingGeocodeService.__DEFAULT_URL,
                                                                      QUERY_STRING=encoded_location,
-                                                                     API_KEY=GeocodeService.__API_KEY)
+                                                                     API_KEY=BingGeocodeService.__API_KEY)
         payload = payload
         headers = headers
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -54,7 +63,18 @@ class GeocodeService:
         raise GeocodeError('API Error')
 
 
-class MatrixService:
+class MatrixService(ABC):
+
+    @staticmethod
+    def build_duration_matrix(start: Location, end: list):
+        pass
+
+    @staticmethod
+    def build_distance_matrix(start: Location, end: list):
+        pass
+
+
+class BingMatrixService(MatrixService):
     """
     This class defines the logic for retrieving distance and duration matrices of a list of locations.
     """
@@ -66,7 +86,7 @@ class MatrixService:
     @staticmethod
     def __request_matrices(start: Location, end: list, travel_mode: str = 'driving', chunk_size: int = 25):
         if start.latitude is None or start.longitude is None:
-            start.latitude, start.longitude = GeocodeService.get_geocode(start)
+            start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
             start = start.save()
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
@@ -79,8 +99,8 @@ class MatrixService:
 
             destinations = [{'latitude': location.latitude, 'longitude': location.longitude} for location in chunks]
 
-            url = '{BASE_URL}?key={API_KEY}'.format(BASE_URL=MatrixService.__DEFAULT_URL,
-                                                    API_KEY=MatrixService.__API_KEY)
+            url = '{BASE_URL}?key={API_KEY}'.format(BASE_URL=BingMatrixService.__DEFAULT_URL,
+                                                    API_KEY=BingMatrixService.__API_KEY)
             data = {
                 'origins': origins,
                 'destinations': destinations,

@@ -1,7 +1,5 @@
-from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, DateTimeProperty, \
-    UniqueIdProperty, Relationship, StructuredRel
-
-from routing.services import GeocodeService
+from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel
 
 
 class Weight(StructuredRel):
@@ -28,8 +26,6 @@ class Location(StructuredNode):
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
-        self.latitude, self.longitude = GeocodeService.get_geocode(self)
-        self.save()
 
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))
