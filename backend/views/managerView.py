@@ -6,6 +6,7 @@ from backend.serializers.managerSerializer import ManagerSerializer
 from rest_framework import status
 from django.http import Http404
 
+
 class ManagerView(APIView):
 
     def get_object(self, pk):
@@ -19,17 +20,11 @@ class ManagerView(APIView):
         serializer = ManagerSerializer(manager)
         return Response(serializer.data)
     
-    def post(self, request, format=None):
-        serializer = ManagerSerializer(request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
     def put(self, request, pk, format=None):
         manager = self.get_object(pk)
         serializer = ManagerSerializer(manager, data=request.data)
         if serializer.is_valid():
+            serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
@@ -46,3 +41,9 @@ class ManagerListView(APIView):
         serializer = ManagerSerializer(managers, many=True)
         return Response(serializer.data)
 
+    def post(self, request, format=None):
+        serializer = ManagerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
