@@ -8,9 +8,10 @@ Currently, our only working API route is `/locations/`
 
 ## Milestone 2: Release Notes
 
-* Routing algorithm:
+### Routing algorithm:
 
-* Backend:
+### Backend:
+For Milestone 2 we have finished all of our API endpoints except for `/route/` post requests. All other views and serializers have been completed.
 
 # Installation
 ## Install and update Python
