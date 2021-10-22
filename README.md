@@ -9,6 +9,7 @@ Currently, our only working API route is `/locations/`
 ## Milestone 2: Release Notes
 
 ### Routing algorithm:
+We wrote much of the API to communicate with external APIs and retrieve geocode and distance/duration matrices. We also set up a graph database using neo4j. One of our objectives was to be able to query a database and retrieve distance/duration between any pair of locations that are not new, thus saving on API. Then, we started implementing a modified version of Clarke and Wright's Savings algorithm with Time Window.
 
 ### Backend:
 For Milestone 2 we have finished all of our API endpoints except for `/route/` post requests. All other views and serializers have been completed.
