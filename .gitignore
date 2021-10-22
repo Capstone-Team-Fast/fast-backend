@@ -56,7 +56,8 @@ coverage.xml
 .hypothesis/ 
 
 # Jupyter Notebook 
-.ipynb_checkpoints 
+.ipynb_checkpoints
+.ipynb
 
 # pyenv 
 .python-version 
