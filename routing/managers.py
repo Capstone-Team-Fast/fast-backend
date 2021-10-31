@@ -3,6 +3,7 @@ from heapq import heappush, heapify, heappop
 
 import neomodel
 
+from routing.exceptions import RelationshipError
 from routing.models.location import Location, Pair
 from routing.services import BingGeocodeService, BingMatrixService
 
@@ -112,14 +113,30 @@ class LocationManager:
         return len(self.locations)
 
     def __get_distance_saved(self, location1: Location, location2: Location):
+        self.__all_links_exist(location1, location2)
+
         return (self.depot.neighbor.relationship(location1).distance
                 + self.depot.neighbor.relationship(location2).distance
                 - location1.neighbor.relationship(location2).distance)
 
     def __get_duration_saved(self, location1: Location, location2: Location):
+        self.__all_links_exist(location1, location2)
+
         return (self.depot.neighbor.relationship(location1).duration
                 + self.depot.neighbor.relationship(location2).duration
                 - location1.neighbor.relationship(location2).duration)
+
+    def __all_links_exist(self, location1: Location, location2: Location):
+        if self.depot.neighbor.relationship(location1) is None:
+            raise RelationshipError(
+                'There is no link between node \'{}\' and node \'{}\''.format(self.depot, location1))
+
+        if self.depot.neighbor.relationship(location2) is None:
+            raise RelationshipError(
+                'There is no link between node \'{}\' and node \'{}\''.format(self.depot, location2))
+
+        if location1.neighbor.relationship(location2) is None:
+            raise RelationshipError('There is no link between node \'{}\' and node \'{}\''.format(location1, location2))
 
 
 class SavingsManager:

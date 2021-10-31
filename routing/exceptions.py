@@ -4,3 +4,7 @@ class GeocodeError(Exception):
 
 class MatrixServiceError(Exception):
     pass
+
+
+class RelationshipError(Exception):
+    pass
