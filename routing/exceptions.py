@@ -8,3 +8,11 @@ class MatrixServiceError(Exception):
 
 class RelationshipError(Exception):
     pass
+
+
+class EmptyRouteException(Exception):
+    pass
+
+
+class RouteStateException(Exception):
+    pass

@@ -12,7 +12,7 @@ for p in sys.path:
     print(p)
 
 from routing.models.route import Route
-from routing.models.location import Location
+from routing.models.location import Location, Pair
 
 
 class Driver(StructuredNode):
@@ -35,7 +35,34 @@ class Driver(StructuredNode):
 
     def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
-        self.route = None
+        self.route = Route()
+        self.route.departure = None
+
+    def set_departure(self, depot: Location):
+        self.route.departure = depot
+
+    def add(self, pair: Pair) -> bool:
+        """
+        Add pair to route. Return True is addition was successful, otherwise, return False
+        """
+        if self.route.is_open:
+            for location in pair.get_pair():
+                if not self.route.add(location=location):
+                    return False
+                else:
+                    if self.route.total_duration > self.end_time - self.start_time:  # Check DateTime operation
+                        self.route.undo()
+                        self.route.close_route()
+                    elif self.route.total_quantity > self.capacity:
+                        self.route.undo()
+                        self.route.close_route()
+                    return True
+        return False
+
+    def insert(self, pair: Pair, depot: Location):
+        # Check capacity constraint as well as duration constraint before appending new locations
+        # Insertion of new locations is handled by Route.insert()
+        pass
 
     def get_availability(self, location: Location):
         """

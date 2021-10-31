@@ -26,6 +26,8 @@ class Location(StructuredNode):
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
+        self.next = None
+        self.previous = None
 
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))
@@ -48,10 +50,16 @@ class Pair:
         self.location1 = location1
         self.location2 = location2
 
-    def get_first(self):
+    def is_first(self, location: Location):
+        return self.location1 == location
+
+    def is_last(self, location: Location):
+        return self.location2 == location
+
+    def first(self):
         return self.location1
 
-    def get_second(self):
+    def last(self):
         return self.location2
 
     def get_pair(self):

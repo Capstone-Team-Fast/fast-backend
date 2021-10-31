@@ -3,7 +3,7 @@ from heapq import heappush, heapify, heappop
 
 import neomodel
 
-from routing.exceptions import RelationshipError
+from routing.exceptions import RelationshipError, RouteStateException
 from routing.models.location import Location, Pair
 from routing.services import BingGeocodeService, BingMatrixService
 
@@ -15,126 +15,141 @@ class DriverManager:
 
 class LocationManager:
 
-    def __init__(self, db_connection: neomodel.db, depot: Location):
-        self.depot = depot
-        self.locations = set()
-        self.connection = db_connection
+    depot: Location = None
+    locations = set()
+    connection: str = ''
 
-    def remove(self, location: Location):
-        if len(self.locations) == 0:
+    def __init__(self, db_connection: neomodel.db, depot: Location):
+        LocationManager.depot = depot
+        LocationManager.connection = db_connection
+
+    @staticmethod
+    def remove(location: Location):
+        if len(LocationManager.locations) == 0:
             raise StopIteration
         if not isinstance(location, Location):
             raise ValueError
-        self.locations.remove(location)
+        LocationManager.locations.remove(location)
 
-    def get_locations(self) -> list:
-        return list(self.locations)
+    @staticmethod
+    def get_locations() -> list:
+        return list(LocationManager.locations)
 
-    def add(self, location: Location):
+    @staticmethod
+    def add(location: Location):
         if not isinstance(location, Location):
             raise ValueError
-        if location not in self.locations:
+        if location not in LocationManager.locations:
             if location.latitude is None or location.longitude is None:
                 location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
                 location = location.save()
 
-            BingMatrixService.build_matrices(start=location, end=list(self.locations))
-            self.locations.add(location)
+            BingMatrixService.build_matrices(start=location, end=list(LocationManager.locations))
+            LocationManager.locations.add(location)
 
-    def add_collection(self, locations: list):
+    @staticmethod
+    def add_collection(locations: list):
         if not locations:
             raise ValueError
 
         for location in locations:
-            if len(self.locations) == 0:
-                self.add(location)
+            if len(LocationManager.locations) == 0:
+                LocationManager.add(location)
             else:
-                if location not in self.locations:
-                    self.add(location)
+                if location not in LocationManager.locations:
+                    LocationManager.add(location)
 
-    def set_depot(self, depot: Location):
-        self.depot = depot
-
-    def get_distance(self, location1: Location, location2: Location):
+    @staticmethod
+    def get_distance(location1: Location, location2: Location):
         if location1 == location2:
             return 0.0
 
-        if location1 in self.locations and location2 in self.locations:
+        if location1 in LocationManager.locations and location2 in LocationManager.locations:
             return location1.neighbor.relationship(location2).distance
 
-        if location1 not in self.locations:
-            self.add(location1)
+        if location1 not in LocationManager.locations:
+            LocationManager.add(location1)
 
-        if location2 not in self.locations:
-            self.add(location2)
+        if location2 not in LocationManager.locations:
+            LocationManager.add(location2)
 
         return location1.neighbor.relationship(location2).distance
 
-    def get_duration(self, location1: Location, location2: Location):
+    @staticmethod
+    def get_duration(location1: Location, location2: Location):
         if location1 == location2:
             return 0.0
 
-        if location1 in self.locations and location2 in self.locations:
+        if location1 in LocationManager.locations and location2 in LocationManager.locations:
             return location1.neighbor.relationship(location2).duration
 
-        if location1 not in self.locations:
-            self.add(location1)
+        if location1 not in LocationManager.locations:
+            LocationManager.add(location1)
 
-        if location2 not in self.locations:
-            self.add(location2)
+        if location2 not in LocationManager.locations:
+            LocationManager.add(location2)
         return location1.neighbor.relationship(location2).duration
 
-    def get_distance_savings(self, location1: Location, location2: Location):
-        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
-            return self.__get_distance_saved(location1, location2)
-        if self.depot not in self.locations:
-            self.add(self.depot)
-        if location1 not in self.locations:
-            self.add(location1)
-        if location2 not in self.locations:
-            self.add(location2)
-        return self.__get_distance_saved(location1, location2)
+    @staticmethod
+    def get_distance_savings(location1: Location, location2: Location):
+        if LocationManager.depot is None:
+            raise RouteStateException('This route has no departure. Set the departure before proceeding.')
+        if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
+                and location2 in LocationManager.locations:
+            return LocationManager.__get_distance_saved(location1, location2)
+        if LocationManager.depot not in LocationManager.locations:
+            LocationManager.add(LocationManager.depot)
+        if location1 not in LocationManager.locations:
+            LocationManager.add(location1)
+        if location2 not in LocationManager.locations:
+            LocationManager.add(location2)
+        return LocationManager.__get_distance_saved(location1, location2)
 
-    def get_duration_savings(self, location1: Location, location2: Location):
-        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
-            return self.__get_duration_saved(location1, location2)
-        if self.depot not in self.locations:
-            self.add(self.depot)
-        if location1 not in self.locations:
-            self.add(location1)
-        if location2 not in self.locations:
-            self.add(location2)
-        return self.__get_duration_saved(location1, location2)
+    @staticmethod
+    def get_duration_savings(location1: Location, location2: Location):
+        if LocationManager.depot is None:
+            raise RouteStateException('This route has no departure. Set the departure before proceeding.')
+        if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
+                and location2 in LocationManager.locations:
+            return LocationManager.__get_duration_saved(location1, location2)
+        if LocationManager.depot not in LocationManager.locations:
+            LocationManager.add(LocationManager.depot)
+        if location1 not in LocationManager.locations:
+            LocationManager.add(location1)
+        if location2 not in LocationManager.locations:
+            LocationManager.add(location2)
+        return LocationManager.__get_duration_saved(location1, location2)
 
-    def get_properties(self):
-        pass
+    @staticmethod
+    def size():
+        return len(LocationManager.locations)
 
-    def size(self):
-        return len(self.locations)
+    @staticmethod
+    def __get_distance_saved(location1: Location, location2: Location):
+        LocationManager.__all_links_exist(location1, location2)
 
-    def __get_distance_saved(self, location1: Location, location2: Location):
-        self.__all_links_exist(location1, location2)
-
-        return (self.depot.neighbor.relationship(location1).distance
-                + self.depot.neighbor.relationship(location2).distance
+        return (LocationManager.depot.neighbor.relationship(location1).distance
+                + LocationManager.depot.neighbor.relationship(location2).distance
                 - location1.neighbor.relationship(location2).distance)
 
-    def __get_duration_saved(self, location1: Location, location2: Location):
-        self.__all_links_exist(location1, location2)
+    @staticmethod
+    def __get_duration_saved(location1: Location, location2: Location):
+        LocationManager.__all_links_exist(location1, location2)
 
-        return (self.depot.neighbor.relationship(location1).duration
-                + self.depot.neighbor.relationship(location2).duration
+        return (LocationManager.depot.neighbor.relationship(location1).duration
+                + LocationManager.depot.neighbor.relationship(location2).duration
                 - location1.neighbor.relationship(location2).duration)
 
-    def __all_links_exist(self, location1: Location, location2: Location):
-        if self.depot.neighbor.relationship(location1) is None:
+    @staticmethod
+    def __all_links_exist(location1: Location, location2: Location):
+        if LocationManager.depot is None:
+            raise RouteStateException('This route has no departure. Set the departure before proceeding.')
+        if LocationManager.depot.neighbor.relationship(location1) is None:
             raise RelationshipError(
-                'There is no link between node \'{}\' and node \'{}\''.format(self.depot, location1))
-
-        if self.depot.neighbor.relationship(location2) is None:
+                'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location1))
+        if LocationManager.depot.neighbor.relationship(location2) is None:
             raise RelationshipError(
-                'There is no link between node \'{}\' and node \'{}\''.format(self.depot, location2))
-
+                'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location2))
         if location1.neighbor.relationship(location2) is None:
             raise RelationshipError('There is no link between node \'{}\' and node \'{}\''.format(location1, location2))
 
@@ -191,21 +206,21 @@ class RouteManager:
         self.prioritize_volunteer = prioritize_volunteer
 
     def insert(self, pair: Pair) -> State:
-        if len(self.locations) == 1:
-            for location in pair.get_pair():
-                self.add(location)
-        elif pair.get_first() and pair.get_second():
-            location1, location2 = pair.get_pair()
-            if ((location1 in self.locations) ^ (location2 in self.locations)) and pair.is_assignable():
-                if location1 in self.locations and not location1.is_interior(self) and not location2.is_assigned:
-                    self.add(location2)
-                elif location2 in self.locations and not location2.is_interior(self) and not location1.is_assigned:
-                    self.add(location1)
+        for driver in self.drivers:
+            inserted, cumulative_duration, cumulative_distance, cumulative_quantity = driver.route.add(pair=pair)
+            if cumulative_duration > driver.end_time - driver.start_time:
+                driver.route.undo()
+                driver.route.close_route()
+            elif cumulative_quantity > driver.capacity:
+                driver.route.undo()
+                driver.route.close_route()
+            if not inserted:
+                continue
+            else:
+                return RouteManager.State.HARD_SOLVING
 
         # After insertion update drivers_heap so that retrieving driver with shortest distance is constant
+        return self.State.INFEASIBLE
 
     def build_routes(self):
-        pass
-
-    def add(self, location):
         pass
