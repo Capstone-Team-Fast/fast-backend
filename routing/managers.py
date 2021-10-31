@@ -37,8 +37,7 @@ class LocationManager:
                 location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
                 location = location.save()
 
-            BingMatrixService.build_distance_matrix(start=location, end=list(self.locations))
-            BingMatrixService.build_duration_matrix(start=location, end=list(self.locations))
+            BingMatrixService.build_matrices(start=location, end=list(self.locations))
             self.locations.add(location)
 
     def add_collection(self, locations: list):
@@ -165,12 +164,14 @@ class RouteManager:
         TRUE = 1
         DONE = 2
 
-    def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list):
+    def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list,
+                 prioritize_volunteer: bool = False):
         self.drivers = drivers
         self.locations = locations
         self.locationManager = LocationManager(db_connection=db_connection, depot=depot)
         self.savingsManager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
         self.drivers_heap = []
+        self.prioritize_volunteer = prioritize_volunteer
 
     def insert(self, pair: Pair) -> State:
         if len(self.locations) == 1:
