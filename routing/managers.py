@@ -5,7 +5,7 @@ import neomodel
 
 from routing.exceptions import RelationshipError, RouteStateException
 from routing.models.location import Location, Pair
-from routing.services import BingGeocodeService, BingMatrixService
+from routing.services import BingGeocodeService
 
 
 class DriverManager:
@@ -14,12 +14,13 @@ class DriverManager:
 
 
 class LocationManager:
-
     depot: Location = None
     locations = set()
     connection: str = ''
 
     def __init__(self, db_connection: neomodel.db, depot: Location):
+        self.depot = depot
+        self.connection = db_connection
         LocationManager.depot = depot
         LocationManager.connection = db_connection
 
@@ -44,7 +45,7 @@ class LocationManager:
                 location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
                 location = location.save()
 
-            BingMatrixService.build_matrices(start=location, end=list(LocationManager.locations))
+            # BingMatrixService.build_matrices(start=location, end=list(LocationManager.locations))
             LocationManager.locations.add(location)
 
     @staticmethod
@@ -157,8 +158,8 @@ class LocationManager:
 class SavingsManager:
     def __init__(self, db_connection: str, depot: Location, locations: list):
         self.depot = depot
-        self.heap = self.__heapify(locations=locations)
-        self.locationManager = LocationManager(db_connection=db_connection, depot=depot)
+        self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
+        self.__heap = self.__heapify(locations=locations)
 
     def __heapify(self, locations: list):
         heap = []
@@ -167,16 +168,19 @@ class SavingsManager:
             for j in range(i + 1, len(locations)):
                 if locations[i] != locations[j]:
                     pair = Pair(locations[i], locations[j])
-                    savings = self.locationManager.get_distance_savings(location1=pair.location1,
-                                                                        location2=pair.location2)
+                    savings = self.__location_manager.get_distance_savings(location1=pair.location1,
+                                                                           location2=pair.location2)
                     heappush(heap, (-1 * savings, pair))
         return heap
 
     def __next__(self):
-        if len(self.heap) >= 0:
-            savings, pair = heappop(self.heap)
+        if len(self.__heap) > 0:
+            savings, pair = heappop(self.__heap)
             return -1 * savings, pair
         raise StopIteration
+
+    def __iter__(self):
+        return self
 
 
 class RouteManager:
@@ -184,14 +188,14 @@ class RouteManager:
     Uses constraints to build routes and assign them to drivers
     """
 
-    class State(enum.Enum):
+    class _State(enum.Enum):
         IDLE = 0
         HARD_SOLVING = 1
         SOFT_SOLVING = 2
         SOLVED = 3
         INFEASIBLE = 4
 
-    class Alphabet(enum.Enum):
+    class _Alphabet(enum.Enum):
         FALSE = 0
         TRUE = 1
         DONE = 2
@@ -200,12 +204,12 @@ class RouteManager:
                  prioritize_volunteer: bool = False):
         self.drivers = drivers
         self.locations = locations
-        self.locationManager = LocationManager(db_connection=db_connection, depot=depot)
-        self.savingsManager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
+        self.location_manager = LocationManager(db_connection=db_connection, depot=depot)
+        self.savings_manager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
         self.drivers_heap = []
         self.prioritize_volunteer = prioritize_volunteer
 
-    def insert(self, pair: Pair) -> State:
+    def insert(self, pair: Pair) -> _State:
         for driver in self.drivers:
             inserted, cumulative_duration, cumulative_distance, cumulative_quantity = driver.route.add(pair=pair)
             if cumulative_duration > driver.end_time - driver.start_time:
@@ -217,10 +221,16 @@ class RouteManager:
             if not inserted:
                 continue
             else:
-                return RouteManager.State.HARD_SOLVING
+                return RouteManager._State.HARD_SOLVING
 
         # After insertion update drivers_heap so that retrieving driver with shortest distance is constant
-        return self.State.INFEASIBLE
+        return self._State.INFEASIBLE
 
     def build_routes(self):
-        pass
+        for savings, pair in self.savings_manager:
+            for driver in self.drivers:
+                print(f"Processing pair ({pair.first()}, {pair.last()})")
+                if driver.get_departure() is None:
+                    driver.set_departure(self.location_manager.depot)
+                if driver.add(pair=pair):
+                    continue

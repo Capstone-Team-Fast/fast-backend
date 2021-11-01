@@ -95,6 +95,7 @@ class Route(StructuredNode):
             self.total_quantity -= last_inserted.demand
             self.total_duration -= LocationManager.get_duration(location1=self.previous, location2=last_inserted)
             self.total_distance -= LocationManager.get_distance(location1=self.previous, location2=last_inserted)
+            last_inserted.is_assigned = False
             del self.locations_dict[hex(id(last_inserted))]
 
     def last_location(self) -> Location:

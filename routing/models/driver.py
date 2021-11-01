@@ -41,28 +41,29 @@ class Driver(StructuredNode):
     def set_departure(self, depot: Location):
         self.route.departure = depot
 
+    def get_departure(self):
+        return self.route.departure
+
     def add(self, pair: Pair) -> bool:
         """
         Add pair to route. Return True is addition was successful, otherwise, return False
         """
-        if self.route.is_open:
-            for location in pair.get_pair():
-                if not self.route.add(location=location):
-                    return False
-                else:
-                    if self.route.total_duration > self.end_time - self.start_time:  # Check DateTime operation
-                        self.route.undo()
-                        self.route.close_route()
-                    elif self.route.total_quantity > self.capacity:
-                        self.route.undo()
-                        self.route.close_route()
-                    return True
-        return False
-
-    def insert(self, pair: Pair, depot: Location):
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
-        pass
+        if self.route.is_open:
+            for location in pair.get_pair():
+                if not self.route.add(location=location, pair=pair):
+                    return False
+                if self.route.total_duration <= self.end_time - self.start_time \
+                        and self.route.total_quantity <= self.capacity:
+                    return True
+                if self.route.total_duration > self.end_time - self.start_time:  # Check DateTime operation
+                    self.route.undo()
+                    self.route.close_route()
+                elif self.route.total_quantity > self.capacity:
+                    self.route.undo()
+                    self.route.close_route()
+        return False
 
     def get_availability(self, location: Location):
         """
@@ -79,3 +80,6 @@ class Driver(StructuredNode):
             return NotImplemented
         return (self.first_name == other.first_name and self.last_name == other.last_name
                 and self.employee_status == other.employee_status)
+
+    def __str__(self):
+        return '{},{}'.format(self.last_name, self.first_name)
