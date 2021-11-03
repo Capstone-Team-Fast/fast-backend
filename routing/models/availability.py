@@ -1,5 +1,15 @@
 from neomodel import StructuredNode, StringProperty
 
+"""Define the 'day' property of an Availability node.
+
+This node represents the availability as specified by a week day. Seven different values are possible. 
+These are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.
+
+    Typical usage example:
+    
+    foo = Availability.create({'day': 'Monday'})
+"""
+
 
 class Availability(StructuredNode):
     DAYS = {'Monday': 'Monday', 'Tuesday': 'Tuesday', 'Wednesday': 'Wednesday',

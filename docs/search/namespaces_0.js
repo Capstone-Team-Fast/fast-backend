@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['admin_0',['admin',['../namespacerouting_1_1admin.html',1,'routing']]],
+  ['apps_1',['apps',['../namespacerouting_1_1apps.html',1,'routing']]],
+  ['availability_2',['availability',['../namespacerouting_1_1models_1_1availability.html',1,'routing::models']]],
+  ['connectors_3',['connectors',['../namespacerouting_1_1connectors.html',1,'routing']]],
+  ['driver_4',['driver',['../namespacerouting_1_1models_1_1driver.html',1,'routing::models']]],
+  ['exceptions_5',['exceptions',['../namespacerouting_1_1exceptions.html',1,'routing']]],
+  ['language_6',['language',['../namespacerouting_1_1models_1_1language.html',1,'routing::models']]],
+  ['location_7',['location',['../namespacerouting_1_1models_1_1location.html',1,'routing::models']]],
+  ['main_8',['main',['../namespacerouting_1_1tests_1_1main.html',1,'routing::tests']]],
+  ['managers_9',['managers',['../namespacerouting_1_1managers.html',1,'routing']]],
+  ['models_10',['models',['../namespacerouting_1_1models.html',1,'routing']]],
+  ['route_11',['route',['../namespacerouting_1_1models_1_1route.html',1,'routing.models.route'],['../namespacerouting_1_1serializers_1_1route.html',1,'routing.serializers.route']]],
+  ['routing_12',['routing',['../namespacerouting.html',1,'']]],
+  ['serializers_13',['serializers',['../namespacerouting_1_1serializers.html',1,'routing']]],
+  ['services_14',['services',['../namespacerouting_1_1services.html',1,'routing']]],
+  ['tests_15',['tests',['../namespacerouting_1_1tests.html',1,'routing']]]
+];
