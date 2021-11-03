@@ -206,8 +206,30 @@ class RouteManager:
         self.locations = locations
         self.location_manager = LocationManager(db_connection=db_connection, depot=depot)
         self.savings_manager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
-        self.drivers_heap = []
         self.prioritize_volunteer = prioritize_volunteer
+        self.drivers_heap = self.build_driver_heap()
+
+    def build_driver_heap(self):
+        drivers_heap = []
+        # Build a dictionary of driver's index: driver's capacity
+        driver_dictionary = {index: driver.capacity for index, driver in enumerate(self.drivers)}
+        driver_dictionary = sorted(driver_dictionary.items(), key=lambda x: x[1], reverse=True)
+
+        if self.prioritize_volunteer:
+            volunteers = []
+            employees = []
+            for index, driver_capacity in driver_dictionary:
+                if self.drivers[index].is_volunteer():
+                    volunteers.append(self.drivers)
+                elif self.drivers[index].is_fulltime():
+                    employees.append(self.drivers)
+            drivers_heap.extend(volunteers)
+            drivers_heap.extend(employees)
+        else:
+            for index, driver_capacity in driver_dictionary:
+                drivers_heap.append(self.drivers[index])
+
+        return drivers_heap
 
     def insert(self, pair: Pair) -> _State:
         for driver in self.drivers:
@@ -228,9 +250,16 @@ class RouteManager:
 
     def build_routes(self):
         for savings, pair in self.savings_manager:
-            for driver in self.drivers:
-                print(f"Processing pair ({pair.first()}, {pair.last()})")
+            print(f'\n\033[1m Processing pair\033[0m ({pair.first()}, {pair.last()})')
+            for driver in self.drivers_heap:
+                print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                 if driver.get_departure() is None:
                     driver.set_departure(self.location_manager.depot)
                 if driver.add(pair=pair):
-                    continue
+                    break
+            if pair.is_assignable():
+                print(f'{RouteManager._State.INFEASIBLE}')
+
+        for driver in self.drivers_heap:
+            if len(driver.route) > 1 and driver.route.is_open:
+                driver.route.close_route()

@@ -1,3 +1,5 @@
+import enum
+import math
 import os
 import sys
 from datetime import datetime
@@ -16,7 +18,12 @@ from routing.models.location import Location, Pair
 
 
 class Driver(StructuredNode):
-    ROLES = {'P': 'Employee', 'V': 'Volunteer'}
+
+    class Role(enum.Enum):
+        EMPLOYEE = 'P'
+        VOLUNTEER = 'V'
+
+    ROLES = {Role.EMPLOYEE.value: Role.EMPLOYEE.name, Role.VOLUNTEER.value: Role.VOLUNTEER.name}
 
     uid = UniqueIdProperty()
     first_name = StringProperty(index=True, required=True)
@@ -54,18 +61,25 @@ class Driver(StructuredNode):
             for location in pair.get_pair():
                 if not self.route.add(location=location, pair=pair):
                     return False
-                if self.route.total_duration <= self.end_time - self.start_time \
-                        and self.route.total_quantity <= self.capacity:
-                    return True
-                if self.route.total_duration > self.end_time - self.start_time:  # Check DateTime operation
+                cumulative_duration_minutes = math.trunc(self.route.total_duration)
+                cumulative_duration_seconds = self.route.total_duration - cumulative_duration_minutes
+                cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
+                if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
+                        and (self.route.total_quantity < self.capacity):
+                    continue
+                elif (cumulative_duration == (self.end_time - self.start_time).total_seconds()) \
+                        or self.route.total_quantity == self.capacity:
+                    self.route.close_route()
+                    return False
+                elif (cumulative_duration > (self.end_time - self.start_time).total_seconds()) \
+                        or self.route.total_quantity > self.capacity:
                     self.route.undo()
                     self.route.close_route()
-                elif self.route.total_quantity > self.capacity:
-                    self.route.undo()
-                    self.route.close_route()
+                    return False
+            return True
         return False
 
-    def get_availability(self, location: Location):
+    def get_availability(self):
         """
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
@@ -83,3 +97,9 @@ class Driver(StructuredNode):
 
     def __str__(self):
         return '{},{}'.format(self.last_name, self.first_name)
+
+    def is_volunteer(self):
+        return self.employee_status == Driver.Role.VOLUNTEER.value
+
+    def is_full_time(self):
+        return self.employee_status == Driver.Role.EMPLOYEE.value
