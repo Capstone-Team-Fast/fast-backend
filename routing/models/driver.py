@@ -18,8 +18,15 @@ from routing.models.location import Location, Pair
 
 
 class Driver(StructuredNode):
+    """Define a Driver node with its properties.
+
+    This node represents a driver object used in the graph database. This object defines various methods for
+    querying the graph database for a particular instance of Driver.
+
+    """
 
     class Role(enum.Enum):
+        """Define the Role of a driver within the organization that this driver serves."""
         EMPLOYEE = 'P'
         VOLUNTEER = 'V'
 
@@ -52,8 +59,13 @@ class Driver(StructuredNode):
         return self.route.departure
 
     def add(self, pair: Pair) -> bool:
-        """
-        Add pair to route. Return True is addition was successful, otherwise, return False
+        """Add a Pair of Location to the Route assigned to this driver.
+
+        Args:
+            pair: A Pair of Locations.
+
+        Return:
+            True is addition was successful, otherwise, return False
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()

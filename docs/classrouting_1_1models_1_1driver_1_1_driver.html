@@ -174,7 +174,11 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a16aa4fd3096b3bd03cd98d20a20dec75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a16aa4fd3096b3bd03cd98d20a20dec75">speaks</a> = RelationshipTo('<a class="el" href="classrouting_1_1models_1_1language_1_1_language.html">routing.models.language.Language</a>', 'SPEAKS')</td></tr>
 <tr class="separator:a16aa4fd3096b3bd03cd98d20a20dec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">Define a Driver node with its properties.
+
+This node represents a driver object used in the graph database. This object defines various methods for
+querying the graph database for a particular instance of Driver.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7a5de7b965d7f4e5026d44790a90b4bc" name="a7a5de7b965d7f4e5026d44790a90b4bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a5de7b965d7f4e5026d44790a90b4bc">&#9670;&nbsp;</a></span>__init__()</h2>
 
@@ -379,7 +383,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Add pair to route. Return True is addition was successful, otherwise, return False
+<pre class="fragment">Add a Pair of Location to the Route assigned to this driver.
+
+Args:
+    pair: A Pair of Locations.
+
+Return:
+    True is addition was successful, otherwise, return False
 </pre> 
 <p class="reference">References <a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a0e48eeca99a80e35e50d37d403abf1aa">routing.models.driver.Driver.add()</a>, <a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a898115e78bf6b9cd5a6f2a8f7ab3b784">routing.models.driver.Driver.capacity</a>, <a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a6319b5d98e48a0c67b13863ed0d7bc8c">routing.models.driver.Driver.end_time</a>, <a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a3ea520119e44a8822497813c199d10e0">routing.models.driver.Driver.route</a>, and <a class="el" href="classrouting_1_1models_1_1driver_1_1_driver.html#a39fd2027583ea77f6228f68033b90147">routing.models.driver.Driver.start_time</a>.</p>
 
