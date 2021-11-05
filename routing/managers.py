@@ -29,7 +29,7 @@ class LocationManager:
         if len(LocationManager.locations) == 0:
             raise StopIteration
         if not isinstance(location, Location):
-            raise ValueError
+            raise ValueError(f'Type {type(location)} not supported.')
         LocationManager.locations.remove(location)
 
     @staticmethod
@@ -39,7 +39,7 @@ class LocationManager:
     @staticmethod
     def add(location: Location):
         if not isinstance(location, Location):
-            raise ValueError
+            raise ValueError(f'Type {type(location)} not supported.')
         if location not in LocationManager.locations:
             if location.latitude is None or location.longitude is None:
                 location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
@@ -62,6 +62,9 @@ class LocationManager:
 
     @staticmethod
     def get_distance(location1: Location, location2: Location):
+        if location1 is None or location2 is None:
+            return 0.0
+
         if location1 == location2:
             return 0.0
 
@@ -78,6 +81,9 @@ class LocationManager:
 
     @staticmethod
     def get_duration(location1: Location, location2: Location):
+        if location1 is None or location2 is None:
+            return 0.0
+
         if location1 == location2:
             return 0.0
 
@@ -93,6 +99,8 @@ class LocationManager:
 
     @staticmethod
     def get_distance_savings(location1: Location, location2: Location):
+        if location1 is None or location2 is None:
+            return 0.0
         if LocationManager.depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
@@ -108,6 +116,8 @@ class LocationManager:
 
     @staticmethod
     def get_duration_savings(location1: Location, location2: Location):
+        if location1 is None or location2 is None:
+            return 0.0
         if LocationManager.depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
@@ -127,7 +137,7 @@ class LocationManager:
 
     @staticmethod
     def __get_distance_saved(location1: Location, location2: Location):
-        LocationManager.__all_links_exist(location1, location2)
+        LocationManager.__validate_link(location1, location2)
 
         return (LocationManager.depot.neighbor.relationship(location1).distance
                 + LocationManager.depot.neighbor.relationship(location2).distance
@@ -135,24 +145,26 @@ class LocationManager:
 
     @staticmethod
     def __get_duration_saved(location1: Location, location2: Location):
-        LocationManager.__all_links_exist(location1, location2)
+        LocationManager.__validate_link(location1, location2)
 
         return (LocationManager.depot.neighbor.relationship(location1).duration
                 + LocationManager.depot.neighbor.relationship(location2).duration
                 - location1.neighbor.relationship(location2).duration)
 
     @staticmethod
-    def __all_links_exist(location1: Location, location2: Location):
-        if LocationManager.depot is None:
-            raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-        if LocationManager.depot.neighbor.relationship(location1) is None:
-            raise RelationshipError(
-                'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location1))
-        if LocationManager.depot.neighbor.relationship(location2) is None:
-            raise RelationshipError(
-                'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location2))
-        if location1.neighbor.relationship(location2) is None:
-            raise RelationshipError('There is no link between node \'{}\' and node \'{}\''.format(location1, location2))
+    def __validate_link(location1: Location, location2: Location):
+        if location1 and location2:
+            if LocationManager.depot is None:
+                raise RouteStateException('This route has no departure. Set the departure before proceeding.')
+            if LocationManager.depot.neighbor.relationship(location1) is None:
+                raise RelationshipError(
+                    'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location1))
+            if LocationManager.depot.neighbor.relationship(location2) is None:
+                raise RelationshipError(
+                    'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location2))
+            if location1.neighbor.relationship(location2) is None:
+                raise RelationshipError('There is no link between node \'{}\' and node \'{}\''
+                                        .format(location1, location2))
 
 
 class SavingsManager:
@@ -250,7 +262,7 @@ class RouteManager:
 
     def build_routes(self):
         for savings, pair in self.savings_manager:
-            print(f'\n\033[1m Processing pair\033[0m ({pair.first()}, {pair.last()})')
+            print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
             for driver in self.drivers_heap:
                 print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                 if driver.get_departure() is None:

@@ -1,3 +1,4 @@
+import copy
 import enum
 import math
 import os
@@ -53,7 +54,7 @@ class Driver(StructuredNode):
         self.route.departure = None
 
     def set_departure(self, depot: Location):
-        self.route.departure = depot
+        self.route.departure = copy.deepcopy(depot)
 
     def get_departure(self):
         return self.route.departure
@@ -65,7 +66,7 @@ class Driver(StructuredNode):
             pair: A Pair of Locations.
 
         Return:
-            True is addition was successful, otherwise, return False
+            True if addition was successful, otherwise, return False
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()

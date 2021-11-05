@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel
 
@@ -18,8 +20,8 @@ class Location(StructuredNode):
     demand = IntegerProperty(index=True)
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
-    created_on = DateTimeProperty(index=True)
-    modified_on = DateTimeProperty(index=True)
+    created_on = DateTimeProperty(index=True, default=datetime.now)
+    modified_on = DateTimeProperty(index=True, default_now=True)
 
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
@@ -56,9 +58,11 @@ class Pair:
     def is_last(self, location: Location):
         return self.location2 == location
 
+    @property
     def first(self):
         return self.location1
 
+    @property
     def last(self):
         return self.location2
 
