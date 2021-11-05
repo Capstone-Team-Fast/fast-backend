@@ -84,7 +84,10 @@ class BingMatrixService(MatrixService):
     __distance_matrix = []
 
     @staticmethod
-    def build_matrices(start: Location, end: list, travel_mode: str = 'driving', chunk_size: int = 25):
+    def build_matrices(start: Location, end: list, travel_mode: str = 'driving', chunk_size: int = 25) -> bool:
+        if start is None or end is None:
+            return False
+
         if start.latitude is None or start.longitude is None:
             start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
             start = start.save()
@@ -94,6 +97,7 @@ class BingMatrixService(MatrixService):
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
+        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'\n')
         for index in range(0, len(end), chunk_size):
             if index + chunk_size < len(end):
                 chunks = end[index:index + chunk_size]
@@ -102,35 +106,44 @@ class BingMatrixService(MatrixService):
 
             destinations = []
             for location in chunks:
-                if location.latitude is None or location.longitude is None:
-                    location.latitude, location.longitude = BingGeocodeService.get_geocode(location)
-                    location.save()
+                if location:
+                    if location.latitude is None or location.longitude is None:
+                        location.latitude, location.longitude = BingGeocodeService.get_geocode(location)
+                        location.save()
+                    destinations.append({'latitude': location.latitude, 'longitude': location.longitude})
 
-                destinations.append({'latitude': location.latitude, 'longitude': location.longitude})
+            print(f'Destinations: {destinations}\n')
 
-            data = json.dumps({
-                'origins': origins,
-                'destinations': destinations,
-                'travelMode': travel_mode,
-            })
-            headers = {
-                'Content-Length': '450',
-                'Content-Type': 'application/json'
-            }
+            if len(destinations) > 0:
+                data = json.dumps({
+                    'origins': origins,
+                    'destinations': destinations,
+                    'travelMode': travel_mode,
+                })
+                headers = {
+                    'Content-Length': '450',
+                    'Content-Type': 'application/json'
+                }
+                print(f'HTTP Data: {data}\n')
 
-            response = requests.request("POST", url=url, data=data, headers=headers)
+                response = requests.request("POST", url=url, data=data, headers=headers)
 
-            if response.status_code != 200:
-                raise MatrixServiceError('API Error - HTTP Error')
+                if response.status_code != 200:
+                    raise MatrixServiceError('API Error - HTTP Error')
 
-            try:
-                origins, destinations, results = BingMatrixService.__get_matrices(response=response.json())
-                BingMatrixService.__insert_matrices(origins=origins, destinations=destinations, results=results)
-            except MatrixServiceError:
-                raise MatrixServiceError('API Error - Could not build matrices from HTTP request')
+                try:
+                    origins, destinations, results = BingMatrixService.__get_matrices(response=response.json())
+                    print(f'\nRetrieve the following matrix {results}\n')
+                    BingMatrixService.__insert_matrices(origins=origins, destinations=destinations, results=results)
+                except MatrixServiceError:
+                    raise MatrixServiceError('API Error - Could not build matrices from HTTP request')
+        return True
 
     @staticmethod
     def __get_matrices(response: dict):
+        if response is None:
+            return None
+
         if 'resourceSets' in response.keys():
             resource_sets = response['resourceSets'][0] if len(response['resourceSets']) > 0 else None
             if resource_sets and 'resources' in resource_sets:
@@ -154,20 +167,22 @@ class BingMatrixService(MatrixService):
 
     @staticmethod
     def __insert_matrices(origins: list, destinations: list, results: list):
-        for result in results:
-            if 'destinationIndex' not in result:
-                raise MatrixServiceError('API Error - BING Matrix - Invalid key \'destinationIndex\'')
-            else:
-                destination_index = result['destinationIndex']
+        if origins and destinations and results:
+            for result in results:
+                if 'destinationIndex' not in result:
+                    raise MatrixServiceError('API Error - BING Matrix - Invalid key \'destinationIndex\'')
+                else:
+                    destination_index = result['destinationIndex']
 
-            if 'originIndex' not in result:
-                raise MatrixServiceError('API Error - BING Matrix - Invalid key \'originIndex\'')
-            else:
-                origin_index = result['originIndex']
+                if 'originIndex' not in result:
+                    raise MatrixServiceError('API Error - BING Matrix - Invalid key \'originIndex\'')
+                else:
+                    origin_index = result['originIndex']
 
-            destination: dict = destinations[destination_index]
-            origin: dict = origins[origin_index]
-            location1 = Location.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
-            location2 = Location.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
-            location1.neighbor.connect(location2, {'distance': result['travelDistance'],
-                                                   'duration': result['travelDuration']})
+                destination: dict = destinations[destination_index]
+                origin: dict = origins[origin_index]
+                location1 = Location.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
+                location2 = Location.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
+                location1.neighbor.connect(location2, {'distance': result['travelDistance'],
+                                                       'duration': result['travelDuration']})
+                print(f'\nConnected {location1} and {location2}\n')

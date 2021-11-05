@@ -71,3 +71,6 @@ class Pair:
 
     def is_assignable(self):
         return not (self.location1.is_assigned or self.location2.is_assigned)
+
+    def __str__(self):
+        return '({}, {})'.format(self.location1, self.location2)
