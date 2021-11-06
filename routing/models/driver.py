@@ -80,15 +80,21 @@ class Driver(StructuredNode):
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
                         and (self.route.total_quantity < self.capacity):
                     continue
-                elif (cumulative_duration == (self.end_time - self.start_time).total_seconds()) \
-                        or self.route.total_quantity == self.capacity:
-                    self.route.close_route()
-                    return False
-                elif (cumulative_duration > (self.end_time - self.start_time).total_seconds()) \
-                        or self.route.total_quantity > self.capacity:
+                elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
+                    print(f'\nDriver has met allocated time.')
+                elif self.route.total_quantity == self.capacity:
+                    print(f'\nDriver is at capacity.')
+                elif cumulative_duration > (self.end_time - self.start_time).total_seconds():
+                    print(f'Inserting this location lead to overtime. Undoing insertion.')
                     self.route.undo()
-                    self.route.close_route()
-                    return False
+                    print(f'\nUndid insertion of {location}')
+                elif self.route.total_quantity > self.capacity:
+                    print(f'\nRoute is overcapacity.')
+                    self.route.undo()
+                    print(f'\nUndid insertion of {location}')
+                print(f'Closing route.\n')
+                self.route.close_route()
+                return False
             return True
         return False
 

@@ -108,9 +108,11 @@ class BingMatrixService(MatrixService):
             for location in chunks:
                 if location:
                     if location.latitude is None or location.longitude is None:
+                        print(f'\nRetrieving geocode for location {location}\n')
                         location.latitude, location.longitude = BingGeocodeService.get_geocode(location)
                         location.save()
-                    destinations.append({'latitude': location.latitude, 'longitude': location.longitude})
+                    if start.neighbor.relationship(location) is None:
+                        destinations.append({'latitude': location.latitude, 'longitude': location.longitude})
 
             print(f'Destinations: {destinations}\n')
 

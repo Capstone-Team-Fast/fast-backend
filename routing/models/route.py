@@ -45,26 +45,16 @@ class Route(StructuredNode):
         return False
         """
         if self.is_open:
-            print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mState:\033[0m {}'
-                  .format(location, location.demand, location.is_assigned))
             if len(self.locations_queue) == 0:
                 if self.departure is None:
                     raise RouteStateException('This route has no departure. Set the departure before proceeding.')
                 self.locations_queue.append(self.departure)
                 self.departure.is_assigned = True
                 self.tail = self.departure
-            if (location is not None) and (not location.is_assigned):
-                if (
-                        (
-                                pair.is_first(location) or pair.is_last(location)
-                        )
-                        and
-                        (
-                                pair.first not in self.locations_queue and pair.last not in self.locations_queue
-                        )
-                ):
+            if location and (not location.is_assigned):
+                if len(self.locations_queue) == 1:
                     self.insert_front(location=location)
-                elif pair.is_first(location):
+                elif pair.is_first(location) and not pair.first.is_assigned:
                     print(f'Location {location} is first and head is {self.departure.next}')
                     if self.is_exterior(pair.last):
                         print(f'Location {pair.last} is exterior')
@@ -78,7 +68,7 @@ class Route(StructuredNode):
                         elif pair.last == self.tail:
                             self.insert_front(location=location)
                             print(f'Inserting {location} to the front')
-                elif pair.is_last(location):
+                elif pair.is_last(location) and not pair.last.is_assigned:
                     print(f'Location {location} is last and tail is {self.tail}')
                     if self.is_exterior(pair.first):
                         print(f'Location {pair.first} is exterior')
@@ -92,6 +82,8 @@ class Route(StructuredNode):
                         elif pair.first == self.tail:
                             self.insert_front(location)
                             print(f'Inserting {location} to the front')
+                print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mAssigned:\033[0m {}'
+                      .format(location, location.demand, location.is_assigned))
                 print('\t\t\t\033[1mLocations: \033[0m {}'.format(self))
                 return True
             else:
@@ -170,7 +162,8 @@ class Route(StructuredNode):
             else:
                 if last_inserted == self.departure.next:
                     last_inserted.previous.next = last_inserted.next
-                    last_inserted.next.previous = last_inserted.previous
+                    if last_inserted.next:
+                        last_inserted.next.previous = last_inserted.previous
 
                     self.total_duration = (
                             self.total_duration - LocationManager.get_duration(self.departure, last_inserted)
@@ -201,18 +194,20 @@ class Route(StructuredNode):
         return self.locations_queue[-1] if len(self.locations_queue) > 0 else None
 
     def close_route(self):
-        if self.departure not in self.locations_queue:
-            raise RouteStateException('This route does not start with the departure {}'.format(self.departure))
-        self.stop = copy.deepcopy(self.departure)
-        self.locations_queue.append(self.stop)
-        self.stop.previous = self.tail
-        self.tail.next = self.stop
-        self.stop.next = None
-        self.tail = self.stop
-        self.stop.is_assigned = True
-        self.is_open = False
-        self.total_duration += LocationManager.get_duration(self.tail, self.stop)
-        self.total_distance += LocationManager.get_distance(self.tail, self.stop)
+        if self.departure and self.departure.next is None:
+            self.locations_queue = deque()
+            self.departure = None
+        elif self.is_open:
+            self.stop = copy.deepcopy(self.departure)
+            self.locations_queue.append(self.stop)
+            self.stop.previous = self.tail
+            self.tail.next = self.stop
+            self.stop.next = None
+            self.tail = self.stop
+            self.stop.is_assigned = True
+            self.is_open = False
+            self.total_duration += LocationManager.get_duration(self.tail, self.stop)
+            self.total_distance += LocationManager.get_distance(self.tail, self.stop)
 
     def get_total_distance(self):
         return self.total_distance

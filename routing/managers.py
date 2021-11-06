@@ -1,9 +1,9 @@
 import enum
-from heapq import heappush, heapify, heappop
+from heapq import heappop
 
 import neomodel
 
-from routing.exceptions import RelationshipError, RouteStateException
+from routing.exceptions import RouteStateException
 from routing.models.location import Location, Pair
 from routing.services import BingGeocodeService, BingMatrixService
 
@@ -50,6 +50,7 @@ class LocationManager:
                                               state__iexact=location.state, zipcode__exact=location.zipcode,
                                               is_center=location.is_center)
             if location.latitude is None or location.longitude is None:
+                print(f'\nRetrieving geocode for location {location}\n')
                 location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
                 location = location.save()
 
@@ -221,24 +222,28 @@ class SavingsManager:
 
     def __heapify(self, locations: list):
         heap = []
-        heapify(heap)
-        pairs: list = []
-        savings: dict = {}
-        for i in range(len(locations)):
-            for j in range(i + 1, len(locations)):
-                if locations[i] != locations[j]:
-                    pair = Pair(locations[i], locations[j])
-                    pairs.append(pair)
-                    saving = self.__location_manager.get_distance_savings(location1=pair.location1,
-                                                                          location2=pair.location2)
+        if locations:
+            pairs = []
+            savings_dictionary = {}
+            index = 0
+            for i in range(len(locations)):
+                for j in range(i + 1, len(locations)):
+                    if locations[i] != locations[j]:
+                        pair = Pair(locations[i], locations[j])
+                        saving = self.__location_manager.get_distance_savings(location1=pair.location1,
+                                                                              location2=pair.location2)
+                        savings_dictionary[saving] = index
+                        pairs.append(pair)
+                        index += 1
 
-                heappush(heap, pair)
+            savings_dictionary = sorted(savings_dictionary.items(), key=lambda x: x[0])
+            for _, index in savings_dictionary:
+                heap.append(pairs[index])
         return heap
 
     def __next__(self):
-        if len(self.__heap) > 0:
-            savings, pair = heappop(self.__heap)
-            return -1 * savings, pair
+        if self.__heap:
+            return self.__heap.pop()
         raise StopIteration
 
     def __iter__(self):
@@ -274,55 +279,50 @@ class RouteManager:
 
     def build_driver_heap(self):
         drivers_heap = []
-        # Build a dictionary of driver's index: driver's capacity
-        driver_dictionary = {index: driver.capacity for index, driver in enumerate(self.drivers)}
-        driver_dictionary = sorted(driver_dictionary.items(), key=lambda x: x[1], reverse=True)
+        if self.drivers:
+            # Build a dictionary of driver's index: driver's capacity
+            driver_dictionary = {index: driver.capacity for index, driver in enumerate(self.drivers)}
+            driver_dictionary = sorted(driver_dictionary.items(), key=lambda x: x[1], reverse=True)
 
-        if self.prioritize_volunteer:
-            volunteers = []
-            employees = []
-            for index, driver_capacity in driver_dictionary:
-                if self.drivers[index].is_volunteer():
-                    volunteers.append(self.drivers)
-                elif self.drivers[index].is_fulltime():
-                    employees.append(self.drivers)
-            drivers_heap.extend(volunteers)
-            drivers_heap.extend(employees)
-        else:
-            for index, driver_capacity in driver_dictionary:
-                drivers_heap.append(self.drivers[index])
-
+            if self.prioritize_volunteer:
+                volunteers = []
+                employees = []
+                for index, driver_capacity in driver_dictionary:
+                    if self.drivers[index].is_volunteer():
+                        volunteers.append(self.drivers)
+                    elif self.drivers[index].is_fulltime():
+                        employees.append(self.drivers)
+                drivers_heap.extend(volunteers)
+                drivers_heap.extend(employees)
+            else:
+                for index, driver_capacity in driver_dictionary:
+                    drivers_heap.append(self.drivers[index])
         return drivers_heap
 
-    def insert(self, pair: Pair) -> _State:
-        for driver in self.drivers:
-            inserted, cumulative_duration, cumulative_distance, cumulative_quantity = driver.route.add(pair=pair)
-            if cumulative_duration > driver.end_time - driver.start_time:
-                driver.route.undo()
-                driver.route.close_route()
-            elif cumulative_quantity > driver.capacity:
-                driver.route.undo()
-                driver.route.close_route()
-            if not inserted:
-                continue
-            else:
-                return RouteManager._State.HARD_SOLVING
-
-        # After insertion update drivers_heap so that retrieving driver with shortest distance is constant
-        return self._State.INFEASIBLE
-
     def build_routes(self):
-        for savings, pair in self.savings_manager:
-            print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
-            for driver in self.drivers_heap:
-                print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                if driver.get_departure() is None:
-                    driver.set_departure(self.location_manager.depot)
-                if driver.add(pair=pair):
+        assigned_locations_set = set()
+        if self.savings_manager:
+            for pair in self.savings_manager:
+                print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
+                for driver in self.drivers_heap:
+                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
+                    if driver.get_departure() is None:
+                        driver.set_departure(self.location_manager.depot)
+                    if driver.route.is_open and driver.add(pair=pair):
+                        break
+                if pair.is_assignable():
+                    print(f'{RouteManager._State.INFEASIBLE}')
+                if pair.first.is_assigned:
+                    assigned_locations_set.add(pair.first)
+                if pair.last.is_assigned:
+                    assigned_locations_set.add(pair.last)
+                if len(assigned_locations_set) == len(self.locations):
                     break
-            if pair.is_assignable():
-                print(f'{RouteManager._State.INFEASIBLE}')
 
-        for driver in self.drivers_heap:
-            if len(driver.route) > 1 and driver.route.is_open:
-                driver.route.close_route()
+            for driver in self.drivers_heap:
+                if len(driver.route) <= 1:
+                    driver.route.departure = None
+                    driver.route = None
+                elif len(driver.route) > 1 and driver.route.is_open:
+                    driver.route.close_route()
+            return RouteManager._State.SOLVED
