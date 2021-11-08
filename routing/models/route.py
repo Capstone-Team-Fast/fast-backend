@@ -221,6 +221,9 @@ class Route(StructuredNode):
     def get_created_on(self):
         return self.created_on
 
+    def serialize(self):
+        pass
+
     def __len__(self):
         return len(self.locations_queue)
 

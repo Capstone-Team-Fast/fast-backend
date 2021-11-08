@@ -1,4 +1,7 @@
+import copy
 import enum
+import heapq
+import sys
 from heapq import heappop
 
 import neomodel
@@ -267,6 +270,8 @@ class RouteManager:
         TRUE = 1
         DONE = 2
 
+    NUMBER_OF_ITERATIONS = 100
+
     def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list,
                  prioritize_volunteer: bool = False):
         self.drivers = drivers
@@ -276,8 +281,11 @@ class RouteManager:
         self.savings_manager = SavingsManager(db_connection=db_connection, depot=depot, locations=locations)
         self.prioritize_volunteer = prioritize_volunteer
         self.drivers_heap = self.build_driver_heap()
+        self.objective_function_value = sys.maxsize
+        self.best_allocation = None
+        self.objective_function_heap = []
 
-    def build_driver_heap(self):
+    def build_driver_heap(self) -> list:
         drivers_heap = []
         if self.drivers:
             # Build a dictionary of driver's index: driver's capacity
@@ -300,11 +308,35 @@ class RouteManager:
         return drivers_heap
 
     def build_routes(self):
+        objective_function_value = sys.maxsize
+        heapq.heapify(self.objective_function_heap)
+        best_allocation = []
+        for index in range(RouteManager.NUMBER_OF_ITERATIONS):
+            drivers = copy.deepcopy(self.drivers_heap)
+            locations = copy.deepcopy(self.locations)
+            savings_manager = SavingsManager(db_connection=self.location_manager.connection,
+                                             depot=self.location_manager.depot, locations=locations)
+            solver_status, drivers = self.build_route_instance(savings_manager=savings_manager, locations=locations,
+                                                               drivers_heap=drivers)
+            objective_function_distance, objective_function_duration = self.get_instance_objective_function(drivers)
+
+            if solver_status == RouteManager._State.SOLVED:
+                heapq.heappush(self.objective_function_heap, objective_function_distance)
+                if objective_function_value > objective_function_distance:
+                    objective_function_value = objective_function_distance
+                    best_allocation = copy.deepcopy(drivers)
+                    self.locations = copy.deepcopy(locations)
+
+        if self.objective_function_value > objective_function_value:
+            self.objective_function_value = objective_function_value
+            self.best_allocation = copy.deepcopy(best_allocation)
+
+    def build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
         assigned_locations_set = set()
-        if self.savings_manager:
-            for pair in self.savings_manager:
+        if savings_manager:
+            for pair in savings_manager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
-                for driver in self.drivers_heap:
+                for driver in drivers_heap:
                     print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                     if driver.get_departure() is None:
                         driver.set_departure(self.location_manager.depot)
@@ -316,13 +348,29 @@ class RouteManager:
                     assigned_locations_set.add(pair.first)
                 if pair.last.is_assigned:
                     assigned_locations_set.add(pair.last)
-                if len(assigned_locations_set) == len(self.locations):
+                if len(assigned_locations_set) == len(locations):
                     break
 
-            for driver in self.drivers_heap:
+            for driver in drivers_heap:
                 if len(driver.route) <= 1:
                     driver.route.departure = None
                     driver.route = None
                 elif len(driver.route) > 1 and driver.route.is_open:
                     driver.route.close_route()
-            return RouteManager._State.SOLVED
+            return RouteManager._State.SOLVED, drivers_heap
+
+    def get_instance_objective_function(self, drivers):
+        objective_function_distance = 0
+        objective_function_duration = 0
+        for driver in drivers:
+            if driver.route:
+                objective_function_distance += driver.route.total_distance
+                objective_function_duration += driver.route.total_duration
+        return objective_function_distance, objective_function_duration
+
+    @staticmethod
+    def request_routes(locations: list, drivers: list):
+        pass
+
+    def send_routes(self):
+        pass
