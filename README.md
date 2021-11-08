@@ -62,3 +62,8 @@ Then
 `python manage.py createsuperuser`
 
 May have to use `winpty python manage.py createsuperuser`
+
+
+## Test Deployment command
+
+`python manage.py runserver 0.0.0.0:8000`
