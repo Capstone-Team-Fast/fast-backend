@@ -33,10 +33,11 @@ class LocationSerializer(serializers.ModelSerializer):
         instance.latitude = validated_data.get('latitude', instance.latitude)
         instance.longitude = validated_data.get('longitude', instance.longitude)
         instance.modified_on = datetime.now()
+        instance.save()
         return instance
 
     class Meta:
         model = Location
-        fields = ['address', 'city', 'state', 'zipcode', 'is_center', 'room_number', 'latitude',
+        fields = ['id', 'address', 'city', 'state', 'zipcode', 'is_center', 'room_number', 'latitude',
                   'longitude']
         read_only_fields = ['created_on']

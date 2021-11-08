@@ -1,12 +1,20 @@
-#Team Fast Backend
+# Team Fast Backend
 This project's goal is to create a framework that has been designed to efficiently route delivery drivers coming from a single location. It also provides an easy-to-use interface (on the frontend) for managers that create routes, as well as the drivers that deliver using those routes. 
 
-##Milestone 1 Release Notes
+## Milestone 1: Release Notes
 Many of the backend features are currently still in development. Right now all of the models are working in the database and we have begun work on the serializers and views. The serializers will be able to transform python objects to JSON and vice versa. The views will handle our API routes and the type of request (get, post, put, etc.).
 
 Currently, our only working API route is `/locations/`
 
-#Installation
+## Milestone 2: Release Notes
+
+### Routing algorithm:
+We wrote much of the API to communicate with external APIs and retrieve geocode and distance/duration matrices. We also set up a graph database using neo4j. One of our objectives was to be able to query a database and retrieve distance/duration between any pair of locations that are not new, thus saving on API. Then, we started implementing a modified version of Clarke and Wright's Savings algorithm with Time Window.
+
+### Backend:
+For Milestone 2 we have finished all of our API endpoints except for `/route/` post requests. All other views and serializers have been completed.
+
+# Installation
 ## Install and update Python
 
 ## Create a virtual environment
@@ -54,3 +62,8 @@ Then
 `python manage.py createsuperuser`
 
 May have to use `winpty python manage.py createsuperuser`
+
+
+## Test Deployment command
+
+`python manage.py runserver 0.0.0.0:8000`

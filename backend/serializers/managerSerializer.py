@@ -6,7 +6,7 @@ from backend.models.manager import Manager
 class ManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Manager
-        fields = ['user', 'phone']
+        fields = ['id', 'user', 'phone']
         read_only_fields = ['created_on']
 
     def create(self, validated_data):

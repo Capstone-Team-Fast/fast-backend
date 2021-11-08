@@ -3,9 +3,9 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from backend.models import Route
+from backend.models import Route, Client, Driver
 from backend.serializers.routeSerializer import RouteSerializer
-
+from backend.serializers import ClientSerializer, DriverSerializer, ClientRoutingSerializer
 
 class RouteView(APIView):
 
@@ -20,11 +20,6 @@ class RouteView(APIView):
         serializer = RouteSerializer(route)
         return Response(serializer.data)
 
-    def delete(self, request, pk, format=None):
-        route = self.get_object(pk)
-        route.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
-
 
 class RouteListView(APIView):
 
@@ -34,8 +29,34 @@ class RouteListView(APIView):
         return Response(serializer.data)
 
     def post(self, request, format=None):
-        serializer = RouteSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        data = request.data
+        client_id_list = data.get('client_ids')
+        driver_id_list = data.get('driver_ids')
+
+        clients = []
+        drivers = []
+
+        for client_id in client_id_list:
+            client = Client.objects.get(id=client_id)
+            print(client.location)
+            clients.append(client)
+
+        client_serializer = ClientSerializer(clients, many=True)
+
+        for driver_id in driver_id_list:
+            drivers.append(Driver.objects.get(id=driver_id))
+
+        driver_serializer = DriverSerializer(drivers, many=True)
+
+        # TODO: Connect to routing app with function call like:
+        # routes = router(client_list, driver_list)
+
+        # TODO: run routes through the route serializer and return response
+        # serializer = PostRouteSerializer(routes, many=True)
+        # if serializer.is_valid():
+        #     serializer.save()
+        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        # TODO: remove this when above TODOs are done
+        return Response(driver_serializer.data, status=status.HTTP_200_OK)
