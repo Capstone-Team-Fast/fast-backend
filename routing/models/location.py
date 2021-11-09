@@ -1,7 +1,7 @@
-from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, DateTimeProperty, \
-    UniqueIdProperty, Relationship, StructuredRel
+from datetime import datetime
 
-from routing.services import GeocodeService
+from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel
 
 
 class Weight(StructuredRel):
@@ -20,16 +20,21 @@ class Location(StructuredNode):
     demand = IntegerProperty(index=True)
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
-    created_on = DateTimeProperty(index=True)
-    modified_on = DateTimeProperty(index=True)
+    created_on = DateTimeProperty(index=True, default=datetime.now)
+    modified_on = DateTimeProperty(index=True, default_now=True)
 
     neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
 
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
-        self.latitude, self.longitude = GeocodeService.get_geocode(self)
-        self.save()
+        self.next = None
+        self.previous = None
+
+    def reset(self):
+        self.is_assigned = False
+        self.next = None
+        self.previous = None
 
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))
@@ -47,19 +52,33 @@ class Location(StructuredNode):
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):
-        if not (isinstance(location1, Location) and isinstance(location2, Location)):
-            raise ValueError
         self.location1 = location1
         self.location2 = location2
 
-    def get_first(self):
+    def is_first(self, location: Location):
+        return self.location1 == location
+
+    def is_last(self, location: Location):
+        return self.location2 == location
+
+    @property
+    def first(self):
         return self.location1
 
-    def get_second(self):
+    @property
+    def last(self):
         return self.location2
 
     def get_pair(self):
         return self.location1, self.location2
 
     def is_assignable(self):
-        return not (self.location1.is_assigned or self.location2.is_assigned)
+        if self.location1 and self.location2:
+            return not (self.location1.is_assigned or self.location2.is_assigned)
+        elif (self.location1 is None and self.location2) or (self.location1 and self.location2 is None):
+            return True
+
+        return False
+
+    def __str__(self):
+        return '({}, {})'.format(self.location1, self.location2)
