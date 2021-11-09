@@ -31,6 +31,11 @@ class Location(StructuredNode):
         self.next = None
         self.previous = None
 
+    def reset(self):
+        self.is_assigned = False
+        self.next = None
+        self.previous = None
+
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))
 
@@ -47,8 +52,6 @@ class Location(StructuredNode):
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):
-        if not (isinstance(location1, Location) and isinstance(location2, Location)):
-            raise ValueError
         self.location1 = location1
         self.location2 = location2
 
@@ -70,7 +73,12 @@ class Pair:
         return self.location1, self.location2
 
     def is_assignable(self):
-        return not (self.location1.is_assigned or self.location2.is_assigned)
+        if self.location1 and self.location2:
+            return not (self.location1.is_assigned or self.location2.is_assigned)
+        elif (self.location1 is None and self.location2) or (self.location1 and self.location2 is None):
+            return True
+
+        return False
 
     def __str__(self):
         return '({}, {})'.format(self.location1, self.location2)

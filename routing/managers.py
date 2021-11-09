@@ -1,6 +1,7 @@
 import copy
 import enum
 import heapq
+import json
 import sys
 from heapq import heappop
 
@@ -312,13 +313,21 @@ class RouteManager:
         heapq.heapify(self.objective_function_heap)
         best_allocation = []
         for index in range(RouteManager.NUMBER_OF_ITERATIONS):
+            print(f'\n\033[1m Iteration number \033[0m {index + 1}')
             drivers = copy.deepcopy(self.drivers_heap)
+            for driver in drivers:
+                driver.reset()
+
             locations = copy.deepcopy(self.locations)
+            for location in locations:
+                location.reset()
+
             savings_manager = SavingsManager(db_connection=self.location_manager.connection,
                                              depot=self.location_manager.depot, locations=locations)
             solver_status, drivers = self.build_route_instance(savings_manager=savings_manager, locations=locations,
                                                                drivers_heap=drivers)
-            objective_function_distance, objective_function_duration = self.get_instance_objective_function(drivers)
+            objective_function_distance, objective_function_duration = RouteManager.get_instance_objective_function(
+                drivers)
 
             if solver_status == RouteManager._State.SOLVED:
                 heapq.heappush(self.objective_function_heap, objective_function_distance)
@@ -333,7 +342,19 @@ class RouteManager:
 
     def build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
         assigned_locations_set = set()
-        if savings_manager:
+        if len(locations) == 1:
+            print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
+            for driver in drivers_heap[::-1]:
+                print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
+                if driver.get_departure() is None:
+                    driver.set_departure(self.location_manager.depot)
+                if driver.route.is_open and driver.add(pair=Pair(locations[0], locations[0])):
+                    break
+                if locations[0].is_assigned:
+                    assigned_locations_set.add(locations[0])
+                if len(assigned_locations_set) == len(locations):
+                    break
+        elif savings_manager:
             for pair in savings_manager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
                 for driver in drivers_heap:
@@ -351,15 +372,16 @@ class RouteManager:
                 if len(assigned_locations_set) == len(locations):
                     break
 
-            for driver in drivers_heap:
-                if len(driver.route) <= 1:
-                    driver.route.departure = None
-                    driver.route = None
-                elif len(driver.route) > 1 and driver.route.is_open:
-                    driver.route.close_route()
-            return RouteManager._State.SOLVED, drivers_heap
+        for driver in drivers_heap:
+            if len(driver.route) <= 1:
+                driver.route.departure = None
+                driver.route = None
+            elif len(driver.route) > 1 and driver.route.is_open:
+                driver.route.close_route()
+        return RouteManager._State.SOLVED, drivers_heap
 
-    def get_instance_objective_function(self, drivers):
+    @staticmethod
+    def get_instance_objective_function(drivers):
         objective_function_distance = 0
         objective_function_duration = 0
         for driver in drivers:
@@ -368,9 +390,14 @@ class RouteManager:
                 objective_function_duration += driver.route.total_duration
         return objective_function_distance, objective_function_duration
 
-    @staticmethod
-    def request_routes(locations: list, drivers: list):
-        pass
+    def request_routes(self, locations: list, drivers: list):
+        response = self.build_response()
+        RouteManager.send_routes(response)
+
+    def build_response(self):
+        self.drivers
+        response = json.dumps({})
+        return response
 
     def send_routes(self):
         pass

@@ -53,6 +53,10 @@ class Driver(StructuredNode):
         self.route = Route()
         self.route.departure = None
 
+    def reset(self):
+        self.route = Route()
+        self.route.departure = None
+
     def set_departure(self, depot: Location):
         self.route.departure = copy.deepcopy(depot)
 
@@ -122,3 +126,6 @@ class Driver(StructuredNode):
 
     def is_full_time(self):
         return self.employee_status == Driver.Role.EMPLOYEE.value
+
+    def serialize(self):
+        pass
