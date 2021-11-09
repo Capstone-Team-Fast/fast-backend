@@ -13,7 +13,7 @@ class DriverSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Driver
-        fields = ['id', 'user', 'capacity', 'employee_status', 'phone',
+        fields = ['id', 'user', 'first_name', 'last_name', 'capacity', 'employee_status', 'phone',
                   'availability', 'languages']
         read_only_fields = ['created_on']
 
