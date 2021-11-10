@@ -17,9 +17,10 @@ For Milestone 2 we have finished all of our API endpoints except for `/route/` p
 ## Milestone 3: Release Notes
 
 ### Routing algorithm:
+For this release, we finished writing 90% of the routing algorithm. We tested features we coded for milestone 2 (using the graph database, geocoding locations, and retrieving distance/duration matrices). We also added the logic to build routes, aka assign locations to drivers available to deliver, under different business constraints.
 
 ### Backend:
-For Milestone 3 we made small changes to the client and driver models and got the `/route/` api endpoint ready for connection to the routing algorithm app.
+For Milestone 3, we made small changes to the client and driver models and got the `/route/` api endpoint ready for connection to the routing algorithm app.
 
 # Installation
 ## Install and update Python
