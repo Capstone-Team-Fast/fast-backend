@@ -25,14 +25,14 @@ from backend.views.managerView import ManagerView, ManagerListView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('locations/', LocationListView.as_view()),
-    path('locations/<int:pk>/', LocationView.as_view()),
-    path('clients/', ClientListView.as_view()),
-    path('clients/<int:pk>/', ClientView.as_view()),
-    path('routes/', RouteListView.as_view()),
-    path('routes/<int:pk>/', RouteView.as_view()),
-    path('drivers/', DriverListView.as_view()),
-    path('drivers/<int:pk>/', DriverView.as_view()),
-    path('managers/', ManagerListView.as_view()),
-    path('managers/<int:pk>/', ManagerView.as_view())
+    path('api/locations/', LocationListView.as_view()),
+    path('api/locations/<int:pk>/', LocationView.as_view()),
+    path('api/clients/', ClientListView.as_view()),
+    path('api/clients/<int:pk>/', ClientView.as_view()),
+    path('api/routes/', RouteListView.as_view()),
+    path('api/routes/<int:pk>/', RouteView.as_view()),
+    path('api/drivers/', DriverListView.as_view()),
+    path('api/drivers/<int:pk>/', DriverView.as_view()),
+    path('api/managers/', ManagerListView.as_view()),
+    path('api/managers/<int:pk>/', ManagerView.as_view())
 ]

@@ -10,7 +10,7 @@ class ClientSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Client
-        fields = ['id', 'user', 'quantity', 'phone', 'languages', 'location']
+        fields = ['id', 'user', 'first_name', 'last_name', 'quantity', 'phone', 'languages', 'location']
         read_only_fields = ['created_on']
 
     def create(self, validated_data):
