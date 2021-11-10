@@ -14,6 +14,13 @@ We wrote much of the API to communicate with external APIs and retrieve geocode 
 ### Backend:
 For Milestone 2 we have finished all of our API endpoints except for `/route/` post requests. All other views and serializers have been completed.
 
+## Milestone 3: Release Notes
+
+### Routing algorithm:
+
+### Backend:
+For Milestone 3 we made small changes to the client and driver models and got the `/route/` api endpoint ready for connection to the routing algorithm app.
+
 # Installation
 ## Install and update Python
 
