@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
-    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One
 
 
 class Weight(StructuredRel):
@@ -10,31 +10,21 @@ class Weight(StructuredRel):
     savings = FloatProperty()
 
 
-class Location(StructuredNode):
+class Address(StructuredNode):
     uid = UniqueIdProperty()
     address = StringProperty(index=True, required=True)
     city = StringProperty(index=True, required=True)
     state = StringProperty(index=True, required=True)
     zipcode = IntegerProperty(index=True, required=True)
-    is_center = BooleanProperty(index=True, default=False)
-    demand = IntegerProperty(index=True)
     latitude = FloatProperty(index=True)
     longitude = FloatProperty(index=True)
     created_on = DateTimeProperty(index=True, default=datetime.now)
     modified_on = DateTimeProperty(index=True, default_now=True)
 
-    neighbor = Relationship(cls_name='Location', rel_type='CONNECTED_TO', model=Weight)
+    neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=Weight)
 
     def __init__(self, *args, **kwargs):
-        super(Location, self).__init__(*args, **kwargs)
-        self.is_assigned = False
-        self.next = None
-        self.previous = None
-
-    def reset(self):
-        self.is_assigned = False
-        self.next = None
-        self.previous = None
+        super(Address, self).__init__(*args, **kwargs)
 
     def __hash__(self):
         return hash((self.address, self.city, self.state, self.zipcode))
@@ -48,6 +38,72 @@ class Location(StructuredNode):
     def __str__(self):
         return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
                                                              zipcode=self.zipcode)
+
+    def distance(self, other):
+        if isinstance(other, type(self)):
+            return self.neighbor.relationship(other).distance if self.neighbor.relationship(other) else None
+        raise ValueError(f'{type(other)} is not supported.')
+
+    def duration(self, other):
+        if isinstance(other, type(self)):
+            return self.neighbor.relationship(other).duration if self.neighbor.relationship(other) else None
+        raise ValueError(f'{type(other)} is not supported.')
+
+    @classmethod
+    def category(cls):
+        pass
+
+
+class Location(StructuredNode):
+    __uid = UniqueIdProperty()
+    __external_id = IntegerProperty(index=True, required=False)
+    __created_on = DateTimeProperty(index=True, default=datetime.now)
+    __modified_on = DateTimeProperty(index=True, default_now=True)
+    __is_center = BooleanProperty(index=True, default=False)
+    __address = Relationship(cls_name='routing.models.location.Address', rel_type='LOCATED_AT', cardinality=One)
+
+    def __init__(self, *args, **kwargs):
+        super(Location, self).__init__(*args, **kwargs)
+        self.is_assigned = False
+        self.address = None
+        self.next = None
+        self.previous = None
+
+    def reset(self):
+        self.next = None
+        self.previous = None
+
+    def __eq__(self, other):
+        if isinstance(other, type(self)):
+            return self.external_id == other.external_id
+        raise ValueError(f'{type(other)} is not supported.')
+
+    def duration(self, other):
+        if isinstance(other, type(self)):
+            return self.address.duration(other.address)
+        raise ValueError(f'{type(other)} is not supported.')
+
+    def distance(self, other):
+        if isinstance(other, type(self)):
+            return self.address.distance(other.address)
+        raise ValueError(f'{type(other)} is not supported.')
+
+    @classmethod
+    def category(cls):
+        pass
+
+
+class Customer(Location):
+    __demand = IntegerProperty(index=True)
+    __language = Relationship(cls_name='routing.models.language.Language', rel_type='SPEAKS')
+
+    def __init__(self, *args, **kwargs):
+        super(Location).__init__(*args, **kwargs)
+
+
+class Depot(Location):
+    def __init__(self, *args, **kwargs):
+        super(Depot).__init__(*args, **kwargs)
 
 
 class Pair:

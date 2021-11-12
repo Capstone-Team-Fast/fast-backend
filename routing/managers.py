@@ -8,7 +8,7 @@ from heapq import heappop
 import neomodel
 
 from routing.exceptions import RouteStateException
-from routing.models.location import Location, Pair
+from routing.models.location import Address, Pair
 from routing.services import BingGeocodeService, BingMatrixService
 
 
@@ -18,11 +18,11 @@ class DriverManager:
 
 
 class LocationManager:
-    depot: Location = None
+    depot: Address = None
     locations = set()
     connection: str = ''
 
-    def __init__(self, db_connection: neomodel.db, depot: Location):
+    def __init__(self, db_connection: neomodel.db, depot: Address):
         self.depot = depot
         self.connection = db_connection
         LocationManager.depot = depot
@@ -30,10 +30,10 @@ class LocationManager:
         LocationManager.connection = db_connection
 
     @staticmethod
-    def remove(location: Location):
+    def remove(location: Address):
         if len(LocationManager.locations) == 0:
             raise StopIteration
-        if not isinstance(location, Location):
+        if not isinstance(location, Address):
             raise ValueError(f'Type {type(location)} not supported.')
         LocationManager.locations.remove(location)
 
@@ -42,20 +42,20 @@ class LocationManager:
         return list(LocationManager.locations)
 
     @staticmethod
-    def add(location: Location):
+    def add(location: Address):
         """Add the location argument to the graph database.
 
         This method ensures that a location, by the time it is added to the graph database, has its coordinates set.
         The coordinates consist of a latitude and a longitude.
         """
         if location and location not in LocationManager.locations:
-            if location in Location.nodes.all():
-                location = Location.nodes.get(address__iexact=location.address, city__iexact=location.city,
-                                              state__iexact=location.state, zipcode__exact=location.zipcode,
-                                              is_center=location.is_center)
+            if location in Address.nodes.all():
+                location = Address.nodes.get(address__iexact=location.address, city__iexact=location.city,
+                                             state__iexact=location.state, zipcode__exact=location.zipcode,
+                                             is_center=location.is_center)
             if location.latitude is None or location.longitude is None:
                 print(f'\nRetrieving geocode for location {location}\n')
-                location.latitude, location.longitude = BingGeocodeService.get_geocode(location=location)
+                location.latitude, location.longitude = BingGeocodeService.get_geocode(address=location)
                 location = location.save()
 
             if not BingMatrixService.build_matrices(start=location, end=list(LocationManager.locations)):
@@ -80,7 +80,7 @@ class LocationManager:
                         LocationManager.add(location)
 
     @staticmethod
-    def get_distance(location1: Location, location2: Location):
+    def get_distance(location1: Address, location2: Address):
         """Gets the distance (in meters) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
@@ -103,7 +103,7 @@ class LocationManager:
         return location1.neighbor.relationship(location2).distance
 
     @staticmethod
-    def get_duration(location1: Location, location2: Location):
+    def get_duration(location1: Address, location2: Address):
         """Gets the duration (in minutes) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
@@ -125,7 +125,7 @@ class LocationManager:
         return location1.neighbor.relationship(location2).duration
 
     @staticmethod
-    def get_distance_savings(location1: Location, location2: Location):
+    def get_distance_savings(location1: Address, location2: Address):
         """Gets the savings (in meters) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
@@ -146,7 +146,7 @@ class LocationManager:
         return LocationManager.__get_distance_saved(location1, location2)
 
     @staticmethod
-    def get_duration_savings(location1: Location, location2: Location):
+    def get_duration_savings(location1: Address, location2: Address):
         """Gets the savings (in meters) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
@@ -172,7 +172,7 @@ class LocationManager:
         return len(LocationManager.locations)
 
     @staticmethod
-    def __get_distance_saved(location1: Location, location2: Location):
+    def __get_distance_saved(location1: Address, location2: Address):
         """Computes the savings distance between two locations.
 
         This helper function ensures that there is an edge between the two locations.
@@ -184,7 +184,7 @@ class LocationManager:
                 - location1.neighbor.relationship(location2).distance)
 
     @staticmethod
-    def __get_duration_saved(location1: Location, location2: Location):
+    def __get_duration_saved(location1: Address, location2: Address):
         """Computes the savings duration between two locations.
 
         This helper function ensures that there is an edge between the two locations.
@@ -196,7 +196,7 @@ class LocationManager:
                 - location1.neighbor.relationship(location2).duration)
 
     @staticmethod
-    def __validate_link(location1: Location, location2: Location):
+    def __validate_link(location1: Address, location2: Address):
         """This helper function ensures that there is an edge between the two locations.
 
         This implementation guarantees that there is an edge between any two locations.
@@ -219,7 +219,7 @@ class LocationManager:
 
 
 class SavingsManager:
-    def __init__(self, db_connection: str, depot: Location, locations: list):
+    def __init__(self, db_connection: str, depot: Address, locations: list):
         self.depot = depot
         self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
         self.__heap = self.__heapify(locations=locations)
@@ -273,7 +273,7 @@ class RouteManager:
 
     NUMBER_OF_ITERATIONS = 100
 
-    def __init__(self, db_connection: str, depot: Location, drivers: list, locations: list,
+    def __init__(self, db_connection: str, depot: Address, drivers: list, locations: list,
                  prioritize_volunteer: bool = False):
         self.drivers = drivers
         self.locations = locations
@@ -390,12 +390,11 @@ class RouteManager:
                 objective_function_duration += driver.route.total_duration
         return objective_function_distance, objective_function_duration
 
-    def request_routes(self, locations: list, drivers: list):
+    def request_routes(self, customers: list, drivers: list):
         response = self.build_response()
         RouteManager.send_routes(response)
 
     def build_response(self):
-        self.drivers
         response = json.dumps({})
         return response
 

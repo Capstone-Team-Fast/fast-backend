@@ -6,13 +6,13 @@ from urllib.parse import quote
 import requests
 
 from routing.exceptions import GeocodeError, MatrixServiceError
-from routing.models.location import Location
+from routing.models.location import Address
 
 
 class GeocodeService(ABC):
 
     @staticmethod
-    def get_geocode(location: Location, payload=None, headers=None):
+    def get_geocode(location: Address, payload=None, headers=None):
         pass
 
 
@@ -21,16 +21,16 @@ class BingGeocodeService(GeocodeService):
     __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
 
     @staticmethod
-    def get_geocode(location: Location, payload=None, headers=None):
+    def get_geocode(address: Address, payload=None, headers=None):
         if payload is None:
             payload = {}
         if headers is None:
             headers = {}
-        response = BingGeocodeService.__request_geocode(location=location, payload=payload, headers=headers)
+        response = BingGeocodeService.__request_geocode(location=address, payload=payload, headers=headers)
         return BingGeocodeService.__get_coordinates(response)
 
     @staticmethod
-    def __request_geocode(location: Location, payload=None, headers=None):
+    def __request_geocode(location: Address, payload=None, headers=None):
         if payload is None:
             payload = {}
         if headers is None:
@@ -66,11 +66,11 @@ class BingGeocodeService(GeocodeService):
 class MatrixService(ABC):
 
     @staticmethod
-    def build_duration_matrix(start: Location, end: list):
+    def build_duration_matrix(start: Address, end: list):
         pass
 
     @staticmethod
-    def build_distance_matrix(start: Location, end: list):
+    def build_distance_matrix(start: Address, end: list):
         pass
 
 
@@ -84,7 +84,7 @@ class BingMatrixService(MatrixService):
     __distance_matrix = []
 
     @staticmethod
-    def build_matrices(start: Location, end: list, travel_mode: str = 'driving', chunk_size: int = 25) -> bool:
+    def build_matrices(start: Address, end: list, travel_mode: str = 'driving', chunk_size: int = 25) -> bool:
         if start is None or end is None:
             return False
 
@@ -105,14 +105,14 @@ class BingMatrixService(MatrixService):
                 chunks = end[index:]
 
             destinations = []
-            for location in chunks:
-                if location:
-                    if location.latitude is None or location.longitude is None:
-                        print(f'\nRetrieving geocode for location {location}\n')
-                        location.latitude, location.longitude = BingGeocodeService.get_geocode(location)
-                        location.save()
-                    if location != start and start.neighbor.relationship(location) is None:
-                        destinations.append({'latitude': location.latitude, 'longitude': location.longitude})
+            for address in chunks:
+                if address:
+                    if address.latitude is None or address.longitude is None:
+                        print(f'\nRetrieving geocode for address {address}\n')
+                        address.latitude, address.longitude = BingGeocodeService.get_geocode(address)
+                        address.save()
+                    if address != start and start.neighbor.relationship(address) is None:
+                        destinations.append({'latitude': address.latitude, 'longitude': address.longitude})
 
             print(f'Destinations: {destinations}\n')
 
@@ -183,8 +183,8 @@ class BingMatrixService(MatrixService):
 
                 destination: dict = destinations[destination_index]
                 origin: dict = origins[origin_index]
-                location1 = Location.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
-                location2 = Location.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
+                location1 = Address.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
+                location2 = Address.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
                 location1.neighbor.connect(location2, {'distance': result['travelDistance'],
                                                        'duration': result['travelDuration']})
                 print(f'\nConnected {location1} and {location2}\n')

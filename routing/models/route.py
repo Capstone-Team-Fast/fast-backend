@@ -11,7 +11,7 @@ if working_dir not in sys.path:
     sys.path.append(working_dir)
 
 from routing.managers import LocationManager
-from routing.models.location import Location, Pair
+from routing.models.location import Address, Pair, Customer, Depot
 from routing.exceptions import EmptyRouteException, RouteStateException
 
 
@@ -26,7 +26,7 @@ class Route(StructuredNode):
 
     def __init__(self, *args, **kwargs):
         super(Route, self).__init__(*args, **kwargs)
-        self.locations_queue: deque = deque()
+        self.customers_queue: deque = deque()
         self.total_quantity: float = 0
         self.total_duration: float = 0
         self.total_distance: float = 0
@@ -37,88 +37,88 @@ class Route(StructuredNode):
 
     @property
     def previous(self):
-        return self.locations_queue[-1] if len(self.locations_queue) > 0 else None
+        return self.customers_queue[-1] if len(self.customers_queue) > 0 else None
 
-    def add(self, location: Location, pair: Pair) -> bool:
+    def add(self, customer: Customer, pair: Pair) -> bool:
         """
         Add a location to route based on insertion rules. Return True is addition was successful, otherwise,
         return False
         """
         if self.is_open:
-            if len(self.locations_queue) == 0:
+            if len(self.customers_queue) == 0:
                 if self.departure is None:
                     raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-                self.locations_queue.append(self.departure)
-                self.departure.is_assigned = True
+                self.customers_queue.append(self.departure)
+                # self.departure.is_assigned = True
                 self.tail = self.departure
-            if location and (not location.is_assigned):
-                if len(self.locations_queue) == 1:
-                    self.insert_front(location=location)
-                elif pair.is_first(location) and not pair.first.is_assigned:
-                    print(f'Location {location} is first and head is {self.departure.next}')
+            if customer and (not customer.is_assigned):
+                if len(self.customers_queue) == 1:
+                    self.insert_front(customer=customer)
+                elif pair.is_first(customer) and not pair.first.is_assigned:
+                    print(f'Location {customer} is first and head is {self.departure.next}')
                     if self.is_exterior(pair.last):
                         print(f'Location {pair.last} is exterior')
                         if pair.last == self.departure.next:
                             if self.departure.next.next is None:
-                                self.insert_front(location)
-                                print(f'Inserting {location} to the front')
+                                self.insert_front(customer)
+                                print(f'Inserting {customer} to the front')
                             else:
-                                self.insert_back(location=location)
-                                print(f'Inserting {location} to the back')
+                                self.insert_back(location=customer)
+                                print(f'Inserting {customer} to the back')
                         elif pair.last == self.tail:
-                            self.insert_front(location=location)
-                            print(f'Inserting {location} to the front')
-                elif pair.is_last(location) and not pair.last.is_assigned:
-                    print(f'Location {location} is last and tail is {self.tail}')
+                            self.insert_front(customer=customer)
+                            print(f'Inserting {customer} to the front')
+                elif pair.is_last(customer) and not pair.last.is_assigned:
+                    print(f'Location {customer} is last and tail is {self.tail}')
                     if self.is_exterior(pair.first):
                         print(f'Location {pair.first} is exterior')
                         if pair.first == self.departure.next:
                             if self.departure.next.next is None:
-                                self.insert_front(location)
-                                print(f'Inserting {location} to the front')
+                                self.insert_front(customer)
+                                print(f'Inserting {customer} to the front')
                             else:
-                                self.insert_back(location)
-                                print(f'Inserting {location} to the back')
+                                self.insert_back(customer)
+                                print(f'Inserting {customer} to the back')
                         elif pair.first == self.tail:
-                            self.insert_front(location)
-                            print(f'Inserting {location} to the front')
+                            self.insert_front(customer)
+                            print(f'Inserting {customer} to the front')
                 print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mAssigned:\033[0m {}'
-                      .format(location, location.demand, location.is_assigned))
+                      .format(customer, customer.demand, customer.is_assigned))
                 print('\t\t\t\033[1mLocations: \033[0m {}'.format(self))
                 return True
             else:
-                print(f'{location} is already assigned.')
+                print(f'{customer} is already assigned.')
             if self.previous == self.departure:
                 self.undo()
-        return False if location is None else location.is_assigned
+        return False if customer is None else customer.is_assigned
 
-    def insert_front(self, location: Location):
-        """Inserts this location at the beginning of this route.
+    def insert_front(self, customer: Customer):
+        """Inserts this customer at the beginning of this route.
 
-        This location is inserted after the departure.
+        This customer is inserted after the departure.
         """
-        if len(self.locations_queue) == 0 or self.departure is None:
+        if len(self.customers_queue) == 0 or self.departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         else:
-            self.total_duration += LocationManager.get_duration(location1=self.tail, location2=location)
-            self.total_distance += LocationManager.get_distance(location1=self.tail, location2=location)
-            self.total_quantity += location.demand
+            self.total_duration += self.tail.duration(other=customer)
+            self.total_distance += self.tail.distance(other=customer)
+            self.total_quantity += customer.demand
 
-            if len(self.locations_queue) == 1:
-                self.departure.next = location
-                location.previous = self.departure
+            if len(self.customers_queue) == 1:
+                self.departure.locate.next = customer.locate
+                customer.locate.previous = self.departure.locate
             else:
-                location.previous = self.tail
-                self.tail.next = location
-            self.tail = location
-            self.locations_queue.append(location)
-            location.is_assigned = True
+                customer.locate.previous = self.tail.locate
+                self.tail.locate.next = customer.locate
+            self.tail = customer
+            self.customers_queue.append(customer)
+            customer.is_assigned = True
 
-    def insert_back(self, location: Location):
+    def insert_back(self, location: Address):
         """Insert this location at the end of this route."""
-        if len(self.locations_queue) == 0 or self.departure is None:
+        if len(self.customers_queue) == 0 or self.departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-        elif len(self.locations_queue) == 1:
+        elif len(self.customers_queue) == 1:
             raise RouteStateException('No insertion can\'t be made on the rear.')
         else:
             self.total_duration = (
@@ -138,11 +138,11 @@ class Route(StructuredNode):
             self.departure.next.previous = location
             location.previous = self.departure
             self.departure.next = location
-            self.locations_queue.append(location)
+            self.customers_queue.append(location)
             location.is_assigned = True
 
-    def is_exterior(self, location: Location):
-        if len(self.locations_queue) == 0:
+    def is_exterior(self, location: Address):
+        if len(self.customers_queue) == 0:
             raise EmptyRouteException('This route is empty')
 
         return self.departure.next == location or self.tail == location
@@ -153,9 +153,9 @@ class Route(StructuredNode):
         The last inserted location is the last entry in the deque. It is either the head or the tail of the route.
         """
         if self.previous is not None:
-            last_inserted = self.locations_queue.pop()
+            last_inserted = self.customers_queue.pop()
             if last_inserted == self.departure:
-                self.locations_queue.append(last_inserted)
+                self.customers_queue.append(last_inserted)
                 self.total_quantity = 0
                 self.total_duration = 0
                 self.total_distance = 0
@@ -190,16 +190,16 @@ class Route(StructuredNode):
                 self.total_quantity -= last_inserted.demand
                 last_inserted.is_assigned = False
 
-    def last_location(self) -> Location:
-        return self.locations_queue[-1] if len(self.locations_queue) > 0 else None
+    def last_location(self) -> Address:
+        return self.customers_queue[-1] if len(self.customers_queue) > 0 else None
 
     def close_route(self):
         if self.departure and self.departure.next is None:
-            self.locations_queue = deque()
+            self.customers_queue = deque()
             self.departure = None
         elif self.is_open:
             self.stop = copy.deepcopy(self.departure)
-            self.locations_queue.append(self.stop)
+            self.customers_queue.append(self.stop)
             self.stop.previous = self.tail
             self.tail.next = self.stop
             self.stop.next = None
@@ -225,7 +225,7 @@ class Route(StructuredNode):
         pass
 
     def __len__(self):
-        return len(self.locations_queue)
+        return len(self.customers_queue)
 
     def __str__(self):
         location = self.departure
@@ -242,11 +242,15 @@ class Route(StructuredNode):
         if not isinstance(other, type(self)):
             return NotImplemented
 
-        if len(self.locations_queue) != len(other.locations_queue):
+        if len(self.customers_queue) != len(other.customers_queue):
             return False
 
-        for index in range(len(self.locations_queue)):
-            if self.locations_queue[index] != other.locations_queue[index]:
+        for index in range(len(self.customers_queue)):
+            if self.customers_queue[index] != other.customers_queue[index]:
                 return False
 
         return True
+
+    @classmethod
+    def category(cls):
+        pass
