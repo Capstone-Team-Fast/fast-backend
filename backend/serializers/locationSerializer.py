@@ -24,7 +24,7 @@ class LocationSerializer(serializers.ModelSerializer):
         return Location.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
-        instance.address = validated_data.get('address', instance.address)
+        instance.geographic_location = validated_data.get('address', instance.geographic_location)
         instance.city = validated_data.get('city', instance.city)
         instance.state = validated_data.get('state', instance.state)
         instance.zipcode = validated_data.get('zipcode', instance.zipcode)

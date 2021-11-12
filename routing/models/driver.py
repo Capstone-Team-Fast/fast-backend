@@ -15,7 +15,7 @@ for p in sys.path:
     print(p)
 
 from routing.models.route import Route
-from routing.models.location import Address, Pair
+from routing.models.location import Pair, Depot
 
 
 class Driver(StructuredNode):
@@ -44,7 +44,7 @@ class Driver(StructuredNode):
     created_on = DateTimeProperty(default=datetime.now)
     modified_on = DateTimeProperty(default_now=True)
 
-    serves = RelationshipTo('routing.models.customer.Customer', 'SERVES')
+    serves = RelationshipTo('routing.models.location.Customer', 'SERVES')
     is_available_on = RelationshipTo('routing.models.availability.Availability', 'AVAILABLE_ON')
     language = RelationshipTo('routing.models.language.Language', 'SPEAKS')
 
@@ -57,7 +57,7 @@ class Driver(StructuredNode):
         self.route = Route()
         self.route.departure = None
 
-    def set_departure(self, depot: Address):
+    def set_departure(self, depot: Depot):
         self.route.departure = copy.deepcopy(depot)
 
     def get_departure(self):
@@ -76,7 +76,7 @@ class Driver(StructuredNode):
         # Insertion of new locations is handled by Route.insert()
         if self.route.is_open:
             for location in pair.get_pair():
-                if not self.route.add(customer=location, pair=pair):
+                if not self.route.add(location=location, pair=pair):
                     return False
                 cumulative_duration_minutes = math.trunc(self.route.total_duration)
                 cumulative_duration_seconds = self.route.total_duration - cumulative_duration_minutes

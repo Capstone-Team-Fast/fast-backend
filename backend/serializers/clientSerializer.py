@@ -41,7 +41,7 @@ class ClientSerializer(serializers.ModelSerializer):
         instance.modified_on = datetime.now()
         instance.save()
 
-        location.address = location_data.get('address', location.address)
+        location.geographic_location = location_data.get('address', location.geographic_location)
         location.city = location_data.get('city', location.city)
         location.state = location_data.get('state', location.state)
         location.zipcode = location_data.get('zipcode', location.zipcode)

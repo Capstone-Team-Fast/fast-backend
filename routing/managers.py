@@ -3,12 +3,11 @@ import enum
 import heapq
 import json
 import sys
-from heapq import heappop
 
 import neomodel
 
-from routing.exceptions import RouteStateException
-from routing.models.location import Address, Pair
+from routing.exceptions import RouteStateException, AddressDoesNotExist
+from routing.models.location import Address, Pair, Location
 from routing.services import BingGeocodeService, BingMatrixService
 
 
@@ -18,54 +17,56 @@ class DriverManager:
 
 
 class LocationManager:
-    depot: Address = None
-    locations = set()
-    connection: str = ''
-
-    def __init__(self, db_connection: neomodel.db, depot: Address):
+    def __init__(self, db_connection: neomodel.db, depot: Location):
         self.depot = depot
         self.connection = db_connection
-        LocationManager.depot = depot
-        LocationManager.add(LocationManager.depot)
-        LocationManager.connection = db_connection
+        self.locations = set()
+        self.__addresses = dict()
 
-    @staticmethod
-    def remove(location: Address):
-        if len(LocationManager.locations) == 0:
+    def remove(self, location: Location):
+        if len(self.locations) == 0:
             raise StopIteration
-        if not isinstance(location, Address):
+        if not isinstance(location, Location):
             raise ValueError(f'Type {type(location)} not supported.')
-        LocationManager.locations.remove(location)
+        self.locations.remove(location)
+        if self.__addresses.get(location.address):
+            self.__addresses[location.address] -= 1
+            if self.__addresses[location.address] == 0:
+                del self.__addresses[location.address]
 
-    @staticmethod
-    def get_locations() -> list:
-        return list(LocationManager.locations)
+    def get_locations(self) -> list:
+        return list(self.locations)
 
-    @staticmethod
-    def add(location: Address):
+    def add(self, location: Location):
         """Add the location argument to the graph database.
 
         This method ensures that a location, by the time it is added to the graph database, has its coordinates set.
         The coordinates consist of a latitude and a longitude.
         """
-        if location and location not in LocationManager.locations:
-            if location in Address.nodes.all():
-                location = Address.nodes.get(address__iexact=location.address, city__iexact=location.city,
-                                             state__iexact=location.state, zipcode__exact=location.zipcode,
-                                             is_center=location.is_center)
-            if location.latitude is None or location.longitude is None:
-                print(f'\nRetrieving geocode for location {location}\n')
-                location.latitude, location.longitude = BingGeocodeService.get_geocode(address=location)
-                location = location.save()
+        if location:
+            if location not in self.locations:
+                if location not in Location.nodes.all():
+                    location.save()
 
-            if not BingMatrixService.build_matrices(start=location, end=list(LocationManager.locations)):
-                print(f'Failed to build matrix between {location} and {LocationManager.locations}')
-            print(f'Added new location {location}')
-            LocationManager.locations.add(location)
-            print(f'LocationManager State {LocationManager.locations}\n')
+                address = location.address
+                if address and (address.latitude is None or address.longitude is None):
+                    print(f'\nRetrieving geocode for location {address}\n')
+                    address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
+                    address = address.save()
+                else:
+                    raise AddressDoesNotExist(f'Location {location} has no address.')
 
-    @staticmethod
-    def add_collection(locations: list):
+                if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
+                    print(f'Failed to build matrix between {location} and {self.locations}')
+                print(f'Added new location {location}')
+                self.locations.add(location)
+                if self.__addresses.get(address):
+                    self.__addresses[address] += 1
+                else:
+                    self.__addresses[address] = 1
+                print(f'LocationManager State {self.locations}\n')
+
+    def add_collection(self, locations: list):
         """Adds this list of locations to the graph database.
 
         If locations is None, no change occurs. Otherwise, each location in this list is added to the graph
@@ -73,149 +74,65 @@ class LocationManager:
         """
         if locations:
             for location in locations:
-                if len(LocationManager.locations) == 0:
-                    LocationManager.add(location)
-                else:
-                    if location not in LocationManager.locations:
-                        LocationManager.add(location)
+                self.add(location)
 
-    @staticmethod
-    def get_distance(location1: Address, location2: Address):
-        """Gets the distance (in meters) between these two locations.
-
-        This implementation guarantees that either location is in the graph database.
-        """
-        if location1 is None or location2 is None:
-            return 0.0
-
-        if location1 == location2:
-            return 0.0
-
-        if location1 in LocationManager.locations and location2 in LocationManager.locations:
-            return location1.neighbor.relationship(location2).distance
-
-        if location1 not in LocationManager.locations:
-            LocationManager.add(location1)
-
-        if location2 not in LocationManager.locations:
-            LocationManager.add(location2)
-
-        return location1.neighbor.relationship(location2).distance
-
-    @staticmethod
-    def get_duration(location1: Address, location2: Address):
-        """Gets the duration (in minutes) between these two locations.
-
-        This implementation guarantees that either location is in the graph database.
-        """
-        if location1 is None or location2 is None:
-            return 0.0
-
-        if location1 == location2:
-            return 0.0
-
-        if location1 in LocationManager.locations and location2 in LocationManager.locations:
-            return location1.neighbor.relationship(location2).duration
-
-        if location1 not in LocationManager.locations:
-            LocationManager.add(location1)
-
-        if location2 not in LocationManager.locations:
-            LocationManager.add(location2)
-        return location1.neighbor.relationship(location2).duration
-
-    @staticmethod
-    def get_distance_savings(location1: Address, location2: Address):
+    def get_distance_savings(self, location1: Location, location2: Location):
         """Gets the savings (in meters) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
         """
-        if LocationManager.depot is None:
+        if self.depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         if location1 is None or location2 is None:
             return 0.0
-        if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
-                and location2 in LocationManager.locations:
-            return LocationManager.__get_distance_saved(location1, location2)
-        if LocationManager.depot not in LocationManager.locations:
-            LocationManager.add(LocationManager.depot)
-        if location1 not in LocationManager.locations:
-            LocationManager.add(location1)
-        if location2 not in LocationManager.locations:
-            LocationManager.add(location2)
-        return LocationManager.__get_distance_saved(location1, location2)
+        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
+            return self.__get_distance_saved(location1, location2)
+        else:
+            if self.depot not in self.locations:
+                self.add(self.depot)
+            if location1 not in self.locations:
+                self.add(location1)
+            if location2 not in self.locations:
+                self.add(location2)
+        return self.__get_distance_saved(location1, location2)
 
-    @staticmethod
-    def get_duration_savings(location1: Address, location2: Address):
-        """Gets the savings (in meters) between these two locations.
+    def get_duration_savings(self, location1: Location, location2: Location):
+        """Gets the savings (in minutes) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
         """
-        if LocationManager.depot is None:
+        if self.depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         if location1 is None or location2 is None:
             return 0.0
-        if LocationManager.depot in LocationManager.locations and location1 in LocationManager.locations \
-                and location2 in LocationManager.locations:
-            return LocationManager.__get_duration_saved(location1, location2)
-        if LocationManager.depot not in LocationManager.locations:
-            LocationManager.add(LocationManager.depot)
-        if location1 not in LocationManager.locations:
-            LocationManager.add(location1)
-        if location2 not in LocationManager.locations:
-            LocationManager.add(location2)
-        return LocationManager.__get_duration_saved(location1, location2)
+        if self.depot in self.locations and location1 in self.locations and location2 in self.locations:
+            return self.__get_duration_saved(location1, location2)
+        else:
+            if self.depot not in self.locations:
+                self.add(self.depot)
+            if location1 not in self.locations:
+                self.add(location1)
+            if location2 not in self.locations:
+                self.add(location2)
+        return self.__get_duration_saved(location1, location2)
 
-    @staticmethod
-    def size():
+    def size(self):
         """Gets the number of locations being currently managed."""
-        return len(LocationManager.locations)
+        return len(self.locations)
 
-    @staticmethod
-    def __get_distance_saved(location1: Address, location2: Address):
+    def __get_distance_saved(self, location1: Address, location2: Address):
         """Computes the savings distance between two locations.
 
         This helper function ensures that there is an edge between the two locations.
         """
-        LocationManager.__validate_link(location1, location2)
+        return self.depot.distance(location1) + self.depot.distance(location2) - location1.distance(location2)
 
-        return (LocationManager.depot.neighbor.relationship(location1).distance
-                + LocationManager.depot.neighbor.relationship(location2).distance
-                - location1.neighbor.relationship(location2).distance)
-
-    @staticmethod
-    def __get_duration_saved(location1: Address, location2: Address):
+    def __get_duration_saved(self, location1: Address, location2: Address):
         """Computes the savings duration between two locations.
 
         This helper function ensures that there is an edge between the two locations.
         """
-        LocationManager.__validate_link(location1, location2)
-
-        return (LocationManager.depot.neighbor.relationship(location1).duration
-                + LocationManager.depot.neighbor.relationship(location2).duration
-                - location1.neighbor.relationship(location2).duration)
-
-    @staticmethod
-    def __validate_link(location1: Address, location2: Address):
-        """This helper function ensures that there is an edge between the two locations.
-
-        This implementation guarantees that there is an edge between any two locations.
-        """
-        if (location1 and location2) and (location1 != location2):
-            if LocationManager.depot is None:
-                raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-            if LocationManager.depot.neighbor.relationship(location1) is None:
-                BingMatrixService.build_matrices(start=LocationManager.depot, end=[location1])
-                # raise RelationshipError(
-                #     'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location1))
-            if LocationManager.depot.neighbor.relationship(location2) is None:
-                BingMatrixService.build_matrices(start=LocationManager.depot, end=[location2])
-                # raise RelationshipError(
-                #     'There is no link between node \'{}\' and node \'{}\''.format(LocationManager.depot, location2))
-            if location1.neighbor.relationship(location2) is None:
-                BingMatrixService.build_matrices(start=location1, end=[location2])
-                # raise RelationshipError('There is no link between node \'{}\' and node \'{}\''
-                #                         .format(location1, location2))
+        return self.depot.duration(location1) + self.depot.duration(location2) - location1.duration(location2)
 
 
 class SavingsManager:

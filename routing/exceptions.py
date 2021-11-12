@@ -16,3 +16,7 @@ class EmptyRouteException(Exception):
 
 class RouteStateException(Exception):
     pass
+
+
+class AddressDoesNotExist(Exception):
+    pass

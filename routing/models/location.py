@@ -3,6 +3,8 @@ from datetime import datetime
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One
 
+import routing
+
 
 class Weight(StructuredRel):
     distance = FloatProperty(required=True)
@@ -55,19 +57,26 @@ class Address(StructuredNode):
 
 
 class Location(StructuredNode):
-    __uid = UniqueIdProperty()
-    __external_id = IntegerProperty(index=True, required=False)
-    __created_on = DateTimeProperty(index=True, default=datetime.now)
-    __modified_on = DateTimeProperty(index=True, default_now=True)
-    __is_center = BooleanProperty(index=True, default=False)
-    __address = Relationship(cls_name='routing.models.location.Address', rel_type='LOCATED_AT', cardinality=One)
+    __abstract_node__ = True
+    is_center = BooleanProperty(index=True, default=False)
+    uid = UniqueIdProperty()
+    external_id = IntegerProperty(index=True, required=False)
+    created_on = DateTimeProperty(index=True, default=datetime.now)
+    modified_on = DateTimeProperty(index=True, default_now=True)
+    geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
 
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
-        self.address = None
         self.next = None
         self.previous = None
+
+    @property
+    def address(self) -> Address:
+        try:
+            return self.geographic_location.get()
+        except routing.exceptions.AddressDoesNotExist:
+            pass
 
     def reset(self):
         self.next = None
@@ -75,17 +84,44 @@ class Location(StructuredNode):
 
     def __eq__(self, other):
         if isinstance(other, type(self)):
-            return self.external_id == other.external_id
+            return self.address == other.address
         raise ValueError(f'{type(other)} is not supported.')
 
     def duration(self, other):
+        """Gets the duration (in minutes) between these two locations.
+
+        This implementation guarantees that either location is in the graph database.
+        """
         if isinstance(other, type(self)):
+            self.__validate_edge_with(other)
+            if self == other:
+                return 0.0
             return self.address.duration(other.address)
         raise ValueError(f'{type(other)} is not supported.')
 
     def distance(self, other):
+        """Gets the distance (in meters) between these two locations.
+
+        This implementation guarantees that either location is in the graph database.
+        """
         if isinstance(other, type(self)):
-            return self.address.distance(other.address)
+            self.__validate_edge_with(other)
+            if self == other:
+                return 0.0
+            else:
+                return self.address.distance(other.address)
+        raise ValueError(f'{type(other)} is not supported.')
+
+    def __validate_edge_with(self, other):
+        if isinstance(other, type(Location)):
+            if self == other:
+                return True
+            else:
+                if self.address.neighbor.relationship(other.address):
+                    return True
+                else:
+                    routing.services.BingMatrixService.build_matrices(start=self.address, end=[other.address])
+                return True
         raise ValueError(f'{type(other)} is not supported.')
 
     @classmethod
@@ -94,16 +130,18 @@ class Location(StructuredNode):
 
 
 class Customer(Location):
-    __demand = IntegerProperty(index=True)
-    __language = Relationship(cls_name='routing.models.language.Language', rel_type='SPEAKS')
+    demand = IntegerProperty(index=True)
+    language = Relationship(cls_name='routing.models.language.Language', rel_type='SPEAKS')
 
     def __init__(self, *args, **kwargs):
-        super(Location).__init__(*args, **kwargs)
+        super(Customer, self).__init__(*args, **kwargs)
 
 
 class Depot(Location):
+    is_center = BooleanProperty(index=True, default=True)
+
     def __init__(self, *args, **kwargs):
-        super(Depot).__init__(*args, **kwargs)
+        super(Depot, self).__init__(*args, **kwargs)
 
 
 class Pair:
