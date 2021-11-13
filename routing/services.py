@@ -88,6 +88,11 @@ class BingMatrixService(MatrixService):
         if start is None or end is None:
             return False
 
+        if start in Address.nodes.all():
+            node_set = Address.nodes.filter(address=start.address, city=start.city, state=start.state,
+                                            zipcode=start.zipcode)
+            start = node_set[0]
+
         if start.latitude is None or start.longitude is None:
             start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
             start = start.save()
@@ -107,6 +112,11 @@ class BingMatrixService(MatrixService):
             destinations = []
             for address in chunks:
                 if address:
+                    if address in Address.nodes.all():
+                        node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                                        zipcode=address.zipcode)
+                        address = node_set[0]
+
                     if address.latitude is None or address.longitude is None:
                         print(f'\nRetrieving geocode for address {address}\n')
                         address.latitude, address.longitude = BingGeocodeService.get_geocode(address)

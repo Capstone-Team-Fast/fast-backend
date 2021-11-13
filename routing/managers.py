@@ -276,9 +276,9 @@ class RouteManager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
                 for driver in drivers_heap:
                     print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                    if driver.get_departure() is None:
+                    if driver.departure() is None:
                         driver.set_departure(self.location_manager.depot)
-                    if driver.route.is_open and driver.add(pair=pair):
+                    if driver.__route.is_open and driver.add(pair=pair):
                         break
                 if pair.is_assignable():
                     print(f'{RouteManager._State.INFEASIBLE}')
@@ -290,11 +290,11 @@ class RouteManager:
                     break
 
         for driver in drivers_heap:
-            if len(driver.route) <= 1:
-                driver.route.departure = None
-                driver.route = None
-            elif len(driver.route) > 1 and driver.route.is_open:
-                driver.route.close_route()
+            if len(driver.__route) <= 1:
+                driver.__route.departure = None
+                driver.__route = None
+            elif len(driver.__route) > 1 and driver.__route.is_open:
+                driver.__route.close_route()
         return RouteManager._State.SOLVED, drivers_heap
 
     @staticmethod
@@ -302,9 +302,9 @@ class RouteManager:
         objective_function_distance = 0
         objective_function_duration = 0
         for driver in drivers:
-            if driver.route:
-                objective_function_distance += driver.route.total_distance
-                objective_function_duration += driver.route.total_duration
+            if driver.__route:
+                objective_function_distance += driver.__route.total_distance
+                objective_function_duration += driver.__route.total_duration
         return objective_function_distance, objective_function_duration
 
     def request_routes(self, customers: list, drivers: list):

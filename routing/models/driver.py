@@ -1,21 +1,12 @@
 import copy
 import enum
 import math
-import os
-import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
 
-working_dir = os.path.abspath(os.path.join('.'))
-if working_dir not in sys.path:
-    sys.path.append(working_dir)
-
-for p in sys.path:
-    print(p)
-
-from routing.models.route import Route
 from routing.models.location import Pair, Depot
+from routing.models.route import Route
 
 
 class Driver(StructuredNode):
@@ -50,18 +41,23 @@ class Driver(StructuredNode):
 
     def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
-        self.route = Route()
-        self.route.departure = None
+        self.__route = Route()
+        self.__route.departure = None
 
     def reset(self):
-        self.route = Route()
-        self.route.departure = None
+        self.__route = Route()
+        self.__route.departure = None
 
     def set_departure(self, depot: Depot):
-        self.route.departure = copy.deepcopy(depot)
+        self.__route.departure = copy.deepcopy(depot)
 
-    def get_departure(self):
-        return self.route.departure
+    @property
+    def route(self) -> Route:
+        return self.__route
+
+    @property
+    def departure(self) -> Depot:
+        return self.__route.departure
 
     def add(self, pair: Pair) -> bool:
         """Add a Pair of Location to the Route assigned to this driver.
@@ -74,30 +70,30 @@ class Driver(StructuredNode):
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
-        if self.route.is_open:
+        if self.__route.is_open:
             for location in pair.get_pair():
-                if not self.route.add(location=location, pair=pair):
+                if not self.__route.add(location=location, pair=pair):
                     return False
-                cumulative_duration_minutes = math.trunc(self.route.total_duration)
-                cumulative_duration_seconds = self.route.total_duration - cumulative_duration_minutes
+                cumulative_duration_minutes = math.trunc(self.__route.total_duration)
+                cumulative_duration_seconds = self.__route.total_duration - cumulative_duration_minutes
                 cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
-                        and (self.route.total_quantity < self.capacity):
+                        and (self.__route.total_quantity < self.capacity):
                     continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
                     print(f'\nDriver has met allocated time.')
-                elif self.route.total_quantity == self.capacity:
+                elif self.__route.total_quantity == self.capacity:
                     print(f'\nDriver is at capacity.')
                 elif cumulative_duration > (self.end_time - self.start_time).total_seconds():
                     print(f'Inserting this location lead to overtime. Undoing insertion.')
-                    self.route.undo()
+                    self.__route.undo()
                     print(f'\nUndid insertion of {location}')
-                elif self.route.total_quantity > self.capacity:
+                elif self.__route.total_quantity > self.capacity:
                     print(f'\nRoute is overcapacity.')
-                    self.route.undo()
+                    self.__route.undo()
                     print(f'\nUndid insertion of {location}')
                 print(f'Closing route.\n')
-                self.route.close_route()
+                self.__route.close_route()
                 return False
             return True
         return False

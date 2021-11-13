@@ -104,7 +104,7 @@ class Route(StructuredNode):
             self.total_quantity += location.demand
 
             if len(self.locations_queue) == 1:
-                self.departure.next = location.locate
+                self.departure.next = location
                 location.previous = self.departure
             else:
                 location.previous = self.tail
