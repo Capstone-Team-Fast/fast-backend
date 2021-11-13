@@ -1,3 +1,6 @@
+from neomodel import DoesNotExist
+
+
 class GeocodeError(Exception):
     pass
 
@@ -18,5 +21,5 @@ class RouteStateException(Exception):
     pass
 
 
-class AddressDoesNotExist(Exception):
+class LocationStateException(Exception):
     pass

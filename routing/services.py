@@ -97,7 +97,7 @@ class BingMatrixService(MatrixService):
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
-        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'\n')
+        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'')
         for index in range(0, len(end), chunk_size):
             if index + chunk_size < len(end):
                 chunks = end[index:index + chunk_size]
@@ -183,8 +183,18 @@ class BingMatrixService(MatrixService):
 
                 destination: dict = destinations[destination_index]
                 origin: dict = origins[origin_index]
-                location1 = Address.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
-                location2 = Address.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
-                location1.neighbor.connect(location2, {'distance': result['travelDistance'],
-                                                       'duration': result['travelDuration']})
-                print(f'\nConnected {location1} and {location2}\n')
+                location1 = None
+                location2 = None
+
+                node_set = Address.nodes.filter(latitude=origin['latitude'], longitude=origin['longitude'])
+                if node_set:
+                    location1 = node_set[0]
+
+                node_set = Address.nodes.filter(latitude=destination['latitude'], longitude=destination['longitude'])
+                if node_set:
+                    location2 = node_set[0]
+
+                if location1 and location2:
+                    location1.neighbor.connect(location2, {'distance': result['travelDistance'],
+                                                           'duration': result['travelDuration']})
+                    print(f'\nConnected {location1} and {location2}\n')

@@ -1,9 +1,9 @@
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
-    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist
 
-import routing
+from routing.exceptions import LocationStateException
 
 
 class Weight(StructuredRel):
@@ -43,13 +43,32 @@ class Address(StructuredNode):
 
     def distance(self, other):
         if isinstance(other, type(self)):
+            if self == other:
+                return 0.0
+            self.__validate_edge_with(other)
             return self.neighbor.relationship(other).distance if self.neighbor.relationship(other) else None
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} is not supported.')
 
     def duration(self, other):
         if isinstance(other, type(self)):
+            if self == other:
+                return 0.0
+            self.__validate_edge_with(other)
             return self.neighbor.relationship(other).duration if self.neighbor.relationship(other) else None
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} is not supported.')
+
+    def __validate_edge_with(self, other):
+        from routing.services import BingMatrixService
+        if isinstance(other, type(self)):
+            if self == other:
+                return True
+            else:
+                if self.neighbor.relationship(other):
+                    return True
+                else:
+                    BingMatrixService.build_matrices(start=self, end=[other])
+                return True
+        raise TypeError(f'{type(other)} is not supported.')
 
     @classmethod
     def category(cls):
@@ -75,7 +94,7 @@ class Location(StructuredNode):
     def address(self) -> Address:
         try:
             return self.geographic_location.get()
-        except routing.exceptions.AddressDoesNotExist:
+        except DoesNotExist:
             pass
 
     def reset(self):
@@ -83,46 +102,43 @@ class Location(StructuredNode):
         self.previous = None
 
     def __eq__(self, other):
-        if isinstance(other, type(self)):
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
             return self.address == other.address
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} and {type(self)} do not subclass {Location}.')
 
     def duration(self, other):
         """Gets the duration (in minutes) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
         """
-        if isinstance(other, type(self)):
-            self.__validate_edge_with(other)
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
+            if self.address is None and other.address is None:
+                raise LocationStateException(f'{self} and {other} have no addresses.')
+            elif self.address is None:
+                raise LocationStateException(f'{self} has no address.')
+            elif other.address is None:
+                raise LocationStateException(f'{other} has no address.')
             if self == other:
                 return 0.0
             return self.address.duration(other.address)
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} does not subclass {type(self)}.')
 
     def distance(self, other):
         """Gets the distance (in meters) between these two locations.
 
         This implementation guarantees that either location is in the graph database.
         """
-        if isinstance(other, type(self)):
-            self.__validate_edge_with(other)
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
+            if self.address is None and other.address is None:
+                raise LocationStateException(f'{self} and {other} have no addresses.')
+            elif self.address is None:
+                raise LocationStateException(f'{self} has no address.')
+            elif other.address is None:
+                raise LocationStateException(f'{other} has no address.')
             if self == other:
                 return 0.0
-            else:
-                return self.address.distance(other.address)
-        raise ValueError(f'{type(other)} is not supported.')
-
-    def __validate_edge_with(self, other):
-        if isinstance(other, type(Location)):
-            if self == other:
-                return True
-            else:
-                if self.address.neighbor.relationship(other.address):
-                    return True
-                else:
-                    routing.services.BingMatrixService.build_matrices(start=self.address, end=[other.address])
-                return True
-        raise ValueError(f'{type(other)} is not supported.')
+            return self.address.distance(other.address)
+        raise TypeError(f'{type(other)} does not subclass {type(self)}.')
 
     @classmethod
     def category(cls):
