@@ -1,13 +1,16 @@
 import os
 import sys
 
-working_dir = os.path.abspath(os.path.join('..'))
-parent = os.path.dirname(working_dir)
+from backend import settings
 
-if parent not in sys.path:
-    sys.path.append(parent)
+cwd = os.getcwd()
+sys.path.insert(0, cwd)
+for path in os.listdir():
+    p = os.path.join(cwd, path)
+    if path[0] != '.' and p not in sys.path:
+        sys.path.insert(0, p)
 
-for s in ['backend', 'backend\\models']:
-    p = os.path.join(parent, s)
-    if p not in sys.path:
-        sys.path.append(p)
+for path in sys.path:
+    print(path)
+
+print('BASE DIR', settings.BASE_DIR)

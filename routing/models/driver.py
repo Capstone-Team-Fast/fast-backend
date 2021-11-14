@@ -1,9 +1,14 @@
 import copy
 import enum
 import math
+import os
+import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
+
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
 from routing.models.location import Pair, Depot
 from routing.models.route import Route
@@ -25,6 +30,7 @@ class Driver(StructuredNode):
     ROLES = {Role.EMPLOYEE.value: Role.EMPLOYEE.name, Role.VOLUNTEER.value: Role.VOLUNTEER.name}
 
     uid = UniqueIdProperty()
+    external_id = IntegerProperty(required=False, unique_index=True)
     first_name = StringProperty(index=True, required=True)
     last_name = StringProperty(index=True, required=True)
     employee_status = StringProperty(index=True, choices=ROLES, required=True)
@@ -121,6 +127,24 @@ class Driver(StructuredNode):
         return self.employee_status == Driver.Role.EMPLOYEE.value
 
     def serialize(self):
+        # {
+        #     "id": 6,
+        #     "user": 6,
+        #     "capacity": 5,
+        #     "employee_status": "employee",
+        #     "phone": "123-123-4567",
+        #     "availability": {
+        #         "id": 2,
+        #         "sunday": true,
+        #         "monday": false,
+        #         "tuesday": true,
+        #         "wednesday": true,
+        #         "thursday": false,
+        #         "friday": true,
+        #         "saturday": false
+        #     },
+        #     "languages": []
+        # }
         pass
 
     @classmethod

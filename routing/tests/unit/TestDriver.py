@@ -129,11 +129,26 @@ class MyTestCase(unittest.TestCase):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
         languages = [Language(language=language).save() for language in ['English', 'Spanish', 'Mandarin']]
         [driver.language.connect(language) for language in languages]
-        print(driver.language.all())
-        print(driver.get_availability())
         self.assertEqual(driver.get_availability().sort(), languages.sort())
         driver.delete()
         [language.delete() for language in languages]
+
+    def test_driver_with_no_language(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        self.assertEqual(driver.get_availability(), [])
+        driver.delete()
+
+    def test_driver_str(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        self.assertEqual(str(driver), 'Last,First')
+
+    def test_driver_is_volunteer(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        self.assertFalse(driver.is_volunteer())
+
+    def test_driver_is_full_time(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        self.assertTrue(driver.is_full_time())
 
 
 if __name__ == '__main__':

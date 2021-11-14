@@ -6,9 +6,8 @@ from datetime import datetime
 
 from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, IntegerProperty
 
-working_dir = os.path.abspath(os.path.join('.'))
-if working_dir not in sys.path:
-    sys.path.append(working_dir)
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
 from routing.models.location import Pair, Location
 from routing.exceptions import EmptyRouteException, RouteStateException

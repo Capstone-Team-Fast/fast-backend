@@ -1,7 +1,12 @@
+import os
+import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist
+
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
 from routing.exceptions import LocationStateException
 
@@ -79,7 +84,7 @@ class Location(StructuredNode):
     __abstract_node__ = True
     is_center = BooleanProperty(index=True, default=False)
     uid = UniqueIdProperty()
-    external_id = IntegerProperty(index=True, required=False)
+    external_id = IntegerProperty(required=False, unique_index=True)
     created_on = DateTimeProperty(index=True, default=datetime.now)
     modified_on = DateTimeProperty(index=True, default_now=True)
     geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
