@@ -12,7 +12,7 @@ db/
 backend/migrations/
 routing/migrations/
 routing/tests/_trial_temp/
-_trial_temp/
+routing/tests/unit/_trial_temp*/
 
 # Backup files
 *.bak 
