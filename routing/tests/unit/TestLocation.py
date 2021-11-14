@@ -1,9 +1,11 @@
+import json
 import unittest
 
 from neomodel import config, db
 
 from backend import settings
 from routing.exceptions import LocationStateException
+from routing.models.language import Language
 from routing.models.location import Customer, Depot, Address
 
 
@@ -82,6 +84,46 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(customer.distance(depot), expected_distance)
         customer.delete()
         depot.delete()
+
+    def test_serializer_template(self):
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
+        customer = Customer().save()
+        customer.geographic_location.connect(address)
+        expected_result = json.dumps({
+            'id': customer.external_id,
+            'is_center': False,
+            'address': customer.address.serialize(),
+            'demand': customer.demand,
+            'languages': []
+        })
+        print(type(customer.serialize()))
+        print(customer.serialize())
+        print(json.loads(expected_result))
+        print(expected_result)
+        self.assertEqual(customer.serialize(), expected_result)
+        address.delete()
+        customer.delete()
+
+    def test_serializer_languages(self):
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
+        customer = Customer().save()
+        customer.geographic_location.connect(address)
+
+        languages = [Language(language=language).save() for language in Language.options()]
+        [customer.language.connect(language) for language in languages]
+        languages.sort()
+
+        expected_result = json.dumps({
+            'id': customer.external_id,
+            'is_center': False,
+            'address': customer.address.serialize(),
+            'demand': customer.demand,
+            'languages': [language.serialize() for language in languages]
+        })
+        self.assertEqual(customer.serialize(), expected_result)
+        address.delete()
+        [language.delete() for language in languages]
+        customer.delete()
 
 
 if __name__ == '__main__':

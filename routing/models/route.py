@@ -236,18 +236,6 @@ class Route(StructuredNode):
     def get_created_on(self):
         return self.created_on
 
-    def serialize(self):
-        obj = json.dumps({
-            "id": self.id,
-            "created_on": self.created_on.strftime(constant.DATETIME_FORMAT),
-            "total_quantity": self.__total_quantity,
-            "total_distance": self.__total_distance,
-            "total_duration": self.__total_duration,
-            "assigned_to": None,
-            "itinerary": []
-        })
-        return obj
-
     def __len__(self):
         return len(self.locations_queue)
 
@@ -274,6 +262,18 @@ class Route(StructuredNode):
                 return False
 
         return True
+
+    def serialize(self):
+        obj = json.dumps({
+            "id": self.id,
+            "created_on": self.created_on.strftime(constant.DATETIME_FORMAT),
+            "total_quantity": self.__total_quantity,
+            "total_distance": self.__total_distance,
+            "total_duration": self.__total_duration,
+            "assigned_to": None,
+            "itinerary": []
+        })
+        return obj
 
     @classmethod
     def category(cls):

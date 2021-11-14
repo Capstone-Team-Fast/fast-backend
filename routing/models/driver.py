@@ -157,7 +157,8 @@ class Driver(StructuredNode):
             "capacity": self.capacity,
             "employee_status": self.employee_status,
             "availability": availabilities,
-            "languages": languages
+            "languages": languages,
+            "routes": []
         })
         return obj
 

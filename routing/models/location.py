@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 from datetime import datetime
@@ -27,6 +28,7 @@ class Address(StructuredNode):
     longitude = FloatProperty(index=True)
     created_on = DateTimeProperty(index=True, default=datetime.now)
     modified_on = DateTimeProperty(index=True, default_now=True)
+    external_id = IntegerProperty(required=False, unique_index=True)
 
     neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=Weight)
 
@@ -78,6 +80,20 @@ class Address(StructuredNode):
     @classmethod
     def category(cls):
         pass
+
+    def serialize(self):
+        obj = json.dumps({
+            'id': self.external_id,
+            'address': self.address,
+            'city': self.city,
+            'state': self.state,
+            'zipcode': self.zipcode,
+            'coordinates': {
+                'latitude': self.latitude,
+                'longitude': self.longitude
+            }
+        })
+        return obj
 
 
 class Location(StructuredNode):
@@ -148,6 +164,14 @@ class Location(StructuredNode):
     def __str__(self):
         return 'UID: {} at address {}'.format(self.uid, self.address)
 
+    def serialize(self):
+        obj = json.dumps({
+            'id': self.external_id,
+            'is_center': self.is_center,
+            'address': self.address.serialize()
+        })
+        return obj
+
     @classmethod
     def category(cls):
         pass
@@ -159,6 +183,24 @@ class Customer(Location):
 
     def __init__(self, *args, **kwargs):
         super(Customer, self).__init__(*args, **kwargs)
+
+    def get_languages(self):
+        return self.language.all()
+
+    def serialize(self):
+        obj = json.loads(super(Customer, self).serialize())
+        languages = self.get_languages()
+        if languages:
+            languages.sort()
+            languages = [language.serialize() for language in languages]
+        else:
+            languages = []
+
+        obj.update({
+            'demand': self.demand,
+            'languages': languages
+        })
+        return json.dumps(obj)
 
 
 class Depot(Location):

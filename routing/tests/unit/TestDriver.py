@@ -238,7 +238,8 @@ class MyTestCase(unittest.TestCase):
             "capacity": 20,
             "employee_status": "P",
             "availability": [],
-            "languages": []
+            "languages": [],
+            "routes": []
         })
         self.assertEqual(driver.serialize(), expected_result)
         driver.delete()
@@ -253,7 +254,8 @@ class MyTestCase(unittest.TestCase):
             "capacity": 20,
             "employee_status": "P",
             "availability": [],
-            "languages": [language.serialize() for language in languages]
+            "languages": [language.serialize() for language in languages],
+            "routes": []
         })
         self.assertEqual(driver.serialize(), expected_result)
         [language.delete() for language in languages]
@@ -269,7 +271,8 @@ class MyTestCase(unittest.TestCase):
             "capacity": 20,
             "employee_status": "P",
             "availability": [availability.serialize() for availability in availabilities],
-            "languages": []
+            "languages": [],
+            "routes": []
         })
         self.assertEqual(driver.serialize(), expected_result)
         [availability.delete() for availability in availabilities]
@@ -283,18 +286,20 @@ class MyTestCase(unittest.TestCase):
         languages = [Language(language=language).save() for language in Language.options()]
         [driver.language.connect(language) for language in languages]
 
-        print(driver.serialize())
         availabilities.sort()
+        languages.sort()
+
         expected_result = json.dumps({
             "id": None,
             "capacity": 20,
             "employee_status": "P",
             "availability": [availability.serialize() for availability in availabilities],
-            "languages": [language.serialize() for language in languages]
+            "languages": [language.serialize() for language in languages],
+            "routes": []
         })
-        print(expected_result)
         self.assertEqual(driver.serialize(), expected_result)
         [availability.delete() for availability in availabilities]
+        [language.delete() for language in languages]
         driver.delete()
 
 
