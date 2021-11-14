@@ -1,23 +1,25 @@
 import copy
+import json
 import os
 import sys
 from collections import deque
 from datetime import datetime
 
-from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, IntegerProperty
+from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, IntegerProperty, UniqueIdProperty
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
 
+from routing import constant
 from routing.models.location import Pair, Location
 from routing.exceptions import EmptyRouteException, RouteStateException
 
 
 class Route(StructuredNode):
-    id = IntegerProperty()
-    total_quantity = FloatProperty(index=True)
-    total_distance = FloatProperty(index=True)
-    total_duration = FloatProperty(index=True)
+    uid = UniqueIdProperty()
+    __quantity = FloatProperty(index=True, default=None)
+    __distance = FloatProperty(index=True, default=None)
+    __duration = FloatProperty(index=True, default=None)
     created_on = DateTimeProperty(default=datetime.now)
 
     assigned_to = RelationshipTo('routing.models.driver.Driver', 'ASSIGNED_TO')
@@ -25,9 +27,9 @@ class Route(StructuredNode):
     def __init__(self, *args, **kwargs):
         super(Route, self).__init__(*args, **kwargs)
         self.locations_queue: deque = deque()
-        self.total_quantity: float = 0
-        self.total_duration: float = 0
-        self.total_distance: float = 0
+        self.__total_duration: float = 0
+        self.__total_distance: float = 0
+        self.__total_quantity: float = 0
         self.is_open: bool = True
         self.departure = None
         self.stop = None
@@ -98,9 +100,9 @@ class Route(StructuredNode):
         if len(self.locations_queue) == 0 or self.departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         else:
-            self.total_duration += self.tail.duration(other=location)
-            self.total_distance += self.tail.distance(other=location)
-            self.total_quantity += location.demand
+            self.__total_duration += self.tail.duration(other=location)
+            self.__total_distance += self.tail.distance(other=location)
+            self.__total_quantity += location.demand
 
             if len(self.locations_queue) == 1:
                 self.departure.next = location
@@ -119,19 +121,19 @@ class Route(StructuredNode):
         elif len(self.locations_queue) == 1:
             raise RouteStateException('No insertion can\'t be made on the rear.')
         else:
-            self.total_duration = (
-                    self.total_duration
+            self.__total_duration = (
+                    self.__total_duration
                     - self.departure.duration(self.departure.next)
                     + self.departure.duration(location)
                     + self.departure.next.duration(location)
             )
-            self.total_distance = (
-                    self.total_distance
+            self.__total_distance = (
+                    self.__total_distance
                     - self.departure.distance(self.departure.next)
                     + self.departure.distance(location)
                     + self.departure.next.distance(location)
             )
-            self.total_quantity += location.demand
+            self.__total_quantity += location.demand
             location.next = self.departure.next
             self.departure.next.previous = location
             location.previous = self.departure
@@ -154,23 +156,23 @@ class Route(StructuredNode):
             last_inserted = self.locations_queue.pop()
             if last_inserted == self.departure:
                 self.locations_queue.append(last_inserted)
-                self.total_quantity = 0
-                self.total_duration = 0
-                self.total_distance = 0
+                self.__total_quantity = 0
+                self.__total_duration = 0
+                self.__total_distance = 0
                 self.tail = self.departure
             else:
                 if last_inserted == self.departure.next:
-                    self.total_duration -= self.departure.duration(last_inserted)
-                    self.total_distance -= self.departure.distance(last_inserted)
+                    self.__total_duration -= self.departure.duration(last_inserted)
+                    self.__total_distance -= self.departure.distance(last_inserted)
 
                     if last_inserted.next:
-                        self.total_duration = (
-                                self.total_duration
+                        self.__total_duration = (
+                                self.__total_duration
                                 - last_inserted.duration(last_inserted.next)
                                 + self.departure.duration(last_inserted.next)
                         )
-                        self.total_distance = (
-                                self.total_distance
+                        self.__total_distance = (
+                                self.__total_distance
                                 - last_inserted.distance(last_inserted.next)
                                 + self.departure.distance(last_inserted.next)
                         )
@@ -181,13 +183,13 @@ class Route(StructuredNode):
                     last_inserted.previous.next = last_inserted.next
 
                     # Adjust route distance and duration
-                    self.total_duration = (
-                            self.total_duration - self.previous.duration(last_inserted)
+                    self.__total_duration = (
+                            self.__total_duration - self.previous.duration(last_inserted)
                     )
-                    self.total_distance = (
-                            self.total_distance - self.previous.distance(last_inserted)
+                    self.__total_distance = (
+                            self.__total_distance - self.previous.distance(last_inserted)
                     )
-                self.total_quantity -= last_inserted.demand
+                self.__total_quantity -= last_inserted.demand
                 self.tail = last_inserted.previous
                 last_inserted.is_assigned = False
 
@@ -207,23 +209,44 @@ class Route(StructuredNode):
             self.tail = self.stop
             self.stop.is_assigned = True
             self.is_open = False
-            self.total_duration += self.tail.duration(self.stop)
-            self.total_distance += self.tail.distance(self.stop)
+            self.__total_duration += self.tail.duration(self.stop)
+            self.__total_distance += self.tail.distance(self.stop)
 
-    def get_total_distance(self):
-        return self.total_distance
+    def set_total_distance(self):
+        self.__distance = self.total_distance
 
-    def get_total_duration(self):
-        return self.total_duration
+    def set_total_duration(self):
+        self.__duration = self.total_duration
 
-    def get_total_demand(self):
-        return self.total_quantity
+    def set_total_demand(self):
+        self.__quantity = self.total_demand
+
+    @property
+    def total_distance(self):
+        return self.__total_distance
+
+    @property
+    def total_duration(self):
+        return self.__total_duration
+
+    @property
+    def total_demand(self):
+        return self.__total_quantity
 
     def get_created_on(self):
         return self.created_on
 
     def serialize(self):
-        pass
+        obj = json.dumps({
+            "id": self.id,
+            "created_on": self.created_on.strftime(constant.DATETIME_FORMAT),
+            "total_quantity": self.__total_quantity,
+            "total_distance": self.__total_distance,
+            "total_duration": self.__total_duration,
+            "assigned_to": None,
+            "itinerary": []
+        })
+        return obj
 
     def __len__(self):
         return len(self.locations_queue)

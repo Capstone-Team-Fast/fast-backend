@@ -1,3 +1,4 @@
+import json
 import unittest
 from datetime import datetime, timedelta
 from random import randint
@@ -6,6 +7,7 @@ from neomodel import config, db
 
 from backend import settings
 from routing.exceptions import RouteStateException
+from routing.models.availability import Availability
 from routing.models.driver import Driver
 from routing.models.language import Language
 from routing.models.location import Address, Depot, Customer, Pair
@@ -205,13 +207,13 @@ class MyTestCase(unittest.TestCase):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
         languages = [Language(language=language).save() for language in ['English', 'Spanish', 'Mandarin']]
         [driver.language.connect(language) for language in languages]
-        self.assertEqual(driver.get_availability().sort(), languages.sort())
+        self.assertEqual(driver.get_languages().sort(), languages.sort())
         driver.delete()
         [language.delete() for language in languages]
 
     def test_driver_with_no_language(self):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
-        self.assertEqual(driver.get_availability(), [])
+        self.assertEqual(driver.get_languages(), [])
         driver.delete()
 
     def test_driver_str(self):
@@ -227,6 +229,72 @@ class MyTestCase(unittest.TestCase):
     def test_driver_is_full_time(self):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
         self.assertTrue(driver.is_full_time())
+        driver.delete()
+
+    def test_serializer_template(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        expected_result = json.dumps({
+            "id": None,
+            "capacity": 20,
+            "employee_status": "P",
+            "availability": [],
+            "languages": []
+        })
+        self.assertEqual(driver.serialize(), expected_result)
+        driver.delete()
+
+    def test_serializer_languages(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        languages = [Language(language=language).save() for language in Language.options()]
+        [driver.language.connect(language) for language in languages]
+        languages.sort()
+        expected_result = json.dumps({
+            "id": None,
+            "capacity": 20,
+            "employee_status": "P",
+            "availability": [],
+            "languages": [language.serialize() for language in languages]
+        })
+        self.assertEqual(driver.serialize(), expected_result)
+        [language.delete() for language in languages]
+        driver.delete()
+
+    def test_serializer_availability(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        availabilities = [Availability(day=day).save() for day in Availability.options()]
+        [driver.is_available_on.connect(availability) for availability in availabilities]
+        availabilities.sort()
+        expected_result = json.dumps({
+            "id": None,
+            "capacity": 20,
+            "employee_status": "P",
+            "availability": [availability.serialize() for availability in availabilities],
+            "languages": []
+        })
+        self.assertEqual(driver.serialize(), expected_result)
+        [availability.delete() for availability in availabilities]
+        driver.delete()
+
+    def test_serializer_language_and_availability(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        availabilities = [Availability(day=day).save() for day in Availability.options()]
+        [driver.is_available_on.connect(availability) for availability in availabilities]
+
+        languages = [Language(language=language).save() for language in Language.options()]
+        [driver.language.connect(language) for language in languages]
+
+        print(driver.serialize())
+        availabilities.sort()
+        expected_result = json.dumps({
+            "id": None,
+            "capacity": 20,
+            "employee_status": "P",
+            "availability": [availability.serialize() for availability in availabilities],
+            "languages": [language.serialize() for language in languages]
+        })
+        print(expected_result)
+        self.assertEqual(driver.serialize(), expected_result)
+        [availability.delete() for availability in availabilities]
         driver.delete()
 
 

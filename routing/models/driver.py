@@ -1,5 +1,6 @@
 import copy
 import enum
+import json
 import math
 import os
 import sys
@@ -50,6 +51,13 @@ class Driver(StructuredNode):
         self.__route = Route()
         self.__route.departure = None
 
+    def save_route(self):
+        self.__route.save()
+        self.__route.set_total_demand()
+        self.__route.set_total_distance()
+        self.__route.set_total_duration()
+        self.__route.assigned_to.connect(self)
+
     def reset(self):
         self.__route = Route()
         self.__route.departure = None
@@ -84,35 +92,38 @@ class Driver(StructuredNode):
                 cumulative_duration_seconds = self.__route.total_duration - cumulative_duration_minutes
                 cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
-                        and (self.__route.total_quantity < self.capacity):
+                        and (self.__route.total_demand < self.capacity):
                     continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
                     print(f'\nDriver has met allocated time.')
-                elif self.__route.total_quantity == self.capacity:
+                elif self.__route.total_demand == self.capacity:
                     print(f'\nDriver is at capacity.')
                 elif cumulative_duration > (self.end_time - self.start_time).total_seconds():
                     print(f'Inserting this location lead to overtime. Undoing insertion.')
                     self.__route.undo()
                     print(f'\nUndid insertion of {location}')
-                elif self.__route.total_quantity > self.capacity:
+                elif self.__route.total_demand > self.capacity:
                     print(f'\nRoute is overcapacity.')
                     self.__route.undo()
                     print(f'\nUndid insertion of {location}')
             return pair.first.is_assigned and pair.last.is_assigned
         return False
 
+    def get_languages(self):
+        return self.language.all()
+
     def get_availability(self):
         """
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
         """
-        return self.language.all()
+        return self.is_available_on.all()
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))
 
     def __eq__(self, other):
-        if not isinstance(other, type(self)):
+        if isinstance(other, type(self)):
             return (self.first_name == other.first_name and self.last_name == other.last_name
                     and self.employee_status == other.employee_status)
         raise TypeError(f'{type(other)} not supported.')
@@ -127,25 +138,28 @@ class Driver(StructuredNode):
         return self.employee_status == Driver.Role.EMPLOYEE.value
 
     def serialize(self):
-        # {
-        #     "id": 6,
-        #     "user": 6,
-        #     "capacity": 5,
-        #     "employee_status": "employee",
-        #     "phone": "123-123-4567",
-        #     "availability": {
-        #         "id": 2,
-        #         "sunday": true,
-        #         "monday": false,
-        #         "tuesday": true,
-        #         "wednesday": true,
-        #         "thursday": false,
-        #         "friday": true,
-        #         "saturday": false
-        #     },
-        #     "languages": []
-        # }
-        pass
+        availabilities = self.get_availability()
+        if availabilities:
+            availabilities.sort()
+            availabilities = [availability.serialize() for availability in availabilities]
+        else:
+            availabilities = []
+
+        languages = self.get_languages()
+        if languages:
+            languages.sort()
+            languages = [language.serialize() for language in languages]
+        else:
+            languages = []
+
+        obj = json.dumps({
+            "id": self.external_id,
+            "capacity": self.capacity,
+            "employee_status": self.employee_status,
+            "availability": availabilities,
+            "languages": languages
+        })
+        return obj
 
     @classmethod
     def category(cls):

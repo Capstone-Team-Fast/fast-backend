@@ -303,8 +303,8 @@ class RouteManager:
         objective_function_duration = 0
         for driver in drivers:
             if driver.__route:
-                objective_function_distance += driver.__route.total_distance
-                objective_function_duration += driver.__route.total_duration
+                objective_function_distance += driver.__route.__total_distance
+                objective_function_duration += driver.__route.__total_duration
         return objective_function_distance, objective_function_duration
 
     def request_routes(self, customers: list, drivers: list):

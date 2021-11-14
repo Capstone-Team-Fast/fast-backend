@@ -23,3 +23,7 @@ class RouteStateException(Exception):
 
 class LocationStateException(Exception):
     pass
+
+
+class LanguageOptionError(Exception):
+    pass
