@@ -36,22 +36,26 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(str(address), expected)
 
     def test_distance_value_error(self):
-        address = Address(address=None, city=None, state=None, zipcode=None)
+        address = Address(address=None, city=None, state=None, zipcode=None).save()
         with self.assertRaises(TypeError):
             address.distance(object)
+        address.delete()
 
     def test_duration_value_error(self):
-        address = Address(address=None, city=None, state=None, zipcode=None)
+        address = Address(address=None, city=None, state=None, zipcode=None).save()
         with self.assertRaises(TypeError):
             address.duration(object)
+        address.delete()
 
     def test_distance_same_address(self):
-        address = Address(address=None, city=None, state=None, zipcode=None)
+        address = Address(address=None, city=None, state=None, zipcode=None).save()
         self.assertEqual(address.distance(address), 0)
+        address.delete()
 
     def test_duration_same_address(self):
-        address = Address(address=None, city=None, state=None, zipcode=None)
+        address = Address(address=None, city=None, state=None, zipcode=None).save()
         self.assertEqual(address.duration(address), 0)
+        address.delete()
 
     def test_distance_different_addresses(self):
         uno = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
