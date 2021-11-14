@@ -92,10 +92,7 @@ class Driver(StructuredNode):
                     print(f'\nRoute is overcapacity.')
                     self.__route.undo()
                     print(f'\nUndid insertion of {location}')
-                print(f'Closing route.\n')
-                self.__route.close_route()
-                return False
-            return True
+            return pair.first.is_assigned and pair.last.is_assigned
         return False
 
     def get_availability(self):
@@ -103,16 +100,16 @@ class Driver(StructuredNode):
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
         """
-        self.speaks.relationship.values()
+        return self.language.all()
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
-            return NotImplemented
-        return (self.first_name == other.first_name and self.last_name == other.last_name
-                and self.employee_status == other.employee_status)
+            return (self.first_name == other.first_name and self.last_name == other.last_name
+                    and self.employee_status == other.employee_status)
+        raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
         return '{},{}'.format(self.last_name, self.first_name)

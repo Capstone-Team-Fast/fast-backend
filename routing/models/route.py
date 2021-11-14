@@ -158,28 +158,28 @@ class Route(StructuredNode):
                 self.total_quantity = 0
                 self.total_duration = 0
                 self.total_distance = 0
+                self.tail = self.departure
             else:
                 if last_inserted == self.departure.next:
-                    last_inserted.previous.next = last_inserted.next
+                    self.total_duration -= self.departure.duration(last_inserted)
+                    self.total_distance -= self.departure.distance(last_inserted)
+
                     if last_inserted.next:
+                        self.total_duration = (
+                                self.total_duration
+                                - last_inserted.duration(last_inserted.next)
+                                + self.departure.duration(last_inserted.next)
+                        )
+                        self.total_distance = (
+                                self.total_distance
+                                - last_inserted.distance(last_inserted.next)
+                                + self.departure.distance(last_inserted.next)
+                        )
+
                         last_inserted.next.previous = last_inserted.previous
-
-                    self.total_duration = (
-                            self.total_duration
-                            - self.departure.duration(last_inserted)
-                            - last_inserted.duration(self.departure.next)
-                            + self.departure.next.duration(self.departure)
-                    )
-
-                    self.total_distance = (
-                            self.total_distance
-                            - self.departure.distance(last_inserted)
-                            - last_inserted.distance(self.departure.next)
-                            + self.departure.next.distance(self.departure)
-                    )
+                    last_inserted.previous.next = last_inserted.next
                 elif last_inserted == self.tail:
                     last_inserted.previous.next = last_inserted.next
-                    self.tail = last_inserted.previous
 
                     # Adjust route distance and duration
                     self.total_duration = (
@@ -189,6 +189,7 @@ class Route(StructuredNode):
                             self.total_distance - self.previous.distance(last_inserted)
                     )
                 self.total_quantity -= last_inserted.demand
+                self.tail = last_inserted.previous
                 last_inserted.is_assigned = False
 
     def last_location(self) -> Location:

@@ -10,6 +10,8 @@ backend/settings.py
 routing/settings.py
 db/
 migrations/
+_trial_temp*/
+_trial_temp/
 
 # Backup files
 *.bak 

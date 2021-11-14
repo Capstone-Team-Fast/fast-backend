@@ -32,10 +32,10 @@ class Address(StructuredNode):
         return hash((self.address, self.city, self.state, self.zipcode))
 
     def __eq__(self, other):
-        if not isinstance(other, type(self)):
-            return NotImplemented
-        return (self.address == other.address and self.city == other.city
-                and self.state == other.state and self.zipcode == other.zipcode)
+        if isinstance(other, type(self)):
+            return (self.address == other.address and self.city == other.city
+                    and self.state == other.state and self.zipcode == other.zipcode)
+        raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
         return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
@@ -139,6 +139,9 @@ class Location(StructuredNode):
                 return 0.0
             return self.address.distance(other.address)
         raise TypeError(f'{type(other)} does not subclass {type(self)}.')
+
+    def __str__(self):
+        return 'UID: {} at address {}'.format(self.uid, self.address)
 
     @classmethod
     def category(cls):
