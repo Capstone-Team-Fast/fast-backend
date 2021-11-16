@@ -83,12 +83,15 @@ class Route(StructuredNode):
     def itinerary(self):
         return list(self.__locations_queue)
 
+    def set_departure(self, departure: Location):
+        self.__departure = copy.deepcopy(departure)
+
     def add(self, location: Location, pair: Pair) -> bool:
         """
         Add a location to route based on insertion rules. Return True is addition was successful, otherwise,
         return False
         """
-        if self.__is_open:
+        if pair and self.__is_open:
             if len(self.__locations_queue) == 0:
                 if self.__departure is None:
                     raise RouteStateException('This route has no departure. Set the departure before proceeding.')
@@ -131,7 +134,8 @@ class Route(StructuredNode):
                 print('\t\t\t\033[1mLocations: \033[0m {}'.format(self))
                 return True
             else:
-                print(f'{location} is already assigned.')
+                if location:
+                    print(f'{location} is already assigned.')
             if self.previous == self.__departure:
                 self.undo()
         return False if location is None else location.is_assigned
@@ -291,9 +295,14 @@ class Route(StructuredNode):
 
     def serialize(self):
         itinerary = []
-        if not self.is_empty():
+        if not self.is_empty:
             for stop in self.__locations_queue:
                 itinerary.append(stop.serialize())
+
+        if self.driver:
+            driver = self.driver.serialize()
+        else:
+            driver = None
 
         obj = json.dumps({
             "id": self.id,
@@ -301,7 +310,7 @@ class Route(StructuredNode):
             "total_quantity": self.__total_quantity,
             "total_distance": self.__total_distance,
             "total_duration": self.__total_duration,
-            "assigned_to": None,
+            "assigned_to": driver,
             "itinerary": itinerary
         })
         return obj
