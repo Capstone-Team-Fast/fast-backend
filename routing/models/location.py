@@ -111,12 +111,25 @@ class Location(StructuredNode):
         self.next = None
         self.previous = None
 
+    def set_address(self, address):
+        if address is None:
+            raise TypeError(f'Type {type(address)} not supported. Supply type {type(Address)}.')
+
+        if address in Address.nodes.all():
+            node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                            zipcode=address.zipcode)
+            address = node_set[0]
+        else:
+            address = Address(address=address.address, city=address.city, state=address.state,
+                              zipcode=address.zipcode).save()
+        self.geographic_location.connect(address)
+
     @property
-    def address(self) -> Address:
+    def address(self):
         try:
             return self.geographic_location.get()
         except DoesNotExist:
-            pass
+            return None
 
     def reset(self):
         self.next = None

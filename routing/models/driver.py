@@ -50,6 +50,7 @@ class Driver(StructuredNode):
         super(Driver, self).__init__(*args, **kwargs)
         self.__route = Route()
         self.__route.__departure = None
+        self.__is_saved = False
 
     def save_route(self):
         self.__route.save()
@@ -57,6 +58,7 @@ class Driver(StructuredNode):
         self.__route.set_total_distance()
         self.__route.set_total_duration()
         self.__route.assigned_to.connect(self)
+        self.__is_saved = True
 
     def reset(self):
         self.__route = Route()
@@ -67,6 +69,8 @@ class Driver(StructuredNode):
 
     @property
     def route(self) -> Route:
+        if not self.__is_saved:
+            self.save_route()
         return self.__route
 
     @property
@@ -84,7 +88,7 @@ class Driver(StructuredNode):
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
-        if self.__route.__is_open:
+        if self.__route.is_open:
             for location in pair.get_pair():
                 if not self.__route.add(location=location, pair=pair):
                     return False

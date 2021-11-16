@@ -5,7 +5,8 @@ import sys
 from collections import deque
 from datetime import datetime
 
-from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, UniqueIdProperty, One
+from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, UniqueIdProperty, One, \
+    DoesNotExist
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
@@ -36,19 +37,51 @@ class Route(StructuredNode):
         self.__tail = None
 
     @property
-    def is_open(self):
+    def driver(self):
+        try:
+            return self.assigned_to.get()
+        except DoesNotExist:
+            return None
+
+    @property
+    def is_open(self) -> bool:
         return self.__is_open
 
     @property
-    def departure(self):
+    def departure(self) -> Location:
         return self.__departure
 
     @property
-    def previous(self):
+    def last_stop(self) -> Location:
         return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
 
+    @property
+    def previous(self) -> Location:
+        return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
+
+    @property
+    def total_distance(self) -> float:
+        return self.__total_distance
+
+    @property
+    def total_duration(self) -> float:
+        return self.__total_duration
+
+    @property
+    def total_demand(self) -> float:
+        return self.__total_quantity
+
+    @property
+    def created_on(self):
+        return self.__created_on
+
+    @property
     def is_empty(self):
         return len(self.__locations_queue) == 0 or len(self.__locations_queue) == 1
+
+    @property
+    def itinerary(self):
+        return list(self.__locations_queue)
 
     def add(self, location: Location, pair: Pair) -> bool:
         """
@@ -204,10 +237,6 @@ class Route(StructuredNode):
                 self.__tail = last_inserted.previous
                 last_inserted.is_assigned = False
 
-    @property
-    def last_stop(self) -> Location:
-        return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
-
     def close_route(self):
         if self.__departure and self.__departure.next is None:
             self.__locations_queue = deque()
@@ -232,22 +261,6 @@ class Route(StructuredNode):
 
     def set_total_demand(self):
         self.__quantity = self.total_demand
-
-    @property
-    def total_distance(self):
-        return self.__total_distance
-
-    @property
-    def total_duration(self):
-        return self.__total_duration
-
-    @property
-    def total_demand(self):
-        return self.__total_quantity
-
-    @property
-    def created_on(self):
-        return self.__created_on
 
     def __len__(self):
         return len(self.__locations_queue)

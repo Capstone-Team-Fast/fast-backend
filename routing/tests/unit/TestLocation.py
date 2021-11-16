@@ -13,13 +13,24 @@ class MyTestCase(unittest.TestCase):
     config.DATABASE_URL = settings.NEOMODEL_NEO4J_BOLT_URL
     db.set_connection(url=config.DATABASE_URL)
 
-    def test_constructor(self):
+    def test_constructor_with_no_address(self):
         customer = Customer().save()
         self.assertFalse(customer.is_center)
         self.assertFalse(customer.is_assigned)
         self.assertIsNone(customer.previous)
         self.assertIsNone(customer.next)
         self.assertIsNone(customer.address)
+        customer.delete()
+
+    def test_constructor(self):
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182)
+        customer = Customer().save()
+        customer.set_address(address)
+        self.assertFalse(customer.is_center)
+        self.assertFalse(customer.is_assigned)
+        self.assertIsNone(customer.previous)
+        self.assertIsNone(customer.next)
+        self.assertEqual(customer.address, address)
         customer.delete()
 
     def test_reset(self):

@@ -5,7 +5,9 @@ from neomodel import config, db
 
 from backend import settings
 from routing import constant
+from routing.exceptions import RouteStateException
 from routing.models.driver import Driver
+from routing.models.location import Pair, Customer
 from routing.models.route import Route
 
 
@@ -17,16 +19,31 @@ class MyTestCase(unittest.TestCase):
         route = Route().save()
         self.assertIsNone(route.departure)
         self.assertIsNone(route.last_stop)
+        self.assertIsNone(route.previous)
+        self.assertIsNone(route.driver)
         self.assertTrue(route.is_open)
-        print(route.assigned_to)
+        self.assertTrue(route.is_empty)
+        self.assertEqual(route.total_distance, 0)
+        self.assertEqual(route.total_demand, 0)
+        self.assertEqual(route.total_duration, 0)
+        self.assertEqual(route.itinerary, [])
         route.delete()
 
     def test_connect_route_driver(self):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
-        driver.save_route()
-        self.assertEqual(driver.route, driver.route)
+        self.assertEqual(driver, driver.route.driver)
         driver.route.delete()
         driver.delete()
+
+    def test_add_when_no_departure(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        location1 = Customer().save()
+        location2 = Customer().save()
+        with self.assertRaises(RouteStateException):
+            driver.add(Pair(location1, location2))
+        driver.delete()
+        location1.delete()
+        location2.delete()
 
     def test_route_serializer_template(self):
         route = Route().save()
