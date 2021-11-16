@@ -82,6 +82,26 @@ class MyTestCase(unittest.TestCase):
         customer.delete()
         depot.delete()
 
+    def test_set_address_one_address(self):
+        customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
+        customer = Customer().save()
+        customer.set_address(customer_address)
+        self.assertEqual(customer.address, customer_address)
+        customer_address.delete()
+        customer.delete()
+
+    def test_set_address_update(self):
+        old_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
+        new_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
+        customer = Customer().save()
+        customer.set_address(old_address)
+        self.assertEqual(customer.address, old_address)
+        customer.set_address(new_address)
+        self.assertEqual(customer.address, new_address)
+        old_address.delete()
+        new_address.delete()
+        customer.delete()
+
     def test_distance_and_duration_between_depot_customer(self):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
@@ -89,8 +109,8 @@ class MyTestCase(unittest.TestCase):
         expected_duration = 14.1
         customer = Customer().save()
         depot = Depot().save()
-        customer.geographic_location.connect(customer_address)
-        depot.geographic_location.connect(depot_address)
+        customer.__geographic_location.connect(customer_address)
+        depot.__geographic_location.connect(depot_address)
         self.assertEqual(customer.duration(depot), expected_duration)
         self.assertEqual(customer.distance(depot), expected_distance)
         customer.delete()
@@ -99,7 +119,7 @@ class MyTestCase(unittest.TestCase):
     def test_serializer_template(self):
         address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer = Customer().save()
-        customer.geographic_location.connect(address)
+        customer.__geographic_location.connect(address)
         expected_result = json.dumps({
             'id': customer.external_id,
             'is_center': False,
@@ -114,7 +134,7 @@ class MyTestCase(unittest.TestCase):
     def test_serializer_customer_with_languages(self):
         address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer = Customer().save()
-        customer.geographic_location.connect(address)
+        customer.__geographic_location.connect(address)
 
         languages = [Language(language=language).save() for language in Language.options()]
         [customer.language.connect(language) for language in languages]
@@ -135,7 +155,7 @@ class MyTestCase(unittest.TestCase):
     def test_serializer_depot(self):
         address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         depot = Depot().save()
-        depot.geographic_location.connect(address)
+        depot.__geographic_location.connect(address)
 
         expected_result = json.dumps({
             'id': depot.external_id,

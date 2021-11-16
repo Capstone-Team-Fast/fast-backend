@@ -65,7 +65,7 @@ class Driver(StructuredNode):
         self.__route.__departure = None
 
     def set_departure(self, depot: Depot):
-        self.__route.__departure = copy.deepcopy(depot)
+        self.__route.set_departure(depot)
 
     @property
     def route(self) -> Route:
@@ -162,7 +162,6 @@ class Driver(StructuredNode):
             "employee_status": self.employee_status,
             "availability": availabilities,
             "languages": languages,
-            "routes": []
         })
         return obj
 

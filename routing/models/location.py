@@ -4,7 +4,7 @@ import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
-    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
@@ -103,7 +103,7 @@ class Location(StructuredNode):
     external_id = IntegerProperty(required=False, unique_index=True)
     created_on = DateTimeProperty(index=True, default=datetime.now)
     modified_on = DateTimeProperty(index=True, default_now=True)
-    geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
+    __geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
 
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
@@ -122,12 +122,15 @@ class Location(StructuredNode):
         else:
             address = Address(address=address.address, city=address.city, state=address.state,
                               zipcode=address.zipcode).save()
-        self.geographic_location.connect(address)
+        try:
+            self.__geographic_location.connect(address)
+        except AttemptedCardinalityViolation:
+            self.__geographic_location.reconnect(self.address, address)
 
     @property
     def address(self):
         try:
-            return self.geographic_location.get()
+            return self.__geographic_location.get()
         except DoesNotExist:
             return None
 
