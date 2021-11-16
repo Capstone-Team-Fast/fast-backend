@@ -209,6 +209,9 @@ class Depot(Location):
     def __init__(self, *args, **kwargs):
         super(Depot, self).__init__(*args, **kwargs)
 
+    def serialize(self):
+        return super(Depot, self).serialize()
+
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):

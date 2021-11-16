@@ -13,9 +13,23 @@ class MyTestCase(unittest.TestCase):
     config.DATABASE_URL = settings.NEOMODEL_NEO4J_BOLT_URL
     db.set_connection(url=config.DATABASE_URL)
 
+    def test_constructor(self):
+        route = Route().save()
+        self.assertIsNone(route.departure)
+        self.assertIsNone(route.last_stop)
+        self.assertTrue(route.is_open)
+        print(route.assigned_to)
+        route.delete()
+
+    def test_connect_route_driver(self):
+        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
+        driver.save_route()
+        self.assertEqual(driver.route, driver.route)
+        driver.route.delete()
+        driver.delete()
+
     def test_route_serializer_template(self):
         route = Route().save()
-        print(route.serialize())
         expected_result = json.dumps({
             "id": route.id,
             "created_on": route.created_on.strftime(constant.DATETIME_FORMAT),
@@ -27,13 +41,6 @@ class MyTestCase(unittest.TestCase):
         })
         self.assertEqual(route.serialize(), expected_result)
         route.delete()
-
-    def test_connect_route_driver(self):
-        driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
-        driver.save_route()
-        self.assertEqual(driver.route, driver.route)
-        driver.route.delete()
-        driver.delete()
 
 
 if __name__ == '__main__':

@@ -96,15 +96,11 @@ class MyTestCase(unittest.TestCase):
             'demand': customer.demand,
             'languages': []
         })
-        print(type(customer.serialize()))
-        print(customer.serialize())
-        print(json.loads(expected_result))
-        print(expected_result)
         self.assertEqual(customer.serialize(), expected_result)
         address.delete()
         customer.delete()
 
-    def test_serializer_languages(self):
+    def test_serializer_customer_with_languages(self):
         address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer = Customer().save()
         customer.geographic_location.connect(address)
@@ -124,6 +120,21 @@ class MyTestCase(unittest.TestCase):
         address.delete()
         [language.delete() for language in languages]
         customer.delete()
+
+    def test_serializer_depot(self):
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
+        depot = Depot().save()
+        depot.geographic_location.connect(address)
+
+        expected_result = json.dumps({
+            'id': depot.external_id,
+            'is_center': True,
+            'address': depot.address.serialize()
+        })
+
+        self.assertEqual(depot.serialize(), expected_result)
+        address.delete()
+        depot.delete()
 
 
 if __name__ == '__main__':

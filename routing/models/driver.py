@@ -49,7 +49,7 @@ class Driver(StructuredNode):
     def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
         self.__route = Route()
-        self.__route.departure = None
+        self.__route.__departure = None
 
     def save_route(self):
         self.__route.save()
@@ -60,10 +60,10 @@ class Driver(StructuredNode):
 
     def reset(self):
         self.__route = Route()
-        self.__route.departure = None
+        self.__route.__departure = None
 
     def set_departure(self, depot: Depot):
-        self.__route.departure = copy.deepcopy(depot)
+        self.__route.__departure = copy.deepcopy(depot)
 
     @property
     def route(self) -> Route:
@@ -71,7 +71,7 @@ class Driver(StructuredNode):
 
     @property
     def departure(self) -> Depot:
-        return self.__route.departure
+        return self.__route.__departure
 
     def add(self, pair: Pair) -> bool:
         """Add a Pair of Location to the Route assigned to this driver.
@@ -84,7 +84,7 @@ class Driver(StructuredNode):
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
-        if self.__route.is_open:
+        if self.__route.__is_open:
             for location in pair.get_pair():
                 if not self.__route.add(location=location, pair=pair):
                     return False

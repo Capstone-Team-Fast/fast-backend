@@ -265,7 +265,7 @@ class RouteManager:
                 print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                 if driver.get_departure() is None:
                     driver.set_departure(self.location_manager.depot)
-                if driver.route.is_open and driver.add(pair=Pair(locations[0], locations[0])):
+                if driver.route.__is_open and driver.add(pair=Pair(locations[0], locations[0])):
                     break
                 if locations[0].is_assigned:
                     assigned_locations_set.add(locations[0])
@@ -276,9 +276,9 @@ class RouteManager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
                 for driver in drivers_heap:
                     print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                    if driver.departure() is None:
+                    if driver.__departure() is None:
                         driver.set_departure(self.location_manager.depot)
-                    if driver.__route.is_open and driver.add(pair=pair):
+                    if driver.__route.__is_open and driver.add(pair=pair):
                         break
                 if pair.is_assignable():
                     print(f'{RouteManager._State.INFEASIBLE}')
@@ -312,7 +312,17 @@ class RouteManager:
         RouteManager.send_routes(response)
 
     def build_response(self):
-        response = json.dumps({})
+        routes = []
+        for driver in self.drivers:
+            if not driver.route.is_empty():
+                routes.append(driver.route.serialize())
+
+        response = json.dumps({
+            'solver_status': '',
+            'message': '',
+            'description': '',
+            'routes': routes,
+        })
         return response
 
     def send_routes(self):

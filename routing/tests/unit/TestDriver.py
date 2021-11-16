@@ -25,7 +25,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(driver.employee_status, 'P')
         self.assertEqual(driver.route, Route())
         self.assertEqual(driver.capacity, 0)
-        self.assertIsNone(driver.departure)
+        self.assertIsNone(driver.__departure)
         driver.delete()
 
     def test_set_departure(self):
@@ -34,7 +34,7 @@ class MyTestCase(unittest.TestCase):
         depot.geographic_location.connect(depot_address)  # Assign an address to the depot
         driver = Driver(first_name='John', last_name='Doe', employee_status='P').save()
         driver.set_departure(depot)
-        self.assertEqual(driver.departure, depot)
+        self.assertEqual(driver.__departure, depot)
         depot_address.delete()
         depot.delete()
         driver.delete()
