@@ -1,6 +1,6 @@
 import unittest
 
-from neomodel import db, config
+from neomodel import db, config, DoesNotExist
 
 from backend import settings
 from routing.models.location import Address
@@ -15,45 +15,47 @@ class MyTestCase(unittest.TestCase):
         city = 'Omaha'
         state = 'NE'
         zipcode = 68114
-        address = Address(address=street, city=city, state=state, zipcode=zipcode)
+        address = Address(address=street, city=city, state=state, zipcode=zipcode).save()
         self.assertEqual(address.address, street)
         self.assertEqual(address.city, city)
         self.assertEqual(address.state, state)
         self.assertEqual(address.zipcode, zipcode)
         self.assertIsNone(address.latitude)
         self.assertIsNone(address.longitude)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(DoesNotExist):
             address.neighbor.get()
+        address.delete()
 
     def test_str(self):
         street = '9029 Burt St'
         city = 'Omaha'
         state = 'NE'
         zipcode = 68114
-        address = Address(address=street, city=city, state=state, zipcode=zipcode)
+        address = Address(address=street, city=city, state=state, zipcode=zipcode).save()
         expected = '{address}, {city}, {state} {zipcode}'.format(address=street, city=city, state=state,
                                                                  zipcode=zipcode)
         self.assertEqual(str(address), expected)
+        address.delete()
 
     def test_distance_value_error(self):
-        address = Address(address=None, city=None, state=None, zipcode=None).save()
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         with self.assertRaises(TypeError):
             address.distance(object)
         address.delete()
 
     def test_duration_value_error(self):
-        address = Address(address=None, city=None, state=None, zipcode=None).save()
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         with self.assertRaises(TypeError):
             address.duration(object)
         address.delete()
 
     def test_distance_same_address(self):
-        address = Address(address=None, city=None, state=None, zipcode=None).save()
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         self.assertEqual(address.distance(address), 0)
         address.delete()
 
     def test_duration_same_address(self):
-        address = Address(address=None, city=None, state=None, zipcode=None).save()
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         self.assertEqual(address.duration(address), 0)
         address.delete()
 

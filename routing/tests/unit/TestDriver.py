@@ -31,7 +31,7 @@ class MyTestCase(unittest.TestCase):
     def test_set_departure(self):
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)  # Assign an address to the depot
+        depot.set_address(depot_address)  # Assign an address to the depot
         driver = Driver(first_name='John', last_name='Doe', employee_status='P').save()
         driver.set_departure(depot)
         self.assertEqual(driver.departure, depot)
@@ -44,8 +44,8 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         pair = Pair(customer1, customer2)
         with self.assertRaises(RouteStateException):
             driver.add(pair)
@@ -58,14 +58,14 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         customer1.demand = 11
         customer2.demand = 15
 
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)
+        depot.set_address(depot_address)
 
         driver = Driver(first_name='John', last_name='Doe', employee_status='P', capacity=10).save()
         driver.set_departure(depot)
@@ -87,14 +87,14 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         customer1.demand = 8
         customer2.demand = 11
 
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)
+        depot.set_address(depot_address)
 
         driver = Driver(first_name='John', last_name='Doe', employee_status='P', capacity=10).save()
         driver.set_departure(depot)
@@ -117,14 +117,14 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         customer1.demand = 8
         customer2.demand = 11
 
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)
+        depot.set_address(depot_address)
 
         driver = Driver(first_name='John', last_name='Doe', employee_status='P', capacity=20).save()
         driver.set_departure(depot)
@@ -147,14 +147,14 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         customer1.demand = 8
         customer2.demand = 11
 
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)
+        depot.set_address(depot_address)
 
         driver = Driver(first_name='John', last_name='Doe', employee_status='P', capacity=10).save()
         driver.set_departure(depot)
@@ -177,14 +177,14 @@ class MyTestCase(unittest.TestCase):
         customer_address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182).save()
         customer1 = Customer().save()
         customer2 = Customer().save()
-        customer1.__geographic_location.connect(customer_address)
-        customer2.__geographic_location.connect(customer_address)
+        customer1.set_address(customer_address)
+        customer2.set_address(customer_address)
         customer1.demand = 8
         customer2.demand = 11
 
         depot_address = Address(address='602 N. 20th St', city='Omaha', state='NE', zipcode=68178).save()
         depot = Depot().save()
-        depot.__geographic_location.connect(depot_address)
+        depot.set_address(depot_address)
 
         driver = Driver(first_name='John', last_name='Doe', employee_status='P', capacity=20).save()
         driver.set_departure(depot)

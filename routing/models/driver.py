@@ -49,7 +49,7 @@ class Driver(StructuredNode):
     def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
         self.__route = Route()
-        self.__route.__departure = None
+        self.__route.set_departure(None)
         self.__is_saved = False
 
     def save_route(self):
@@ -62,7 +62,7 @@ class Driver(StructuredNode):
 
     def reset(self):
         self.__route = Route()
-        self.__route.__departure = None
+        self.__route.set_departure(None)
 
     def set_departure(self, depot: Depot):
         self.__route.set_departure(depot)
@@ -75,7 +75,7 @@ class Driver(StructuredNode):
 
     @property
     def departure(self) -> Depot:
-        return self.__route.__departure
+        return self.__route.departure
 
     def add(self, pair: Pair) -> bool:
         """Add a Pair of Location to the Route assigned to this driver.
