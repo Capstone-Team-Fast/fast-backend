@@ -35,11 +35,14 @@ class ClientSerializer(serializers.ModelSerializer):
         location_data = validated_data.pop('location')
         location = instance.location
 
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.user = validated_data.get('user', instance.user)
         instance.phone = validated_data.get('phone', instance.phone)
         instance.languages.clear()
         instance.modified_on = datetime.now()
         instance.save()
+
 
         location.address = location_data.get('address', location.address)
         location.city = location_data.get('city', location.city)
@@ -55,6 +58,8 @@ class ClientSerializer(serializers.ModelSerializer):
 
         if location_data.get('longitude'):
             location.longitude = location_data.get('longitude', location.longitude)
+
+        location.save()
 
         for language_data in languages_data:
             language, created = Language.objects.get_or_create(name=language_data['name'])

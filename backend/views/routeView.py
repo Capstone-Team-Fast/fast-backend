@@ -32,6 +32,8 @@ class RouteListView(APIView):
         data = request.data
         client_id_list = data.get('client_ids')
         driver_id_list = data.get('driver_ids')
+        delivery_limit = data.get('delivery_limit')
+        center = data.get('center')
 
         clients = []
         drivers = []
@@ -44,15 +46,19 @@ class RouteListView(APIView):
         client_serializer = ClientSerializer(clients, many=True)
 
         for driver_id in driver_id_list:
-            drivers.append(Driver.objects.get(id=driver_id))
+            driver = Driver.objects.get(id=driver_id)
+            driver.capacity = delivery_limit
+            driver.save()
+            drivers.append(driver)
 
         driver_serializer = DriverSerializer(drivers, many=True)
 
         # TODO: Connect to routing app with function call like:
-        # routes = router(client_list, driver_list)
+        # routes = RouteManager.request_routes(client_serializer.data, driver_serializer.data)
+        # routes = routes.get('routes')
 
         # TODO: run routes through the route serializer and return response
-        # serializer = PostRouteSerializer(routes, many=True)
+        # serializer = RouteSerializer(routes, many=True)
         # if serializer.is_valid():
         #     serializer.save()
         #     return Response(serializer.data, status=status.HTTP_201_CREATED)
