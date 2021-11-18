@@ -3,7 +3,7 @@ from neomodel import config, db
 from backend import settings
 from routing.models.availability import Availability
 from routing.models.driver import Driver
-from routing.models.location import Location
+from routing.models.location import Address
 
 
 def add_driver(db_connection):
@@ -31,7 +31,7 @@ def add_driver(db_connection):
 
 def add_locations(db_connection):
     with db_connection.transaction:
-        locations = Location.create(
+        locations = Address.create(
             {'address': '5545 Center St', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68106, 'is_center': True},
             {'address': '9029 Burt St', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68114},
             {'address': '9110 Maplewood Blvd', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68134},

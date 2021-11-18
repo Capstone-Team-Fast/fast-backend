@@ -9,7 +9,10 @@ venv/
 backend/settings.py
 routing/settings.py
 db/
-migrations/
+backend/migrations/
+routing/migrations/
+routing/tests/_trial_temp/
+routing/tests/unit/_trial_temp*/
 
 # Backup files
 *.bak 

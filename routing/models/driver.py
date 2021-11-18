@@ -1,5 +1,6 @@
 import copy
 import enum
+import json
 import math
 import os
 import sys
@@ -7,15 +8,11 @@ from datetime import datetime
 
 from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
 
-working_dir = os.path.abspath(os.path.join('.'))
-if working_dir not in sys.path:
-    sys.path.append(working_dir)
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
-for p in sys.path:
-    print(p)
-
+from routing.models.location import Pair, Depot
 from routing.models.route import Route
-from routing.models.location import Location, Pair
 
 
 class Driver(StructuredNode):
@@ -34,6 +31,7 @@ class Driver(StructuredNode):
     ROLES = {Role.EMPLOYEE.value: Role.EMPLOYEE.name, Role.VOLUNTEER.value: Role.VOLUNTEER.name}
 
     uid = UniqueIdProperty()
+    external_id = IntegerProperty(required=False, unique_index=True)
     first_name = StringProperty(index=True, required=True)
     last_name = StringProperty(index=True, required=True)
     employee_status = StringProperty(index=True, choices=ROLES, required=True)
@@ -44,24 +42,40 @@ class Driver(StructuredNode):
     created_on = DateTimeProperty(default=datetime.now)
     modified_on = DateTimeProperty(default_now=True)
 
-    serves = RelationshipTo('routing.models.location.Location', 'SERVES')
+    serves = RelationshipTo('routing.models.location.Customer', 'SERVES')
     is_available_on = RelationshipTo('routing.models.availability.Availability', 'AVAILABLE_ON')
-    speaks = RelationshipTo('routing.models.language.Language', 'SPEAKS')
+    language = RelationshipTo('routing.models.language.Language', 'SPEAKS')
 
     def __init__(self, *args, **kwargs):
         super(Driver, self).__init__(*args, **kwargs)
-        self.route = Route()
-        self.route.departure = None
+        self.__route = Route()
+        self.__route.set_departure(None)
+        self.__is_saved = False
+
+    def save_route(self):
+        self.__route.save()
+        self.__route.set_total_demand()
+        self.__route.set_total_distance()
+        self.__route.set_total_duration()
+        self.__route.assigned_to.connect(self)
+        self.__is_saved = True
 
     def reset(self):
-        self.route = Route()
-        self.route.departure = None
+        self.__route = Route()
+        self.__route.set_departure(None)
 
-    def set_departure(self, depot: Location):
-        self.route.departure = copy.deepcopy(depot)
+    def set_departure(self, depot: Depot):
+        self.__route.set_departure(depot)
 
-    def get_departure(self):
-        return self.route.departure
+    @property
+    def route(self) -> Route:
+        if not self.__is_saved:
+            self.save_route()
+        return self.__route
+
+    @property
+    def departure(self) -> Depot:
+        return self.__route.departure
 
     def add(self, pair: Pair) -> bool:
         """Add a Pair of Location to the Route assigned to this driver.
@@ -74,49 +88,49 @@ class Driver(StructuredNode):
         """
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
-        if self.route.is_open:
+        if self.__route.is_open:
             for location in pair.get_pair():
-                if not self.route.add(location=location, pair=pair):
+                if not self.__route.add(location=location, pair=pair):
                     return False
-                cumulative_duration_minutes = math.trunc(self.route.total_duration)
-                cumulative_duration_seconds = self.route.total_duration - cumulative_duration_minutes
+                cumulative_duration_minutes = math.trunc(self.__route.total_duration)
+                cumulative_duration_seconds = self.__route.total_duration - cumulative_duration_minutes
                 cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
-                        and (self.route.total_quantity < self.capacity):
+                        and (self.__route.total_demand < self.capacity):
                     continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
                     print(f'\nDriver has met allocated time.')
-                elif self.route.total_quantity == self.capacity:
+                elif self.__route.total_demand == self.capacity:
                     print(f'\nDriver is at capacity.')
                 elif cumulative_duration > (self.end_time - self.start_time).total_seconds():
                     print(f'Inserting this location lead to overtime. Undoing insertion.')
-                    self.route.undo()
+                    self.__route.undo()
                     print(f'\nUndid insertion of {location}')
-                elif self.route.total_quantity > self.capacity:
+                elif self.__route.total_demand > self.capacity:
                     print(f'\nRoute is overcapacity.')
-                    self.route.undo()
+                    self.__route.undo()
                     print(f'\nUndid insertion of {location}')
-                print(f'Closing route.\n')
-                self.route.close_route()
-                return False
-            return True
+            return pair.first.is_assigned and pair.last.is_assigned
         return False
+
+    def get_languages(self):
+        return self.language.all()
 
     def get_availability(self):
         """
         Get the availability of this driver with respect to a location. In other words,
         can this drive deliver to this location?
         """
-        self.speaks.relationship.values()
+        return self.is_available_on.all()
 
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.employee_status))
 
     def __eq__(self, other):
-        if not isinstance(other, type(self)):
-            return NotImplemented
-        return (self.first_name == other.first_name and self.last_name == other.last_name
-                and self.employee_status == other.employee_status)
+        if isinstance(other, type(self)):
+            return (self.first_name == other.first_name and self.last_name == other.last_name
+                    and self.employee_status == other.employee_status)
+        raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
         return '{},{}'.format(self.last_name, self.first_name)
@@ -128,4 +142,29 @@ class Driver(StructuredNode):
         return self.employee_status == Driver.Role.EMPLOYEE.value
 
     def serialize(self):
+        availabilities = self.get_availability()
+        if availabilities:
+            availabilities.sort()
+            availabilities = [availability.serialize() for availability in availabilities]
+        else:
+            availabilities = []
+
+        languages = self.get_languages()
+        if languages:
+            languages.sort()
+            languages = [language.serialize() for language in languages]
+        else:
+            languages = []
+
+        obj = json.dumps({
+            "id": self.external_id,
+            "capacity": self.capacity,
+            "employee_status": self.employee_status,
+            "availability": availabilities,
+            "languages": languages,
+        })
+        return obj
+
+    @classmethod
+    def category(cls):
         pass
