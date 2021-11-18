@@ -41,6 +41,8 @@ class DriverSerializer(serializers.ModelSerializer):
         languages_data = validated_data.pop('languages', [])
         availability = instance.availability
 
+        instance.first_name = validated_data.get('first_name', instance.first_name)
+        instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.capacity = validated_data.get('capacity', instance.capacity)
         instance.employee_status = validated_data.get('employee_status', instance.employee_status)
         instance.phone = validated_data.get('phone', instance.phone)

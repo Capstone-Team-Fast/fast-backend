@@ -21,6 +21,8 @@ from backend.views.routeView import RouteListView, RouteView
 from backend.views.locationView import LocationView, LocationListView
 from backend.views.driverView import DriverView, DriverListView
 from backend.views.managerView import ManagerView, ManagerListView
+from backend.views.bulkClientView import BulkClientView
+from backend.views.bulkDriverView import BulkDriverView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,5 +36,7 @@ urlpatterns = [
     path('api/drivers/', DriverListView.as_view()),
     path('api/drivers/<int:pk>/', DriverView.as_view()),
     path('api/managers/', ManagerListView.as_view()),
-    path('api/managers/<int:pk>/', ManagerView.as_view())
+    path('api/managers/<int:pk>/', ManagerView.as_view()),
+    path('api/clients/bulk/', BulkClientView.as_view()),
+    path('api/drivers/bulk/', BulkDriverView.as_view())
 ]
