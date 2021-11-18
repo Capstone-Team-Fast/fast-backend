@@ -5,7 +5,10 @@ from rest_framework.views import APIView
 
 from backend.models import Route, Client, Driver
 from backend.serializers.routeSerializer import RouteSerializer
-from backend.serializers import ClientSerializer, DriverSerializer, ClientRoutingSerializer
+from backend.serializers import ClientSerializer, DriverSerializer, ClientRoutingSerializer, LocationSerializer
+
+from routing.managers import RouteManager
+
 
 class RouteView(APIView):
 
@@ -36,10 +39,16 @@ class RouteListView(APIView):
         clients = []
         drivers = []
 
+        locations = []
+
         for client_id in client_id_list:
             client = Client.objects.get(id=client_id)
-            print(client.location)
+            location = client.location
+            # print(client.location)
             clients.append(client)
+            locations.append(location)
+
+        location_serializer = LocationSerializer(locations, many=True)
 
         client_serializer = ClientSerializer(clients, many=True)
 
@@ -49,14 +58,15 @@ class RouteListView(APIView):
         driver_serializer = DriverSerializer(drivers, many=True)
 
         # TODO: Connect to routing app with function call like:
-        # routes = router(client_list, driver_list)
+        routes = RouteManager.request_routes(client_serializer.data, driver_serializer.data)
+        routes = routes.get('routes')
 
         # TODO: run routes through the route serializer and return response
-        # serializer = PostRouteSerializer(routes, many=True)
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        serializer = RouteSerializer(routes, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         # TODO: remove this when above TODOs are done
-        return Response(driver_serializer.data, status=status.HTTP_200_OK)
+        # return Response(driver_serializer.data, status=status.HTTP_200_OK)
