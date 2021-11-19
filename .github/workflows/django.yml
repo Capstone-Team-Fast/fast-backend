@@ -21,11 +21,11 @@ jobs:
         pip install -r requirements.txt
     - name: Migrate
       run: |
+        . venv/bin/activate
         python manage.py makemigrations
         python manage.py migrate
     - name: Deploy
       run: |
-        . venv/bin/activate
         python manage.py runserver 0.0.0.0:8000
 
   continuous-deployment:
