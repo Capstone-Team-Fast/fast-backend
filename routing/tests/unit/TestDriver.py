@@ -235,6 +235,8 @@ class MyTestCase(unittest.TestCase):
         driver = Driver(first_name='First', last_name='Last', employee_status='P', capacity=20).save()
         expected_result = json.dumps({
             "id": None,
+            "first_name": 'First',
+            "last_name": 'Last',
             "capacity": 20,
             "employee_status": "P",
             "availability": [],
@@ -250,10 +252,12 @@ class MyTestCase(unittest.TestCase):
         languages.sort()
         expected_result = json.dumps({
             "id": None,
+            "first_name": 'First',
+            "last_name": 'Last',
             "capacity": 20,
             "employee_status": "P",
             "availability": [],
-            "languages": [language.serialize() for language in languages],
+            "languages": [json.loads(language.serialize()) for language in languages],
         })
         self.assertEqual(driver.serialize(), expected_result)
         [language.delete() for language in languages]
@@ -266,9 +270,11 @@ class MyTestCase(unittest.TestCase):
         availabilities.sort()
         expected_result = json.dumps({
             "id": None,
+            "first_name": 'First',
+            "last_name": 'Last',
             "capacity": 20,
             "employee_status": "P",
-            "availability": [availability.serialize() for availability in availabilities],
+            "availability": [json.loads(availability.serialize()) for availability in availabilities],
             "languages": [],
         })
         self.assertEqual(driver.serialize(), expected_result)
@@ -288,10 +294,12 @@ class MyTestCase(unittest.TestCase):
 
         expected_result = json.dumps({
             "id": None,
+            "first_name": 'First',
+            "last_name": 'Last',
             "capacity": 20,
             "employee_status": "P",
-            "availability": [availability.serialize() for availability in availabilities],
-            "languages": [language.serialize() for language in languages],
+            "availability": [json.loads(availability.serialize()) for availability in availabilities],
+            "languages": [json.loads(language.serialize()) for language in languages],
         })
         self.assertEqual(driver.serialize(), expected_result)
         [availability.delete() for availability in availabilities]

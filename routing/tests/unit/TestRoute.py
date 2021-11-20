@@ -157,7 +157,7 @@ class MyTestCase(unittest.TestCase):
             "total_quantity": 4,
             "total_distance": 7.159,
             "total_duration": 13.4,
-            "assigned_to": driver.serialize(),
+            "assigned_to": json.loads(driver.serialize()),
             "itinerary": itinerary
         })
 

@@ -5,8 +5,9 @@ from neomodel import StructuredNode, StringProperty, IntegerProperty
 
 class Language(StructuredNode):
     __LANGUAGES = {'Arabic': 'Arabic', 'Burmese': 'Burmese', 'Chinese': 'Chinese', 'English': 'English',
-                   'Korean': 'Korean', 'Mandarin': 'Mandarin', 'Nepali': 'Nepali', 'Somali': 'Somali',
-                   'Spanish': 'Spanish', 'Sudanese': 'Sudanese'}
+                   'French': 'French', 'German': 'German', 'Korean': 'Korean', 'Mandarin': 'Mandarin',
+                   'Nepali': 'Nepali', 'Russian': 'Russian', 'Somali': 'Somali', 'Spanish': 'Spanish',
+                   'Sudanese': 'Sudanese'}
     external_id = IntegerProperty(required=False, unique_index=True)
     language = StringProperty(required=True, unique_index=True, choices=__LANGUAGES)
 

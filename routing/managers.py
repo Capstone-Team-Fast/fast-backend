@@ -1,13 +1,13 @@
 import copy
 import enum
-import heapq
 import json
 import sys
 
 import neomodel
 
 from routing.exceptions import RouteStateException
-from routing.models.location import Address, Pair, Location
+from routing.models.language import Language
+from routing.models.location import Address, Pair, Location, Customer
 from routing.services import BingGeocodeService, BingMatrixService
 
 
@@ -189,9 +189,63 @@ class NodeParser:
         return node_drivers
 
     @staticmethod
-    def create_locations(locations):
-        node_locations = []
-        return node_locations
+    def create_departure(departures):
+        node_departures = []
+        if departures:
+            for location in departures:
+                location = json.loads(location)
+                customer = NodeParser.parse_customer(location)
+                address = NodeParser.parse_address(location['location'])
+                customer.set_address(address)
+                for language in location['languages']:
+                    language = NodeParser.parse_language(language)
+                    customer.language.connect(language)
+                node_departures.append(customer)
+        return node_departures
+
+    @staticmethod
+    def create_customers(customers):
+        node_customers = []
+        if customers:
+            for location in customers:
+                location = json.loads(location)
+                customer = NodeParser.parse_customer(location).save()
+
+                address = NodeParser.parse_address(location['location'])
+                if address not in Address.nodes.all():
+                    address.save()
+                else:
+                    node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                                    zipcode=address.zipcode)
+                    address = node_set[0]
+                customer.set_address(address)
+
+                for language in location['languages']:
+                    language = NodeParser.parse_language(language)
+                    if language not in Language.nodes.all():
+                        language.save()
+                    else:
+                        node_set = Language.nodes.filter(language=language.language)
+                        language = node_set[0]
+                    customer.language.connect(language)
+
+                node_customers.append(customer)
+        return node_customers
+
+    @staticmethod
+    def parse_customer(customer):
+        return Customer(external_id=customer['id'], demand=customer['quantity'],
+                        is_center=customer['location']['is_center'])
+
+    @staticmethod
+    def parse_address(geographical_location):
+        return Address(external_id=geographical_location['id'], address=geographical_location['address'],
+                       city=geographical_location['city'], state=geographical_location['state'],
+                       zipcode=geographical_location['zipcode'])
+
+    @staticmethod
+    def parse_language(language):
+        return Language(external_id=language['id'], language=language['name'])
 
 
 class RouteManager:
@@ -213,20 +267,58 @@ class RouteManager:
 
     __NUMBER_OF_ITERATIONS = 100
 
-    def __init__(self, db_connection: str, depot: Address, drivers: list, locations: list,
-                 prioritize_volunteer: bool = False):
-        self.__drivers = NodeParser.create_drivers(drivers)
-        self.__locations = NodeParser.create_locations(locations)
-        self.__depot = NodeParser.create_locations(depot)[0]
-        self.__location_manager = LocationManager(db_connection=db_connection, depot=self.__depot)
-        self.__location_manager.add_collection(locations=locations)
-        self.__savings_manager = SavingsManager(db_connection=db_connection, depot=self.__depot,
-                                                locations=self.__locations)
-        self.__prioritize_volunteer = prioritize_volunteer
-        self.__drivers_heap = self.__build_driver_heap()
+    def __init__(self, db_connection: str):
+        self.__db_connection = db_connection
+        self.__drivers = []
+        self.__locations = []
+        self.__drivers_heap = []
         self.__objective_function_value = sys.maxsize
+        self.__depot = None
+        self.__location_manager = None
+        self.__savings_manager = None
+        self.__prioritize_volunteer = False
         self.__best_allocation = None
-        self.__objective_function_heap = []
+        self.__objective_function_values_list = []
+
+    def request_routes(self, departure, locations: list, drivers: list):
+        self.__drivers = NodeParser.create_drivers(drivers)
+        self.__locations = NodeParser.create_customers(locations)
+        self.__depot = NodeParser.create_customers(departure)[0]
+        self.__location_manager = LocationManager(db_connection=self.__db_connection, depot=self.__depot)
+        self.__location_manager.add_collection(locations=locations)
+        self.__savings_manager = SavingsManager(db_connection=self.__db_connection, depot=self.__depot,
+                                                locations=self.__locations)
+        self.__drivers_heap = self.__build_driver_heap()
+        self.__prioritize_volunteer = False
+        self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list = \
+            self.__build_routes()
+        return self.__build_response()
+
+    def __build_response(self):
+        routes = []
+        for driver in self.__best_allocation:
+            if not driver.route.is_empty:
+                routes.append(driver.route.serialize())
+
+        response = json.dumps({
+            'solver_status': '',
+            'message': '',
+            'description': '',
+            'routes': routes,
+        })
+        return response
+
+    @property
+    def objective_function_value(self):
+        return self.__objective_function_value if self.__objective_function_value != sys.maxsize else None
+
+    @property
+    def best_assignment(self):
+        return self.__best_allocation
+
+    @property
+    def objective_function_values(self):
+        return self.__objective_function_values_list
 
     def __build_driver_heap(self) -> list:
         drivers_heap = []
@@ -251,8 +343,8 @@ class RouteManager:
         return drivers_heap
 
     def __build_routes(self):
-        objective_function_value = sys.maxsize
-        heapq.heapify(self.__objective_function_heap)
+        global_objective_function_value = sys.maxsize
+        objective_function_values_list = []
         best_allocation = []
         for index in range(RouteManager.__NUMBER_OF_ITERATIONS):
             print(f'\n\033[1m Iteration number \033[0m {index + 1}')
@@ -268,57 +360,49 @@ class RouteManager:
                                              depot=self.__location_manager.depot, locations=locations)
             solver_status, drivers = self.__build_route_instance(savings_manager=savings_manager, locations=locations,
                                                                  drivers_heap=drivers)
-            objective_function_distance, objective_function_duration = RouteManager.__get_instance_objective_function(
-                drivers)
+            local_objective_function_distance, local_objective_function_duration = \
+                RouteManager.__get_instance_objective_function(drivers)
 
             if solver_status == RouteManager._State.SOLVED:
-                heapq.heappush(self.__objective_function_heap, objective_function_distance)
-                if objective_function_value > objective_function_distance:
-                    objective_function_value = objective_function_distance
+                objective_function_values_list.append(local_objective_function_distance)
+                if global_objective_function_value > local_objective_function_distance:
+                    global_objective_function_value = local_objective_function_distance
                     best_allocation = copy.deepcopy(drivers)
-                    self.__locations = copy.deepcopy(locations)
-
-        if self.__objective_function_value > objective_function_value:
-            self.__objective_function_value = objective_function_value
-            self.__best_allocation = copy.deepcopy(best_allocation)
+        return global_objective_function_value, best_allocation, objective_function_values_list
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
-        assigned_locations_set = set()
         if len(locations) == 1:
             print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
             for driver in drivers_heap[::-1]:
                 print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                if driver.get_departure() is None:
+                if driver.departure is None:
                     driver.set_departure(self.__location_manager.depot)
-                if driver.route.__is_open and driver.add(pair=Pair(locations[0], locations[0])):
-                    break
-                if locations[0].is_assigned:
-                    assigned_locations_set.add(locations[0])
-                if len(assigned_locations_set) == len(locations):
+                if driver.route.is_open and driver.add(pair=Pair(locations[0], locations[0])):
                     break
         elif savings_manager:
+            assigned_locations_list = list()
             for pair in savings_manager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
                 for driver in drivers_heap:
                     print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                    if driver.__departure() is None:
+                    if driver.departure is None:
                         driver.set_departure(self.__location_manager.depot)
-                    if driver.__route.__is_open and driver.add(pair=pair):
+                    if driver.route.is_open and driver.add(pair=pair):
                         break
                 if pair.is_assignable():
                     print(f'{RouteManager._State.INFEASIBLE}')
                 if pair.first.is_assigned:
-                    assigned_locations_set.add(pair.first)
+                    assigned_locations_list.append(pair.first)
                 if pair.last.is_assigned:
-                    assigned_locations_set.add(pair.last)
-                if len(assigned_locations_set) == len(locations):
+                    assigned_locations_list.append(pair.last)
+                if len(assigned_locations_list) == len(locations):
                     break
 
         for driver in drivers_heap:
-            if len(driver.route) <= 1:
-                driver.__route.departure = None
-                driver.__route = None
-            elif len(driver.route) > 1 and driver.route.is_open:
+            if driver.route.is_empty:
+                driver.route.departure = None
+                driver.route = None
+            elif not driver.route.is_empty and driver.route.is_open:
                 driver.route.close_route()
         return RouteManager._State.SOLVED, drivers_heap
 
@@ -331,21 +415,3 @@ class RouteManager:
                 objective_function_distance += driver.__route.__total_distance
                 objective_function_duration += driver.__route.__total_duration
         return objective_function_distance, objective_function_duration
-
-    def request_routes(self, customers: list, drivers: list):
-        response = self.__build_routes()
-
-    def __build_response(self):
-        routes = []
-        for driver in self.__drivers:
-            if not driver.route.is_empty():
-                routes.append(driver.route.serialize())
-
-        response = json.dumps({
-            'solver_status': '',
-            'message': '',
-            'description': '',
-            'routes': routes,
-        })
-        return response
-

@@ -6,6 +6,8 @@ from datetime import datetime
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
 
+from routing.models.language import Language
+
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
 
@@ -184,7 +186,7 @@ class Location(StructuredNode):
         obj = json.dumps({
             'id': self.external_id,
             'is_center': self.is_center,
-            'address': self.address.serialize()
+            'address': json.loads(self.address.serialize())
         })
         return obj
 
@@ -208,7 +210,7 @@ class Customer(Location):
         languages = self.get_languages()
         if languages:
             languages.sort()
-            languages = [language.serialize() for language in languages]
+            languages = [json.loads(language.serialize()) for language in languages]
         else:
             languages = []
 

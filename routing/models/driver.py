@@ -37,7 +37,7 @@ class Driver(StructuredNode):
     employee_status = StringProperty(index=True, choices=ROLES, required=True)
     phone = StringProperty(index=True)
     capacity = IntegerProperty(default=0)
-    start_time = DateTimeProperty()
+    start_time = DateTimeProperty(default_now=True)
     end_time = DateTimeProperty()
     created_on = DateTimeProperty(default=datetime.now)
     modified_on = DateTimeProperty(default_now=True)
@@ -86,6 +86,7 @@ class Driver(StructuredNode):
         Return:
             True if addition was successful, otherwise, return False
         """
+        # Add constraint for delivery limit for volunteers
         # Check capacity constraint as well as duration constraint before appending new locations
         # Insertion of new locations is handled by Route.insert()
         if self.__route.is_open:
@@ -145,19 +146,21 @@ class Driver(StructuredNode):
         availabilities = self.get_availability()
         if availabilities:
             availabilities.sort()
-            availabilities = [availability.serialize() for availability in availabilities]
+            availabilities = [json.loads(availability.serialize()) for availability in availabilities]
         else:
             availabilities = []
 
         languages = self.get_languages()
         if languages:
             languages.sort()
-            languages = [language.serialize() for language in languages]
+            languages = [json.loads(language.serialize()) for language in languages]
         else:
             languages = []
 
         obj = json.dumps({
             "id": self.external_id,
+            "first_name": self.first_name,
+            "last_name": self.last_name,
             "capacity": self.capacity,
             "employee_status": self.employee_status,
             "availability": availabilities,
