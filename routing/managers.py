@@ -6,6 +6,8 @@ import sys
 import neomodel
 
 from routing.exceptions import RouteStateException
+from routing.models.availability import Availability
+from routing.models.driver import Driver
 from routing.models.language import Language
 from routing.models.location import Address, Pair, Location, Customer
 from routing.services import BingGeocodeService, BingMatrixService
@@ -184,12 +186,19 @@ class SavingsManager:
 
 class NodeParser:
     @staticmethod
-    def create_drivers(drivers):
+    def create_drivers(drivers: list):
         node_drivers = []
+        if drivers:
+            for driver in drivers:
+                driver = json.loads(driver)
+                driver_node = NodeParser.parse_driver(driver).save()
+                driver_node = NodeParser.set_languages(driver_node, driver['languages'])
+                driver_node = NodeParser.set_availability(driver_node, driver['availability'])
+                node_drivers.append(driver_node)
         return node_drivers
 
     @staticmethod
-    def create_departure(departures):
+    def create_departure(departures: dict):
         node_departures = []
         if departures:
             for location in departures:
@@ -204,7 +213,7 @@ class NodeParser:
         return node_departures
 
     @staticmethod
-    def create_customers(customers):
+    def create_customers(customers: list):
         node_customers = []
         if customers:
             for location in customers:
@@ -219,33 +228,65 @@ class NodeParser:
                                                     zipcode=address.zipcode)
                     address = node_set[0]
                 customer.set_address(address)
-
-                for language in location['languages']:
-                    language = NodeParser.parse_language(language)
-                    if language not in Language.nodes.all():
-                        language.save()
-                    else:
-                        node_set = Language.nodes.filter(language=language.language)
-                        language = node_set[0]
-                    customer.language.connect(language)
-
+                customer = NodeParser.set_languages(customer, location['languages'])
                 node_customers.append(customer)
         return node_customers
 
     @staticmethod
-    def parse_customer(customer):
+    def parse_driver(driver: dict):
+        if driver.get('employee_status') and driver['employee_status'] == 'employee':
+            employee_status = Driver.Role.EMPLOYEE.value
+        else:
+            employee_status = Driver.Role.VOLUNTEER.value
+
+        driver_node = Driver(external_id=driver['id'], first_name=driver['first_name'], last_name=driver['last_name'],
+                             capacity=driver['capacity'], employee_status=employee_status)
+        if employee_status == Driver.Role.VOLUNTEER.value:
+            driver_node.max_delivery = driver['delivery_limit']
+        return driver_node
+
+    @staticmethod
+    def parse_customer(customer: dict):
         return Customer(external_id=customer['id'], demand=customer['quantity'],
                         is_center=customer['location']['is_center'])
 
     @staticmethod
-    def parse_address(geographical_location):
+    def parse_address(geographical_location: dict):
         return Address(external_id=geographical_location['id'], address=geographical_location['address'],
                        city=geographical_location['city'], state=geographical_location['state'],
                        zipcode=geographical_location['zipcode'])
 
     @staticmethod
-    def parse_language(language):
+    def parse_language(language: dict):
         return Language(external_id=language['id'], language=language['name'])
+
+    @staticmethod
+    def set_languages(node, languages: dict):
+        if languages:
+            for language in languages:
+                language = NodeParser.parse_language(language)
+                if language not in Language.nodes.all():
+                    language.save()
+                else:
+                    node_set = Language.nodes.filter(language=language.language)
+                    language = node_set[0]
+                node.language.connect(language)
+        return node
+
+    @staticmethod
+    def set_availability(driver: Driver, availabilities: dict):
+        if availabilities:
+            for key in availabilities.keys():
+                if key != 'id':
+                    if availabilities[key]:
+                        availability = Availability(day=key.capitalize())
+                        if availability not in Availability.nodes.all():
+                            availability.save()
+                        else:
+                            node_set = Availability.nodes.filter(day=availability.day)
+                            availability = node_set[0]
+                        driver.is_available_on.connect(availability)
+        return driver
 
 
 class RouteManager:

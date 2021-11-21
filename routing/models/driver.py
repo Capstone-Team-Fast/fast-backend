@@ -39,6 +39,7 @@ class Driver(StructuredNode):
     capacity = IntegerProperty(default=0)
     start_time = DateTimeProperty(default_now=True)
     end_time = DateTimeProperty()
+    max_delivery = IntegerProperty(default=None)
     created_on = DateTimeProperty(default=datetime.now)
     modified_on = DateTimeProperty(default_now=True)
 
@@ -158,13 +159,14 @@ class Driver(StructuredNode):
             languages = []
 
         obj = json.dumps({
-            "id": self.external_id,
-            "first_name": self.first_name,
-            "last_name": self.last_name,
-            "capacity": self.capacity,
-            "employee_status": self.employee_status,
-            "availability": availabilities,
-            "languages": languages,
+            'id': self.external_id,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'capacity': self.capacity,
+            'employee_status': self.employee_status,
+            'delivery_limit': self.max_delivery,
+            'availability': availabilities,
+            'languages': languages,
         })
         return obj
 
