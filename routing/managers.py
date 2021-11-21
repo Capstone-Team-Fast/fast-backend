@@ -333,7 +333,7 @@ class RouteManager:
         self.__prioritize_volunteer = False
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list = \
             self.__build_routes()
-        return self.__build_response()
+        return RouteManager.response_template()  # self.__build_response()
 
     def __build_response(self):
         routes = []
@@ -456,3 +456,165 @@ class RouteManager:
                 objective_function_distance += driver.__route.__total_distance
                 objective_function_duration += driver.__route.__total_duration
         return objective_function_distance, objective_function_duration
+
+    @staticmethod
+    def response_template():
+        return json.dumps({
+            "solver_status": 1,
+            "message": "",
+            "description": "",
+            "routes": [
+                {
+                    "id": 1,
+                    "created_on": "2021-10-19T20:44:43.125437Z",
+                    "total_quantity": 9,
+                    "total_distance": 10.2,
+                    "total_duration": 11.3,
+                    "assigned_to": {
+                        "id": 1,
+                        "first_name": "First_1",
+                        "last_name": "Last_1",
+                        "capacity": 50,
+                        "employee_status": "P",
+                        "availability": [
+                            {"id": 1, "day": "Sunday"}, {"id": 2, "day": "Monday"}, {"id": 3, "day": "Tuesday"}
+                        ],
+                        "languages": [
+                            {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
+                            {"id": 3, "language": "Spanish"}
+                        ],
+                    },
+                    "itinerary": [
+                        {
+                            "id": 1,
+                            "is_center": True,
+                            "address": {
+                                "id": 1,
+                                "address": "Center",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68111,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "is_center": False,
+                            "address": {
+                                "id": 3,
+                                "address": "Customer_1",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68123,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            },
+                            "demand": 9,
+                            "languages": [
+                                {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
+                                {"id": 3, "language": "Spanish"}
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "is_center": True,
+                            "address": {
+                                "id": 1,
+                                "address": "Center",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68111,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            }
+                        },
+                    ],
+                },
+                {
+                    "id": 1,
+                    "created_on": "2021-10-19T20:44:43.125437Z",
+                    "total_quantity": 9,
+                    "total_distance": 10.2,
+                    "total_duration": 11.3,
+                    "assigned_to": {
+                        "id": 2,
+                        "first_name": "First_2",
+                        "last_name": "Last_2",
+                        "capacity": 10,
+                        "employee_status": "P",
+                        "availability": [
+                            {"id": 1, "day": "Sunday"}, {"id": 2, "day": "Monday"}, {"id": 3, "day": "Tuesday"}
+                        ],
+                        "languages": [
+                            {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
+                            {"id": 3, "language": "Spanish"}
+                        ],
+                    },
+                    "itinerary": [
+                        {
+                            "id": 1,
+                            "is_center": True,
+                            "address": {
+                                "id": 1,
+                                "address": "Center",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68111,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "is_center": False,
+                            "address": {
+                                "id": 3,
+                                "address": "Customer_1",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68123,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            },
+                            "demand": 9,
+                            "languages": [
+                                {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
+                                {"id": 3, "language": "Spanish"}
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "is_center": True,
+                            "address": {
+                                "id": 1,
+                                "address": "Center",
+                                "city": "Omaha",
+                                "state": "NE",
+                                "zipcode": 68111,
+                                "coordinates":
+                                    {
+                                        "latitude": 98.23,
+                                        "longitude": -23.23
+                                    }
+                            }
+                        },
+                    ],
+                }
+            ],
+        })
