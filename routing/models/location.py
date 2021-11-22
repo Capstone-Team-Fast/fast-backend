@@ -145,6 +145,9 @@ class Location(StructuredNode):
             return self.address == other.address
         raise TypeError(f'{type(other)} and {type(self)} do not subclass {Location}.')
 
+    def __hash__(self):
+        return hash(self.address)
+
     def duration(self, other):
         """Gets the duration (in minutes) between these two locations.
 

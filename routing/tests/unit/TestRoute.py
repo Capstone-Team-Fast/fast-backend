@@ -149,7 +149,7 @@ class MyTestCase(unittest.TestCase):
 
         itinerary = []
         for location in [depot, customer]:
-            itinerary.append(location.serialize())
+            itinerary.append(json.loads(location.serialize()))
 
         expected_result = json.dumps({
             "id": route.id,

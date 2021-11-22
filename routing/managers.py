@@ -1,4 +1,5 @@
 import copy
+import datetime
 import enum
 import json
 import sys
@@ -9,7 +10,7 @@ from routing.exceptions import RouteStateException
 from routing.models.availability import Availability
 from routing.models.driver import Driver
 from routing.models.language import Language
-from routing.models.location import Address, Pair, Location, Customer
+from routing.models.location import Address, Pair, Location, Customer, Depot
 from routing.services import BingGeocodeService, BingMatrixService
 
 
@@ -24,6 +25,7 @@ class LocationManager:
         self.__connection = db_connection
         self.__locations = set()
         self.__addresses = dict()
+        self.add(depot)
 
     @property
     def depot(self):
@@ -61,16 +63,18 @@ class LocationManager:
         """
         if location:
             if location not in self.__locations:
-                if location not in Location.nodes.all():
-                    location.save()
+                if isinstance(location, Customer):
+                    if location not in Customer.nodes.all():
+                        location.save()
+                elif isinstance(location, Depot):
+                    if location not in Depot.nodes.all():
+                        location.save()
 
                 address = location.address
                 if address and (address.latitude is None or address.longitude is None):
                     print(f'\nRetrieving geocode for location {address}\n')
                     address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
                     address = address.save()
-                else:
-                    return False
 
                 if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
                     print(f'Failed to build matrix between {location} and {self.__locations}')
@@ -198,18 +202,13 @@ class NodeParser:
         return node_drivers
 
     @staticmethod
-    def create_departure(departures: dict):
-        node_departures = []
-        if departures:
-            for location in departures:
-                location = json.loads(location)
-                customer = NodeParser.parse_customer(location)
-                address = NodeParser.parse_address(location['location'])
-                customer.set_address(address)
-                for language in location['languages']:
-                    language = NodeParser.parse_language(language)
-                    customer.language.connect(language)
-                node_departures.append(customer)
+    def create_departure(departure: str):
+        node_departures = None
+        if departure:
+            departure = json.loads(departure)
+            node_departures = Depot().save()
+            address = NodeParser.parse_address(departure['location'])
+            node_departures.set_address(address)
         return node_departures
 
     @staticmethod
@@ -243,6 +242,10 @@ class NodeParser:
                              capacity=driver['capacity'], employee_status=employee_status)
         if employee_status == Driver.Role.VOLUNTEER.value:
             driver_node.max_delivery = driver['delivery_limit']
+        if driver.get('duration'):
+            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=driver['duration'])
+        else:
+            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=24)
         return driver_node
 
     @staticmethod
@@ -306,9 +309,13 @@ class RouteManager:
         TRUE = 1
         DONE = 2
 
-    __NUMBER_OF_ITERATIONS = 100
+    __NUMBER_OF_ITERATIONS = 1
 
     def __init__(self, db_connection: str):
+        try:
+            neomodel.db.set_connection(db_connection)
+        except ValueError as e:
+            raise ValueError(f'Expecting url format: bolt://user:password@localhost:7687 but got {db_connection}')
         self.__db_connection = db_connection
         self.__drivers = []
         self.__locations = []
@@ -321,25 +328,31 @@ class RouteManager:
         self.__best_allocation = None
         self.__objective_function_values_list = []
 
-    def request_routes(self, departure, locations: list, drivers: list):
+    def request_routes(self, departure: str, locations: list, drivers: list):
         self.__drivers = NodeParser.create_drivers(drivers)
         self.__locations = NodeParser.create_customers(locations)
-        self.__depot = NodeParser.create_customers(departure)[0]
+        self.__depot = NodeParser.create_departure(departure)
+        return RouteManager.response_template()
+
+    def request_routes_test(self, departure: str, locations: list, drivers: list):
+        self.__drivers = NodeParser.create_drivers(drivers)
+        self.__locations = NodeParser.create_customers(locations)
+        self.__depot = NodeParser.create_departure(departure)
         self.__location_manager = LocationManager(db_connection=self.__db_connection, depot=self.__depot)
-        self.__location_manager.add_collection(locations=locations)
+        self.__location_manager.add_collection(locations=self.__locations)
         self.__savings_manager = SavingsManager(db_connection=self.__db_connection, depot=self.__depot,
                                                 locations=self.__locations)
         self.__drivers_heap = self.__build_driver_heap()
         self.__prioritize_volunteer = False
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list = \
             self.__build_routes()
-        return RouteManager.response_template()  # self.__build_response()
+        return self.__build_response()
 
     def __build_response(self):
         routes = []
         for driver in self.__best_allocation:
             if not driver.route.is_empty:
-                routes.append(driver.route.serialize())
+                routes.append(json.loads(driver.route.serialize()))
 
         response = json.dumps({
             'solver_status': '',
@@ -418,7 +431,7 @@ class RouteManager:
                 print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                 if driver.departure is None:
                     driver.set_departure(self.__location_manager.depot)
-                if driver.route.is_open and driver.add(pair=Pair(locations[0], locations[0])):
+                if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
                     break
         elif savings_manager:
             assigned_locations_list = list()
@@ -452,166 +465,142 @@ class RouteManager:
         objective_function_distance = 0
         objective_function_duration = 0
         for driver in drivers:
-            if driver.__route:
-                objective_function_distance += driver.__route.__total_distance
-                objective_function_duration += driver.__route.__total_duration
+            if driver.route:
+                objective_function_distance += driver.route.total_distance
+                objective_function_duration += driver.route.total_duration
         return objective_function_distance, objective_function_duration
 
     @staticmethod
     def response_template():
         return json.dumps({
-            "solver_status": 1,
-            "message": "",
-            "description": "",
-            "routes": [
+            'solver_status': 1,
+            'message': '',
+            'description': '',
+            'routes': [
                 {
-                    "id": 1,
-                    "created_on": "2021-10-19T20:44:43.125437Z",
-                    "total_quantity": 9,
-                    "total_distance": 10.2,
-                    "total_duration": 11.3,
-                    "assigned_to": {
-                        "id": 1,
-                        "first_name": "First_1",
-                        "last_name": "Last_1",
-                        "capacity": 50,
-                        "employee_status": "P",
-                        "availability": [
-                            {"id": 1, "day": "Sunday"}, {"id": 2, "day": "Monday"}, {"id": 3, "day": "Tuesday"}
+                    'id': 1,
+                    'created_on': '2021-10-19T20:44:43.125437Z',
+                    'total_quantity': 9,
+                    'total_distance': 10.2,
+                    'total_duration': 11.3,
+                    'assigned_to': {
+                        'id': 1,
+                        'first_name': 'First_1',
+                        'last_name': 'Last_1',
+                        'capacity': 50,
+                        'employee_status': 'P',
+                        'availability': [
+                            {'id': 1, 'day': 'Sunday'}, {'id': 2, 'day': 'Monday'}, {'id': 3, 'day': 'Tuesday'}
                         ],
-                        "languages": [
-                            {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
-                            {"id": 3, "language": "Spanish"}
+                        'languages': [
+                            {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
+                            {'id': 3, 'language': 'Spanish'}
                         ],
                     },
-                    "itinerary": [
+                    'itinerary': [
                         {
-                            "id": 1,
-                            "is_center": True,
-                            "address": {
-                                "id": 1,
-                                "address": "Center",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68111,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 1,
+                            'is_center': True,
+                            'address': {
+                                'id': 1,
+                                'address': 'Center',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68111,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             }
                         },
                         {
-                            "id": 2,
-                            "is_center": False,
-                            "address": {
-                                "id": 3,
-                                "address": "Customer_1",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68123,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 2,
+                            'is_center': False,
+                            'address': {
+                                'id': 3,
+                                'address': 'Customer_1',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68123,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             },
-                            "demand": 9,
-                            "languages": [
-                                {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
-                                {"id": 3, "language": "Spanish"}
+                            'demand': 9,
+                            'languages': [
+                                {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
+                                {'id': 3, 'language': 'Spanish'}
                             ]
                         },
                         {
-                            "id": 1,
-                            "is_center": True,
-                            "address": {
-                                "id": 1,
-                                "address": "Center",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68111,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 1,
+                            'is_center': True,
+                            'address': {
+                                'id': 1,
+                                'address': 'Center',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68111,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             }
                         },
                     ],
                 },
                 {
-                    "id": 1,
-                    "created_on": "2021-10-19T20:44:43.125437Z",
-                    "total_quantity": 9,
-                    "total_distance": 10.2,
-                    "total_duration": 11.3,
-                    "assigned_to": {
-                        "id": 2,
-                        "first_name": "First_2",
-                        "last_name": "Last_2",
-                        "capacity": 10,
-                        "employee_status": "P",
-                        "availability": [
-                            {"id": 1, "day": "Sunday"}, {"id": 2, "day": "Monday"}, {"id": 3, "day": "Tuesday"}
+                    'id': 1,
+                    'created_on': '2021-10-19T20:44:43.125437Z',
+                    'total_quantity': 9,
+                    'total_distance': 10.2,
+                    'total_duration': 11.3,
+                    'assigned_to': {
+                        'id': 2,
+                        'first_name': 'First_2',
+                        'last_name': 'Last_2',
+                        'capacity': 10,
+                        'employee_status': 'P',
+                        'availability': [
+                            {'id': 1, 'day': 'Sunday'}, {'id': 2, 'day': 'Monday'}, {'id': 3, 'day': 'Tuesday'}
                         ],
-                        "languages": [
-                            {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
-                            {"id": 3, "language": "Spanish"}
+                        'languages': [
+                            {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
+                            {'id': 3, 'language': 'Spanish'}
                         ],
                     },
-                    "itinerary": [
+                    'itinerary': [
                         {
-                            "id": 1,
-                            "is_center": True,
-                            "address": {
-                                "id": 1,
-                                "address": "Center",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68111,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 1,
+                            'is_center': True,
+                            'address': {
+                                'id': 1,
+                                'address': 'Center',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68111,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             }
                         },
                         {
-                            "id": 2,
-                            "is_center": False,
-                            "address": {
-                                "id": 3,
-                                "address": "Customer_1",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68123,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 2,
+                            'is_center': False,
+                            'address': {
+                                'id': 3,
+                                'address': 'Customer_1',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68123,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             },
-                            "demand": 9,
-                            "languages": [
-                                {"id": 1, "language": "English"}, {"id": 2, "language": "French"},
-                                {"id": 3, "language": "Spanish"}
+                            'demand': 9,
+                            'languages': [
+                                {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
+                                {'id': 3, 'language': 'Spanish'}
                             ]
                         },
                         {
-                            "id": 1,
-                            "is_center": True,
-                            "address": {
-                                "id": 1,
-                                "address": "Center",
-                                "city": "Omaha",
-                                "state": "NE",
-                                "zipcode": 68111,
-                                "coordinates":
-                                    {
-                                        "latitude": 98.23,
-                                        "longitude": -23.23
-                                    }
+                            'id': 1,
+                            'is_center': True,
+                            'address': {
+                                'id': 1,
+                                'address': 'Center',
+                                'city': 'Omaha',
+                                'state': 'NE',
+                                'zipcode': 68111,
+                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
                             }
                         },
                     ],
