@@ -1,6 +1,7 @@
 import copy
 import datetime
 import enum
+import heapq
 import json
 import sys
 
@@ -159,25 +160,19 @@ class SavingsManager:
         self.__heap = self.__heapify(locations=locations)
 
     def __heapify(self, locations: list):
-        heap = []
+        savings = []
         if locations:
-            pairs = []
-            savings_dictionary = {}
-            index = 0
             for i in range(len(locations)):
                 for j in range(i + 1, len(locations)):
-                    if locations[i] != locations[j]:
+                    if locations[i].uid != locations[j].uid:
                         pair = Pair(locations[i], locations[j])
+                        pair.set_origin(self.__location_manager.depot)
                         saving = self.__location_manager.get_distance_savings(location1=pair.location1,
                                                                               location2=pair.location2)
-                        savings_dictionary[saving] = index
-                        pairs.append(pair)
-                        index += 1
-
-            savings_dictionary = sorted(savings_dictionary.items(), key=lambda x: x[0])
-            for _, index in savings_dictionary:
-                heap.append(pairs[index])
-        return heap
+                        pair.set_saving(saving)
+                        savings.append(pair)
+        savings.sort(reverse=True)
+        return savings
 
     def __next__(self):
         if self.__heap:
@@ -186,110 +181,6 @@ class SavingsManager:
 
     def __iter__(self):
         return self
-
-
-class NodeParser:
-    @staticmethod
-    def create_drivers(drivers: list):
-        node_drivers = []
-        if drivers:
-            for driver in drivers:
-                driver = json.loads(driver)
-                driver_node = NodeParser.parse_driver(driver).save()
-                driver_node = NodeParser.set_languages(driver_node, driver['languages'])
-                driver_node = NodeParser.set_availability(driver_node, driver['availability'])
-                node_drivers.append(driver_node)
-        return node_drivers
-
-    @staticmethod
-    def create_departure(departure: str):
-        node_departures = None
-        if departure:
-            departure = json.loads(departure)
-            node_departures = Depot().save()
-            address = NodeParser.parse_address(departure['location'])
-            node_departures.set_address(address)
-        return node_departures
-
-    @staticmethod
-    def create_customers(customers: list):
-        node_customers = []
-        if customers:
-            for location in customers:
-                location = json.loads(location)
-                customer = NodeParser.parse_customer(location).save()
-
-                address = NodeParser.parse_address(location['location'])
-                if address not in Address.nodes.all():
-                    address.save()
-                else:
-                    node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
-                                                    zipcode=address.zipcode)
-                    address = node_set[0]
-                customer.set_address(address)
-                customer = NodeParser.set_languages(customer, location['languages'])
-                node_customers.append(customer)
-        return node_customers
-
-    @staticmethod
-    def parse_driver(driver: dict):
-        if driver.get('employee_status') and driver['employee_status'] == 'employee':
-            employee_status = Driver.Role.EMPLOYEE.value
-        else:
-            employee_status = Driver.Role.VOLUNTEER.value
-
-        driver_node = Driver(external_id=driver['id'], first_name=driver['first_name'], last_name=driver['last_name'],
-                             capacity=driver['capacity'], employee_status=employee_status)
-        if employee_status == Driver.Role.VOLUNTEER.value:
-            driver_node.max_delivery = driver['delivery_limit']
-        if driver.get('duration'):
-            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=driver['duration'])
-        else:
-            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=24)
-        return driver_node
-
-    @staticmethod
-    def parse_customer(customer: dict):
-        return Customer(external_id=customer['id'], demand=customer['quantity'],
-                        is_center=customer['location']['is_center'])
-
-    @staticmethod
-    def parse_address(geographical_location: dict):
-        return Address(external_id=geographical_location['id'], address=geographical_location['address'],
-                       city=geographical_location['city'], state=geographical_location['state'],
-                       zipcode=geographical_location['zipcode'])
-
-    @staticmethod
-    def parse_language(language: dict):
-        return Language(external_id=language['id'], language=language['name'])
-
-    @staticmethod
-    def set_languages(node, languages: dict):
-        if languages:
-            for language in languages:
-                language = NodeParser.parse_language(language)
-                if language not in Language.nodes.all():
-                    language.save()
-                else:
-                    node_set = Language.nodes.filter(language=language.language)
-                    language = node_set[0]
-                node.language.connect(language)
-        return node
-
-    @staticmethod
-    def set_availability(driver: Driver, availabilities: dict):
-        if availabilities:
-            for key in availabilities.keys():
-                if key != 'id':
-                    if availabilities[key]:
-                        availability = Availability(day=key.capitalize())
-                        if availability not in Availability.nodes.all():
-                            availability.save()
-                        else:
-                            node_set = Availability.nodes.filter(day=availability.day)
-                            availability = node_set[0]
-                        driver.is_available_on.connect(availability)
-        return driver
 
 
 class RouteManager:
@@ -314,7 +205,7 @@ class RouteManager:
     def __init__(self, db_connection: str):
         try:
             neomodel.db.set_connection(db_connection)
-        except ValueError as e:
+        except ValueError:
             raise ValueError(f'Expecting url format: bolt://user:password@localhost:7687 but got {db_connection}')
         self.__db_connection = db_connection
         self.__drivers = []
@@ -326,6 +217,7 @@ class RouteManager:
         self.__savings_manager = None
         self.__prioritize_volunteer = False
         self.__best_allocation = None
+        self.__final_locations = None
         self.__objective_function_values_list = []
 
     def request_routes(self, departure: str, locations: list, drivers: list):
@@ -338,14 +230,10 @@ class RouteManager:
         self.__drivers = NodeParser.create_drivers(drivers)
         self.__locations = NodeParser.create_customers(locations)
         self.__depot = NodeParser.create_departure(departure)
-        self.__location_manager = LocationManager(db_connection=self.__db_connection, depot=self.__depot)
-        self.__location_manager.add_collection(locations=self.__locations)
-        self.__savings_manager = SavingsManager(db_connection=self.__db_connection, depot=self.__depot,
-                                                locations=self.__locations)
         self.__drivers_heap = self.__build_driver_heap()
         self.__prioritize_volunteer = False
-        self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list = \
-            self.__build_routes()
+        self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
+        self.__final_locations = self.__build_routes()
         return self.__build_response()
 
     def __build_response(self):
@@ -360,6 +248,27 @@ class RouteManager:
             'description': '',
             'routes': routes,
         })
+
+        print()
+        for driver in self.__best_allocation:
+            if not driver.route.is_empty:
+                print(f'Driver {driver.uid} itinerary: {driver.route} with total demand {driver.route.total_demand}'
+                      f' with capacity {driver.capacity}')
+                for customer in driver.route.itinerary:
+                    if not customer.is_center and customer.is_assigned:
+                        print(f'\tCustomer {customer.uid} at {customer.address} with demand {customer.demand} '
+                              f'is assigned')
+            else:
+                print(f'Driver {driver.uid} is not used. Capacity = {driver.capacity}')
+            print()
+
+        print()
+        for customer in self.__final_locations:
+            if customer.is_assigned:
+                print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is assigned')
+            else:
+                print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
+            print()
         return response
 
     @property
@@ -400,6 +309,7 @@ class RouteManager:
         global_objective_function_value = sys.maxsize
         objective_function_values_list = []
         best_allocation = []
+        final_locations = []
         for index in range(RouteManager.__NUMBER_OF_ITERATIONS):
             print(f'\n\033[1m Iteration number \033[0m {index + 1}')
             drivers = copy.deepcopy(self.__drivers_heap)
@@ -410,8 +320,8 @@ class RouteManager:
             for location in locations:
                 location.reset()
 
-            savings_manager = SavingsManager(db_connection=self.__location_manager.connection,
-                                             depot=self.__location_manager.depot, locations=locations)
+            savings_manager = SavingsManager(db_connection=self.__db_connection, depot=self.__depot,
+                                             locations=locations)
             solver_status, drivers = self.__build_route_instance(savings_manager=savings_manager, locations=locations,
                                                                  drivers_heap=drivers)
             local_objective_function_distance, local_objective_function_duration = \
@@ -422,7 +332,16 @@ class RouteManager:
                 if global_objective_function_value > local_objective_function_distance:
                     global_objective_function_value = local_objective_function_distance
                     best_allocation = copy.deepcopy(drivers)
-        return global_objective_function_value, best_allocation, objective_function_values_list
+                    final_locations = copy.deepcopy(locations)
+        return global_objective_function_value, best_allocation, objective_function_values_list, final_locations
+
+    def __tally_locations(self, locations: list):
+        tally = []
+        heapq.heapify(tally)
+        if locations:
+            for location in locations:
+                heapq.heappush(tally, location.uid)
+        return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
         if len(locations) == 1:
@@ -430,32 +349,35 @@ class RouteManager:
             for driver in drivers_heap[::-1]:
                 print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                 if driver.departure is None:
-                    driver.set_departure(self.__location_manager.depot)
+                    driver.set_departure(self.__depot)
                 if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
                     break
         elif savings_manager:
+            locations_to_insert = self.__tally_locations(locations)
             assigned_locations_list = list()
+            heapq.heapify(assigned_locations_list)
             for pair in savings_manager:
                 print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
                 for driver in drivers_heap:
                     print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
                     if driver.departure is None:
-                        driver.set_departure(self.__location_manager.depot)
+                        driver.set_departure(self.__depot)
                     if driver.route.is_open and driver.add(pair=pair):
                         break
                 if pair.is_assignable():
                     print(f'{RouteManager._State.INFEASIBLE}')
                 if pair.first.is_assigned:
-                    assigned_locations_list.append(pair.first)
+                    if pair.first.uid not in assigned_locations_list:
+                        heapq.heappush(assigned_locations_list, pair.first.uid)
                 if pair.last.is_assigned:
-                    assigned_locations_list.append(pair.last)
-                if len(assigned_locations_list) == len(locations):
+                    if pair.last.uid not in assigned_locations_list:
+                        heapq.heappush(assigned_locations_list, pair.last.uid)
+                if assigned_locations_list == locations_to_insert:
                     break
 
         for driver in drivers_heap:
             if driver.route.is_empty:
-                driver.route.departure = None
-                driver.route = None
+                driver.reset()
             elif not driver.route.is_empty and driver.route.is_open:
                 driver.route.close_route()
         return RouteManager._State.SOLVED, drivers_heap
@@ -607,3 +529,107 @@ class RouteManager:
                 }
             ],
         })
+
+
+class NodeParser:
+    @staticmethod
+    def create_drivers(drivers: list):
+        node_drivers = []
+        if drivers:
+            for driver in drivers:
+                driver = json.loads(driver)
+                driver_node = NodeParser.parse_driver(driver).save()
+                driver_node = NodeParser.set_languages(driver_node, driver['languages'])
+                driver_node = NodeParser.set_availability(driver_node, driver['availability'])
+                node_drivers.append(driver_node)
+        return node_drivers
+
+    @staticmethod
+    def create_departure(departure: str):
+        node_departures = None
+        if departure:
+            departure = json.loads(departure)
+            node_departures = Depot().save()
+            address = NodeParser.parse_address(departure['location'])
+            node_departures.set_address(address)
+        return node_departures
+
+    @staticmethod
+    def create_customers(customers: list):
+        node_customers = []
+        if customers:
+            for location in customers:
+                location = json.loads(location)
+                customer = NodeParser.parse_customer(location).save()
+
+                address = NodeParser.parse_address(location['location'])
+                if address not in Address.nodes.all():
+                    address.save()
+                else:
+                    node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                                    zipcode=address.zipcode)
+                    address = node_set[0]
+                customer.set_address(address)
+                customer = NodeParser.set_languages(customer, location['languages'])
+                node_customers.append(customer)
+        return node_customers
+
+    @staticmethod
+    def parse_driver(driver: dict):
+        if driver.get('employee_status') and driver['employee_status'] == 'employee':
+            employee_status = Driver.Role.EMPLOYEE.value
+        else:
+            employee_status = Driver.Role.VOLUNTEER.value
+
+        driver_node = Driver(external_id=driver['id'], first_name=driver['first_name'], last_name=driver['last_name'],
+                             capacity=driver['capacity'], employee_status=employee_status)
+        if employee_status == Driver.Role.VOLUNTEER.value:
+            driver_node.max_delivery = driver['delivery_limit']
+        if driver.get('duration'):
+            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=driver['duration'])
+        else:
+            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=24)
+        return driver_node
+
+    @staticmethod
+    def parse_customer(customer: dict):
+        return Customer(external_id=customer['id'], demand=customer['quantity'],
+                        is_center=customer['location']['is_center'])
+
+    @staticmethod
+    def parse_address(geographical_location: dict):
+        return Address(external_id=geographical_location['id'], address=geographical_location['address'],
+                       city=geographical_location['city'], state=geographical_location['state'],
+                       zipcode=geographical_location['zipcode'])
+
+    @staticmethod
+    def parse_language(language: dict):
+        return Language(external_id=language['id'], language=language['name'])
+
+    @staticmethod
+    def set_languages(node, languages: dict):
+        if languages:
+            for language in languages:
+                language = NodeParser.parse_language(language)
+                if language not in Language.nodes.all():
+                    language.save()
+                else:
+                    node_set = Language.nodes.filter(language=language.language)
+                    language = node_set[0]
+                node.language.connect(language)
+        return node
+
+    @staticmethod
+    def set_availability(driver: Driver, availabilities: dict):
+        if availabilities:
+            for key in availabilities.keys():
+                if key != 'id':
+                    if availabilities[key]:
+                        availability = Availability(day=key.capitalize())
+                        if availability not in Availability.nodes.all():
+                            availability.save()
+                        else:
+                            node_set = Availability.nodes.filter(day=availability.day)
+                            availability = node_set[0]
+                        driver.is_available_on.connect(availability)
+        return driver
