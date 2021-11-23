@@ -297,10 +297,10 @@ class Route(StructuredNode):
         itinerary = []
         if not self.is_empty:
             for stop in self.__locations_queue:
-                itinerary.append(stop.serialize())
+                itinerary.append(json.loads(stop.serialize()))
 
         if self.driver:
-            driver = self.driver.serialize()
+            driver = json.loads(self.driver.serialize())
         else:
             driver = None
 

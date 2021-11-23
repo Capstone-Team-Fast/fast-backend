@@ -1,3 +1,8 @@
+# Testing routing algorithm
+routing/tests/unit/data.py
+routing/tests/unit/_trial*/
+routing/tests/_*/
+
 # Django
 *.log
 *.pot
@@ -11,8 +16,6 @@ routing/settings.py
 db/
 backend/migrations/
 routing/migrations/
-routing/tests/_trial_temp/
-routing/tests/unit/_trial_temp*/
 
 # Backup files
 *.bak 

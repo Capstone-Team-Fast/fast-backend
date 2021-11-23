@@ -123,7 +123,7 @@ class MyTestCase(unittest.TestCase):
         expected_result = json.dumps({
             'id': customer.external_id,
             'is_center': False,
-            'address': customer.address.serialize(),
+            'address': json.loads(customer.address.serialize()),
             'demand': customer.demand,
             'languages': []
         })
@@ -145,7 +145,7 @@ class MyTestCase(unittest.TestCase):
             'is_center': False,
             'address': customer.address.serialize(),
             'demand': customer.demand,
-            'languages': [language.serialize() for language in languages]
+            'languages': [json.loads(language.serialize()) for language in languages]
         })
         self.assertEqual(customer.serialize(), expected_result)
         address.delete()
@@ -160,7 +160,7 @@ class MyTestCase(unittest.TestCase):
         expected_result = json.dumps({
             'id': depot.external_id,
             'is_center': True,
-            'address': depot.address.serialize()
+            'address': json.loads(depot.address.serialize())
         })
 
         self.assertEqual(depot.serialize(), expected_result)
