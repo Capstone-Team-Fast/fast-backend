@@ -10,11 +10,13 @@ class DriverSerializer(serializers.ModelSerializer):
     capacity = serializers.IntegerField(allow_null=False)
     employee_status = serializers.CharField(max_length=15)
     phone = serializers.CharField(max_length=15, allow_null=True)
+    duration = serializers.IntegerField(allow_null=True, required=False)
+    delivery_limit = serializers.IntegerField(allow_null=True, required=False)
 
     class Meta:
         model = Driver
         fields = ['id', 'user', 'first_name', 'last_name', 'capacity', 'employee_status', 'phone',
-                  'availability', 'languages']
+                  'duration', 'delivery_limit', 'availability', 'languages']
         read_only_fields = ['created_on']
 
     def create(self, validated_data):
@@ -46,6 +48,8 @@ class DriverSerializer(serializers.ModelSerializer):
         instance.capacity = validated_data.get('capacity', instance.capacity)
         instance.employee_status = validated_data.get('employee_status', instance.employee_status)
         instance.phone = validated_data.get('phone', instance.phone)
+        instance.duration = validated_data.get('duration', instance.duration)
+        instance.delivery_limit = validated_data.get('delivery_limit', instance.delivery_limit)
         instance.modified_on = datetime.now()
         instance.languages.clear()
         instance.save()
