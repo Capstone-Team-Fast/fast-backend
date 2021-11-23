@@ -1,0 +1,54 @@
+\hypertarget{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error}{}\doxysection{pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error Class Reference}
+\label{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error}\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a936f3398057dc75442151c8c14e37079}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, dist, metadata\+\_\+name)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a3cb49ed76fcd4d5150eb431788cc9e4d}\label{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a3cb49ed76fcd4d5150eb431788cc9e4d}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_abb15dea81454b2d82a0bd4460aeb47f5}\label{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_abb15dea81454b2d82a0bd4460aeb47f5}} 
+{\bfseries dist}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a481999145818b3f67f84c05fde8ab1eb}\label{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a481999145818b3f67f84c05fde8ab1eb}} 
+{\bfseries metadata\+\_\+name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Raised when accessing "METADATA" or "PKG-INFO" metadata for a
+pip._vendor.pkg_resources.Distribution object and
+`dist.has_metadata('METADATA')` returns True but
+`dist.get_metadata('METADATA')` returns None (and similarly for
+"PKG-INFO").
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a936f3398057dc75442151c8c14e37079}\label{classpip_1_1__internal_1_1exceptions_1_1_none_metadata_error_a936f3398057dc75442151c8c14e37079}} 
+\index{pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.exceptions.NoneMetadataError@{pip.\_internal.exceptions.NoneMetadataError}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+exceptions.\+None\+Metadata\+Error.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dist,  }\item[{}]{metadata\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param dist: A Distribution object.
+:param metadata_name: The name of the metadata being accessed
+    (can be "METADATA" or "PKG-INFO").
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/exceptions.\+py\end{DoxyCompactItemize}

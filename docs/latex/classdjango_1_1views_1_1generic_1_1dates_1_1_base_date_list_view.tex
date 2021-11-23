@@ -1,0 +1,99 @@
+\hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view}{}\doxysection{django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View Class Reference}
+\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view}\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+
+
+Inheritance diagram for django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_af3e28f9a2d9ae5451cf0444d18956e20}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_af3e28f9a2d9ae5451cf0444d18956e20}} 
+def {\bfseries get} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a7ba0822b0f7fdd44d04cd66111352432}{get\+\_\+dated\+\_\+items}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a1ca94aa4a283514ce26b0fb152c396bd}{get\+\_\+ordering}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a11011211abf322ea977b859dd7d472cb}{get\+\_\+dated\+\_\+queryset}} (self, $\ast$$\ast$lookup)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a5214b71fdd3ff2bf675242e29774b4ad}{get\+\_\+date\+\_\+list\+\_\+period}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a8eab6beab1527df2787a8cb203395905}{get\+\_\+date\+\_\+list}} (self, queryset, date\+\_\+type=None, ordering=\textquotesingle{}ASC\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_ad0017448de0c4e57de4680c251f2126d}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_ad0017448de0c4e57de4680c251f2126d}} 
+bool {\bfseries allow\+\_\+empty} = False
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_afc94e64adc11d54cf56d9fe03f206590}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_afc94e64adc11d54cf56d9fe03f206590}} 
+string {\bfseries date\+\_\+list\+\_\+period} = \textquotesingle{}year\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Abstract base class for date-based views displaying a list of objects.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a8eab6beab1527df2787a8cb203395905}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a8eab6beab1527df2787a8cb203395905}} 
+\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}!get\_date\_list@{get\_date\_list}}
+\index{get\_date\_list@{get\_date\_list}!django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+\doxysubsubsection{\texorpdfstring{get\_date\_list()}{get\_date\_list()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View.\+get\+\_\+date\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{queryset,  }\item[{}]{date\+\_\+type = {\ttfamily None},  }\item[{}]{ordering = {\ttfamily \textquotesingle{}ASC\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a date list by calling `queryset.dates/datetimes()`, checking
+along the way for empty lists that aren't allowed.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a5214b71fdd3ff2bf675242e29774b4ad}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a5214b71fdd3ff2bf675242e29774b4ad}} 
+\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}!get\_date\_list\_period@{get\_date\_list\_period}}
+\index{get\_date\_list\_period@{get\_date\_list\_period}!django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+\doxysubsubsection{\texorpdfstring{get\_date\_list\_period()}{get\_date\_list\_period()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View.\+get\+\_\+date\+\_\+list\+\_\+period (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the aggregation period for the list of dates: 'year', 'month', or
+'day'.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a7ba0822b0f7fdd44d04cd66111352432}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a7ba0822b0f7fdd44d04cd66111352432}} 
+\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}!get\_dated\_items@{get\_dated\_items}}
+\index{get\_dated\_items@{get\_dated\_items}!django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+\doxysubsubsection{\texorpdfstring{get\_dated\_items()}{get\_dated\_items()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View.\+get\+\_\+dated\+\_\+items (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Obtain the list of dates and items.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_archive_index_view_adc077b96bd9dabdc84b3dcf787176920}{django.\+views.\+generic.\+dates.\+Base\+Archive\+Index\+View}}, \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_year_archive_view_a854c061ed0f25330a77a32809beb3063}{django.\+views.\+generic.\+dates.\+Base\+Year\+Archive\+View}}, \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_month_archive_view_a38271cc2f15dbe5f9a9e62448834c72c}{django.\+views.\+generic.\+dates.\+Base\+Month\+Archive\+View}}, \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_week_archive_view_aeee752c9270fad80424038e4c1777e66}{django.\+views.\+generic.\+dates.\+Base\+Week\+Archive\+View}}, \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_day_archive_view_a7fcb6d97397e195869cfd5a3ca5baa4e}{django.\+views.\+generic.\+dates.\+Base\+Day\+Archive\+View}}, and \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_today_archive_view_ac86b5d6f16dc6132b667509f4679f27f}{django.\+views.\+generic.\+dates.\+Base\+Today\+Archive\+View}}.
+
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a11011211abf322ea977b859dd7d472cb}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a11011211abf322ea977b859dd7d472cb}} 
+\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}!get\_dated\_queryset@{get\_dated\_queryset}}
+\index{get\_dated\_queryset@{get\_dated\_queryset}!django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+\doxysubsubsection{\texorpdfstring{get\_dated\_queryset()}{get\_dated\_queryset()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View.\+get\+\_\+dated\+\_\+queryset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{lookup }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a queryset properly filtered according to `allow_future` and any
+extra lookup kwargs.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a1ca94aa4a283514ce26b0fb152c396bd}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view_a1ca94aa4a283514ce26b0fb152c396bd}} 
+\index{django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}!get\_ordering@{get\_ordering}}
+\index{get\_ordering@{get\_ordering}!django.views.generic.dates.BaseDateListView@{django.views.generic.dates.BaseDateListView}}
+\doxysubsubsection{\texorpdfstring{get\_ordering()}{get\_ordering()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Base\+Date\+List\+View.\+get\+\_\+ordering (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the field or fields to use for ordering the queryset; use the
+date field by default.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1list_1_1_multiple_object_mixin_aa09e16b01a6a48f7b9c56e658f68fc6e}{django.\+views.\+generic.\+list.\+Multiple\+Object\+Mixin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/views/generic/dates.\+py\end{DoxyCompactItemize}

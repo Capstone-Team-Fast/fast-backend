@@ -1,0 +1,203 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor}{}\doxysection{django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor}\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_aefeed959fad012357104825fc6a559d5}{\+\_\+\+\_\+enter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a2942732bcacfcbddc978ea0a0d2bfe5e}{\+\_\+\+\_\+exit\+\_\+\+\_\+}} (self, exc\+\_\+type, exc\+\_\+value, traceback)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae95f4a68fc71069ec7bf71a53472e29f}{quote\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a1337bce19b2ac96ebb53132de645dd45}{alter\+\_\+db\+\_\+table}} (self, model, old\+\_\+db\+\_\+table, new\+\_\+db\+\_\+table, disable\+\_\+constraints=True)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a7d46751f4c7f167f0e2d6416c2e6b155}{alter\+\_\+field}} (self, model, old\+\_\+field, new\+\_\+field, strict=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_af8f3ffd1f32155372ae07a05aec9d00a}{delete\+\_\+model}} (self, model, handle\+\_\+autom2m=True)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9722f8978554d928cf1edf3c523fc63b}{add\+\_\+field}} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae22ee9d32c96a0b4655ecb64f293e39b}{remove\+\_\+field}} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a6fd6608ab6b409ea1b0f3da8cc3b5383}{add\+\_\+constraint}} (self, model, constraint)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9b66e50bccdb3dba1f4d620f87781f90}{remove\+\_\+constraint}} (self, model, constraint)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ab5d40e1f00fc545dc46089ec9a28ff7a}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ab5d40e1f00fc545dc46089ec9a28ff7a}} 
+{\bfseries deferred\+\_\+sql}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_aef554bf48439e00a17015fb651e27810}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_aef554bf48439e00a17015fb651e27810}} 
+string {\bfseries sql\+\_\+delete\+\_\+table} = \char`\"{}DROP TABLE \%(table)s\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ad697fbdde000fbe146b4ea4900bc9998}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ad697fbdde000fbe146b4ea4900bc9998}} 
+{\bfseries sql\+\_\+create\+\_\+fk} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a0a47d1560f505ce055abd6a76540cecd}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a0a47d1560f505ce055abd6a76540cecd}} 
+string {\bfseries sql\+\_\+create\+\_\+inline\+\_\+fk} = \char`\"{}REFERENCES \%(to\+\_\+table)s (\%(to\+\_\+column)s) DEFERRABLE INITIALLY DEFERRED\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a358cfe6cbfb0a16759dd244211847b99}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a358cfe6cbfb0a16759dd244211847b99}} 
+string {\bfseries sql\+\_\+create\+\_\+unique} = \char`\"{}CREATE UNIQUE INDEX \%(name)s ON \%(table)s (\%(columns)s)\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9c1ed2cda11126d37dd2f22a30ccd66e}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9c1ed2cda11126d37dd2f22a30ccd66e}} 
+string {\bfseries sql\+\_\+delete\+\_\+unique} = \char`\"{}DROP INDEX \%(name)s\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_aefeed959fad012357104825fc6a559d5}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_aefeed959fad012357104825fc6a559d5}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!\_\_enter\_\_@{\_\_enter\_\_}}
+\index{\_\_enter\_\_@{\_\_enter\_\_}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{\_\_enter\_\_()}{\_\_enter\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+\_\+\+\_\+enter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a2942732bcacfcbddc978ea0a0d2bfe5e}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a2942732bcacfcbddc978ea0a0d2bfe5e}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!\_\_exit\_\_@{\_\_exit\_\_}}
+\index{\_\_exit\_\_@{\_\_exit\_\_}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{\_\_exit\_\_()}{\_\_exit\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+\_\+\+\_\+exit\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exc\+\_\+type,  }\item[{}]{exc\+\_\+value,  }\item[{}]{traceback }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a6fd6608ab6b409ea1b0f3da8cc3b5383}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a6fd6608ab6b409ea1b0f3da8cc3b5383}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!add\_constraint@{add\_constraint}}
+\index{add\_constraint@{add\_constraint}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{add\_constraint()}{add\_constraint()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+add\+\_\+constraint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{constraint }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add a constraint to a model.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a61de1c3cba86c7877b5ea3a70022b6d4}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9722f8978554d928cf1edf3c523fc63b}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9722f8978554d928cf1edf3c523fc63b}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!add\_field@{add\_field}}
+\index{add\_field@{add\_field}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{add\_field()}{add\_field()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+add\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a field on a model. Usually involves adding a column, but may
+involve adding a table instead (for M2M fields).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a84ef3042191ba412b44109adbff44be7}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_abb80ee8b31babcd12964eee5f00210e8}{django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a1337bce19b2ac96ebb53132de645dd45}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a1337bce19b2ac96ebb53132de645dd45}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!alter\_db\_table@{alter\_db\_table}}
+\index{alter\_db\_table@{alter\_db\_table}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{alter\_db\_table()}{alter\_db\_table()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+alter\+\_\+db\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{old\+\_\+db\+\_\+table,  }\item[{}]{new\+\_\+db\+\_\+table,  }\item[{}]{disable\+\_\+constraints = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rename the table a model points to.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a2d4495604fac1f3741dc4fc4da6bd159}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa633662c58f852bcf5fbe971a6a3ca2a}{django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a7d46751f4c7f167f0e2d6416c2e6b155}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a7d46751f4c7f167f0e2d6416c2e6b155}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!alter\_field@{alter\_field}}
+\index{alter\_field@{alter\_field}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{alter\_field()}{alter\_field()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+alter\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{old\+\_\+field,  }\item[{}]{new\+\_\+field,  }\item[{}]{strict = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allow a field's type, uniqueness, nullability, default, column,
+constraints, etc. to be modified.
+`old_field` is required to compute the necessary changes.
+If `strict` is True, raise errors if the old column does not match
+`old_field` precisely.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a1e98c7754ae075b963c62a50de4b3009}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_af8f3ffd1f32155372ae07a05aec9d00a}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_af8f3ffd1f32155372ae07a05aec9d00a}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!delete\_model@{delete\_model}}
+\index{delete\_model@{delete\_model}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{delete\_model()}{delete\_model()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+delete\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{handle\+\_\+autom2m = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Delete a model from the database.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a9bffa8d742fa21c27c67ec30e8716c0d}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a6b9280bdda8121896811437f1457bf89}{django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae95f4a68fc71069ec7bf71a53472e29f}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae95f4a68fc71069ec7bf71a53472e29f}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!quote\_value@{quote\_value}}
+\index{quote\_value@{quote\_value}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{quote\_value()}{quote\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+quote\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a quoted version of the value so it's safe to use in an SQL
+string. This is not safe against injection from user code; it is
+intended only for use in making SQL scripts or preparing default values
+for particularly tricky backends (defaults are not user-defined, though,
+so this is safe).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a48f89e74fee8b27ffe9b8b853ddc87e1}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9b66e50bccdb3dba1f4d620f87781f90}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9b66e50bccdb3dba1f4d620f87781f90}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!remove\_constraint@{remove\_constraint}}
+\index{remove\_constraint@{remove\_constraint}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{remove\_constraint()}{remove\_constraint()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+remove\+\_\+constraint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{constraint }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a constraint from a model.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a0e7fb0dca5a96fa23064eef778f48869}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae22ee9d32c96a0b4655ecb64f293e39b}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae22ee9d32c96a0b4655ecb64f293e39b}} 
+\index{django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}!remove\_field@{remove\_field}}
+\index{remove\_field@{remove\_field}!django.db.backends.sqlite3.schema.DatabaseSchemaEditor@{django.db.backends.sqlite3.schema.DatabaseSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{remove\_field()}{remove\_field()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor.\+remove\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a field from a model. Usually involves deleting a column,
+but for M2Ms may involve deleting a table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a6f95ae52a38e653d923168aaed385c5c}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ae704facf1353d9f9d66ccaf943f660b9}{django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/sqlite3/schema.\+py\end{DoxyCompactItemize}

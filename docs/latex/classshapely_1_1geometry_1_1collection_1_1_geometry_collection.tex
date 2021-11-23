@@ -1,0 +1,81 @@
+\hypertarget{classshapely_1_1geometry_1_1collection_1_1_geometry_collection}{}\doxysection{shapely.\+geometry.\+collection.\+Geometry\+Collection Class Reference}
+\label{classshapely_1_1geometry_1_1collection_1_1_geometry_collection}\index{shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}}
+
+
+Inheritance diagram for shapely.\+geometry.\+collection.\+Geometry\+Collection\+:
+% FIG 0
+
+
+Collaboration diagram for shapely.\+geometry.\+collection.\+Geometry\+Collection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_aa802187ab8e28f3cf85cd1847b2bb7e5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, geoms=None)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a2043e9e33044335e9831a9ae0799751a}{\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a7393c787186cd7b0608b937b4d7beb31}{geoms}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A heterogenous collection of geometries
+
+Attributes
+----------
+geoms : sequence
+    A sequence of Shapely geometry instances
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_aa802187ab8e28f3cf85cd1847b2bb7e5}\label{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_aa802187ab8e28f3cf85cd1847b2bb7e5}} 
+\index{shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+collection.\+Geometry\+Collection.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geoms = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+geoms : list
+    A list of shapely geometry instances, which may be heterogenous.
+
+Example
+-------
+Create a GeometryCollection with a Point and a LineString
+
+  >>> p = Point(51, -1)
+  >>> l = LineString([(52, -1), (49, 2)])
+  >>> gc = GeometryCollection([p, l])
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a2043e9e33044335e9831a9ae0799751a}\label{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a2043e9e33044335e9831a9ae0799751a}} 
+\index{shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}!\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}}
+\index{\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}!shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_geo\_interface\_\_()}{\_\_geo\_interface\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+collection.\+Geometry\+Collection.\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dictionary representation of the geometry\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_geometry_a7ba33191f7b5ac66513b9c7eab883487}{shapely.\+geometry.\+base.\+Base\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a7393c787186cd7b0608b937b4d7beb31}\label{classshapely_1_1geometry_1_1collection_1_1_geometry_collection_a7393c787186cd7b0608b937b4d7beb31}} 
+\index{shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}!geoms@{geoms}}
+\index{geoms@{geoms}!shapely.geometry.collection.GeometryCollection@{shapely.geometry.collection.GeometryCollection}}
+\doxysubsubsection{\texorpdfstring{geoms()}{geoms()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+collection.\+Geometry\+Collection.\+geoms (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/shapely/geometry/collection.\+py\end{DoxyCompactItemize}

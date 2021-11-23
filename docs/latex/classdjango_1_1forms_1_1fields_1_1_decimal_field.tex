@@ -1,0 +1,108 @@
+\hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field}{}\doxysection{django.\+forms.\+fields.\+Decimal\+Field Class Reference}
+\label{classdjango_1_1forms_1_1fields_1_1_decimal_field}\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+
+
+Inheritance diagram for django.\+forms.\+fields.\+Decimal\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+fields.\+Decimal\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_decimal_field_a51d797189e2e670caf4a14451f1966c8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$max\+\_\+value=None, min\+\_\+value=None, max\+\_\+digits=None, decimal\+\_\+places=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_decimal_field_a1916929dcac4e3627b816622a4180224}{to\+\_\+python}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_decimal_field_ac2f937cc848ffa6b0d159eec231b0f80}{validate}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_decimal_field_adfc43f59eae97567dbf0ed24ec364aa8}{widget\+\_\+attrs}} (self, widget)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_ab5bd16d0e226bdc99e9e0abb6008549c}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_ab5bd16d0e226bdc99e9e0abb6008549c}} 
+{\bfseries decimal\+\_\+places}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_decimal_field_a0606fa3a0e8dbcfe471a5d4479d16eef}{default\+\_\+error\+\_\+messages}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_a51d797189e2e670caf4a14451f1966c8}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_a51d797189e2e670caf4a14451f1966c8}} 
+\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Decimal\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{max\+\_\+value = {\ttfamily None},  }\item[{}]{min\+\_\+value = {\ttfamily None},  }\item[{}]{max\+\_\+digits = {\ttfamily None},  }\item[{}]{decimal\+\_\+places = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_integer_field}{django.\+forms.\+fields.\+Integer\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_a1916929dcac4e3627b816622a4180224}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_a1916929dcac4e3627b816622a4180224}} 
+\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}!to\_python@{to\_python}}
+\index{to\_python@{to\_python}!django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+\doxysubsubsection{\texorpdfstring{to\_python()}{to\_python()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Decimal\+Field.\+to\+\_\+python (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate that the input is a decimal number. Return a Decimal
+instance or None for empty values. Ensure that there are no more
+than max_digits in the number and no more than decimal_places digits
+after the decimal point.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_integer_field_aa98bb2dc2d65d6ace89afd0ba34e417c}{django.\+forms.\+fields.\+Integer\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_ac2f937cc848ffa6b0d159eec231b0f80}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_ac2f937cc848ffa6b0d159eec231b0f80}} 
+\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}!validate@{validate}}
+\index{validate@{validate}!django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Decimal\+Field.\+validate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_adfc43f59eae97567dbf0ed24ec364aa8}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_adfc43f59eae97567dbf0ed24ec364aa8}} 
+\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}!widget\_attrs@{widget\_attrs}}
+\index{widget\_attrs@{widget\_attrs}!django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+\doxysubsubsection{\texorpdfstring{widget\_attrs()}{widget\_attrs()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Decimal\+Field.\+widget\+\_\+attrs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{widget }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a Widget instance (*not* a Widget class), return a dictionary of
+any HTML attributes that should be added to the Widget, based on this
+Field.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_integer_field_a04fe256d856345c9c8607388b76b17e0}{django.\+forms.\+fields.\+Integer\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_decimal_field_a0606fa3a0e8dbcfe471a5d4479d16eef}\label{classdjango_1_1forms_1_1fields_1_1_decimal_field_a0606fa3a0e8dbcfe471a5d4479d16eef}} 
+\index{django.forms.fields.DecimalField@{django.forms.fields.DecimalField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.forms.fields.DecimalField@{django.forms.fields.DecimalField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+forms.\+fields.\+Decimal\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Enter a number.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/fields.\+py\end{DoxyCompactItemize}

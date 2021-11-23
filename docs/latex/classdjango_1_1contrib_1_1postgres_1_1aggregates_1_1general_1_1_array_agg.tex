@@ -1,0 +1,62 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg}{}\doxysection{django.\+contrib.\+postgres.\+aggregates.\+general.\+Array\+Agg Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg}\index{django.contrib.postgres.aggregates.general.ArrayAgg@{django.contrib.postgres.aggregates.general.ArrayAgg}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+aggregates.\+general.\+Array\+Agg\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+aggregates.\+general.\+Array\+Agg\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_aa52a2924f22b7b7a61e3eff378bcc907}{output\+\_\+field}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_ae0f59f1f4964ae5ca0152ca3358697f2}{convert\+\_\+value}} (self, value, expression, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a3ca31124b93c1fc3c53c99bdd0c4bf57}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a3ca31124b93c1fc3c53c99bdd0c4bf57}} 
+string {\bfseries function} = \textquotesingle{}ARRAY\+\_\+\+AGG\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a93bd2c56a69099f9cb5ec83897f98074}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a93bd2c56a69099f9cb5ec83897f98074}} 
+string {\bfseries template} = \textquotesingle{}\%(function)s(\%(distinct)s\%(expressions)s \%(ordering)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a8f3dce71bfd98c4ccae097de9a5ef9be}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_a8f3dce71bfd98c4ccae097de9a5ef9be}} 
+bool {\bfseries allow\+\_\+distinct} = True
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_ae0f59f1f4964ae5ca0152ca3358697f2}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_ae0f59f1f4964ae5ca0152ca3358697f2}} 
+\index{django.contrib.postgres.aggregates.general.ArrayAgg@{django.contrib.postgres.aggregates.general.ArrayAgg}!convert\_value@{convert\_value}}
+\index{convert\_value@{convert\_value}!django.contrib.postgres.aggregates.general.ArrayAgg@{django.contrib.postgres.aggregates.general.ArrayAgg}}
+\doxysubsubsection{\texorpdfstring{convert\_value()}{convert\_value()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+aggregates.\+general.\+Array\+Agg.\+convert\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{expression,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Expressions provide their own converters because users have the option
+of manually specifying the output_field which may be a different type
+from the one the database returns.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a17a709653d93ba657fb2ed791346e38f}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_aa52a2924f22b7b7a61e3eff378bcc907}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_array_agg_aa52a2924f22b7b7a61e3eff378bcc907}} 
+\index{django.contrib.postgres.aggregates.general.ArrayAgg@{django.contrib.postgres.aggregates.general.ArrayAgg}!output\_field@{output\_field}}
+\index{output\_field@{output\_field}!django.contrib.postgres.aggregates.general.ArrayAgg@{django.contrib.postgres.aggregates.general.ArrayAgg}}
+\doxysubsubsection{\texorpdfstring{output\_field()}{output\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+aggregates.\+general.\+Array\+Agg.\+output\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/aggregates/general.\+py\end{DoxyCompactItemize}

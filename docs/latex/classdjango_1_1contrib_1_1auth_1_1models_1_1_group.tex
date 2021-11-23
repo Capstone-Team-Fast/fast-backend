@@ -1,0 +1,76 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group}{}\doxysection{django.\+contrib.\+auth.\+models.\+Group Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group}\index{django.contrib.auth.models.Group@{django.contrib.auth.models.Group}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+models.\+Group\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+models.\+Group\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_afbbb0ef7e3dd642020c58d9d9077d7a5}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_afbbb0ef7e3dd642020c58d9d9077d7a5}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_a127ac918c8d259b1914ec353d6b53204}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_a127ac918c8d259b1914ec353d6b53204}} 
+def {\bfseries natural\+\_\+key} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_ad60460a10d6851c625a4c959691b87b4}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_ad60460a10d6851c625a4c959691b87b4}} 
+{\bfseries name} = models.\+Char\+Field(\+\_\+(\textquotesingle{}name\textquotesingle{}), max\+\_\+length=150, unique=True)
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_ab66a2f46e2dbfa1ade8972a53dea2dbc}{permissions}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_a90f66ea454faa86c3492731c86b418c1}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_a90f66ea454faa86c3492731c86b418c1}} 
+{\bfseries objects} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_manager}{Group\+Manager}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Groups are a generic way of categorizing users to apply permissions, or
+some other label, to those users. A user can belong to any number of
+groups.
+
+A user in a group automatically has all the permissions granted to that
+group. For example, if the group 'Site editors' has the permission
+can_edit_home_page, any user in that group will have that permission.
+
+Beyond permissions, groups are a convenient way to categorize users to
+apply some label, or extended functionality, to them. For example, you
+could create a group 'Special users', and you could write code that would
+do special things to those users -- such as giving them access to a
+members-only portion of your site, or sending them members-only email
+messages.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_ab66a2f46e2dbfa1ade8972a53dea2dbc}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_group_ab66a2f46e2dbfa1ade8972a53dea2dbc}} 
+\index{django.contrib.auth.models.Group@{django.contrib.auth.models.Group}!permissions@{permissions}}
+\index{permissions@{permissions}!django.contrib.auth.models.Group@{django.contrib.auth.models.Group}}
+\doxysubsubsection{\texorpdfstring{permissions}{permissions}}
+{\footnotesize\ttfamily django.\+contrib.\+auth.\+models.\+Group.\+permissions\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.ManyToManyField(}
+\DoxyCodeLine{        Permission,}
+\DoxyCodeLine{        verbose\_name=\_(\textcolor{stringliteral}{'permissions'}),}
+\DoxyCodeLine{        blank=\textcolor{keyword}{True},}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/models.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{classrest__framework_1_1throttling_1_1_base_throttle}{}\doxysection{rest\+\_\+framework.\+throttling.\+Base\+Throttle Class Reference}
+\label{classrest__framework_1_1throttling_1_1_base_throttle}\index{rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+throttling.\+Base\+Throttle\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_base_throttle_a3363fb01fcd390f48d9fdd6efb7344c8}{allow\+\_\+request}} (self, request, view)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_base_throttle_afda7601a527626a6e1e6b01f701254f8}{get\+\_\+ident}} (self, request)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_base_throttle_a5f95e635fc2be58830f86d1cf9787ad7}{wait}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Rate throttling of requests.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1throttling_1_1_base_throttle_a3363fb01fcd390f48d9fdd6efb7344c8}\label{classrest__framework_1_1throttling_1_1_base_throttle_a3363fb01fcd390f48d9fdd6efb7344c8}} 
+\index{rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}!allow\_request@{allow\_request}}
+\index{allow\_request@{allow\_request}!rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}}
+\doxysubsubsection{\texorpdfstring{allow\_request()}{allow\_request()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+throttling.\+Base\+Throttle.\+allow\+\_\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{view }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return `True` if the request should be allowed, `False` otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_simple_rate_throttle_a3a1a0086aac8acc2c4eb464da94bc57c}{rest\+\_\+framework.\+throttling.\+Simple\+Rate\+Throttle}}, and \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_scoped_rate_throttle_a6edf5b760b10e5f5d6742dab5ef04a9e}{rest\+\_\+framework.\+throttling.\+Scoped\+Rate\+Throttle}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1throttling_1_1_base_throttle_afda7601a527626a6e1e6b01f701254f8}\label{classrest__framework_1_1throttling_1_1_base_throttle_afda7601a527626a6e1e6b01f701254f8}} 
+\index{rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}!get\_ident@{get\_ident}}
+\index{get\_ident@{get\_ident}!rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}}
+\doxysubsubsection{\texorpdfstring{get\_ident()}{get\_ident()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+throttling.\+Base\+Throttle.\+get\+\_\+ident (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Identify the machine making the request by parsing HTTP_X_FORWARDED_FOR
+if present and number of proxies is > 0. If not use all of
+HTTP_X_FORWARDED_FOR if it is available, if not use REMOTE_ADDR.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1throttling_1_1_base_throttle_a5f95e635fc2be58830f86d1cf9787ad7}\label{classrest__framework_1_1throttling_1_1_base_throttle_a5f95e635fc2be58830f86d1cf9787ad7}} 
+\index{rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}!wait@{wait}}
+\index{wait@{wait}!rest\_framework.throttling.BaseThrottle@{rest\_framework.throttling.BaseThrottle}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+throttling.\+Base\+Throttle.\+wait (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Optionally, return a recommended number of seconds to wait before
+the next request.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1throttling_1_1_simple_rate_throttle_a39f992dea7415ce6caf04640291a8628}{rest\+\_\+framework.\+throttling.\+Simple\+Rate\+Throttle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/throttling.\+py\end{DoxyCompactItemize}

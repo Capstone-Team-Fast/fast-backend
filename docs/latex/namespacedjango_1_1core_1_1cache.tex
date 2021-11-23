@@ -1,0 +1,42 @@
+\hypertarget{namespacedjango_1_1core_1_1cache}{}\doxysection{django.\+core.\+cache Namespace Reference}
+\label{namespacedjango_1_1core_1_1cache}\index{django.core.cache@{django.core.cache}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1_cache_handler}{Cache\+Handler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1cache_a597125c06f484cd3493a41ae8a9a6cfe}\label{namespacedjango_1_1core_1_1cache_a597125c06f484cd3493a41ae8a9a6cfe}} 
+def {\bfseries close\+\_\+caches} ($\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1cache_aabef7c471cd0dad0f2ed7beb30748d82}\label{namespacedjango_1_1core_1_1cache_aabef7c471cd0dad0f2ed7beb30748d82}} 
+string {\bfseries DEFAULT\+\_\+\+CACHE\+\_\+\+ALIAS} = \textquotesingle{}default\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1cache_ad429b3dc5ead3912a038bd41c8aec684}\label{namespacedjango_1_1core_1_1cache_ad429b3dc5ead3912a038bd41c8aec684}} 
+{\bfseries caches} = \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1_cache_handler}{Cache\+Handler}}()
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1cache_a97b79f06b6eb571380acecc199db0bb5}\label{namespacedjango_1_1core_1_1cache_a97b79f06b6eb571380acecc199db0bb5}} 
+{\bfseries cache} = \mbox{\hyperlink{classdjango_1_1utils_1_1connection_1_1_connection_proxy}{Connection\+Proxy}}(caches, DEFAULT\+\_\+\+CACHE\+\_\+\+ALIAS)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Caching framework.
+
+This package defines set of cache backends that all conform to a simple API.
+In a nutshell, a cache is a set of values -- which can be any object that
+may be pickled -- identified by string keys.  For the complete API, see
+the abstract BaseCache class in django.core.cache.backends.base.
+
+Client code should use the `cache` variable defined here to access the default
+cache backend and look up non-default cache backends in the `caches` dict-like
+object.
+
+See docs/topics/cache.txt for information on the public API.
+\end{DoxyVerb}
+ 

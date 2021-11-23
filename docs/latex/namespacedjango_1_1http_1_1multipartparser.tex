@@ -1,0 +1,80 @@
+\hypertarget{namespacedjango_1_1http_1_1multipartparser}{}\doxysection{django.\+http.\+multipartparser Namespace Reference}
+\label{namespacedjango_1_1http_1_1multipartparser}\index{django.http.multipartparser@{django.http.multipartparser}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_boundary_iter}{Boundary\+Iter}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_chunk_iter}{Chunk\+Iter}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_input_stream_exhausted}{Input\+Stream\+Exhausted}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_inter_boundary_iter}{Inter\+Boundary\+Iter}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_lazy_stream}{Lazy\+Stream}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_multi_part_parser}{Multi\+Part\+Parser}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_multi_part_parser_error}{Multi\+Part\+Parser\+Error}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1http_1_1multipartparser_1_1_parser}{Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1http_1_1multipartparser_a39ba458908baf5cdae85819307923c22}{exhaust}} (stream\+\_\+or\+\_\+iterable)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1http_1_1multipartparser_abedbde8bf33c1b0392cd678941249ce0}{parse\+\_\+boundary\+\_\+stream}} (stream, max\+\_\+header\+\_\+size)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1http_1_1multipartparser_a25d8febf61b58f5ff135c6cbd0802bd4}{parse\+\_\+header}} (line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_ad4638fc0c3a84e872ab636c275961089}\label{namespacedjango_1_1http_1_1multipartparser_ad4638fc0c3a84e872ab636c275961089}} 
+string {\bfseries RAW} = \char`\"{}raw\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_a860dc17ae6e948298fea4588e8209f08}\label{namespacedjango_1_1http_1_1multipartparser_a860dc17ae6e948298fea4588e8209f08}} 
+string {\bfseries FILE} = \char`\"{}file\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_ac313f0a47877f5c88a08376eebcfe675}\label{namespacedjango_1_1http_1_1multipartparser_ac313f0a47877f5c88a08376eebcfe675}} 
+string {\bfseries FIELD} = \char`\"{}field\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Multi-part parsing for file uploads.
+
+Exposes one class, ``MultiPartParser``, which feeds chunks of uploaded data to
+file upload handlers for processing.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_a39ba458908baf5cdae85819307923c22}\label{namespacedjango_1_1http_1_1multipartparser_a39ba458908baf5cdae85819307923c22}} 
+\index{django.http.multipartparser@{django.http.multipartparser}!exhaust@{exhaust}}
+\index{exhaust@{exhaust}!django.http.multipartparser@{django.http.multipartparser}}
+\doxysubsubsection{\texorpdfstring{exhaust()}{exhaust()}}
+{\footnotesize\ttfamily def django.\+http.\+multipartparser.\+exhaust (\begin{DoxyParamCaption}\item[{}]{stream\+\_\+or\+\_\+iterable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Exhaust an iterator or stream.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_abedbde8bf33c1b0392cd678941249ce0}\label{namespacedjango_1_1http_1_1multipartparser_abedbde8bf33c1b0392cd678941249ce0}} 
+\index{django.http.multipartparser@{django.http.multipartparser}!parse\_boundary\_stream@{parse\_boundary\_stream}}
+\index{parse\_boundary\_stream@{parse\_boundary\_stream}!django.http.multipartparser@{django.http.multipartparser}}
+\doxysubsubsection{\texorpdfstring{parse\_boundary\_stream()}{parse\_boundary\_stream()}}
+{\footnotesize\ttfamily def django.\+http.\+multipartparser.\+parse\+\_\+boundary\+\_\+stream (\begin{DoxyParamCaption}\item[{}]{stream,  }\item[{}]{max\+\_\+header\+\_\+size }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse one and exactly one stream that encapsulates a boundary.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1http_1_1multipartparser_a25d8febf61b58f5ff135c6cbd0802bd4}\label{namespacedjango_1_1http_1_1multipartparser_a25d8febf61b58f5ff135c6cbd0802bd4}} 
+\index{django.http.multipartparser@{django.http.multipartparser}!parse\_header@{parse\_header}}
+\index{parse\_header@{parse\_header}!django.http.multipartparser@{django.http.multipartparser}}
+\doxysubsubsection{\texorpdfstring{parse\_header()}{parse\_header()}}
+{\footnotesize\ttfamily def django.\+http.\+multipartparser.\+parse\+\_\+header (\begin{DoxyParamCaption}\item[{}]{line }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse the header into a key-value.
+
+Input (line): bytes, output: str for key/name, bytes for values which
+will be decoded later.
+\end{DoxyVerb}
+ 

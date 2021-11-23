@@ -1,0 +1,181 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection}{}\doxysection{django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection}\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8b1bb42265a5fd9e2498885591724c5b}{get\+\_\+field\+\_\+type}} (self, data\+\_\+type, description)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a502f393e943d58c6f4b5d5b379fa31f8}{get\+\_\+table\+\_\+list}} (self, cursor)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ad3c4cc98dbb6c9b8deba6b9ab1d66a57}{get\+\_\+table\+\_\+description}} (self, cursor, table\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a6fa4105b0b5f3f017dbb086b54d6274f}{get\+\_\+sequences}} (self, cursor, table\+\_\+name, table\+\_\+fields=())
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a141ec8d3988fb87a46028e9397f2803e}{get\+\_\+relations}} (self, cursor, table\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ac0688e148ef7a5a36643649b51551035}{get\+\_\+key\+\_\+columns}} (self, cursor, table\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ae523c51438d26a6d54fcf48dce210d35}{get\+\_\+constraints}} (self, cursor, table\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ab3c4aeb34ce6ad36857d46f33de9a6ca}{data\+\_\+types\+\_\+reverse}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_adc122c64cb3784d1147e08c69194a73f}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_adc122c64cb3784d1147e08c69194a73f}} 
+string {\bfseries index\+\_\+default\+\_\+access\+\_\+method} = \textquotesingle{}btree\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8e45ec9f908d53483fe96634c740ea41}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8e45ec9f908d53483fe96634c740ea41}} 
+list {\bfseries ignored\+\_\+tables} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ae523c51438d26a6d54fcf48dce210d35}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ae523c51438d26a6d54fcf48dce210d35}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_constraints@{get\_constraints}}
+\index{get\_constraints@{get\_constraints}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_constraints()}{get\_constraints()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieve any constraints or keys (unique, pk, fk, check, index) across
+one or more columns. Also retrieve the definition of expression-based
+indexes.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_af4366fe4ce9c983b370575687ae9912c}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8b1bb42265a5fd9e2498885591724c5b}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8b1bb42265a5fd9e2498885591724c5b}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_field\_type@{get\_field\_type}}
+\index{get\_field\_type@{get\_field\_type}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_field\_type()}{get\_field\_type()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+field\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+type,  }\item[{}]{description }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook for a database backend to use the cursor description to
+match a Django field type to a database column.
+
+For Oracle, the column data_type on its own is insufficient to
+distinguish between a FloatField and IntegerField, for example.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_ad9e93cf82b72197b95798eed841b9205}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa418ff69a0c9d0cb0152fd8eb6e64cf8}{django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ac0688e148ef7a5a36643649b51551035}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ac0688e148ef7a5a36643649b51551035}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_key\_columns@{get\_key\_columns}}
+\index{get\_key\_columns@{get\_key\_columns}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_key\_columns()}{get\_key\_columns()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+key\+\_\+columns (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Backends can override this to return a list of:
+    (column_name, referenced_table_name, referenced_column_name)
+for all key columns in given table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_a1421c1d700f426e2e202ea12b5f3d1f8}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a141ec8d3988fb87a46028e9397f2803e}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a141ec8d3988fb87a46028e9397f2803e}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_relations@{get\_relations}}
+\index{get\_relations@{get\_relations}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_relations()}{get\_relations()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+relations (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary of {field_name: (field_name_other_table, other_table)}
+representing all relationships to the given table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_a0e2b2d2b16ed33b568534a17ce357cbb}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a6fa4105b0b5f3f017dbb086b54d6274f}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a6fa4105b0b5f3f017dbb086b54d6274f}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_sequences@{get\_sequences}}
+\index{get\_sequences@{get\_sequences}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_sequences()}{get\_sequences()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+sequences (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name,  }\item[{}]{table\+\_\+fields = {\ttfamily ()} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of introspected sequences for table_name. Each sequence
+is a dict: {'table': <table_name>, 'column': <column_name>}. An optional
+'name' key can be added if the backend supports named sequences.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_a86f39e7222af011fe84556ff613124c9}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ad3c4cc98dbb6c9b8deba6b9ab1d66a57}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ad3c4cc98dbb6c9b8deba6b9ab1d66a57}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_table\_description@{get\_table\_description}}
+\index{get\_table\_description@{get\_table\_description}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_table\_description()}{get\_table\_description()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+table\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a description of the table with the DB-API cursor.description
+interface.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_a7f730d246b4212185411316049448e5b}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a502f393e943d58c6f4b5d5b379fa31f8}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a502f393e943d58c6f4b5d5b379fa31f8}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!get\_table\_list@{get\_table\_list}}
+\index{get\_table\_list@{get\_table\_list}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_table\_list()}{get\_table\_list()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+get\+\_\+table\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of table and view names in the current database.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1introspection_1_1_base_database_introspection_a345b5386fce71bc0decd18d009cdfceb}{django.\+db.\+backends.\+base.\+introspection.\+Base\+Database\+Introspection}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ab3c4aeb34ce6ad36857d46f33de9a6ca}\label{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_ab3c4aeb34ce6ad36857d46f33de9a6ca}} 
+\index{django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}!data\_types\_reverse@{data\_types\_reverse}}
+\index{data\_types\_reverse@{data\_types\_reverse}!django.db.backends.postgresql.introspection.DatabaseIntrospection@{django.db.backends.postgresql.introspection.DatabaseIntrospection}}
+\doxysubsubsection{\texorpdfstring{data\_types\_reverse}{data\_types\_reverse}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection.\+data\+\_\+types\+\_\+reverse\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        16: \textcolor{stringliteral}{'BooleanField'},}
+\DoxyCodeLine{        17: \textcolor{stringliteral}{'BinaryField'},}
+\DoxyCodeLine{        20: \textcolor{stringliteral}{'BigIntegerField'},}
+\DoxyCodeLine{        21: \textcolor{stringliteral}{'SmallIntegerField'},}
+\DoxyCodeLine{        23: \textcolor{stringliteral}{'IntegerField'},}
+\DoxyCodeLine{        25: \textcolor{stringliteral}{'TextField'},}
+\DoxyCodeLine{        700: \textcolor{stringliteral}{'FloatField'},}
+\DoxyCodeLine{        701: \textcolor{stringliteral}{'FloatField'},}
+\DoxyCodeLine{        869: \textcolor{stringliteral}{'GenericIPAddressField'},}
+\DoxyCodeLine{        1042: \textcolor{stringliteral}{'CharField'},  \textcolor{comment}{\# blank-\/padded}}
+\DoxyCodeLine{        1043: \textcolor{stringliteral}{'CharField'},}
+\DoxyCodeLine{        1082: \textcolor{stringliteral}{'DateField'},}
+\DoxyCodeLine{        1083: \textcolor{stringliteral}{'TimeField'},}
+\DoxyCodeLine{        1114: \textcolor{stringliteral}{'DateTimeField'},}
+\DoxyCodeLine{        1184: \textcolor{stringliteral}{'DateTimeField'},}
+\DoxyCodeLine{        1186: \textcolor{stringliteral}{'DurationField'},}
+\DoxyCodeLine{        1266: \textcolor{stringliteral}{'TimeField'},}
+\DoxyCodeLine{        1700: \textcolor{stringliteral}{'DecimalField'},}
+\DoxyCodeLine{        2950: \textcolor{stringliteral}{'UUIDField'},}
+\DoxyCodeLine{        3802: \textcolor{stringliteral}{'JSONField'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/postgresql/introspection.\+py\end{DoxyCompactItemize}

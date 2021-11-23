@@ -1,0 +1,24 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2328 [label="serializers.ModelSerializer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2328 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="backend.serializers.availability\lSerializer.AvailabilitySerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1availability_serializer_1_1_availability_serializer.html",tooltip=" "];
+  Node2328 -> Node2330 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2330 [label="backend.serializers.client\lRoutingSerializer.ClientRouting\lSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1client_routing_serializer_1_1_client_routing_serializer.html",tooltip=" "];
+  Node2328 -> Node2331 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2331 [label="backend.serializers.client\lSerializer.ClientSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1client_serializer_1_1_client_serializer.html",tooltip=" "];
+  Node2328 -> Node2332 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2332 [label="backend.serializers.driver\lSerializer.DriverSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer.html",tooltip=" "];
+  Node2328 -> Node2333 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2333 [label="backend.serializers.language\lSerializer.LanguageSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1language_serializer_1_1_language_serializer.html",tooltip=" "];
+  Node2328 -> Node2334 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2334 [label="backend.serializers.location\lSerializer.LocationSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer.html",tooltip=" "];
+  Node2328 -> Node2335 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2335 [label="backend.serializers.manager\lSerializer.ManagerSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1manager_serializer_1_1_manager_serializer.html",tooltip=" "];
+  Node2328 -> Node2336 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2336 [label="backend.serializers.route\lSerializer.RouteSerializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbackend_1_1serializers_1_1route_serializer_1_1_route_serializer.html",tooltip=" "];
+}

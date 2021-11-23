@@ -1,0 +1,664 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field}{}\doxysection{django.\+db.\+models.\+fields.\+Field Class Reference}
+\label{classdjango_1_1db_1_1models_1_1fields_1_1_field}\index{django.db.models.fields.Field@{django.db.models.fields.Field}}
+
+
+Inheritance diagram for django.\+db.\+models.\+fields.\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+fields.\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2b39e19c9cc15ca860d0067b1d8dc095}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, verbose\+\_\+name=None, name=None, primary\+\_\+key=False, max\+\_\+length=None, unique=False, blank=False, null=False, db\+\_\+index=False, rel=None, default=\mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_n_o_t___p_r_o_v_i_d_e_d}{NOT\+\_\+\+PROVIDED}}, editable=True, serialize=True, unique\+\_\+for\+\_\+date=None, unique\+\_\+for\+\_\+month=None, unique\+\_\+for\+\_\+year=None, choices=None, help\+\_\+text=\textquotesingle{}\textquotesingle{}, db\+\_\+column=None, db\+\_\+tablespace=None, auto\+\_\+created=False, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_af4d937406c1476bb471a163b1cfcf52b}{validators}}=(), error\+\_\+messages=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a81679d8bfab42cf53b53e48ef6525b80}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa98ec326b9db5326bd90a43c78af96fb}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a54c1f39a98c0f138dda215fc9953d155}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a54c1f39a98c0f138dda215fc9953d155}} 
+def {\bfseries check} (self, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8bc8d81a2f76e28d7fa5efb079ce3ae2}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8bc8d81a2f76e28d7fa5efb079ce3ae2}} 
+def {\bfseries get\+\_\+col} (self, alias, output\+\_\+field=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aaa26cb4bf0931bc66b8699b3f2196d0e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aaa26cb4bf0931bc66b8699b3f2196d0e}} 
+def {\bfseries cached\+\_\+col} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a106a15d3035116d54baed872c00f07fb}{select\+\_\+format}} (self, compiler, sql, params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8ba38648a9dbc9e3648af3c93a292721}{deconstruct}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae8df23501cdf746b169871b4c3b8fd68}{clone}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a3a78935b4ec59a19a2919d270ec6cb6d}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a3a78935b4ec59a19a2919d270ec6cb6d}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a4268d6bd0ceae9f87fe7f66882dea5a6}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a4268d6bd0ceae9f87fe7f66882dea5a6}} 
+def {\bfseries \+\_\+\+\_\+lt\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a163095f6fd6d0294a86196581d1f3f3a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a163095f6fd6d0294a86196581d1f3f3a}} 
+def {\bfseries \+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1963ebe98dc6bc56c4e0aa6e681adf53}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1963ebe98dc6bc56c4e0aa6e681adf53}} 
+def {\bfseries \+\_\+\+\_\+deepcopy\+\_\+\+\_\+} (self, memodict)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aeb596c630dd7273754a85a78f96e2180}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aeb596c630dd7273754a85a78f96e2180}} 
+def {\bfseries \+\_\+\+\_\+copy\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a30e5d666e407302967b847218e453ba3}{\+\_\+\+\_\+reduce\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7c7cbfa6e433739449a847df1e7df33b}{get\+\_\+pk\+\_\+value\+\_\+on\+\_\+save}} (self, instance)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2fcfa4107860025f80c46fd3c6ca5056}{to\+\_\+python}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_af4d937406c1476bb471a163b1cfcf52b}{validators}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab4581708e92e7d7a620ab93a11df8059}{run\+\_\+validators}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_af2540ae86a9f481781605c27a279d410}{validate}} (self, value, model\+\_\+instance)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae5e0fc7f93205a2b790c69ad2de9c0c5}{clean}} (self, value, model\+\_\+instance)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a691799e7d7f19f7640afb08b5b3f0882}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a691799e7d7f19f7640afb08b5b3f0882}} 
+def {\bfseries db\+\_\+type\+\_\+parameters} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a9e7c85952292fe3ec92b924e5db4c288}{db\+\_\+check}} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1bdf568bf663162486ce90e2e8c0e790}{db\+\_\+type}} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01917bc8b07f5e3ce3246f9e7f27ec8a}{rel\+\_\+db\+\_\+type}} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad06b4c9044837e5a53b990b2847d880a}{cast\+\_\+db\+\_\+type}} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a194ec544a3482988fd8313978217ead0}{db\+\_\+parameters}} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8d644e86cbb4a01657ddb9e7df7864af}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8d644e86cbb4a01657ddb9e7df7864af}} 
+def {\bfseries db\+\_\+type\+\_\+suffix} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0ed5afe21cdf48266e53dfab88fa7fec}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0ed5afe21cdf48266e53dfab88fa7fec}} 
+def {\bfseries get\+\_\+db\+\_\+converters} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a170b00d414752033de579bae4380d4f9}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a170b00d414752033de579bae4380d4f9}} 
+def {\bfseries unique} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af49c261ae31ec200c3314d2c28bc6286}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af49c261ae31ec200c3314d2c28bc6286}} 
+def {\bfseries db\+\_\+tablespace} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7e420afb250e6ffe4e0f6aaf7054b817}{db\+\_\+returning}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab6ce1b46dfcd6a8f80e5ec3a3923742e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab6ce1b46dfcd6a8f80e5ec3a3923742e}} 
+def {\bfseries set\+\_\+attributes\+\_\+from\+\_\+name} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_acab2ae6fc6638ecd8714d5ef7b6ed404}{contribute\+\_\+to\+\_\+class}} (self, cls, name, private\+\_\+only=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa02eeb0a394accc4246bfd8cf3875f03}{get\+\_\+filter\+\_\+kwargs\+\_\+for\+\_\+object}} (self, obj)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a79b7082c50e0c85c82c690511685e9d3}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a79b7082c50e0c85c82c690511685e9d3}} 
+def {\bfseries get\+\_\+attname} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0073c2155911339c34692129f38dbfa3}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0073c2155911339c34692129f38dbfa3}} 
+def {\bfseries get\+\_\+attname\+\_\+column} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1b24712a6b2f3cabdcbe1e2b99ba9a6c}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1b24712a6b2f3cabdcbe1e2b99ba9a6c}} 
+def {\bfseries get\+\_\+internal\+\_\+type} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a61f0018c4d9e215d274f1f9270fd9d4e}{pre\+\_\+save}} (self, model\+\_\+instance, add)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0cda21229264b6f54e126b02638d540f}{get\+\_\+prep\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8407c739c0103caf14b80ded610f5751}{get\+\_\+db\+\_\+prep\+\_\+value}} (self, value, connection, prepared=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a38444ea9a4e9def0fb3fd884dd17480a}{get\+\_\+db\+\_\+prep\+\_\+save}} (self, value, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_aeeb5b005ba6af0a24caac3e4676cd931}{has\+\_\+default}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2e04d4492f5f3b213db1ad412b0a1caf}{get\+\_\+default}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a85f91acf6a3c18e62aaa24e8cceaf7db}{get\+\_\+choices}} (self, include\+\_\+blank=True, blank\+\_\+choice=BLANK\+\_\+\+CHOICE\+\_\+\+DASH, limit\+\_\+choices\+\_\+to=None, ordering=())
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a131d6e507045e7dda386e18d1b2cc721}{value\+\_\+to\+\_\+string}} (self, obj)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a5cbe8b544074325cbd639feaf328ca01}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a5cbe8b544074325cbd639feaf328ca01}} 
+def {\bfseries save\+\_\+form\+\_\+data} (self, instance, data)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad7d7c2eb92e666a755e16ad82ba3a68e}{formfield}} (self, form\+\_\+class=None, choices\+\_\+form\+\_\+class=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ac4c357994cdcbb718c77ad39e939e1a5}{value\+\_\+from\+\_\+object}} (self, obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a330ebe5b8a3682f931732c287da767e4}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a330ebe5b8a3682f931732c287da767e4}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a61c6e82280210842a84daaa542227c62}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a61c6e82280210842a84daaa542227c62}} 
+{\bfseries verbose\+\_\+name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a55a944938fad08bf756de0e4583d3473}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a55a944938fad08bf756de0e4583d3473}} 
+{\bfseries primary\+\_\+key}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8099b90a7a52d8be4c0629f02576f424}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8099b90a7a52d8be4c0629f02576f424}} 
+{\bfseries null}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af969cf32d95ad826b83bb40edc2c2f1e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af969cf32d95ad826b83bb40edc2c2f1e}} 
+{\bfseries remote\+\_\+field}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae09134dc187e4163f58c57b22330400d}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae09134dc187e4163f58c57b22330400d}} 
+{\bfseries is\+\_\+relation}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab61fb4213bc4f0a97a4680619e6d3c3a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab61fb4213bc4f0a97a4680619e6d3c3a}} 
+{\bfseries default}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a3327a9c6099af2ad4d8d4c090c11b4e7}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a3327a9c6099af2ad4d8d4c090c11b4e7}} 
+{\bfseries editable}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8aeea91c4dcce96cc16eda5ba35e2d13}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8aeea91c4dcce96cc16eda5ba35e2d13}} 
+{\bfseries serialize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad2a6ddc9f25eeacf0d5a43ade458ac55}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad2a6ddc9f25eeacf0d5a43ade458ac55}} 
+{\bfseries unique\+\_\+for\+\_\+date}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_acf949de78a2069f253511814b018b4c7}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_acf949de78a2069f253511814b018b4c7}} 
+{\bfseries unique\+\_\+for\+\_\+month}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8a8ca462e7ace78585f542a5a3732bf3}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8a8ca462e7ace78585f542a5a3732bf3}} 
+{\bfseries unique\+\_\+for\+\_\+year}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af354d74df40a75051b23c07b2914563e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af354d74df40a75051b23c07b2914563e}} 
+{\bfseries choices}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ac42c95268a8ba4cefafb074b015a019a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ac42c95268a8ba4cefafb074b015a019a}} 
+{\bfseries help\+\_\+text}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af86878235fa521934ec45f097a1e7c7f}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af86878235fa521934ec45f097a1e7c7f}} 
+{\bfseries db\+\_\+index}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_adf45fd437b90a394a7de224efb9a0cd7}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_adf45fd437b90a394a7de224efb9a0cd7}} 
+{\bfseries db\+\_\+column}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a80fca23b217c4f778b2cd3c9d3909c43}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a80fca23b217c4f778b2cd3c9d3909c43}} 
+{\bfseries auto\+\_\+created}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a76d7212eb41050719032a84157bbd575}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a76d7212eb41050719032a84157bbd575}} 
+{\bfseries creation\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a667010b1b39336b71ef750244e2d57d4}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a667010b1b39336b71ef750244e2d57d4}} 
+{\bfseries error\+\_\+messages}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a5016f7a53a1afb04a4f7f99197866cd6}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a5016f7a53a1afb04a4f7f99197866cd6}} 
+{\bfseries column}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2ad01e136d70b06e459767072abd4287}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2ad01e136d70b06e459767072abd4287}} 
+{\bfseries concrete}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa0ad3bcce154ef1c23711336f3a6d679}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa0ad3bcce154ef1c23711336f3a6d679}} 
+{\bfseries model}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab8c363e2b0df95651e259ba521722ae9}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab8c363e2b0df95651e259ba521722ae9}} 
+bool {\bfseries empty\+\_\+strings\+\_\+allowed} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae86a78a49116f9dadce865077bf7992c}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae86a78a49116f9dadce865077bf7992c}} 
+{\bfseries empty\+\_\+values} = list(validators.\+EMPTY\+\_\+\+VALUES)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a9abbba49f9250c4d209565c1b629b3a5}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a9abbba49f9250c4d209565c1b629b3a5}} 
+int {\bfseries creation\+\_\+counter} = 0
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a201695080fb7a0e83fdb519a76c844c2}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a201695080fb7a0e83fdb519a76c844c2}} 
+int {\bfseries auto\+\_\+creation\+\_\+counter} = -\/1
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a032cf1a1efc05e91e1664990f38f2c75}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a032cf1a1efc05e91e1664990f38f2c75}} 
+list {\bfseries default\+\_\+validators} = \mbox{[}$\,$\mbox{]}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01bac1cd1c2b285d5762549dad0faf3a}{default\+\_\+error\+\_\+messages}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_abbd3cf7e8743d542d91aacb180881c6d}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_abbd3cf7e8743d542d91aacb180881c6d}} 
+{\bfseries system\+\_\+check\+\_\+deprecated\+\_\+details} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_abfc200631eb352677a43a9a517448e89}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_abfc200631eb352677a43a9a517448e89}} 
+{\bfseries system\+\_\+check\+\_\+removed\+\_\+details} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1b006cd7297e344f538a3bdbffd2b271}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1b006cd7297e344f538a3bdbffd2b271}} 
+bool {\bfseries hidden} = False
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1364979c67e2e5f83d69cf47ed87e40f}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1364979c67e2e5f83d69cf47ed87e40f}} 
+{\bfseries many\+\_\+to\+\_\+many} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad8dc559faf5292fa7b933994c8d79578}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad8dc559faf5292fa7b933994c8d79578}} 
+{\bfseries many\+\_\+to\+\_\+one} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a02f5269e72f1eb8f2a3e8f559457fcc9}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a02f5269e72f1eb8f2a3e8f559457fcc9}} 
+{\bfseries one\+\_\+to\+\_\+many} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a933b2b3326b86bf6756c03c7f2ad1ab3}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a933b2b3326b86bf6756c03c7f2ad1ab3}} 
+{\bfseries one\+\_\+to\+\_\+one} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab9b3c4bf772ac07f39d803fe2c56ec8d}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab9b3c4bf772ac07f39d803fe2c56ec8d}} 
+{\bfseries related\+\_\+model} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a89c5d2820f19bfadd3aba7b8ef6b4a3b}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a89c5d2820f19bfadd3aba7b8ef6b4a3b}} 
+{\bfseries descriptor\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_deferred_attribute}{Deferred\+Attribute}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a08d092021bb33c71669cb3953ffb4996}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a08d092021bb33c71669cb3953ffb4996}} 
+{\bfseries description} = property(\+\_\+description)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7c39d536bb11a858c42a60509513ff6c}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7c39d536bb11a858c42a60509513ff6c}} 
+{\bfseries flatchoices} = property(\+\_\+get\+\_\+flatchoices)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for all field types\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2b39e19c9cc15ca860d0067b1d8dc095}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2b39e19c9cc15ca860d0067b1d8dc095}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{verbose\+\_\+name = {\ttfamily None},  }\item[{}]{name = {\ttfamily None},  }\item[{}]{primary\+\_\+key = {\ttfamily False},  }\item[{}]{max\+\_\+length = {\ttfamily None},  }\item[{}]{unique = {\ttfamily False},  }\item[{}]{blank = {\ttfamily False},  }\item[{}]{null = {\ttfamily False},  }\item[{}]{db\+\_\+index = {\ttfamily False},  }\item[{}]{rel = {\ttfamily None},  }\item[{}]{default = {\ttfamily \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_n_o_t___p_r_o_v_i_d_e_d}{NOT\+\_\+\+PROVIDED}}},  }\item[{}]{editable = {\ttfamily True},  }\item[{}]{serialize = {\ttfamily True},  }\item[{}]{unique\+\_\+for\+\_\+date = {\ttfamily None},  }\item[{}]{unique\+\_\+for\+\_\+month = {\ttfamily None},  }\item[{}]{unique\+\_\+for\+\_\+year = {\ttfamily None},  }\item[{}]{choices = {\ttfamily None},  }\item[{}]{help\+\_\+text = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{db\+\_\+column = {\ttfamily None},  }\item[{}]{db\+\_\+tablespace = {\ttfamily None},  }\item[{}]{auto\+\_\+created = {\ttfamily False},  }\item[{}]{validators = {\ttfamily ()},  }\item[{}]{error\+\_\+messages = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ad2209fb402d5d5ff222512033ae1a061}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_acb554b6c3c22314934888d42786905aa}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a30e5d666e407302967b847218e453ba3}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a30e5d666e407302967b847218e453ba3}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!\_\_reduce\_\_@{\_\_reduce\_\_}}
+\index{\_\_reduce\_\_@{\_\_reduce\_\_}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{\_\_reduce\_\_()}{\_\_reduce\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+\_\+\+\_\+reduce\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pickling should return the model._meta.fields instance of the field,
+not a new copy of that field. So, use the app registry to load the
+model and then the field back.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa98ec326b9db5326bd90a43c78af96fb}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa98ec326b9db5326bd90a43c78af96fb}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Display the module, class, and name of the field.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_aa4601d5e8fecc97212d2f753b9c44cc7}{rest\+\_\+framework.\+serializers.\+Serializer}}, and \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer_a7f10bfdf42423bbbc081301f9bb7dc6d}{rest\+\_\+framework.\+serializers.\+List\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a81679d8bfab42cf53b53e48ef6525b80}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a81679d8bfab42cf53b53e48ef6525b80}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return "app_label.model_label.field_name" for fields attached to
+models.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad06b4c9044837e5a53b990b2847d880a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad06b4c9044837e5a53b990b2847d880a}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!cast\_db\_type@{cast\_db\_type}}
+\index{cast\_db\_type@{cast\_db\_type}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{cast\_db\_type()}{cast\_db\_type()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+cast\+\_\+db\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the data type to use in the Cast() function.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_aa50f8429112ecc0024b7faa43433e439}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_char_field_a179e7f6c64190a4cd60b8a051c1f790c}{django.\+db.\+models.\+fields.\+Char\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae5e0fc7f93205a2b790c69ad2de9c0c5}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae5e0fc7f93205a2b790c69ad2de9c0c5}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!clean@{clean}}
+\index{clean@{clean}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+clean (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{model\+\_\+instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert the value's type and run validation. Validation errors
+from to_python() and validate() are propagated. Return the correct
+value if no error is raised.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae8df23501cdf746b169871b4c3b8fd68}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ae8df23501cdf746b169871b4c3b8fd68}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!clone@{clone}}
+\index{clone@{clone}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+clone (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Uses deconstruct() to clone a new copy of this Field.
+Will not preserve any class attachments/attribute names.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_acab2ae6fc6638ecd8714d5ef7b6ed404}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_acab2ae6fc6638ecd8714d5ef7b6ed404}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!contribute\_to\_class@{contribute\_to\_class}}
+\index{contribute\_to\_class@{contribute\_to\_class}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{contribute\_to\_class()}{contribute\_to\_class()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+contribute\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cls,  }\item[{}]{name,  }\item[{}]{private\+\_\+only = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the field with the model class it belongs to.
+
+If private_only is True, create a separate instance of this field
+for every subclass of cls, even if cls is not an abstract model.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ab2763a847429b3b1b844418cc0c8c45c}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a84da89e783b9f80a7017cceb200a9980}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_aa40f8ed30f8602b0343ce119fa227d15}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_file_field_a2aaf007f6032f1df709788d608fdddbc}{django.\+db.\+models.\+fields.\+files.\+File\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_image_field_a211792a0d3cbc9bbb178e3e5c3e057df}{django.\+db.\+models.\+fields.\+files.\+Image\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a9e7c85952292fe3ec92b924e5db4c288}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a9e7c85952292fe3ec92b924e5db4c288}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!db\_check@{db\_check}}
+\index{db\_check@{db\_check}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{db\_check()}{db\_check()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+db\+\_\+check (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the database column check constraint for this field, for the
+provided connection. Works the same way as db_type() for the case that
+get_internal_type() does not map to a preexisting model field.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a194ec544a3482988fd8313978217ead0}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a194ec544a3482988fd8313978217ead0}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!db\_parameters@{db\_parameters}}
+\index{db\_parameters@{db\_parameters}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{db\_parameters()}{db\_parameters()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+db\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extension of db_type(), providing a range of different return values
+(type, checks). This will look at db_type(), allowing custom model
+fields to override it.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7e420afb250e6ffe4e0f6aaf7054b817}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7e420afb250e6ffe4e0f6aaf7054b817}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!db\_returning@{db\_returning}}
+\index{db\_returning@{db\_returning}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{db\_returning()}{db\_returning()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+db\+\_\+returning (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Private API intended only to be used by Django itself. Currently only
+the PostgreSQL backend supports returning multiple fields on a model.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1bdf568bf663162486ce90e2e8c0e790}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a1bdf568bf663162486ce90e2e8c0e790}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!db\_type@{db\_type}}
+\index{db\_type@{db\_type}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{db\_type()}{db\_type()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+db\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the database column data type for this field, for the provided
+connection.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_abf4616f38c9d620756522da632e7aae2}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a70def83e98b26b3355480d6b66b88873}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_a69ba95a222e638af77b65fe3a7732474}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_a28364693f27793153a4b69ac2936b674}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_field_a8615e1813f08a664785ae0b672c83b7b}{django.\+contrib.\+postgres.\+search.\+Search\+Vector\+Field}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_query_field_a53974e884d6f62ee19ad816d719dbadd}{django.\+contrib.\+postgres.\+search.\+Search\+Query\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8ba38648a9dbc9e3648af3c93a292721}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8ba38648a9dbc9e3648af3c93a292721}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!deconstruct@{deconstruct}}
+\index{deconstruct@{deconstruct}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{deconstruct()}{deconstruct()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+deconstruct (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return enough information to recreate the field as a 4-tuple:
+
+ * The name of the field on the model, if contribute_to_class() has
+   been run.
+ * The import path of the field, including the class:e.g.
+   django.db.models.IntegerField This should be the most portable
+   version, so less specific may be better.
+ * A list of positional arguments.
+ * A dict of keyword arguments.
+
+Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):
+
+ * None, bool, str, int, float, complex, set, frozenset, list, tuple,
+   dict
+ * UUID
+ * datetime.datetime (naive), datetime.date
+ * top-level classes, top-level functions - will be referenced by their
+   full import path
+ * Storage instances - these have their own deconstruct() method
+
+This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.
+
+There's no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_a1d1bb0545b8f7aede0afb9f2ba4a8fcf}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a7b28adcc481365762083bd4a521cdfa0}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_aca3e9a36728a7b40dd239116c90b37fd}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_char_field_a60f7cc603c478dfa9fc379fbf26dce38}{django.\+db.\+models.\+fields.\+Char\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a0fa136e96ef4fdc84e6e7af0e943a46c}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_a75cba4b623e74bbc51a9806876f27ac4}{django.\+db.\+models.\+fields.\+Decimal\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_email_field_a39fb77fd3f4b62c8eb043ee8e6cc416a}{django.\+db.\+models.\+fields.\+Email\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_file_path_field_a52225a0c3baf7a5125007fadbe78dd22}{django.\+db.\+models.\+fields.\+File\+Path\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_i_p_address_field_a0fc95663ab5ec042f9c2967e2c688829}{django.\+db.\+models.\+fields.\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_generic_i_p_address_field_a3faf191026bba0aa714c89fa10b9a922}{django.\+db.\+models.\+fields.\+Generic\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_null_boolean_field_ad4a03db2f6a984e9e27f9aad83b4bccc}{django.\+db.\+models.\+fields.\+Null\+Boolean\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_slug_field_a934c29ff5bfb6ba7e65b48f4ec110cbc}{django.\+db.\+models.\+fields.\+Slug\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_text_field_a17c63c9f23077a8c8b0cf440cdde9615}{django.\+db.\+models.\+fields.\+Text\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_a05998ae189ad0eb05629099caa8b4226}{django.\+db.\+models.\+fields.\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_r_l_field_a6f85e41fc11a0d35cd9ec1def795d4d5}{django.\+db.\+models.\+fields.\+URLField}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_binary_field_a8c49499d0671aa10186e53cdd102850f}{django.\+db.\+models.\+fields.\+Binary\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_u_i_d_field_a6271adeef6d17db67abecf9a4d9baa09}{django.\+db.\+models.\+fields.\+UUIDField}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_file_field_afc4ec881c7685cacc4ab8bb57ee279e8}{django.\+db.\+models.\+fields.\+files.\+File\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_image_field_a4414b31c75d7135dc37f9759982b8b8a}{django.\+db.\+models.\+fields.\+files.\+Image\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad7d7c2eb92e666a755e16ad82ba3a68e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad7d7c2eb92e666a755e16ad82ba3a68e}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!formfield@{formfield}}
+\index{formfield@{formfield}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{formfield()}{formfield()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+formfield (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{form\+\_\+class = {\ttfamily None},  }\item[{}]{choices\+\_\+form\+\_\+class = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a django.forms.Field instance for this field.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a693e22b19878b5a4a1dfd0db82fd36ee}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_a9d4b51568af13f75bb6f9ba83c224424}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_a790282d0711f4183b066d872b01c9a70}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_boolean_field_abbf5abc1018ef97f9f4bd5190ef537d4}{django.\+db.\+models.\+fields.\+Boolean\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_char_field_ae465e766cec6365210b5a81c0fb393f5}{django.\+db.\+models.\+fields.\+Char\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a2ea3d070cf4c38cd760679415a3373cf}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_af64e85593f481e3532b86b24ff902633}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_ae9d30c576cee870e7ca872f73f545055}{django.\+db.\+models.\+fields.\+Decimal\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_duration_field_adab248d1b8c1d1239c6cc4db6efc1a44}{django.\+db.\+models.\+fields.\+Duration\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_email_field_a226b2c030500e543933c7b4cc422c4a8}{django.\+db.\+models.\+fields.\+Email\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_file_path_field_ac5c572bd8cd58aa14d0fa9341c935e62}{django.\+db.\+models.\+fields.\+File\+Path\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_float_field_aaf120479736d1df478aa782896a361b3}{django.\+db.\+models.\+fields.\+Float\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_integer_field_a3b9eae64b5422ffaabc352e4e6bb0341}{django.\+db.\+models.\+fields.\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_big_integer_field_ac329993ddbd81ca5cc93910f2001c19b}{django.\+db.\+models.\+fields.\+Big\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_generic_i_p_address_field_ae94fdab89a61a02370fc4b15a773a8cf}{django.\+db.\+models.\+fields.\+Generic\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_positive_big_integer_field_a256f23a884741e500c5eb019db08bdfe}{django.\+db.\+models.\+fields.\+Positive\+Big\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_positive_integer_field_a7e650e902e0194d92a1344909aabaa26}{django.\+db.\+models.\+fields.\+Positive\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_positive_small_integer_field_a031e004cb318de357747187dd50e8eac}{django.\+db.\+models.\+fields.\+Positive\+Small\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_slug_field_a1e925cb7398209ec2ae844057a74a016}{django.\+db.\+models.\+fields.\+Slug\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_text_field_a3952164f50708619e5f756d053aae451}{django.\+db.\+models.\+fields.\+Text\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_a2b0ae648eba8e5c39ed0e4255245bb66}{django.\+db.\+models.\+fields.\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_r_l_field_ae738e4884f99bafd11cd6c88d8379a5d}{django.\+db.\+models.\+fields.\+URLField}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_u_i_d_field_a9e357896aad3ccb9442c7fdcc7e9fa28}{django.\+db.\+models.\+fields.\+UUIDField}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_file_field_a1712f5c809e0e2f9fcf1970f01011e6b}{django.\+db.\+models.\+fields.\+files.\+File\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_image_field_a4cc3bf1ee9332a759691164181a98814}{django.\+db.\+models.\+fields.\+files.\+Image\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a85f91acf6a3c18e62aaa24e8cceaf7db}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a85f91acf6a3c18e62aaa24e8cceaf7db}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_choices@{get\_choices}}
+\index{get\_choices@{get\_choices}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_choices()}{get\_choices()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+choices (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{include\+\_\+blank = {\ttfamily True},  }\item[{}]{blank\+\_\+choice = {\ttfamily BLANK\+\_\+CHOICE\+\_\+DASH},  }\item[{}]{limit\+\_\+choices\+\_\+to = {\ttfamily None},  }\item[{}]{ordering = {\ttfamily ()} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return choices with a default blank choices included, for use
+as <select> choices for this field.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a38444ea9a4e9def0fb3fd884dd17480a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a38444ea9a4e9def0fb3fd884dd17480a}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_db\_prep\_save@{get\_db\_prep\_save}}
+\index{get\_db\_prep\_save@{get\_db\_prep\_save}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_db\_prep\_save()}{get\_db\_prep\_save()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+db\+\_\+prep\+\_\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return field's value prepared for saving into a database.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_a431206892c9243395da0eca563889274}{django.\+db.\+models.\+fields.\+Decimal\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8407c739c0103caf14b80ded610f5751}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a8407c739c0103caf14b80ded610f5751}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_db\_prep\_value@{get\_db\_prep\_value}}
+\index{get\_db\_prep\_value@{get\_db\_prep\_value}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_db\_prep\_value()}{get\_db\_prep\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+db\+\_\+prep\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{connection,  }\item[{}]{prepared = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return field's value prepared for interacting with the database backend.
+
+Used by the default implementations of get_db_prep_save().
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_a349820506fe0f802220754ebced24020}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1sql_1_1conversion_1_1_area_field_ac2130b346754c5374040a229cff56270}{django.\+contrib.\+gis.\+db.\+models.\+sql.\+conversion.\+Area\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1sql_1_1conversion_1_1_distance_field_a79b79fc1ed025f0dc4089a43a71fa372}{django.\+contrib.\+gis.\+db.\+models.\+sql.\+conversion.\+Distance\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_a3cbad77e5882c567e18ae6e10676131b}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a11f920817d17ae20f98cda446847ec41}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_a8298cf6569267f34eba8beb2c6d2bccd}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_duration_field_a137447672df895f1231a5528a6226bcf}{django.\+db.\+models.\+fields.\+Duration\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_generic_i_p_address_field_a791d458decedb101b5b3f8c96c493bcd}{django.\+db.\+models.\+fields.\+Generic\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_aef230b6f2b566c738e344b1c1eb0fed0}{django.\+db.\+models.\+fields.\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_binary_field_abdae1e870e60608003d2a9cff6a226cf}{django.\+db.\+models.\+fields.\+Binary\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_u_i_d_field_ab3831e942d5072104792398459fdb3c0}{django.\+db.\+models.\+fields.\+UUIDField}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2e04d4492f5f3b213db1ad412b0a1caf}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2e04d4492f5f3b213db1ad412b0a1caf}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_default@{get\_default}}
+\index{get\_default@{get\_default}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_default()}{get\_default()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+default (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the default value for this field.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_binary_field_a4a9a6c8b758750beffe56e7c0b84beb2}{django.\+db.\+models.\+fields.\+Binary\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa02eeb0a394accc4246bfd8cf3875f03}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aa02eeb0a394accc4246bfd8cf3875f03}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_filter\_kwargs\_for\_object@{get\_filter\_kwargs\_for\_object}}
+\index{get\_filter\_kwargs\_for\_object@{get\_filter\_kwargs\_for\_object}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_filter\_kwargs\_for\_object()}{get\_filter\_kwargs\_for\_object()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+filter\+\_\+kwargs\+\_\+for\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dict that when passed as kwargs to self.model.filter(), would
+yield all instances having the same value for this field as obj has.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7c7cbfa6e433739449a847df1e7df33b}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a7c7cbfa6e433739449a847df1e7df33b}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_pk\_value\_on\_save@{get\_pk\_value\_on\_save}}
+\index{get\_pk\_value\_on\_save@{get\_pk\_value\_on\_save}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_pk\_value\_on\_save()}{get\_pk\_value\_on\_save()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+pk\+\_\+value\+\_\+on\+\_\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook to generate new PK values on save. This method is called when
+saving instances with no primary key value set. If this method returns
+something else than None, then the returned value is used when saving
+the new instance.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0cda21229264b6f54e126b02638d540f}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a0cda21229264b6f54e126b02638d540f}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!get\_prep\_value@{get\_prep\_value}}
+\index{get\_prep\_value@{get\_prep\_value}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{get\_prep\_value()}{get\_prep\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+get\+\_\+prep\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform preliminary non-db specific value checks and conversions.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_ae45e08a3bda4b44b25d2ff2bf5afd0ea}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1sql_1_1conversion_1_1_area_field_af7d37487f8616c756bce2465e2aa1356}{django.\+contrib.\+gis.\+db.\+models.\+sql.\+conversion.\+Area\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1sql_1_1conversion_1_1_distance_field_af0e5bc85dceee5f257df3dd9940c1c9d}{django.\+contrib.\+gis.\+db.\+models.\+sql.\+conversion.\+Distance\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_ab029fa5f2bbbc33c855a0af9e95a9c5b}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_boolean_field_a9eb0a3d4cd38adb1dd3ee1f12b135ad2}{django.\+db.\+models.\+fields.\+Boolean\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_char_field_aceac22c63bdba4b2c3b4158ddca67bab}{django.\+db.\+models.\+fields.\+Char\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a117a9a9bed5c50b7be7c8f36f799e8ee}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_a3445cb0066d0bf768ed88d731f27acb4}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_a08cb382fbc2e9acc7fbbd05286a26abc}{django.\+db.\+models.\+fields.\+Decimal\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_file_path_field_a70aa4dbe33098c372b8a9b1f6c2cd036}{django.\+db.\+models.\+fields.\+File\+Path\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_float_field_a83300cd030bb8512f2d72896f4de3deb}{django.\+db.\+models.\+fields.\+Float\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_integer_field_a19f0b0c37eabddba1aa719de76518041}{django.\+db.\+models.\+fields.\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_i_p_address_field_a34ddd57e84bd0bfa754d64417fbe04a3}{django.\+db.\+models.\+fields.\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_generic_i_p_address_field_a3d4d5c468d39f43adef956cfde1fe03b}{django.\+db.\+models.\+fields.\+Generic\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_text_field_a80ab59ddff16f60c72313bc85480bf5a}{django.\+db.\+models.\+fields.\+Text\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_a317f13978815e2c14ac539ec07e22f8b}{django.\+db.\+models.\+fields.\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_u_i_d_field_aab7457f26d3987f8c0524e81bbe6e2b1}{django.\+db.\+models.\+fields.\+UUIDField}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_file_field_a29859f55593983ddbdd49128cc7d07f0}{django.\+db.\+models.\+fields.\+files.\+File\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_aeeb5b005ba6af0a24caac3e4676cd931}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_aeeb5b005ba6af0a24caac3e4676cd931}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!has\_default@{has\_default}}
+\index{has\_default@{has\_default}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{has\_default()}{has\_default()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+has\+\_\+default (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a boolean of whether this field has a default value.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a61f0018c4d9e215d274f1f9270fd9d4e}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a61f0018c4d9e215d274f1f9270fd9d4e}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!pre\_save@{pre\_save}}
+\index{pre\_save@{pre\_save}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{pre\_save()}{pre\_save()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+pre\+\_\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+instance,  }\item[{}]{add }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return field's value just before saving.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_accd53f31ef53e23bb58ac67b7c8b71e1}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_a97661f54a2dcd0c3c3149f5b28147d98}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_af8460c86a0f618cf18033c4423f95b62}{django.\+db.\+models.\+fields.\+Time\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_file_field_ab34b93e5fc063b5f1760d7ad883fc7f6}{django.\+db.\+models.\+fields.\+files.\+File\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01917bc8b07f5e3ce3246f9e7f27ec8a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01917bc8b07f5e3ce3246f9e7f27ec8a}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!rel\_db\_type@{rel\_db\_type}}
+\index{rel\_db\_type@{rel\_db\_type}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{rel\_db\_type()}{rel\_db\_type()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+rel\+\_\+db\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the data type that a related field pointing to this field should
+use. For example, this method is called by ForeignKey and OneToOneField
+to determine its data type.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_auto_field_a699c70fb5ef86e8ea3a474622ce69230}{django.\+db.\+models.\+fields.\+Auto\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_big_auto_field_a31767c22d6653a9816aaa842590e25de}{django.\+db.\+models.\+fields.\+Big\+Auto\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_small_auto_field_ab7f6dafa16d0a91734a9982a05b532c3}{django.\+db.\+models.\+fields.\+Small\+Auto\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab4581708e92e7d7a620ab93a11df8059}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ab4581708e92e7d7a620ab93a11df8059}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!run\_validators@{run\_validators}}
+\index{run\_validators@{run\_validators}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{run\_validators()}{run\_validators()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+run\+\_\+validators (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_a6563f5251cccd51e16984682567868a3}{rest\+\_\+framework.\+serializers.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a106a15d3035116d54baed872c00f07fb}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a106a15d3035116d54baed872c00f07fb}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!select\_format@{select\_format}}
+\index{select\_format@{select\_format}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{select\_format()}{select\_format()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+select\+\_\+format (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{sql,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Custom format for select clauses. For example, GIS columns need to be
+selected as AsText(table.col) on MySQL as the table.col data can't be
+used by Django.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aee7735cda7848a42aaed3e889d0828f5}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_extent_field_ad303d2b0e00666bc4de69e608954ebf5}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Extent\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2fcfa4107860025f80c46fd3c6ca5056}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a2fcfa4107860025f80c46fd3c6ca5056}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!to\_python@{to\_python}}
+\index{to\_python@{to\_python}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{to\_python()}{to\_python()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+to\+\_\+python (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert the input value into the expected Python data type, raising
+django.core.exceptions.ValidationError if the data can't be converted.
+Return the converted value. Subclasses should override this.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_a7f32228c598e49ed7ccb5cd92845dabe}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_a6ed4b2bf847485070ba98270f4a7f122}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_boolean_field_aeb8bdbfae832d39e2b0d784afd98b909}{django.\+db.\+models.\+fields.\+Boolean\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_char_field_acd2b6475226affe2b0ed61c47451f675}{django.\+db.\+models.\+fields.\+Char\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a26430ac53bf453ff7dbca5cb103b583d}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_acaf14405f2a1bc33b2085aaf960593e5}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_ab4c6f75488c0b7567bb045bf65e72c11}{django.\+db.\+models.\+fields.\+Decimal\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_duration_field_aa3d81592f4c1fe8662151264b4d10c2d}{django.\+db.\+models.\+fields.\+Duration\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_float_field_a2dcf18776f48b0f5d164b54c993bed29}{django.\+db.\+models.\+fields.\+Float\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_integer_field_ad2b09720bb813f9dddd97ce7c1d552a7}{django.\+db.\+models.\+fields.\+Integer\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_generic_i_p_address_field_a6b2db62844dd5fe9d806969dc4d9258e}{django.\+db.\+models.\+fields.\+Generic\+IPAddress\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_text_field_a707501664ad9d0519f3f7a55527f843d}{django.\+db.\+models.\+fields.\+Text\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_a29471422ea2e3765ba8d6d0916090c49}{django.\+db.\+models.\+fields.\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_binary_field_aecd3682c3351b21401ba5cd9aa40a264}{django.\+db.\+models.\+fields.\+Binary\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_u_u_i_d_field_aa9810f4904df694a824e3b83de2941c5}{django.\+db.\+models.\+fields.\+UUIDField}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af2540ae86a9f481781605c27a279d410}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af2540ae86a9f481781605c27a279d410}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!validate@{validate}}
+\index{validate@{validate}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+validate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{model\+\_\+instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate value and raise ValidationError if necessary. Subclasses
+should override this to provide validation logic.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1authtoken_1_1serializers_1_1_auth_token_serializer_a5b89d7a1a196c2ece61d3a50cdfd3d12}{rest\+\_\+framework.\+authtoken.\+serializers.\+Auth\+Token\+Serializer}}, \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_abf045d9883f958c06bb00c1c1338e21b}{rest\+\_\+framework.\+serializers.\+Serializer}}, \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer_ae08d154a256b8e0eec4c9b5fb2f8a08b}{rest\+\_\+framework.\+serializers.\+List\+Serializer}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_ad0a4dd4a869e0b21ad62163ff25debe8}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_ab792081908baf477fa942733e34d8c90}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_af4d937406c1476bb471a163b1cfcf52b}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_af4d937406c1476bb471a163b1cfcf52b}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!validators@{validators}}
+\index{validators@{validators}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{validators()}{validators()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+validators (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Some validators can't be created at field initialization time.
+This method provides a way to delay their creation until required.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_decimal_field_a58a8ed0a4797aa7748e97fba31fcaf4a}{django.\+db.\+models.\+fields.\+Decimal\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_integer_field_a41a8a46e6f566c13abf73150388eedd6}{django.\+db.\+models.\+fields.\+Integer\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_ac4c357994cdcbb718c77ad39e939e1a5}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_ac4c357994cdcbb718c77ad39e939e1a5}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!value\_from\_object@{value\_from\_object}}
+\index{value\_from\_object@{value\_from\_object}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{value\_from\_object()}{value\_from\_object()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+value\+\_\+from\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value of this field in the given model instance.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a131d6e507045e7dda386e18d1b2cc721}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a131d6e507045e7dda386e18d1b2cc721}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!value\_to\_string@{value\_to\_string}}
+\index{value\_to\_string@{value\_to\_string}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{value\_to\_string()}{value\_to\_string()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+fields.\+Field.\+value\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a string value of this field from the passed obj.
+This is used by the serialization framework.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field_aa9cfa97679128c1c9b9fbe992ffff6a7}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Field}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_h_store_field_a24ba8b90d16fdd5e44948ee9fe7c1e38}{django.\+contrib.\+postgres.\+fields.\+hstore.\+HStore\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field_a456d8ab9f8b8c042a621efe7be70ab42}{django.\+db.\+models.\+fields.\+Date\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_time_field_a25a1bb5f008316c1d08f561510932a3a}{django.\+db.\+models.\+fields.\+Date\+Time\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_duration_field_a23f3fed4a50ae0bcd84e9b32d68cb4eb}{django.\+db.\+models.\+fields.\+Duration\+Field}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_time_field_a355d76cfa1b730d707decbcfd67c7f83}{django.\+db.\+models.\+fields.\+Time\+Field}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_binary_field_ac7210403e47cbded55dd6eb42f5d6089}{django.\+db.\+models.\+fields.\+Binary\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01bac1cd1c2b285d5762549dad0faf3a}\label{classdjango_1_1db_1_1models_1_1fields_1_1_field_a01bac1cd1c2b285d5762549dad0faf3a}} 
+\index{django.db.models.fields.Field@{django.db.models.fields.Field}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.db.models.fields.Field@{django.db.models.fields.Field}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+db.\+models.\+fields.\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid\_choice'}: \_(\textcolor{stringliteral}{'Value \%(value)r is not a valid choice.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'null'}: \_(\textcolor{stringliteral}{'This field cannot be null.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'blank'}: \_(\textcolor{stringliteral}{'This field cannot be blank.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'unique'}: \_(\textcolor{stringliteral}{'\%(model\_name)s with this \%(field\_label)s '}}
+\DoxyCodeLine{                    \textcolor{stringliteral}{'already exists.'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: The 'lookup\_type' is one of 'date', 'year' or 'month'.}}
+\DoxyCodeLine{        \textcolor{comment}{\# Eg: "{}Title must be unique for pub\_date year"{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'unique\_for\_date'}: \_(\textcolor{stringliteral}{"{}\%(field\_label)s must be unique for "{}}}
+\DoxyCodeLine{                             \textcolor{stringliteral}{"{}\%(date\_field\_label)s \%(lookup\_type)s."{}}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/fields/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

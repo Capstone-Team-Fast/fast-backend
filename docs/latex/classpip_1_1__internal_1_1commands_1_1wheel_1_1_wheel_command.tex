@@ -1,0 +1,83 @@
+\hypertarget{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command}{}\doxysection{pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command Class Reference}
+\label{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command}\index{pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_a099839713a1e331c78e0bac9ca3c7d7a}{add\+\_\+options}} (self)
+\item 
+int \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_aef0e01f600b1c5d1c36a29ac5a1a4d65}{run}} (self, Values options, List\mbox{[}str\mbox{]} args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_ab44fea5ac7551225d03ea169a57c9500}{usage}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Build Wheel archives for your requirements and dependencies.
+
+Wheel is a built-package format, and offers the advantage of not
+recompiling your software during every install. For more details, see the
+wheel docs: https://wheel.readthedocs.io/en/latest/
+
+Requirements: setuptools>=0.8, and wheel.
+
+'pip wheel' uses the bdist_wheel setuptools extension from the wheel
+package to build individual wheels.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_a099839713a1e331c78e0bac9ca3c7d7a}\label{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_a099839713a1e331c78e0bac9ca3c7d7a}} 
+\index{pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}!add\_options@{add\_options}}
+\index{add\_options@{add\_options}!pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}}
+\doxysubsubsection{\texorpdfstring{add\_options()}{add\_options()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command.\+add\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1cli_1_1base__command_1_1_command}{pip.\+\_\+internal.\+cli.\+base\+\_\+command.\+Command}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_aef0e01f600b1c5d1c36a29ac5a1a4d65}\label{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_aef0e01f600b1c5d1c36a29ac5a1a4d65}} 
+\index{pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}!run@{run}}
+\index{run@{run}!pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily  int pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Values}]{options,  }\item[{List\mbox{[}str\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1cli_1_1base__command_1_1_command}{pip.\+\_\+internal.\+cli.\+base\+\_\+command.\+Command}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_ab44fea5ac7551225d03ea169a57c9500}\label{classpip_1_1__internal_1_1commands_1_1wheel_1_1_wheel_command_ab44fea5ac7551225d03ea169a57c9500}} 
+\index{pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}!usage@{usage}}
+\index{usage@{usage}!pip.\_internal.commands.wheel.WheelCommand@{pip.\_internal.commands.wheel.WheelCommand}}
+\doxysubsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily string pip.\+\_\+internal.\+commands.\+wheel.\+Wheel\+Command.\+usage\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] <requirement specifier> ...}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] -\/r <requirements file> ...}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] [-\/e] <vcs project url> ...}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] [-\/e] <local project path> ...}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] <archive url/path> ..."{}"{}"{}}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/commands/wheel.\+py\end{DoxyCompactItemize}

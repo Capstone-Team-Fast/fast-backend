@@ -1,0 +1,65 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest}{}\doxysection{django.\+db.\+models.\+functions.\+comparison.\+Greatest Class Reference}
+\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest}\index{django.db.models.functions.comparison.Greatest@{django.db.models.functions.comparison.Greatest}}
+
+
+Inheritance diagram for django.\+db.\+models.\+functions.\+comparison.\+Greatest\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+functions.\+comparison.\+Greatest\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aad469cc5e509e0587d3dbdf2b4764388}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$expressions, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aaf322c02d0f14de2249a9131fc6947f0}{as\+\_\+sqlite}} (self, compiler, connection, $\ast$$\ast$extra\+\_\+context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_af8c2f37d5125cbe96cdf9e515f1042ec}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_af8c2f37d5125cbe96cdf9e515f1042ec}} 
+string {\bfseries function} = \textquotesingle{}GREATEST\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Return the maximum expression.
+
+If any expression is null the return value is database-specific:
+On PostgreSQL, the maximum not-null expression is returned.
+On MySQL, Oracle, and SQLite, if any expression is null, null is returned.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aad469cc5e509e0587d3dbdf2b4764388}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aad469cc5e509e0587d3dbdf2b4764388}} 
+\index{django.db.models.functions.comparison.Greatest@{django.db.models.functions.comparison.Greatest}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.functions.comparison.Greatest@{django.db.models.functions.comparison.Greatest}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+functions.\+comparison.\+Greatest.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{expressions,  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aaf322c02d0f14de2249a9131fc6947f0}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest_aaf322c02d0f14de2249a9131fc6947f0}} 
+\index{django.db.models.functions.comparison.Greatest@{django.db.models.functions.comparison.Greatest}!as\_sqlite@{as\_sqlite}}
+\index{as\_sqlite@{as\_sqlite}!django.db.models.functions.comparison.Greatest@{django.db.models.functions.comparison.Greatest}}
+\doxysubsubsection{\texorpdfstring{as\_sqlite()}{as\_sqlite()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+functions.\+comparison.\+Greatest.\+as\+\_\+sqlite (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{$\ast$$\ast$}]{extra\+\_\+context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Use the MAX function on SQLite.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_s_q_lite_numeric_mixin}{django.\+db.\+models.\+expressions.\+SQLite\+Numeric\+Mixin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/functions/comparison.\+py\end{DoxyCompactItemize}

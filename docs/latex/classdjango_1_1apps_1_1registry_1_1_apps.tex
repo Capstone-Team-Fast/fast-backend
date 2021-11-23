@@ -1,0 +1,301 @@
+\hypertarget{classdjango_1_1apps_1_1registry_1_1_apps}{}\doxysection{django.\+apps.\+registry.\+Apps Class Reference}
+\label{classdjango_1_1apps_1_1registry_1_1_apps}\index{django.apps.registry.Apps@{django.apps.registry.Apps}}
+
+
+Inheritance diagram for django.\+apps.\+registry.\+Apps\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_aede3b55c19eca7a398f1c846aaede721}\label{classdjango_1_1apps_1_1registry_1_1_apps_aede3b55c19eca7a398f1c846aaede721}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, installed\+\_\+apps=())
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a32d20690174973f17f6f90411fdc66f7}{populate}} (self, installed\+\_\+apps=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_ad6fb1dd4c6fe9a6eda870a8bd40637fe}{check\+\_\+apps\+\_\+ready}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_aecc29621c2c6ba865571c4a80f8ae16b}{check\+\_\+models\+\_\+ready}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a61d77b3e6418c9a0f4a275a02dc6ea77}{get\+\_\+app\+\_\+configs}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a6af9ec3ee6ad673c5e8ddc8c5fae6665}{get\+\_\+app\+\_\+config}} (self, app\+\_\+label)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a13f52d8f06f92f62a872ac72369046d8}{get\+\_\+models}} (self, include\+\_\+auto\+\_\+created=False, include\+\_\+swapped=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a1722738559e3037cf8a08593373b8722}{get\+\_\+model}} (self, app\+\_\+label, model\+\_\+name=None, require\+\_\+ready=True)
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a3a940b0f28159f896efc6d2ee0053e21}\label{classdjango_1_1apps_1_1registry_1_1_apps_a3a940b0f28159f896efc6d2ee0053e21}} 
+def {\bfseries register\+\_\+model} (self, app\+\_\+label, model)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a3d207aa9742b3a6c90daff158a86bcdb}{is\+\_\+installed}} (self, app\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a6bf08657a76fffc35ac36397c5bf8b52}{get\+\_\+containing\+\_\+app\+\_\+config}} (self, object\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a1f7538579bf34258180bf6ec39e3ad40}{get\+\_\+registered\+\_\+model}} (self, app\+\_\+label, model\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a33919f7ae3592674248f55f4c2ac9cc1}{get\+\_\+swappable\+\_\+settings\+\_\+name}} (self, to\+\_\+string)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a247cf36e424a835d2d1c211077090220}{set\+\_\+available\+\_\+apps}} (self, available)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a7c128e2c2e7d2424daea3add910d8113}{unset\+\_\+available\+\_\+apps}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a8ae4c1eb0ea6e28b02d81c56248d3fd5}{set\+\_\+installed\+\_\+apps}} (self, installed)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_af7409dd22d1f192cb2d743622ef08ff7}{unset\+\_\+installed\+\_\+apps}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a3dabf3bb1475c2e1ce598cf59420d96c}{clear\+\_\+cache}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a6f34f88f9f02ba23cea53e793ae3c89c}{lazy\+\_\+model\+\_\+operation}} (self, function, $\ast$model\+\_\+keys)
+\item 
+def \mbox{\hyperlink{classdjango_1_1apps_1_1registry_1_1_apps_a4e7a349e650b3d4b0b70ce5554f59ed2}{do\+\_\+pending\+\_\+operations}} (self, model)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a10087b0b4a316aa83de3f97bf955ef31}\label{classdjango_1_1apps_1_1registry_1_1_apps_a10087b0b4a316aa83de3f97bf955ef31}} 
+{\bfseries all\+\_\+models}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a4c80626b629b05cfdd44a843290d7c2b}\label{classdjango_1_1apps_1_1registry_1_1_apps_a4c80626b629b05cfdd44a843290d7c2b}} 
+{\bfseries app\+\_\+configs}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a02cd7774f0c9c3d48073ce241ebf39d4}\label{classdjango_1_1apps_1_1registry_1_1_apps_a02cd7774f0c9c3d48073ce241ebf39d4}} 
+{\bfseries stored\+\_\+app\+\_\+configs}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_ab63e3c2896cf628215f7cfae69ed0bce}\label{classdjango_1_1apps_1_1registry_1_1_apps_ab63e3c2896cf628215f7cfae69ed0bce}} 
+{\bfseries apps\+\_\+ready}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a514ca283738ee59156561385e93440d5}\label{classdjango_1_1apps_1_1registry_1_1_apps_a514ca283738ee59156561385e93440d5}} 
+{\bfseries models\+\_\+ready}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a5478a6336cfc3361a075bad4bc1ebaab}\label{classdjango_1_1apps_1_1registry_1_1_apps_a5478a6336cfc3361a075bad4bc1ebaab}} 
+{\bfseries ready}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a75b59efef1cf81bb9ef77d0fabc1c87e}\label{classdjango_1_1apps_1_1registry_1_1_apps_a75b59efef1cf81bb9ef77d0fabc1c87e}} 
+{\bfseries ready\+\_\+event}
+\item 
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a1350cf3bb94cc1860c881ce7ef3676e8}\label{classdjango_1_1apps_1_1registry_1_1_apps_a1350cf3bb94cc1860c881ce7ef3676e8}} 
+{\bfseries loading}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A registry that stores the configuration of installed applications.
+
+It also keeps track of models, e.g. to provide reverse relations.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_ad6fb1dd4c6fe9a6eda870a8bd40637fe}\label{classdjango_1_1apps_1_1registry_1_1_apps_ad6fb1dd4c6fe9a6eda870a8bd40637fe}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!check\_apps\_ready@{check\_apps\_ready}}
+\index{check\_apps\_ready@{check\_apps\_ready}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{check\_apps\_ready()}{check\_apps\_ready()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+check\+\_\+apps\+\_\+ready (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Raise an exception if all apps haven't been imported yet.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_aecc29621c2c6ba865571c4a80f8ae16b}\label{classdjango_1_1apps_1_1registry_1_1_apps_aecc29621c2c6ba865571c4a80f8ae16b}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!check\_models\_ready@{check\_models\_ready}}
+\index{check\_models\_ready@{check\_models\_ready}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{check\_models\_ready()}{check\_models\_ready()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+check\+\_\+models\+\_\+ready (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Raise an exception if all models haven't been imported yet.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a3dabf3bb1475c2e1ce598cf59420d96c}\label{classdjango_1_1apps_1_1registry_1_1_apps_a3dabf3bb1475c2e1ce598cf59420d96c}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!clear\_cache@{clear\_cache}}
+\index{clear\_cache@{clear\_cache}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{clear\_cache()}{clear\_cache()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+clear\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clear all internal caches, for methods that alter the app registry.
+
+This is mostly used in tests.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a4e7a349e650b3d4b0b70ce5554f59ed2}\label{classdjango_1_1apps_1_1registry_1_1_apps_a4e7a349e650b3d4b0b70ce5554f59ed2}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!do\_pending\_operations@{do\_pending\_operations}}
+\index{do\_pending\_operations@{do\_pending\_operations}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{do\_pending\_operations()}{do\_pending\_operations()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+do\+\_\+pending\+\_\+operations (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a newly-prepared model and pass it to each function waiting for
+it. This is called at the very end of Apps.register_model().
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a6af9ec3ee6ad673c5e8ddc8c5fae6665}\label{classdjango_1_1apps_1_1registry_1_1_apps_a6af9ec3ee6ad673c5e8ddc8c5fae6665}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_app\_config@{get\_app\_config}}
+\index{get\_app\_config@{get\_app\_config}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_app\_config()}{get\_app\_config()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+app\+\_\+config (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Import applications and returns an app config for the given label.
+
+Raise LookupError if no application exists with this label.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a61d77b3e6418c9a0f4a275a02dc6ea77}\label{classdjango_1_1apps_1_1registry_1_1_apps_a61d77b3e6418c9a0f4a275a02dc6ea77}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_app\_configs@{get\_app\_configs}}
+\index{get\_app\_configs@{get\_app\_configs}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_app\_configs()}{get\_app\_configs()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+app\+\_\+configs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Import applications and return an iterable of app configs.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a6bf08657a76fffc35ac36397c5bf8b52}\label{classdjango_1_1apps_1_1registry_1_1_apps_a6bf08657a76fffc35ac36397c5bf8b52}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_containing\_app\_config@{get\_containing\_app\_config}}
+\index{get\_containing\_app\_config@{get\_containing\_app\_config}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_containing\_app\_config()}{get\_containing\_app\_config()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+containing\+\_\+app\+\_\+config (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{object\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Look for an app config containing a given object.
+
+object_name is the dotted Python path to the object.
+
+Return the app config for the inner application in case of nesting.
+Return None if the object isn't in any registered app config.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a1722738559e3037cf8a08593373b8722}\label{classdjango_1_1apps_1_1registry_1_1_apps_a1722738559e3037cf8a08593373b8722}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_model@{get\_model}}
+\index{get\_model@{get\_model}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_model()}{get\_model()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{model\+\_\+name = {\ttfamily None},  }\item[{}]{require\+\_\+ready = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the model matching the given app_label and model_name.
+
+As a shortcut, app_label may be in the form <app_label>.<model_name>.
+
+model_name is case-insensitive.
+
+Raise LookupError if no application exists with this label, or no
+model exists with this name in the application. Raise ValueError if
+called with a single argument that doesn't contain exactly one dot.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a13f52d8f06f92f62a872ac72369046d8}\label{classdjango_1_1apps_1_1registry_1_1_apps_a13f52d8f06f92f62a872ac72369046d8}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_models@{get\_models}}
+\index{get\_models@{get\_models}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_models()}{get\_models()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+models (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{include\+\_\+auto\+\_\+created = {\ttfamily False},  }\item[{}]{include\+\_\+swapped = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of all installed models.
+
+By default, the following models aren't included:
+
+- auto-created models for many-to-many relations without
+  an explicit intermediate table,
+- models that have been swapped out.
+
+Set the corresponding keyword argument to True to include such models.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a1f7538579bf34258180bf6ec39e3ad40}\label{classdjango_1_1apps_1_1registry_1_1_apps_a1f7538579bf34258180bf6ec39e3ad40}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_registered\_model@{get\_registered\_model}}
+\index{get\_registered\_model@{get\_registered\_model}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_registered\_model()}{get\_registered\_model()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+registered\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{model\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Similar to get_model(), but doesn't require that an app exists with
+the given app_label.
+
+It's safe to call this method at import time, even while the registry
+is being populated.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a33919f7ae3592674248f55f4c2ac9cc1}\label{classdjango_1_1apps_1_1registry_1_1_apps_a33919f7ae3592674248f55f4c2ac9cc1}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!get\_swappable\_settings\_name@{get\_swappable\_settings\_name}}
+\index{get\_swappable\_settings\_name@{get\_swappable\_settings\_name}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{get\_swappable\_settings\_name()}{get\_swappable\_settings\_name()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+get\+\_\+swappable\+\_\+settings\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{to\+\_\+string }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For a given model string (e.g. "auth.User"), return the name of the
+corresponding settings name if it refers to a swappable model. If the
+referred model is not swappable, return None.
+
+This method is decorated with lru_cache because it's performance
+critical when it comes to migrations. Since the swappable settings don't
+change after Django has loaded the settings, there is no reason to get
+the respective settings attribute over and over again.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a3d207aa9742b3a6c90daff158a86bcdb}\label{classdjango_1_1apps_1_1registry_1_1_apps_a3d207aa9742b3a6c90daff158a86bcdb}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!is\_installed@{is\_installed}}
+\index{is\_installed@{is\_installed}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{is\_installed()}{is\_installed()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+is\+\_\+installed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check whether an application with this name exists in the registry.
+
+app_name is the full name of the app e.g. 'django.contrib.admin'.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a6f34f88f9f02ba23cea53e793ae3c89c}\label{classdjango_1_1apps_1_1registry_1_1_apps_a6f34f88f9f02ba23cea53e793ae3c89c}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!lazy\_model\_operation@{lazy\_model\_operation}}
+\index{lazy\_model\_operation@{lazy\_model\_operation}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{lazy\_model\_operation()}{lazy\_model\_operation()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+lazy\+\_\+model\+\_\+operation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{function,  }\item[{$\ast$}]{model\+\_\+keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a function and a number of ("app_label", "modelname") tuples, and
+when all the corresponding models have been imported and registered,
+call the function with the model classes as its arguments.
+
+The function passed to this method must accept exactly n models as
+arguments, where n=len(model_keys).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a32d20690174973f17f6f90411fdc66f7}\label{classdjango_1_1apps_1_1registry_1_1_apps_a32d20690174973f17f6f90411fdc66f7}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!populate@{populate}}
+\index{populate@{populate}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{populate()}{populate()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+populate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{installed\+\_\+apps = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load application configurations and models.
+
+Import each application module and then each model module.
+
+It is thread-safe and idempotent, but not reentrant.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a247cf36e424a835d2d1c211077090220}\label{classdjango_1_1apps_1_1registry_1_1_apps_a247cf36e424a835d2d1c211077090220}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!set\_available\_apps@{set\_available\_apps}}
+\index{set\_available\_apps@{set\_available\_apps}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{set\_available\_apps()}{set\_available\_apps()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+set\+\_\+available\+\_\+apps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{available }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Restrict the set of installed apps used by get_app_config[s].
+
+available must be an iterable of application names.
+
+set_available_apps() must be balanced with unset_available_apps().
+
+Primarily used for performance optimization in TransactionTestCase.
+
+This method is safe in the sense that it doesn't trigger any imports.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a8ae4c1eb0ea6e28b02d81c56248d3fd5}\label{classdjango_1_1apps_1_1registry_1_1_apps_a8ae4c1eb0ea6e28b02d81c56248d3fd5}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!set\_installed\_apps@{set\_installed\_apps}}
+\index{set\_installed\_apps@{set\_installed\_apps}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{set\_installed\_apps()}{set\_installed\_apps()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+set\+\_\+installed\+\_\+apps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{installed }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enable a different set of installed apps for get_app_config[s].
+
+installed must be an iterable in the same format as INSTALLED_APPS.
+
+set_installed_apps() must be balanced with unset_installed_apps(),
+even if it exits with an exception.
+
+Primarily used as a receiver of the setting_changed signal in tests.
+
+This method may trigger new imports, which may add new models to the
+registry of all imported models. They will stay in the registry even
+after unset_installed_apps(). Since it isn't possible to replay
+imports safely (e.g. that could lead to registering listeners twice),
+models are registered when they're imported and never removed.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_a7c128e2c2e7d2424daea3add910d8113}\label{classdjango_1_1apps_1_1registry_1_1_apps_a7c128e2c2e7d2424daea3add910d8113}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!unset\_available\_apps@{unset\_available\_apps}}
+\index{unset\_available\_apps@{unset\_available\_apps}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{unset\_available\_apps()}{unset\_available\_apps()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+unset\+\_\+available\+\_\+apps (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cancel a previous call to set_available_apps().\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1apps_1_1registry_1_1_apps_af7409dd22d1f192cb2d743622ef08ff7}\label{classdjango_1_1apps_1_1registry_1_1_apps_af7409dd22d1f192cb2d743622ef08ff7}} 
+\index{django.apps.registry.Apps@{django.apps.registry.Apps}!unset\_installed\_apps@{unset\_installed\_apps}}
+\index{unset\_installed\_apps@{unset\_installed\_apps}!django.apps.registry.Apps@{django.apps.registry.Apps}}
+\doxysubsubsection{\texorpdfstring{unset\_installed\_apps()}{unset\_installed\_apps()}}
+{\footnotesize\ttfamily def django.\+apps.\+registry.\+Apps.\+unset\+\_\+installed\+\_\+apps (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cancel a previous call to set_installed_apps().\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/apps/registry.\+py\end{DoxyCompactItemize}

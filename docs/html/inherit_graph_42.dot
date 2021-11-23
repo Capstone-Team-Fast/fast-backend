@@ -1,0 +1,44 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1928 [label="list",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1928 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.contrib.admin.templatetags.admin\l_list.ResultList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1templatetags_1_1admin__list_1_1_result_list.html",tooltip=" "];
+  Node1928 -> Node1930 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1930 [label="django.contrib.gis.gdal.raster.band.\lBandList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1band_1_1_band_list.html",tooltip=" "];
+  Node1928 -> Node1931 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1931 [label="django.contrib.gis.gdal.raster.source.\lTransformPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1source_1_1_transform_point.html",tooltip=" "];
+  Node1928 -> Node1932 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1932 [label="django.forms.utils.ErrorList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1utils_1_1_error_list.html",tooltip=" "];
+  Node1932 -> Node1933 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1933 [label="django.contrib.admin.helpers.\lAdminErrorList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1helpers_1_1_admin_error_list.html",tooltip=" "];
+  Node1928 -> Node1934 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1934 [label="django.template.base.NodeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1template_1_1base_1_1_node_list.html",tooltip=" "];
+  Node1928 -> Node1935 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1935 [label="django.test.utils.ContextList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1utils_1_1_context_list.html",tooltip=" "];
+  Node1928 -> Node1936 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1936 [label="django.utils.regex\l_helper.Choice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1regex__helper_1_1_choice.html",tooltip=" "];
+  Node1928 -> Node1937 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1937 [label="django.utils.regex\l_helper.Group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1regex__helper_1_1_group.html",tooltip=" "];
+  Node1928 -> Node1938 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1938 [label="django.utils.regex\l_helper.NonCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1regex__helper_1_1_non_capture.html",tooltip=" "];
+  Node1928 -> Node1939 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1939 [label="pip._vendor.distlib.compat.\lConvertingList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1compat_1_1_converting_list.html",tooltip=" "];
+  Node1928 -> Node1940 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1940 [label="pip._vendor.html5lib.treebuilders.base.\lActiveFormattingElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1base_1_1_active_formatting_elements.html",tooltip=" "];
+  Node1928 -> Node1941 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1941 [label="psycopg2.extras.DictRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpsycopg2_1_1extras_1_1_dict_row.html",tooltip=" "];
+  Node1928 -> Node1942 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1942 [label="pytz.lazy.LazyList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpytz_1_1lazy_1_1_lazy_list.html",tooltip=" "];
+  Node1928 -> Node1943 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1943 [label="rest_framework.utils.serializer\l_helpers.ReturnList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1utils_1_1serializer__helpers_1_1_return_list.html",tooltip=" "];
+  Node1928 -> Node1944 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1944 [label="setuptools.command.easy\l_install.CommandSpec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1command_1_1easy__install_1_1_command_spec.html",tooltip=" "];
+  Node1944 -> Node1945 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1945 [label="setuptools.command.easy\l_install.WindowsCommandSpec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1command_1_1easy__install_1_1_windows_command_spec.html",tooltip=" "];
+  Node4029 [label="UserList",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4029 -> Node1932 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

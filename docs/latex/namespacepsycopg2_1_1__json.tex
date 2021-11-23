@@ -1,0 +1,97 @@
+\hypertarget{namespacepsycopg2_1_1__json}{}\doxysection{psycopg2.\+\_\+json Namespace Reference}
+\label{namespacepsycopg2_1_1__json}\index{psycopg2.\_json@{psycopg2.\_json}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__json_1_1_json}{Json}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepsycopg2_1_1__json_ac0250091ec7d7fa0e242481189a608f7}{register\+\_\+json}} (conn\+\_\+or\+\_\+curs=None, globally=False, loads=None, oid=None, array\+\_\+oid=None, name=\textquotesingle{}json\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacepsycopg2_1_1__json_af7164c5bc7d1223f601eef273ff2c2ca}{register\+\_\+default\+\_\+json}} (conn\+\_\+or\+\_\+curs=None, globally=False, loads=None)
+\item 
+def \mbox{\hyperlink{namespacepsycopg2_1_1__json_ab4b647baf57d905ee1fc2600d0ead5a5}{register\+\_\+default\+\_\+jsonb}} (conn\+\_\+or\+\_\+curs=None, globally=False, loads=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1__json_aa873305d63a12c5f9a6c8a0bf9e8821b}\label{namespacepsycopg2_1_1__json_aa873305d63a12c5f9a6c8a0bf9e8821b}} 
+int {\bfseries JSON\+\_\+\+OID} = 114
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1__json_a05241415bfb3a1f6a45ab0f082c3281f}\label{namespacepsycopg2_1_1__json_a05241415bfb3a1f6a45ab0f082c3281f}} 
+int {\bfseries JSONARRAY\+\_\+\+OID} = 199
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1__json_ab36176c0ca6d912825e95288070a74e6}\label{namespacepsycopg2_1_1__json_ab36176c0ca6d912825e95288070a74e6}} 
+int {\bfseries JSONB\+\_\+\+OID} = 3802
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1__json_a8be7e3f75bd2ca46414095155498b936}\label{namespacepsycopg2_1_1__json_a8be7e3f75bd2ca46414095155498b936}} 
+int {\bfseries JSONBARRAY\+\_\+\+OID} = 3807
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the JSON adaptation objects
+
+This module exists to avoid a circular import problem: pyscopg2.extras depends
+on psycopg2.extension, so I can't create the default JSON typecasters in
+extensions importing register_json from extras.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__json_af7164c5bc7d1223f601eef273ff2c2ca}\label{namespacepsycopg2_1_1__json_af7164c5bc7d1223f601eef273ff2c2ca}} 
+\index{psycopg2.\_json@{psycopg2.\_json}!register\_default\_json@{register\_default\_json}}
+\index{register\_default\_json@{register\_default\_json}!psycopg2.\_json@{psycopg2.\_json}}
+\doxysubsubsection{\texorpdfstring{register\_default\_json()}{register\_default\_json()}}
+{\footnotesize\ttfamily def psycopg2.\+\_\+json.\+register\+\_\+default\+\_\+json (\begin{DoxyParamCaption}\item[{}]{conn\+\_\+or\+\_\+curs = {\ttfamily None},  }\item[{}]{globally = {\ttfamily False},  }\item[{}]{loads = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create and register :sql:`json` typecasters for PostgreSQL 9.2 and following.
+
+Since PostgreSQL 9.2 :sql:`json` is a builtin type, hence its oid is known
+and fixed. This function allows specifying a customized *loads* function
+for the default :sql:`json` type without querying the database.
+All the parameters have the same meaning of `register_json()`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepsycopg2_1_1__json_ab4b647baf57d905ee1fc2600d0ead5a5}\label{namespacepsycopg2_1_1__json_ab4b647baf57d905ee1fc2600d0ead5a5}} 
+\index{psycopg2.\_json@{psycopg2.\_json}!register\_default\_jsonb@{register\_default\_jsonb}}
+\index{register\_default\_jsonb@{register\_default\_jsonb}!psycopg2.\_json@{psycopg2.\_json}}
+\doxysubsubsection{\texorpdfstring{register\_default\_jsonb()}{register\_default\_jsonb()}}
+{\footnotesize\ttfamily def psycopg2.\+\_\+json.\+register\+\_\+default\+\_\+jsonb (\begin{DoxyParamCaption}\item[{}]{conn\+\_\+or\+\_\+curs = {\ttfamily None},  }\item[{}]{globally = {\ttfamily False},  }\item[{}]{loads = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create and register :sql:`jsonb` typecasters for PostgreSQL 9.4 and following.
+
+As in `register_default_json()`, the function allows to register a
+customized *loads* function for the :sql:`jsonb` type at its known oid for
+PostgreSQL 9.4 and following versions.  All the parameters have the same
+meaning of `register_json()`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepsycopg2_1_1__json_ac0250091ec7d7fa0e242481189a608f7}\label{namespacepsycopg2_1_1__json_ac0250091ec7d7fa0e242481189a608f7}} 
+\index{psycopg2.\_json@{psycopg2.\_json}!register\_json@{register\_json}}
+\index{register\_json@{register\_json}!psycopg2.\_json@{psycopg2.\_json}}
+\doxysubsubsection{\texorpdfstring{register\_json()}{register\_json()}}
+{\footnotesize\ttfamily def psycopg2.\+\_\+json.\+register\+\_\+json (\begin{DoxyParamCaption}\item[{}]{conn\+\_\+or\+\_\+curs = {\ttfamily None},  }\item[{}]{globally = {\ttfamily False},  }\item[{}]{loads = {\ttfamily None},  }\item[{}]{oid = {\ttfamily None},  }\item[{}]{array\+\_\+oid = {\ttfamily None},  }\item[{}]{name = {\ttfamily \textquotesingle{}json\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create and register typecasters converting :sql:`json` type to Python objects.
+
+:param conn_or_curs: a connection or cursor used to find the :sql:`json`
+    and :sql:`json[]` oids; the typecasters are registered in a scope
+    limited to this object, unless *globally* is set to `!True`. It can be
+    `!None` if the oids are provided
+:param globally: if `!False` register the typecasters only on
+    *conn_or_curs*, otherwise register them globally
+:param loads: the function used to parse the data into a Python object. If
+    `!None` use `!json.loads()`, where `!json` is the module chosen
+    according to the Python version (see above)
+:param oid: the OID of the :sql:`json` type if known; If not, it will be
+    queried on *conn_or_curs*
+:param array_oid: the OID of the :sql:`json[]` array type if known;
+    if not, it will be queried on *conn_or_curs*
+:param name: the name of the data type to look for in *conn_or_curs*
+
+The connection or cursor passed to the function will be used to query the
+database and look for the OID of the :sql:`json` type (or an alternative
+type if *name* if provided). No query is performed if *oid* and *array_oid*
+are provided.  Raise `~psycopg2.ProgrammingError` if the type is not found.\end{DoxyVerb}
+ 

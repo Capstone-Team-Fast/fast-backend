@@ -1,0 +1,13 @@
+digraph "django.forms.models.ModelChoiceField"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="django.forms.models.Model\lChoiceField",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.forms.fields.Choice\lField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1fields_1_1_choice_field.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.forms.fields.Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1fields_1_1_field.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.forms.models.Model\lMultipleChoiceField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1models_1_1_model_multiple_choice_field.html",tooltip=" "];
+}

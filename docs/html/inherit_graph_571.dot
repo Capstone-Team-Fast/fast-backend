@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pkg_resources.extern.Vendor\lImporter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpkg__resources_1_1extern_1_1_vendor_importer.html",tooltip=" "];
+}

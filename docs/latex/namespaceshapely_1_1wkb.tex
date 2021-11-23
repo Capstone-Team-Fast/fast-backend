@@ -1,0 +1,66 @@
+\hypertarget{namespaceshapely_1_1wkb}{}\doxysection{shapely.\+wkb Namespace Reference}
+\label{namespaceshapely_1_1wkb}\index{shapely.wkb@{shapely.wkb}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkb_af9fec366cc3510124c3727d66b11c289}{loads}} (data, hex=False)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkb_a779eb11dfca68f16cfe72041aae6a2b7}{load}} (fp, hex=False)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkb_a9f32d4ca978f4dc7dd19178275e5d97e}{dumps}} (ob, hex=False, srid=None, $\ast$$\ast$kw)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkb_ae1af2ca7604cb633d5c4d4d6e328b4e3}{dump}} (ob, fp, hex=False, $\ast$$\ast$kw)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Load/dump geometries using the well-known binary (WKB) format
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1wkb_ae1af2ca7604cb633d5c4d4d6e328b4e3}\label{namespaceshapely_1_1wkb_ae1af2ca7604cb633d5c4d4d6e328b4e3}} 
+\index{shapely.wkb@{shapely.wkb}!dump@{dump}}
+\index{dump@{dump}!shapely.wkb@{shapely.wkb}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily def shapely.\+wkb.\+dump (\begin{DoxyParamCaption}\item[{}]{ob,  }\item[{}]{fp,  }\item[{}]{hex = {\ttfamily False},  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dump a geometry to an open file.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkb_a9f32d4ca978f4dc7dd19178275e5d97e}\label{namespaceshapely_1_1wkb_a9f32d4ca978f4dc7dd19178275e5d97e}} 
+\index{shapely.wkb@{shapely.wkb}!dumps@{dumps}}
+\index{dumps@{dumps}!shapely.wkb@{shapely.wkb}}
+\doxysubsubsection{\texorpdfstring{dumps()}{dumps()}}
+{\footnotesize\ttfamily def shapely.\+wkb.\+dumps (\begin{DoxyParamCaption}\item[{}]{ob,  }\item[{}]{hex = {\ttfamily False},  }\item[{}]{srid = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dump a WKB representation of a geometry to a byte string, or a
+hex-encoded string if ``hex=True``.
+
+Parameters
+----------
+ob : geometry
+    The geometry to export to well-known binary (WKB) representation
+hex : bool
+    If true, export the WKB as a hexidecimal string. The default is to
+    return a binary string/bytes object.
+srid : int
+    Spatial reference system ID to include in the output. The default value
+    means no SRID is included.
+**kw : kwargs
+    See available keyword output settings in ``shapely.geos.WKBWriter``.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkb_a779eb11dfca68f16cfe72041aae6a2b7}\label{namespaceshapely_1_1wkb_a779eb11dfca68f16cfe72041aae6a2b7}} 
+\index{shapely.wkb@{shapely.wkb}!load@{load}}
+\index{load@{load}!shapely.wkb@{shapely.wkb}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def shapely.\+wkb.\+load (\begin{DoxyParamCaption}\item[{}]{fp,  }\item[{}]{hex = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a geometry from an open file.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkb_af9fec366cc3510124c3727d66b11c289}\label{namespaceshapely_1_1wkb_af9fec366cc3510124c3727d66b11c289}} 
+\index{shapely.wkb@{shapely.wkb}!loads@{loads}}
+\index{loads@{loads}!shapely.wkb@{shapely.wkb}}
+\doxysubsubsection{\texorpdfstring{loads()}{loads()}}
+{\footnotesize\ttfamily def shapely.\+wkb.\+loads (\begin{DoxyParamCaption}\item[{}]{data,  }\item[{}]{hex = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a geometry from a WKB byte string, or hex-encoded string if
+``hex=True``.
+\end{DoxyVerb}
+ 

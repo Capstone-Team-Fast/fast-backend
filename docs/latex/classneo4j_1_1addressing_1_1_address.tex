@@ -1,0 +1,90 @@
+\hypertarget{classneo4j_1_1addressing_1_1_address}{}\doxysection{neo4j.\+addressing.\+Address Class Reference}
+\label{classneo4j_1_1addressing_1_1_address}\index{neo4j.addressing.Address@{neo4j.addressing.Address}}
+
+
+Inheritance diagram for neo4j.\+addressing.\+Address\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+addressing.\+Address\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a89a4dffd6e33d225a0fbbadb9589d1f5}\label{classneo4j_1_1addressing_1_1_address_a89a4dffd6e33d225a0fbbadb9589d1f5}} 
+def {\bfseries from\+\_\+socket} (cls, socket)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_ae3e1244ed7a735607a6dc0b7892fe05c}\label{classneo4j_1_1addressing_1_1_address_ae3e1244ed7a735607a6dc0b7892fe05c}} 
+def {\bfseries parse} (cls, s, default\+\_\+host=None, default\+\_\+port=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1addressing_1_1_address_a7053f9c3bae6fd1543a2ef63f12170a1}{parse\+\_\+list}} (cls, $\ast$s, default\+\_\+host=None, default\+\_\+port=None)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a9d0783b604ef29568a18193fd0d91ffa}\label{classneo4j_1_1addressing_1_1_address_a9d0783b604ef29568a18193fd0d91ffa}} 
+def {\bfseries \+\_\+\+\_\+new\+\_\+\+\_\+} (cls, iterable)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a9939684779d9a41eddfa460073477873}\label{classneo4j_1_1addressing_1_1_address_a9939684779d9a41eddfa460073477873}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_ac75249aa728a8b8e41f1ecf130b4bfa8}\label{classneo4j_1_1addressing_1_1_address_ac75249aa728a8b8e41f1ecf130b4bfa8}} 
+def {\bfseries host\+\_\+name} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_aedc111e78f46984fc7421c9ce8716afe}\label{classneo4j_1_1addressing_1_1_address_aedc111e78f46984fc7421c9ce8716afe}} 
+def {\bfseries host} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_ab7ef105aae00d168df217f7ee2d9108c}\label{classneo4j_1_1addressing_1_1_address_ab7ef105aae00d168df217f7ee2d9108c}} 
+def {\bfseries port} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1addressing_1_1_address_a993a899ac3d7360cac742bfadc278902}{resolve}} (self, family=0, resolver=None)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a0e047dc63d8856174b89918cfb8b5c62}\label{classneo4j_1_1addressing_1_1_address_a0e047dc63d8856174b89918cfb8b5c62}} 
+def {\bfseries port\+\_\+number} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a31bc9e58346238a88d4fe33f60d48305}\label{classneo4j_1_1addressing_1_1_address_a31bc9e58346238a88d4fe33f60d48305}} 
+{\bfseries family} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a7053f9c3bae6fd1543a2ef63f12170a1}\label{classneo4j_1_1addressing_1_1_address_a7053f9c3bae6fd1543a2ef63f12170a1}} 
+\index{neo4j.addressing.Address@{neo4j.addressing.Address}!parse\_list@{parse\_list}}
+\index{parse\_list@{parse\_list}!neo4j.addressing.Address@{neo4j.addressing.Address}}
+\doxysubsubsection{\texorpdfstring{parse\_list()}{parse\_list()}}
+{\footnotesize\ttfamily def neo4j.\+addressing.\+Address.\+parse\+\_\+list (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{s,  }\item[{}]{default\+\_\+host = {\ttfamily None},  }\item[{}]{default\+\_\+port = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Parse a string containing one or more socket addresses, each
+separated by whitespace.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1addressing_1_1_address_a993a899ac3d7360cac742bfadc278902}\label{classneo4j_1_1addressing_1_1_address_a993a899ac3d7360cac742bfadc278902}} 
+\index{neo4j.addressing.Address@{neo4j.addressing.Address}!resolve@{resolve}}
+\index{resolve@{resolve}!neo4j.addressing.Address@{neo4j.addressing.Address}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily def neo4j.\+addressing.\+Address.\+resolve (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{family = {\ttfamily 0},  }\item[{}]{resolver = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Carry out domain name resolution on this Address object.
+
+If a resolver function is supplied, and is callable, this is
+called first, with this object as its argument. This may yield
+multiple output addresses, which are chained into a subsequent
+regular DNS resolution call. If no resolver function is passed,
+the DNS resolution is carried out on the original Address
+object.
+
+This function returns a list of resolved Address objects.
+
+:param family: optional address family to filter resolved
+               addresses by (e.g. AF_INET6)
+:param resolver: optional customer resolver function to be
+                 called before regular DNS resolution
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1addressing_1_1_resolved_address_a7468b0fdf98fb09bbfc83a696be3ff90}{neo4j.\+addressing.\+Resolved\+Address}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/addressing.\+py\end{DoxyCompactItemize}

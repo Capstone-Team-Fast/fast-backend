@@ -1,0 +1,75 @@
+\hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer}{}\doxysection{setuptools.\+command.\+easy\+\_\+install.\+Script\+Writer Class Reference}
+\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer}\index{setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}}
+
+
+Inheritance diagram for setuptools.\+command.\+easy\+\_\+install.\+Script\+Writer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_aa7ead9e9848c94c2e7731fc34536b955}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_aa7ead9e9848c94c2e7731fc34536b955}} 
+def {\bfseries get\+\_\+script\+\_\+args} (cls, dist, executable=None, wininst=False)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_af1af5f53d540528b220d31314786c7b7}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_af1af5f53d540528b220d31314786c7b7}} 
+def {\bfseries get\+\_\+script\+\_\+header} (cls, script\+\_\+text, executable=None, wininst=False)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a5cbbc2c35ff56058a69d574cb10907a4}{get\+\_\+args}} (cls, dist, header=None)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a1faee20409374fa87b93b0ee9ed293db}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a1faee20409374fa87b93b0ee9ed293db}} 
+def {\bfseries get\+\_\+writer} (cls, force\+\_\+windows)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a1eae4e5243b93a8dd44ec91b0f4987f4}{best}} (cls)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_ac83d10c941931452c67d870cb9a740a1}{get\+\_\+header}} (cls, script\+\_\+text=\char`\"{}\char`\"{}, executable=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_add87ac1a8190275eb8e549a38aa3763b}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_add87ac1a8190275eb8e549a38aa3763b}} 
+{\bfseries template} = textwrap.\+dedent().lstrip()
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_ac4fc67e6673d774cd6af71b6eb982eb9}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_ac4fc67e6673d774cd6af71b6eb982eb9}} 
+{\bfseries command\+\_\+spec\+\_\+class} = \mbox{\hyperlink{classsetuptools_1_1command_1_1easy__install_1_1_command_spec}{Command\+Spec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Encapsulates behavior around writing entry point scripts for console and
+gui apps.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a1eae4e5243b93a8dd44ec91b0f4987f4}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a1eae4e5243b93a8dd44ec91b0f4987f4}} 
+\index{setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}!best@{best}}
+\index{best@{best}!setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}}
+\doxysubsubsection{\texorpdfstring{best()}{best()}}
+{\footnotesize\ttfamily def setuptools.\+command.\+easy\+\_\+install.\+Script\+Writer.\+best (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Select the best ScriptWriter for this environment.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classsetuptools_1_1command_1_1easy__install_1_1_windows_script_writer_a0e902494038a088017e95fdfe07b76f1}{setuptools.\+command.\+easy\+\_\+install.\+Windows\+Script\+Writer}}.
+
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a5cbbc2c35ff56058a69d574cb10907a4}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_a5cbbc2c35ff56058a69d574cb10907a4}} 
+\index{setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}!get\_args@{get\_args}}
+\index{get\_args@{get\_args}!setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}}
+\doxysubsubsection{\texorpdfstring{get\_args()}{get\_args()}}
+{\footnotesize\ttfamily def setuptools.\+command.\+easy\+\_\+install.\+Script\+Writer.\+get\+\_\+args (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{dist,  }\item[{}]{header = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Yield write_script() argument tuples for a distribution's
+console_scripts and gui_scripts entry points.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_ac83d10c941931452c67d870cb9a740a1}\label{classsetuptools_1_1command_1_1easy__install_1_1_script_writer_ac83d10c941931452c67d870cb9a740a1}} 
+\index{setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}!get\_header@{get\_header}}
+\index{get\_header@{get\_header}!setuptools.command.easy\_install.ScriptWriter@{setuptools.command.easy\_install.ScriptWriter}}
+\doxysubsubsection{\texorpdfstring{get\_header()}{get\_header()}}
+{\footnotesize\ttfamily def setuptools.\+command.\+easy\+\_\+install.\+Script\+Writer.\+get\+\_\+header (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{script\+\_\+text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{executable = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a #! line, getting options (if any) from script_text\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/command/easy\+\_\+install.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression}{}\doxysection{django.\+template.\+base.\+Filter\+Expression Class Reference}
+\label{classdjango_1_1template_1_1base_1_1_filter_expression}\index{django.template.base.FilterExpression@{django.template.base.FilterExpression}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_add1291624d87a0a9bbc56f54bbe5bb69}\label{classdjango_1_1template_1_1base_1_1_filter_expression_add1291624d87a0a9bbc56f54bbe5bb69}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, token, parser)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_a6684c886d90853c739bad98e6a771771}\label{classdjango_1_1template_1_1base_1_1_filter_expression_a6684c886d90853c739bad98e6a771771}} 
+def {\bfseries resolve} (self, context, ignore\+\_\+failures=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_adfabe49392eb95636c0261abf8b10d82}\label{classdjango_1_1template_1_1base_1_1_filter_expression_adfabe49392eb95636c0261abf8b10d82}} 
+def {\bfseries args\+\_\+check} (name, func, provided)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_affc763df1e4bf64d58e45e50eef635ca}\label{classdjango_1_1template_1_1base_1_1_filter_expression_affc763df1e4bf64d58e45e50eef635ca}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_a28c5b227562e275d9bfc0d612f5b8095}\label{classdjango_1_1template_1_1base_1_1_filter_expression_a28c5b227562e275d9bfc0d612f5b8095}} 
+{\bfseries token}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_a2c72fe18aba9225d8b4ae7a91905419f}\label{classdjango_1_1template_1_1base_1_1_filter_expression_a2c72fe18aba9225d8b4ae7a91905419f}} 
+{\bfseries filters}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_ae9822e6c55b6b9ec12551016786f528e}\label{classdjango_1_1template_1_1base_1_1_filter_expression_ae9822e6c55b6b9ec12551016786f528e}} 
+{\bfseries var}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_filter_expression_a4faf0702be2b8db18142c6a61df172c9}\label{classdjango_1_1template_1_1base_1_1_filter_expression_a4faf0702be2b8db18142c6a61df172c9}} 
+{\bfseries args\+\_\+check} = staticmethod(args\+\_\+check)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Parse a variable token and its optional filters (all as a single string),
+and return a list of tuples of the filter name and arguments.
+Sample::
+
+    >>> token = 'variable|default:"Default value"|date:"Y-m-d"'
+    >>> p = Parser('')
+    >>> fe = FilterExpression(token, p)
+    >>> len(fe.filters)
+    2
+    >>> fe.var
+    <Variable: 'variable'>
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/base.\+py\end{DoxyCompactItemize}

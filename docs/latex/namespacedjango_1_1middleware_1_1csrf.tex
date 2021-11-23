@@ -1,0 +1,85 @@
+\hypertarget{namespacedjango_1_1middleware_1_1csrf}{}\doxysection{django.\+middleware.\+csrf Namespace Reference}
+\label{namespacedjango_1_1middleware_1_1csrf}\index{django.middleware.csrf@{django.middleware.csrf}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1middleware_1_1csrf_1_1_csrf_view_middleware}{Csrf\+View\+Middleware}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1middleware_1_1csrf_a29ec2beea597e9598dfd9a2694999ab4}{get\+\_\+token}} (request)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1middleware_1_1csrf_a3f696919843a2956c56930ae3694724a}{rotate\+\_\+token}} (request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a7a66014fef43f91dcef1e5736bec3f6d}\label{namespacedjango_1_1middleware_1_1csrf_a7a66014fef43f91dcef1e5736bec3f6d}} 
+{\bfseries logger} = logging.\+get\+Logger(\textquotesingle{}django.\+security.\+csrf\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a304f711e80295ebfd7f385b871b26491}\label{namespacedjango_1_1middleware_1_1csrf_a304f711e80295ebfd7f385b871b26491}} 
+string {\bfseries REASON\+\_\+\+NO\+\_\+\+REFERER} = \char`\"{}Referer checking failed -\/ no Referer.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_acc291e13a5aab1428c5d857c702fc349}\label{namespacedjango_1_1middleware_1_1csrf_acc291e13a5aab1428c5d857c702fc349}} 
+string {\bfseries REASON\+\_\+\+BAD\+\_\+\+REFERER} = \char`\"{}Referer checking failed -\/ \%s does not match any trusted origins.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a5ce0fd59e19fd8a89b61930bfbe6676d}\label{namespacedjango_1_1middleware_1_1csrf_a5ce0fd59e19fd8a89b61930bfbe6676d}} 
+string {\bfseries REASON\+\_\+\+NO\+\_\+\+CSRF\+\_\+\+COOKIE} = \char`\"{}CSRF cookie not set.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a27b46f9abd566dc0f7e94b8126b5b0d6}\label{namespacedjango_1_1middleware_1_1csrf_a27b46f9abd566dc0f7e94b8126b5b0d6}} 
+string {\bfseries REASON\+\_\+\+BAD\+\_\+\+TOKEN} = \char`\"{}CSRF token missing or incorrect.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a877cfc331845d2520342504a895cc5b3}\label{namespacedjango_1_1middleware_1_1csrf_a877cfc331845d2520342504a895cc5b3}} 
+string {\bfseries REASON\+\_\+\+MALFORMED\+\_\+\+REFERER} = \char`\"{}Referer checking failed -\/ Referer is malformed.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_af1ab453816e9b73c4d4f0255474f1d65}\label{namespacedjango_1_1middleware_1_1csrf_af1ab453816e9b73c4d4f0255474f1d65}} 
+string {\bfseries REASON\+\_\+\+INSECURE\+\_\+\+REFERER} = \char`\"{}Referer checking failed -\/ Referer is insecure while host is secure.\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a279588bb073dbb7143166d87ab0c58a3}\label{namespacedjango_1_1middleware_1_1csrf_a279588bb073dbb7143166d87ab0c58a3}} 
+int {\bfseries CSRF\+\_\+\+SECRET\+\_\+\+LENGTH} = 32
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_ad697ff6858ab56baf3946925a4135fcb}\label{namespacedjango_1_1middleware_1_1csrf_ad697ff6858ab56baf3946925a4135fcb}} 
+int {\bfseries CSRF\+\_\+\+TOKEN\+\_\+\+LENGTH} = 2 $\ast$ CSRF\+\_\+\+SECRET\+\_\+\+LENGTH
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_ad5e9bd36fc52b95d7a87615bdc140c89}\label{namespacedjango_1_1middleware_1_1csrf_ad5e9bd36fc52b95d7a87615bdc140c89}} 
+{\bfseries CSRF\+\_\+\+ALLOWED\+\_\+\+CHARS} = string.\+ascii\+\_\+letters + string.\+digits
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a702ebf9093fe02f9f87427fec31237e8}\label{namespacedjango_1_1middleware_1_1csrf_a702ebf9093fe02f9f87427fec31237e8}} 
+string {\bfseries CSRF\+\_\+\+SESSION\+\_\+\+KEY} = \textquotesingle{}\+\_\+csrftoken\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Cross Site Request Forgery Middleware.
+
+This module provides a middleware that implements protection
+against request forgeries from other sites.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a29ec2beea597e9598dfd9a2694999ab4}\label{namespacedjango_1_1middleware_1_1csrf_a29ec2beea597e9598dfd9a2694999ab4}} 
+\index{django.middleware.csrf@{django.middleware.csrf}!get\_token@{get\_token}}
+\index{get\_token@{get\_token}!django.middleware.csrf@{django.middleware.csrf}}
+\doxysubsubsection{\texorpdfstring{get\_token()}{get\_token()}}
+{\footnotesize\ttfamily def django.\+middleware.\+csrf.\+get\+\_\+token (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the CSRF token required for a POST form. The token is an
+alphanumeric value. A new token is created if one is not already set.
+
+A side effect of calling this function is to make the csrf_protect
+decorator and the CsrfViewMiddleware add a CSRF cookie and a 'Vary: Cookie'
+header to the outgoing response.  For this reason, you may need to use this
+function lazily, as is done by the csrf context processor.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1middleware_1_1csrf_a3f696919843a2956c56930ae3694724a}\label{namespacedjango_1_1middleware_1_1csrf_a3f696919843a2956c56930ae3694724a}} 
+\index{django.middleware.csrf@{django.middleware.csrf}!rotate\_token@{rotate\_token}}
+\index{rotate\_token@{rotate\_token}!django.middleware.csrf@{django.middleware.csrf}}
+\doxysubsubsection{\texorpdfstring{rotate\_token()}{rotate\_token()}}
+{\footnotesize\ttfamily def django.\+middleware.\+csrf.\+rotate\+\_\+token (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Change the CSRF token in use for a request - should be done on login
+for security purposes.
+\end{DoxyVerb}
+ 

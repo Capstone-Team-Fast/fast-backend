@@ -1,0 +1,79 @@
+\hypertarget{classrest__framework_1_1versioning_1_1_namespace_versioning}{}\doxysection{rest\+\_\+framework.\+versioning.\+Namespace\+Versioning Class Reference}
+\label{classrest__framework_1_1versioning_1_1_namespace_versioning}\index{rest\_framework.versioning.NamespaceVersioning@{rest\_framework.versioning.NamespaceVersioning}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+versioning.\+Namespace\+Versioning\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+versioning.\+Namespace\+Versioning\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_namespace_versioning_a77cd6abb8d4145bf2d025f54711f16b0}{determine\+\_\+version}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_namespace_versioning_a625250f984f35873b9c0ce36d763d270}{reverse}} (self, viewname, args=None, kwargs=None, request=None, format=None, $\ast$$\ast$extra)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_namespace_versioning_add3e46847965da01374082cf285fd978}\label{classrest__framework_1_1versioning_1_1_namespace_versioning_add3e46847965da01374082cf285fd978}} 
+def {\bfseries get\+\_\+versioned\+\_\+viewname} (self, viewname, request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_namespace_versioning_ac933094c0b06ee107b81be72793b2cc3}\label{classrest__framework_1_1versioning_1_1_namespace_versioning_ac933094c0b06ee107b81be72793b2cc3}} 
+{\bfseries invalid\+\_\+version\+\_\+message} = \+\_\+(\textquotesingle{}Invalid version in URL path. Does not match any version namespace.\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}To the client this is the same style as `URLPathVersioning`.
+The difference is in the backend - this implementation uses
+Django's URL namespaces to determine the version.
+
+An example URL conf that is namespaced into two separate versions
+
+# users/urls.py
+urlpatterns = [
+    path('/users/', users_list, name='users-list'),
+    path('/users/<int:pk>/', users_detail, name='users-detail')
+]
+
+# urls.py
+urlpatterns = [
+    path('v1/', include('users.urls', namespace='v1')),
+    path('v2/', include('users.urls', namespace='v2'))
+]
+
+GET /1.0/something/ HTTP/1.1
+Host: example.com
+Accept: application/json
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_namespace_versioning_a77cd6abb8d4145bf2d025f54711f16b0}\label{classrest__framework_1_1versioning_1_1_namespace_versioning_a77cd6abb8d4145bf2d025f54711f16b0}} 
+\index{rest\_framework.versioning.NamespaceVersioning@{rest\_framework.versioning.NamespaceVersioning}!determine\_version@{determine\_version}}
+\index{determine\_version@{determine\_version}!rest\_framework.versioning.NamespaceVersioning@{rest\_framework.versioning.NamespaceVersioning}}
+\doxysubsubsection{\texorpdfstring{determine\_version()}{determine\_version()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+versioning.\+Namespace\+Versioning.\+determine\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_base_versioning}{rest\+\_\+framework.\+versioning.\+Base\+Versioning}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_namespace_versioning_a625250f984f35873b9c0ce36d763d270}\label{classrest__framework_1_1versioning_1_1_namespace_versioning_a625250f984f35873b9c0ce36d763d270}} 
+\index{rest\_framework.versioning.NamespaceVersioning@{rest\_framework.versioning.NamespaceVersioning}!reverse@{reverse}}
+\index{reverse@{reverse}!rest\_framework.versioning.NamespaceVersioning@{rest\_framework.versioning.NamespaceVersioning}}
+\doxysubsubsection{\texorpdfstring{reverse()}{reverse()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+versioning.\+Namespace\+Versioning.\+reverse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{viewname,  }\item[{}]{args = {\ttfamily None},  }\item[{}]{kwargs = {\ttfamily None},  }\item[{}]{request = {\ttfamily None},  }\item[{}]{format = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_base_versioning}{rest\+\_\+framework.\+versioning.\+Base\+Versioning}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/versioning.\+py\end{DoxyCompactItemize}

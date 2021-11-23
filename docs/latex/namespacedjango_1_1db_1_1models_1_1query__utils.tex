@@ -1,0 +1,88 @@
+\hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils}{}\doxysection{django.\+db.\+models.\+query\+\_\+utils Namespace Reference}
+\label{namespacedjango_1_1db_1_1models_1_1query__utils}\index{django.db.models.query\_utils@{django.db.models.query\_utils}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_deferred_attribute}{Deferred\+Attribute}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_filtered_relation}{Filtered\+Relation}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_invalid_query}{Invalid\+Query}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_invalid_query_type}{Invalid\+Query\+Type}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_q}{Q}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_register_lookup_mixin}{Register\+Lookup\+Mixin}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils_a95feaf8a4b046ab80a2715588f441d13}\label{namespacedjango_1_1db_1_1models_1_1query__utils_a95feaf8a4b046ab80a2715588f441d13}} 
+def {\bfseries subclasses} (cls)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1models_1_1query__utils_a23b30920fc7020a0cb8aa06561f9b2e0}{select\+\_\+related\+\_\+descend}} (field, restricted, requested, load\+\_\+fields, reverse=False)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1models_1_1query__utils_add41bf208c904d88376127e976d5352f}{refs\+\_\+expression}} (lookup\+\_\+parts, annotations)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1models_1_1query__utils_a8bd3399546635d010c2bf046875d4351}{check\+\_\+rel\+\_\+lookup\+\_\+compatibility}} (model, target\+\_\+opts, field)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils_ab7eb447af337599dc4ef08ee57c6192c}\label{namespacedjango_1_1db_1_1models_1_1query__utils_ab7eb447af337599dc4ef08ee57c6192c}} 
+{\bfseries Path\+Info} = namedtuple(\textquotesingle{}Path\+Info\textquotesingle{}, \textquotesingle{}from\+\_\+opts to\+\_\+opts target\+\_\+fields join\+\_\+field m2m direct filtered\+\_\+relation\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Various data structures used in query construction.
+
+Factored out from django.db.models.query to avoid making the main module very
+large and/or so that they can be used by other modules without getting into
+circular import difficulties.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils_a8bd3399546635d010c2bf046875d4351}\label{namespacedjango_1_1db_1_1models_1_1query__utils_a8bd3399546635d010c2bf046875d4351}} 
+\index{django.db.models.query\_utils@{django.db.models.query\_utils}!check\_rel\_lookup\_compatibility@{check\_rel\_lookup\_compatibility}}
+\index{check\_rel\_lookup\_compatibility@{check\_rel\_lookup\_compatibility}!django.db.models.query\_utils@{django.db.models.query\_utils}}
+\doxysubsubsection{\texorpdfstring{check\_rel\_lookup\_compatibility()}{check\_rel\_lookup\_compatibility()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+query\+\_\+utils.\+check\+\_\+rel\+\_\+lookup\+\_\+compatibility (\begin{DoxyParamCaption}\item[{}]{model,  }\item[{}]{target\+\_\+opts,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check that self.model is compatible with target_opts. Compatibility
+is OK if:
+  1) model and opts match (where proxy inheritance is removed)
+  2) model is parent of opts' model or the other way around
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils_add41bf208c904d88376127e976d5352f}\label{namespacedjango_1_1db_1_1models_1_1query__utils_add41bf208c904d88376127e976d5352f}} 
+\index{django.db.models.query\_utils@{django.db.models.query\_utils}!refs\_expression@{refs\_expression}}
+\index{refs\_expression@{refs\_expression}!django.db.models.query\_utils@{django.db.models.query\_utils}}
+\doxysubsubsection{\texorpdfstring{refs\_expression()}{refs\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+query\+\_\+utils.\+refs\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{lookup\+\_\+parts,  }\item[{}]{annotations }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if the lookup_parts contains references to the given annotations set.
+Because the LOOKUP_SEP is contained in the default annotation names, check
+each prefix of the lookup_parts for a match.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1db_1_1models_1_1query__utils_a23b30920fc7020a0cb8aa06561f9b2e0}\label{namespacedjango_1_1db_1_1models_1_1query__utils_a23b30920fc7020a0cb8aa06561f9b2e0}} 
+\index{django.db.models.query\_utils@{django.db.models.query\_utils}!select\_related\_descend@{select\_related\_descend}}
+\index{select\_related\_descend@{select\_related\_descend}!django.db.models.query\_utils@{django.db.models.query\_utils}}
+\doxysubsubsection{\texorpdfstring{select\_related\_descend()}{select\_related\_descend()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+query\+\_\+utils.\+select\+\_\+related\+\_\+descend (\begin{DoxyParamCaption}\item[{}]{field,  }\item[{}]{restricted,  }\item[{}]{requested,  }\item[{}]{load\+\_\+fields,  }\item[{}]{reverse = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if this field should be used to descend deeper for
+select_related() purposes. Used by both the query construction code
+(sql.query.fill_related_selections()) and the model instance creation code
+(query.get_klass_info()).
+
+Arguments:
+ * field - the field to be checked
+ * restricted - a boolean field, indicating if the field list has been
+   manually restricted using a requested clause)
+ * requested - The select_related() dictionary.
+ * load_fields - the set of fields to be loaded on this model
+ * reverse - boolean, True if we are checking a reverse select related
+\end{DoxyVerb}
+ 

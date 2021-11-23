@@ -1,0 +1,81 @@
+\hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer}{}\doxysection{neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer Class Reference}
+\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer}\index{neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}}
+
+
+Inheritance diagram for neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer\+:
+% FIG 0
+
+
+Collaboration diagram for neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a6ae3e291b4135bd3278ff6adc3b21065}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a6ae3e291b4135bd3278ff6adc3b21065}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, capacity=524288)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ac9a78a753e3c5380dad13cdb44cee253}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ac9a78a753e3c5380dad13cdb44cee253}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ae7a59989f760d20a5e8299d84643a98f}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ae7a59989f760d20a5e8299d84643a98f}} 
+def {\bfseries capacity} (self)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a83f5770bf774457602a24d84ec2a5df0}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a83f5770bf774457602a24d84ec2a5df0}} 
+def {\bfseries view} (self)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a6ef71adf656c14e8ed2229284fc1e7fe}{load}} (self, b)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a2a74574ff125baaf6190ebf9de358ff3}{receive}} (self, socket, n)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ae48e338b6cea42db7605ef893452c46a}{receive\+\_\+message}} (self, socket, n)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_adb5e3d85f9ae99a548d7ae7e112a477d}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_adb5e3d85f9ae99a548d7ae7e112a477d}} 
+def {\bfseries frame} (self)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_aec626594d7efbbcb35726540defc2e1f}{frame\+\_\+message}} (self)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_adae4a698a198c3efaf64b1d66089a110}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_adae4a698a198c3efaf64b1d66089a110}} 
+def {\bfseries discard\+\_\+message} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_aec626594d7efbbcb35726540defc2e1f}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_aec626594d7efbbcb35726540defc2e1f}} 
+\index{neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}!frame\_message@{frame\_message}}
+\index{frame\_message@{frame\_message}!neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}}
+\doxysubsubsection{\texorpdfstring{frame\_message()}{frame\_message()}}
+{\footnotesize\ttfamily def neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer.\+frame\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Construct a frame around the first complete message in the buffer.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a6ef71adf656c14e8ed2229284fc1e7fe}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a6ef71adf656c14e8ed2229284fc1e7fe}} 
+\index{neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}!load@{load}}
+\index{load@{load}!neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer.\+load (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Note: may modify buffer size
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a2a74574ff125baaf6190ebf9de358ff3}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_a2a74574ff125baaf6190ebf9de358ff3}} 
+\index{neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}!receive@{receive}}
+\index{receive@{receive}!neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily def neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer.\+receive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{socket,  }\item[{}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Note: may modify buffer size, should error if frame exists
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ae48e338b6cea42db7605ef893452c46a}\label{classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer_ae48e338b6cea42db7605ef893452c46a}} 
+\index{neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}!receive\_message@{receive\_message}}
+\index{receive\_message@{receive\_message}!neobolt.bolt.io.ChunkedInputBuffer@{neobolt.bolt.io.ChunkedInputBuffer}}
+\doxysubsubsection{\texorpdfstring{receive\_message()}{receive\_message()}}
+{\footnotesize\ttfamily def neobolt.\+bolt.\+io.\+Chunked\+Input\+Buffer.\+receive\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{socket,  }\item[{}]{n }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param socket:
+:param n:
+:return:
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neobolt/bolt/io.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression}{}\doxysection{django.\+db.\+models.\+expressions.\+Duration\+Expression Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression}\index{django.db.models.expressions.DurationExpression@{django.db.models.expressions.DurationExpression}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Duration\+Expression\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Duration\+Expression\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression_af6c7640c2b1cafc6c47b3daaf8abc6d6}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression_af6c7640c2b1cafc6c47b3daaf8abc6d6}} 
+def {\bfseries compile} (self, side, compiler, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression_aa95e4f5ac9bfbf76d1b630a84b7b5a1a}{as\+\_\+sql}} (self, compiler, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression_aa95e4f5ac9bfbf76d1b630a84b7b5a1a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_duration_expression_aa95e4f5ac9bfbf76d1b630a84b7b5a1a}} 
+\index{django.db.models.expressions.DurationExpression@{django.db.models.expressions.DurationExpression}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.DurationExpression@{django.db.models.expressions.DurationExpression}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Duration\+Expression.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_combined_expression_abd470b13c82cdf3eb12ba8a99fbcc90c}{django.\+db.\+models.\+expressions.\+Combined\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

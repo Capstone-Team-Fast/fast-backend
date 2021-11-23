@@ -1,0 +1,211 @@
+\hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution}{}\doxysection{pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution Class Reference}
+\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution}\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a69108892f238414f0b760fe74f5ff783}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a69108892f238414f0b760fe74f5ff783}} 
+None {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution}{pkg\+\_\+resources.\+Distribution}} dist)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a4e6cb6d81d95c2bf85881d34ba60cf8b}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a4e6cb6d81d95c2bf85881d34ba60cf8b}} 
+\char`\"{}Distribution\char`\"{} {\bfseries from\+\_\+wheel} (cls, str path, str name)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0f2f12c49a237ef615c9763d10b66e6b}{location}} (self)
+\item 
+Optional\mbox{[}str\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac8bca50ee4d60e40d3db7acdce86237b}{info\+\_\+directory}} (self)
+\item 
+\char`\"{}Normalized\+Name\char`\"{} \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa46e3376e472a957611a56c5a58e6fae}{canonical\+\_\+name}} (self)
+\item 
+Distribution\+Version \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac83e189aa08d2465284bb5d465190dde}{version}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa3185a4b90038a155824581ef7292c26}{installer}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a4ea77ebec11830e2bb2732fea7d63b97}{editable}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a1f69216d2048b4a794b7e4505590c638}{local}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ab9d967c9110e0f1d2f792e4317a800f9}{in\+\_\+usersite}} (self)
+\item 
+bool \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a6b681bfd3da0af7561c7063d66d7201e}{in\+\_\+site\+\_\+packages}} (self)
+\item 
+str \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a8063c97a8a75fea9942ee9f616f0b975}{read\+\_\+text}} (self, str name)
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_entry_point}{Base\+Entry\+Point}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_afb2203fd7dc18b79d17cb35f308ea70e}{iter\+\_\+entry\+\_\+points}} (self)
+\item 
+email.\+message.\+Message \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0ea36a5dcc5925f1145bbbc2ee546cb4}{metadata}} (self)
+\item 
+Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1requirements_1_1_requirement}{Requirement}}\mbox{]} \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a45334b4f287e5e16bb9989f6ab9da304}{iter\+\_\+dependencies}} (self, Collection\mbox{[}str\mbox{]} extras=())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa46e3376e472a957611a56c5a58e6fae}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa46e3376e472a957611a56c5a58e6fae}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!canonical\_name@{canonical\_name}}
+\index{canonical\_name@{canonical\_name}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{canonical\_name()}{canonical\_name()}}
+{\footnotesize\ttfamily  \char`\"{}Normalized\+Name\char`\"{} pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+canonical\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a4ea77ebec11830e2bb2732fea7d63b97}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a4ea77ebec11830e2bb2732fea7d63b97}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!editable@{editable}}
+\index{editable@{editable}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{editable()}{editable()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+editable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a6b681bfd3da0af7561c7063d66d7201e}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a6b681bfd3da0af7561c7063d66d7201e}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!in\_site\_packages@{in\_site\_packages}}
+\index{in\_site\_packages@{in\_site\_packages}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{in\_site\_packages()}{in\_site\_packages()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+in\+\_\+site\+\_\+packages (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ab9d967c9110e0f1d2f792e4317a800f9}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ab9d967c9110e0f1d2f792e4317a800f9}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!in\_usersite@{in\_usersite}}
+\index{in\_usersite@{in\_usersite}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{in\_usersite()}{in\_usersite()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+in\+\_\+usersite (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac8bca50ee4d60e40d3db7acdce86237b}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac8bca50ee4d60e40d3db7acdce86237b}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!info\_directory@{info\_directory}}
+\index{info\_directory@{info\_directory}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{info\_directory()}{info\_directory()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+info\+\_\+directory (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Location of the .[egg|dist]-info directory.
+
+Similarly to ``location``, a string value is not necessarily a
+filesystem path. ``None`` means the distribution is created in-memory.
+
+For a modern .dist-info installation on disk, this should be something
+like ``{location}/{raw_name}-{version}.dist-info``.
+
+Do not canonicalize this value with e.g. ``pathlib.Path.resolve()``. If
+this is a symbolic link, we want to preserve the relative path between
+it and other files in the distribution.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution_a033fdc94e4473b7916b08abde11f0bf1}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa3185a4b90038a155824581ef7292c26}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_aa3185a4b90038a155824581ef7292c26}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!installer@{installer}}
+\index{installer@{installer}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{installer()}{installer()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+installer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a45334b4f287e5e16bb9989f6ab9da304}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a45334b4f287e5e16bb9989f6ab9da304}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!iter\_dependencies@{iter\_dependencies}}
+\index{iter\_dependencies@{iter\_dependencies}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{iter\_dependencies()}{iter\_dependencies()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1requirements_1_1_requirement}{Requirement}}\mbox{]} pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+iter\+\_\+dependencies (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Collection\mbox{[}str\mbox{]} }]{extras = {\ttfamily ()} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_afb2203fd7dc18b79d17cb35f308ea70e}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_afb2203fd7dc18b79d17cb35f308ea70e}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!iter\_entry\_points@{iter\_entry\_points}}
+\index{iter\_entry\_points@{iter\_entry\_points}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{iter\_entry\_points()}{iter\_entry\_points()}}
+{\footnotesize\ttfamily  Iterable\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_entry_point}{Base\+Entry\+Point}}\mbox{]} pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+iter\+\_\+entry\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a1f69216d2048b4a794b7e4505590c638}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a1f69216d2048b4a794b7e4505590c638}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!local@{local}}
+\index{local@{local}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{local()}{local()}}
+{\footnotesize\ttfamily  bool pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+local (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0f2f12c49a237ef615c9763d10b66e6b}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0f2f12c49a237ef615c9763d10b66e6b}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!location@{location}}
+\index{location@{location}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily  Optional\mbox{[}str\mbox{]} pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+location (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Where the distribution is loaded from.
+
+A string value is not necessarily a filesystem path, since distributions
+can be loaded from other sources, e.g. arbitrary zip archives. ``None``
+means the distribution is created in-memory.
+
+Do not canonicalize this value with e.g. ``pathlib.Path.resolve()``. If
+this is a symbolic link, we want to preserve the relative path between
+it and files in the distribution.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution_af41d226a9fda04459c2e55c71152b3b0}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0ea36a5dcc5925f1145bbbc2ee546cb4}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a0ea36a5dcc5925f1145bbbc2ee546cb4}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!metadata@{metadata}}
+\index{metadata@{metadata}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{metadata()}{metadata()}}
+{\footnotesize\ttfamily  email.\+message.\+Message pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+metadata (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Metadata of distribution parsed from e.g. METADATA or PKG-INFO.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution_a665b55bcebd861e5959f53a7d2f1350f}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a8063c97a8a75fea9942ee9f616f0b975}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_a8063c97a8a75fea9942ee9f616f0b975}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!read\_text@{read\_text}}
+\index{read\_text@{read\_text}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{read\_text()}{read\_text()}}
+{\footnotesize\ttfamily  str pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+read\+\_\+text (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read a file in the .dist-info (or .egg-info) directory.
+
+Should raise ``FileNotFoundError`` if ``name`` does not exist in the
+metadata directory.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution_a171dfafa3d83fe80fc5f6b237fcf5341}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac83e189aa08d2465284bb5d465190dde}\label{classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution_ac83e189aa08d2465284bb5d465190dde}} 
+\index{pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}!version@{version}}
+\index{version@{version}!pip.\_internal.metadata.pkg\_resources.Distribution@{pip.\_internal.metadata.pkg\_resources.Distribution}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily  Distribution\+Version pip.\+\_\+internal.\+metadata.\+pkg\+\_\+resources.\+Distribution.\+version (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution}{pip.\+\_\+internal.\+metadata.\+base.\+Base\+Distribution}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/metadata/pkg\+\_\+resources.\+py\end{DoxyCompactItemize}

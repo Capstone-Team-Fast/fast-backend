@@ -1,0 +1,57 @@
+\hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader}{}\doxysection{django.\+template.\+loaders.\+base.\+Loader Class Reference}
+\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader}\index{django.template.loaders.base.Loader@{django.template.loaders.base.Loader}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_ae9b9b46f2156afa3c6ca2201161a54f7}\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_ae9b9b46f2156afa3c6ca2201161a54f7}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, engine)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_aea78872f8ef459314b9b9405c0e18c87}{get\+\_\+template}} (self, template\+\_\+name, skip=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a55cebf4411f052e14be6646615d2293b}{get\+\_\+template\+\_\+sources}} (self, template\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a5c8f88a557d632e424df242f1091a7f6}{reset}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_af2a9bb9e03df137db5d34517ad77fd43}\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_af2a9bb9e03df137db5d34517ad77fd43}} 
+{\bfseries engine}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_aea78872f8ef459314b9b9405c0e18c87}\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_aea78872f8ef459314b9b9405c0e18c87}} 
+\index{django.template.loaders.base.Loader@{django.template.loaders.base.Loader}!get\_template@{get\_template}}
+\index{get\_template@{get\_template}!django.template.loaders.base.Loader@{django.template.loaders.base.Loader}}
+\doxysubsubsection{\texorpdfstring{get\_template()}{get\_template()}}
+{\footnotesize\ttfamily def django.\+template.\+loaders.\+base.\+Loader.\+get\+\_\+template (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{template\+\_\+name,  }\item[{}]{skip = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Call self.get_template_sources() and return a Template object for
+the first template matching template_name. If skip is provided, ignore
+template origins in skip. This is used to avoid recursion during
+template extending.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a55cebf4411f052e14be6646615d2293b}\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a55cebf4411f052e14be6646615d2293b}} 
+\index{django.template.loaders.base.Loader@{django.template.loaders.base.Loader}!get\_template\_sources@{get\_template\_sources}}
+\index{get\_template\_sources@{get\_template\_sources}!django.template.loaders.base.Loader@{django.template.loaders.base.Loader}}
+\doxysubsubsection{\texorpdfstring{get\_template\_sources()}{get\_template\_sources()}}
+{\footnotesize\ttfamily def django.\+template.\+loaders.\+base.\+Loader.\+get\+\_\+template\+\_\+sources (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{template\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}An iterator that yields possible matching template paths for a
+template name.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a5c8f88a557d632e424df242f1091a7f6}\label{classdjango_1_1template_1_1loaders_1_1base_1_1_loader_a5c8f88a557d632e424df242f1091a7f6}} 
+\index{django.template.loaders.base.Loader@{django.template.loaders.base.Loader}!reset@{reset}}
+\index{reset@{reset}!django.template.loaders.base.Loader@{django.template.loaders.base.Loader}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def django.\+template.\+loaders.\+base.\+Loader.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reset any state maintained by the loader instance (e.g. cached
+templates or cached loader modules).
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/loaders/base.\+py\end{DoxyCompactItemize}

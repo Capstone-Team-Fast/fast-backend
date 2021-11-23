@@ -1,0 +1,28 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2045 [label="models.Manager",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2045 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.contrib.admin.models.\lLogEntryManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_manager.html",tooltip=" "];
+  Node2045 -> Node2047 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2047 [label="django.contrib.auth.base\l_user.BaseUserManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager.html",tooltip=" "];
+  Node2047 -> Node2048 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2048 [label="django.contrib.auth.models.\lUserManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1models_1_1_user_manager.html",tooltip=" "];
+  Node2045 -> Node2049 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2049 [label="django.contrib.auth.models.\lGroupManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1models_1_1_group_manager.html",tooltip=" "];
+  Node2045 -> Node2050 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2050 [label="django.contrib.auth.models.\lPermissionManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_manager.html",tooltip=" "];
+  Node2045 -> Node2051 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2051 [label="django.contrib.contenttypes.models.\lContentTypeManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1contenttypes_1_1models_1_1_content_type_manager.html",tooltip=" "];
+  Node2045 -> Node2052 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2052 [label="django.contrib.sessions.base\l_session.BaseSessionManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sessions_1_1base__session_1_1_base_session_manager.html",tooltip=" "];
+  Node2052 -> Node2053 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2053 [label="django.contrib.sessions.models.\lSessionManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sessions_1_1models_1_1_session_manager.html",tooltip=" "];
+  Node2045 -> Node2054 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2054 [label="django.contrib.sites.managers.\lCurrentSiteManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sites_1_1managers_1_1_current_site_manager.html",tooltip=" "];
+  Node2045 -> Node2055 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2055 [label="django.contrib.sites.models.\lSiteManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager.html",tooltip=" "];
+}

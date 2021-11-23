@@ -1,0 +1,127 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query}{}\doxysection{django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query Class Reference}
+\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query}\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+
+
+Inheritance diagram for django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a24f677add052f2993b711287e8122019}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa27f04cebfd03635df399ef4c8a4b203}{clone}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a4840ce274ff0d0d20d989f20b176fcbc}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a4840ce274ff0d0d20d989f20b176fcbc}} 
+def {\bfseries update\+\_\+batch} (self, pk\+\_\+list, values, using)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a7e450cdefcbe7b628dbbd7132831bc0e}{add\+\_\+update\+\_\+values}} (self, values)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a0c20d6a9cccb46b1d1b6b455f73caff7}{add\+\_\+update\+\_\+fields}} (self, values\+\_\+seq)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa02f161e36ddf75466f4785528e46f73}{add\+\_\+related\+\_\+update}} (self, model, field, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a263117cc32346ae2a1d0bc058536cbb6}{get\+\_\+related\+\_\+updates}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a58e3e80dc2788d925470b690cdc80276}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a58e3e80dc2788d925470b690cdc80276}} 
+{\bfseries values}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_abe2086ee4f106e7a21367809f438622b}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_abe2086ee4f106e7a21367809f438622b}} 
+{\bfseries related\+\_\+ids}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a2f02b4faa17ab8b5de5f37236db1e60b}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a2f02b4faa17ab8b5de5f37236db1e60b}} 
+{\bfseries related\+\_\+updates}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_af6808970132880e835dc63ba10cde5d9}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_af6808970132880e835dc63ba10cde5d9}} 
+{\bfseries where}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_af6f347f6b7981b7c212fe00a9db6ee6f}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_af6f347f6b7981b7c212fe00a9db6ee6f}} 
+string {\bfseries compiler} = \textquotesingle{}SQLUpdate\+Compiler\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An UPDATE SQL query.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a24f677add052f2993b711287e8122019}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a24f677add052f2993b711287e8122019}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1query_1_1_query}{django.\+db.\+models.\+sql.\+query.\+Query}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa02f161e36ddf75466f4785528e46f73}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa02f161e36ddf75466f4785528e46f73}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!add\_related\_update@{add\_related\_update}}
+\index{add\_related\_update@{add\_related\_update}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{add\_related\_update()}{add\_related\_update()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+add\+\_\+related\+\_\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add (name, value) to an update query for an ancestor model.
+
+Update are coalesced so that only one update query per ancestor is run.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a0c20d6a9cccb46b1d1b6b455f73caff7}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a0c20d6a9cccb46b1d1b6b455f73caff7}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!add\_update\_fields@{add\_update\_fields}}
+\index{add\_update\_fields@{add\_update\_fields}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{add\_update\_fields()}{add\_update\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+add\+\_\+update\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{values\+\_\+seq }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Append a sequence of (field, model, value) triples to the internal list
+that will be used to generate the UPDATE query. Might be more usefully
+called add_update_targets() to hint at the extra information here.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a7e450cdefcbe7b628dbbd7132831bc0e}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a7e450cdefcbe7b628dbbd7132831bc0e}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!add\_update\_values@{add\_update\_values}}
+\index{add\_update\_values@{add\_update\_values}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{add\_update\_values()}{add\_update\_values()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+add\+\_\+update\+\_\+values (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{values }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert a dictionary of field name to value mappings into an update
+query. This is the entry point for the public update() method on
+querysets.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa27f04cebfd03635df399ef4c8a4b203}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_aa27f04cebfd03635df399ef4c8a4b203}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!clone@{clone}}
+\index{clone@{clone}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+clone (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a copy of the current Query. A lightweight alternative to
+to deepcopy().
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1query_1_1_query_a1a0da276f10cd0bf92b0b5c038210ec0}{django.\+db.\+models.\+sql.\+query.\+Query}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a263117cc32346ae2a1d0bc058536cbb6}\label{classdjango_1_1db_1_1models_1_1sql_1_1subqueries_1_1_update_query_a263117cc32346ae2a1d0bc058536cbb6}} 
+\index{django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}!get\_related\_updates@{get\_related\_updates}}
+\index{get\_related\_updates@{get\_related\_updates}!django.db.models.sql.subqueries.UpdateQuery@{django.db.models.sql.subqueries.UpdateQuery}}
+\doxysubsubsection{\texorpdfstring{get\_related\_updates()}{get\_related\_updates()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+subqueries.\+Update\+Query.\+get\+\_\+related\+\_\+updates (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of query objects: one for each update required to an
+ancestor model. Each query will have the same filtering conditions as
+the current query but will only update a single table.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/sql/subqueries.\+py\end{DoxyCompactItemize}

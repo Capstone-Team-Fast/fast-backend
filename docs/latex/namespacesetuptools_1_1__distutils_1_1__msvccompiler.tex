@@ -1,0 +1,60 @@
+\hypertarget{namespacesetuptools_1_1__distutils_1_1__msvccompiler}{}\doxysection{setuptools.\+\_\+distutils.\+\_\+msvccompiler Namespace Reference}
+\label{namespacesetuptools_1_1__distutils_1_1__msvccompiler}\index{setuptools.\_distutils.\_msvccompiler@{setuptools.\_distutils.\_msvccompiler}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1__msvccompiler_1_1_m_s_v_c_compiler}{MSVCCompiler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1__msvccompiler_a67787cb445160440462f932f0bb57c6f}{PLAT\+\_\+\+SPEC\+\_\+\+TO\+\_\+\+RUNTIME}}
+\item 
+dictionary \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1__msvccompiler_ad50d6fb6ad56907019b53b2171ca4101}{PLAT\+\_\+\+TO\+\_\+\+VCVARS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}distutils._msvccompiler
+
+Contains MSVCCompiler, an implementation of the abstract CCompiler class
+for Microsoft Visual Studio 2015.
+
+The module is compatible with VS 2015 and later. You can find legacy support
+for older versions in distutils.msvc9compiler and distutils.msvccompiler.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1__msvccompiler_a67787cb445160440462f932f0bb57c6f}\label{namespacesetuptools_1_1__distutils_1_1__msvccompiler_a67787cb445160440462f932f0bb57c6f}} 
+\index{setuptools.\_distutils.\_msvccompiler@{setuptools.\_distutils.\_msvccompiler}!PLAT\_SPEC\_TO\_RUNTIME@{PLAT\_SPEC\_TO\_RUNTIME}}
+\index{PLAT\_SPEC\_TO\_RUNTIME@{PLAT\_SPEC\_TO\_RUNTIME}!setuptools.\_distutils.\_msvccompiler@{setuptools.\_distutils.\_msvccompiler}}
+\doxysubsubsection{\texorpdfstring{PLAT\_SPEC\_TO\_RUNTIME}{PLAT\_SPEC\_TO\_RUNTIME}}
+{\footnotesize\ttfamily dictionary setuptools.\+\_\+distutils.\+\_\+msvccompiler.\+PLAT\+\_\+\+SPEC\+\_\+\+TO\+\_\+\+RUNTIME}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'x86'} : \textcolor{stringliteral}{'x86'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'x86\_amd64'} : \textcolor{stringliteral}{'x64'},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'x86\_arm'} : \textcolor{stringliteral}{'arm'},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'x86\_arm64'} : \textcolor{stringliteral}{'arm64'}}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1__msvccompiler_ad50d6fb6ad56907019b53b2171ca4101}\label{namespacesetuptools_1_1__distutils_1_1__msvccompiler_ad50d6fb6ad56907019b53b2171ca4101}} 
+\index{setuptools.\_distutils.\_msvccompiler@{setuptools.\_distutils.\_msvccompiler}!PLAT\_TO\_VCVARS@{PLAT\_TO\_VCVARS}}
+\index{PLAT\_TO\_VCVARS@{PLAT\_TO\_VCVARS}!setuptools.\_distutils.\_msvccompiler@{setuptools.\_distutils.\_msvccompiler}}
+\doxysubsubsection{\texorpdfstring{PLAT\_TO\_VCVARS}{PLAT\_TO\_VCVARS}}
+{\footnotesize\ttfamily dictionary setuptools.\+\_\+distutils.\+\_\+msvccompiler.\+PLAT\+\_\+\+TO\+\_\+\+VCVARS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'win32'} : \textcolor{stringliteral}{'x86'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'win-\/amd64'} : \textcolor{stringliteral}{'x86\_amd64'},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'win-\/arm32'} : \textcolor{stringliteral}{'x86\_arm'},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'win-\/arm64'} : \textcolor{stringliteral}{'x86\_arm64'}}
+\DoxyCodeLine{6 \}}
+
+\end{DoxyCode}

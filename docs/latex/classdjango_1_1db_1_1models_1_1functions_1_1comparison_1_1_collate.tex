@@ -1,0 +1,90 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate}{}\doxysection{django.\+db.\+models.\+functions.\+comparison.\+Collate Class Reference}
+\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate}\index{django.db.models.functions.comparison.Collate@{django.db.models.functions.comparison.Collate}}
+
+
+Inheritance diagram for django.\+db.\+models.\+functions.\+comparison.\+Collate\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+functions.\+comparison.\+Collate\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a8b7783b3392ae83c74b8cfa393495440}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expression, collation)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a9c965f74a5add5fafb33658bd56563c0}{as\+\_\+sql}} (self, compiler, connection, $\ast$$\ast$extra\+\_\+context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_ae97088c4408c5d2f8fac27d7934b7628}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_ae97088c4408c5d2f8fac27d7934b7628}} 
+{\bfseries collation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a3537cc97ab1c783a9f331dd3022ffb90}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a3537cc97ab1c783a9f331dd3022ffb90}} 
+string {\bfseries function} = \textquotesingle{}COLLATE\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a049756eed63811d6f14f361d47f75ee2}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a049756eed63811d6f14f361d47f75ee2}} 
+string {\bfseries template} = \textquotesingle{}\%(expressions)s \%(function)s \%(collation)s\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a1a205e30983f701c2067de7c19334dfd}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a1a205e30983f701c2067de7c19334dfd}} 
+{\bfseries collation\+\_\+re} = \+\_\+lazy\+\_\+re\+\_\+compile(r\textquotesingle{}$^\wedge$\mbox{[}\textbackslash{}w\textbackslash{}-\/\mbox{]}+\$\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a8b7783b3392ae83c74b8cfa393495440}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a8b7783b3392ae83c74b8cfa393495440}} 
+\index{django.db.models.functions.comparison.Collate@{django.db.models.functions.comparison.Collate}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.functions.comparison.Collate@{django.db.models.functions.comparison.Collate}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+functions.\+comparison.\+Collate.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression,  }\item[{}]{collation }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a9c965f74a5add5fafb33658bd56563c0}\label{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a9c965f74a5add5fafb33658bd56563c0}} 
+\index{django.db.models.functions.comparison.Collate@{django.db.models.functions.comparison.Collate}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.functions.comparison.Collate@{django.db.models.functions.comparison.Collate}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+functions.\+comparison.\+Collate.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{$\ast$$\ast$}]{function }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/functions/comparison.\+py\end{DoxyCompactItemize}

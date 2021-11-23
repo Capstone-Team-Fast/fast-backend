@@ -1,0 +1,54 @@
+\hypertarget{namespacerest__framework_1_1schemas}{}\doxysection{rest\+\_\+framework.\+schemas Namespace Reference}
+\label{namespacerest__framework_1_1schemas}\index{rest\_framework.schemas@{rest\_framework.schemas}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacerest__framework_1_1schemas_1_1generators}{generators}}
+\item 
+namespace \mbox{\hyperlink{namespacerest__framework_1_1schemas_1_1inspectors}{inspectors}}
+\item 
+namespace \mbox{\hyperlink{namespacerest__framework_1_1schemas_1_1utils}{utils}}
+\item 
+namespace \mbox{\hyperlink{namespacerest__framework_1_1schemas_1_1views}{views}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1schemas_ab320dcf03153c0db0c07a12f552b3100}{get\+\_\+schema\+\_\+view}} (title=None, url=None, description=None, urlconf=None, renderer\+\_\+classes=None, public=False, patterns=None, generator\+\_\+class=None, authentication\+\_\+classes=api\+\_\+settings.\+DEFAULT\+\_\+\+AUTHENTICATION\+\_\+\+CLASSES, permission\+\_\+classes=api\+\_\+settings.\+DEFAULT\+\_\+\+PERMISSION\+\_\+\+CLASSES, version=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}rest_framework.schemas
+
+schemas:
+    __init__.py
+    generators.py   # Top-down schema generation
+    inspectors.py   # Per-endpoint view introspection
+    utils.py        # Shared helper functions
+    views.py        # Houses `SchemaView`, `APIView` subclass.
+
+We expose a minimal "public" API directly from `schemas`. This covers the
+basic use-cases:
+
+    from rest_framework.schemas import (
+        AutoSchema,
+        ManualSchema,
+        get_schema_view,
+        SchemaGenerator,
+    )
+
+Other access should target the submodules directly
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1schemas_ab320dcf03153c0db0c07a12f552b3100}\label{namespacerest__framework_1_1schemas_ab320dcf03153c0db0c07a12f552b3100}} 
+\index{rest\_framework.schemas@{rest\_framework.schemas}!get\_schema\_view@{get\_schema\_view}}
+\index{get\_schema\_view@{get\_schema\_view}!rest\_framework.schemas@{rest\_framework.schemas}}
+\doxysubsubsection{\texorpdfstring{get\_schema\_view()}{get\_schema\_view()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+get\+\_\+schema\+\_\+view (\begin{DoxyParamCaption}\item[{}]{title = {\ttfamily None},  }\item[{}]{url = {\ttfamily None},  }\item[{}]{description = {\ttfamily None},  }\item[{}]{urlconf = {\ttfamily None},  }\item[{}]{renderer\+\_\+classes = {\ttfamily None},  }\item[{}]{public = {\ttfamily False},  }\item[{}]{patterns = {\ttfamily None},  }\item[{}]{generator\+\_\+class = {\ttfamily None},  }\item[{}]{authentication\+\_\+classes = {\ttfamily api\+\_\+settings.DEFAULT\+\_\+AUTHENTICATION\+\_\+CLASSES},  }\item[{}]{permission\+\_\+classes = {\ttfamily api\+\_\+settings.DEFAULT\+\_\+PERMISSION\+\_\+CLASSES},  }\item[{}]{version = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a schema view.
+\end{DoxyVerb}
+ 

@@ -1,0 +1,86 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field}{}\doxysection{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field}\index{django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a70def83e98b26b3355480d6b66b88873}{db\+\_\+type}} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_ae6f8f62382462018577196640ea6daec}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_ae6f8f62382462018577196640ea6daec}} 
+def {\bfseries from\+\_\+db\+\_\+value} (self, value, expression, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a84da89e783b9f80a7017cceb200a9980}{contribute\+\_\+to\+\_\+class}} (self, cls, name, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_aa5fdb89f3b7d89b482071bc655e9f0e3}{get\+\_\+transform}} (self, name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a9e4dc01c5c61b156d56e225a44264329}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a9e4dc01c5c61b156d56e225a44264329}} 
+{\bfseries description} = \+\_\+(\char`\"{}Raster \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field}{Field}}\char`\"{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_adbef3a82f9b8680d07e3136a17e32aa0}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_adbef3a82f9b8680d07e3136a17e32aa0}} 
+string {\bfseries geom\+\_\+type} = \textquotesingle{}RASTER\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_aa10cda6e25ed402ffdf5a0af57442f6d}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_aa10cda6e25ed402ffdf5a0af57442f6d}} 
+bool {\bfseries geography} = False
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Raster field for GeoDjango -- evaluates into GDALRaster objects.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a84da89e783b9f80a7017cceb200a9980}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a84da89e783b9f80a7017cceb200a9980}} 
+\index{django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}!contribute\_to\_class@{contribute\_to\_class}}
+\index{contribute\_to\_class@{contribute\_to\_class}!django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}}
+\doxysubsubsection{\texorpdfstring{contribute\_to\_class()}{contribute\_to\_class()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field.\+contribute\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cls,  }\item[{}]{name,  }\item[{$\ast$$\ast$}]{private\+\_\+only }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the field with the model class it belongs to.
+
+If private_only is True, create a separate instance of this field
+for every subclass of cls, even if cls is not an abstract model.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_acab2ae6fc6638ecd8714d5ef7b6ed404}{django.\+db.\+models.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a70def83e98b26b3355480d6b66b88873}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_a70def83e98b26b3355480d6b66b88873}} 
+\index{django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}!db\_type@{db\_type}}
+\index{db\_type@{db\_type}!django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}}
+\doxysubsubsection{\texorpdfstring{db\_type()}{db\_type()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field.\+db\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the database column data type for this field, for the provided
+connection.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_abf4616f38c9d620756522da632e7aae2}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_aa5fdb89f3b7d89b482071bc655e9f0e3}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_raster_field_aa5fdb89f3b7d89b482071bc655e9f0e3}} 
+\index{django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}!get\_transform@{get\_transform}}
+\index{get\_transform@{get\_transform}!django.contrib.gis.db.models.fields.RasterField@{django.contrib.gis.db.models.fields.RasterField}}
+\doxysubsubsection{\texorpdfstring{get\_transform()}{get\_transform()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Raster\+Field.\+get\+\_\+transform (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1query__utils_1_1_register_lookup_mixin}{django.\+db.\+models.\+query\+\_\+utils.\+Register\+Lookup\+Mixin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/models/fields.\+py\end{DoxyCompactItemize}

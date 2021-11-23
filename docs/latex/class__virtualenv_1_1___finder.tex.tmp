@@ -1,0 +1,43 @@
+\hypertarget{class__virtualenv_1_1___finder}{}\doxysection{\+\_\+virtualenv.\+\_\+\+Finder Class Reference}
+\label{class__virtualenv_1_1___finder}\index{\_virtualenv.\_Finder@{\_virtualenv.\_Finder}}
+
+
+Inheritance diagram for \+\_\+virtualenv.\+\_\+\+Finder\+:
+% FIG 0
+
+
+Collaboration diagram for \+\_\+virtualenv.\+\_\+\+Finder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class__virtualenv_1_1___finder_a6c37bb7fc99d829588a7f391a623d9ed}\label{class__virtualenv_1_1___finder_a6c37bb7fc99d829588a7f391a623d9ed}} 
+def {\bfseries find\+\_\+spec} (self, fullname, path, target=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class__virtualenv_1_1___finder_ac3e166072e0d084307d4c690740ccc49}\label{class__virtualenv_1_1___finder_ac3e166072e0d084307d4c690740ccc49}} 
+def {\bfseries exec\+\_\+module} (old, module)
+\item 
+\mbox{\Hypertarget{class__virtualenv_1_1___finder_a04a07f3a9a12048b16b9180084acaa43}\label{class__virtualenv_1_1___finder_a04a07f3a9a12048b16b9180084acaa43}} 
+def {\bfseries load\+\_\+module} (old, name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class__virtualenv_1_1___finder_a9bbc4fbd9e39891ce15c7fcd9020fbab}\label{class__virtualenv_1_1___finder_a9bbc4fbd9e39891ce15c7fcd9020fbab}} 
+{\bfseries fullname} = None
+\item 
+\mbox{\Hypertarget{class__virtualenv_1_1___finder_aa9359c1e8bce6138077924af89fbc99a}\label{class__virtualenv_1_1___finder_aa9359c1e8bce6138077924af89fbc99a}} 
+list {\bfseries lock} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A meta path finder that allows patching the imported distutils modules\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/\+\_\+virtualenv.\+py\end{DoxyCompactItemize}

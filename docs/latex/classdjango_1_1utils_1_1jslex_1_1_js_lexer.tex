@@ -1,0 +1,118 @@
+\hypertarget{classdjango_1_1utils_1_1jslex_1_1_js_lexer}{}\doxysection{django.\+utils.\+jslex.\+Js\+Lexer Class Reference}
+\label{classdjango_1_1utils_1_1jslex_1_1_js_lexer}\index{django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}}
+
+
+Inheritance diagram for django.\+utils.\+jslex.\+Js\+Lexer\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+utils.\+jslex.\+Js\+Lexer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a59b49dffb69f85e5b9976f681a604e7b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classdjango_1_1utils_1_1jslex_1_1_js_lexer_aebfb06b94ac0ad2b706238253eb2aa13}{both\+\_\+before}}
+\item 
+list \mbox{\hyperlink{classdjango_1_1utils_1_1jslex_1_1_js_lexer_ae9fbcd2ab338024a6119913ff12c9d75}{both\+\_\+after}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a50e9e33fab26ca8865e8b9cdc78ba1b9}{states}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A Javascript lexer
+
+>>> lexer = JsLexer()
+>>> list(lexer.lex("a = 1"))
+[('id', 'a'), ('ws', ' '), ('punct', '='), ('ws', ' '), ('dnum', '1')]
+
+This doesn't properly handle non-ASCII characters in the Javascript source.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a59b49dffb69f85e5b9976f681a604e7b}\label{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a59b49dffb69f85e5b9976f681a604e7b}} 
+\index{django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+jslex.\+Js\+Lexer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1jslex_1_1_lexer}{django.\+utils.\+jslex.\+Lexer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1jslex_1_1_js_lexer_ae9fbcd2ab338024a6119913ff12c9d75}\label{classdjango_1_1utils_1_1jslex_1_1_js_lexer_ae9fbcd2ab338024a6119913ff12c9d75}} 
+\index{django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}!both\_after@{both\_after}}
+\index{both\_after@{both\_after}!django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}}
+\doxysubsubsection{\texorpdfstring{both\_after}{both\_after}}
+{\footnotesize\ttfamily list django.\+utils.\+jslex.\+Js\+Lexer.\+both\+\_\+after\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}other"{}}, \textcolor{stringliteral}{r"{}."{}}),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1jslex_1_1_js_lexer_aebfb06b94ac0ad2b706238253eb2aa13}\label{classdjango_1_1utils_1_1jslex_1_1_js_lexer_aebfb06b94ac0ad2b706238253eb2aa13}} 
+\index{django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}!both\_before@{both\_before}}
+\index{both\_before@{both\_before}!django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}}
+\doxysubsubsection{\texorpdfstring{both\_before}{both\_before}}
+{\footnotesize\ttfamily list django.\+utils.\+jslex.\+Js\+Lexer.\+both\+\_\+before\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}comment"{}}, \textcolor{stringliteral}{r"{}/\(\backslash\)*(.|\(\backslash\)n)*?\(\backslash\)*/"{}}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}linecomment"{}}, \textcolor{stringliteral}{r"{}//.*?\$"{}}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}ws"{}}, \textcolor{stringliteral}{r"{}\(\backslash\)s+"{}}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}keyword"{}}, literals(, suffix=\textcolor{stringliteral}{r"{}\(\backslash\)b"{}}), next=\textcolor{stringliteral}{'reg'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}reserved"{}}, literals(\textcolor{stringliteral}{"{}null true false"{}}, suffix=\textcolor{stringliteral}{r"{}\(\backslash\)b"{}}), next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}id"{}}, , next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}hnum"{}}, \textcolor{stringliteral}{r"{}0[xX][0-\/9a-\/fA-\/F]+"{}}, next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}onum"{}}, \textcolor{stringliteral}{r"{}0[0-\/7]+"{}}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}dnum"{}}, , next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}punct"{}}, literals(), next=\textcolor{stringliteral}{"{}reg"{}}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}punct"{}}, literals(\textcolor{stringliteral}{"{}++ -\/-\/ ) ]"{}}), next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}punct"{}}, literals(\textcolor{stringliteral}{"{}\{ \} ( [ . ; , < > + -\/ * \% \& | \string^ ! \string~ ? : ="{}}), next=\textcolor{stringliteral}{'reg'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}string"{}}, \textcolor{stringliteral}{r'"{}([\string^"{}\(\backslash\)\(\backslash\)]|(\(\backslash\)\(\backslash\)(.|\(\backslash\)n)))*?"{}'}, next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        Tok(\textcolor{stringliteral}{"{}string"{}}, \textcolor{stringliteral}{r"{}'([\string^'\(\backslash\)\(\backslash\)]|(\(\backslash\)\(\backslash\)(.|\(\backslash\)n)))*?'"{}}, next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a50e9e33fab26ca8865e8b9cdc78ba1b9}\label{classdjango_1_1utils_1_1jslex_1_1_js_lexer_a50e9e33fab26ca8865e8b9cdc78ba1b9}} 
+\index{django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}!states@{states}}
+\index{states@{states}!django.utils.jslex.JsLexer@{django.utils.jslex.JsLexer}}
+\doxysubsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily dictionary django.\+utils.\+jslex.\+Js\+Lexer.\+states\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{comment}{\# slash will mean division}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'div'}: both\_before + [}
+\DoxyCodeLine{            Tok(\textcolor{stringliteral}{"{}punct"{}}, literals(\textcolor{stringliteral}{"{}/= /"{}}), next=\textcolor{stringliteral}{'reg'}),}
+\DoxyCodeLine{        ] + both\_after,}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{\# slash will mean regex}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'reg'}: both\_before + [}
+\DoxyCodeLine{            Tok(\textcolor{stringliteral}{"{}regex"{}},}
+\DoxyCodeLine{                , next=\textcolor{stringliteral}{'div'}),}
+\DoxyCodeLine{        ] + both\_after,}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/jslex.\+py\end{DoxyCompactItemize}

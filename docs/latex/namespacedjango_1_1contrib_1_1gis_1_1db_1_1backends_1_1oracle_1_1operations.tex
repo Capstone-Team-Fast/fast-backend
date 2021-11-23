@@ -1,0 +1,33 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+oracle.\+operations Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations}\index{django.contrib.gis.db.backends.oracle.operations@{django.contrib.gis.db.backends.oracle.operations}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_oracle_operations}{Oracle\+Operations}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_s_d_o_disjoint}{SDODisjoint}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_s_d_o_d_within}{SDODWithin}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_s_d_o_operator}{SDOOperator}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_s_d_o_relate}{SDORelate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_a3289459e5e4a7d040f23967dcd46f77c}\label{namespacedjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_a3289459e5e4a7d040f23967dcd46f77c}} 
+string {\bfseries DEFAULT\+\_\+\+TOLERANCE} = \textquotesingle{}0.\+05\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} This module contains the spatial lookup types, and the `get_geo_where_clause`
+ routine for Oracle Spatial.
+
+ Please note that WKT support is broken on the XE version, and thus
+ this backend will not work on such platforms.  Specifically, XE lacks
+ support for an internal JVM, and Java libraries are required to use
+ the WKT constructors.
+\end{DoxyVerb}
+ 

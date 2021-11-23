@@ -1,0 +1,22 @@
+digraph "django.contrib.postgres.aggregates.statistics.RegrIntercept"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.postgres.aggregates.statistics.\lRegrIntercept",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.postgres.aggregates.statistics.\lStatAggregate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1statistics_1_1_stat_aggregate.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.models.aggregates.\lAggregate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.expressions.Func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1expressions_1_1_func.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.models.expressions.\lSQLiteNumericMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1expressions_1_1_s_q_lite_numeric_mixin.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.db.models.expressions.\lExpression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1expressions_1_1_expression.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.db.models.expressions.\lBaseExpression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression.html",tooltip=" "];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.db.models.expressions.\lCombinable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1expressions_1_1_combinable.html",tooltip=" "];
+}

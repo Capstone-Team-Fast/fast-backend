@@ -1,0 +1,73 @@
+\hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock}{}\doxysection{neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock Class Reference}
+\label{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock}\index{neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}}
+
+
+Inheritance diagram for neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a80b6dbd391396f5b61313f69bee1c50b}{precision}} (cls)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a7d4a4963d88746f5a5f239377cadbe25}{available}} (cls)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_afec36e8568b1509ef7eb3a43bd8faa49}{utc\+\_\+time}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Clock implementation that should work for any variant of Python.
+This clock is guaranteed microsecond precision.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a7d4a4963d88746f5a5f239377cadbe25}\label{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a7d4a4963d88746f5a5f239377cadbe25}} 
+\index{neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}!available@{available}}
+\index{available@{available}!neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock.\+available (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return a boolean flag to indicate whether or not this clock
+implementation is available on this platform.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a4e92aac5758217205ee8c9cf5a1ce481}{neo4j.\+time.\+Clock}}.
+
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a80b6dbd391396f5b61313f69bee1c50b}\label{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_a80b6dbd391396f5b61313f69bee1c50b}} 
+\index{neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}!precision@{precision}}
+\index{precision@{precision}!neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}}
+\doxysubsubsection{\texorpdfstring{precision()}{precision()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock.\+precision (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} The precision of this clock implementation, represented as a
+number of decimal places. Therefore, for a nanosecond precision
+clock, this function returns `9`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a1eefebc49a20d70e23aef80ec0f62d60}{neo4j.\+time.\+Clock}}.
+
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_afec36e8568b1509ef7eb3a43bd8faa49}\label{classneo4j_1_1time_1_1clock__implementations_1_1_safe_clock_afec36e8568b1509ef7eb3a43bd8faa49}} 
+\index{neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}!utc\_time@{utc\_time}}
+\index{utc\_time@{utc\_time}!neo4j.time.clock\_implementations.SafeClock@{neo4j.time.clock\_implementations.SafeClock}}
+\doxysubsubsection{\texorpdfstring{utc\_time()}{utc\_time()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Safe\+Clock.\+utc\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Read and return the current UTC time from this clock, measured
+relative to the Unix Epoch.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a06aeb71755b327d1cc0fea566584e9ba}{neo4j.\+time.\+Clock}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/time/clock\+\_\+implementations.\+py\end{DoxyCompactItemize}

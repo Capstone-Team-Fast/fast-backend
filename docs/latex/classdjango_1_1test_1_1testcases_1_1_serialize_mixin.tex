@@ -1,0 +1,32 @@
+\hypertarget{classdjango_1_1test_1_1testcases_1_1_serialize_mixin}{}\doxysection{django.\+test.\+testcases.\+Serialize\+Mixin Class Reference}
+\label{classdjango_1_1test_1_1testcases_1_1_serialize_mixin}\index{django.test.testcases.SerializeMixin@{django.test.testcases.SerializeMixin}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a82fb0387ffcb9913c50b202ca07fefb6}\label{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a82fb0387ffcb9913c50b202ca07fefb6}} 
+def {\bfseries set\+Up\+Class} (cls)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a1f7be870a2942468876387c4a3552756}\label{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a1f7be870a2942468876387c4a3552756}} 
+def {\bfseries tear\+Down\+Class} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a4784a78ee94dac024bfef9b719f9343b}\label{classdjango_1_1test_1_1testcases_1_1_serialize_mixin_a4784a78ee94dac024bfef9b719f9343b}} 
+{\bfseries lockfile} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Enforce serialization of TestCases that share a common resource.
+
+Define a common 'lockfile' for each set of TestCases to serialize. This
+file must exist on the filesystem.
+
+Place it early in the MRO in order to isolate setUpClass()/tearDownClass().
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/testcases.\+py\end{DoxyCompactItemize}

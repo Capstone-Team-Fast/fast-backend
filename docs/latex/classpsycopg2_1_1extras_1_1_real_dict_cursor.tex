@@ -1,0 +1,55 @@
+\hypertarget{classpsycopg2_1_1extras_1_1_real_dict_cursor}{}\doxysection{psycopg2.\+extras.\+Real\+Dict\+Cursor Class Reference}
+\label{classpsycopg2_1_1extras_1_1_real_dict_cursor}\index{psycopg2.extras.RealDictCursor@{psycopg2.extras.RealDictCursor}}
+
+
+Inheritance diagram for psycopg2.\+extras.\+Real\+Dict\+Cursor\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+extras.\+Real\+Dict\+Cursor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_real_dict_cursor_a6afdca1be3fbb8747c009694385a8256}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_real_dict_cursor_a108e4fee763a62f75766fb658f0dd45b}\label{classpsycopg2_1_1extras_1_1_real_dict_cursor_a108e4fee763a62f75766fb658f0dd45b}} 
+def {\bfseries execute} (self, query, vars=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_real_dict_cursor_a2fec541eefd3702d591071fedd78004c}\label{classpsycopg2_1_1extras_1_1_real_dict_cursor_a2fec541eefd3702d591071fedd78004c}} 
+def {\bfseries callproc} (self, procname, vars=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_real_dict_cursor_a433b5b1b2ed855caa7cd4287f0af159b}\label{classpsycopg2_1_1extras_1_1_real_dict_cursor_a433b5b1b2ed855caa7cd4287f0af159b}} 
+{\bfseries column\+\_\+mapping}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A cursor that uses a real dict as the base type for rows.
+
+Note that this cursor is extremely specialized and does not allow
+the normal access (using integer indices) to fetched data. If you need
+to access database rows both as a dictionary and a list, then use
+the generic `DictCursor` instead of `!RealDictCursor`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_real_dict_cursor_a6afdca1be3fbb8747c009694385a8256}\label{classpsycopg2_1_1extras_1_1_real_dict_cursor_a6afdca1be3fbb8747c009694385a8256}} 
+\index{psycopg2.extras.RealDictCursor@{psycopg2.extras.RealDictCursor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!psycopg2.extras.RealDictCursor@{psycopg2.extras.RealDictCursor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Real\+Dict\+Cursor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_dict_cursor_base}{psycopg2.\+extras.\+Dict\+Cursor\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/extras.\+py\end{DoxyCompactItemize}

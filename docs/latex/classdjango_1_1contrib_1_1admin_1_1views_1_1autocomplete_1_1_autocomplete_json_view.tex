@@ -1,0 +1,110 @@
+\hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view}{}\doxysection{django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View Class Reference}
+\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view}\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+
+
+Inheritance diagram for django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a332059b5057dd0960d3198ebece79667}{get}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a04246dcdf4d4214e4f07e65279dbae92}{get\+\_\+paginator}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_aeba422d947101bce361f0fd32ff7d4d4}{get\+\_\+queryset}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a6590d49b992196ac3ce3274d3c9da0f9}{process\+\_\+request}} (self, request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_af3b9e33b553e810eed5586513ceb5568}{has\+\_\+perm}} (self, request, obj=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_ace6ff6b912fb1e932b1cc94834b82dd3}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_ace6ff6b912fb1e932b1cc94834b82dd3}} 
+{\bfseries object\+\_\+list}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_af1087d67bad94ee76c23c6bb9b02749f}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_af1087d67bad94ee76c23c6bb9b02749f}} 
+int {\bfseries paginate\+\_\+by} = 20
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_afcd836097bda51b985622e0601da52df}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_afcd836097bda51b985622e0601da52df}} 
+{\bfseries admin\+\_\+site} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Handle AutocompleteWidget's AJAX requests for data.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a332059b5057dd0960d3198ebece79667}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a332059b5057dd0960d3198ebece79667}} 
+\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}!get@{get}}
+\index{get@{get}!django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a JsonResponse with search results of the form:
+{
+    results: [{id: "123" text: "foo"}],
+    pagination: {more: true}
+}
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1list_1_1_base_list_view}{django.\+views.\+generic.\+list.\+Base\+List\+View}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a04246dcdf4d4214e4f07e65279dbae92}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a04246dcdf4d4214e4f07e65279dbae92}} 
+\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}!get\_paginator@{get\_paginator}}
+\index{get\_paginator@{get\_paginator}!django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+\doxysubsubsection{\texorpdfstring{get\_paginator()}{get\_paginator()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View.\+get\+\_\+paginator (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Use the ModelAdmin's paginator.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1list_1_1_multiple_object_mixin_af1521cdb7d15cd381c189fc0cf297416}{django.\+views.\+generic.\+list.\+Multiple\+Object\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_aeba422d947101bce361f0fd32ff7d4d4}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_aeba422d947101bce361f0fd32ff7d4d4}} 
+\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}!get\_queryset@{get\_queryset}}
+\index{get\_queryset@{get\_queryset}!django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+\doxysubsubsection{\texorpdfstring{get\_queryset()}{get\_queryset()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View.\+get\+\_\+queryset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return queryset based on ModelAdmin.get_search_results().\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1list_1_1_multiple_object_mixin_ad98185a338be30a3a7327fbb7c3b4a1a}{django.\+views.\+generic.\+list.\+Multiple\+Object\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_af3b9e33b553e810eed5586513ceb5568}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_af3b9e33b553e810eed5586513ceb5568}} 
+\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}!has\_perm@{has\_perm}}
+\index{has\_perm@{has\_perm}!django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+\doxysubsubsection{\texorpdfstring{has\_perm()}{has\_perm()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View.\+has\+\_\+perm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{obj = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if user has permission to access the related model.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a6590d49b992196ac3ce3274d3c9da0f9}\label{classdjango_1_1contrib_1_1admin_1_1views_1_1autocomplete_1_1_autocomplete_json_view_a6590d49b992196ac3ce3274d3c9da0f9}} 
+\index{django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}!process\_request@{process\_request}}
+\index{process\_request@{process\_request}!django.contrib.admin.views.autocomplete.AutocompleteJsonView@{django.contrib.admin.views.autocomplete.AutocompleteJsonView}}
+\doxysubsubsection{\texorpdfstring{process\_request()}{process\_request()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+views.\+autocomplete.\+Autocomplete\+Json\+View.\+process\+\_\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate request integrity, extract and return request parameters.
+
+Since the subsequent view permission check requires the target model
+admin, which is determined here, raise PermissionDenied if the
+requested app, model or field are malformed.
+
+Raise Http404 if the target model admin is not configured properly with
+search_fields.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/admin/views/autocomplete.\+py\end{DoxyCompactItemize}

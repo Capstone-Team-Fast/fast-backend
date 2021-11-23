@@ -1,0 +1,43 @@
+\hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates}{}\doxysection{pip.\+\_\+internal.\+resolution.\+resolvelib.\+found\+\_\+candidates.\+Found\+Candidates Class Reference}
+\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates}\index{pip.\_internal.resolution.resolvelib.found\_candidates.FoundCandidates@{pip.\_internal.resolution.resolvelib.found\_candidates.FoundCandidates}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+resolution.\+resolvelib.\+found\+\_\+candidates.\+Found\+Candidates\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+resolution.\+resolvelib.\+found\+\_\+candidates.\+Found\+Candidates\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a43db1abcb74a291f932a8980fa5b645a}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a43db1abcb74a291f932a8980fa5b645a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, Iterator\mbox{[}Index\+Candidate\+Info\mbox{]}\mbox{]} get\+\_\+infos, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1_candidate}{Candidate}}\mbox{]} installed, bool prefers\+\_\+installed, Set\mbox{[}int\mbox{]} incompatible\+\_\+ids)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a61c9440a49537c1b5e1097c38a34b3f3}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a61c9440a49537c1b5e1097c38a34b3f3}} 
+\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1_candidate}{Candidate}} {\bfseries \+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, int index)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a37d0577f32e2e8c8fadbe2939328bff5}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a37d0577f32e2e8c8fadbe2939328bff5}} 
+Iterator\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1_candidate}{Candidate}}\mbox{]} {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a550acaf9dcbdee691d14c30b46f55a01}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a550acaf9dcbdee691d14c30b46f55a01}} 
+int {\bfseries \+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a59972aec237e8d15541a43cc12a76adb}\label{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates_a59972aec237e8d15541a43cc12a76adb}} 
+bool {\bfseries \+\_\+\+\_\+bool\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A lazy sequence to provide candidates to the resolver.
+
+The intended usage is to return this from `find_matches()` so the resolver
+can iterate through the sequence multiple times, but only access the index
+page when remote packages are actually needed. This improve performances
+when suitable candidates are already installed on disk.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/resolution/resolvelib/found\+\_\+candidates.\+py\end{DoxyCompactItemize}

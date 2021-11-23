@@ -1,0 +1,87 @@
+\hypertarget{classrouting_1_1managers_1_1_location_manager}{}\doxysection{routing.\+managers.\+Location\+Manager Class Reference}
+\label{classrouting_1_1managers_1_1_location_manager}\index{routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a22d80011f6e7c1ce9ef591dfc0facea5}\label{classrouting_1_1managers_1_1_location_manager_a22d80011f6e7c1ce9ef591dfc0facea5}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, neomodel.\+db db\+\_\+connection, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} depot)
+\item 
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a7ffecbb2a3b9f2814a9d2c6a30b87b14}\label{classrouting_1_1managers_1_1_location_manager_a7ffecbb2a3b9f2814a9d2c6a30b87b14}} 
+def {\bfseries depot} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a02eceb86b1ebaa686ae745211f78df44}\label{classrouting_1_1managers_1_1_location_manager_a02eceb86b1ebaa686ae745211f78df44}} 
+def {\bfseries connection} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a5efde89bb4c26e03703c938d589f2b01}\label{classrouting_1_1managers_1_1_location_manager_a5efde89bb4c26e03703c938d589f2b01}} 
+list {\bfseries locations} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1managers_1_1_location_manager_a12651ec61539d406ed112658b82746ef}{size}} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a3828719e14eef854e912392cfb003145}\label{classrouting_1_1managers_1_1_location_manager_a3828719e14eef854e912392cfb003145}} 
+def {\bfseries remove} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location)
+\item 
+def \mbox{\hyperlink{classrouting_1_1managers_1_1_location_manager_a98c7a430dda1e06b230aaf12dfaaa60b}{add}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location)
+\item 
+def \mbox{\hyperlink{classrouting_1_1managers_1_1_location_manager_aebfe68bfaf1b9eb599130433def50527}{add\+\_\+collection}} (self, list locations)
+\item 
+def \mbox{\hyperlink{classrouting_1_1managers_1_1_location_manager_a9b528b6354fa9f7f46280c158311fe1b}{get\+\_\+distance\+\_\+savings}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location1, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location2)
+\item 
+def \mbox{\hyperlink{classrouting_1_1managers_1_1_location_manager_a8fd919e1d8f423980eb992848252415d}{get\+\_\+duration\+\_\+savings}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location1, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}} location2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a98c7a430dda1e06b230aaf12dfaaa60b}\label{classrouting_1_1managers_1_1_location_manager_a98c7a430dda1e06b230aaf12dfaaa60b}} 
+\index{routing.managers.LocationManager@{routing.managers.LocationManager}!add@{add}}
+\index{add@{add}!routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def routing.\+managers.\+Location\+Manager.\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}}}]{location }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add the location argument to the graph database.
+
+This method ensures that a location, by the time it is added to the graph database, has its coordinates set.
+The coordinates consist of a latitude and a longitude.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_aebfe68bfaf1b9eb599130433def50527}\label{classrouting_1_1managers_1_1_location_manager_aebfe68bfaf1b9eb599130433def50527}} 
+\index{routing.managers.LocationManager@{routing.managers.LocationManager}!add\_collection@{add\_collection}}
+\index{add\_collection@{add\_collection}!routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsubsection{\texorpdfstring{add\_collection()}{add\_collection()}}
+{\footnotesize\ttfamily def routing.\+managers.\+Location\+Manager.\+add\+\_\+collection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{list}]{locations }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds this list of locations to the graph database.
+
+If locations is None, no change occurs. Otherwise, each location in this list is added to the graph
+database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a9b528b6354fa9f7f46280c158311fe1b}\label{classrouting_1_1managers_1_1_location_manager_a9b528b6354fa9f7f46280c158311fe1b}} 
+\index{routing.managers.LocationManager@{routing.managers.LocationManager}!get\_distance\_savings@{get\_distance\_savings}}
+\index{get\_distance\_savings@{get\_distance\_savings}!routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsubsection{\texorpdfstring{get\_distance\_savings()}{get\_distance\_savings()}}
+{\footnotesize\ttfamily def routing.\+managers.\+Location\+Manager.\+get\+\_\+distance\+\_\+savings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}}}]{location1,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}}}]{location2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets the savings (in meters) between these two locations.
+
+This implementation guarantees that either location is in the graph database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a8fd919e1d8f423980eb992848252415d}\label{classrouting_1_1managers_1_1_location_manager_a8fd919e1d8f423980eb992848252415d}} 
+\index{routing.managers.LocationManager@{routing.managers.LocationManager}!get\_duration\_savings@{get\_duration\_savings}}
+\index{get\_duration\_savings@{get\_duration\_savings}!routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsubsection{\texorpdfstring{get\_duration\_savings()}{get\_duration\_savings()}}
+{\footnotesize\ttfamily def routing.\+managers.\+Location\+Manager.\+get\+\_\+duration\+\_\+savings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}}}]{location1,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{Location}}}]{location2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets the savings (in minutes) between these two locations.
+
+This implementation guarantees that either location is in the graph database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1managers_1_1_location_manager_a12651ec61539d406ed112658b82746ef}\label{classrouting_1_1managers_1_1_location_manager_a12651ec61539d406ed112658b82746ef}} 
+\index{routing.managers.LocationManager@{routing.managers.LocationManager}!size@{size}}
+\index{size@{size}!routing.managers.LocationManager@{routing.managers.LocationManager}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily def routing.\+managers.\+Location\+Manager.\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets the number of locations being currently managed.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/managers.\+py\end{DoxyCompactItemize}

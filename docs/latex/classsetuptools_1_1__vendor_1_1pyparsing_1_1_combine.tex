@@ -1,0 +1,105 @@
+\hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine}{}\doxysection{setuptools.\+\_\+vendor.\+pyparsing.\+Combine Class Reference}
+\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine}\index{setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}}
+
+
+Inheritance diagram for setuptools.\+\_\+vendor.\+pyparsing.\+Combine\+:
+% FIG 0
+
+
+Collaboration diagram for setuptools.\+\_\+vendor.\+pyparsing.\+Combine\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a6bc0f189d26a4ac6a5986cafb15641b5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expr, join\+String=\char`\"{}\char`\"{}, adjacent=True)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a84cbd8b1c653fb08b5a77fc26b83b005}{ignore}} (self, other)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_af1a6aa53e409c35e5c28c8ccb9fc62d7}{post\+Parse}} (self, instring, loc, tokenlist)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_af72a8e1f083c2a312c268bf1e49e0d7a}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_af72a8e1f083c2a312c268bf1e49e0d7a}} 
+{\bfseries adjacent}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_ad6d43d8440c852d1df965a59192a2c31}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_ad6d43d8440c852d1df965a59192a2c31}} 
+{\bfseries skip\+Whitespace}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_acf8657472adde6974dc62fd9f34a337a}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_acf8657472adde6974dc62fd9f34a337a}} 
+{\bfseries join\+String}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a43693d7a37e335c02b6f0e82e33ad4de}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a43693d7a37e335c02b6f0e82e33ad4de}} 
+{\bfseries call\+Preparse}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Converter to concatenate all matching tokens to a single string.
+By default, the matching patterns must also be contiguous in the input string;
+this can be disabled by specifying C{'adjacent=False'} in the constructor.
+
+Example::
+    real = Word(nums) + '.' + Word(nums)
+    print(real.parseString('3.1416')) # -> ['3', '.', '1416']
+    # will also erroneously match the following
+    print(real.parseString('3. 1416')) # -> ['3', '.', '1416']
+
+    real = Combine(Word(nums) + '.' + Word(nums))
+    print(real.parseString('3.1416')) # -> ['3.1416']
+    # no match when there are internal spaces
+    print(real.parseString('3. 1416')) # -> Exception: Expected W:(0123...)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a6bc0f189d26a4ac6a5986cafb15641b5}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a6bc0f189d26a4ac6a5986cafb15641b5}} 
+\index{setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+pyparsing.\+Combine.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{join\+String = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{adjacent = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_token_converter}{setuptools.\+\_\+vendor.\+pyparsing.\+Token\+Converter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a84cbd8b1c653fb08b5a77fc26b83b005}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_a84cbd8b1c653fb08b5a77fc26b83b005}} 
+\index{setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}!ignore@{ignore}}
+\index{ignore@{ignore}!setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{ignore()}{ignore()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+pyparsing.\+Combine.\+ignore (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define expression to be ignored (e.g., comments) while doing pattern
+matching; may be called repeatedly, to define multiple comment or other
+ignorable patterns.
+
+Example::
+    patt = OneOrMore(Word(alphas))
+    patt.parseString('ablaj /* comment */ lskjd') # -> ['ablaj']
+    
+    patt.ignore(cStyleComment)
+    patt.parseString('ablaj /* comment */ lskjd') # -> ['ablaj', 'lskjd']
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance_a875f69cc8c08a3e2d92242cd58fae173}{setuptools.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_af1a6aa53e409c35e5c28c8ccb9fc62d7}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_combine_af1a6aa53e409c35e5c28c8ccb9fc62d7}} 
+\index{setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}!postParse@{postParse}}
+\index{postParse@{postParse}!setuptools.\_vendor.pyparsing.Combine@{setuptools.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{postParse()}{postParse()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+pyparsing.\+Combine.\+post\+Parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{tokenlist }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_parser_element}{setuptools.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

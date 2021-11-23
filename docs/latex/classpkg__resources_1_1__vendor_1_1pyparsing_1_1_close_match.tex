@@ -1,0 +1,96 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Close\+Match Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match}\index{pkg\_resources.\_vendor.pyparsing.CloseMatch@{pkg\_resources.\_vendor.pyparsing.CloseMatch}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Close\+Match\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Close\+Match\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_ae8e321cbc22d9559d53155a0e533acb2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, match\+\_\+string, max\+Mismatches=1)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a9a8d036ae102bce8ab97932588087447}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a398d363d50cc4108563176c9d65a2f0b}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a398d363d50cc4108563176c9d65a2f0b}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_acce4c0b39d10c00108a16ab1628ff1aa}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_acce4c0b39d10c00108a16ab1628ff1aa}} 
+{\bfseries match\+\_\+string}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a09058c80659100caec3f519c53d274c6}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a09058c80659100caec3f519c53d274c6}} 
+{\bfseries max\+Mismatches}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_abf7e697fcb785e8fa2346981e1405bcf}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_abf7e697fcb785e8fa2346981e1405bcf}} 
+{\bfseries errmsg}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a642515096d4126c2c59cae20d0db71b1}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a642515096d4126c2c59cae20d0db71b1}} 
+{\bfseries may\+Index\+Error}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a1e2e94f0db0586ca23f0fac8898b3b69}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a1e2e94f0db0586ca23f0fac8898b3b69}} 
+{\bfseries may\+Return\+Empty}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A variation on L{Literal} which matches "close" matches, that is, 
+strings with at most 'n' mismatching characters. C{CloseMatch} takes parameters:
+ - C{match_string} - string to be matched
+ - C{maxMismatches} - (C{default=1}) maximum number of mismatches allowed to count as a match
+
+The results from a successful parse will contain the matched text from the input string and the following named results:
+ - C{mismatches} - a list of the positions within the match_string where mismatches were found
+ - C{original} - the original match_string used to compare against the input string
+
+If C{mismatches} is an empty list, then the match was an exact match.
+
+Example::
+    patt = CloseMatch("ATCATCGAATGGA")
+    patt.parseString("ATCATCGAAXGGA") # -> (['ATCATCGAAXGGA'], {'mismatches': [[9]], 'original': ['ATCATCGAATGGA']})
+    patt.parseString("ATCAXCGAAXGGA") # -> Exception: Expected 'ATCATCGAATGGA' (with up to 1 mismatches) (at char 0), (line:1, col:1)
+
+    # exact match
+    patt.parseString("ATCATCGAATGGA") # -> (['ATCATCGAATGGA'], {'mismatches': [[]], 'original': ['ATCATCGAATGGA']})
+
+    # close match allowing up to 2 mismatches
+    patt = CloseMatch("ATCATCGAATGGA", maxMismatches=2)
+    patt.parseString("ATCAXCGAAXGGA") # -> (['ATCAXCGAAXGGA'], {'mismatches': [[4, 9]], 'original': ['ATCATCGAATGGA']})
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_ae8e321cbc22d9559d53155a0e533acb2}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_ae8e321cbc22d9559d53155a0e533acb2}} 
+\index{pkg\_resources.\_vendor.pyparsing.CloseMatch@{pkg\_resources.\_vendor.pyparsing.CloseMatch}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.CloseMatch@{pkg\_resources.\_vendor.pyparsing.CloseMatch}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Close\+Match.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{match\+\_\+string,  }\item[{}]{max\+Mismatches = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_token}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Token}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a9a8d036ae102bce8ab97932588087447}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_close_match_a9a8d036ae102bce8ab97932588087447}} 
+\index{pkg\_resources.\_vendor.pyparsing.CloseMatch@{pkg\_resources.\_vendor.pyparsing.CloseMatch}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.CloseMatch@{pkg\_resources.\_vendor.pyparsing.CloseMatch}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Close\+Match.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate}{}\doxysection{setuptools.\+\_\+distutils.\+versionpredicate Namespace Reference}
+\label{namespacesetuptools_1_1__distutils_1_1versionpredicate}\index{setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1versionpredicate_1_1_version_predicate}{Version\+Predicate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1versionpredicate_aef106f185adf3667cf513ee0af81c8fa}{split\+Up}} (pred)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1versionpredicate_af4072cfd07f97b5b71a42d2c9de5a8cf}{split\+\_\+provision}} (value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1versionpredicate_a1c1ab5d3991e2da262c199dbcaa5e833}{re\+\_\+valid\+Package}}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_aa9b63cc0b89ab9b811479748e30242b3}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_aa9b63cc0b89ab9b811479748e30242b3}} 
+{\bfseries re\+\_\+paren} = re.\+compile(r\char`\"{}$^\wedge$\textbackslash{}s$\ast$\textbackslash{}((.$\ast$)\textbackslash{})\textbackslash{}s$\ast$\$\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_aacaf5c82de4677b1a960449710773798}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_aacaf5c82de4677b1a960449710773798}} 
+{\bfseries re\+\_\+split\+Comparison} = re.\+compile(r\char`\"{}$^\wedge$\textbackslash{}s$\ast$($<$=$\vert$$>$=$\vert$$<$$\vert$$>$$\vert$!=$\vert$==)\textbackslash{}s$\ast$(\mbox{[}$^\wedge$\textbackslash{}s,\mbox{]}+)\textbackslash{}s$\ast$\$\char`\"{})
+\item 
+dictionary \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1versionpredicate_a60a4bc231710aab2a6a232cfe534b89e}{compmap}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Module for parsing and testing package version predicate strings.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_af4072cfd07f97b5b71a42d2c9de5a8cf}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_af4072cfd07f97b5b71a42d2c9de5a8cf}} 
+\index{setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}!split\_provision@{split\_provision}}
+\index{split\_provision@{split\_provision}!setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}}
+\doxysubsubsection{\texorpdfstring{split\_provision()}{split\_provision()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+versionpredicate.\+split\+\_\+provision (\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the name and optional version number of a provision.
+
+The version number, if given, will be returned as a `StrictVersion`
+instance, otherwise it will be `None`.
+
+>>> split_provision('mypkg')
+('mypkg', None)
+>>> split_provision(' mypkg( 1.2 ) ')
+('mypkg', StrictVersion ('1.2'))
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_aef106f185adf3667cf513ee0af81c8fa}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_aef106f185adf3667cf513ee0af81c8fa}} 
+\index{setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}!splitUp@{splitUp}}
+\index{splitUp@{splitUp}!setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}}
+\doxysubsubsection{\texorpdfstring{splitUp()}{splitUp()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+versionpredicate.\+split\+Up (\begin{DoxyParamCaption}\item[{}]{pred }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse a single version comparison.
+
+Return (comparison string, StrictVersion)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_a60a4bc231710aab2a6a232cfe534b89e}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_a60a4bc231710aab2a6a232cfe534b89e}} 
+\index{setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}!compmap@{compmap}}
+\index{compmap@{compmap}!setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}}
+\doxysubsubsection{\texorpdfstring{compmap}{compmap}}
+{\footnotesize\ttfamily dictionary setuptools.\+\_\+distutils.\+versionpredicate.\+compmap}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{\textcolor{stringliteral}{"{}<"{}}: operator.lt, \textcolor{stringliteral}{"{}<="{}}: operator.le, \textcolor{stringliteral}{"{}=="{}}: operator.eq,}
+\DoxyCodeLine{2            \textcolor{stringliteral}{"{}>"{}}: operator.gt, \textcolor{stringliteral}{"{}>="{}}: operator.ge, \textcolor{stringliteral}{"{}!="{}}: operator.ne\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1versionpredicate_a1c1ab5d3991e2da262c199dbcaa5e833}\label{namespacesetuptools_1_1__distutils_1_1versionpredicate_a1c1ab5d3991e2da262c199dbcaa5e833}} 
+\index{setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}!re\_validPackage@{re\_validPackage}}
+\index{re\_validPackage@{re\_validPackage}!setuptools.\_distutils.versionpredicate@{setuptools.\_distutils.versionpredicate}}
+\doxysubsubsection{\texorpdfstring{re\_validPackage}{re\_validPackage}}
+{\footnotesize\ttfamily setuptools.\+\_\+distutils.\+versionpredicate.\+re\+\_\+valid\+Package}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  re.compile(\textcolor{stringliteral}{r"{}(?i)\string^\(\backslash\)s*([a-\/z\_]\(\backslash\)w*(?:\(\backslash\).[a-\/z\_]\(\backslash\)w*)*)(.*)"{}},}
+\DoxyCodeLine{2     re.ASCII)}
+
+\end{DoxyCode}

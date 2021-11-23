@@ -1,0 +1,60 @@
+\hypertarget{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend}{}\doxysection{django.\+core.\+mail.\+backends.\+locmem.\+Email\+Backend Class Reference}
+\label{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend}\index{django.core.mail.backends.locmem.EmailBackend@{django.core.mail.backends.locmem.EmailBackend}}
+
+
+Inheritance diagram for django.\+core.\+mail.\+backends.\+locmem.\+Email\+Backend\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+mail.\+backends.\+locmem.\+Email\+Backend\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a9c8ed05a296336c51955740d8202d4ba}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a2538f4d49bcb19c323acca6c472ffab9}{send\+\_\+messages}} (self, messages)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An email backend for use during test sessions.
+
+The test connection stores email messages in a dummy outbox,
+rather than sending them out on the wire.
+
+The dummy outbox is accessible through the outbox instance attribute.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a9c8ed05a296336c51955740d8202d4ba}\label{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a9c8ed05a296336c51955740d8202d4ba}} 
+\index{django.core.mail.backends.locmem.EmailBackend@{django.core.mail.backends.locmem.EmailBackend}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.core.mail.backends.locmem.EmailBackend@{django.core.mail.backends.locmem.EmailBackend}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+core.\+mail.\+backends.\+locmem.\+Email\+Backend.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1backends_1_1base_1_1_base_email_backend}{django.\+core.\+mail.\+backends.\+base.\+Base\+Email\+Backend}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a2538f4d49bcb19c323acca6c472ffab9}\label{classdjango_1_1core_1_1mail_1_1backends_1_1locmem_1_1_email_backend_a2538f4d49bcb19c323acca6c472ffab9}} 
+\index{django.core.mail.backends.locmem.EmailBackend@{django.core.mail.backends.locmem.EmailBackend}!send\_messages@{send\_messages}}
+\index{send\_messages@{send\_messages}!django.core.mail.backends.locmem.EmailBackend@{django.core.mail.backends.locmem.EmailBackend}}
+\doxysubsubsection{\texorpdfstring{send\_messages()}{send\_messages()}}
+{\footnotesize\ttfamily def django.\+core.\+mail.\+backends.\+locmem.\+Email\+Backend.\+send\+\_\+messages (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{messages }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Redirect messages to the dummy outbox\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1backends_1_1base_1_1_base_email_backend_a9bc1d032f1136e1c6381297b6893a13a}{django.\+core.\+mail.\+backends.\+base.\+Base\+Email\+Backend}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/mail/backends/locmem.\+py\end{DoxyCompactItemize}

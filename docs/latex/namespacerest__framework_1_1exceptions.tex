@@ -1,0 +1,64 @@
+\hypertarget{namespacerest__framework_1_1exceptions}{}\doxysection{rest\+\_\+framework.\+exceptions Namespace Reference}
+\label{namespacerest__framework_1_1exceptions}\index{rest\_framework.exceptions@{rest\_framework.exceptions}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_a_p_i_exception}{APIException}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_authentication_failed}{Authentication\+Failed}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_error_detail}{Error\+Detail}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_method_not_allowed}{Method\+Not\+Allowed}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_not_acceptable}{Not\+Acceptable}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_not_authenticated}{Not\+Authenticated}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_not_found}{Not\+Found}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_parse_error}{Parse\+Error}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_permission_denied}{Permission\+Denied}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_throttled}{Throttled}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_unsupported_media_type}{Unsupported\+Media\+Type}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1exceptions_1_1_validation_error}{Validation\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1exceptions_a18899c14b56225531077814176e29d81}{server\+\_\+error}} (request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1exceptions_add282668500bcc147ca9b93546546309}{bad\+\_\+request}} (request, exception, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Handled exceptions raised by REST framework.
+
+In addition Django's built in 403 and 404 exceptions are handled.
+(`django.http.Http404` and `django.core.exceptions.PermissionDenied`)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1exceptions_add282668500bcc147ca9b93546546309}\label{namespacerest__framework_1_1exceptions_add282668500bcc147ca9b93546546309}} 
+\index{rest\_framework.exceptions@{rest\_framework.exceptions}!bad\_request@{bad\_request}}
+\index{bad\_request@{bad\_request}!rest\_framework.exceptions@{rest\_framework.exceptions}}
+\doxysubsubsection{\texorpdfstring{bad\_request()}{bad\_request()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+exceptions.\+bad\+\_\+request (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{exception,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generic 400 error handler.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerest__framework_1_1exceptions_a18899c14b56225531077814176e29d81}\label{namespacerest__framework_1_1exceptions_a18899c14b56225531077814176e29d81}} 
+\index{rest\_framework.exceptions@{rest\_framework.exceptions}!server\_error@{server\_error}}
+\index{server\_error@{server\_error}!rest\_framework.exceptions@{rest\_framework.exceptions}}
+\doxysubsubsection{\texorpdfstring{server\_error()}{server\_error()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+exceptions.\+server\+\_\+error (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generic 500 error handler.
+\end{DoxyVerb}
+ 

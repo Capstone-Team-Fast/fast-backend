@@ -1,0 +1,427 @@
+\hypertarget{classneo4j_1_1io_1_1_bolt}{}\doxysection{neo4j.\+io.\+Bolt Class Reference}
+\label{classneo4j_1_1io_1_1_bolt}\index{neo4j.io.Bolt@{neo4j.io.Bolt}}
+
+
+Inheritance diagram for neo4j.\+io.\+Bolt\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+io.\+Bolt\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ab68b3fe03b2d270fdd82a9fc9d0eb0e9}\label{classneo4j_1_1io_1_1_bolt_ab68b3fe03b2d270fdd82a9fc9d0eb0e9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, unresolved\+\_\+address, sock, max\+\_\+connection\+\_\+lifetime, $\ast$auth=None, user\+\_\+agent=None, routing\+\_\+context=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a30497735808aeb5e60c2cb71db4d0963}{supports\+\_\+multiple\+\_\+results}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a6b2ef147b1a03717a90ca7b0ae9e9140}{supports\+\_\+multiple\+\_\+databases}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a8b2822a992ddbf3b83ff9b56f7deae0e}{protocol\+\_\+handlers}} (cls, protocol\+\_\+version=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a5f56844072cc7d15f65b6e429125e8a5}{version\+\_\+list}} (cls, versions, limit=4)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a296df39c04e95fdfd6e325be0c029c4a}{get\+\_\+handshake}} (cls)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_ae25f63192d24e510cb93f60e99d71279}{ping}} (cls, address, $\ast$timeout=None, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_affe3b564e23ba84d4cc7827be4c76a77}{open}} (cls, address, $\ast$auth=None, timeout=None, routing\+\_\+context=None, $\ast$$\ast$pool\+\_\+config)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a04d0bf750b134437d8adb2e3cae4c7b0}\label{classneo4j_1_1io_1_1_bolt_a04d0bf750b134437d8adb2e3cae4c7b0}} 
+def {\bfseries encrypted} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a05999c3eea7e8799f0a32e698e9b65da}\label{classneo4j_1_1io_1_1_bolt_a05999c3eea7e8799f0a32e698e9b65da}} 
+def {\bfseries der\+\_\+encoded\+\_\+server\+\_\+certificate} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a138612b954447d40495cbd3866d36081}\label{classneo4j_1_1io_1_1_bolt_a138612b954447d40495cbd3866d36081}} 
+def {\bfseries local\+\_\+port} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a1a6121a9c8476295123e385ed351f383}{hello}} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a32b6f8903cd63e9fe72efcc3d80ad4a6}\label{classneo4j_1_1io_1_1_bolt_a32b6f8903cd63e9fe72efcc3d80ad4a6}} 
+def {\bfseries \+\_\+\+\_\+del\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a32618bee9606a89d1635c273804d413a}{route}} (self, database=None, bookmarks=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_acb02d3f5647dddde2e582c39176508af}{run}} (self, query, parameters=None, mode=None, bookmarks=None, metadata=None, timeout=None, db=None, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a34e31ecdba50207ce296dc8f33a6fe67}{discard}} (self, n=-\/1, qid=-\/1, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_ac3fe1565b8e652c4b4a69201d00cb9fa}{pull}} (self, n=-\/1, qid=-\/1, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_aa591d47f663c9343b631ff1a4aca6e2a}{begin}} (self, mode=None, bookmarks=None, metadata=None, timeout=None, db=None, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_ab273d5af6b3a8b82edceffeecf0f4eaf}{commit}} (self, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a7567209049fc59dd08951bd4b2fdd512}{rollback}} (self, $\ast$$\ast$handlers)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a94d84e2400835b5c37ab2246145a2fa8}\label{classneo4j_1_1io_1_1_bolt_a94d84e2400835b5c37ab2246145a2fa8}} 
+def {\bfseries is\+\_\+reset} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a33def863154b30524bec5e4838dfcced}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a5e0ef49dbd2c778a44a88f792262771e}{send\+\_\+all}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a3a4caa9d355fcbea700f181ecf40838f}{fetch\+\_\+message}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_aeabe1dd43e33259be90037c6f311f360}{fetch\+\_\+all}} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a26f55267f34b2ab4980d62c691b9a4ca}\label{classneo4j_1_1io_1_1_bolt_a26f55267f34b2ab4980d62c691b9a4ca}} 
+def {\bfseries stale} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a76d2e950419aa5e13290cb271cb1b263}\label{classneo4j_1_1io_1_1_bolt_a76d2e950419aa5e13290cb271cb1b263}} 
+def {\bfseries set\+\_\+stale} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_bolt_a31d410f59bae9017097e542252e6a329}{close}} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a10aee2620e74eac58be141a5edf5e52c}\label{classneo4j_1_1io_1_1_bolt_a10aee2620e74eac58be141a5edf5e52c}} 
+def {\bfseries closed} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a75304337c6d82ca24388600a3aa5897c}\label{classneo4j_1_1io_1_1_bolt_a75304337c6d82ca24388600a3aa5897c}} 
+def {\bfseries defunct} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_aac6c72e8362b19b6b3bb0ea28d9dd3ba}\label{classneo4j_1_1io_1_1_bolt_aac6c72e8362b19b6b3bb0ea28d9dd3ba}} 
+{\bfseries unresolved\+\_\+address}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_af03f618fcf63facbb36c02464221e694}\label{classneo4j_1_1io_1_1_bolt_af03f618fcf63facbb36c02464221e694}} 
+{\bfseries socket}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a279a42a4ad859d652f685455a6949cb3}\label{classneo4j_1_1io_1_1_bolt_a279a42a4ad859d652f685455a6949cb3}} 
+{\bfseries server\+\_\+info}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_af4ca3f0beabbbe4be4cf61bd79d94189}\label{classneo4j_1_1io_1_1_bolt_af4ca3f0beabbbe4be4cf61bd79d94189}} 
+{\bfseries outbox}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a5a68f579738829d6f9375cd4969c773f}\label{classneo4j_1_1io_1_1_bolt_a5a68f579738829d6f9375cd4969c773f}} 
+{\bfseries inbox}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ae5a182597a3b6b2eada91f8dd69a8909}\label{classneo4j_1_1io_1_1_bolt_ae5a182597a3b6b2eada91f8dd69a8909}} 
+{\bfseries packer}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ad99a29472043ce60f5ef482148e45be2}\label{classneo4j_1_1io_1_1_bolt_ad99a29472043ce60f5ef482148e45be2}} 
+{\bfseries unpacker}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a385109de467a173d55889ea617e5f83c}\label{classneo4j_1_1io_1_1_bolt_a385109de467a173d55889ea617e5f83c}} 
+{\bfseries responses}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a92fa0f9ed28bf7b6c1b190a6d16f0975}\label{classneo4j_1_1io_1_1_bolt_a92fa0f9ed28bf7b6c1b190a6d16f0975}} 
+{\bfseries routing\+\_\+context}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ac8429b09a2a47ac7e220cb92acfd0c3f}\label{classneo4j_1_1io_1_1_bolt_ac8429b09a2a47ac7e220cb92acfd0c3f}} 
+{\bfseries user\+\_\+agent}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a015377d97c756191f6a4c547cfb1011d}\label{classneo4j_1_1io_1_1_bolt_a015377d97c756191f6a4c547cfb1011d}} 
+{\bfseries auth\+\_\+dict}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ade82760abc94dc6338538e02a33e3df2}\label{classneo4j_1_1io_1_1_bolt_ade82760abc94dc6338538e02a33e3df2}} 
+string {\bfseries MAGIC\+\_\+\+PREAMBLE} = b\char`\"{}\textbackslash{}x60\textbackslash{}x60\textbackslash{}x\+B0\textbackslash{}x17\char`\"{}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_af48fdda49095a05cd689620e62c2737a}\label{classneo4j_1_1io_1_1_bolt_af48fdda49095a05cd689620e62c2737a}} 
+{\bfseries PROTOCOL\+\_\+\+VERSION} = None
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a44262fc184fc928d9203d99c94f70e8a}\label{classneo4j_1_1io_1_1_bolt_a44262fc184fc928d9203d99c94f70e8a}} 
+bool {\bfseries in\+\_\+use} = False
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a730d92694a4880ecf5c38fc1bd703936}\label{classneo4j_1_1io_1_1_bolt_a730d92694a4880ecf5c38fc1bd703936}} 
+{\bfseries pool} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Server connection for Bolt protocol.
+
+A :class:`.Bolt` should be constructed following a
+successful .open()
+
+Bolt handshake and takes the socket over which
+the handshake was carried out.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_aa591d47f663c9343b631ff1a4aca6e2a}\label{classneo4j_1_1io_1_1_bolt_aa591d47f663c9343b631ff1a4aca6e2a}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!begin@{begin}}
+\index{begin@{begin}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+begin (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None},  }\item[{}]{metadata = {\ttfamily None},  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{db = {\ttfamily None},  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a BEGIN message to the output queue.
+
+:param mode: access mode for routing - "READ" or "WRITE" (default)
+:param bookmarks: iterable of bookmark values after which this transaction should begin
+:param metadata: custom metadata dictionary to attach to the transaction
+:param timeout: timeout for transaction execution (seconds)
+:param db: name of the database against which to begin the transaction
+:param handlers: handler functions passed into the returned Response object
+:return: Response object
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a6b19c1009d4c4296969f79bf412db900}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a43c9c0a798c651c89b2c0545b4d559f8}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a31d410f59bae9017097e542252e6a329}\label{classneo4j_1_1io_1_1_bolt_a31d410f59bae9017097e542252e6a329}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!close@{close}}
+\index{close@{close}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Close the connection.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a10044067639209614003ec8225c9a3cb}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a8e5771df2d7ec575c4ac9a8d9ff7d576}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ab273d5af6b3a8b82edceffeecf0f4eaf}\label{classneo4j_1_1io_1_1_bolt_ab273d5af6b3a8b82edceffeecf0f4eaf}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!commit@{commit}}
+\index{commit@{commit}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+commit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a COMMIT message to the output queue.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a112509e8744ca6f074fcb5ccc439d2b7}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a94ed53499dd7ac60b048cd7f500c50af}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a34e31ecdba50207ce296dc8f33a6fe67}\label{classneo4j_1_1io_1_1_bolt_a34e31ecdba50207ce296dc8f33a6fe67}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!discard@{discard}}
+\index{discard@{discard}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{discard()}{discard()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+discard (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily -\/1},  }\item[{}]{qid = {\ttfamily -\/1},  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a DISCARD message to the output queue.
+
+:param n: number of records to discard, default = -1 (ALL)
+:param qid: query ID to discard for, default = -1 (last query)
+:param handlers: handler functions passed into the returned Response object
+:return: Response object
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a6add09099c80146765c02f7bc8b7fd58}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a80cfc18f8f35af0393210ef91d5549c0}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_aeabe1dd43e33259be90037c6f311f360}\label{classneo4j_1_1io_1_1_bolt_aeabe1dd43e33259be90037c6f311f360}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!fetch\_all@{fetch\_all}}
+\index{fetch\_all@{fetch\_all}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{fetch\_all()}{fetch\_all()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+fetch\+\_\+all (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch all outstanding messages.
+
+:return: 2-tuple of number of detail messages and number of summary
+         messages fetched
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a3a4caa9d355fcbea700f181ecf40838f}\label{classneo4j_1_1io_1_1_bolt_a3a4caa9d355fcbea700f181ecf40838f}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!fetch\_message@{fetch\_message}}
+\index{fetch\_message@{fetch\_message}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{fetch\_message()}{fetch\_message()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+fetch\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Receive at least one message from the server, if available.
+
+:return: 2-tuple of number of detail messages and number of summary
+         messages fetched
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_ab300fada457359f1271f531364c39a39}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a886181d1be70c45be1b1f562a2c17f29}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a296df39c04e95fdfd6e325be0c029c4a}\label{classneo4j_1_1io_1_1_bolt_a296df39c04e95fdfd6e325be0c029c4a}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!get\_handshake@{get\_handshake}}
+\index{get\_handshake@{get\_handshake}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{get\_handshake()}{get\_handshake()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+get\+\_\+handshake (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the supported Bolt versions as bytes.
+The length is 16 bytes as specified in the Bolt version negotiation.
+:return: bytes
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a1a6121a9c8476295123e385ed351f383}\label{classneo4j_1_1io_1_1_bolt_a1a6121a9c8476295123e385ed351f383}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!hello@{hello}}
+\index{hello@{hello}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{hello()}{hello()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+hello (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a HELLO message to the outgoing queue, sends it and consumes
+ all remaining messages.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a4b44932eb9deb87d3ef16d5f3eeabd48}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a834ee76dbf7f2f4b2098bbd2978f7c6f}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_affe3b564e23ba84d4cc7827be4c76a77}\label{classneo4j_1_1io_1_1_bolt_affe3b564e23ba84d4cc7827be4c76a77}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!open@{open}}
+\index{open@{open}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+open (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{address,  }\item[{$\ast$}]{auth = {\ttfamily None},  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{routing\+\_\+context = {\ttfamily None},  }\item[{$\ast$$\ast$}]{pool\+\_\+config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Open a new Bolt connection to a given server address.
+
+:param address:
+:param auth:
+:param timeout: the connection timeout in seconds
+:param routing_context: dict containing routing context
+:param pool_config:
+:return:
+:raise BoltHandshakeError: raised if the Bolt Protocol can not negotiate a protocol version.
+:raise ServiceUnavailable: raised if there was a connection issue.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ae25f63192d24e510cb93f60e99d71279}\label{classneo4j_1_1io_1_1_bolt_ae25f63192d24e510cb93f60e99d71279}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!ping@{ping}}
+\index{ping@{ping}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+ping (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{address,  }\item[{$\ast$}]{timeout = {\ttfamily None},  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Attempt to establish a Bolt connection, returning the
+agreed Bolt protocol version if successful.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a8b2822a992ddbf3b83ff9b56f7deae0e}\label{classneo4j_1_1io_1_1_bolt_a8b2822a992ddbf3b83ff9b56f7deae0e}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!protocol\_handlers@{protocol\_handlers}}
+\index{protocol\_handlers@{protocol\_handlers}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{protocol\_handlers()}{protocol\_handlers()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+protocol\+\_\+handlers (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{protocol\+\_\+version = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return a dictionary of available Bolt protocol handlers,
+keyed by version tuple. If an explicit protocol version is
+provided, the dictionary will contain either zero or one items,
+depending on whether that version is supported. If no protocol
+version is provided, all available versions will be returned.
+
+:param protocol_version: tuple identifying a specific protocol
+    version (e.g. (3, 5)) or None
+:return: dictionary of version tuple to handler class for all
+    relevant and supported protocol versions
+:raise TypeError: if protocol version is not passed in a tuple
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_ac3fe1565b8e652c4b4a69201d00cb9fa}\label{classneo4j_1_1io_1_1_bolt_ac3fe1565b8e652c4b4a69201d00cb9fa}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!pull@{pull}}
+\index{pull@{pull}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{pull()}{pull()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+pull (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n = {\ttfamily -\/1},  }\item[{}]{qid = {\ttfamily -\/1},  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a PULL message to the output queue.
+
+:param n: number of records to pull, default = -1 (ALL)
+:param qid: query ID to pull for, default = -1 (last query)
+:param handlers: handler functions passed into the returned Response object
+:return: Response object
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a4c83986d47b34f70142cbecc32a16536}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_ac7369167c0393c78b7e086a399f357d6}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a33def863154b30524bec5e4838dfcced}\label{classneo4j_1_1io_1_1_bolt_a33def863154b30524bec5e4838dfcced}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!reset@{reset}}
+\index{reset@{reset}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a RESET message to the outgoing queue, sends it and consumes
+ all remaining messages.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_a2ea8fc802c7b0d66e3549121b1285947}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a2dc1b3e8cd497185596a179c7d14c209}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a7567209049fc59dd08951bd4b2fdd512}\label{classneo4j_1_1io_1_1_bolt_a7567209049fc59dd08951bd4b2fdd512}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!rollback@{rollback}}
+\index{rollback@{rollback}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+rollback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a ROLLBACK message to the output queue.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_aee121f22ab6549bd1477624ac9e7b6d9}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a885113374fd40d54de1db49a6bdd804d}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a32618bee9606a89d1635c273804d413a}\label{classneo4j_1_1io_1_1_bolt_a32618bee9606a89d1635c273804d413a}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!route@{route}}
+\index{route@{route}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{route()}{route()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+route (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{database = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch a routing table from the server for the given
+`database`. For Bolt 4.3 and above, this appends a ROUTE
+message; for earlier versions, a procedure call is made via
+the regular Cypher execution mechanism. In all cases, this is
+sent to the network, and a response is fetched.
+
+:param database: database for which to fetch a routing table
+:param bookmarks: iterable of bookmark values after which this
+                  transaction should begin
+:return: dictionary of raw routing data
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_af735de14dbf5cec61d93fd9fc396afd8}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a9cbebb3429f2781e149d2d8c16e423e7}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_a82e13beed47984aa399feec03c498343}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x3}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_acb02d3f5647dddde2e582c39176508af}\label{classneo4j_1_1io_1_1_bolt_acb02d3f5647dddde2e582c39176508af}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!run@{run}}
+\index{run@{run}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query,  }\item[{}]{parameters = {\ttfamily None},  }\item[{}]{mode = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None},  }\item[{}]{metadata = {\ttfamily None},  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{db = {\ttfamily None},  }\item[{$\ast$$\ast$}]{handlers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Appends a RUN message to the output queue.
+
+:param query: Cypher query string
+:param parameters: dictionary of Cypher parameters
+:param mode: access mode for routing - "READ" or "WRITE" (default)
+:param bookmarks: iterable of bookmark values after which this transaction should begin
+:param metadata: custom metadata dictionary to attach to the transaction
+:param timeout: timeout for transaction execution (seconds)
+:param db: name of the database against which to begin the transaction
+:param handlers: handler functions passed into the returned Response object
+:return: Response object
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt3_1_1_bolt3_adc5db0224b3fa5d32d8b26ac92ebebdf}{neo4j.\+io.\+\_\+bolt3.\+Bolt3}}, and \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a89238748bfb44ac0c3545b3ae524360e}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a5e0ef49dbd2c778a44a88f792262771e}\label{classneo4j_1_1io_1_1_bolt_a5e0ef49dbd2c778a44a88f792262771e}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!send\_all@{send\_all}}
+\index{send\_all@{send\_all}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{send\_all()}{send\_all()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+send\+\_\+all (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Send all queued messages to the server.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a6b2ef147b1a03717a90ca7b0ae9e9140}\label{classneo4j_1_1io_1_1_bolt_a6b2ef147b1a03717a90ca7b0ae9e9140}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!supports\_multiple\_databases@{supports\_multiple\_databases}}
+\index{supports\_multiple\_databases@{supports\_multiple\_databases}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{supports\_multiple\_databases()}{supports\_multiple\_databases()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+supports\+\_\+multiple\+\_\+databases (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Boolean flag to indicate if the connection version supports multiple
+databases.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a30497735808aeb5e60c2cb71db4d0963}\label{classneo4j_1_1io_1_1_bolt_a30497735808aeb5e60c2cb71db4d0963}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!supports\_multiple\_results@{supports\_multiple\_results}}
+\index{supports\_multiple\_results@{supports\_multiple\_results}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{supports\_multiple\_results()}{supports\_multiple\_results()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+supports\+\_\+multiple\+\_\+results (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Boolean flag to indicate if the connection version supports multiple
+queries to be buffered on the server side (True) or if all results need
+to be eagerly pulled before sending the next RUN (False).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_bolt_a5f56844072cc7d15f65b6e429125e8a5}\label{classneo4j_1_1io_1_1_bolt_a5f56844072cc7d15f65b6e429125e8a5}} 
+\index{neo4j.io.Bolt@{neo4j.io.Bolt}!version\_list@{version\_list}}
+\index{version\_list@{version\_list}!neo4j.io.Bolt@{neo4j.io.Bolt}}
+\doxysubsubsection{\texorpdfstring{version\_list()}{version\_list()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Bolt.\+version\+\_\+list (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{versions,  }\item[{}]{limit = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return a list of supported protocol versions in order of
+preference. The number of protocol versions (or ranges)
+returned is limited to four.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/io/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

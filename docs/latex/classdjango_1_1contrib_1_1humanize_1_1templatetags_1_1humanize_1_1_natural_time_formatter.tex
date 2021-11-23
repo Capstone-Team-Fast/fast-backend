@@ -1,0 +1,98 @@
+\hypertarget{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter}{}\doxysection{django.\+contrib.\+humanize.\+templatetags.\+humanize.\+Natural\+Time\+Formatter Class Reference}
+\label{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter}\index{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a49ac371c9d99adf5edc43496070801a5}\label{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a49ac371c9d99adf5edc43496070801a5}} 
+def {\bfseries string\+\_\+for} (cls, value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a657e84c6727e6962de0857feeab4890a}{time\+\_\+strings}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a60b3e1077eaf31ea057e2e5a36e2f749}{past\+\_\+substrings}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_ac9556534d4ccb0444cf97e2ed51f0ec6}{future\+\_\+substrings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_ac9556534d4ccb0444cf97e2ed51f0ec6}\label{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_ac9556534d4ccb0444cf97e2ed51f0ec6}} 
+\index{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}!future\_substrings@{future\_substrings}}
+\index{future\_substrings@{future\_substrings}!django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}}
+\doxysubsubsection{\texorpdfstring{future\_substrings}{future\_substrings}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+humanize.\+templatetags.\+humanize.\+Natural\+Time\+Formatter.\+future\+\_\+substrings\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: 'naturaltime-\/future' strings will be included in '\%(delta)s from now'}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'year'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d year'}, \textcolor{stringliteral}{'\%d years'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'month'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d month'}, \textcolor{stringliteral}{'\%d months'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'week'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d week'}, \textcolor{stringliteral}{'\%d weeks'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'day'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d day'}, \textcolor{stringliteral}{'\%d days'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'hour'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d hour'}, \textcolor{stringliteral}{'\%d hours'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'minute'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/future'}, \textcolor{stringliteral}{'\%d minute'}, \textcolor{stringliteral}{'\%d minutes'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a60b3e1077eaf31ea057e2e5a36e2f749}\label{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a60b3e1077eaf31ea057e2e5a36e2f749}} 
+\index{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}!past\_substrings@{past\_substrings}}
+\index{past\_substrings@{past\_substrings}!django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}}
+\doxysubsubsection{\texorpdfstring{past\_substrings}{past\_substrings}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+humanize.\+templatetags.\+humanize.\+Natural\+Time\+Formatter.\+past\+\_\+substrings\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: 'naturaltime-\/past' strings will be included in '\%(delta)s ago'}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'year'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d year'}, \textcolor{stringliteral}{'\%d years'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'month'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d month'}, \textcolor{stringliteral}{'\%d months'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'week'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d week'}, \textcolor{stringliteral}{'\%d weeks'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'day'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d day'}, \textcolor{stringliteral}{'\%d days'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'hour'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d hour'}, \textcolor{stringliteral}{'\%d hours'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'minute'}: npgettext\_lazy(\textcolor{stringliteral}{'naturaltime-\/past'}, \textcolor{stringliteral}{'\%d minute'}, \textcolor{stringliteral}{'\%d minutes'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a657e84c6727e6962de0857feeab4890a}\label{classdjango_1_1contrib_1_1humanize_1_1templatetags_1_1humanize_1_1_natural_time_formatter_a657e84c6727e6962de0857feeab4890a}} 
+\index{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}!time\_strings@{time\_strings}}
+\index{time\_strings@{time\_strings}!django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter@{django.contrib.humanize.templatetags.humanize.NaturalTimeFormatter}}
+\doxysubsubsection{\texorpdfstring{time\_strings}{time\_strings}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+humanize.\+templatetags.\+humanize.\+Natural\+Time\+Formatter.\+time\+\_\+strings\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: delta will contain a string like '2 months' or '1 month, 2 weeks'}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'past-\/day'}: gettext\_lazy(\textcolor{stringliteral}{'\%(delta)s ago'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'past-\/hour'}: ngettext\_lazy(\textcolor{stringliteral}{'an hour ago'}, \textcolor{stringliteral}{'\%(count)s hours ago'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'past-\/minute'}: ngettext\_lazy(\textcolor{stringliteral}{'a minute ago'}, \textcolor{stringliteral}{'\%(count)s minutes ago'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'past-\/second'}: ngettext\_lazy(\textcolor{stringliteral}{'a second ago'}, \textcolor{stringliteral}{'\%(count)s seconds ago'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'now'}: gettext\_lazy(\textcolor{stringliteral}{'now'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'future-\/second'}: ngettext\_lazy(\textcolor{stringliteral}{'a second from now'}, \textcolor{stringliteral}{'\%(count)s seconds from now'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'future-\/minute'}: ngettext\_lazy(\textcolor{stringliteral}{'a minute from now'}, \textcolor{stringliteral}{'\%(count)s minutes from now'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: please keep a non-\/breaking space (U+00A0) between count}}
+\DoxyCodeLine{        \textcolor{comment}{\# and time unit.}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'future-\/hour'}: ngettext\_lazy(\textcolor{stringliteral}{'an hour from now'}, \textcolor{stringliteral}{'\%(count)s hours from now'}, \textcolor{stringliteral}{'count'}),}
+\DoxyCodeLine{        \textcolor{comment}{\# Translators: delta will contain a string like '2 months' or '1 month, 2 weeks'}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'future-\/day'}: gettext\_lazy(\textcolor{stringliteral}{'\%(delta)s from now'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/humanize/templatetags/humanize.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classpsycopg2_1_1sql_1_1_composed}{}\doxysection{psycopg2.\+sql.\+Composed Class Reference}
+\label{classpsycopg2_1_1sql_1_1_composed}\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+
+
+Inheritance diagram for psycopg2.\+sql.\+Composed\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+sql.\+Composed\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_afad235e26f0a1f2d38fef8d545ecd4b1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_a8b21f6b99381dca7659f2a6a74ccf958}{seq}})
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_a8b21f6b99381dca7659f2a6a74ccf958}{seq}} (self)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_ae17ad2d752673fc7114c300d8b5a3033}{as\+\_\+string}} (self, context)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_a03a355ca53501b855ead8b567d486a82}\label{classpsycopg2_1_1sql_1_1_composed_a03a355ca53501b855ead8b567d486a82}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_a56102b2631f8340faf87e838f088b8b0}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_a06bf4755a733197619e35aaf91569c66}{join}} (self, joiner)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A `Composable` object made of a sequence of `!Composable`.
+
+The object is usually created using `!Composable` operators and methods.
+However it is possible to create a `!Composed` directly specifying a
+sequence of `!Composable` as arguments.
+
+Example::
+
+    >>> comp = sql.Composed(
+    ...     [sql.SQL("insert into "), sql.Identifier("table")])
+    >>> print(comp.as_string(conn))
+    insert into "table"
+
+`!Composed` objects are iterable (so they can be used in `SQL.join` for
+instance).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_afad235e26f0a1f2d38fef8d545ecd4b1}\label{classpsycopg2_1_1sql_1_1_composed_afad235e26f0a1f2d38fef8d545ecd4b1}} 
+\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composed.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{seq }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable}{psycopg2.\+sql.\+Composable}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_a56102b2631f8340faf87e838f088b8b0}\label{classpsycopg2_1_1sql_1_1_composed_a56102b2631f8340faf87e838f088b8b0}} 
+\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composed.\+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable}{psycopg2.\+sql.\+Composable}}.
+
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_ae17ad2d752673fc7114c300d8b5a3033}\label{classpsycopg2_1_1sql_1_1_composed_ae17ad2d752673fc7114c300d8b5a3033}} 
+\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}!as\_string@{as\_string}}
+\index{as\_string@{as\_string}!psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+\doxysubsubsection{\texorpdfstring{as\_string()}{as\_string()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composed.\+as\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string value of the object.
+
+:param context: the context to evaluate the string into.
+:type context: `connection` or `cursor`
+
+The method is automatically invoked by `~cursor.execute()`,
+`~cursor.executemany()`, `~cursor.copy_expert()` if a `!Composable` is
+passed instead of the query string.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable_a77b13bb7380175e59facce7566dfb5f6}{psycopg2.\+sql.\+Composable}}.
+
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_a06bf4755a733197619e35aaf91569c66}\label{classpsycopg2_1_1sql_1_1_composed_a06bf4755a733197619e35aaf91569c66}} 
+\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}!join@{join}}
+\index{join@{join}!psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composed.\+join (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{joiner }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a new `!Composed` interposing the *joiner* with the `!Composed` items.
+
+The *joiner* must be a `SQL` or a string which will be interpreted as
+an `SQL`.
+
+Example::
+
+    >>> fields = sql.Identifier('foo') + sql.Identifier('bar')  # a Composed
+    >>> print(fields.join(', ').as_string(conn))
+    "foo", "bar"\end{DoxyVerb}
+ \mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composed_a8b21f6b99381dca7659f2a6a74ccf958}\label{classpsycopg2_1_1sql_1_1_composed_a8b21f6b99381dca7659f2a6a74ccf958}} 
+\index{psycopg2.sql.Composed@{psycopg2.sql.Composed}!seq@{seq}}
+\index{seq@{seq}!psycopg2.sql.Composed@{psycopg2.sql.Composed}}
+\doxysubsubsection{\texorpdfstring{seq()}{seq()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composed.\+seq (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The list of the content of the `!Composed`.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/sql.\+py\end{DoxyCompactItemize}

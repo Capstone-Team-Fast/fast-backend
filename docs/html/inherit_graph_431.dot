@@ -1,0 +1,26 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3863 [label="NamedTuple",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3863 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pip._internal.commands.show.\l_PackageInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1commands_1_1show_1_1___package_info.html",tooltip=" "];
+  Node3863 -> Node3865 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3865 [label="pip._internal.index.collector.\lCollectedSources",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1index_1_1collector_1_1_collected_sources.html",tooltip=" "];
+  Node3863 -> Node3866 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3866 [label="pip._internal.metadata.pkg\l_resources.EntryPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_entry_point.html",tooltip=" "];
+  Node3863 -> Node3867 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3867 [label="pip._internal.models.link.\l_CleanResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1models_1_1link_1_1___clean_result.html",tooltip=" "];
+  Node3863 -> Node3868 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3868 [label="pip._internal.operations.check.\lPackageDetails",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1operations_1_1check_1_1_package_details.html",tooltip=" "];
+  Node3863 -> Node3869 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3869 [label="pip._internal.operations.freeze.\l_EditableInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1operations_1_1freeze_1_1___editable_info.html",tooltip=" "];
+  Node3863 -> Node3870 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3870 [label="pip._internal.resolution.resolvelib.factory.\lCollectedRootRequirements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1factory_1_1_collected_root_requirements.html",tooltip=" "];
+  Node3863 -> Node3871 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3871 [label="pip._vendor.packaging.\l_manylinux._GLibCVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1packaging_1_1__manylinux_1_1___g_lib_c_version.html",tooltip=" "];
+  Node3863 -> Node3872 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3872 [label="pip._vendor.packaging.\l_musllinux._MuslVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1packaging_1_1__musllinux_1_1___musl_version.html",tooltip=" "];
+}

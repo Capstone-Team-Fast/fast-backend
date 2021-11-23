@@ -1,0 +1,58 @@
+\hypertarget{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3}{}\doxysection{neo4j.\+io.\+\_\+bolt4.\+Bolt4x3 Class Reference}
+\label{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3}\index{neo4j.io.\_bolt4.Bolt4x3@{neo4j.io.\_bolt4.Bolt4x3}}
+
+
+Inheritance diagram for neo4j.\+io.\+\_\+bolt4.\+Bolt4x3\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+io.\+\_\+bolt4.\+Bolt4x3\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_a82e13beed47984aa399feec03c498343}{route}} (self, database=None, bookmarks=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_ad293d0a0441bd0cf57bdc57dadf38dfa}\label{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_ad293d0a0441bd0cf57bdc57dadf38dfa}} 
+{\bfseries PROTOCOL\+\_\+\+VERSION} = \mbox{\hyperlink{classneo4j_1_1api_1_1_version}{Version}}(4, 3)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Protocol handler for Bolt 4.3.
+
+This is supported by Neo4j version 4.3.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_a82e13beed47984aa399feec03c498343}\label{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3_a82e13beed47984aa399feec03c498343}} 
+\index{neo4j.io.\_bolt4.Bolt4x3@{neo4j.io.\_bolt4.Bolt4x3}!route@{route}}
+\index{route@{route}!neo4j.io.\_bolt4.Bolt4x3@{neo4j.io.\_bolt4.Bolt4x3}}
+\doxysubsubsection{\texorpdfstring{route()}{route()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+\_\+bolt4.\+Bolt4x3.\+route (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{database = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch a routing table from the server for the given
+`database`. For Bolt 4.3 and above, this appends a ROUTE
+message; for earlier versions, a procedure call is made via
+the regular Cypher execution mechanism. In all cases, this is
+sent to the network, and a response is fetched.
+
+:param database: database for which to fetch a routing table
+:param bookmarks: iterable of bookmark values after which this
+                  transaction should begin
+:return: dictionary of raw routing data
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0_a9cbebb3429f2781e149d2d8c16e423e7}{neo4j.\+io.\+\_\+bolt4.\+Bolt4x0}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/io/\+\_\+bolt4.\+py\end{DoxyCompactItemize}

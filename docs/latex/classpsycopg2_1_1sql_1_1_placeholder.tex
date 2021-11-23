@@ -1,0 +1,104 @@
+\hypertarget{classpsycopg2_1_1sql_1_1_placeholder}{}\doxysection{psycopg2.\+sql.\+Placeholder Class Reference}
+\label{classpsycopg2_1_1sql_1_1_placeholder}\index{psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}}
+
+
+Inheritance diagram for psycopg2.\+sql.\+Placeholder\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+sql.\+Placeholder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_a41c564df2c6cf1545e742b7178af8acc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_a865e1b1e7f839dadb22b2c4513ed1f86}{name}}=None)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_a865e1b1e7f839dadb22b2c4513ed1f86}{name}} (self)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_a3fa617bd455e127899218c6ccd29d1a9}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_aa8cdf7140c69e54b68bbdb0c182bf210}{as\+\_\+string}} (self, context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A `Composable` representing a placeholder for query parameters.
+
+If the name is specified, generate a named placeholder (e.g. ``%(name)s``),
+otherwise generate a positional placeholder (e.g. ``%s``).
+
+The object is useful to generate SQL queries with a variable number of
+arguments.
+
+Examples::
+
+    >>> names = ['foo', 'bar', 'baz']
+
+    >>> q1 = sql.SQL("insert into table ({}) values ({})").format(
+    ...     sql.SQL(', ').join(map(sql.Identifier, names)),
+    ...     sql.SQL(', ').join(sql.Placeholder() * len(names)))
+    >>> print(q1.as_string(conn))
+    insert into table ("foo", "bar", "baz") values (%s, %s, %s)
+
+    >>> q2 = sql.SQL("insert into table ({}) values ({})").format(
+    ...     sql.SQL(', ').join(map(sql.Identifier, names)),
+    ...     sql.SQL(', ').join(map(sql.Placeholder, names)))
+    >>> print(q2.as_string(conn))
+    insert into table ("foo", "bar", "baz") values (%(foo)s, %(bar)s, %(baz)s)\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_placeholder_a41c564df2c6cf1545e742b7178af8acc}\label{classpsycopg2_1_1sql_1_1_placeholder_a41c564df2c6cf1545e742b7178af8acc}} 
+\index{psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Placeholder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable}{psycopg2.\+sql.\+Composable}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_placeholder_a3fa617bd455e127899218c6ccd29d1a9}\label{classpsycopg2_1_1sql_1_1_placeholder_a3fa617bd455e127899218c6ccd29d1a9}} 
+\index{psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Placeholder.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable}{psycopg2.\+sql.\+Composable}}.
+
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_placeholder_aa8cdf7140c69e54b68bbdb0c182bf210}\label{classpsycopg2_1_1sql_1_1_placeholder_aa8cdf7140c69e54b68bbdb0c182bf210}} 
+\index{psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}!as\_string@{as\_string}}
+\index{as\_string@{as\_string}!psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}}
+\doxysubsubsection{\texorpdfstring{as\_string()}{as\_string()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Placeholder.\+as\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string value of the object.
+
+:param context: the context to evaluate the string into.
+:type context: `connection` or `cursor`
+
+The method is automatically invoked by `~cursor.execute()`,
+`~cursor.executemany()`, `~cursor.copy_expert()` if a `!Composable` is
+passed instead of the query string.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable_a77b13bb7380175e59facce7566dfb5f6}{psycopg2.\+sql.\+Composable}}.
+
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_placeholder_a865e1b1e7f839dadb22b2c4513ed1f86}\label{classpsycopg2_1_1sql_1_1_placeholder_a865e1b1e7f839dadb22b2c4513ed1f86}} 
+\index{psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}!name@{name}}
+\index{name@{name}!psycopg2.sql.Placeholder@{psycopg2.sql.Placeholder}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Placeholder.\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The name of the `!Placeholder`.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/sql.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pip._internal.utils.models.\lKeyBasedCompareMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1utils_1_1models_1_1_key_based_compare_mixin.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pip._internal.models.candidate.\lInstallationCandidate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1models_1_1candidate_1_1_installation_candidate.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.models.link.Link",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__internal_1_1models_1_1link_1_1_link.html",tooltip=" "];
+}

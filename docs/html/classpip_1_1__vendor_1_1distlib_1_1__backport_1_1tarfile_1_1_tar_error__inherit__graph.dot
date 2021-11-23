@@ -1,0 +1,30 @@
+digraph "pip._vendor.distlib._backport.tarfile.TarError"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.distlib.\l_backport.tarfile.TarError",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.distlib.\l_backport.tarfile.Compression\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_compression_error.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.\l_backport.tarfile.ExtractError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_extract_error.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.distlib.\l_backport.tarfile.HeaderError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_header_error.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.distlib.\l_backport.tarfile.EOFHeader\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_e_o_f_header_error.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.distlib.\l_backport.tarfile.EmptyHeader\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_empty_header_error.html",tooltip=" "];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pip._vendor.distlib.\l_backport.tarfile.InvalidHeader\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_invalid_header_error.html",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._vendor.distlib.\l_backport.tarfile.Subsequent\lHeaderError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_subsequent_header_error.html",tooltip=" "];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pip._vendor.distlib.\l_backport.tarfile.Truncated\lHeaderError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_truncated_header_error.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pip._vendor.distlib.\l_backport.tarfile.ReadError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_read_error.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="pip._vendor.distlib.\l_backport.tarfile.StreamError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1__backport_1_1tarfile_1_1_stream_error.html",tooltip=" "];
+}

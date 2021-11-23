@@ -1,0 +1,86 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection}{}\doxysection{django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection}\index{django.contrib.gis.geos.collections.GeometryCollection@{django.contrib.gis.geos.collections.GeometryCollection}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aec3f0f8a3fe86a2c2da7f7cdcff419d7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_afed1fbfc1280833e825841aae36472bd}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_afed1fbfc1280833e825841aae36472bd}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aae38a345c1e1e08d195bebf12b2aea0a}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aae38a345c1e1e08d195bebf12b2aea0a}} 
+def {\bfseries \+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a933b93d782e6859c620a1aa5570975d0}{kml}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a012f35ef1259f9d9d4d52dd02b54d7a4}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a012f35ef1259f9d9d4d52dd02b54d7a4}} 
+def {\bfseries tuple} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aafd4798ebeb05725ecb32c25bdc8412f}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aafd4798ebeb05725ecb32c25bdc8412f}} 
+{\bfseries ptr}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aadfd4edab6847014279a16d26822332f}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aadfd4edab6847014279a16d26822332f}} 
+{\bfseries srid}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a658a9f4ca08da1014feed92bb0825eac}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a658a9f4ca08da1014feed92bb0825eac}} 
+def {\bfseries coords} = tuple
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aec3f0f8a3fe86a2c2da7f7cdcff419d7}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aec3f0f8a3fe86a2c2da7f7cdcff419d7}} 
+\index{django.contrib.gis.geos.collections.GeometryCollection@{django.contrib.gis.geos.collections.GeometryCollection}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.geos.collections.GeometryCollection@{django.contrib.gis.geos.collections.GeometryCollection}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{geo\+\_\+input,  }\item[{$\ast$$\ast$}]{srid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The base constructor for GEOS geometry objects. It may take the
+following inputs:
+
+ * strings:
+    - WKT
+    - HEXEWKB (a PostGIS-specific canonical form)
+    - GeoJSON (requires GDAL)
+ * buffer:
+    - WKB
+
+The `srid` keyword specifies the Source Reference Identifier (SRID)
+number for this Geometry. If not provided, it defaults to None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_a98c69297e1157685f5b8b60e0d08d194}{django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a933b93d782e6859c620a1aa5570975d0}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_a933b93d782e6859c620a1aa5570975d0}} 
+\index{django.contrib.gis.geos.collections.GeometryCollection@{django.contrib.gis.geos.collections.GeometryCollection}!kml@{kml}}
+\index{kml@{kml}!django.contrib.gis.geos.collections.GeometryCollection@{django.contrib.gis.geos.collections.GeometryCollection}}
+\doxysubsubsection{\texorpdfstring{kml()}{kml()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection.\+kml (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_base}{django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/geos/collections.\+py\end{DoxyCompactItemize}

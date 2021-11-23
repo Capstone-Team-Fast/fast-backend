@@ -1,0 +1,135 @@
+\hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point}{}\doxysection{shapely.\+geometry.\+multipoint.\+Multi\+Point Class Reference}
+\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point}\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+
+
+Inheritance diagram for shapely.\+geometry.\+multipoint.\+Multi\+Point\+:
+% FIG 0
+
+
+Collaboration diagram for shapely.\+geometry.\+multipoint.\+Multi\+Point\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a02eef08847c364ae49ca3a43ed6587e5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, points=None)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa3e1433a149df6e6107b0326e7919175}{shape\+\_\+factory}} (self, $\ast$args)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a5709dbf257dbd0346018aa8df4de88d0}{\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a81b9a82bf73bbb4ce8e9f0be3958f25b}{svg}} (self, scale\+\_\+factor=1., fill\+\_\+color=None)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa0bcf44f2ad3a74ecd15a9ae9537a977}{ctypes}} (self)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_acbcfab1e9cf501ddcf37ee5be2a45143}{array\+\_\+interface}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A collection of one or more points
+
+A MultiPoint has zero area and zero length.
+
+Attributes
+----------
+geoms : sequence
+    A sequence of Points
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a02eef08847c364ae49ca3a43ed6587e5}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a02eef08847c364ae49ca3a43ed6587e5}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{points = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+points : sequence
+    A sequence of (x, y [,z]) numeric coordinate pairs or triples or a
+    sequence of objects that implement the numpy array interface,
+    including instances of Point.
+
+Example
+-------
+Construct a 2 point collection
+
+  >>> ob = MultiPoint([[0.0, 0.0], [1.0, 2.0]])
+  >>> len(ob.geoms)
+  2
+  >>> type(ob.geoms[0]) == Point
+  True
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_adapter_a6155622ed7ae000c8d7ac254e61dae7c}{shapely.\+geometry.\+multipoint.\+Multi\+Point\+Adapter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a5709dbf257dbd0346018aa8df4de88d0}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a5709dbf257dbd0346018aa8df4de88d0}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}}
+\index{\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{\_\_geo\_interface\_\_()}{\_\_geo\_interface\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dictionary representation of the geometry\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_geometry_a7ba33191f7b5ac66513b9c7eab883487}{shapely.\+geometry.\+base.\+Base\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_acbcfab1e9cf501ddcf37ee5be2a45143}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_acbcfab1e9cf501ddcf37ee5be2a45143}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!array\_interface@{array\_interface}}
+\index{array\_interface@{array\_interface}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{array\_interface()}{array\_interface()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+array\+\_\+interface (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the Numpy array protocol.\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa0bcf44f2ad3a74ecd15a9ae9537a977}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa0bcf44f2ad3a74ecd15a9ae9537a977}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!ctypes@{ctypes}}
+\index{ctypes@{ctypes}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{ctypes()}{ctypes()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+ctypes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return ctypes buffer\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry_a46072fb7564c234d887bd342ffc23f47}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa3e1433a149df6e6107b0326e7919175}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_aa3e1433a149df6e6107b0326e7919175}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!shape\_factory@{shape\_factory}}
+\index{shape\_factory@{shape\_factory}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{shape\_factory()}{shape\_factory()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+shape\+\_\+factory (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a81b9a82bf73bbb4ce8e9f0be3958f25b}\label{classshapely_1_1geometry_1_1multipoint_1_1_multi_point_a81b9a82bf73bbb4ce8e9f0be3958f25b}} 
+\index{shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}!svg@{svg}}
+\index{svg@{svg}!shapely.geometry.multipoint.MultiPoint@{shapely.geometry.multipoint.MultiPoint}}
+\doxysubsubsection{\texorpdfstring{svg()}{svg()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multipoint.\+Multi\+Point.\+svg (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scale\+\_\+factor = {\ttfamily 1.},  }\item[{}]{fill\+\_\+color = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a group of SVG circle elements for the MultiPoint geometry.
+
+Parameters
+==========
+scale_factor : float
+    Multiplication factor for the SVG circle diameters.  Default is 1.
+fill_color : str, optional
+    Hex string for fill color. Default is to use "#66cc99" if
+    geometry is valid, and "#ff3333" if invalid.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry_ab3c5d23883fb6e2ca4a08827f3daed09}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/shapely/geometry/multipoint.\+py\end{DoxyCompactItemize}

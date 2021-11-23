@@ -1,0 +1,26 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3270 [label="RuntimeError",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3270 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.db.migrations.exceptions.\lIrreversibleError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1migrations_1_1exceptions_1_1_irreversible_error.html",tooltip=" "];
+  Node3270 -> Node3272 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3272 [label="django.utils.autoreload.\lWatchmanUnavailable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1autoreload_1_1_watchman_unavailable.html",tooltip=" "];
+  Node3270 -> Node3273 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3273 [label="pip._vendor.pkg_resources.\lExtractionError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1pkg__resources_1_1_extraction_error.html",tooltip=" "];
+  Node3270 -> Node3274 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3274 [label="pip._vendor.requests.cookies.\lCookieConflictError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1cookies_1_1_cookie_conflict_error.html",tooltip=" "];
+  Node3270 -> Node3275 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3275 [label="pkg_resources.Extraction\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpkg__resources_1_1_extraction_error.html",tooltip=" "];
+  Node3270 -> Node3276 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3276 [label="setuptools.errors.Removed\lCommandError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1errors_1_1_removed_command_error.html",tooltip=" "];
+  Node3784 [label="DistutilsError",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3784 -> Node3785 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3785 [label="setuptools.archive\l_util.UnrecognizedFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1archive__util_1_1_unrecognized_format.html",tooltip=" "];
+  Node3784 -> Node3276 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3784 -> Node3786 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3786 [label="setuptools.sandbox.Sandbox\lViolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1sandbox_1_1_sandbox_violation.html",tooltip=" "];
+}

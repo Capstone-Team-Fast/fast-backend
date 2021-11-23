@@ -1,0 +1,26 @@
+\hypertarget{classpytz_1_1exceptions_1_1_ambiguous_time_error}{}\doxysection{pytz.\+exceptions.\+Ambiguous\+Time\+Error Class Reference}
+\label{classpytz_1_1exceptions_1_1_ambiguous_time_error}\index{pytz.exceptions.AmbiguousTimeError@{pytz.exceptions.AmbiguousTimeError}}
+
+
+Inheritance diagram for pytz.\+exceptions.\+Ambiguous\+Time\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for pytz.\+exceptions.\+Ambiguous\+Time\+Error\+:
+% FIG 1
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Exception raised when attempting to create an ambiguous wallclock time.
+
+At the end of a DST transition period, a particular wallclock time will
+occur twice (once before the clocks are set back, once after). Both
+possibilities may be correct, unless further information is supplied.
+
+See DstTzInfo.normalize() for more info
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pytz/exceptions.\+py\end{DoxyCompactItemize}
