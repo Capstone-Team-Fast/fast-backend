@@ -12,6 +12,8 @@ class Driver(models.Model):
     capacity = models.PositiveIntegerField(null=False)
     employee_status = models.CharField(max_length=15)
     phone = models.CharField(max_length=15, blank=True)
+    duration = models.PositiveIntegerField(null=True, blank=True)
+    delivery_limit = models.PositiveIntegerField(null=True, blank=True)
     availability = models.ForeignKey(Availability, on_delete=models.CASCADE)
     languages = models.ManyToManyField(to=Language)
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
