@@ -88,6 +88,11 @@ class BingMatrixService(MatrixService):
         if start is None or end is None:
             return False
 
+        if start in Address.nodes.all():
+            node_set = Address.nodes.filter(address=start.address, city=start.city, state=start.state,
+                                            zipcode=start.zipcode)
+            start = node_set[0]
+
         if start.latitude is None or start.longitude is None:
             start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
             start = start.save()
@@ -97,7 +102,7 @@ class BingMatrixService(MatrixService):
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
-        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'\n')
+        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'')
         for index in range(0, len(end), chunk_size):
             if index + chunk_size < len(end):
                 chunks = end[index:index + chunk_size]
@@ -107,6 +112,11 @@ class BingMatrixService(MatrixService):
             destinations = []
             for address in chunks:
                 if address:
+                    if address in Address.nodes.all():
+                        node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                                        zipcode=address.zipcode)
+                        address = node_set[0]
+
                     if address.latitude is None or address.longitude is None:
                         print(f'\nRetrieving geocode for address {address}\n')
                         address.latitude, address.longitude = BingGeocodeService.get_geocode(address)
@@ -183,8 +193,18 @@ class BingMatrixService(MatrixService):
 
                 destination: dict = destinations[destination_index]
                 origin: dict = origins[origin_index]
-                location1 = Address.nodes.get(latitude=origin['latitude'], longitude=origin['longitude'])
-                location2 = Address.nodes.get(latitude=destination['latitude'], longitude=destination['longitude'])
-                location1.neighbor.connect(location2, {'distance': result['travelDistance'],
-                                                       'duration': result['travelDuration']})
-                print(f'\nConnected {location1} and {location2}\n')
+                location1 = None
+                location2 = None
+
+                node_set = Address.nodes.filter(latitude=origin['latitude'], longitude=origin['longitude'])
+                if node_set:
+                    location1 = node_set[0]
+
+                node_set = Address.nodes.filter(latitude=destination['latitude'], longitude=destination['longitude'])
+                if node_set:
+                    location2 = node_set[0]
+
+                if location1 and location2:
+                    location1.neighbor.connect(location2, {'distance': result['travelDistance'],
+                                                           'duration': result['travelDuration']})
+                    print(f'\nConnected {location1} and {location2}\n')

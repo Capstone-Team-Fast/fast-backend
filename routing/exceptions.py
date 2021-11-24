@@ -1,3 +1,6 @@
+from neomodel import DoesNotExist
+
+
 class GeocodeError(Exception):
     pass
 
@@ -15,4 +18,12 @@ class EmptyRouteException(Exception):
 
 
 class RouteStateException(Exception):
+    pass
+
+
+class LocationStateException(Exception):
+    pass
+
+
+class LanguageOptionError(Exception):
     pass

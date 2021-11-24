@@ -6,6 +6,9 @@ from rest_framework.views import APIView
 from backend.models import Route, Client, Driver
 from backend.serializers.routeSerializer import RouteSerializer
 from backend.serializers import ClientSerializer, DriverSerializer, ClientRoutingSerializer
+from routing.managers import RouteManager
+from django.conf import settings
+
 
 class RouteView(APIView):
 
@@ -32,6 +35,8 @@ class RouteListView(APIView):
         data = request.data
         client_id_list = data.get('client_ids')
         driver_id_list = data.get('driver_ids')
+        delivery_limit = data.get('delivery_limit')
+        departure = data.get('departure')
 
         clients = []
         drivers = []
@@ -44,19 +49,24 @@ class RouteListView(APIView):
         client_serializer = ClientSerializer(clients, many=True)
 
         for driver_id in driver_id_list:
-            drivers.append(Driver.objects.get(id=driver_id))
+            driver = Driver.objects.get(id=driver_id)
+            if driver.employee_status != 'Employee':
+                driver.delivery_limit = delivery_limit
+            else:
+                driver.deliver_limit = None
+            driver.save()
+            drivers.append(driver)
 
         driver_serializer = DriverSerializer(drivers, many=True)
 
-        # TODO: Connect to routing app with function call like:
-        # routes = router(client_list, driver_list)
+        # TODO: Test routing app function call
+        route_manager = RouteManager(settings.DATABASE_URL)
+        routes = route_manager.request_routes(departure, client_serializer.data, driver_serializer.data)
+        routes = routes.get('routes')
 
-        # TODO: run routes through the route serializer and return response
-        # serializer = PostRouteSerializer(routes, many=True)
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        # TODO: remove this when above TODOs are done
-        return Response(driver_serializer.data, status=status.HTTP_200_OK)
+        # TODO: ensure routes are correctly going through serializer
+        serializer = RouteSerializer(routes, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -1,7 +1,17 @@
+import json
+import os
+import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
-    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One
+    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
+
+from routing.models.language import Language
+
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
+
+from routing.exceptions import LocationStateException
 
 
 class Weight(StructuredRel):
@@ -20,6 +30,7 @@ class Address(StructuredNode):
     longitude = FloatProperty(index=True)
     created_on = DateTimeProperty(index=True, default=datetime.now)
     modified_on = DateTimeProperty(index=True, default_now=True)
+    external_id = IntegerProperty(required=False, unique_index=True)
 
     neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=Weight)
 
@@ -30,10 +41,10 @@ class Address(StructuredNode):
         return hash((self.address, self.city, self.state, self.zipcode))
 
     def __eq__(self, other):
-        if not isinstance(other, type(self)):
-            return NotImplemented
-        return (self.address == other.address and self.city == other.city
-                and self.state == other.state and self.zipcode == other.zipcode)
+        if isinstance(other, type(self)):
+            return (self.address == other.address and self.city == other.city
+                    and self.state == other.state and self.zipcode == other.zipcode)
+        raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
         return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
@@ -41,52 +52,146 @@ class Address(StructuredNode):
 
     def distance(self, other):
         if isinstance(other, type(self)):
+            if self == other:
+                return 0.0
+            self.__validate_edge_with(other)
             return self.neighbor.relationship(other).distance if self.neighbor.relationship(other) else None
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} is not supported.')
 
     def duration(self, other):
         if isinstance(other, type(self)):
+            if self == other:
+                return 0.0
+            self.__validate_edge_with(other)
             return self.neighbor.relationship(other).duration if self.neighbor.relationship(other) else None
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} is not supported.')
+
+    def __validate_edge_with(self, other):
+        from routing.services import BingMatrixService
+        if isinstance(other, type(self)):
+            if self == other:
+                return True
+            else:
+                if self.neighbor.relationship(other):
+                    return True
+                else:
+                    BingMatrixService.build_matrices(start=self, end=[other])
+                return True
+        raise TypeError(f'{type(other)} is not supported.')
 
     @classmethod
     def category(cls):
         pass
 
+    def serialize(self):
+        obj = json.dumps({
+            'id': self.external_id,
+            'address': self.address,
+            'city': self.city,
+            'state': self.state,
+            'zipcode': self.zipcode,
+            'coordinates': {
+                'latitude': self.latitude,
+                'longitude': self.longitude
+            }
+        })
+        return obj
+
 
 class Location(StructuredNode):
-    __uid = UniqueIdProperty()
-    __external_id = IntegerProperty(index=True, required=False)
-    __created_on = DateTimeProperty(index=True, default=datetime.now)
-    __modified_on = DateTimeProperty(index=True, default_now=True)
-    __is_center = BooleanProperty(index=True, default=False)
-    __address = Relationship(cls_name='routing.models.location.Address', rel_type='LOCATED_AT', cardinality=One)
+    __abstract_node__ = True
+    is_center = BooleanProperty(index=True, default=False)
+    uid = UniqueIdProperty()
+    external_id = IntegerProperty(required=False, unique_index=True)
+    created_on = DateTimeProperty(index=True, default=datetime.now)
+    modified_on = DateTimeProperty(index=True, default_now=True)
+    __geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
 
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
         self.is_assigned = False
-        self.address = None
         self.next = None
         self.previous = None
+
+    def set_address(self, address):
+        if address is None:
+            raise TypeError(f'Type {type(address)} not supported. Supply type {type(Address)}.')
+
+        if address in Address.nodes.all():
+            node_set = Address.nodes.filter(address=address.address, city=address.city, state=address.state,
+                                            zipcode=address.zipcode)
+            address = node_set[0]
+        else:
+            address = Address(address=address.address, city=address.city, state=address.state,
+                              zipcode=address.zipcode).save()
+        try:
+            self.__geographic_location.connect(address)
+        except AttemptedCardinalityViolation:
+            self.__geographic_location.reconnect(self.address, address)
+
+    @property
+    def address(self):
+        try:
+            return self.__geographic_location.get()
+        except DoesNotExist:
+            return None
 
     def reset(self):
         self.next = None
         self.previous = None
 
     def __eq__(self, other):
-        if isinstance(other, type(self)):
-            return self.external_id == other.external_id
-        raise ValueError(f'{type(other)} is not supported.')
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
+            return self.address == other.address
+        raise TypeError(f'{type(other)} and {type(self)} do not subclass {Location}.')
+
+    def __hash__(self):
+        return hash(self.address)
 
     def duration(self, other):
-        if isinstance(other, type(self)):
+        """Gets the duration (in minutes) between these two locations.
+
+        This implementation guarantees that either location is in the graph database.
+        """
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
+            if self.address is None and other.address is None:
+                raise LocationStateException(f'{self} and {other} have no addresses.')
+            elif self.address is None:
+                raise LocationStateException(f'{self} has no address.')
+            elif other.address is None:
+                raise LocationStateException(f'{other} has no address.')
+            if self == other:
+                return 0.0
             return self.address.duration(other.address)
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} does not subclass {type(self)}.')
 
     def distance(self, other):
-        if isinstance(other, type(self)):
+        """Gets the distance (in meters) between these two locations.
+
+        This implementation guarantees that either location is in the graph database.
+        """
+        if issubclass(type(other), Location) and issubclass(type(self), Location):
+            if self.address is None and other.address is None:
+                raise LocationStateException(f'{self} and {other} have no addresses.')
+            elif self.address is None:
+                raise LocationStateException(f'{self} has no address.')
+            elif other.address is None:
+                raise LocationStateException(f'{other} has no address.')
+            if self == other:
+                return 0.0
             return self.address.distance(other.address)
-        raise ValueError(f'{type(other)} is not supported.')
+        raise TypeError(f'{type(other)} does not subclass {type(self)}.')
+
+    def __str__(self):
+        return 'UID: {} at address {}'.format(self.uid, self.address)
+
+    def serialize(self):
+        obj = json.dumps({
+            'id': self.external_id,
+            'is_center': self.is_center,
+            'address': json.loads(self.address.serialize())
+        })
+        return obj
 
     @classmethod
     def category(cls):
@@ -94,16 +199,39 @@ class Location(StructuredNode):
 
 
 class Customer(Location):
-    __demand = IntegerProperty(index=True)
-    __language = Relationship(cls_name='routing.models.language.Language', rel_type='SPEAKS')
+    demand = IntegerProperty(index=True)
+    language = Relationship(cls_name='routing.models.language.Language', rel_type='SPEAKS')
 
     def __init__(self, *args, **kwargs):
-        super(Location).__init__(*args, **kwargs)
+        super(Customer, self).__init__(*args, **kwargs)
+
+    def get_languages(self):
+        return self.language.all()
+
+    def serialize(self):
+        obj = json.loads(super(Customer, self).serialize())
+        languages = self.get_languages()
+        if languages:
+            languages.sort()
+            languages = [json.loads(language.serialize()) for language in languages]
+        else:
+            languages = []
+
+        obj.update({
+            'demand': self.demand,
+            'languages': languages
+        })
+        return json.dumps(obj)
 
 
 class Depot(Location):
+    is_center = BooleanProperty(index=True, default=True)
+
     def __init__(self, *args, **kwargs):
-        super(Depot).__init__(*args, **kwargs)
+        super(Depot, self).__init__(*args, **kwargs)
+
+    def serialize(self):
+        return super(Depot, self).serialize()
 
 
 class Pair:
