@@ -1,10 +1,10 @@
 import json
-import os
 from abc import ABC
 from urllib.parse import quote
 
 import requests
 
+from backend import settings
 from routing.exceptions import GeocodeError, MatrixServiceError
 from routing.models.location import Address
 
@@ -18,7 +18,7 @@ class GeocodeService(ABC):
 
 class BingGeocodeService(GeocodeService):
     __DEFAULT_URL = 'http://dev.virtualearth.net/REST/v1/Locations'
-    __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
+    __API_KEY = settings.BING_MAPS_API_KEY
 
     @staticmethod
     def get_geocode(address: Address, payload=None, headers=None):
@@ -79,7 +79,7 @@ class BingMatrixService(MatrixService):
     This class defines the logic for retrieving distance and duration matrices of a list of locations.
     """
     __DEFAULT_URL = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix'
-    __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
+    __API_KEY = settings.BING_MAPS_API_KEY
     __duration_matrix = []
     __distance_matrix = []
 
