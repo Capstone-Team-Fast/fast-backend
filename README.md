@@ -22,6 +22,14 @@ For this release, we finished writing 90% of the routing algorithm. We tested fe
 ### Backend:
 For Milestone 3, we made small changes to the client and driver models and got the `/route/` api endpoint ready for connection to the routing algorithm app.
 
+## Milestone 4: Release Notes
+
+### Routing algorithm:
+The most essential aspects of the routing algorithm are implemented at this point. We unit-tested all of the non-basic classes of the routing algorithm and connected the routing algorithm to the other half of the backend. We also installed neo4j on AWS and got ready for deployment.
+
+### Backend:
+For Milestone 4, we have completed the bulk uploading of clients and drivers. We have edited their models and made a few changes based on feedback from Dr. Vitor and compatibility with the routing app.
+
 # Installation
 ## Install and update Python
 
