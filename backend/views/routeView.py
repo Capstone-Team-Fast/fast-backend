@@ -1,3 +1,5 @@
+import json
+
 from django.http import Http404
 from rest_framework import status
 from rest_framework.renderers import JSONRenderer
@@ -39,6 +41,8 @@ class RouteListView(APIView):
         delivery_limit = data.get('delivery_limit')
         departure = data.get('departure')
 
+        departure = json.dumps(departure)
+
         clients = []
         drivers = []
 
@@ -66,11 +70,12 @@ class RouteListView(APIView):
         # TODO: Test routing app function call
         route_manager = RouteManager(settings.NEO4J_BOLT_URL)
         routes = route_manager.request_routes(departure, clients, drivers)
+        routes = json.loads(routes)
         routes = routes.get('routes')
 
         print('Routes = ', routes)
 
-        names_key = {'itinerary': 'client'}
+        names_key = {'itinerary': 'clients'}
 
         # Change itinerary to clients so I don't have to make an itinerary model
         for row in routes:
