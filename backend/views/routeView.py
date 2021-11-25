@@ -1,5 +1,6 @@
 from django.http import Http404
 from rest_framework import status
+from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -43,10 +44,11 @@ class RouteListView(APIView):
 
         for client_id in client_id_list:
             client = Client.objects.get(id=client_id)
-            print(client.location)
+            client_serializer = ClientSerializer(client)
+            client = JSONRenderer().render(client_serializer.data)
             clients.append(client)
 
-        client_serializer = ClientSerializer(clients, many=True)
+        # client_serializer = ClientSerializer(clients, many=True)
 
         for driver_id in driver_id_list:
             driver = Driver.objects.get(id=driver_id)
@@ -55,14 +57,27 @@ class RouteListView(APIView):
             else:
                 driver.deliver_limit = None
             driver.save()
+            driver_serializer = DriverSerializer(driver)
+            driver = JSONRenderer().render(driver_serializer.data)
             drivers.append(driver)
 
-        driver_serializer = DriverSerializer(drivers, many=True)
+        # driver_serializer = DriverSerializer(drivers, many=True)
 
         # TODO: Test routing app function call
-        route_manager = RouteManager(settings.DATABASE_URL)
-        routes = route_manager.request_routes(departure, client_serializer.data, driver_serializer.data)
+        route_manager = RouteManager(settings.NEO4J_BOLT_URL)
+        routes = route_manager.request_routes(departure, clients, drivers)
         routes = routes.get('routes')
+
+        print('Routes = ', routes)
+
+        names_key = {'itinerary': 'client'}
+
+        # Change itinerary to clients so I don't have to make an itinerary model
+        for row in routes:
+            for k, v in names_key.items():
+                for old_name in row:
+                    if k == old_name:
+                        row[v] = row.pop(old_name)
 
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(routes, many=True)
