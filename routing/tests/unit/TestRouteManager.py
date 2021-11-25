@@ -105,8 +105,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_request_route_generalization(self):
         departure = data.departure
-        customers = data.get_random_customers(n=100)
-        drivers = data.get_random_drivers(n=10)
+        customers = data.get_random_customers(n=2)
+        drivers = data.get_random_drivers(n=4)
 
         # Create routes
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)

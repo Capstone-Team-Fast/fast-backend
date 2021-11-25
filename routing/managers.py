@@ -71,6 +71,9 @@ class LocationManager:
                     if location not in Depot.nodes.all():
                         location.save()
 
+                if location.address.zipcode == 99999:
+                    print('Found!')
+
                 address = location.address
                 if address and (address.latitude is None or address.longitude is None):
                     print(f'\nRetrieving geocode for location {address}\n')
@@ -252,7 +255,8 @@ class RouteManager:
         print()
         for driver in self.__best_allocation:
             if not driver.route.is_empty:
-                print(f'Driver {driver.uid} itinerary: {driver.route} with total demand {driver.route.total_demand}'
+                print(f'Driver {driver.uid} Status: {driver.employee_status} Delivery Limit: {driver.max_delivery}'
+                      f' itinerary: {driver.route} with total demand {driver.route.total_demand}'
                       f' with capacity {driver.capacity}')
                 for customer in driver.route.itinerary:
                     if not customer.is_center and customer.is_assigned:
@@ -351,6 +355,8 @@ class RouteManager:
                 if driver.departure is None:
                     driver.set_departure(self.__depot)
                 if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
+                    break
+                if locations[0].is_assigned:
                     break
         elif savings_manager:
             locations_to_insert = self.__tally_locations(locations)
@@ -604,7 +610,12 @@ class NodeParser:
 
     @staticmethod
     def parse_language(language: dict):
-        return Language(external_id=language['id'], language=language['name'])
+        if language.get('name'):
+            if language.get('name') in Language.options():
+                return Language(external_id=language['id'], language=language['name'])
+            else:
+                Language.add_languages(language.get('name'))
+                return Language(external_id=language['id'], language=language['name'])
 
     @staticmethod
     def set_languages(node, languages: dict):
