@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from backend.models import Route
-from models import Driver, Client
+from backend.models import Route, Driver, Client
 from serializers import DriverSerializer, ClientSerializer
 
 
