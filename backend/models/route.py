@@ -10,4 +10,4 @@ class Route(models.Model):
     total_quantity = models.PositiveIntegerField(editable=False, blank=True)
     total_distance = models.DecimalField(max_digits=19, decimal_places=4, editable=False, blank=True)
     total_duration = models.DecimalField(max_digits=19, decimal_places=4, editable=False, blank=True)
-    clients = models.ManyToManyField(to=Client)
+    itinerary = models.ManyToManyField(to=Client)

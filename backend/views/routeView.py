@@ -73,17 +73,6 @@ class RouteListView(APIView):
         routes = json.loads(routes)
         routes = routes.get('routes')
 
-        print('Routes = ', routes)
-
-        names_key = {'itinerary': 'clients'}
-
-        # Change itinerary to clients so I don't have to make an itinerary model
-        for row in routes:
-            for k, v in names_key.items():
-                for old_name in row:
-                    if k == old_name:
-                        row[v] = row.pop(old_name)
-
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(routes, many=True)
         if serializer.is_valid():
