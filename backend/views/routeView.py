@@ -70,14 +70,15 @@ class RouteListView(APIView):
         # TODO: Test routing app function call
         route_manager = RouteManager(settings.NEO4J_BOLT_URL)
         routes = route_manager.request_routes(departure, clients, drivers)
-        routes = json.loads(routes)
-        routes = routes.get('routes')
 
         f = open('routing_log.txt', 'a')
         f.write('Route Data:\n')
         f.write(routes)
         f.write('\n')
         f.close()
+
+        routes = json.loads(routes)
+        routes = routes.get('routes')
 
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(data=routes, many=True)
