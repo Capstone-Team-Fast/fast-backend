@@ -1,0 +1,109 @@
+\hypertarget{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string}{}\doxysection{shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String Class Reference}
+\label{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string}\index{shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}}
+
+
+Inheritance diagram for shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String\+:
+% FIG 0
+
+
+Collaboration diagram for shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_ac7385873ebe24fd71d76218d4fd00798}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, lines=None)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a9f4fd3382340eea0817ad17471a8171c}{shape\+\_\+factory}} (self, $\ast$args)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a3e00a6c8b10ab78516c82a99de2db7bf}{\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a7bcaf61993c822ec4a50e82e7cecc2ea}{svg}} (self, scale\+\_\+factor=1., stroke\+\_\+color=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A collection of one or more line strings
+
+A MultiLineString has non-zero length and zero area.
+
+Attributes
+----------
+geoms : sequence
+    A sequence of LineStrings
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_ac7385873ebe24fd71d76218d4fd00798}\label{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_ac7385873ebe24fd71d76218d4fd00798}} 
+\index{shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lines = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters
+----------
+lines : sequence
+    A sequence of line-like coordinate sequences or objects that
+    provide the numpy array interface, including instances of
+    LineString.
+
+Example
+-------
+Construct a collection containing one line string.
+
+  >>> lines = MultiLineString( [[[0.0, 0.0], [1.0, 2.0]]] )
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_adapter_a46babfcad27b08c0025e666bc54540a7}{shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String\+Adapter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a3e00a6c8b10ab78516c82a99de2db7bf}\label{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a3e00a6c8b10ab78516c82a99de2db7bf}} 
+\index{shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}!\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}}
+\index{\_\_geo\_interface\_\_@{\_\_geo\_interface\_\_}!shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}}
+\doxysubsubsection{\texorpdfstring{\_\_geo\_interface\_\_()}{\_\_geo\_interface\_\_()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String.\+\_\+\+\_\+geo\+\_\+interface\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dictionary representation of the geometry\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_geometry_a7ba33191f7b5ac66513b9c7eab883487}{shapely.\+geometry.\+base.\+Base\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a9f4fd3382340eea0817ad17471a8171c}\label{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a9f4fd3382340eea0817ad17471a8171c}} 
+\index{shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}!shape\_factory@{shape\_factory}}
+\index{shape\_factory@{shape\_factory}!shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}}
+\doxysubsubsection{\texorpdfstring{shape\_factory()}{shape\_factory()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String.\+shape\+\_\+factory (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+\mbox{\Hypertarget{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a7bcaf61993c822ec4a50e82e7cecc2ea}\label{classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string_a7bcaf61993c822ec4a50e82e7cecc2ea}} 
+\index{shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}!svg@{svg}}
+\index{svg@{svg}!shapely.geometry.multilinestring.MultiLineString@{shapely.geometry.multilinestring.MultiLineString}}
+\doxysubsubsection{\texorpdfstring{svg()}{svg()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+multilinestring.\+Multi\+Line\+String.\+svg (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scale\+\_\+factor = {\ttfamily 1.},  }\item[{}]{stroke\+\_\+color = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a group of SVG polyline elements for the LineString geometry.
+
+Parameters
+==========
+scale_factor : float
+    Multiplication factor for the SVG stroke-width.  Default is 1.
+stroke_color : str, optional
+    Hex string for stroke color. Default is to use "#66cc99" if
+    geometry is valid, and "#ff3333" if invalid.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry_ab3c5d23883fb6e2ca4a08827f3daed09}{shapely.\+geometry.\+base.\+Base\+Multipart\+Geometry}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/shapely/geometry/multilinestring.\+py\end{DoxyCompactItemize}

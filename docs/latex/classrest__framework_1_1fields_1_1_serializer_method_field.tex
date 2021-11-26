@@ -1,0 +1,88 @@
+\hypertarget{classrest__framework_1_1fields_1_1_serializer_method_field}{}\doxysection{rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field Class Reference}
+\label{classrest__framework_1_1fields_1_1_serializer_method_field}\index{rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_serializer_method_field_a5754aa56efebe41ab87868ca65eb091a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, method\+\_\+name=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_serializer_method_field_ae8409e9843fd717571a50175a3f499bc}{bind}} (self, field\+\_\+name, parent)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_serializer_method_field_a00deb201899f748c72073371d744d149}{to\+\_\+representation}} (self, value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_serializer_method_field_a36b0a1d1749aedb64c2f7415223aa45b}\label{classrest__framework_1_1fields_1_1_serializer_method_field_a36b0a1d1749aedb64c2f7415223aa45b}} 
+{\bfseries method\+\_\+name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A read-only field that get its representation from calling a method on the
+parent serializer class. The method called will be of the form
+"get_{field_name}", and should take a single argument, which is the
+object being serialized.
+
+For example:
+
+class ExampleSerializer(self):
+    extra_info = SerializerMethodField()
+
+    def get_extra_info(self, obj):
+        return ...  # Calculate some data to return.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_serializer_method_field_a5754aa56efebe41ab87868ca65eb091a}\label{classrest__framework_1_1fields_1_1_serializer_method_field_a5754aa56efebe41ab87868ca65eb091a}} 
+\index{rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{method\+\_\+name = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_serializer_method_field_ae8409e9843fd717571a50175a3f499bc}\label{classrest__framework_1_1fields_1_1_serializer_method_field_ae8409e9843fd717571a50175a3f499bc}} 
+\index{rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}!bind@{bind}}
+\index{bind@{bind}!rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field.\+bind (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{parent }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes the field name and parent for the field instance.
+Called when a field is added to the parent serializer instance.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a1950d4e048500be0ca4b62566f7f3314}{rest\+\_\+framework.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_serializer_method_field_a00deb201899f748c72073371d744d149}\label{classrest__framework_1_1fields_1_1_serializer_method_field_a00deb201899f748c72073371d744d149}} 
+\index{rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}!to\_representation@{to\_representation}}
+\index{to\_representation@{to\_representation}!rest\_framework.fields.SerializerMethodField@{rest\_framework.fields.SerializerMethodField}}
+\doxysubsubsection{\texorpdfstring{to\_representation()}{to\_representation()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Serializer\+Method\+Field.\+to\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform the *outgoing* native value into primitive data.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a9b7498156716f21647057dd6476f2bda}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/fields.\+py\end{DoxyCompactItemize}

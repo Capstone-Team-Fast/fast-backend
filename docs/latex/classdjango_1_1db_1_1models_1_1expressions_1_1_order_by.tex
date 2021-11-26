@@ -1,0 +1,174 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by}{}\doxysection{django.\+db.\+models.\+expressions.\+Order\+By Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by}\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Order\+By\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Order\+By\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9cb086bf65080f2bcb4f653394b7368f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expression, descending=False, nulls\+\_\+first=False, nulls\+\_\+last=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_aebe58177d7522476d2a1b1dc7a0becce}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_aebe58177d7522476d2a1b1dc7a0becce}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a95dbf3fa448596214d24e0f5c3846159}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_af5daaabaf8b5dccd8f5dbe01a9c885c4}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a343064ad7cfdac310e95fd997ee6d4cc}{as\+\_\+sql}} (self, compiler, connection, template=None, $\ast$$\ast$extra\+\_\+context)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6d911e511df7e5a9a2c2c05532aaf792}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6d911e511df7e5a9a2c2c05532aaf792}} 
+def {\bfseries as\+\_\+oracle} (self, compiler, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9b37e76ec0198e79f874dac3fc29b19b}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6d59bde31bdf4165b67c6c34548c964a}{reverse\+\_\+ordering}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a649d49728f1cb42ccd5f427fe5243a07}{asc}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_aa4df54f539113a16de6b19f88db64b61}{desc}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6038908290556260642432c29427fa7f}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6038908290556260642432c29427fa7f}} 
+{\bfseries nulls\+\_\+first}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a550fd15b588838e89d3cf49fb291ccce}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a550fd15b588838e89d3cf49fb291ccce}} 
+{\bfseries nulls\+\_\+last}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a46b278b805b7e9bea40f697365d7e67b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a46b278b805b7e9bea40f697365d7e67b}} 
+{\bfseries descending}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_afa8be801b9415239136f241cad7f0761}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_afa8be801b9415239136f241cad7f0761}} 
+{\bfseries expression}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a576dbb169e69ae0d6a34b516538cc9fe}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a576dbb169e69ae0d6a34b516538cc9fe}} 
+string {\bfseries template} = \textquotesingle{}\%(expression)s \%(ordering)s\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a2bb9be5286dfc61f17df03afd9199adf}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a2bb9be5286dfc61f17df03afd9199adf}} 
+bool {\bfseries conditional} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9cb086bf65080f2bcb4f653394b7368f}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9cb086bf65080f2bcb4f653394b7368f}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression,  }\item[{}]{descending = {\ttfamily False},  }\item[{}]{nulls\+\_\+first = {\ttfamily False},  }\item[{}]{nulls\+\_\+last = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a343064ad7cfdac310e95fd997ee6d4cc}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a343064ad7cfdac310e95fd997ee6d4cc}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{}]{template = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra\+\_\+context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a649d49728f1cb42ccd5f427fe5243a07}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a649d49728f1cb42ccd5f427fe5243a07}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!asc@{asc}}
+\index{asc@{asc}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{asc()}{asc()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+asc (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_aa4df54f539113a16de6b19f88db64b61}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_aa4df54f539113a16de6b19f88db64b61}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!desc@{desc}}
+\index{desc@{desc}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{desc()}{desc()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+desc (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9b37e76ec0198e79f874dac3fc29b19b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a9b37e76ec0198e79f874dac3fc29b19b}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_af5daaabaf8b5dccd8f5dbe01a9c885c4}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_af5daaabaf8b5dccd8f5dbe01a9c885c4}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6d59bde31bdf4165b67c6c34548c964a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a6d59bde31bdf4165b67c6c34548c964a}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!reverse\_ordering@{reverse\_ordering}}
+\index{reverse\_ordering@{reverse\_ordering}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{reverse\_ordering()}{reverse\_ordering()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+reverse\+\_\+ordering (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a95dbf3fa448596214d24e0f5c3846159}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_order_by_a95dbf3fa448596214d24e0f5c3846159}} 
+\index{django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.expressions.OrderBy@{django.db.models.expressions.OrderBy}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Order\+By.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

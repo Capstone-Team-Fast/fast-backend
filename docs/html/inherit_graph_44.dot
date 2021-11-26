@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.contrib.admin.views.main.\lChangeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1views_1_1main_1_1_change_list.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="rest_framework.authtoken.admin.\lTokenChangeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1authtoken_1_1admin_1_1_token_change_list.html",tooltip=" "];
+}

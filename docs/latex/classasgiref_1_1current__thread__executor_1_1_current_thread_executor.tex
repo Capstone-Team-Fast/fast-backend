@@ -1,0 +1,45 @@
+\hypertarget{classasgiref_1_1current__thread__executor_1_1_current_thread_executor}{}\doxysection{asgiref.\+current\+\_\+thread\+\_\+executor.\+Current\+Thread\+Executor Class Reference}
+\label{classasgiref_1_1current__thread__executor_1_1_current_thread_executor}\index{asgiref.current\_thread\_executor.CurrentThreadExecutor@{asgiref.current\_thread\_executor.CurrentThreadExecutor}}
+
+
+Inheritance diagram for asgiref.\+current\+\_\+thread\+\_\+executor.\+Current\+Thread\+Executor\+:
+% FIG 0
+
+
+Collaboration diagram for asgiref.\+current\+\_\+thread\+\_\+executor.\+Current\+Thread\+Executor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_a6042f8d5e1092e60ae391294b4e0b1c8}\label{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_a6042f8d5e1092e60ae391294b4e0b1c8}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_ab3f0552d1c9624ca17a1bc6604042bac}{run\+\_\+until\+\_\+future}} (self, future)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_ab4ca7121b9d8e6b3c42c63632208d252}\label{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_ab4ca7121b9d8e6b3c42c63632208d252}} 
+def {\bfseries submit} (self, fn, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An Executor that actually runs code in the thread it is instantiated in.
+Passed to other threads running async code, so they can run sync code in
+the thread they came from.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_ab3f0552d1c9624ca17a1bc6604042bac}\label{classasgiref_1_1current__thread__executor_1_1_current_thread_executor_ab3f0552d1c9624ca17a1bc6604042bac}} 
+\index{asgiref.current\_thread\_executor.CurrentThreadExecutor@{asgiref.current\_thread\_executor.CurrentThreadExecutor}!run\_until\_future@{run\_until\_future}}
+\index{run\_until\_future@{run\_until\_future}!asgiref.current\_thread\_executor.CurrentThreadExecutor@{asgiref.current\_thread\_executor.CurrentThreadExecutor}}
+\doxysubsubsection{\texorpdfstring{run\_until\_future()}{run\_until\_future()}}
+{\footnotesize\ttfamily def asgiref.\+current\+\_\+thread\+\_\+executor.\+Current\+Thread\+Executor.\+run\+\_\+until\+\_\+future (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{future }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs the code in the work queue until a result is available from the future.
+Should be run from the thread the executor is initialised in.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/asgiref/current\+\_\+thread\+\_\+executor.\+py\end{DoxyCompactItemize}

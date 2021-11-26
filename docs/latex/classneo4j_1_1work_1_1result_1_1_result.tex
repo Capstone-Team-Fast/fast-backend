@@ -1,0 +1,182 @@
+\hypertarget{classneo4j_1_1work_1_1result_1_1_result}{}\doxysection{neo4j.\+work.\+result.\+Result Class Reference}
+\label{classneo4j_1_1work_1_1result_1_1_result}\index{neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_afa274dceba7fe0ca4afa2d4aaaadc5a1}\label{classneo4j_1_1work_1_1result_1_1_result_afa274dceba7fe0ca4afa2d4aaaadc5a1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connection, hydrant, fetch\+\_\+size, on\+\_\+closed, on\+\_\+network\+\_\+error)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a8894940cdfa9556c56399d8633683f25}{\+\_\+\+\_\+iter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a77e76c5c2f87ec8ec0b138c57a09fed6}{keys}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a66686c28e32487f1fb831bf4f7a4cb56}{consume}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a1a57fc71c79735d358bf9c8463f3cb01}{single}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a6ff9e549d2dd3ab1f10e42dfbf5296af}{peek}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a0f9b3fbf831dee83a35665d09ae6fd97}{graph}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a3a5d710c3e1949334a6471c0fe1ebf76}{value}} (self, key=0, default=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a651bcd87cd4c58f99fda1045b6d11d57}{values}} (self, $\ast$\mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a77e76c5c2f87ec8ec0b138c57a09fed6}{keys}})
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a91a9d95693baed609c832d2306811873}{data}} (self, $\ast$\mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1_result_a77e76c5c2f87ec8ec0b138c57a09fed6}{keys}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A handler for the result of Cypher query execution. Instances
+of this class are typically constructed and returned by
+:meth:`.Session.run` and :meth:`.Transaction.run`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a8894940cdfa9556c56399d8633683f25}\label{classneo4j_1_1work_1_1result_1_1_result_a8894940cdfa9556c56399d8633683f25}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!\_\_iter\_\_@{\_\_iter\_\_}}
+\index{\_\_iter\_\_@{\_\_iter\_\_}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{\_\_iter\_\_()}{\_\_iter\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+\_\+\+\_\+iter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Iterator returning Records.
+:returns: Record, it is an immutable ordered collection of key-value pairs.
+:rtype: :class:`neo4j.Record`
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a66686c28e32487f1fb831bf4f7a4cb56}\label{classneo4j_1_1work_1_1result_1_1_result_a66686c28e32487f1fb831bf4f7a4cb56}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!consume@{consume}}
+\index{consume@{consume}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+consume (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Consume the remainder of this result and return a :class:`neo4j.ResultSummary`.
+
+Example::
+
+    def create_node_tx(tx, name):
+        result = tx.run("CREATE (n:ExampleNode { name: $name }) RETURN n", name=name)
+        record = result.single()
+        value = record.value()
+        info = result.consume()
+        return value, info
+
+    with driver.session() as session:
+        node_id, info = session.write_transaction(create_node_tx, "example")
+
+Example::
+
+    def get_two_tx(tx):
+        result = tx.run("UNWIND [1,2,3,4] AS x RETURN x")
+        values = []
+        for ix, record in enumerate(result):
+            if x > 1:
+                break
+            values.append(record.values())
+        info = result.consume()  # discard the remaining records if there are any
+        # use the info for logging etc.
+        return values, info
+
+    with driver.session() as session:
+        values, info = session.read_transaction(get_two_tx)
+
+:returns: The :class:`neo4j.ResultSummary` for this result
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a91a9d95693baed609c832d2306811873}\label{classneo4j_1_1work_1_1result_1_1_result_a91a9d95693baed609c832d2306811873}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!data@{data}}
+\index{data@{data}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Helper function that return the remainder of the result as a list of dictionaries.
+
+See :class:`neo4j.Record.data`
+
+:param keys: fields to return for each remaining record. Optionally filtering to include only certain values by index or key.
+:returns: list of dictionaries
+:rtype: list
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a0f9b3fbf831dee83a35665d09ae6fd97}\label{classneo4j_1_1work_1_1result_1_1_result_a0f9b3fbf831dee83a35665d09ae6fd97}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!graph@{graph}}
+\index{graph@{graph}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+graph (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a :class:`neo4j.graph.Graph` instance containing all the graph objects
+in the result. After calling this method, the result becomes
+detached, buffering all remaining records.
+
+:returns: a result graph
+:rtype: :class:`neo4j.graph.Graph`
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a77e76c5c2f87ec8ec0b138c57a09fed6}\label{classneo4j_1_1work_1_1result_1_1_result_a77e76c5c2f87ec8ec0b138c57a09fed6}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!keys@{keys}}
+\index{keys@{keys}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{keys()}{keys()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+keys (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The keys for the records in this result.
+
+:returns: tuple of key names
+:rtype: tuple
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a6ff9e549d2dd3ab1f10e42dfbf5296af}\label{classneo4j_1_1work_1_1result_1_1_result_a6ff9e549d2dd3ab1f10e42dfbf5296af}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!peek@{peek}}
+\index{peek@{peek}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+peek (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Obtain the next record from this result without consuming it.
+This leaves the record in the buffer for further processing.
+
+:returns: the next :class:`.Record` or :const:`None` if none remain
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a1a57fc71c79735d358bf9c8463f3cb01}\label{classneo4j_1_1work_1_1result_1_1_result_a1a57fc71c79735d358bf9c8463f3cb01}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!single@{single}}
+\index{single@{single}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{single()}{single()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+single (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Obtain the next and only remaining record from this result if available else return None.
+Calling this method always exhausts the result.
+
+A warning is generated if more than one record is available but
+the first of these is still returned.
+
+:returns: the next :class:`neo4j.Record` or :const:`None` if none remain
+:warns: if more than one record is available
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a3a5d710c3e1949334a6471c0fe1ebf76}\label{classneo4j_1_1work_1_1result_1_1_result_a3a5d710c3e1949334a6471c0fe1ebf76}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!value@{value}}
+\index{value@{value}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key = {\ttfamily 0},  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Helper function that return the remainder of the result as a list of values.
+
+See :class:`neo4j.Record.value`
+
+:param key: field to return for each remaining record. Obtain a single value from the record by index or key.
+:param default: default value, used if the index of key is unavailable
+:returns: list of individual values
+:rtype: list
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1_result_a651bcd87cd4c58f99fda1045b6d11d57}\label{classneo4j_1_1work_1_1result_1_1_result_a651bcd87cd4c58f99fda1045b6d11d57}} 
+\index{neo4j.work.result.Result@{neo4j.work.result.Result}!values@{values}}
+\index{values@{values}!neo4j.work.result.Result@{neo4j.work.result.Result}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+Result.\+values (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Helper function that return the remainder of the result as a list of values lists.
+
+See :class:`neo4j.Record.values`
+
+:param keys: fields to return for each remaining record. Optionally filtering to include only certain values by index or key.
+:returns: list of values lists
+:rtype: list
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/work/result.\+py\end{DoxyCompactItemize}

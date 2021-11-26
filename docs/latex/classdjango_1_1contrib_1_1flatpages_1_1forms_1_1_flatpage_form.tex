@@ -1,0 +1,92 @@
+\hypertarget{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form}{}\doxysection{django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form Class Reference}
+\label{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form}\index{django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}}
+
+
+Inheritance diagram for django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a4dcb77e0412543c9a08ea98523ca23d3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a8bd0caf3375366699290f6a5552f2060}\label{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a8bd0caf3375366699290f6a5552f2060}} 
+def {\bfseries clean\+\_\+url} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a51d9513fb11818ccc8bc81139ce29bed}{clean}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a53fbfb9eaa4151791f5344fdccfb408c}{url}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a4dcb77e0412543c9a08ea98523ca23d3}\label{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a4dcb77e0412543c9a08ea98523ca23d3}} 
+\index{django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form}{django.\+forms.\+models.\+Base\+Model\+Form}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a51d9513fb11818ccc8bc81139ce29bed}\label{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a51d9513fb11818ccc8bc81139ce29bed}} 
+\index{django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}!clean@{clean}}
+\index{clean@{clean}!django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily def django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form.\+clean (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named '__all__'.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form_abbcddac6d29c87ce3f49fba983f5df0a}{django.\+forms.\+models.\+Base\+Model\+Form}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a53fbfb9eaa4151791f5344fdccfb408c}\label{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a53fbfb9eaa4151791f5344fdccfb408c}} 
+\index{django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}!url@{url}}
+\index{url@{url}!django.contrib.flatpages.forms.FlatpageForm@{django.contrib.flatpages.forms.FlatpageForm}}
+\doxysubsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form.\+url\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  forms.RegexField(}
+\DoxyCodeLine{        label=\_(\textcolor{stringliteral}{"{}URL"{}}),}
+\DoxyCodeLine{        max\_length=100,}
+\DoxyCodeLine{        regex=\textcolor{stringliteral}{r'\string^[-\/\(\backslash\)w/\(\backslash\).\string~]+\$'},}
+\DoxyCodeLine{        help\_text=\_(\textcolor{stringliteral}{'Example: “/about/contact/”. Make sure to have leading and trailing slashes.'}),}
+\DoxyCodeLine{        error\_messages=\{}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}invalid"{}}: \_(}
+\DoxyCodeLine{                \textcolor{stringliteral}{"{}This value must contain only letters, numbers, dots, "{}}}
+\DoxyCodeLine{                \textcolor{stringliteral}{"{}underscores, dashes, slashes or tildes."{}}}
+\DoxyCodeLine{            ),}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/flatpages/forms.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,117 @@
+\hypertarget{classrest__framework_1_1fields_1_1_model_field}{}\doxysection{rest\+\_\+framework.\+fields.\+Model\+Field Class Reference}
+\label{classrest__framework_1_1fields_1_1_model_field}\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+fields.\+Model\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+fields.\+Model\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_model_field_abedc6c8642affca77b7fd9de2854c3a0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, model\+\_\+field, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_model_field_aedd0aef754aa70a4614b216e4d3f06e4}{to\+\_\+internal\+\_\+value}} (self, data)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_model_field_a9b04d542f2f85d74986591172bfa5288}{get\+\_\+attribute}} (self, obj)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_model_field_ad831349c65f3eacb4dcff509d30639ae}{to\+\_\+representation}} (self, obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_a202d09169b03e8524d2baf8bc5a9dae8}\label{classrest__framework_1_1fields_1_1_model_field_a202d09169b03e8524d2baf8bc5a9dae8}} 
+{\bfseries model\+\_\+field}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_ac6701008ee13a270fbabcc73aed5a372}\label{classrest__framework_1_1fields_1_1_model_field_ac6701008ee13a270fbabcc73aed5a372}} 
+{\bfseries max\+\_\+length}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classrest__framework_1_1fields_1_1_model_field_a494d4d4904a5238ee326ef8765d011fc}{default\+\_\+error\+\_\+messages}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A generic field that can be used against an arbitrary model field.
+
+This is used by `ModelSerializer` when dealing with custom model fields,
+that do not have a serializer field to be mapped to.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_abedc6c8642affca77b7fd9de2854c3a0}\label{classrest__framework_1_1fields_1_1_model_field_abedc6c8642affca77b7fd9de2854c3a0}} 
+\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Model\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+field,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_a9b04d542f2f85d74986591172bfa5288}\label{classrest__framework_1_1fields_1_1_model_field_a9b04d542f2f85d74986591172bfa5288}} 
+\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}!get\_attribute@{get\_attribute}}
+\index{get\_attribute@{get\_attribute}!rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+\doxysubsubsection{\texorpdfstring{get\_attribute()}{get\_attribute()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Model\+Field.\+get\+\_\+attribute (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given the *outgoing* object instance, return the primitive value
+that should be used for this field.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_aa3443f26adcb59cb117d95321b11e367}{rest\+\_\+framework.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_aedd0aef754aa70a4614b216e4d3f06e4}\label{classrest__framework_1_1fields_1_1_model_field_aedd0aef754aa70a4614b216e4d3f06e4}} 
+\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}!to\_internal\_value@{to\_internal\_value}}
+\index{to\_internal\_value@{to\_internal\_value}!rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+\doxysubsubsection{\texorpdfstring{to\_internal\_value()}{to\_internal\_value()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Model\+Field.\+to\+\_\+internal\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform the *incoming* primitive data into a native value.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a3323a8a9f4a831e4146c3796d074993e}{rest\+\_\+framework.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_ad831349c65f3eacb4dcff509d30639ae}\label{classrest__framework_1_1fields_1_1_model_field_ad831349c65f3eacb4dcff509d30639ae}} 
+\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}!to\_representation@{to\_representation}}
+\index{to\_representation@{to\_representation}!rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+\doxysubsubsection{\texorpdfstring{to\_representation()}{to\_representation()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Model\+Field.\+to\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform the *outgoing* native value into primitive data.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a9b7498156716f21647057dd6476f2bda}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_model_field_a494d4d4904a5238ee326ef8765d011fc}\label{classrest__framework_1_1fields_1_1_model_field_a494d4d4904a5238ee326ef8765d011fc}} 
+\index{rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!rest\_framework.fields.ModelField@{rest\_framework.fields.ModelField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary rest\+\_\+framework.\+fields.\+Model\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'max\_length'}: \_(\textcolor{stringliteral}{'Ensure this field has no more than \{max\_length\} characters.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/fields.\+py\end{DoxyCompactItemize}

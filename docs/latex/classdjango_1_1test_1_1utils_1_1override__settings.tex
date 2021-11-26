@@ -1,0 +1,98 @@
+\hypertarget{classdjango_1_1test_1_1utils_1_1override__settings}{}\doxysection{django.\+test.\+utils.\+override\+\_\+settings Class Reference}
+\label{classdjango_1_1test_1_1utils_1_1override__settings}\index{django.test.utils.override\_settings@{django.test.utils.override\_settings}}
+
+
+Inheritance diagram for django.\+test.\+utils.\+override\+\_\+settings\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+test.\+utils.\+override\+\_\+settings\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__settings_a4572d2b88431ec368826e0bb6a4912dc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__settings_a53e45f1258c2cc72d3276787b04eeda1}{enable}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__settings_a3b64313aa82ff7d437d923131f58f8de}{disable}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a6f29a4edb7bd68b9278d9a444aeaaaac}\label{classdjango_1_1test_1_1utils_1_1override__settings_a6f29a4edb7bd68b9278d9a444aeaaaac}} 
+def {\bfseries save\+\_\+options} (self, test\+\_\+func)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__settings_a6563249b3f2176f0b13cfc44bd917a17}{decorate\+\_\+class}} (self, cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a7271d7190a7de9840ed3a70b2ece1925}\label{classdjango_1_1test_1_1utils_1_1override__settings_a7271d7190a7de9840ed3a70b2ece1925}} 
+{\bfseries options}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a3912d9f63628b1faebb59818a2da8168}\label{classdjango_1_1test_1_1utils_1_1override__settings_a3912d9f63628b1faebb59818a2da8168}} 
+{\bfseries wrapped}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a95288a29df54705f684faf614ee590c6}\label{classdjango_1_1test_1_1utils_1_1override__settings_a95288a29df54705f684faf614ee590c6}} 
+{\bfseries enable\+\_\+exception} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Act as either a decorator or a context manager. If it's a decorator, take a
+function and return a wrapped function. If it's a contextmanager, use it
+with the ``with`` statement. In either event, entering/exiting are called
+before and after, respectively, the function/block is executed.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a4572d2b88431ec368826e0bb6a4912dc}\label{classdjango_1_1test_1_1utils_1_1override__settings_a4572d2b88431ec368826e0bb6a4912dc}} 
+\index{django.test.utils.override\_settings@{django.test.utils.override\_settings}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.test.utils.override\_settings@{django.test.utils.override\_settings}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+settings.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a6563249b3f2176f0b13cfc44bd917a17}\label{classdjango_1_1test_1_1utils_1_1override__settings_a6563249b3f2176f0b13cfc44bd917a17}} 
+\index{django.test.utils.override\_settings@{django.test.utils.override\_settings}!decorate\_class@{decorate\_class}}
+\index{decorate\_class@{decorate\_class}!django.test.utils.override\_settings@{django.test.utils.override\_settings}}
+\doxysubsubsection{\texorpdfstring{decorate\_class()}{decorate\_class()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+settings.\+decorate\+\_\+class (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cls }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a3b64313aa82ff7d437d923131f58f8de}\label{classdjango_1_1test_1_1utils_1_1override__settings_a3b64313aa82ff7d437d923131f58f8de}} 
+\index{django.test.utils.override\_settings@{django.test.utils.override\_settings}!disable@{disable}}
+\index{disable@{disable}!django.test.utils.override\_settings@{django.test.utils.override\_settings}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+settings.\+disable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__settings_a53e45f1258c2cc72d3276787b04eeda1}\label{classdjango_1_1test_1_1utils_1_1override__settings_a53e45f1258c2cc72d3276787b04eeda1}} 
+\index{django.test.utils.override\_settings@{django.test.utils.override\_settings}!enable@{enable}}
+\index{enable@{enable}!django.test.utils.override\_settings@{django.test.utils.override\_settings}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+settings.\+enable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/utils.\+py\end{DoxyCompactItemize}

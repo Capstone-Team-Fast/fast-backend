@@ -1,0 +1,152 @@
+\hypertarget{namespacepsycopg2_1_1__range}{}\doxysection{psycopg2.\+\_\+range Namespace Reference}
+\label{namespacepsycopg2_1_1__range}\index{psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_date_range}{Date\+Range}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_date_time_range}{Date\+Time\+Range}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_date_time_t_z_range}{Date\+Time\+TZRange}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_number_range_adapter}{Number\+Range\+Adapter}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_numeric_range}{Numeric\+Range}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_range}{Range}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_range_adapter}{Range\+Adapter}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1__range_1_1_range_caster}{Range\+Caster}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepsycopg2_1_1__range_a9e1fbb52b39cad878e97c72f17994d83}{register\+\_\+range}} (pgrange, pyrange, conn\+\_\+or\+\_\+curs, globally=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_a24966216ea25fb6cea9d8cfb18da7cf2}{int4range\+\_\+caster}}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_a97c23f40888945b7598730487b80a590}{int8range\+\_\+caster}}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_a7a05fa1777f2b5c02810126819d293a8}{numrange\+\_\+caster}}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_a17ffbfde871a6645a6dfaf10b0ed248d}{daterange\+\_\+caster}}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_afb91ac1649931803ede1206f856ffde2}{tsrange\+\_\+caster}}
+\item 
+\mbox{\hyperlink{namespacepsycopg2_1_1__range_a16719c36534c87fef4d34983af55c3cf}{tstzrange\+\_\+caster}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the Range type and adaptation\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a9e1fbb52b39cad878e97c72f17994d83}\label{namespacepsycopg2_1_1__range_a9e1fbb52b39cad878e97c72f17994d83}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!register\_range@{register\_range}}
+\index{register\_range@{register\_range}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{register\_range()}{register\_range()}}
+{\footnotesize\ttfamily def psycopg2.\+\_\+range.\+register\+\_\+range (\begin{DoxyParamCaption}\item[{}]{pgrange,  }\item[{}]{pyrange,  }\item[{}]{conn\+\_\+or\+\_\+curs,  }\item[{}]{globally = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create and register an adapter and the typecasters to convert between
+a PostgreSQL |range|_ type and a PostgreSQL `Range` subclass.
+
+:param pgrange: the name of the PostgreSQL |range| type. Can be
+    schema-qualified
+:param pyrange: a `Range` strict subclass, or just a name to give to a new
+    class
+:param conn_or_curs: a connection or cursor used to find the oid of the
+    range and its subtype; the typecaster is registered in a scope limited
+    to this object, unless *globally* is set to `!True`
+:param globally: if `!False` (default) register the typecaster only on
+    *conn_or_curs*, otherwise register it globally
+:return: `RangeCaster` instance responsible for the conversion
+
+If a string is passed to *pyrange*, a new `Range` subclass is created
+with such name and will be available as the `~RangeCaster.range` attribute
+of the returned `RangeCaster` object.
+
+The function queries the database on *conn_or_curs* to inspect the
+*pgrange* type and raises `~psycopg2.ProgrammingError` if the type is not
+found.  If querying the database is not advisable, use directly the
+`RangeCaster` class and register the adapter and typecasters using the
+provided functions.\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a17ffbfde871a6645a6dfaf10b0ed248d}\label{namespacepsycopg2_1_1__range_a17ffbfde871a6645a6dfaf10b0ed248d}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!daterange\_caster@{daterange\_caster}}
+\index{daterange\_caster@{daterange\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{daterange\_caster}{daterange\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+daterange\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(\textcolor{stringliteral}{'daterange'}, DateRange,}
+\DoxyCodeLine{2     oid=3912, subtype\_oid=1082, array\_oid=3913)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a24966216ea25fb6cea9d8cfb18da7cf2}\label{namespacepsycopg2_1_1__range_a24966216ea25fb6cea9d8cfb18da7cf2}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!int4range\_caster@{int4range\_caster}}
+\index{int4range\_caster@{int4range\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{int4range\_caster}{int4range\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+int4range\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(NumberRangeAdapter, NumericRange,}
+\DoxyCodeLine{2     oid=3904, subtype\_oid=23, array\_oid=3905)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a97c23f40888945b7598730487b80a590}\label{namespacepsycopg2_1_1__range_a97c23f40888945b7598730487b80a590}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!int8range\_caster@{int8range\_caster}}
+\index{int8range\_caster@{int8range\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{int8range\_caster}{int8range\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+int8range\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(NumberRangeAdapter, NumericRange,}
+\DoxyCodeLine{2     oid=3926, subtype\_oid=20, array\_oid=3927)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a7a05fa1777f2b5c02810126819d293a8}\label{namespacepsycopg2_1_1__range_a7a05fa1777f2b5c02810126819d293a8}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!numrange\_caster@{numrange\_caster}}
+\index{numrange\_caster@{numrange\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{numrange\_caster}{numrange\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+numrange\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(NumberRangeAdapter, NumericRange,}
+\DoxyCodeLine{2     oid=3906, subtype\_oid=1700, array\_oid=3907)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_afb91ac1649931803ede1206f856ffde2}\label{namespacepsycopg2_1_1__range_afb91ac1649931803ede1206f856ffde2}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!tsrange\_caster@{tsrange\_caster}}
+\index{tsrange\_caster@{tsrange\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{tsrange\_caster}{tsrange\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+tsrange\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(\textcolor{stringliteral}{'tsrange'}, DateTimeRange,}
+\DoxyCodeLine{2     oid=3908, subtype\_oid=1114, array\_oid=3909)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacepsycopg2_1_1__range_a16719c36534c87fef4d34983af55c3cf}\label{namespacepsycopg2_1_1__range_a16719c36534c87fef4d34983af55c3cf}} 
+\index{psycopg2.\_range@{psycopg2.\_range}!tstzrange\_caster@{tstzrange\_caster}}
+\index{tstzrange\_caster@{tstzrange\_caster}!psycopg2.\_range@{psycopg2.\_range}}
+\doxysubsubsection{\texorpdfstring{tstzrange\_caster}{tstzrange\_caster}}
+{\footnotesize\ttfamily psycopg2.\+\_\+range.\+tstzrange\+\_\+caster}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  RangeCaster(\textcolor{stringliteral}{'tstzrange'}, DateTimeTZRange,}
+\DoxyCodeLine{2     oid=3910, subtype\_oid=1184, array\_oid=3911)}
+
+\end{DoxyCode}

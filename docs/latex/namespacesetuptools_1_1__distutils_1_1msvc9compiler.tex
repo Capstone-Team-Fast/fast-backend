@@ -1,0 +1,151 @@
+\hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler}{}\doxysection{setuptools.\+\_\+distutils.\+msvc9compiler Namespace Reference}
+\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler}\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1msvc9compiler_1_1_macro_expander}{Macro\+Expander}}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1msvc9compiler_1_1_m_s_v_c_compiler}{MSVCCompiler}}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1msvc9compiler_1_1_reg}{Reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ac4367f7450a56ac581a75e82067a815d}{get\+\_\+build\+\_\+version}} ()
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ad5c2a4a0af506b05e108b8ec9689d1b9}{normalize\+\_\+and\+\_\+reduce\+\_\+paths}} (paths)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a12fc5d2e326f661cd1c49c5003efe076}{remove\+Duplicates}} (variable)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a7c6b6df5e6749e9b60b1e5d592b1acf9}{find\+\_\+vcvarsall}} (version)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a97c300b2c4cda029520e92d5801036f9}{query\+\_\+vcvarsall}} (version, arch=\char`\"{}x86\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a6796e5ffe5016f456cb23827ac24d7c0}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a6796e5ffe5016f456cb23827ac24d7c0}} 
+{\bfseries Reg\+Open\+Key\+Ex} = winreg.\+Open\+Key\+Ex
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_af11fb01f580ba66f2a9546f1ff9363b2}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_af11fb01f580ba66f2a9546f1ff9363b2}} 
+{\bfseries Reg\+Enum\+Key} = winreg.\+Enum\+Key
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a5b8a9d9b12a5d41dbd67eb6154e9e034}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a5b8a9d9b12a5d41dbd67eb6154e9e034}} 
+{\bfseries Reg\+Enum\+Value} = winreg.\+Enum\+Value
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ada7c65a5cc7110800ad286016728544b}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ada7c65a5cc7110800ad286016728544b}} 
+{\bfseries Reg\+Error} = winreg.\+error
+\item 
+tuple \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_af56fa80def66c4886595b624030b72b7}{HKEYS}}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a37d92765a9ec543e5297b47bfab7d0da}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a37d92765a9ec543e5297b47bfab7d0da}} 
+tuple {\bfseries NATIVE\+\_\+\+WIN64} = (sys.\+platform == \textquotesingle{}win32\textquotesingle{} and sys.\+maxsize $>$ 2$\ast$$\ast$32)
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a3543fdb7d28f71d93077406d1cd96480}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a3543fdb7d28f71d93077406d1cd96480}} 
+string {\bfseries VS\+\_\+\+BASE} = r\char`\"{}Software\textbackslash{}\+Wow6432\+Node\textbackslash{}\+Microsoft\textbackslash{}\+Visual\+Studio\textbackslash{}\%0.\+1f\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a489f88bc3014a75017b387fe17c4bd46}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a489f88bc3014a75017b387fe17c4bd46}} 
+string {\bfseries WINSDK\+\_\+\+BASE} = r\char`\"{}Software\textbackslash{}\+Wow6432\+Node\textbackslash{}\+Microsoft\textbackslash{}\+Microsoft SDKs\textbackslash{}\+Windows\char`\"{}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ad45875a4dfb5840988b9f1e4183ef541}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ad45875a4dfb5840988b9f1e4183ef541}} 
+string {\bfseries NET\+\_\+\+BASE} = r\char`\"{}Software\textbackslash{}\+Wow6432\+Node\textbackslash{}\+Microsoft\textbackslash{}.\+NETFramework\char`\"{}
+\item 
+dictionary \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a63b3c64f70f82cf87e029dfc1470968f}{PLAT\+\_\+\+TO\+\_\+\+VCVARS}}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a8e1e84db312296aa158c95827baac79e}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a8e1e84db312296aa158c95827baac79e}} 
+def {\bfseries VERSION} = \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ac4367f7450a56ac581a75e82067a815d}{get\+\_\+build\+\_\+version}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}distutils.msvc9compiler
+
+Contains MSVCCompiler, an implementation of the abstract CCompiler class
+for the Microsoft Visual Studio 2008.
+
+The module is compatible with VS 2005 and VS 2008. You can find legacy support
+for older versions of VS in distutils.msvccompiler.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a7c6b6df5e6749e9b60b1e5d592b1acf9}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a7c6b6df5e6749e9b60b1e5d592b1acf9}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!find\_vcvarsall@{find\_vcvarsall}}
+\index{find\_vcvarsall@{find\_vcvarsall}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{find\_vcvarsall()}{find\_vcvarsall()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+msvc9compiler.\+find\+\_\+vcvarsall (\begin{DoxyParamCaption}\item[{}]{version }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find the vcvarsall.bat file
+
+At first it tries to find the productdir of VS 2008 in the registry. If
+that fails it falls back to the VS90COMNTOOLS env var.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ac4367f7450a56ac581a75e82067a815d}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ac4367f7450a56ac581a75e82067a815d}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!get\_build\_version@{get\_build\_version}}
+\index{get\_build\_version@{get\_build\_version}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{get\_build\_version()}{get\_build\_version()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+msvc9compiler.\+get\+\_\+build\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the version of MSVC that was used to build Python.
+
+For Python 2.3 and up, the version number is included in
+sys.version.  For earlier versions, assume the compiler is MSVC 6.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ad5c2a4a0af506b05e108b8ec9689d1b9}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_ad5c2a4a0af506b05e108b8ec9689d1b9}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!normalize\_and\_reduce\_paths@{normalize\_and\_reduce\_paths}}
+\index{normalize\_and\_reduce\_paths@{normalize\_and\_reduce\_paths}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{normalize\_and\_reduce\_paths()}{normalize\_and\_reduce\_paths()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+msvc9compiler.\+normalize\+\_\+and\+\_\+reduce\+\_\+paths (\begin{DoxyParamCaption}\item[{}]{paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of normalized paths with duplicates removed.
+
+The current order of paths is maintained.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a97c300b2c4cda029520e92d5801036f9}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a97c300b2c4cda029520e92d5801036f9}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!query\_vcvarsall@{query\_vcvarsall}}
+\index{query\_vcvarsall@{query\_vcvarsall}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{query\_vcvarsall()}{query\_vcvarsall()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+msvc9compiler.\+query\+\_\+vcvarsall (\begin{DoxyParamCaption}\item[{}]{version,  }\item[{}]{arch = {\ttfamily \char`\"{}x86\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Launch vcvarsall.bat and read the settings from its environment
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a12fc5d2e326f661cd1c49c5003efe076}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a12fc5d2e326f661cd1c49c5003efe076}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!removeDuplicates@{removeDuplicates}}
+\index{removeDuplicates@{removeDuplicates}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{removeDuplicates()}{removeDuplicates()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+msvc9compiler.\+remove\+Duplicates (\begin{DoxyParamCaption}\item[{}]{variable }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove duplicate values of an environment variable.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_af56fa80def66c4886595b624030b72b7}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_af56fa80def66c4886595b624030b72b7}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!HKEYS@{HKEYS}}
+\index{HKEYS@{HKEYS}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{HKEYS}{HKEYS}}
+{\footnotesize\ttfamily tuple setuptools.\+\_\+distutils.\+msvc9compiler.\+HKEYS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (winreg.HKEY\_USERS,}
+\DoxyCodeLine{2          winreg.HKEY\_CURRENT\_USER,}
+\DoxyCodeLine{3          winreg.HKEY\_LOCAL\_MACHINE,}
+\DoxyCodeLine{4          winreg.HKEY\_CLASSES\_ROOT)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a63b3c64f70f82cf87e029dfc1470968f}\label{namespacesetuptools_1_1__distutils_1_1msvc9compiler_a63b3c64f70f82cf87e029dfc1470968f}} 
+\index{setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}!PLAT\_TO\_VCVARS@{PLAT\_TO\_VCVARS}}
+\index{PLAT\_TO\_VCVARS@{PLAT\_TO\_VCVARS}!setuptools.\_distutils.msvc9compiler@{setuptools.\_distutils.msvc9compiler}}
+\doxysubsubsection{\texorpdfstring{PLAT\_TO\_VCVARS}{PLAT\_TO\_VCVARS}}
+{\footnotesize\ttfamily dictionary setuptools.\+\_\+distutils.\+msvc9compiler.\+PLAT\+\_\+\+TO\+\_\+\+VCVARS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'win32'} : \textcolor{stringliteral}{'x86'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'win-\/amd64'} : \textcolor{stringliteral}{'amd64'},}
+\DoxyCodeLine{4 \}}
+
+\end{DoxyCode}

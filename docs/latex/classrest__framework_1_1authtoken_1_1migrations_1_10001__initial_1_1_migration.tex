@@ -1,0 +1,61 @@
+\hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration}{}\doxysection{rest\+\_\+framework.\+authtoken.\+migrations.0001\+\_\+initial.\+Migration Class Reference}
+\label{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration}\index{rest\_framework.authtoken.migrations.0001\_initial.Migration@{rest\_framework.authtoken.migrations.0001\_initial.Migration}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+authtoken.\+migrations.0001\+\_\+initial.\+Migration\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+authtoken.\+migrations.0001\+\_\+initial.\+Migration\+:
+% FIG 1
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a2d1ee0419185e98b3f69c141bfb24a10}{dependencies}}
+\item 
+list \mbox{\hyperlink{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a0eb0919211b676a6fbbc15310ad99c74}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a2d1ee0419185e98b3f69c141bfb24a10}\label{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a2d1ee0419185e98b3f69c141bfb24a10}} 
+\index{rest\_framework.authtoken.migrations.0001\_initial.Migration@{rest\_framework.authtoken.migrations.0001\_initial.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!rest\_framework.authtoken.migrations.0001\_initial.Migration@{rest\_framework.authtoken.migrations.0001\_initial.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+authtoken.\+migrations.\+0001\+\_\+initial.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        migrations.swappable\_dependency(settings.AUTH\_USER\_MODEL),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a0eb0919211b676a6fbbc15310ad99c74}\label{classrest__framework_1_1authtoken_1_1migrations_1_10001__initial_1_1_migration_a0eb0919211b676a6fbbc15310ad99c74}} 
+\index{rest\_framework.authtoken.migrations.0001\_initial.Migration@{rest\_framework.authtoken.migrations.0001\_initial.Migration}!operations@{operations}}
+\index{operations@{operations}!rest\_framework.authtoken.migrations.0001\_initial.Migration@{rest\_framework.authtoken.migrations.0001\_initial.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+authtoken.\+migrations.\+0001\+\_\+initial.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        migrations.CreateModel(}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'Token'},}
+\DoxyCodeLine{            fields=[}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'key'}, models.CharField(primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}, max\_length=40)),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'created'}, models.DateTimeField(auto\_now\_add=\textcolor{keyword}{True})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'user'}, models.OneToOneField(to=settings.AUTH\_USER\_MODEL, related\_name=\textcolor{stringliteral}{'auth\_token'}, on\_delete=models.CASCADE)),}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{            options=\{}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            bases=(models.Model,),}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/authtoken/migrations/0001\+\_\+initial.\+py\end{DoxyCompactItemize}

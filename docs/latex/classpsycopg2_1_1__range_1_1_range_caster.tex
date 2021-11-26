@@ -1,0 +1,43 @@
+\hypertarget{classpsycopg2_1_1__range_1_1_range_caster}{}\doxysection{psycopg2.\+\_\+range.\+Range\+Caster Class Reference}
+\label{classpsycopg2_1_1__range_1_1_range_caster}\index{psycopg2.\_range.RangeCaster@{psycopg2.\_range.RangeCaster}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_a2a6afd8ce3f9fed6478fbcc99c7c520b}\label{classpsycopg2_1_1__range_1_1_range_caster_a2a6afd8ce3f9fed6478fbcc99c7c520b}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, pgrange, pyrange, oid, subtype\+\_\+oid, array\+\_\+oid=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_aa140d253b8e650790711d084720dd183}\label{classpsycopg2_1_1__range_1_1_range_caster_aa140d253b8e650790711d084720dd183}} 
+def {\bfseries parse} (self, s, cur=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_a4e9416d5260791ff496b0afd85ef1a50}\label{classpsycopg2_1_1__range_1_1_range_caster_a4e9416d5260791ff496b0afd85ef1a50}} 
+{\bfseries subtype\+\_\+oid}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_adbd88adf45b282532a04fc957e6e3348}\label{classpsycopg2_1_1__range_1_1_range_caster_adbd88adf45b282532a04fc957e6e3348}} 
+{\bfseries typecaster}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_aca2df5fa6f50ad6cf1bbc2f62230ae2f}\label{classpsycopg2_1_1__range_1_1_range_caster_aca2df5fa6f50ad6cf1bbc2f62230ae2f}} 
+{\bfseries array\+\_\+typecaster}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_a5021a7efd400f3c96f185be64ce6ec7a}\label{classpsycopg2_1_1__range_1_1_range_caster_a5021a7efd400f3c96f185be64ce6ec7a}} 
+{\bfseries adapter}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1__range_1_1_range_caster_a06b61f2ad35bb84e7346e6f611da5a2d}\label{classpsycopg2_1_1__range_1_1_range_caster_a06b61f2ad35bb84e7346e6f611da5a2d}} 
+{\bfseries range}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helper class to convert between `Range` and PostgreSQL range types.
+
+Objects of this class are usually created by `register_range()`. Manual
+creation could be useful if querying the database is not advisable: in
+this case the oids must be provided.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/\+\_\+range.\+py\end{DoxyCompactItemize}

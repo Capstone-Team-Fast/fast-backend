@@ -1,0 +1,14 @@
+digraph "django.core.mail.message.MIMEMixin"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.core.mail.message.\lMIMEMixin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="django.core.mail.message.\lSafeMIMEMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1mail_1_1message_1_1_safe_m_i_m_e_message.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="django.core.mail.message.\lSafeMIMEMultipart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1mail_1_1message_1_1_safe_m_i_m_e_multipart.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="django.core.mail.message.\lSafeMIMEText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1mail_1_1message_1_1_safe_m_i_m_e_text.html",tooltip=" "];
+}

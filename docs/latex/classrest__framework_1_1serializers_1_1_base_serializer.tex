@@ -1,0 +1,165 @@
+\hypertarget{classrest__framework_1_1serializers_1_1_base_serializer}{}\doxysection{rest\+\_\+framework.\+serializers.\+Base\+Serializer Class Reference}
+\label{classrest__framework_1_1serializers_1_1_base_serializer}\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+serializers.\+Base\+Serializer\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+serializers.\+Base\+Serializer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_a692ea25846c960253a43555e123fad94}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, instance=None, data=empty, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a1c4bb74a3d47c2c1925f8ed776ac45fe}\label{classrest__framework_1_1serializers_1_1_base_serializer_a1c4bb74a3d47c2c1925f8ed776ac45fe}} 
+def {\bfseries \+\_\+\+\_\+new\+\_\+\+\_\+} (cls, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_ad9cd467d955cf9b8d8d79f64f7fc4989}\label{classrest__framework_1_1serializers_1_1_base_serializer_ad9cd467d955cf9b8d8d79f64f7fc4989}} 
+def {\bfseries \+\_\+\+\_\+class\+\_\+getitem\+\_\+\+\_\+} (cls, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_aa66062b6866b3306c40d310e19b25971}{many\+\_\+init}} (cls, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_a8a5d467722a9ed4b1df025a139d45abb}{to\+\_\+internal\+\_\+value}} (self, data)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_a0cba530306005821ea0b88bdd5a3802f}{to\+\_\+representation}} (self, instance)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a37c573aeabe66089fb5b442e0f3ae729}\label{classrest__framework_1_1serializers_1_1_base_serializer_a37c573aeabe66089fb5b442e0f3ae729}} 
+def {\bfseries update} (self, instance, validated\+\_\+data)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_a963d77dca1ebdcdbd0c332eaf6c2783d}{create}} (self, validated\+\_\+data)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer_a9dc5fcd87b15a4b393bef70b0c87fb0a}{save}} (self, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a3919d696204c0a8242591ec8f8851e89}\label{classrest__framework_1_1serializers_1_1_base_serializer_a3919d696204c0a8242591ec8f8851e89}} 
+def {\bfseries is\+\_\+valid} (self, raise\+\_\+exception=False)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_ab8e2dde5ecf9c3cc38be55e4b92f7fae}\label{classrest__framework_1_1serializers_1_1_base_serializer_ab8e2dde5ecf9c3cc38be55e4b92f7fae}} 
+def {\bfseries data} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a53141540c60ed82669cd9fd1d9845730}\label{classrest__framework_1_1serializers_1_1_base_serializer_a53141540c60ed82669cd9fd1d9845730}} 
+def {\bfseries errors} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_aaefd59eab53b2c04ed5e79ae2c7056c0}\label{classrest__framework_1_1serializers_1_1_base_serializer_aaefd59eab53b2c04ed5e79ae2c7056c0}} 
+def {\bfseries validated\+\_\+data} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_ae0a595af90c0d51b651742aac5030af1}\label{classrest__framework_1_1serializers_1_1_base_serializer_ae0a595af90c0d51b651742aac5030af1}} 
+{\bfseries instance}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a04be829e19a430b2469791ea666595b6}\label{classrest__framework_1_1serializers_1_1_base_serializer_a04be829e19a430b2469791ea666595b6}} 
+{\bfseries initial\+\_\+data}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_af67ffbb7c4860b7b8c42ad98afb8d003}\label{classrest__framework_1_1serializers_1_1_base_serializer_af67ffbb7c4860b7b8c42ad98afb8d003}} 
+{\bfseries partial}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The BaseSerializer class provides a minimal class which may be used
+for writing custom serializer implementations.
+
+Note that we strongly restrict the ordering of operations/properties
+that may be used on the serializer in order to enforce correct usage.
+
+In particular, if a `data=` argument is passed then:
+
+.is_valid() - Available.
+.initial_data - Available.
+.validated_data - Only available after calling `is_valid()`
+.errors - Only available after calling `is_valid()`
+.data - Only available after calling `is_valid()`
+
+If a `data=` argument is not passed then:
+
+.is_valid() - Not available.
+.initial_data - Not available.
+.validated_data - Not available.
+.errors - Not available.
+.data - Available.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a692ea25846c960253a43555e123fad94}\label{classrest__framework_1_1serializers_1_1_base_serializer_a692ea25846c960253a43555e123fad94}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance = {\ttfamily None},  }\item[{}]{data = {\ttfamily empty},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field}{django.\+db.\+models.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a963d77dca1ebdcdbd0c332eaf6c2783d}\label{classrest__framework_1_1serializers_1_1_base_serializer_a963d77dca1ebdcdbd0c332eaf6c2783d}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!create@{create}}
+\index{create@{create}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+create (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{validated\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_model_serializer_a0971f9f26780a602b27e79f9238fb41c}{rest\+\_\+framework.\+serializers.\+Model\+Serializer}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_aa66062b6866b3306c40d310e19b25971}\label{classrest__framework_1_1serializers_1_1_base_serializer_aa66062b6866b3306c40d310e19b25971}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!many\_init@{many\_init}}
+\index{many\_init@{many\_init}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{many\_init()}{many\_init()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+many\+\_\+init (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method implements the creation of a `ListSerializer` parent
+class when `many=True` is used. You can customize it if you need to
+control which keyword arguments are passed to the parent, and
+which are passed to the child.
+
+Note that we're over-cautious in passing most arguments to both parent
+and child classes in order to try to cover the general case. If you're
+overriding this method you'll probably want something much simpler, eg:
+
+@classmethod
+def many_init(cls, *args, **kwargs):
+    kwargs['child'] = cls()
+    return CustomListSerializer(*args, **kwargs)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a9dc5fcd87b15a4b393bef70b0c87fb0a}\label{classrest__framework_1_1serializers_1_1_base_serializer_a9dc5fcd87b15a4b393bef70b0c87fb0a}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!save@{save}}
+\index{save@{save}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer_aae894406720700029ad7bfd9accd04dc}{rest\+\_\+framework.\+serializers.\+List\+Serializer}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a8a5d467722a9ed4b1df025a139d45abb}\label{classrest__framework_1_1serializers_1_1_base_serializer_a8a5d467722a9ed4b1df025a139d45abb}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!to\_internal\_value@{to\_internal\_value}}
+\index{to\_internal\_value@{to\_internal\_value}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{to\_internal\_value()}{to\_internal\_value()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+to\+\_\+internal\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_a6c8ec8d5e22b79ca4dc0bef33e543483}{rest\+\_\+framework.\+serializers.\+Serializer}}, and \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer_a2c58eccbbb61da1152f05b67827a94e5}{rest\+\_\+framework.\+serializers.\+List\+Serializer}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1serializers_1_1_base_serializer_a0cba530306005821ea0b88bdd5a3802f}\label{classrest__framework_1_1serializers_1_1_base_serializer_a0cba530306005821ea0b88bdd5a3802f}} 
+\index{rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}!to\_representation@{to\_representation}}
+\index{to\_representation@{to\_representation}!rest\_framework.serializers.BaseSerializer@{rest\_framework.serializers.BaseSerializer}}
+\doxysubsubsection{\texorpdfstring{to\_representation()}{to\_representation()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+Base\+Serializer.\+to\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer_a1c21cccc92afbd194afe459b669c16ca}{rest\+\_\+framework.\+serializers.\+List\+Serializer}}, and \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_ade364932d81d8c6660927f6a0ac1dff1}{rest\+\_\+framework.\+serializers.\+Serializer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/serializers.\+py\end{DoxyCompactItemize}

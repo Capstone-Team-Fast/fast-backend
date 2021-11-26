@@ -1,0 +1,138 @@
+\hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table}{}\doxysection{django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table Class Reference}
+\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table}\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+
+
+Inheritance diagram for django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a342423e54c28a712f726906aff5778ea}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, name, table)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a0bb389df416844211c467d45415236f6}{deconstruct}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_abf7dfba241dc03202ecfb67c1800ff64}{state\+\_\+forwards}} (self, app\+\_\+label, state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_afdee7c86c6a5a6c08793bcdf7681757a}{database\+\_\+forwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a6d2b5ea6c426da9ae4e2b264fa13d1cb}{database\+\_\+backwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a888d1a1a5b77ec41d16c7c05375c8dfc}{describe}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_ac865bbe785217b609d7de0f6cd2d85f0}{migration\+\_\+name\+\_\+fragment}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a16e98202b1312c24d0d23c16dccfef21}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a16e98202b1312c24d0d23c16dccfef21}} 
+{\bfseries table}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Rename a model's table.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a342423e54c28a712f726906aff5778ea}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a342423e54c28a712f726906aff5778ea}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{table }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_model_operation}{django.\+db.\+migrations.\+operations.\+models.\+Model\+Operation}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a6d2b5ea6c426da9ae4e2b264fa13d1cb}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a6d2b5ea6c426da9ae4e2b264fa13d1cb}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!database\_backwards@{database\_backwards}}
+\index{database\_backwards@{database\_backwards}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{database\_backwards()}{database\_backwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+database\+\_\+backwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the reverse
+direction - e.g. if this were CreateModel, it would in fact
+drop the model's table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9f9a4f6caf098cfef46a18181b5d3e1f}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_afdee7c86c6a5a6c08793bcdf7681757a}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_afdee7c86c6a5a6c08793bcdf7681757a}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!database\_forwards@{database\_forwards}}
+\index{database\_forwards@{database\_forwards}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{database\_forwards()}{database\_forwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+database\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the normal
+(forwards) direction.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a6fb30ff727ddd37e2133a22f270dfd7e}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a0bb389df416844211c467d45415236f6}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a0bb389df416844211c467d45415236f6}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!deconstruct@{deconstruct}}
+\index{deconstruct@{deconstruct}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{deconstruct()}{deconstruct()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+deconstruct (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a 3-tuple of class import path (or just name if it lives
+under django.db.migrations), positional arguments, and keyword
+arguments.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_ad75a5d5505068e79957819c47964bbf5}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a888d1a1a5b77ec41d16c7c05375c8dfc}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_a888d1a1a5b77ec41d16c7c05375c8dfc}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!describe@{describe}}
+\index{describe@{describe}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+describe (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Output a brief summary of what the action does.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9ab7813dce1563587a2972d4d4f4fa00}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_ac865bbe785217b609d7de0f6cd2d85f0}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_ac865bbe785217b609d7de0f6cd2d85f0}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!migration\_name\_fragment@{migration\_name\_fragment}}
+\index{migration\_name\_fragment@{migration\_name\_fragment}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{migration\_name\_fragment()}{migration\_name\_fragment()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+migration\+\_\+name\+\_\+fragment (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A filename part suitable for automatically naming a migration
+containing this operation, or None if not applicable.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a12262150d6d1ff19ab68879e46c1660d}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_abf7dfba241dc03202ecfb67c1800ff64}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_alter_model_table_abf7dfba241dc03202ecfb67c1800ff64}} 
+\index{django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}!state\_forwards@{state\_forwards}}
+\index{state\_forwards@{state\_forwards}!django.db.migrations.operations.models.AlterModelTable@{django.db.migrations.operations.models.AlterModelTable}}
+\doxysubsubsection{\texorpdfstring{state\_forwards()}{state\_forwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Alter\+Model\+Table.\+state\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take the state from the previous migration, and mutate it
+so that it matches what this migration would perform.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a5717e1a47b2551aab4fbf9475f9dae7b}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/migrations/operations/models.\+py\end{DoxyCompactItemize}

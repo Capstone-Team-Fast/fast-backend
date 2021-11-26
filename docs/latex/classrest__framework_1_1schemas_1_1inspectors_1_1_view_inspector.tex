@@ -1,0 +1,111 @@
+\hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector}{}\doxysection{rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector Class Reference}
+\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector}\index{rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a494e8842206210eef817c0ee102420aa}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ac2b15e30feaaf5eb0cd784b22c2063b2}{\+\_\+\+\_\+get\+\_\+\+\_\+}} (self, instance, owner)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a6fcf78e5273357f2ac57f44debc7053e}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a6fcf78e5273357f2ac57f44debc7053e}} 
+def {\bfseries \+\_\+\+\_\+set\+\_\+\+\_\+} (self, instance, other)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a3492fc13825e9540cb29d33412f10873}{view}} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a9dc413897ea1b5d370debf39c7d5f765}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a9dc413897ea1b5d370debf39c7d5f765}} 
+def {\bfseries view} (self, value)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a3492fc13825e9540cb29d33412f10873}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a3492fc13825e9540cb29d33412f10873}} 
+def {\bfseries view} (self)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_afb4b31c5c16fe1ccae0066237fde3477}{get\+\_\+description}} (self, path, method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a8ce1c6818d7068a32f75074e8c00d545}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a8ce1c6818d7068a32f75074e8c00d545}} 
+{\bfseries instance\+\_\+schemas}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ae5e888d7178fa3a09ef392b0861d0fac}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ae5e888d7178fa3a09ef392b0861d0fac}} 
+{\bfseries view}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a6407268e938d1f505680578fe69ab3f3}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a6407268e938d1f505680578fe69ab3f3}} 
+{\bfseries header\+\_\+regex} = re.\+compile(\textquotesingle{}$^\wedge$\mbox{[}a-\/zA-\/Z\mbox{]}\mbox{[}0-\/9A-\/Za-\/z\+\_\+\mbox{]}$\ast$\+:\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Descriptor class on APIView.
+
+Provide subclass for per-view schema generation
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a494e8842206210eef817c0ee102420aa}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a494e8842206210eef817c0ee102420aa}} 
+\index{rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_manual_schema_a811e0ce340398e71d5292ae173eee30d}{rest\+\_\+framework.\+schemas.\+coreapi.\+Manual\+Schema}}, \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a9d2f4437336e7b0799c6120ce8705013}{rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema}}, and \mbox{\hyperlink{classrest__framework_1_1schemas_1_1openapi_1_1_auto_schema_a0eb27eef39cba899aba7a8baabac863b}{rest\+\_\+framework.\+schemas.\+openapi.\+Auto\+Schema}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ac2b15e30feaaf5eb0cd784b22c2063b2}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ac2b15e30feaaf5eb0cd784b22c2063b2}} 
+\index{rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}!\_\_get\_\_@{\_\_get\_\_}}
+\index{\_\_get\_\_@{\_\_get\_\_}!rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}}
+\doxysubsubsection{\texorpdfstring{\_\_get\_\_()}{\_\_get\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector.\+\_\+\+\_\+get\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance,  }\item[{}]{owner }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enables `ViewInspector` as a Python _Descriptor_.
+
+This is how `view.schema` knows about `view`.
+
+`__get__` is called when the descriptor is accessed on the owner.
+(That will be when view.schema is called in our case.)
+
+`owner` is always the owner class. (An APIView, or subclass for us.)
+`instance` is the view instance or `None` if accessed from the class,
+rather than an instance.
+
+See: https://docs.python.org/3/howto/descriptor.html for info on
+descriptor usage.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema_a26f8829ef619b3ed16d5d459ce795e35}{rest\+\_\+framework.\+schemas.\+inspectors.\+Default\+Schema}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_afb4b31c5c16fe1ccae0066237fde3477}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_afb4b31c5c16fe1ccae0066237fde3477}} 
+\index{rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}!get\_description@{get\_description}}
+\index{get\_description@{get\_description}!rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}}
+\doxysubsubsection{\texorpdfstring{get\_description()}{get\_description()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector.\+get\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{method }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determine a path description.
+
+This will be based on the method docstring if one exists,
+or else the class docstring.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a3492fc13825e9540cb29d33412f10873}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_a3492fc13825e9540cb29d33412f10873}} 
+\index{rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}!view@{view}}
+\index{view@{view}!rest\_framework.schemas.inspectors.ViewInspector@{rest\_framework.schemas.inspectors.ViewInspector}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector.\+view (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}View property.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/schemas/inspectors.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{classneomodel_1_1util_1_1_database}{}\doxysection{neomodel.\+util.\+Database Class Reference}
+\label{classneomodel_1_1util_1_1_database}\index{neomodel.util.Database@{neomodel.util.Database}}
+
+
+Inheritance diagram for neomodel.\+util.\+Database\+:
+% FIG 0
+
+
+Collaboration diagram for neomodel.\+util.\+Database\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_ab4ff556b7cdb7ba9803ac4610e4bf7b4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_a21436f275e37f466b704e9508ed68ffa}{set\+\_\+connection}} (self, url)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_ac8b41cf2dfe34d9ab472bd42a806da81}{transaction}} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_af32f44481915a9a802728af9825b0dbb}\label{classneomodel_1_1util_1_1_database_af32f44481915a9a802728af9825b0dbb}} 
+def {\bfseries write\+\_\+transaction} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_aadc882ed02b97e8fec119686a967b670}\label{classneomodel_1_1util_1_1_database_aadc882ed02b97e8fec119686a967b670}} 
+def {\bfseries read\+\_\+transaction} (self)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_aa1b6ee7e4f05baca9057262509bd1d8c}{begin}} (self, access\+\_\+mode=None)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_a2f84bf7c1a971ecd4daaad942b2e2d32}{commit}} (self)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_aff7ad9fc96e15ef53071a236732d45e7}{rollback}} (self)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1util_1_1_database_a9926cefe19d41d8e2dd1aec20339b590}{cypher\+\_\+query}} (self, query, params=None, handle\+\_\+unique=True, retry\+\_\+on\+\_\+session\+\_\+expire=False, resolve\+\_\+objects=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_a6e8a9d1114507d9ed9a0497b1ee624ec}\label{classneomodel_1_1util_1_1_database_a6e8a9d1114507d9ed9a0497b1ee624ec}} 
+{\bfseries url}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_af14836f3e897f41c7da966d4fc26f700}\label{classneomodel_1_1util_1_1_database_af14836f3e897f41c7da966d4fc26f700}} 
+{\bfseries driver}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A singleton object via which all operations from neomodel to the Neo4j backend are handled with.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_ab4ff556b7cdb7ba9803ac4610e4bf7b4}\label{classneomodel_1_1util_1_1_database_ab4ff556b7cdb7ba9803ac4610e4bf7b4}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneomodel_1_1util_1_1_node_class_registry}{neomodel.\+util.\+Node\+Class\+Registry}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneomodel_1_1util_1_1_database_aa1b6ee7e4f05baca9057262509bd1d8c}\label{classneomodel_1_1util_1_1_database_aa1b6ee7e4f05baca9057262509bd1d8c}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!begin@{begin}}
+\index{begin@{begin}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+begin (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{access\+\_\+mode = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Begins a new transaction, raises SystemError exception if a transaction is in progress
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneomodel_1_1util_1_1_database_a2f84bf7c1a971ecd4daaad942b2e2d32}\label{classneomodel_1_1util_1_1_database_a2f84bf7c1a971ecd4daaad942b2e2d32}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!commit@{commit}}
+\index{commit@{commit}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+commit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Commits the current transaction
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneomodel_1_1util_1_1_database_a9926cefe19d41d8e2dd1aec20339b590}\label{classneomodel_1_1util_1_1_database_a9926cefe19d41d8e2dd1aec20339b590}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!cypher\_query@{cypher\_query}}
+\index{cypher\_query@{cypher\_query}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{cypher\_query()}{cypher\_query()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+cypher\+\_\+query (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query,  }\item[{}]{params = {\ttfamily None},  }\item[{}]{handle\+\_\+unique = {\ttfamily True},  }\item[{}]{retry\+\_\+on\+\_\+session\+\_\+expire = {\ttfamily False},  }\item[{}]{resolve\+\_\+objects = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs a query on the database and returns a list of results and their headers.
+
+:param query: A CYPHER query
+:type: str
+:param params: Dictionary of parameters
+:type: dict
+:param handle_unique: Whether or not to raise UniqueProperty exception on Cypher's ConstraintValidation errors
+:type: bool
+:param retry_on_session_expire: Whether or not to attempt the same query again if the transaction has expired
+:type: bool        
+:param resolve_objects: Whether to attempt to resolve the returned nodes to data model objects automatically
+:type: bool
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneomodel_1_1util_1_1_database_aff7ad9fc96e15ef53071a236732d45e7}\label{classneomodel_1_1util_1_1_database_aff7ad9fc96e15ef53071a236732d45e7}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!rollback@{rollback}}
+\index{rollback@{rollback}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+rollback (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rolls back the current transaction
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneomodel_1_1util_1_1_database_a21436f275e37f466b704e9508ed68ffa}\label{classneomodel_1_1util_1_1_database_a21436f275e37f466b704e9508ed68ffa}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!set\_connection@{set\_connection}}
+\index{set\_connection@{set\_connection}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{set\_connection()}{set\_connection()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+set\+\_\+connection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sets the connection URL to the address a Neo4j server is set up at
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneomodel_1_1util_1_1_database_ac8b41cf2dfe34d9ab472bd42a806da81}\label{classneomodel_1_1util_1_1_database_ac8b41cf2dfe34d9ab472bd42a806da81}} 
+\index{neomodel.util.Database@{neomodel.util.Database}!transaction@{transaction}}
+\index{transaction@{transaction}!neomodel.util.Database@{neomodel.util.Database}}
+\doxysubsubsection{\texorpdfstring{transaction()}{transaction()}}
+{\footnotesize\ttfamily def neomodel.\+util.\+Database.\+transaction (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the current transaction object
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neomodel/util.\+py\end{DoxyCompactItemize}

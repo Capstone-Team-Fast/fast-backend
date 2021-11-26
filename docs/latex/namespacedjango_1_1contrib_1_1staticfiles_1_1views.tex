@@ -1,0 +1,35 @@
+\hypertarget{namespacedjango_1_1contrib_1_1staticfiles_1_1views}{}\doxysection{django.\+contrib.\+staticfiles.\+views Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1staticfiles_1_1views}\index{django.contrib.staticfiles.views@{django.contrib.staticfiles.views}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1staticfiles_1_1views_ac05e731123ea8d9edb1ea2a707f8b899}{serve}} (request, path, insecure=False, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Views and functions for serving static files. These are only to be used during
+development, and SHOULD NOT be used in a production setting.\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1staticfiles_1_1views_ac05e731123ea8d9edb1ea2a707f8b899}\label{namespacedjango_1_1contrib_1_1staticfiles_1_1views_ac05e731123ea8d9edb1ea2a707f8b899}} 
+\index{django.contrib.staticfiles.views@{django.contrib.staticfiles.views}!serve@{serve}}
+\index{serve@{serve}!django.contrib.staticfiles.views@{django.contrib.staticfiles.views}}
+\doxysubsubsection{\texorpdfstring{serve()}{serve()}}
+{\footnotesize\ttfamily def django.\+contrib.\+staticfiles.\+views.\+serve (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{path,  }\item[{}]{insecure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serve static files below a given point in the directory structure or
+from locations inferred from the staticfiles finders.
+
+To use, put a URL pattern such as::
+
+    from django.contrib.staticfiles import views
+
+    path('<path:path>', views.serve)
+
+in your URLconf.
+
+It uses the django.views.static.serve() view to serve the found files.
+\end{DoxyVerb}
+ 

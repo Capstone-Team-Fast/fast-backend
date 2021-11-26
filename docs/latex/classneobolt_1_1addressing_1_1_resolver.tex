@@ -1,0 +1,65 @@
+\hypertarget{classneobolt_1_1addressing_1_1_resolver}{}\doxysection{neobolt.\+addressing.\+Resolver Class Reference}
+\label{classneobolt_1_1addressing_1_1_resolver}\index{neobolt.addressing.Resolver@{neobolt.addressing.Resolver}}
+
+
+Inheritance diagram for neobolt.\+addressing.\+Resolver\+:
+% FIG 0
+
+
+Collaboration diagram for neobolt.\+addressing.\+Resolver\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1addressing_1_1_resolver_a8096f9a35e6563ebcc0d1488f26f4221}\label{classneobolt_1_1addressing_1_1_resolver_a8096f9a35e6563ebcc0d1488f26f4221}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, custom\+\_\+resolver=None)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1addressing_1_1_resolver_ae38bf20aa53168b63230cd0c8aba7bab}{custom\+\_\+resolve}} (self)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1addressing_1_1_resolver_af56d27b598e8404c81d9cf43fedd4ab5}{dns\+\_\+resolve}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1addressing_1_1_resolver_aeb6bf7aeaa5d5313332338cf0ea011d0}\label{classneobolt_1_1addressing_1_1_resolver_aeb6bf7aeaa5d5313332338cf0ea011d0}} 
+{\bfseries addresses}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1addressing_1_1_resolver_a01f0cc3840a8377229b919d771e02af3}\label{classneobolt_1_1addressing_1_1_resolver_a01f0cc3840a8377229b919d771e02af3}} 
+{\bfseries custom\+\_\+resolver}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A Resolver instance stores a list of addresses, each in a tuple, and
+provides methods to perform resolution on these, thereby replacing them
+with the resolved values.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneobolt_1_1addressing_1_1_resolver_ae38bf20aa53168b63230cd0c8aba7bab}\label{classneobolt_1_1addressing_1_1_resolver_ae38bf20aa53168b63230cd0c8aba7bab}} 
+\index{neobolt.addressing.Resolver@{neobolt.addressing.Resolver}!custom\_resolve@{custom\_resolve}}
+\index{custom\_resolve@{custom\_resolve}!neobolt.addressing.Resolver@{neobolt.addressing.Resolver}}
+\doxysubsubsection{\texorpdfstring{custom\_resolve()}{custom\_resolve()}}
+{\footnotesize\ttfamily def neobolt.\+addressing.\+Resolver.\+custom\+\_\+resolve (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} If a custom resolver is defined, perform custom resolution on
+the contained addresses.
+
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1addressing_1_1_resolver_af56d27b598e8404c81d9cf43fedd4ab5}\label{classneobolt_1_1addressing_1_1_resolver_af56d27b598e8404c81d9cf43fedd4ab5}} 
+\index{neobolt.addressing.Resolver@{neobolt.addressing.Resolver}!dns\_resolve@{dns\_resolve}}
+\index{dns\_resolve@{dns\_resolve}!neobolt.addressing.Resolver@{neobolt.addressing.Resolver}}
+\doxysubsubsection{\texorpdfstring{dns\_resolve()}{dns\_resolve()}}
+{\footnotesize\ttfamily def neobolt.\+addressing.\+Resolver.\+dns\+\_\+resolve (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Perform DNS resolution on the contained addresses.
+
+:return:
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neobolt/addressing.\+py\end{DoxyCompactItemize}

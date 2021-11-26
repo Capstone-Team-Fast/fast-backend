@@ -1,0 +1,66 @@
+\hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor}{}\doxysection{psycopg2.\+extras.\+Named\+Tuple\+Cursor Class Reference}
+\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor}\index{psycopg2.extras.NamedTupleCursor@{psycopg2.extras.NamedTupleCursor}}
+
+
+Inheritance diagram for psycopg2.\+extras.\+Named\+Tuple\+Cursor\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+extras.\+Named\+Tuple\+Cursor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a5012e86f568b964ea64ab0dfc8c267a4}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a5012e86f568b964ea64ab0dfc8c267a4}} 
+def {\bfseries execute} (self, query, vars=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a3028ecef7aed3359d9e136c9b0f10ef9}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a3028ecef7aed3359d9e136c9b0f10ef9}} 
+def {\bfseries executemany} (self, query, vars)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a690cbeae7ccc805a2f46f43f2721c7f9}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a690cbeae7ccc805a2f46f43f2721c7f9}} 
+def {\bfseries callproc} (self, procname, vars=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a7e58ad3d403697d7795c46fdff0eb05c}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a7e58ad3d403697d7795c46fdff0eb05c}} 
+def {\bfseries fetchone} (self)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a6bfa3625e9a59d717d8cc89f291409ef}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a6bfa3625e9a59d717d8cc89f291409ef}} 
+def {\bfseries fetchmany} (self, size=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a9a5bbf25da5ee1d415fcb5c99cedb01f}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a9a5bbf25da5ee1d415fcb5c99cedb01f}} 
+def {\bfseries fetchall} (self)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a4c6e2cbd33cdc5835329ef0096b54d0b}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a4c6e2cbd33cdc5835329ef0096b54d0b}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a0df1a35c54e388dd8c71e3400f2aa5eb}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a0df1a35c54e388dd8c71e3400f2aa5eb}} 
+{\bfseries Record}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a3f90c78673513b6b85d39a4a0f479f9b}\label{classpsycopg2_1_1extras_1_1_named_tuple_cursor_a3f90c78673513b6b85d39a4a0f479f9b}} 
+{\bfseries MAX\+\_\+\+CACHE}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A cursor that generates results as `~collections.namedtuple`.
+
+`!fetch*()` methods will return named tuples instead of regular tuples, so
+their elements can be accessed both as regular numeric items as well as
+attributes.
+
+    >>> nt_cur = conn.cursor(cursor_factory=psycopg2.extras.NamedTupleCursor)
+    >>> rec = nt_cur.fetchone()
+    >>> rec
+    Record(id=1, num=100, data="abc'def")
+    >>> rec[1]
+    100
+    >>> rec.data
+    "abc'def"
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/extras.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\hypertarget{classdjango_1_1forms_1_1fields_1_1_image_field}{}\doxysection{django.\+forms.\+fields.\+Image\+Field Class Reference}
+\label{classdjango_1_1forms_1_1fields_1_1_image_field}\index{django.forms.fields.ImageField@{django.forms.fields.ImageField}}
+
+
+Inheritance diagram for django.\+forms.\+fields.\+Image\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+fields.\+Image\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_image_field_a57b4a85d4cbb3bdf0018effcb0687de7}{to\+\_\+python}} (self, data)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_image_field_a6c8285b368594ced503816dbb999dd29}{widget\+\_\+attrs}} (self, widget)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_image_field_a2c103d1078848f4e100df9366d51a6ba}\label{classdjango_1_1forms_1_1fields_1_1_image_field_a2c103d1078848f4e100df9366d51a6ba}} 
+list {\bfseries default\+\_\+validators} = \mbox{[}validators.\+validate\+\_\+image\+\_\+file\+\_\+extension\mbox{]}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_image_field_a00a9cc344f264890b75e9b8edabcedee}{default\+\_\+error\+\_\+messages}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_image_field_a57b4a85d4cbb3bdf0018effcb0687de7}\label{classdjango_1_1forms_1_1fields_1_1_image_field_a57b4a85d4cbb3bdf0018effcb0687de7}} 
+\index{django.forms.fields.ImageField@{django.forms.fields.ImageField}!to\_python@{to\_python}}
+\index{to\_python@{to\_python}!django.forms.fields.ImageField@{django.forms.fields.ImageField}}
+\doxysubsubsection{\texorpdfstring{to\_python()}{to\_python()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Image\+Field.\+to\+\_\+python (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check that the file-upload field data contains a valid image (GIF, JPG,
+PNG, etc. -- whatever Pillow supports).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_file_field}{django.\+forms.\+fields.\+File\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_image_field_a6c8285b368594ced503816dbb999dd29}\label{classdjango_1_1forms_1_1fields_1_1_image_field_a6c8285b368594ced503816dbb999dd29}} 
+\index{django.forms.fields.ImageField@{django.forms.fields.ImageField}!widget\_attrs@{widget\_attrs}}
+\index{widget\_attrs@{widget\_attrs}!django.forms.fields.ImageField@{django.forms.fields.ImageField}}
+\doxysubsubsection{\texorpdfstring{widget\_attrs()}{widget\_attrs()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Image\+Field.\+widget\+\_\+attrs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{widget }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a Widget instance (*not* a Widget class), return a dictionary of
+any HTML attributes that should be added to the Widget, based on this
+Field.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field_a67e3285df52f428a6a66c60d973863da}{django.\+forms.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_image_field_a00a9cc344f264890b75e9b8edabcedee}\label{classdjango_1_1forms_1_1fields_1_1_image_field_a00a9cc344f264890b75e9b8edabcedee}} 
+\index{django.forms.fields.ImageField@{django.forms.fields.ImageField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.forms.fields.ImageField@{django.forms.fields.ImageField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+forms.\+fields.\+Image\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid\_image'}: \_(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}Upload a valid image. The file you uploaded was either not an "{}}}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}image or a corrupted image."{}}}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/fields.\+py\end{DoxyCompactItemize}

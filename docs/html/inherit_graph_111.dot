@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1881 [label="json.JSONEncoder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1881 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.contrib.messages.storage.cookie.\lMessageEncoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1messages_1_1storage_1_1cookie_1_1_message_encoder.html",tooltip=" "];
+  Node1881 -> Node1883 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1883 [label="django.core.serializers.json.\lDjangoJSONEncoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1serializers_1_1json_1_1_django_j_s_o_n_encoder.html",tooltip=" "];
+  Node1881 -> Node1884 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1884 [label="rest_framework.utils.encoders.\lJSONEncoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1utils_1_1encoders_1_1_j_s_o_n_encoder.html",tooltip=" "];
+}

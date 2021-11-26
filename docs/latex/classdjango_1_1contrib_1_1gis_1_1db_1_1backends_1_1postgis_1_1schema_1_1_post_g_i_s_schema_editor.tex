@@ -1,0 +1,40 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+schema.\+Post\+GISSchema\+Editor Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor}\index{django.contrib.gis.db.backends.postgis.schema.PostGISSchemaEditor@{django.contrib.gis.db.backends.postgis.schema.PostGISSchemaEditor}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+schema.\+Post\+GISSchema\+Editor\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+schema.\+Post\+GISSchema\+Editor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad97d377f95d10cefeef21ea0b9f3fa12}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad97d377f95d10cefeef21ea0b9f3fa12}} 
+def {\bfseries geo\+\_\+quote\+\_\+name} (self, name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad5682c5fc92aaa40ae5a640ea8775793}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad5682c5fc92aaa40ae5a640ea8775793}} 
+string {\bfseries geom\+\_\+index\+\_\+type} = \textquotesingle{}GIST\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a2885f5da2dc84cedef7cb03de71c6ea4}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a2885f5da2dc84cedef7cb03de71c6ea4}} 
+string {\bfseries geom\+\_\+index\+\_\+ops\+\_\+nd} = \textquotesingle{}GIST\+\_\+\+GEOMETRY\+\_\+\+OPS\+\_\+\+ND\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad1c2635c6c93a1e1baa1f67307d85718}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_ad1c2635c6c93a1e1baa1f67307d85718}} 
+string {\bfseries rast\+\_\+index\+\_\+wrapper} = \textquotesingle{}ST\+\_\+\+Convex\+Hull(\%s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a5150c1f5bcfdb218f56164d3315e27c7}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a5150c1f5bcfdb218f56164d3315e27c7}} 
+string {\bfseries sql\+\_\+alter\+\_\+column\+\_\+to\+\_\+3d} = \char`\"{}ALTER COLUMN \%(column)s TYPE \%(type)s USING ST\+\_\+\+Force3D(\%(column)s)\+::\%(type)s\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a1cadf5d0df3b0691d2a71ae26c40accd}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1schema_1_1_post_g_i_s_schema_editor_a1cadf5d0df3b0691d2a71ae26c40accd}} 
+string {\bfseries sql\+\_\+alter\+\_\+column\+\_\+to\+\_\+2d} = \char`\"{}ALTER COLUMN \%(column)s TYPE \%(type)s USING ST\+\_\+\+Force2D(\%(column)s)\+::\%(type)s\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/backends/postgis/schema.\+py\end{DoxyCompactItemize}

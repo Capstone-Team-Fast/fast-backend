@@ -1,0 +1,71 @@
+\hypertarget{classpsycopg2_1_1sql_1_1_composable}{}\doxysection{psycopg2.\+sql.\+Composable Class Reference}
+\label{classpsycopg2_1_1sql_1_1_composable}\index{psycopg2.sql.Composable@{psycopg2.sql.Composable}}
+
+
+Inheritance diagram for psycopg2.\+sql.\+Composable\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_a2501404830e2abb97996542b5251588a}\label{classpsycopg2_1_1sql_1_1_composable_a2501404830e2abb97996542b5251588a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, wrapped)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_a6e84cf33d4127622caf9f299e71ee23e}\label{classpsycopg2_1_1sql_1_1_composable_a6e84cf33d4127622caf9f299e71ee23e}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composable_a77b13bb7380175e59facce7566dfb5f6}{as\+\_\+string}} (self, context)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_ad2393bf3155d7360afe64c2691625a7b}\label{classpsycopg2_1_1sql_1_1_composable_ad2393bf3155d7360afe64c2691625a7b}} 
+def {\bfseries \+\_\+\+\_\+add\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_aece9c8e7a989fe2315dc330a78df17e0}\label{classpsycopg2_1_1sql_1_1_composable_aece9c8e7a989fe2315dc330a78df17e0}} 
+def {\bfseries \+\_\+\+\_\+mul\+\_\+\+\_\+} (self, n)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_a1a4004bb5fb741e258758660e9251619}\label{classpsycopg2_1_1sql_1_1_composable_a1a4004bb5fb741e258758660e9251619}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_a2ee35fbea8817ed42197d87dd90e4c33}\label{classpsycopg2_1_1sql_1_1_composable_a2ee35fbea8817ed42197d87dd90e4c33}} 
+def {\bfseries \+\_\+\+\_\+ne\+\_\+\+\_\+} (self, other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Abstract base class for objects that can be used to compose an SQL string.
+
+`!Composable` objects can be passed directly to `~cursor.execute()`,
+`~cursor.executemany()`, `~cursor.copy_expert()` in place of the query
+string.
+
+`!Composable` objects can be joined using the ``+`` operator: the result
+will be a `Composed` instance containing the objects joined. The operator
+``*`` is also supported with an integer argument: the result is a
+`!Composed` instance containing the left argument repeated as many times as
+requested.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1sql_1_1_composable_a77b13bb7380175e59facce7566dfb5f6}\label{classpsycopg2_1_1sql_1_1_composable_a77b13bb7380175e59facce7566dfb5f6}} 
+\index{psycopg2.sql.Composable@{psycopg2.sql.Composable}!as\_string@{as\_string}}
+\index{as\_string@{as\_string}!psycopg2.sql.Composable@{psycopg2.sql.Composable}}
+\doxysubsubsection{\texorpdfstring{as\_string()}{as\_string()}}
+{\footnotesize\ttfamily def psycopg2.\+sql.\+Composable.\+as\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string value of the object.
+
+:param context: the context to evaluate the string into.
+:type context: `connection` or `cursor`
+
+The method is automatically invoked by `~cursor.execute()`,
+`~cursor.executemany()`, `~cursor.copy_expert()` if a `!Composable` is
+passed instead of the query string.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_composed_ae17ad2d752673fc7114c300d8b5a3033}{psycopg2.\+sql.\+Composed}}, \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_s_q_l_a8fa701e4315e347a6474279880e9ef4f}{psycopg2.\+sql.\+SQL}}, \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_identifier_a99cb2d0f7c7637319d8a57ad930ad760}{psycopg2.\+sql.\+Identifier}}, \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_literal_a23caf47f221ff47816c305d5cf49054a}{psycopg2.\+sql.\+Literal}}, and \mbox{\hyperlink{classpsycopg2_1_1sql_1_1_placeholder_aa8cdf7140c69e54b68bbdb0c182bf210}{psycopg2.\+sql.\+Placeholder}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/sql.\+py\end{DoxyCompactItemize}

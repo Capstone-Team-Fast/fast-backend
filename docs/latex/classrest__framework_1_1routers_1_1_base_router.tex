@@ -1,0 +1,61 @@
+\hypertarget{classrest__framework_1_1routers_1_1_base_router}{}\doxysection{rest\+\_\+framework.\+routers.\+Base\+Router Class Reference}
+\label{classrest__framework_1_1routers_1_1_base_router}\index{rest\_framework.routers.BaseRouter@{rest\_framework.routers.BaseRouter}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+routers.\+Base\+Router\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_a82af78b96f6c931051731b48a6f26530}\label{classrest__framework_1_1routers_1_1_base_router_a82af78b96f6c931051731b48a6f26530}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_aef55f55ad8ebc448e67580a867923a82}\label{classrest__framework_1_1routers_1_1_base_router_aef55f55ad8ebc448e67580a867923a82}} 
+def {\bfseries register} (self, prefix, viewset, basename=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1routers_1_1_base_router_a798e9efe0c4322d0e761835f3b886c3d}{get\+\_\+default\+\_\+basename}} (self, viewset)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1routers_1_1_base_router_a9065722144fa510f3d4cbce4359e9426}{get\+\_\+urls}} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_a1acb29cc1a670b955d45beec7b4b3b3f}\label{classrest__framework_1_1routers_1_1_base_router_a1acb29cc1a670b955d45beec7b4b3b3f}} 
+def {\bfseries urls} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_aca9f5879f2e3c9317f881c101916899e}\label{classrest__framework_1_1routers_1_1_base_router_aca9f5879f2e3c9317f881c101916899e}} 
+{\bfseries registry}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_a798e9efe0c4322d0e761835f3b886c3d}\label{classrest__framework_1_1routers_1_1_base_router_a798e9efe0c4322d0e761835f3b886c3d}} 
+\index{rest\_framework.routers.BaseRouter@{rest\_framework.routers.BaseRouter}!get\_default\_basename@{get\_default\_basename}}
+\index{get\_default\_basename@{get\_default\_basename}!rest\_framework.routers.BaseRouter@{rest\_framework.routers.BaseRouter}}
+\doxysubsubsection{\texorpdfstring{get\_default\_basename()}{get\_default\_basename()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+routers.\+Base\+Router.\+get\+\_\+default\+\_\+basename (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{viewset }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If `basename` is not specified, attempt to automatically determine
+it from the viewset.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1routers_1_1_simple_router_a0f5d2ebdbaaf41863660ad19096f77a5}{rest\+\_\+framework.\+routers.\+Simple\+Router}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1routers_1_1_base_router_a9065722144fa510f3d4cbce4359e9426}\label{classrest__framework_1_1routers_1_1_base_router_a9065722144fa510f3d4cbce4359e9426}} 
+\index{rest\_framework.routers.BaseRouter@{rest\_framework.routers.BaseRouter}!get\_urls@{get\_urls}}
+\index{get\_urls@{get\_urls}!rest\_framework.routers.BaseRouter@{rest\_framework.routers.BaseRouter}}
+\doxysubsubsection{\texorpdfstring{get\_urls()}{get\_urls()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+routers.\+Base\+Router.\+get\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of URL patterns, given the registered viewsets.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1routers_1_1_simple_router_aa4b53a859fc3d34aa8a876b00ce2489a}{rest\+\_\+framework.\+routers.\+Simple\+Router}}, and \mbox{\hyperlink{classrest__framework_1_1routers_1_1_default_router_a6be2b67be2c197ce68a0983ef392def4}{rest\+\_\+framework.\+routers.\+Default\+Router}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/routers.\+py\end{DoxyCompactItemize}

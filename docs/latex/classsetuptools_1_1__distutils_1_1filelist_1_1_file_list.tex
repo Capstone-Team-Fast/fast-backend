@@ -1,0 +1,119 @@
+\hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list}{}\doxysection{setuptools.\+\_\+distutils.\+filelist.\+File\+List Class Reference}
+\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list}\index{setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a0c88f59650d62464970a15a6ef558594}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a0c88f59650d62464970a15a6ef558594}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, warn=None, \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a103c77716abc8d6da34630a969d4c233}{debug\+\_\+print}}=None)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a0d0864c8fa5b5e82f554a639bfa6ab02}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a0d0864c8fa5b5e82f554a639bfa6ab02}} 
+def {\bfseries set\+\_\+allfiles} (self, allfiles)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_ae50770e059c38abacfd2d4844f5cf3da}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_ae50770e059c38abacfd2d4844f5cf3da}} 
+def {\bfseries findall} (self, dir=os.\+curdir)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a103c77716abc8d6da34630a969d4c233}{debug\+\_\+print}} (self, msg)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_ad959a965cf3f8da9546d718ce7a15d9d}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_ad959a965cf3f8da9546d718ce7a15d9d}} 
+def {\bfseries append} (self, item)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a857522eaf9de6edd66fc3937bf0af493}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a857522eaf9de6edd66fc3937bf0af493}} 
+def {\bfseries extend} (self, items)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a8adcd030f9caf347455b26063b2aebf5}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a8adcd030f9caf347455b26063b2aebf5}} 
+def {\bfseries sort} (self)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a834d31a5a36d8a9db6b760c4c0735e97}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a834d31a5a36d8a9db6b760c4c0735e97}} 
+def {\bfseries remove\+\_\+duplicates} (self)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a9aa34753e0a1f54ab3e31035c1f9afa9}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a9aa34753e0a1f54ab3e31035c1f9afa9}} 
+def {\bfseries process\+\_\+template\+\_\+line} (self, line)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a91dd74782ce2e90e381652cc4b51cf7a}{include\+\_\+pattern}} (self, pattern, anchor=1, prefix=None, is\+\_\+regex=0)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a87ae6b570df4626843c43720164b87d2}{exclude\+\_\+pattern}} (self, pattern, anchor=1, prefix=None, is\+\_\+regex=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a1819dd24956f65d94ba94baea3f548c4}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a1819dd24956f65d94ba94baea3f548c4}} 
+{\bfseries allfiles}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a5ef6a0159293f5a4ce1febf8a41891f0}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a5ef6a0159293f5a4ce1febf8a41891f0}} 
+{\bfseries files}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A list of files built by on exploring the filesystem and filtered by
+applying various patterns to what we find there.
+
+Instance attributes:
+  dir
+    directory from which files will be taken -- only used if
+    'allfiles' not supplied to constructor
+  files
+    list of filenames currently being built/filtered/manipulated
+  allfiles
+    complete list of files under consideration (ie. without any
+    filtering applied)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a103c77716abc8d6da34630a969d4c233}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a103c77716abc8d6da34630a969d4c233}} 
+\index{setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}!debug\_print@{debug\_print}}
+\index{debug\_print@{debug\_print}!setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}}
+\doxysubsubsection{\texorpdfstring{debug\_print()}{debug\_print()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+filelist.\+File\+List.\+debug\+\_\+print (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print 'msg' to stdout if the global DEBUG (taken from the
+DISTUTILS_DEBUG environment variable) flag is true.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a87ae6b570df4626843c43720164b87d2}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a87ae6b570df4626843c43720164b87d2}} 
+\index{setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}!exclude\_pattern@{exclude\_pattern}}
+\index{exclude\_pattern@{exclude\_pattern}!setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}}
+\doxysubsubsection{\texorpdfstring{exclude\_pattern()}{exclude\_pattern()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+filelist.\+File\+List.\+exclude\+\_\+pattern (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pattern,  }\item[{}]{anchor = {\ttfamily 1},  }\item[{}]{prefix = {\ttfamily None},  }\item[{}]{is\+\_\+regex = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove strings (presumably filenames) from 'files' that match
+'pattern'.  Other parameters are the same as for
+'include_pattern()', above.
+The list 'self.files' is modified in place.
+Return True if files are found, False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a91dd74782ce2e90e381652cc4b51cf7a}\label{classsetuptools_1_1__distutils_1_1filelist_1_1_file_list_a91dd74782ce2e90e381652cc4b51cf7a}} 
+\index{setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}!include\_pattern@{include\_pattern}}
+\index{include\_pattern@{include\_pattern}!setuptools.\_distutils.filelist.FileList@{setuptools.\_distutils.filelist.FileList}}
+\doxysubsubsection{\texorpdfstring{include\_pattern()}{include\_pattern()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+filelist.\+File\+List.\+include\+\_\+pattern (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pattern,  }\item[{}]{anchor = {\ttfamily 1},  }\item[{}]{prefix = {\ttfamily None},  }\item[{}]{is\+\_\+regex = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Select strings (presumably filenames) from 'self.files' that
+match 'pattern', a Unix-style wildcard (glob) pattern.  Patterns
+are not quite the same as implemented by the 'fnmatch' module: '*'
+and '?'  match non-special characters, where "special" is platform-
+dependent: slash on Unix; colon, slash, and backslash on
+DOS/Windows; and colon on Mac OS.
+
+If 'anchor' is true (the default), then the pattern match is more
+stringent: "*.py" will match "foo.py" but not "foo/bar.py".  If
+'anchor' is false, both of these will match.
+
+If 'prefix' is supplied, then only filenames starting with 'prefix'
+(itself a pattern) and ending with 'pattern', with anything in between
+them, will match.  'anchor' is ignored in this case.
+
+If 'is_regex' is true, 'anchor' and 'prefix' are ignored, and
+'pattern' is assumed to be either a string containing a regex or a
+regex object -- no translation is done, the regex is just compiled
+and used as-is.
+
+Selected strings will be added to self.files.
+
+Return True if files are found, False otherwise.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/\+\_\+distutils/filelist.\+py\end{DoxyCompactItemize}

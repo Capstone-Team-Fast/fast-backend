@@ -1,0 +1,52 @@
+\hypertarget{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager}{}\doxysection{django.\+contrib.\+sites.\+models.\+Site\+Manager Class Reference}
+\label{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager}\index{django.contrib.sites.models.SiteManager@{django.contrib.sites.models.SiteManager}}
+
+
+Inheritance diagram for django.\+contrib.\+sites.\+models.\+Site\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+sites.\+models.\+Site\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_a58fa6c82961425ad8a8ff7308e0b35f8}{get\+\_\+current}} (self, request=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_add1b963e98668e941563915da7a3c99f}{clear\+\_\+cache}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_af75fb0808afc7e0aee72d64383b65b8e}\label{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_af75fb0808afc7e0aee72d64383b65b8e}} 
+def {\bfseries get\+\_\+by\+\_\+natural\+\_\+key} (self, domain)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_a42eddcf1cf2ab9bbb5808b1c635dedfd}\label{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_a42eddcf1cf2ab9bbb5808b1c635dedfd}} 
+bool {\bfseries use\+\_\+in\+\_\+migrations} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_add1b963e98668e941563915da7a3c99f}\label{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_add1b963e98668e941563915da7a3c99f}} 
+\index{django.contrib.sites.models.SiteManager@{django.contrib.sites.models.SiteManager}!clear\_cache@{clear\_cache}}
+\index{clear\_cache@{clear\_cache}!django.contrib.sites.models.SiteManager@{django.contrib.sites.models.SiteManager}}
+\doxysubsubsection{\texorpdfstring{clear\_cache()}{clear\_cache()}}
+{\footnotesize\ttfamily def django.\+contrib.\+sites.\+models.\+Site\+Manager.\+clear\+\_\+cache (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clear the ``Site`` object cache.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_a58fa6c82961425ad8a8ff7308e0b35f8}\label{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager_a58fa6c82961425ad8a8ff7308e0b35f8}} 
+\index{django.contrib.sites.models.SiteManager@{django.contrib.sites.models.SiteManager}!get\_current@{get\_current}}
+\index{get\_current@{get\_current}!django.contrib.sites.models.SiteManager@{django.contrib.sites.models.SiteManager}}
+\doxysubsubsection{\texorpdfstring{get\_current()}{get\_current()}}
+{\footnotesize\ttfamily def django.\+contrib.\+sites.\+models.\+Site\+Manager.\+get\+\_\+current (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the current Site based on the SITE_ID in the project's settings.
+If SITE_ID isn't defined, return the site with domain matching
+request.get_host(). The ``Site`` object is cached the first time it's
+retrieved from the database.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/sites/models.\+py\end{DoxyCompactItemize}

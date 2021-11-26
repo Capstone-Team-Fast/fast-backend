@@ -1,0 +1,88 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission}{}\doxysection{django.\+contrib.\+auth.\+models.\+Permission Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission}\index{django.contrib.auth.models.Permission@{django.contrib.auth.models.Permission}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+models.\+Permission\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+models.\+Permission\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_adfbb0b3835cfc2877a03a5043e2b6ade}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_adfbb0b3835cfc2877a03a5043e2b6ade}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a220ddcbbc7d9400339d135c8184f82bc}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a220ddcbbc7d9400339d135c8184f82bc}} 
+def {\bfseries natural\+\_\+key} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a20bd0eaa19fedf4f9066a4a981211a1e}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a20bd0eaa19fedf4f9066a4a981211a1e}} 
+{\bfseries name} = models.\+Char\+Field(\+\_\+(\textquotesingle{}name\textquotesingle{}), max\+\_\+length=255)
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_ab4811ccd7fb815b5d7e0062e932a5271}{content\+\_\+type}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a6f17e55ef3127be0dadda161771487b3}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a6f17e55ef3127be0dadda161771487b3}} 
+{\bfseries codename} = models.\+Char\+Field(\+\_\+(\textquotesingle{}codename\textquotesingle{}), max\+\_\+length=100)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a90d50612a6997da5b717d87938e4da38}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_a90d50612a6997da5b717d87938e4da38}} 
+{\bfseries objects} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_manager}{Permission\+Manager}}()
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_adbf6dca9f7db44a38a6e19bfa12cd466}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_adbf6dca9f7db44a38a6e19bfa12cd466}} 
+{\bfseries dependencies}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The permissions system provides a way to assign permissions to specific
+users and groups of users.
+
+The permission system is used by the Django admin site, but may also be
+useful in your own code. The Django admin site uses permissions as follows:
+
+    - The "add" permission limits the user's ability to view the "add" form
+      and add an object.
+    - The "change" permission limits a user's ability to view the change
+      list, view the "change" form and change an object.
+    - The "delete" permission limits the ability to delete an object.
+    - The "view" permission limits the ability to view an object.
+
+Permissions are set globally per type of object, not per specific object
+instance. It is possible to say "Mary may change news stories," but it's
+not currently possible to say "Mary may change news stories, but only the
+ones she created herself" or "Mary may only change news stories that have a
+certain status or publication date."
+
+The permissions listed above are automatically created for each model.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_ab4811ccd7fb815b5d7e0062e932a5271}\label{classdjango_1_1contrib_1_1auth_1_1models_1_1_permission_ab4811ccd7fb815b5d7e0062e932a5271}} 
+\index{django.contrib.auth.models.Permission@{django.contrib.auth.models.Permission}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!django.contrib.auth.models.Permission@{django.contrib.auth.models.Permission}}
+\doxysubsubsection{\texorpdfstring{content\_type}{content\_type}}
+{\footnotesize\ttfamily django.\+contrib.\+auth.\+models.\+Permission.\+content\+\_\+type\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.ForeignKey(}
+\DoxyCodeLine{        ContentType,}
+\DoxyCodeLine{        models.CASCADE,}
+\DoxyCodeLine{        verbose\_name=\_(\textcolor{stringliteral}{'content type'}),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/models.\+py\end{DoxyCompactItemize}

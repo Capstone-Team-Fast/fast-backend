@@ -1,0 +1,40 @@
+\hypertarget{namespaceneomodel_1_1contrib_1_1spatial__properties}{}\doxysection{neomodel.\+contrib.\+spatial\+\_\+properties Namespace Reference}
+\label{namespaceneomodel_1_1contrib_1_1spatial__properties}\index{neomodel.contrib.spatial\_properties@{neomodel.contrib.spatial\_properties}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point}{Neomodel\+Point}}
+\item 
+class \mbox{\hyperlink{classneomodel_1_1contrib_1_1spatial__properties_1_1_point_property}{Point\+Property}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceneomodel_1_1contrib_1_1spatial__properties_a5b9ab97f148c0ae6d30384b80ab5f8f2}\label{namespaceneomodel_1_1contrib_1_1spatial__properties_a5b9ab97f148c0ae6d30384b80ab5f8f2}} 
+list {\bfseries ACCEPTABLE\+\_\+\+CRS} = \mbox{[}\textquotesingle{}cartesian\textquotesingle{}, \textquotesingle{}cartesian-\/3d\textquotesingle{}, \textquotesingle{}wgs-\/84\textquotesingle{}, \textquotesingle{}wgs-\/84-\/3d\textquotesingle{}\mbox{]}
+\item 
+\mbox{\Hypertarget{namespaceneomodel_1_1contrib_1_1spatial__properties_a1c4dce4b4281aed6af97b572b3373635}\label{namespaceneomodel_1_1contrib_1_1spatial__properties_a1c4dce4b4281aed6af97b572b3373635}} 
+dictionary {\bfseries SRID\+\_\+\+TO\+\_\+\+CRS} = \{7203\+: \textquotesingle{}cartesian\textquotesingle{}, 9157\+: \textquotesingle{}cartesian-\/3d\textquotesingle{}, 4326\+: \textquotesingle{}wgs-\/84\textquotesingle{}, 4979\+: \textquotesingle{}wgs-\/84-\/3d\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}    Data types and validators (PointProperty) for working with neo4j's spatial data types through neomodel.
+
+    `spatial_properties` offers two classes: NeomodelPoint, PointProperty that marshal data to and from a neo4j dbms,
+    with the added capability of being Shapely objects. Therefore, points retrieved with Neomodel can readily be used
+    in further geometric (via Shapely) or geospatial (via PySAL) operations.
+
+    * More information on Neo4J's spatial data types:
+        * https://neo4j.com/docs/developer-manual/3.4/cypher/syntax/spatial/
+
+    * More information on the Python driver's data types:
+        * https://neo4j.com/docs/api/python-driver/1.7-preview/types.html#spatial-types
+
+    * More information about Shapely's spatial data types:
+        * http://toblerity.org/shapely/manual.html#geometric-objects
+
+    * More information about PySAL through Shapely:
+        * https://pysal.readthedocs.io/en/latest/users/tutorials/shapely.html
+\end{DoxyVerb}
+ 

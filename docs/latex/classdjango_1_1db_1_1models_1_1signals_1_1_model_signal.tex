@@ -1,0 +1,100 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal}{}\doxysection{django.\+db.\+models.\+signals.\+Model\+Signal Class Reference}
+\label{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal}\index{django.db.models.signals.ModelSignal@{django.db.models.signals.ModelSignal}}
+
+
+Inheritance diagram for django.\+db.\+models.\+signals.\+Model\+Signal\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+signals.\+Model\+Signal\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_abf54fb0b53faee8a34d2e85cebacbd17}{connect}} (self, receiver, sender=None, weak=True, dispatch\+\_\+uid=None, apps=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_acc7c785c7909eeb49446deb75270f94e}{disconnect}} (self, receiver=None, sender=None, dispatch\+\_\+uid=None, apps=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Signal subclass that allows the sender to be lazily specified as a string
+of the `app_label.ModelName` form.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_abf54fb0b53faee8a34d2e85cebacbd17}\label{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_abf54fb0b53faee8a34d2e85cebacbd17}} 
+\index{django.db.models.signals.ModelSignal@{django.db.models.signals.ModelSignal}!connect@{connect}}
+\index{connect@{connect}!django.db.models.signals.ModelSignal@{django.db.models.signals.ModelSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+signals.\+Model\+Signal.\+connect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{receiver,  }\item[{}]{sender = {\ttfamily None},  }\item[{}]{weak = {\ttfamily True},  }\item[{}]{dispatch\+\_\+uid = {\ttfamily None},  }\item[{}]{apps = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Connect receiver to sender for signal.
+
+Arguments:
+
+    receiver
+        A function or an instance method which is to receive signals.
+        Receivers must be hashable objects.
+
+        If weak is True, then receiver must be weak referenceable.
+
+        Receivers must be able to accept keyword arguments.
+
+        If a receiver is connected with a dispatch_uid argument, it
+        will not be added if another receiver was already connected
+        with that dispatch_uid.
+
+    sender
+        The sender to which the receiver should respond. Must either be
+        a Python object, or None to receive events from any sender.
+
+    weak
+        Whether to use weak references to the receiver. By default, the
+        module will attempt to use weak references to the receiver
+        objects. If this parameter is false, then strong references will
+        be used.
+
+    dispatch_uid
+        An identifier used to uniquely identify a particular instance of
+        a receiver. This will usually be a string, though it may be
+        anything hashable.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af13c4c74992404e5e66f4660172c6811}{django.\+dispatch.\+dispatcher.\+Signal}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_acc7c785c7909eeb49446deb75270f94e}\label{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_acc7c785c7909eeb49446deb75270f94e}} 
+\index{django.db.models.signals.ModelSignal@{django.db.models.signals.ModelSignal}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!django.db.models.signals.ModelSignal@{django.db.models.signals.ModelSignal}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+signals.\+Model\+Signal.\+disconnect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{receiver = {\ttfamily None},  }\item[{}]{sender = {\ttfamily None},  }\item[{}]{dispatch\+\_\+uid = {\ttfamily None},  }\item[{}]{apps = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Disconnect receiver from sender for signal.
+
+If weak references are used, disconnect need not be called. The receiver
+will be removed from dispatch automatically.
+
+Arguments:
+
+    receiver
+        The registered receiver to disconnect. May be none if
+        dispatch_uid is specified.
+
+    sender
+        The registered sender to disconnect
+
+    dispatch_uid
+        the unique identifier of the receiver to disconnect
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af2b159ce7e9da0a3fff3501a4c07097a}{django.\+dispatch.\+dispatcher.\+Signal}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/signals.\+py\end{DoxyCompactItemize}

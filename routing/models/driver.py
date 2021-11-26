@@ -94,12 +94,17 @@ class Driver(StructuredNode):
             for location in pair.get_pair():
                 if not self.__route.add(location=location, pair=pair):
                     return False
+
                 cumulative_duration_minutes = math.trunc(self.__route.total_duration)
                 cumulative_duration_seconds = self.__route.total_duration - cumulative_duration_minutes
                 cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
                         and (self.__route.total_demand < self.capacity):
-                    continue
+                    if self.max_delivery:
+                        if len(self.__route) - 1 == self.max_delivery:
+                            return False
+                    else:
+                        continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
                     print(f'\nDriver has met allocated time.')
                 elif self.__route.total_demand == self.capacity:
@@ -112,6 +117,7 @@ class Driver(StructuredNode):
                     print(f'\nRoute is overcapacity.')
                     self.__route.undo()
                     print(f'\nUndid insertion of {location}')
+
             return pair.first.is_assigned and pair.last.is_assigned
         return False
 

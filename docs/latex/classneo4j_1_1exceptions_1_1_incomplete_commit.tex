@@ -1,0 +1,25 @@
+\hypertarget{classneo4j_1_1exceptions_1_1_incomplete_commit}{}\doxysection{neo4j.\+exceptions.\+Incomplete\+Commit Class Reference}
+\label{classneo4j_1_1exceptions_1_1_incomplete_commit}\index{neo4j.exceptions.IncompleteCommit@{neo4j.exceptions.IncompleteCommit}}
+
+
+Inheritance diagram for neo4j.\+exceptions.\+Incomplete\+Commit\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+exceptions.\+Incomplete\+Commit\+:
+% FIG 1
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Raised when the client looses connection while committing a transaction
+
+Raised when a disconnection occurs while still waiting for a commit
+response. For non-idempotent write transactions, this leaves the data
+in an unknown state with regard to whether the transaction completed
+successfully or not.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/exceptions.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{classrest__framework_1_1test_1_1_django_test_adapter}{}\doxysection{rest\+\_\+framework.\+test.\+Django\+Test\+Adapter Class Reference}
+\label{classrest__framework_1_1test_1_1_django_test_adapter}\index{rest\_framework.test.DjangoTestAdapter@{rest\_framework.test.DjangoTestAdapter}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+test.\+Django\+Test\+Adapter\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+test.\+Django\+Test\+Adapter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_a593d1a4fa87e3a5fef4e6b67fe2a03d8}\label{classrest__framework_1_1test_1_1_django_test_adapter_a593d1a4fa87e3a5fef4e6b67fe2a03d8}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1test_1_1_django_test_adapter_aed836640e71581a2e40d334fae6e0a0f}{get\+\_\+environ}} (self, request)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1test_1_1_django_test_adapter_aba6196e041138f7fc6a674001c84ae9e}{send}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_a124742e1582d42a078dcbece84128f27}\label{classrest__framework_1_1test_1_1_django_test_adapter_a124742e1582d42a078dcbece84128f27}} 
+def {\bfseries close} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_a268966b7bf57f9f34fbe043692d6fad9}\label{classrest__framework_1_1test_1_1_django_test_adapter_a268966b7bf57f9f34fbe043692d6fad9}} 
+{\bfseries app}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_a8e26afe0eb4fff967f9351a34607256f}\label{classrest__framework_1_1test_1_1_django_test_adapter_a8e26afe0eb4fff967f9351a34607256f}} 
+{\bfseries factory}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A transport adapter for `requests`, that makes requests via the
+Django WSGI app, rather than making actual HTTP requests over the network.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_aed836640e71581a2e40d334fae6e0a0f}\label{classrest__framework_1_1test_1_1_django_test_adapter_aed836640e71581a2e40d334fae6e0a0f}} 
+\index{rest\_framework.test.DjangoTestAdapter@{rest\_framework.test.DjangoTestAdapter}!get\_environ@{get\_environ}}
+\index{get\_environ@{get\_environ}!rest\_framework.test.DjangoTestAdapter@{rest\_framework.test.DjangoTestAdapter}}
+\doxysubsubsection{\texorpdfstring{get\_environ()}{get\_environ()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+test.\+Django\+Test\+Adapter.\+get\+\_\+environ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a `requests.PreparedRequest` instance, return a WSGI environ dict.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1test_1_1_django_test_adapter_aba6196e041138f7fc6a674001c84ae9e}\label{classrest__framework_1_1test_1_1_django_test_adapter_aba6196e041138f7fc6a674001c84ae9e}} 
+\index{rest\_framework.test.DjangoTestAdapter@{rest\_framework.test.DjangoTestAdapter}!send@{send}}
+\index{send@{send}!rest\_framework.test.DjangoTestAdapter@{rest\_framework.test.DjangoTestAdapter}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+test.\+Django\+Test\+Adapter.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make an outgoing request to the Django WSGI application.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/test.\+py\end{DoxyCompactItemize}

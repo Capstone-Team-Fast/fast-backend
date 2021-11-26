@@ -1,0 +1,52 @@
+\hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema}{}\doxysection{rest\+\_\+framework.\+schemas.\+inspectors.\+Default\+Schema Class Reference}
+\label{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema}\index{rest\_framework.schemas.inspectors.DefaultSchema@{rest\_framework.schemas.inspectors.DefaultSchema}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+schemas.\+inspectors.\+Default\+Schema\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+schemas.\+inspectors.\+Default\+Schema\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema_a26f8829ef619b3ed16d5d459ce795e35}{\+\_\+\+\_\+get\+\_\+\+\_\+}} (self, instance, owner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Allows overriding AutoSchema using DEFAULT_SCHEMA_CLASS setting\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema_a26f8829ef619b3ed16d5d459ce795e35}\label{classrest__framework_1_1schemas_1_1inspectors_1_1_default_schema_a26f8829ef619b3ed16d5d459ce795e35}} 
+\index{rest\_framework.schemas.inspectors.DefaultSchema@{rest\_framework.schemas.inspectors.DefaultSchema}!\_\_get\_\_@{\_\_get\_\_}}
+\index{\_\_get\_\_@{\_\_get\_\_}!rest\_framework.schemas.inspectors.DefaultSchema@{rest\_framework.schemas.inspectors.DefaultSchema}}
+\doxysubsubsection{\texorpdfstring{\_\_get\_\_()}{\_\_get\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+inspectors.\+Default\+Schema.\+\_\+\+\_\+get\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instance,  }\item[{}]{owner }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Enables `ViewInspector` as a Python _Descriptor_.
+
+This is how `view.schema` knows about `view`.
+
+`__get__` is called when the descriptor is accessed on the owner.
+(That will be when view.schema is called in our case.)
+
+`owner` is always the owner class. (An APIView, or subclass for us.)
+`instance` is the view instance or `None` if accessed from the class,
+rather than an instance.
+
+See: https://docs.python.org/3/howto/descriptor.html for info on
+descriptor usage.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector_ac2b15e30feaaf5eb0cd784b22c2063b2}{rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/schemas/inspectors.\+py\end{DoxyCompactItemize}

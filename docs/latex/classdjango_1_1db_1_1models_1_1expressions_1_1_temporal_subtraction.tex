@@ -1,0 +1,79 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction}{}\doxysection{django.\+db.\+models.\+expressions.\+Temporal\+Subtraction Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction}\index{django.db.models.expressions.TemporalSubtraction@{django.db.models.expressions.TemporalSubtraction}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Temporal\+Subtraction\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Temporal\+Subtraction\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a6b7e5f6f82f8f06cda70557084e1b9e8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, lhs, rhs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a9149ddb950a35cfe1b02970f98f3067d}{as\+\_\+sql}} (self, compiler, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_af1b58bb96d70e54578d1697da9978ba0}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_af1b58bb96d70e54578d1697da9978ba0}} 
+{\bfseries output\+\_\+field} = \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_duration_field}{fields.\+Duration\+Field}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a6b7e5f6f82f8f06cda70557084e1b9e8}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a6b7e5f6f82f8f06cda70557084e1b9e8}} 
+\index{django.db.models.expressions.TemporalSubtraction@{django.db.models.expressions.TemporalSubtraction}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.TemporalSubtraction@{django.db.models.expressions.TemporalSubtraction}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Temporal\+Subtraction.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lhs,  }\item[{}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_combined_expression}{django.\+db.\+models.\+expressions.\+Combined\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a9149ddb950a35cfe1b02970f98f3067d}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_temporal_subtraction_a9149ddb950a35cfe1b02970f98f3067d}} 
+\index{django.db.models.expressions.TemporalSubtraction@{django.db.models.expressions.TemporalSubtraction}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.TemporalSubtraction@{django.db.models.expressions.TemporalSubtraction}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Temporal\+Subtraction.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_combined_expression_abd470b13c82cdf3eb12ba8a99fbcc90c}{django.\+db.\+models.\+expressions.\+Combined\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

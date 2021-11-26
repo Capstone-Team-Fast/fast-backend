@@ -1,0 +1,130 @@
+\hypertarget{classrest__framework_1_1fields_1_1_char_field}{}\doxysection{rest\+\_\+framework.\+fields.\+Char\+Field Class Reference}
+\label{classrest__framework_1_1fields_1_1_char_field}\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+fields.\+Char\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+fields.\+Char\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_char_field_a63172d770252ababb574814ec40e5cd2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_char_field_ab43a928e3da72328d193bfa1f3fce2a3}{run\+\_\+validation}} (self, data=\mbox{\hyperlink{classrest__framework_1_1fields_1_1empty}{empty}})
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_char_field_a69b37ffb0431ae5df1fa6a9f5baee815}{to\+\_\+internal\+\_\+value}} (self, data)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1fields_1_1_char_field_ad3388d9d19aae6e6ad24e5ed425afc03}{to\+\_\+representation}} (self, value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_afca0da8e29a2be665f22d056c396c0df}\label{classrest__framework_1_1fields_1_1_char_field_afca0da8e29a2be665f22d056c396c0df}} 
+{\bfseries allow\+\_\+blank}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a49204ea229d09378f63e9d70fee0725c}\label{classrest__framework_1_1fields_1_1_char_field_a49204ea229d09378f63e9d70fee0725c}} 
+{\bfseries trim\+\_\+whitespace}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a18c11026362f9089740e48417d096bd1}\label{classrest__framework_1_1fields_1_1_char_field_a18c11026362f9089740e48417d096bd1}} 
+{\bfseries max\+\_\+length}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a6877621f39010d2448884aea776860b7}\label{classrest__framework_1_1fields_1_1_char_field_a6877621f39010d2448884aea776860b7}} 
+{\bfseries min\+\_\+length}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classrest__framework_1_1fields_1_1_char_field_a49718b68f50039afd2bf50bd2e979989}{default\+\_\+error\+\_\+messages}}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_afb8161100735aac268e9da61904fd3da}\label{classrest__framework_1_1fields_1_1_char_field_afb8161100735aac268e9da61904fd3da}} 
+string {\bfseries initial} = \textquotesingle{}\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a63172d770252ababb574814ec40e5cd2}\label{classrest__framework_1_1fields_1_1_char_field_a63172d770252ababb574814ec40e5cd2}} 
+\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Char\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_ab43a928e3da72328d193bfa1f3fce2a3}\label{classrest__framework_1_1fields_1_1_char_field_ab43a928e3da72328d193bfa1f3fce2a3}} 
+\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}!run\_validation@{run\_validation}}
+\index{run\_validation@{run\_validation}!rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+\doxysubsubsection{\texorpdfstring{run\_validation()}{run\_validation()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Char\+Field.\+run\+\_\+validation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data = {\ttfamily \mbox{\hyperlink{classrest__framework_1_1fields_1_1empty}{empty}}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate a simple representation and return the internal value.
+
+The provided data may be `empty` if no representation was included
+in the input.
+
+May raise `SkipField` if the field should not be included in the
+validated data.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a0d839e2f6f6cabb5a6cdc7c27a03f306}{rest\+\_\+framework.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a69b37ffb0431ae5df1fa6a9f5baee815}\label{classrest__framework_1_1fields_1_1_char_field_a69b37ffb0431ae5df1fa6a9f5baee815}} 
+\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}!to\_internal\_value@{to\_internal\_value}}
+\index{to\_internal\_value@{to\_internal\_value}!rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+\doxysubsubsection{\texorpdfstring{to\_internal\_value()}{to\_internal\_value()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Char\+Field.\+to\+\_\+internal\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform the *incoming* primitive data into a native value.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a3323a8a9f4a831e4146c3796d074993e}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1fields_1_1_i_p_address_field_afedd1869698a569e6c91777552a01200}{rest\+\_\+framework.\+fields.\+IPAddress\+Field}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_ad3388d9d19aae6e6ad24e5ed425afc03}\label{classrest__framework_1_1fields_1_1_char_field_ad3388d9d19aae6e6ad24e5ed425afc03}} 
+\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}!to\_representation@{to\_representation}}
+\index{to\_representation@{to\_representation}!rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+\doxysubsubsection{\texorpdfstring{to\_representation()}{to\_representation()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+fields.\+Char\+Field.\+to\+\_\+representation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform the *outgoing* native value into primitive data.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1fields_1_1_field_a9b7498156716f21647057dd6476f2bda}{rest\+\_\+framework.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1fields_1_1_char_field_a49718b68f50039afd2bf50bd2e979989}\label{classrest__framework_1_1fields_1_1_char_field_a49718b68f50039afd2bf50bd2e979989}} 
+\index{rest\_framework.fields.CharField@{rest\_framework.fields.CharField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!rest\_framework.fields.CharField@{rest\_framework.fields.CharField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary rest\+\_\+framework.\+fields.\+Char\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Not a valid string.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'blank'}: \_(\textcolor{stringliteral}{'This field may not be blank.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'max\_length'}: \_(\textcolor{stringliteral}{'Ensure this field has no more than \{max\_length\} characters.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'min\_length'}: \_(\textcolor{stringliteral}{'Ensure this field has at least \{min\_length\} characters.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/fields.\+py\end{DoxyCompactItemize}

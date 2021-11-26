@@ -1,0 +1,74 @@
+\hypertarget{namespacerest__framework_1_1serializers}{}\doxysection{rest\+\_\+framework.\+serializers Namespace Reference}
+\label{namespacerest__framework_1_1serializers}\index{rest\_framework.serializers@{rest\_framework.serializers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_base_serializer}{Base\+Serializer}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_hyperlinked_model_serializer}{Hyperlinked\+Model\+Serializer}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_list_serializer}{List\+Serializer}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_model_serializer}{Model\+Serializer}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer}{Serializer}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1serializers_1_1_serializer_metaclass}{Serializer\+Metaclass}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1serializers_ab32e17c425ac3f6fb4a3707f2a282e62}\label{namespacerest__framework_1_1serializers_ab32e17c425ac3f6fb4a3707f2a282e62}} 
+def {\bfseries as\+\_\+serializer\+\_\+error} (exc)
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1serializers_a7462624b17c90e69138a2841be161fab}{raise\+\_\+errors\+\_\+on\+\_\+nested\+\_\+writes}} (method\+\_\+name, serializer, validated\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1serializers_a215df100fc0949d340b64ff189958c20}\label{namespacerest__framework_1_1serializers_a215df100fc0949d340b64ff189958c20}} 
+{\bfseries LIST\+\_\+\+SERIALIZER\+\_\+\+KWARGS}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1serializers_a448bb0548e95299b613bd26b133d043e}\label{namespacerest__framework_1_1serializers_a448bb0548e95299b613bd26b133d043e}} 
+{\bfseries ALL\+\_\+\+FIELDS}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Serializers and ModelSerializers are similar to Forms and ModelForms.
+Unlike forms, they are not constrained to dealing with HTML output, and
+form encoded input.
+
+Serialization in REST framework is a two-phase process:
+
+1. Serializers marshal between complex types like model instances, and
+python primitives.
+2. The process of marshalling between python primitives and request and
+response content is handled by parsers and renderers.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1serializers_a7462624b17c90e69138a2841be161fab}\label{namespacerest__framework_1_1serializers_a7462624b17c90e69138a2841be161fab}} 
+\index{rest\_framework.serializers@{rest\_framework.serializers}!raise\_errors\_on\_nested\_writes@{raise\_errors\_on\_nested\_writes}}
+\index{raise\_errors\_on\_nested\_writes@{raise\_errors\_on\_nested\_writes}!rest\_framework.serializers@{rest\_framework.serializers}}
+\doxysubsubsection{\texorpdfstring{raise\_errors\_on\_nested\_writes()}{raise\_errors\_on\_nested\_writes()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+serializers.\+raise\+\_\+errors\+\_\+on\+\_\+nested\+\_\+writes (\begin{DoxyParamCaption}\item[{}]{method\+\_\+name,  }\item[{}]{serializer,  }\item[{}]{validated\+\_\+data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Give explicit errors when users attempt to pass writable nested data.
+
+If we don't do this explicitly they'd get a less helpful error when
+calling `.save()` on the serializer.
+
+We don't *automatically* support these sorts of nested writes because
+there are too many ambiguities to define a default behavior.
+
+Eg. Suppose we have a `UserSerializer` with a nested profile. How should
+we handle the case of an update, where the `profile` relationship does
+not exist? Any of the following might be valid:
+
+* Raise an application error.
+* Silently ignore the nested part of the update.
+* Automatically create a profile instance.
+\end{DoxyVerb}
+ 

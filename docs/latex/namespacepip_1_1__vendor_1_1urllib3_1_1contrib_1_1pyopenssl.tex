@@ -1,0 +1,107 @@
+\hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+contrib.\+pyopenssl Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl}\index{pip.\_vendor.urllib3.contrib.pyopenssl@{pip.\_vendor.urllib3.contrib.pyopenssl}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_1_1_py_open_s_s_l_context}{Py\+Open\+SSLContext}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_1_1_unsupported_extension}{Unsupported\+Extension}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_1_1_wrapped_socket}{Wrapped\+Socket}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a2d09468e8b069804c5b24c0963914bb1}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a2d09468e8b069804c5b24c0963914bb1}} 
+def {\bfseries inject\+\_\+into\+\_\+urllib3} ()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_ada6a8c2f43866a79e3a3fe798be2ce91}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_ada6a8c2f43866a79e3a3fe798be2ce91}} 
+def {\bfseries extract\+\_\+from\+\_\+urllib3} ()
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a52b3ccc3c6845f7cef626166df5c7ead}{get\+\_\+subj\+\_\+alt\+\_\+name}} (peer\+\_\+cert)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a779306356dd2d1d73caa0544aa88823f}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a779306356dd2d1d73caa0544aa88823f}} 
+def {\bfseries makefile} (self, mode, bufsize=-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a6aee13646622346450508d80a243cecd}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a6aee13646622346450508d80a243cecd}} 
+bool {\bfseries HAS\+\_\+\+SNI} = True
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a18c8c1261967c4748c11156cd2e65f61}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a18c8c1261967c4748c11156cd2e65f61}} 
+int {\bfseries SSL\+\_\+\+WRITE\+\_\+\+BLOCKSIZE} = 16384
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_aed7b967ac613dce3d33d0ade4d4d7845}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_aed7b967ac613dce3d33d0ade4d4d7845}} 
+bool {\bfseries orig\+\_\+util\+\_\+\+HAS\+\_\+\+SNI} = util.\+HAS\+\_\+\+SNI
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a5b03545e439f496ef7afbeab7b4653aa}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a5b03545e439f496ef7afbeab7b4653aa}} 
+{\bfseries orig\+\_\+util\+\_\+\+SSLContext} = \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1util_1_1ssl___1_1_s_s_l_context}{util.\+ssl\+\_\+.\+SSLContext}}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a32b1a563572e6b61e68a4ef285bd3769}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a32b1a563572e6b61e68a4ef285bd3769}} 
+{\bfseries log} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a4aa7606b03a4ffd67153cf13157a523d}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a4aa7606b03a4ffd67153cf13157a523d}} 
+{\bfseries makefile} = backport\+\_\+makefile
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}TLS with SNI_-support for Python 2. Follow these instructions if you would
+like to verify TLS certificates in Python 2. Note, the default libraries do
+*not* do certificate checking; you need to do additional work to validate
+certificates yourself.
+
+This needs the following packages installed:
+
+* `pyOpenSSL`_ (tested with 16.0.0)
+* `cryptography`_ (minimum 1.3.4, from pyopenssl)
+* `idna`_ (minimum 2.0, from cryptography)
+
+However, pyopenssl depends on cryptography, which depends on idna, so while we
+use all three directly here we end up having relatively few packages required.
+
+You can install them with the following command:
+
+.. code-block:: bash
+
+    $ python -m pip install pyopenssl cryptography idna
+
+To activate certificate checking, call
+:func:`~urllib3.contrib.pyopenssl.inject_into_urllib3` from your Python code
+before you begin making HTTP requests. This can be done in a ``sitecustomize``
+module, or at any other time before your application begins using ``urllib3``,
+like this:
+
+.. code-block:: python
+
+    try:
+        import urllib3.contrib.pyopenssl
+        urllib3.contrib.pyopenssl.inject_into_urllib3()
+    except ImportError:
+        pass
+
+Now you can use :mod:`urllib3` as you normally would, and it will support SNI
+when the required modules are installed.
+
+Activating this module also has the positive side effect of disabling SSL/TLS
+compression in Python 2 (see `CRIME attack`_).
+
+.. _sni: https://en.wikipedia.org/wiki/Server_Name_Indication
+.. _crime attack: https://en.wikipedia.org/wiki/CRIME_(security_exploit)
+.. _pyopenssl: https://www.pyopenssl.org
+.. _cryptography: https://cryptography.io
+.. _idna: https://github.com/kjd/idna
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a52b3ccc3c6845f7cef626166df5c7ead}\label{namespacepip_1_1__vendor_1_1urllib3_1_1contrib_1_1pyopenssl_a52b3ccc3c6845f7cef626166df5c7ead}} 
+\index{pip.\_vendor.urllib3.contrib.pyopenssl@{pip.\_vendor.urllib3.contrib.pyopenssl}!get\_subj\_alt\_name@{get\_subj\_alt\_name}}
+\index{get\_subj\_alt\_name@{get\_subj\_alt\_name}!pip.\_vendor.urllib3.contrib.pyopenssl@{pip.\_vendor.urllib3.contrib.pyopenssl}}
+\doxysubsubsection{\texorpdfstring{get\_subj\_alt\_name()}{get\_subj\_alt\_name()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+contrib.\+pyopenssl.\+get\+\_\+subj\+\_\+alt\+\_\+name (\begin{DoxyParamCaption}\item[{}]{peer\+\_\+cert }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given an PyOpenSSL certificate, provides all the subject alternative names.
+\end{DoxyVerb}
+ 

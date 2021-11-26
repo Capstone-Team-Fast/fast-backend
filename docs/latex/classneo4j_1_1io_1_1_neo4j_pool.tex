@@ -1,0 +1,264 @@
+\hypertarget{classneo4j_1_1io_1_1_neo4j_pool}{}\doxysection{neo4j.\+io.\+Neo4j\+Pool Class Reference}
+\label{classneo4j_1_1io_1_1_neo4j_pool}\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+
+
+Inheritance diagram for neo4j.\+io.\+Neo4j\+Pool\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+io.\+Neo4j\+Pool\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a62d0548b29c4d11c0bd449ac74a5647d}{open}} (cls, $\ast$addresses, auth, pool\+\_\+config, workspace\+\_\+config, routing\+\_\+context=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a0fe77904cb4039ac916dc01b073ffd12}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, opener, pool\+\_\+config, workspace\+\_\+config, address)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a4d3ba84546edaabf06c025ec64e06e35}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a5435880a2c24558965bc1d8acfc8fcce}\label{classneo4j_1_1io_1_1_neo4j_pool_a5435880a2c24558965bc1d8acfc8fcce}} 
+def {\bfseries first\+\_\+initial\+\_\+routing\+\_\+address} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_ad88ef8a343c67bf238d37310a9792c99}{get\+\_\+default\+\_\+database\+\_\+initial\+\_\+router\+\_\+addresses}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a356ac37cc6e6952cd24e4153ca5a2708}{get\+\_\+default\+\_\+database\+\_\+router\+\_\+addresses}} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a8a73254b7dfbeb4613a873f738357f5e}\label{classneo4j_1_1io_1_1_neo4j_pool_a8a73254b7dfbeb4613a873f738357f5e}} 
+def {\bfseries get\+\_\+routing\+\_\+table\+\_\+for\+\_\+default\+\_\+database} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a687af363e9a4a468c60a195bf610410d}\label{classneo4j_1_1io_1_1_neo4j_pool_a687af363e9a4a468c60a195bf610410d}} 
+def {\bfseries create\+\_\+routing\+\_\+table} (self, database)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_affc9b052cb007524807584be9abfe563}{fetch\+\_\+routing\+\_\+info}} (self, address, database, bookmarks, timeout)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a22468f5a81e684ff5751d32607367209}{fetch\+\_\+routing\+\_\+table}} (self, $\ast$address, timeout, database, bookmarks)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_acf812e0f926fa2429893d160dcd9575d}{update\+\_\+routing\+\_\+table\+\_\+from}} (self, $\ast$routers, database=None, bookmarks=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_ae2c1a9f783f413de676899eb3bb43235}{update\+\_\+routing\+\_\+table}} (self, $\ast$database, bookmarks)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a299c2e001acaf114daae181fe779dd5c}\label{classneo4j_1_1io_1_1_neo4j_pool_a299c2e001acaf114daae181fe779dd5c}} 
+def {\bfseries update\+\_\+connection\+\_\+pool} (self, $\ast$database)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a02426f7388de94e2c41bd9646d600796}{ensure\+\_\+routing\+\_\+table\+\_\+is\+\_\+fresh}} (self, $\ast$access\+\_\+mode, database, bookmarks)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_aec21c298d7a946c6490361cd29263a73}{acquire}} (self, access\+\_\+mode=None, timeout=None, database=None, bookmarks=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_a2cfd316f5736f8701b8fb59f853b3962}{deactivate}} (self, address)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1_neo4j_pool_aef5c609e3176782a1449b0782f0185a5}{on\+\_\+write\+\_\+failure}} (self, address)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a7aa3e7bb99bc1c934bb6079349f241b6}\label{classneo4j_1_1io_1_1_neo4j_pool_a7aa3e7bb99bc1c934bb6079349f241b6}} 
+{\bfseries address}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a5faf95381e3d63524bd02e3e4c3d668a}\label{classneo4j_1_1io_1_1_neo4j_pool_a5faf95381e3d63524bd02e3e4c3d668a}} 
+{\bfseries routing\+\_\+tables}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a2022260e369b1d261213767e6b096f00}\label{classneo4j_1_1io_1_1_neo4j_pool_a2022260e369b1d261213767e6b096f00}} 
+{\bfseries refresh\+\_\+lock}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Connection pool with routing table.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a0fe77904cb4039ac916dc01b073ffd12}\label{classneo4j_1_1io_1_1_neo4j_pool_a0fe77904cb4039ac916dc01b073ffd12}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{opener,  }\item[{}]{pool\+\_\+config,  }\item[{}]{workspace\+\_\+config,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param opener:
+:param pool_config:
+:param workspace_config:
+:param addresses:
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1io_1_1_i_o_pool}{neo4j.\+io.\+IOPool}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a4d3ba84546edaabf06c025ec64e06e35}\label{classneo4j_1_1io_1_1_neo4j_pool_a4d3ba84546edaabf06c025ec64e06e35}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} The representation shows the initial routing addresses.
+
+:return: The representation
+:rtype: str
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_aec21c298d7a946c6490361cd29263a73}\label{classneo4j_1_1io_1_1_neo4j_pool_aec21c298d7a946c6490361cd29263a73}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!acquire@{acquire}}
+\index{acquire@{acquire}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+acquire (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{access\+\_\+mode = {\ttfamily None},  }\item[{}]{timeout = {\ttfamily None},  }\item[{}]{database = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Acquire a connection to a server that can satisfy a set of parameters.
+
+:param access_mode:
+:param timeout:
+:param database:
+:param bookmarks:
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1io_1_1_i_o_pool_a2666c1060873273ec5979be6384c064b}{neo4j.\+io.\+IOPool}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a2cfd316f5736f8701b8fb59f853b3962}\label{classneo4j_1_1io_1_1_neo4j_pool_a2cfd316f5736f8701b8fb59f853b3962}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+deactivate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Deactivate an address from the connection pool,
+if present, remove from the routing table and also closing
+all idle connections to that address.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1io_1_1_i_o_pool_a428e81241bb2f70df6f3b551ba4717f1}{neo4j.\+io.\+IOPool}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a02426f7388de94e2c41bd9646d600796}\label{classneo4j_1_1io_1_1_neo4j_pool_a02426f7388de94e2c41bd9646d600796}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!ensure\_routing\_table\_is\_fresh@{ensure\_routing\_table\_is\_fresh}}
+\index{ensure\_routing\_table\_is\_fresh@{ensure\_routing\_table\_is\_fresh}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{ensure\_routing\_table\_is\_fresh()}{ensure\_routing\_table\_is\_fresh()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+ensure\+\_\+routing\+\_\+table\+\_\+is\+\_\+fresh (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{access\+\_\+mode,  }\item[{}]{database,  }\item[{}]{bookmarks }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Update the routing table if stale.
+
+This method performs two freshness checks, before and after acquiring
+the refresh lock. If the routing table is already fresh on entry, the
+method exits immediately; otherwise, the refresh lock is acquired and
+the second freshness check that follows determines whether an update
+is still required.
+
+This method is thread-safe.
+
+:return: `True` if an update was required, `False` otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_affc9b052cb007524807584be9abfe563}\label{classneo4j_1_1io_1_1_neo4j_pool_affc9b052cb007524807584be9abfe563}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!fetch\_routing\_info@{fetch\_routing\_info}}
+\index{fetch\_routing\_info@{fetch\_routing\_info}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{fetch\_routing\_info()}{fetch\_routing\_info()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+fetch\+\_\+routing\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address,  }\item[{}]{database,  }\item[{}]{bookmarks,  }\item[{}]{timeout }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch raw routing info from a given router address.
+
+:param address: router address
+:param database: the database name to get routing table for
+:param bookmarks: iterable of bookmark values after which the routing
+                  info should be fetched
+:param timeout: connection acquisition timeout in seconds
+
+:return: list of routing records, or None if no connection
+    could be established or if no readers or writers are present
+:raise ServiceUnavailable: if the server does not support
+    routing, or if routing support is broken or outdated
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a22468f5a81e684ff5751d32607367209}\label{classneo4j_1_1io_1_1_neo4j_pool_a22468f5a81e684ff5751d32607367209}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!fetch\_routing\_table@{fetch\_routing\_table}}
+\index{fetch\_routing\_table@{fetch\_routing\_table}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{fetch\_routing\_table()}{fetch\_routing\_table()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+fetch\+\_\+routing\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{address,  }\item[{}]{timeout,  }\item[{}]{database,  }\item[{}]{bookmarks }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch a routing table from a given router address.
+
+:param address: router address
+:param timeout: seconds
+:param database: the database name
+:type: str
+:param bookmarks: bookmarks used when fetching routing table
+
+:return: a new RoutingTable instance or None if the given router is
+         currently unable to provide routing information
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_ad88ef8a343c67bf238d37310a9792c99}\label{classneo4j_1_1io_1_1_neo4j_pool_ad88ef8a343c67bf238d37310a9792c99}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!get\_default\_database\_initial\_router\_addresses@{get\_default\_database\_initial\_router\_addresses}}
+\index{get\_default\_database\_initial\_router\_addresses@{get\_default\_database\_initial\_router\_addresses}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{get\_default\_database\_initial\_router\_addresses()}{get\_default\_database\_initial\_router\_addresses()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+get\+\_\+default\+\_\+database\+\_\+initial\+\_\+router\+\_\+addresses (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Get the initial router addresses for the default database.
+
+:return:
+:rtype: OrderedSet
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a356ac37cc6e6952cd24e4153ca5a2708}\label{classneo4j_1_1io_1_1_neo4j_pool_a356ac37cc6e6952cd24e4153ca5a2708}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!get\_default\_database\_router\_addresses@{get\_default\_database\_router\_addresses}}
+\index{get\_default\_database\_router\_addresses@{get\_default\_database\_router\_addresses}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{get\_default\_database\_router\_addresses()}{get\_default\_database\_router\_addresses()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+get\+\_\+default\+\_\+database\+\_\+router\+\_\+addresses (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Get the router addresses for the default database.
+
+:return:
+:rtype: OrderedSet
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_aef5c609e3176782a1449b0782f0185a5}\label{classneo4j_1_1io_1_1_neo4j_pool_aef5c609e3176782a1449b0782f0185a5}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!on\_write\_failure@{on\_write\_failure}}
+\index{on\_write\_failure@{on\_write\_failure}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{on\_write\_failure()}{on\_write\_failure()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+on\+\_\+write\+\_\+failure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Remove a writer address from the routing table, if present.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1io_1_1_i_o_pool}{neo4j.\+io.\+IOPool}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_a62d0548b29c4d11c0bd449ac74a5647d}\label{classneo4j_1_1io_1_1_neo4j_pool_a62d0548b29c4d11c0bd449ac74a5647d}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!open@{open}}
+\index{open@{open}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+open (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{$\ast$}]{addresses,  }\item[{}]{auth,  }\item[{}]{pool\+\_\+config,  }\item[{}]{workspace\+\_\+config,  }\item[{}]{routing\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a new Neo4jPool
+
+:param addresses: one or more address as positional argument
+:param auth:
+:param pool_config:
+:param workspace_config:
+:param routing_context:
+:return: Neo4jPool
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_ae2c1a9f783f413de676899eb3bb43235}\label{classneo4j_1_1io_1_1_neo4j_pool_ae2c1a9f783f413de676899eb3bb43235}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!update\_routing\_table@{update\_routing\_table}}
+\index{update\_routing\_table@{update\_routing\_table}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{update\_routing\_table()}{update\_routing\_table()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+update\+\_\+routing\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{database,  }\item[{}]{bookmarks }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Update the routing table from the first router able to provide
+valid routing information.
+
+:param database: The database name
+:param bookmarks: bookmarks used when fetching routing table
+
+:raise neo4j.exceptions.ServiceUnavailable:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1_neo4j_pool_acf812e0f926fa2429893d160dcd9575d}\label{classneo4j_1_1io_1_1_neo4j_pool_acf812e0f926fa2429893d160dcd9575d}} 
+\index{neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}!update\_routing\_table\_from@{update\_routing\_table\_from}}
+\index{update\_routing\_table\_from@{update\_routing\_table\_from}!neo4j.io.Neo4jPool@{neo4j.io.Neo4jPool}}
+\doxysubsubsection{\texorpdfstring{update\_routing\_table\_from()}{update\_routing\_table\_from()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+Neo4j\+Pool.\+update\+\_\+routing\+\_\+table\+\_\+from (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{routers,  }\item[{}]{database = {\ttfamily None},  }\item[{}]{bookmarks = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Try to update routing tables with the given routers.
+
+:return: True if the routing table is successfully updated,
+otherwise False
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/io/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

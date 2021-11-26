@@ -1,0 +1,38 @@
+\hypertarget{classsqlparse_1_1lexer_1_1_lexer}{}\doxysection{sqlparse.\+lexer.\+Lexer Class Reference}
+\label{classsqlparse_1_1lexer_1_1_lexer}\index{sqlparse.lexer.Lexer@{sqlparse.lexer.Lexer}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsqlparse_1_1lexer_1_1_lexer_af5f85d52ce1a74e03e387dca21a1f1f4}{get\+\_\+tokens}} (text, encoding=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Lexer
+Empty class. Leaving for backwards-compatibility
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsqlparse_1_1lexer_1_1_lexer_af5f85d52ce1a74e03e387dca21a1f1f4}\label{classsqlparse_1_1lexer_1_1_lexer_af5f85d52ce1a74e03e387dca21a1f1f4}} 
+\index{sqlparse.lexer.Lexer@{sqlparse.lexer.Lexer}!get\_tokens@{get\_tokens}}
+\index{get\_tokens@{get\_tokens}!sqlparse.lexer.Lexer@{sqlparse.lexer.Lexer}}
+\doxysubsubsection{\texorpdfstring{get\_tokens()}{get\_tokens()}}
+{\footnotesize\ttfamily def sqlparse.\+lexer.\+Lexer.\+get\+\_\+tokens (\begin{DoxyParamCaption}\item[{}]{text,  }\item[{}]{encoding = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Return an iterable of (tokentype, value) pairs generated from
+`text`. If `unfiltered` is set to `True`, the filtering mechanism
+is bypassed even if filters are defined.
+
+Also preprocess the text, i.e. expand tabs and strip it if
+wanted and applies registered filters.
+
+Split ``text`` into (tokentype, text) pairs.
+
+``stack`` is the initial stack (default: ``['root']``)
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/sqlparse/lexer.\+py\end{DoxyCompactItemize}

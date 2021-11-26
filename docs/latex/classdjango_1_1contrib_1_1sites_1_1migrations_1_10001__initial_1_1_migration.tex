@@ -1,0 +1,58 @@
+\hypertarget{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration}{}\doxysection{django.\+contrib.\+sites.\+migrations.0001\+\_\+initial.\+Migration Class Reference}
+\label{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration}\index{django.contrib.sites.migrations.0001\_initial.Migration@{django.contrib.sites.migrations.0001\_initial.Migration}}
+
+
+Inheritance diagram for django.\+contrib.\+sites.\+migrations.0001\+\_\+initial.\+Migration\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+sites.\+migrations.0001\+\_\+initial.\+Migration\+:
+% FIG 1
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration_ac9baeda659f3f8f3444aa87cabd75a15}\label{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration_ac9baeda659f3f8f3444aa87cabd75a15}} 
+list {\bfseries dependencies} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration_a0b3c84be599ca4fc02c021ef9d32b8cb}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration_a0b3c84be599ca4fc02c021ef9d32b8cb}\label{classdjango_1_1contrib_1_1sites_1_1migrations_1_10001__initial_1_1_migration_a0b3c84be599ca4fc02c021ef9d32b8cb}} 
+\index{django.contrib.sites.migrations.0001\_initial.Migration@{django.contrib.sites.migrations.0001\_initial.Migration}!operations@{operations}}
+\index{operations@{operations}!django.contrib.sites.migrations.0001\_initial.Migration@{django.contrib.sites.migrations.0001\_initial.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list django.\+contrib.\+sites.\+migrations.\+0001\+\_\+initial.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        migrations.CreateModel(}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'Site'},}
+\DoxyCodeLine{            fields=[}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'id'}, models.AutoField(verbose\_name=\textcolor{stringliteral}{'ID'}, serialize=\textcolor{keyword}{False}, auto\_created=\textcolor{keyword}{True}, primary\_key=\textcolor{keyword}{True})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'domain'}, models.CharField(}
+\DoxyCodeLine{                    max\_length=100, verbose\_name=\textcolor{stringliteral}{'domain name'}, validators=[\_simple\_domain\_name\_validator]}
+\DoxyCodeLine{                )),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'name'}, models.CharField(max\_length=50, verbose\_name=\textcolor{stringliteral}{'display name'})),}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{            options=\{}
+\DoxyCodeLine{                \textcolor{stringliteral}{'ordering'}: [\textcolor{stringliteral}{'domain'}],}
+\DoxyCodeLine{                \textcolor{stringliteral}{'db\_table'}: \textcolor{stringliteral}{'django\_site'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'verbose\_name'}: \textcolor{stringliteral}{'site'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'verbose\_name\_plural'}: \textcolor{stringliteral}{'sites'},}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            bases=(models.Model,),}
+\DoxyCodeLine{            managers=[}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'objects'}, \mbox{\hyperlink{classdjango_1_1contrib_1_1sites_1_1models_1_1_site_manager}{django.contrib.sites.models.SiteManager}}()),}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/sites/migrations/0001\+\_\+initial.\+py\end{DoxyCompactItemize}

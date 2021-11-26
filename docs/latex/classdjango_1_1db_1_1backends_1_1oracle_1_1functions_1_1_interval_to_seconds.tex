@@ -1,0 +1,61 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds}{}\doxysection{django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds}\index{django.db.backends.oracle.functions.IntervalToSeconds@{django.db.backends.oracle.functions.IntervalToSeconds}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_a10411f71fdb6c1da6ee6c8bb60e7c504}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expression, $\ast$output\+\_\+field=None, $\ast$$\ast$extra)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_a6fc849a6b7de986051da513e32300601}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_a6fc849a6b7de986051da513e32300601}} 
+string {\bfseries function} = \textquotesingle{}\textquotesingle{}
+\item 
+string \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_af9362a6cd1d3fa0a2f082f9a7993b8f4}{template}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_a10411f71fdb6c1da6ee6c8bb60e7c504}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_a10411f71fdb6c1da6ee6c8bb60e7c504}} 
+\index{django.db.backends.oracle.functions.IntervalToSeconds@{django.db.backends.oracle.functions.IntervalToSeconds}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.backends.oracle.functions.IntervalToSeconds@{django.db.backends.oracle.functions.IntervalToSeconds}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression,  }\item[{$\ast$}]{output\+\_\+field = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_af9362a6cd1d3fa0a2f082f9a7993b8f4}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds_af9362a6cd1d3fa0a2f082f9a7993b8f4}} 
+\index{django.db.backends.oracle.functions.IntervalToSeconds@{django.db.backends.oracle.functions.IntervalToSeconds}!template@{template}}
+\index{template@{template}!django.db.backends.oracle.functions.IntervalToSeconds@{django.db.backends.oracle.functions.IntervalToSeconds}}
+\doxysubsubsection{\texorpdfstring{template}{template}}
+{\footnotesize\ttfamily string django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds.\+template\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{    EXTRACT(day }\textcolor{keyword}{from} \%(expressions)s) * 86400 +}
+\DoxyCodeLine{    EXTRACT(hour \textcolor{keyword}{from} \%(expressions)s) * 3600 +}
+\DoxyCodeLine{    EXTRACT(minute \textcolor{keyword}{from} \%(expressions)s) * 60 +}
+\DoxyCodeLine{    EXTRACT(second \textcolor{keyword}{from} \%(expressions)s)}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}"{}"{}}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/oracle/functions.\+py\end{DoxyCompactItemize}

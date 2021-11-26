@@ -1,0 +1,113 @@
+\hypertarget{classneo4j_1_1_bolt_driver}{}\doxysection{neo4j.\+Bolt\+Driver Class Reference}
+\label{classneo4j_1_1_bolt_driver}\index{neo4j.BoltDriver@{neo4j.BoltDriver}}
+
+
+Inheritance diagram for neo4j.\+Bolt\+Driver\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+Bolt\+Driver\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a1fd76f414383fbfed8f476e30286b070}{open}} (cls, target, $\ast$auth=None, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a91c9f09c01f70ebbfff904043c4f320e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, pool, default\+\_\+workspace\+\_\+config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a234f51525e378d2b75a7c0ca26d6ffa8}{session}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a41798ec0200ce6a3deeb1783504f3409}{pipeline}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a8811e9e5368dca15c99b2343fa47e65d}{verify\+\_\+connectivity}} (self, $\ast$$\ast$config)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A :class:`.BoltDriver` is created from a ``bolt`` URI and addresses
+a single database machine. This may be a standalone server or could be a
+specific member of a cluster.
+
+Connections established by a :class:`.BoltDriver` are always made to the
+exact host and port detailed in the URI.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneo4j_1_1_bolt_driver_a91c9f09c01f70ebbfff904043c4f320e}\label{classneo4j_1_1_bolt_driver_a91c9f09c01f70ebbfff904043c4f320e}} 
+\index{neo4j.BoltDriver@{neo4j.BoltDriver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neo4j.BoltDriver@{neo4j.BoltDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+Bolt\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pool,  }\item[{}]{default\+\_\+workspace\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_direct}{neo4j.\+Direct}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1_bolt_driver_a1fd76f414383fbfed8f476e30286b070}\label{classneo4j_1_1_bolt_driver_a1fd76f414383fbfed8f476e30286b070}} 
+\index{neo4j.BoltDriver@{neo4j.BoltDriver}!open@{open}}
+\index{open@{open}!neo4j.BoltDriver@{neo4j.BoltDriver}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def neo4j.\+Bolt\+Driver.\+open (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{target,  }\item[{$\ast$}]{auth = {\ttfamily None},  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param target:
+:param auth:
+:param config: The values that can be specified are found in :class: `neo4j.PoolConfig` and :class: `neo4j.WorkspaceConfig`
+
+:return:
+:rtype: :class: `neo4j.BoltDriver`
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1_bolt_driver_a41798ec0200ce6a3deeb1783504f3409}\label{classneo4j_1_1_bolt_driver_a41798ec0200ce6a3deeb1783504f3409}} 
+\index{neo4j.BoltDriver@{neo4j.BoltDriver}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!neo4j.BoltDriver@{neo4j.BoltDriver}}
+\doxysubsubsection{\texorpdfstring{pipeline()}{pipeline()}}
+{\footnotesize\ttfamily def neo4j.\+Bolt\+Driver.\+pipeline (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Create a pipeline.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_a3a0176f0015c7debcbb0de531164f738}{neo4j.\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_bolt_driver_a234f51525e378d2b75a7c0ca26d6ffa8}\label{classneo4j_1_1_bolt_driver_a234f51525e378d2b75a7c0ca26d6ffa8}} 
+\index{neo4j.BoltDriver@{neo4j.BoltDriver}!session@{session}}
+\index{session@{session}!neo4j.BoltDriver@{neo4j.BoltDriver}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily def neo4j.\+Bolt\+Driver.\+session (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param config: The values that can be specified are found in :class: `neo4j.SessionConfig`
+
+:return:
+:rtype: :class: `neo4j.Session`
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_ae260b432170f65edaf3f6854af2fa6ee}{neo4j.\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_bolt_driver_a8811e9e5368dca15c99b2343fa47e65d}\label{classneo4j_1_1_bolt_driver_a8811e9e5368dca15c99b2343fa47e65d}} 
+\index{neo4j.BoltDriver@{neo4j.BoltDriver}!verify\_connectivity@{verify\_connectivity}}
+\index{verify\_connectivity@{verify\_connectivity}!neo4j.BoltDriver@{neo4j.BoltDriver}}
+\doxysubsubsection{\texorpdfstring{verify\_connectivity()}{verify\_connectivity()}}
+{\footnotesize\ttfamily def neo4j.\+Bolt\+Driver.\+verify\+\_\+connectivity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} This verifies if the driver can connect to a remote server or a cluster
+by establishing a network connection with the remote and possibly exchanging
+a few data before closing the connection. It throws exception if fails to connect.
+
+Use the exception to further understand the cause of the connectivity problem.
+
+Note: Even if this method throws an exception, the driver still need to be closed via close() to free up all resources.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_abe1d9e1c75334c7a5d67697005a0889f}{neo4j.\+Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

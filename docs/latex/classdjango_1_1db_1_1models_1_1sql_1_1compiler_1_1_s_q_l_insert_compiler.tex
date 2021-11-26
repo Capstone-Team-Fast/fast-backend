@@ -1,0 +1,127 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler}{}\doxysection{django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler Class Reference}
+\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler}\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+
+
+Inheritance diagram for django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_aacfbda3cb6cf587e98576326803a60a0}{field\+\_\+as\+\_\+sql}} (self, field, val)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a0d7a9343da813fc48b24d9baa8087eb8}{prepare\+\_\+value}} (self, field, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a1fc84771ed07cd3ec7c5b9dcdd91da95}{pre\+\_\+save\+\_\+val}} (self, field, obj)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a6988070a689b19fed62f76340ab2a87b}{assemble\+\_\+as\+\_\+sql}} (self, fields, value\+\_\+rows)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a92320ecb15d1379bcc9ef1cf41de5fd5}{as\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a2ebda5346b92962b6ac5ca8234bfeb42}{execute\+\_\+sql}} (self, returning\+\_\+fields=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a33fe70a65ead0fcf84ee8133a88ee5ed}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a33fe70a65ead0fcf84ee8133a88ee5ed}} 
+{\bfseries returning\+\_\+fields} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_ad375ea20146371aa1f596807fc3c5ffa}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_ad375ea20146371aa1f596807fc3c5ffa}} 
+{\bfseries returning\+\_\+params} = tuple()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a92320ecb15d1379bcc9ef1cf41de5fd5}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a92320ecb15d1379bcc9ef1cf41de5fd5}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create the SQL for this query. Return the SQL string and list of
+parameters.
+
+If 'with_limits' is False, any limit/offset information is not included
+in the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_compiler_aaf2893416f62d6ad2ea27d4786d65d32}{django.\+db.\+models.\+sql.\+compiler.\+SQLCompiler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a6988070a689b19fed62f76340ab2a87b}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a6988070a689b19fed62f76340ab2a87b}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!assemble\_as\_sql@{assemble\_as\_sql}}
+\index{assemble\_as\_sql@{assemble\_as\_sql}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{assemble\_as\_sql()}{assemble\_as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+assemble\+\_\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields,  }\item[{}]{value\+\_\+rows }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a sequence of N fields and a sequence of M rows of values, and
+generate placeholder SQL and parameters for each field and value.
+Return a pair containing:
+ * a sequence of M rows of N SQL placeholder strings, and
+ * a sequence of M rows of corresponding parameter values.
+
+Each placeholder string may contain any number of '%s' interpolation
+strings, and each parameter row will contain exactly as many params
+as the total number of '%s's in the corresponding placeholder row.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a2ebda5346b92962b6ac5ca8234bfeb42}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a2ebda5346b92962b6ac5ca8234bfeb42}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!execute\_sql@{execute\_sql}}
+\index{execute\_sql@{execute\_sql}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{execute\_sql()}{execute\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+execute\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{result\+\_\+type = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the query against the database and return the result(s). The
+return value is a single data item if result_type is SINGLE, or an
+iterator over the results if the result_type is MULTI.
+
+result_type is either MULTI (use fetchmany() to retrieve all rows),
+SINGLE (only retrieve a single row), or None. In this last case, the
+cursor is returned if any query is executed, since it's used by
+subclasses such as InsertQuery). It's possible, however, that no query
+is needed, as the filters describe an empty set. In that case, None is
+returned, to avoid any unnecessary database interaction.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_compiler_a2547088c51124a0d09620d04cf56b050}{django.\+db.\+models.\+sql.\+compiler.\+SQLCompiler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_aacfbda3cb6cf587e98576326803a60a0}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_aacfbda3cb6cf587e98576326803a60a0}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!field\_as\_sql@{field\_as\_sql}}
+\index{field\_as\_sql@{field\_as\_sql}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{field\_as\_sql()}{field\_as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+field\+\_\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a field and a value intended to be saved on that field, and
+return placeholder SQL and accompanying params. Check for raw values,
+expressions, and fields with get_placeholder() defined in that order.
+
+When field is None, consider the value raw and use it as the
+placeholder, with no corresponding parameters returned.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a1fc84771ed07cd3ec7c5b9dcdd91da95}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a1fc84771ed07cd3ec7c5b9dcdd91da95}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!pre\_save\_val@{pre\_save\_val}}
+\index{pre\_save\_val@{pre\_save\_val}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{pre\_save\_val()}{pre\_save\_val()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+pre\+\_\+save\+\_\+val (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the given field's value off the given obj. pre_save() is used for
+things like auto_now on DateTimeField. Skip it if this is a raw query.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a0d7a9343da813fc48b24d9baa8087eb8}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_insert_compiler_a0d7a9343da813fc48b24d9baa8087eb8}} 
+\index{django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}!prepare\_value@{prepare\_value}}
+\index{prepare\_value@{prepare\_value}!django.db.models.sql.compiler.SQLInsertCompiler@{django.db.models.sql.compiler.SQLInsertCompiler}}
+\doxysubsubsection{\texorpdfstring{prepare\_value()}{prepare\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLInsert\+Compiler.\+prepare\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare a value to be used in a query by resolving it if it is an
+expression and otherwise calling the field's get_db_prep_save().
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/sql/compiler.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping}{}\doxysection{django.\+utils.\+datastructures.\+Case\+Insensitive\+Mapping Class Reference}
+\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping}\index{django.utils.datastructures.CaseInsensitiveMapping@{django.utils.datastructures.CaseInsensitiveMapping}}
+
+
+Inheritance diagram for django.\+utils.\+datastructures.\+Case\+Insensitive\+Mapping\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+utils.\+datastructures.\+Case\+Insensitive\+Mapping\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_aebe9e297344e05ce1b8f1dcde9f12bf2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, data)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a6cd8bb178be211e6d9e295beb81ad666}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, key)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a693ee51b5be3e33e64a5217d926cf314}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a693ee51b5be3e33e64a5217d926cf314}} 
+def {\bfseries \+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_ae6a63cdfef4a79d8220afc708213e840}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_ae6a63cdfef4a79d8220afc708213e840}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a1ee934d5357f9536dae5d59580d460fd}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a1ee934d5357f9536dae5d59580d460fd}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a738290100936bf0de9cfadd518172c9d}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a738290100936bf0de9cfadd518172c9d}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a4d2b3c5a2b46d9c9345350692654d1ba}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a4d2b3c5a2b46d9c9345350692654d1ba}} 
+def {\bfseries copy} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Mapping allowing case-insensitive key lookups. Original case of keys is
+preserved for iteration and string representation.
+
+Example::
+
+    >>> ci_map = CaseInsensitiveMapping({'name': 'Jane'})
+    >>> ci_map['Name']
+    Jane
+    >>> ci_map['NAME']
+    Jane
+    >>> ci_map['name']
+    Jane
+    >>> ci_map  # original case preserved
+    {'name': 'Jane'}
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_aebe9e297344e05ce1b8f1dcde9f12bf2}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_aebe9e297344e05ce1b8f1dcde9f12bf2}} 
+\index{django.utils.datastructures.CaseInsensitiveMapping@{django.utils.datastructures.CaseInsensitiveMapping}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.utils.datastructures.CaseInsensitiveMapping@{django.utils.datastructures.CaseInsensitiveMapping}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+datastructures.\+Case\+Insensitive\+Mapping.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1http_1_1response_1_1_response_headers_add95495623bad6e32af24b94f3c61213}{django.\+http.\+response.\+Response\+Headers}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a6cd8bb178be211e6d9e295beb81ad666}\label{classdjango_1_1utils_1_1datastructures_1_1_case_insensitive_mapping_a6cd8bb178be211e6d9e295beb81ad666}} 
+\index{django.utils.datastructures.CaseInsensitiveMapping@{django.utils.datastructures.CaseInsensitiveMapping}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!django.utils.datastructures.CaseInsensitiveMapping@{django.utils.datastructures.CaseInsensitiveMapping}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+datastructures.\+Case\+Insensitive\+Mapping.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1http_1_1request_1_1_http_headers_ae4d171ad91586c37d05e84fdceb3736a}{django.\+http.\+request.\+Http\+Headers}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/datastructures.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data}{}\doxysection{django.\+test.\+testcases.\+Test\+Data Class Reference}
+\label{classdjango_1_1test_1_1testcases_1_1_test_data}\index{django.test.testcases.TestData@{django.test.testcases.TestData}}
+
+
+Collaboration diagram for django.\+test.\+testcases.\+Test\+Data\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_ac2c3c6cc0a9886f735e2e3ee084b0cd1}\label{classdjango_1_1test_1_1testcases_1_1_test_data_ac2c3c6cc0a9886f735e2e3ee084b0cd1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, name, data)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_a6535c4c5e970a577a01853788591dbec}\label{classdjango_1_1test_1_1testcases_1_1_test_data_a6535c4c5e970a577a01853788591dbec}} 
+def {\bfseries get\+\_\+memo} (self, testcase)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_aab83caaa395898c34044e4a72db62243}\label{classdjango_1_1test_1_1testcases_1_1_test_data_aab83caaa395898c34044e4a72db62243}} 
+def {\bfseries \+\_\+\+\_\+get\+\_\+\+\_\+} (self, instance, owner)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_a093f0c927f634b4a7b81b0c26f3fea5c}\label{classdjango_1_1test_1_1testcases_1_1_test_data_a093f0c927f634b4a7b81b0c26f3fea5c}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_a8b9bda2c09a39066e26e258991e5450d}\label{classdjango_1_1test_1_1testcases_1_1_test_data_a8b9bda2c09a39066e26e258991e5450d}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_a16796ddcfb6df3a92160df3cd9188731}\label{classdjango_1_1test_1_1testcases_1_1_test_data_a16796ddcfb6df3a92160df3cd9188731}} 
+{\bfseries data}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_test_data_adbde511f839c499fda215347244dd039}\label{classdjango_1_1test_1_1testcases_1_1_test_data_adbde511f839c499fda215347244dd039}} 
+string {\bfseries memo\+\_\+attr} = \textquotesingle{}\+\_\+testdata\+\_\+memo\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Descriptor to provide TestCase instance isolation for attributes assigned
+during the setUpTestData() phase.
+
+Allow safe alteration of objects assigned in setUpTestData() by test
+methods by exposing deep copies instead of the original objects.
+
+Objects are deep copied using a memo kept on the test case instance in
+order to maintain their original relationships.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/testcases.\+py\end{DoxyCompactItemize}

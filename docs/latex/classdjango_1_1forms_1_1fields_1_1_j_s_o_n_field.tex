@@ -1,0 +1,126 @@
+\hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field}{}\doxysection{django.\+forms.\+fields.\+JSONField Class Reference}
+\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field}\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+
+
+Inheritance diagram for django.\+forms.\+fields.\+JSONField\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+fields.\+JSONField\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a705f51ea2a9d41861ead77a29f3017a4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, encoder=None, decoder=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a63a6e275391df1c095f8d9ce27876ee4}{to\+\_\+python}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a23b80ba98f9a2319dab9b0f34046270a}{bound\+\_\+data}} (self, data, initial)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_ae27e911a3130e9b69365388355427fe1}{prepare\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a5c3d9d30d010a9ff56da75c65c6e67ae}{has\+\_\+changed}} (self, initial, data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a7aa0297e5e7bfdced0a1ba01582e8d30}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a7aa0297e5e7bfdced0a1ba01582e8d30}} 
+{\bfseries encoder}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_aee9816cbe235a5eb2f535b29ae488373}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_aee9816cbe235a5eb2f535b29ae488373}} 
+{\bfseries decoder}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a4dcea20ba9fd2db763957b59273929ab}{default\+\_\+error\+\_\+messages}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a4716390308a78c89e566425931bc5e43}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a4716390308a78c89e566425931bc5e43}} 
+{\bfseries widget} = \mbox{\hyperlink{classdjango_1_1forms_1_1widgets_1_1_textarea}{Textarea}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a705f51ea2a9d41861ead77a29f3017a4}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a705f51ea2a9d41861ead77a29f3017a4}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+JSONField.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{encoder = {\ttfamily None},  }\item[{}]{decoder = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_char_field}{django.\+forms.\+fields.\+Char\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a23b80ba98f9a2319dab9b0f34046270a}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a23b80ba98f9a2319dab9b0f34046270a}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!bound\_data@{bound\_data}}
+\index{bound\_data@{bound\_data}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{bound\_data()}{bound\_data()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+JSONField.\+bound\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{initial }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value that should be shown for this field on render of a
+bound form, given the submitted POST data for the field and the initial
+data, if any.
+
+For most fields, this will simply be data; FileFields need to handle it
+a bit differently.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field_a54cb292fe1dc08f9ccae4c306a83b9d5}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a5c3d9d30d010a9ff56da75c65c6e67ae}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a5c3d9d30d010a9ff56da75c65c6e67ae}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!has\_changed@{has\_changed}}
+\index{has\_changed@{has\_changed}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{has\_changed()}{has\_changed()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+JSONField.\+has\+\_\+changed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{initial,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if data differs from initial.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field_a9192474a05440bb16801552d4a348a73}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_ae27e911a3130e9b69365388355427fe1}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_ae27e911a3130e9b69365388355427fe1}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!prepare\_value@{prepare\_value}}
+\index{prepare\_value@{prepare\_value}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{prepare\_value()}{prepare\_value()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+JSONField.\+prepare\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a63a6e275391df1c095f8d9ce27876ee4}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a63a6e275391df1c095f8d9ce27876ee4}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!to\_python@{to\_python}}
+\index{to\_python@{to\_python}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{to\_python()}{to\_python()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+JSONField.\+to\+\_\+python (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a string.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_char_field_afad0a691112d05632ca66ce9595c3d28}{django.\+forms.\+fields.\+Char\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a4dcea20ba9fd2db763957b59273929ab}\label{classdjango_1_1forms_1_1fields_1_1_j_s_o_n_field_a4dcea20ba9fd2db763957b59273929ab}} 
+\index{django.forms.fields.JSONField@{django.forms.fields.JSONField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.forms.fields.JSONField@{django.forms.fields.JSONField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+forms.\+fields.\+JSONField.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Enter a valid JSON.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/fields.\+py\end{DoxyCompactItemize}

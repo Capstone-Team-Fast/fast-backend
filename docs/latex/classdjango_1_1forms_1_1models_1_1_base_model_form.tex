@@ -1,0 +1,99 @@
+\hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form}{}\doxysection{django.\+forms.\+models.\+Base\+Model\+Form Class Reference}
+\label{classdjango_1_1forms_1_1models_1_1_base_model_form}\index{django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}}
+
+
+Inheritance diagram for django.\+forms.\+models.\+Base\+Model\+Form\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+models.\+Base\+Model\+Form\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form_a14cf4b345a50823ea3f15f4626a11513}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, data=None, files=None, auto\+\_\+id=\textquotesingle{}id\+\_\+\%s\textquotesingle{}, prefix=None, initial=None, error\+\_\+class=\mbox{\hyperlink{classdjango_1_1forms_1_1utils_1_1_error_list}{Error\+List}}, label\+\_\+suffix=None, empty\+\_\+permitted=False, instance=None, use\+\_\+required\+\_\+attribute=None, renderer=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form_abbcddac6d29c87ce3f49fba983f5df0a}{clean}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form_ace6b09d164ae2356ee898d5d10207a51}{validate\+\_\+unique}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1models_1_1_base_model_form_ad74859e0ce221da998f157156a4c3450}{save}} (self, commit=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_ace32d4b64068b7549ef20d22545265df}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_ace32d4b64068b7549ef20d22545265df}} 
+{\bfseries instance}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_a35a58cd046eed1bdfcb56076b641e9c5}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_a35a58cd046eed1bdfcb56076b641e9c5}} 
+{\bfseries save\+\_\+m2m}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_af5e019231caff7bfada3e0ad2f12cc0f}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_af5e019231caff7bfada3e0ad2f12cc0f}} 
+{\bfseries alters\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_a14cf4b345a50823ea3f15f4626a11513}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_a14cf4b345a50823ea3f15f4626a11513}} 
+\index{django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+models.\+Base\+Model\+Form.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{files = {\ttfamily None},  }\item[{}]{auto\+\_\+id = {\ttfamily \textquotesingle{}id\+\_\+\%s\textquotesingle{}},  }\item[{}]{prefix = {\ttfamily None},  }\item[{}]{initial = {\ttfamily None},  }\item[{}]{error\+\_\+class = {\ttfamily \mbox{\hyperlink{classdjango_1_1forms_1_1utils_1_1_error_list}{Error\+List}}},  }\item[{}]{label\+\_\+suffix = {\ttfamily None},  }\item[{}]{empty\+\_\+permitted = {\ttfamily False},  }\item[{}]{instance = {\ttfamily None},  }\item[{}]{use\+\_\+required\+\_\+attribute = {\ttfamily None},  }\item[{}]{renderer = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1forms_1_1_base_form}{django.\+forms.\+forms.\+Base\+Form}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_abbcddac6d29c87ce3f49fba983f5df0a}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_abbcddac6d29c87ce3f49fba983f5df0a}} 
+\index{django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}!clean@{clean}}
+\index{clean@{clean}!django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily def django.\+forms.\+models.\+Base\+Model\+Form.\+clean (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook for doing any extra form-wide cleaning after Field.clean() has been
+called on every field. Any ValidationError raised by this method will
+not be associated with a particular field; it will have a special-case
+association with the field named '__all__'.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1forms_1_1_base_form_aac9e2e177a9d7f1e4ee73b3ebfed6719}{django.\+forms.\+forms.\+Base\+Form}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_a51d9513fb11818ccc8bc81139ce29bed}{django.\+contrib.\+flatpages.\+forms.\+Flatpage\+Form}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_ad74859e0ce221da998f157156a4c3450}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_ad74859e0ce221da998f157156a4c3450}} 
+\index{django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}!save@{save}}
+\index{save@{save}!django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily def django.\+forms.\+models.\+Base\+Model\+Form.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{commit = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save this form's self.instance object if commit=True. Otherwise, add
+a save_m2m() method to the form which can be called after the instance
+is saved manually at a later time. Return the model instance.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_user_creation_form_a8a926393b31c5dd1cc0b993c84210753}{django.\+contrib.\+auth.\+forms.\+User\+Creation\+Form}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1models_1_1_base_model_form_ace6b09d164ae2356ee898d5d10207a51}\label{classdjango_1_1forms_1_1models_1_1_base_model_form_ace6b09d164ae2356ee898d5d10207a51}} 
+\index{django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}!validate\_unique@{validate\_unique}}
+\index{validate\_unique@{validate\_unique}!django.forms.models.BaseModelForm@{django.forms.models.BaseModelForm}}
+\doxysubsubsection{\texorpdfstring{validate\_unique()}{validate\_unique()}}
+{\footnotesize\ttfamily def django.\+forms.\+models.\+Base\+Model\+Form.\+validate\+\_\+unique (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Call the instance's validate_unique() method and update the form's
+validation errors if any were raised.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/models.\+py\end{DoxyCompactItemize}

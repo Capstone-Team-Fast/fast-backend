@@ -1,0 +1,67 @@
+\hypertarget{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache}{}\doxysection{django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache Class Reference}
+\label{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache}\index{django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}}
+
+
+Inheritance diagram for django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_aba9ce547bbe731f5795286bb4aa07b9e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, server, params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a4fffdac71b14afe3d1ab61082c70a179}{get}} (self, key, default=None, version=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a63f8c602072b2c6e3c557caa012de90f}{delete}} (self, key, version=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_aba9ce547bbe731f5795286bb4aa07b9e}\label{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_aba9ce547bbe731f5795286bb4aa07b9e}} 
+\index{django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{server,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_base_memcached_cache}{django.\+core.\+cache.\+backends.\+memcached.\+Base\+Memcached\+Cache}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a63f8c602072b2c6e3c557caa012de90f}\label{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a63f8c602072b2c6e3c557caa012de90f}} 
+\index{django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}!delete@{delete}}
+\index{delete@{delete}!django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily def django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache.\+delete (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{version = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Delete a key from the cache and return whether it succeeded, failing
+silently.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_base_memcached_cache_a54a28ee9f16dabbad5486259aa951701}{django.\+core.\+cache.\+backends.\+memcached.\+Base\+Memcached\+Cache}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a4fffdac71b14afe3d1ab61082c70a179}\label{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_memcached_cache_a4fffdac71b14afe3d1ab61082c70a179}} 
+\index{django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}!get@{get}}
+\index{get@{get}!django.core.cache.backends.memcached.MemcachedCache@{django.core.cache.backends.memcached.MemcachedCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def django.\+core.\+cache.\+backends.\+memcached.\+Memcached\+Cache.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{default = {\ttfamily None},  }\item[{}]{version = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fetch a given key from the cache. If the key does not exist, return
+default, which itself defaults to None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1cache_1_1backends_1_1memcached_1_1_base_memcached_cache_a5eb7dd71de7705fc8cba12fc5d441cd7}{django.\+core.\+cache.\+backends.\+memcached.\+Base\+Memcached\+Cache}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/cache/backends/memcached.\+py\end{DoxyCompactItemize}

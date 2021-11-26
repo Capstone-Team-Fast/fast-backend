@@ -1,0 +1,39 @@
+\hypertarget{namespacerest__framework_1_1validators}{}\doxysection{rest\+\_\+framework.\+validators Namespace Reference}
+\label{namespacerest__framework_1_1validators}\index{rest\_framework.validators@{rest\_framework.validators}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_base_unique_for_validator}{Base\+Unique\+For\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_prohibit_surrogate_characters_validator}{Prohibit\+Surrogate\+Characters\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_for_date_validator}{Unique\+For\+Date\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_for_month_validator}{Unique\+For\+Month\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_for_year_validator}{Unique\+For\+Year\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_together_validator}{Unique\+Together\+Validator}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_validator}{Unique\+Validator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1validators_a640752709763a8525eb7f40276612a00}\label{namespacerest__framework_1_1validators_a640752709763a8525eb7f40276612a00}} 
+def {\bfseries qs\+\_\+exists} (queryset)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1validators_af8229a0a8f51f91c23a1e53c3c652c15}\label{namespacerest__framework_1_1validators_af8229a0a8f51f91c23a1e53c3c652c15}} 
+def {\bfseries qs\+\_\+filter} (queryset, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}We perform uniqueness checks explicitly on the serializer class, rather
+the using Django's `.full_clean()`.
+
+This gives us better separation of concerns, allows us to use single-step
+object creation, and makes it possible to switch between using the implicit
+`ModelSerializer` class and an equivalent explicit `Serializer` class.
+\end{DoxyVerb}
+ 

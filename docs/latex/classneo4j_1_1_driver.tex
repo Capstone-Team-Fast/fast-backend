@@ -1,0 +1,113 @@
+\hypertarget{classneo4j_1_1_driver}{}\doxysection{neo4j.\+Driver Class Reference}
+\label{classneo4j_1_1_driver}\index{neo4j.Driver@{neo4j.Driver}}
+
+
+Inheritance diagram for neo4j.\+Driver\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_driver_a9e30bdece24dd3d256c45c2b046ec5ae}\label{classneo4j_1_1_driver_a9e30bdece24dd3d256c45c2b046ec5ae}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, pool)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_driver_a441867564d0facd69057059fa94e21a6}\label{classneo4j_1_1_driver_a441867564d0facd69057059fa94e21a6}} 
+def {\bfseries \+\_\+\+\_\+del\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_driver_a236f3253b1013eb2aa5ce428eb7d606b}\label{classneo4j_1_1_driver_a236f3253b1013eb2aa5ce428eb7d606b}} 
+def {\bfseries \+\_\+\+\_\+enter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_driver_a30b7b2ac7ac2c55955593c205247c42c}\label{classneo4j_1_1_driver_a30b7b2ac7ac2c55955593c205247c42c}} 
+def {\bfseries \+\_\+\+\_\+exit\+\_\+\+\_\+} (self, exc\+\_\+type, exc\+\_\+value, traceback)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_driver_a09b8df07c68c0b75bca521afdd2905b3}\label{classneo4j_1_1_driver_a09b8df07c68c0b75bca521afdd2905b3}} 
+def {\bfseries encrypted} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_driver_ae260b432170f65edaf3f6854af2fa6ee}{session}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_driver_a3a0176f0015c7debcbb0de531164f738}{pipeline}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_driver_a74ff35dcee5c2e7a374bbfafd1b6c8bf}{close}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_driver_abe1d9e1c75334c7a5d67697005a0889f}{verify\+\_\+connectivity}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_driver_a72b9242d3abb0005470afa092fcd7dea}{supports\+\_\+multi\+\_\+db}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Base class for all types of :class:`neo4j.Driver`, instances of which are
+used as the primary access point to Neo4j.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1_driver_a74ff35dcee5c2e7a374bbfafd1b6c8bf}\label{classneo4j_1_1_driver_a74ff35dcee5c2e7a374bbfafd1b6c8bf}} 
+\index{neo4j.Driver@{neo4j.Driver}!close@{close}}
+\index{close@{close}!neo4j.Driver@{neo4j.Driver}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def neo4j.\+Driver.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Shut down, closing any open connections in the pool.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1_driver_a3a0176f0015c7debcbb0de531164f738}\label{classneo4j_1_1_driver_a3a0176f0015c7debcbb0de531164f738}} 
+\index{neo4j.Driver@{neo4j.Driver}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!neo4j.Driver@{neo4j.Driver}}
+\doxysubsubsection{\texorpdfstring{pipeline()}{pipeline()}}
+{\footnotesize\ttfamily def neo4j.\+Driver.\+pipeline (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Create a pipeline.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a41798ec0200ce6a3deeb1783504f3409}{neo4j.\+Bolt\+Driver}}, and \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a10f5e931e59655cb0701f52c6487e7ad}{neo4j.\+Neo4j\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_driver_ae260b432170f65edaf3f6854af2fa6ee}\label{classneo4j_1_1_driver_ae260b432170f65edaf3f6854af2fa6ee}} 
+\index{neo4j.Driver@{neo4j.Driver}!session@{session}}
+\index{session@{session}!neo4j.Driver@{neo4j.Driver}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily def neo4j.\+Driver.\+session (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a session, see :ref:`session-construction-ref`
+
+:param config: session configuration key-word arguments, see :ref:`session-configuration-ref` for available key-word arguments.
+
+:returns: new :class:`neo4j.Session` object
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a234f51525e378d2b75a7c0ca26d6ffa8}{neo4j.\+Bolt\+Driver}}, and \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a0f416c3d106546209d3054e7ff9fec91}{neo4j.\+Neo4j\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_driver_a72b9242d3abb0005470afa092fcd7dea}\label{classneo4j_1_1_driver_a72b9242d3abb0005470afa092fcd7dea}} 
+\index{neo4j.Driver@{neo4j.Driver}!supports\_multi\_db@{supports\_multi\_db}}
+\index{supports\_multi\_db@{supports\_multi\_db}!neo4j.Driver@{neo4j.Driver}}
+\doxysubsubsection{\texorpdfstring{supports\_multi\_db()}{supports\_multi\_db()}}
+{\footnotesize\ttfamily def neo4j.\+Driver.\+supports\+\_\+multi\+\_\+db (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Check if the server or cluster supports multi-databases.
+
+:return: Returns true if the server or cluster the driver connects to supports multi-databases, otherwise false.
+:rtype: bool
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1_driver_abe1d9e1c75334c7a5d67697005a0889f}\label{classneo4j_1_1_driver_abe1d9e1c75334c7a5d67697005a0889f}} 
+\index{neo4j.Driver@{neo4j.Driver}!verify\_connectivity@{verify\_connectivity}}
+\index{verify\_connectivity@{verify\_connectivity}!neo4j.Driver@{neo4j.Driver}}
+\doxysubsubsection{\texorpdfstring{verify\_connectivity()}{verify\_connectivity()}}
+{\footnotesize\ttfamily def neo4j.\+Driver.\+verify\+\_\+connectivity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} This verifies if the driver can connect to a remote server or a cluster
+by establishing a network connection with the remote and possibly exchanging
+a few data before closing the connection. It throws exception if fails to connect.
+
+Use the exception to further understand the cause of the connectivity problem.
+
+Note: Even if this method throws an exception, the driver still need to be closed via close() to free up all resources.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1_bolt_driver_a8811e9e5368dca15c99b2343fa47e65d}{neo4j.\+Bolt\+Driver}}, and \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a51263b579cb9f20962a8bc878e195dea}{neo4j.\+Neo4j\+Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

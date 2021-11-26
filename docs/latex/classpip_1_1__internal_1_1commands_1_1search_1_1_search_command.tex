@@ -1,0 +1,76 @@
+\hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command}{}\doxysection{pip.\+\_\+internal.\+commands.\+search.\+Search\+Command Class Reference}
+\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command}\index{pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+commands.\+search.\+Search\+Command\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+commands.\+search.\+Search\+Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a422d7e667ebd88d7fa4a4df8ab87a160}{add\+\_\+options}} (self)
+\item 
+int \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_aaddade13dc1a9442d9fda830e0ea15f3}{run}} (self, Values options, List\mbox{[}str\mbox{]} args)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a62a142b9953e8f3f7ab9cb1a63733328}\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a62a142b9953e8f3f7ab9cb1a63733328}} 
+List\mbox{[}Dict\mbox{[}str, str\mbox{]}\mbox{]} {\bfseries search} (self, List\mbox{[}str\mbox{]} query, Values options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a1a3089bf5287f404adfb4ad1e5577c8e}{usage}}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a569475413f4d832e6eba5e261896d99a}\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a569475413f4d832e6eba5e261896d99a}} 
+bool {\bfseries ignore\+\_\+require\+\_\+venv} = True
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Search for PyPI packages whose name or summary contains <query>.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a422d7e667ebd88d7fa4a4df8ab87a160}\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a422d7e667ebd88d7fa4a4df8ab87a160}} 
+\index{pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}!add\_options@{add\_options}}
+\index{add\_options@{add\_options}!pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}}
+\doxysubsubsection{\texorpdfstring{add\_options()}{add\_options()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+commands.\+search.\+Search\+Command.\+add\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1cli_1_1base__command_1_1_command}{pip.\+\_\+internal.\+cli.\+base\+\_\+command.\+Command}}.
+
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_aaddade13dc1a9442d9fda830e0ea15f3}\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_aaddade13dc1a9442d9fda830e0ea15f3}} 
+\index{pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}!run@{run}}
+\index{run@{run}!pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily  int pip.\+\_\+internal.\+commands.\+search.\+Search\+Command.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Values}]{options,  }\item[{List\mbox{[}str\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1cli_1_1base__command_1_1_command}{pip.\+\_\+internal.\+cli.\+base\+\_\+command.\+Command}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a1a3089bf5287f404adfb4ad1e5577c8e}\label{classpip_1_1__internal_1_1commands_1_1search_1_1_search_command_a1a3089bf5287f404adfb4ad1e5577c8e}} 
+\index{pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}!usage@{usage}}
+\index{usage@{usage}!pip.\_internal.commands.search.SearchCommand@{pip.\_internal.commands.search.SearchCommand}}
+\doxysubsubsection{\texorpdfstring{usage}{usage}}
+{\footnotesize\ttfamily string pip.\+\_\+internal.\+commands.\+search.\+Search\+Command.\+usage\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{      \%prog [options] <query>"{}"{}"{}}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/commands/search.\+py\end{DoxyCompactItemize}

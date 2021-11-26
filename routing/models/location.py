@@ -6,8 +6,6 @@ from datetime import datetime
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
 
-from routing.models.language import Language
-
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
 
@@ -238,6 +236,22 @@ class Pair:
     def __init__(self, location1: Location, location2: Location):
         self.location1 = location1
         self.location2 = location2
+        self.__origin = None
+        self.__distance_saving = None
+
+    def set_origin(self, origin):
+        self.__origin = origin
+
+    def set_saving(self, saving):
+        self.__distance_saving = saving
+
+    @property
+    def distance_saving(self):
+        return self.__distance_saving
+
+    @property
+    def origin(self):
+        return self.__origin
 
     def is_first(self, location: Location):
         return self.location1 == location
@@ -263,6 +277,16 @@ class Pair:
             return True
 
         return False
+
+    def __eq__(self, other):
+        if isinstance(other, type(self)):
+            return self.__distance_saving == other.__distance_saving
+        raise ValueError(f'Type {type(other)} not supported.')
+
+    def __lt__(self, other):
+        if isinstance(other, type(self)):
+            return self.__distance_saving < other.__distance_saving
+        raise ValueError(f'Type {type(other)} not supported.')
 
     def __str__(self):
         return '({}, {})'.format(self.location1, self.location2)

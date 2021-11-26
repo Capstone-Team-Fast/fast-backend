@@ -1,0 +1,183 @@
+\hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool}{}\doxysection{neobolt.\+routing.\+Routing\+Connection\+Pool Class Reference}
+\label{classneobolt_1_1routing_1_1_routing_connection_pool}\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+
+
+Inheritance diagram for neobolt.\+routing.\+Routing\+Connection\+Pool\+:
+% FIG 0
+
+
+Collaboration diagram for neobolt.\+routing.\+Routing\+Connection\+Pool\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a5d351a866db7fc6a9be5daaa0a5a734e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, connector, initial\+\_\+address, routing\+\_\+context, $\ast$routers, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a413a6b159481bd843fc7d3568df515e1}{fetch\+\_\+routing\+\_\+info}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a66a6252f5396532e6fd0e0188cf8d195}{fetch\+\_\+routing\+\_\+table}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a85739066014e0d4de6adf99dddc30341}{update\+\_\+routing\+\_\+table\+\_\+from}} (self, $\ast$routers)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a9040e4c4018e950445093abb736d3d5b}{update\+\_\+routing\+\_\+table}} (self)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_abc035db17c8f5a507552f21c00d42e42}\label{classneobolt_1_1routing_1_1_routing_connection_pool_abc035db17c8f5a507552f21c00d42e42}} 
+def {\bfseries update\+\_\+connection\+\_\+pool} (self)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_ae743d6f33bb4d6770edfcf6eb3b054d9}{ensure\+\_\+routing\+\_\+table\+\_\+is\+\_\+fresh}} (self, access\+\_\+mode)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a2b9873acaddbbdfa059cd66e903e689d}{acquire}} (self, access\+\_\+mode=None)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a7681c98c8637a17b811aab54f14d48ea}{deactivate}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a273ce04f9f11dcdaa640811216e283c7}{remove\+\_\+writer}} (self, address)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a14404fd89149354a8d8a97ffc4d1a328}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a14404fd89149354a8d8a97ffc4d1a328}} 
+{\bfseries initial\+\_\+address}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_ae0489b6e8d5fdd59259fbdb59f61f828}\label{classneobolt_1_1routing_1_1_routing_connection_pool_ae0489b6e8d5fdd59259fbdb59f61f828}} 
+{\bfseries routing\+\_\+context}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a8effdf583de03f10f78a268d55e0fe9b}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a8effdf583de03f10f78a268d55e0fe9b}} 
+{\bfseries routing\+\_\+table}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_ab175eedd5507175a65ae8608aa68d1f7}\label{classneobolt_1_1routing_1_1_routing_connection_pool_ab175eedd5507175a65ae8608aa68d1f7}} 
+{\bfseries missing\+\_\+writer}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_ae1fdf416622e6ae3572e362ef8a801b1}\label{classneobolt_1_1routing_1_1_routing_connection_pool_ae1fdf416622e6ae3572e362ef8a801b1}} 
+{\bfseries refresh\+\_\+lock}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a67a013ab940538f1fa38fb451ca27800}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a67a013ab940538f1fa38fb451ca27800}} 
+{\bfseries load\+\_\+balancing\+\_\+strategy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Connection pool with routing table.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a5d351a866db7fc6a9be5daaa0a5a734e}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a5d351a866db7fc6a9be5daaa0a5a734e}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connector,  }\item[{}]{initial\+\_\+address,  }\item[{}]{routing\+\_\+context,  }\item[{$\ast$}]{routers,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool}{neobolt.\+direct.\+Abstract\+Connection\+Pool}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a2b9873acaddbbdfa059cd66e903e689d}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a2b9873acaddbbdfa059cd66e903e689d}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!acquire@{acquire}}
+\index{acquire@{acquire}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+acquire (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{access\+\_\+mode = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Acquire a connection to a server that can satisfy a set of parameters.
+
+:param access_mode:
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a060cbe80af57e0a95d03409cc0fe4655}{neobolt.\+direct.\+Abstract\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a7681c98c8637a17b811aab54f14d48ea}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a7681c98c8637a17b811aab54f14d48ea}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+deactivate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Deactivate an address from the connection pool,
+if present, remove from the routing table and also closing
+all idle connections to that address.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a8c0b47750e271292ebfe7e09bab92ae7}{neobolt.\+direct.\+Abstract\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_ae743d6f33bb4d6770edfcf6eb3b054d9}\label{classneobolt_1_1routing_1_1_routing_connection_pool_ae743d6f33bb4d6770edfcf6eb3b054d9}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!ensure\_routing\_table\_is\_fresh@{ensure\_routing\_table\_is\_fresh}}
+\index{ensure\_routing\_table\_is\_fresh@{ensure\_routing\_table\_is\_fresh}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{ensure\_routing\_table\_is\_fresh()}{ensure\_routing\_table\_is\_fresh()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+ensure\+\_\+routing\+\_\+table\+\_\+is\+\_\+fresh (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{access\+\_\+mode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Update the routing table if stale.
+
+This method performs two freshness checks, before and after acquiring
+the refresh lock. If the routing table is already fresh on entry, the
+method exits immediately; otherwise, the refresh lock is acquired and
+the second freshness check that follows determines whether an update
+is still required.
+
+This method is thread-safe.
+
+:return: `True` if an update was required, `False` otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a413a6b159481bd843fc7d3568df515e1}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a413a6b159481bd843fc7d3568df515e1}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!fetch\_routing\_info@{fetch\_routing\_info}}
+\index{fetch\_routing\_info@{fetch\_routing\_info}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{fetch\_routing\_info()}{fetch\_routing\_info()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+fetch\+\_\+routing\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch raw routing info from a given router address.
+
+:param address: router address
+:return: list of routing records or
+         None if no connection could be established
+:raise ServiceUnavailable: if the server does not support routing or
+                           if routing support is broken
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a66a6252f5396532e6fd0e0188cf8d195}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a66a6252f5396532e6fd0e0188cf8d195}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!fetch\_routing\_table@{fetch\_routing\_table}}
+\index{fetch\_routing\_table@{fetch\_routing\_table}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{fetch\_routing\_table()}{fetch\_routing\_table()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+fetch\+\_\+routing\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Fetch a routing table from a given router address.
+
+:param address: router address
+:return: a new RoutingTable instance or None if the given router is
+         currently unable to provide routing information
+:raise ServiceUnavailable: if no writers are available
+:raise ProtocolError: if the routing information received is unusable
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a273ce04f9f11dcdaa640811216e283c7}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a273ce04f9f11dcdaa640811216e283c7}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!remove\_writer@{remove\_writer}}
+\index{remove\_writer@{remove\_writer}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{remove\_writer()}{remove\_writer()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+remove\+\_\+writer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Remove a writer address from the routing table, if present.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a9040e4c4018e950445093abb736d3d5b}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a9040e4c4018e950445093abb736d3d5b}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!update\_routing\_table@{update\_routing\_table}}
+\index{update\_routing\_table@{update\_routing\_table}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{update\_routing\_table()}{update\_routing\_table()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+update\+\_\+routing\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Update the routing table from the first router able to provide
+valid routing information.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1routing_1_1_routing_connection_pool_a85739066014e0d4de6adf99dddc30341}\label{classneobolt_1_1routing_1_1_routing_connection_pool_a85739066014e0d4de6adf99dddc30341}} 
+\index{neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}!update\_routing\_table\_from@{update\_routing\_table\_from}}
+\index{update\_routing\_table\_from@{update\_routing\_table\_from}!neobolt.routing.RoutingConnectionPool@{neobolt.routing.RoutingConnectionPool}}
+\doxysubsubsection{\texorpdfstring{update\_routing\_table\_from()}{update\_routing\_table\_from()}}
+{\footnotesize\ttfamily def neobolt.\+routing.\+Routing\+Connection\+Pool.\+update\+\_\+routing\+\_\+table\+\_\+from (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{routers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Try to update routing tables with the given routers.
+
+:return: True if the routing table is successfully updated,
+otherwise False
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neobolt/routing.\+py\end{DoxyCompactItemize}

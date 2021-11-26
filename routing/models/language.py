@@ -15,6 +15,11 @@ class Language(StructuredNode):
     def options() -> list:
         return list(Language.__LANGUAGES.keys())
 
+    @staticmethod
+    def add_languages(language: str):
+        if language not in Language.__LANGUAGES:
+            Language.__LANGUAGES[language.capitalize()] = language.capitalize()
+
     def __eq__(self, other):
         if isinstance(other, type(self)):
             return str(self.language).lower() == str(other.language).lower()

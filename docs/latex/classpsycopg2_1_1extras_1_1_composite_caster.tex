@@ -1,0 +1,77 @@
+\hypertarget{classpsycopg2_1_1extras_1_1_composite_caster}{}\doxysection{psycopg2.\+extras.\+Composite\+Caster Class Reference}
+\label{classpsycopg2_1_1extras_1_1_composite_caster}\index{psycopg2.extras.CompositeCaster@{psycopg2.extras.CompositeCaster}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a8490db066d062f00c0c351565f6bd39e}\label{classpsycopg2_1_1extras_1_1_composite_caster_a8490db066d062f00c0c351565f6bd39e}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, name, oid, attrs, array\+\_\+oid=None, schema=None)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a30bd9e2c76de047bd5a11637d0e21d86}\label{classpsycopg2_1_1extras_1_1_composite_caster_a30bd9e2c76de047bd5a11637d0e21d86}} 
+def {\bfseries parse} (self, s, curs)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_composite_caster_a9e88e67f010f58000dadc1e53176b021}{make}} (self, values)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a8f7a4fcf0c6210278656924d007e21c8}\label{classpsycopg2_1_1extras_1_1_composite_caster_a8f7a4fcf0c6210278656924d007e21c8}} 
+def {\bfseries tokenize} (self, s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a9fbf3069f35f7e1fd4a65de1c6e4c895}\label{classpsycopg2_1_1extras_1_1_composite_caster_a9fbf3069f35f7e1fd4a65de1c6e4c895}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a0736230faa4a1a8b78eafb853b53ff81}\label{classpsycopg2_1_1extras_1_1_composite_caster_a0736230faa4a1a8b78eafb853b53ff81}} 
+{\bfseries schema}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a5dca6cdc8f381e3cd442a5fc39ffe5f4}\label{classpsycopg2_1_1extras_1_1_composite_caster_a5dca6cdc8f381e3cd442a5fc39ffe5f4}} 
+{\bfseries oid}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a575b9b89bf536dcd70a31f0b8c9d35e3}\label{classpsycopg2_1_1extras_1_1_composite_caster_a575b9b89bf536dcd70a31f0b8c9d35e3}} 
+{\bfseries array\+\_\+oid}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_ae6f7fc052bd516fde18895da99a87c96}\label{classpsycopg2_1_1extras_1_1_composite_caster_ae6f7fc052bd516fde18895da99a87c96}} 
+{\bfseries attnames}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_ae76a0014b28d8d9554a7aaf01dca9106}\label{classpsycopg2_1_1extras_1_1_composite_caster_ae76a0014b28d8d9554a7aaf01dca9106}} 
+{\bfseries atttypes}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_acd375ac625d42bdb748c6e03a73260af}\label{classpsycopg2_1_1extras_1_1_composite_caster_acd375ac625d42bdb748c6e03a73260af}} 
+{\bfseries typecaster}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a74fefd2052fdda69ee7a988821db0c34}\label{classpsycopg2_1_1extras_1_1_composite_caster_a74fefd2052fdda69ee7a988821db0c34}} 
+{\bfseries array\+\_\+typecaster}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a261cbfd57e92d7e0fa2cf64a08761875}\label{classpsycopg2_1_1extras_1_1_composite_caster_a261cbfd57e92d7e0fa2cf64a08761875}} 
+{\bfseries type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helps conversion of a PostgreSQL composite type into a Python object.
+
+The class is usually created by the `register_composite()` function.
+You may want to create and register manually instances of the class if
+querying the database at registration time is not desirable (such as when
+using an :ref:`asynchronous connections <async-support>`).\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_composite_caster_a9e88e67f010f58000dadc1e53176b021}\label{classpsycopg2_1_1extras_1_1_composite_caster_a9e88e67f010f58000dadc1e53176b021}} 
+\index{psycopg2.extras.CompositeCaster@{psycopg2.extras.CompositeCaster}!make@{make}}
+\index{make@{make}!psycopg2.extras.CompositeCaster@{psycopg2.extras.CompositeCaster}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Composite\+Caster.\+make (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{values }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a new Python object representing the data being casted.
+
+*values* is the list of attributes, already casted into their Python
+representation.
+
+You can subclass this method to :ref:`customize the composite cast
+<custom-composite>`.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/extras.\+py\end{DoxyCompactItemize}

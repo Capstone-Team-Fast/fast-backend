@@ -1,0 +1,69 @@
+\hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration}{}\doxysection{rest\+\_\+framework.\+authtoken.\+migrations.0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+Migration Class Reference}
+\label{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration}\index{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration@{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+authtoken.\+migrations.0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+Migration\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+authtoken.\+migrations.0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+Migration\+:
+% FIG 1
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a86e20ef0a529fdc66b186d92925e685c}{dependencies}}
+\item 
+list \mbox{\hyperlink{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a21d08444149bfa334484fa746b251264}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a86e20ef0a529fdc66b186d92925e685c}\label{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a86e20ef0a529fdc66b186d92925e685c}} 
+\index{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration@{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration@{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+authtoken.\+migrations.\+0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        (\textcolor{stringliteral}{'authtoken'}, \textcolor{stringliteral}{'0001\_initial'}),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a21d08444149bfa334484fa746b251264}\label{classrest__framework_1_1authtoken_1_1migrations_1_10002__auto__20160226__1747_1_1_migration_a21d08444149bfa334484fa746b251264}} 
+\index{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration@{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration}!operations@{operations}}
+\index{operations@{operations}!rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration@{rest\_framework.authtoken.migrations.0002\_auto\_20160226\_1747.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+authtoken.\+migrations.\+0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        migrations.AlterModelOptions(}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'token'},}
+\DoxyCodeLine{            options=\{\textcolor{stringliteral}{'verbose\_name\_plural'}: \textcolor{stringliteral}{'Tokens'}, \textcolor{stringliteral}{'verbose\_name'}: \textcolor{stringliteral}{'Token'}\},}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{        migrations.AlterField(}
+\DoxyCodeLine{            model\_name=\textcolor{stringliteral}{'token'},}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'created'},}
+\DoxyCodeLine{            field=models.DateTimeField(verbose\_name=\textcolor{stringliteral}{'Created'}, auto\_now\_add=\textcolor{keyword}{True}),}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{        migrations.AlterField(}
+\DoxyCodeLine{            model\_name=\textcolor{stringliteral}{'token'},}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'key'},}
+\DoxyCodeLine{            field=models.CharField(verbose\_name=\textcolor{stringliteral}{'Key'}, max\_length=40, primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False}),}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{        migrations.AlterField(}
+\DoxyCodeLine{            model\_name=\textcolor{stringliteral}{'token'},}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'user'},}
+\DoxyCodeLine{            field=models.OneToOneField(to=settings.AUTH\_USER\_MODEL, verbose\_name=\textcolor{stringliteral}{'User'}, related\_name=\textcolor{stringliteral}{'auth\_token'}, on\_delete=models.CASCADE),}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/authtoken/migrations/0002\+\_\+auto\+\_\+20160226\+\_\+1747.\+py\end{DoxyCompactItemize}

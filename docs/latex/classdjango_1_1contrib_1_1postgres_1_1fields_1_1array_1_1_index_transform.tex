@@ -1,0 +1,94 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform}{}\doxysection{django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform}\index{django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_ab8cc7c80d3b356892b9387d28f7a25e1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, index, base\+\_\+field, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_addd9ecc08c0afb97e95b06874fc6b36e}{as\+\_\+sql}} (self, compiler, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a315f7195fb896987cd3aba60df64f4bb}{output\+\_\+field}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a3cba5c3325cfb4340980717d1c100362}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a3cba5c3325cfb4340980717d1c100362}} 
+{\bfseries index}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a1113879cfcb3447de04a5d445506cb6a}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a1113879cfcb3447de04a5d445506cb6a}} 
+{\bfseries base\+\_\+field}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_ab8cc7c80d3b356892b9387d28f7a25e1}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_ab8cc7c80d3b356892b9387d28f7a25e1}} 
+\index{django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index,  }\item[{}]{base\+\_\+field,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_addd9ecc08c0afb97e95b06874fc6b36e}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_addd9ecc08c0afb97e95b06874fc6b36e}} 
+\index{django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{django.\+db.\+models.\+expressions.\+Func}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a315f7195fb896987cd3aba60df64f4bb}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_a315f7195fb896987cd3aba60df64f4bb}} 
+\index{django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}!output\_field@{output\_field}}
+\index{output\_field@{output\_field}!django.contrib.postgres.fields.array.IndexTransform@{django.contrib.postgres.fields.array.IndexTransform}}
+\doxysubsubsection{\texorpdfstring{output\_field()}{output\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform.\+output\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/fields/array.\+py\end{DoxyCompactItemize}

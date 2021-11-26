@@ -1,0 +1,66 @@
+\hypertarget{namespacerest__framework_1_1routers}{}\doxysection{rest\+\_\+framework.\+routers Namespace Reference}
+\label{namespacerest__framework_1_1routers}\index{rest\_framework.routers@{rest\_framework.routers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1routers_1_1_a_p_i_root_view}{APIRoot\+View}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1routers_1_1_base_router}{Base\+Router}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1routers_1_1_default_router}{Default\+Router}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1routers_1_1_simple_router}{Simple\+Router}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1routers_adb4e57d7f28754e2d17ee39fa3185aff}{escape\+\_\+curly\+\_\+brackets}} (url\+\_\+path)
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1routers_ad49a5ef3a14d7c59e5c08fed51381b59}{flatten}} (list\+\_\+of\+\_\+lists)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1routers_a5fca49074e255988c31c5b1944b318c2}\label{namespacerest__framework_1_1routers_a5fca49074e255988c31c5b1944b318c2}} 
+{\bfseries Route} = namedtuple(\textquotesingle{}Route\textquotesingle{}, \mbox{[}\textquotesingle{}url\textquotesingle{}, \textquotesingle{}mapping\textquotesingle{}, \textquotesingle{}name\textquotesingle{}, \textquotesingle{}detail\textquotesingle{}, \textquotesingle{}initkwargs\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1routers_a5fa1365e0c63620e5ab96208ec5e2c99}\label{namespacerest__framework_1_1routers_a5fa1365e0c63620e5ab96208ec5e2c99}} 
+{\bfseries Dynamic\+Route} = namedtuple(\textquotesingle{}Dynamic\+Route\textquotesingle{}, \mbox{[}\textquotesingle{}url\textquotesingle{}, \textquotesingle{}name\textquotesingle{}, \textquotesingle{}detail\textquotesingle{}, \textquotesingle{}initkwargs\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Routers provide a convenient and consistent way of automatically
+determining the URL conf for your API.
+
+They are used by simply instantiating a Router class, and then registering
+all the required ViewSets with that router.
+
+For example, you might have a `urls.py` that looks something like this:
+
+    router = routers.DefaultRouter()
+    router.register('users', UserViewSet, 'user')
+    router.register('accounts', AccountViewSet, 'account')
+
+    urlpatterns = router.urls
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1routers_adb4e57d7f28754e2d17ee39fa3185aff}\label{namespacerest__framework_1_1routers_adb4e57d7f28754e2d17ee39fa3185aff}} 
+\index{rest\_framework.routers@{rest\_framework.routers}!escape\_curly\_brackets@{escape\_curly\_brackets}}
+\index{escape\_curly\_brackets@{escape\_curly\_brackets}!rest\_framework.routers@{rest\_framework.routers}}
+\doxysubsubsection{\texorpdfstring{escape\_curly\_brackets()}{escape\_curly\_brackets()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+routers.\+escape\+\_\+curly\+\_\+brackets (\begin{DoxyParamCaption}\item[{}]{url\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Double brackets in regex of url_path for escape string formatting
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerest__framework_1_1routers_ad49a5ef3a14d7c59e5c08fed51381b59}\label{namespacerest__framework_1_1routers_ad49a5ef3a14d7c59e5c08fed51381b59}} 
+\index{rest\_framework.routers@{rest\_framework.routers}!flatten@{flatten}}
+\index{flatten@{flatten}!rest\_framework.routers@{rest\_framework.routers}}
+\doxysubsubsection{\texorpdfstring{flatten()}{flatten()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+routers.\+flatten (\begin{DoxyParamCaption}\item[{}]{list\+\_\+of\+\_\+lists }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes an iterable of iterables, returns a single iterable containing all items
+\end{DoxyVerb}
+ 

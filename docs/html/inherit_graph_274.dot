@@ -1,0 +1,42 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1053 [label="dict",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1053 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.forms.utils.ErrorDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1utils_1_1_error_dict.html",tooltip=" "];
+  Node1053 -> Node1055 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1055 [label="django.template.context.\lContextDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1template_1_1context_1_1_context_dict.html",tooltip=" "];
+  Node1053 -> Node1056 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1056 [label="django.utils.datastructures.\lDictWrapper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1datastructures_1_1_dict_wrapper.html",tooltip=" "];
+  Node1053 -> Node1057 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1057 [label="django.utils.datastructures.\lMultiValueDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1utils_1_1datastructures_1_1_multi_value_dict.html",tooltip=" "];
+  Node1057 -> Node1058 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1058 [label="django.http.request.QueryDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1http_1_1request_1_1_query_dict.html",tooltip=" "];
+  Node1053 -> Node1059 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1059 [label="pip._vendor.distlib.compat.\lConvertingDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1compat_1_1_converting_dict.html",tooltip=" "];
+  Node1053 -> Node1060 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1060 [label="pip._vendor.distlib.compat.\lOrderedDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1distlib_1_1compat_1_1_ordered_dict.html",tooltip=" "];
+  Node1053 -> Node1061 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1061 [label="pip._vendor.html5lib.\l_utils.MethodDispatcher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1html5lib_1_1__utils_1_1_method_dispatcher.html",tooltip=" "];
+  Node1053 -> Node1062 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1062 [label="pip._vendor.pkg_resources.\lZipManifests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1pkg__resources_1_1_zip_manifests.html",tooltip=" "];
+  Node1062 -> Node1063 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1063 [label="pip._vendor.pkg_resources.\lMemoizedZipManifests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1pkg__resources_1_1_memoized_zip_manifests.html",tooltip=" "];
+  Node1053 -> Node1064 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1064 [label="pip._vendor.pkg_resources.\l_ReqExtras",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1pkg__resources_1_1___req_extras.html",tooltip=" "];
+  Node1053 -> Node1065 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1065 [label="pip._vendor.requests.structures.\lLookupDict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1structures_1_1_lookup_dict.html",tooltip=" "];
+  Node1053 -> Node1066 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1066 [label="pkg_resources.ZipManifests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpkg__resources_1_1_zip_manifests.html",tooltip=" "];
+  Node1066 -> Node1067 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1067 [label="pkg_resources.MemoizedZip\lManifests",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpkg__resources_1_1_memoized_zip_manifests.html",tooltip=" "];
+  Node1053 -> Node1068 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1068 [label="pkg_resources._ReqExtras",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpkg__resources_1_1___req_extras.html",tooltip=" "];
+  Node1053 -> Node1069 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1069 [label="rest_framework.decorators.\lMethodMapper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1decorators_1_1_method_mapper.html",tooltip=" "];
+  Node1053 -> Node1070 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1070 [label="testkitbackend.backend.Request",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtestkitbackend_1_1backend_1_1_request.html",tooltip=" "];
+}

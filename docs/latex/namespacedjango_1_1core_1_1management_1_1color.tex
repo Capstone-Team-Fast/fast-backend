@@ -1,0 +1,68 @@
+\hypertarget{namespacedjango_1_1core_1_1management_1_1color}{}\doxysection{django.\+core.\+management.\+color Namespace Reference}
+\label{namespacedjango_1_1core_1_1management_1_1color}\index{django.core.management.color@{django.core.management.color}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1color_1_1_style}{Style}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1core_1_1management_1_1color_a592bec95e30a708d2ee430c5aec4e4ab}{supports\+\_\+color}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1core_1_1management_1_1color_ab501abb0e4434652f063c70c32612e03}{make\+\_\+style}} (config\+\_\+string=\textquotesingle{}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1core_1_1management_1_1color_a02bb6bc2dcb144b31f2800c0893bece1}{no\+\_\+style}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1core_1_1management_1_1color_aa236def42e1a9fa1faee668e0c2849cb}{color\+\_\+style}} (force\+\_\+color=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1management_1_1color_aa0cfcbe7d3fb058a9f8ff569009cf5eb}\label{namespacedjango_1_1core_1_1management_1_1color_aa0cfcbe7d3fb058a9f8ff569009cf5eb}} 
+bool {\bfseries HAS\+\_\+\+COLORAMA} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Sets up the terminal color scheme.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1management_1_1color_aa236def42e1a9fa1faee668e0c2849cb}\label{namespacedjango_1_1core_1_1management_1_1color_aa236def42e1a9fa1faee668e0c2849cb}} 
+\index{django.core.management.color@{django.core.management.color}!color\_style@{color\_style}}
+\index{color\_style@{color\_style}!django.core.management.color@{django.core.management.color}}
+\doxysubsubsection{\texorpdfstring{color\_style()}{color\_style()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+color.\+color\+\_\+style (\begin{DoxyParamCaption}\item[{}]{force\+\_\+color = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a Style object from the Django color scheme.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1core_1_1management_1_1color_ab501abb0e4434652f063c70c32612e03}\label{namespacedjango_1_1core_1_1management_1_1color_ab501abb0e4434652f063c70c32612e03}} 
+\index{django.core.management.color@{django.core.management.color}!make\_style@{make\_style}}
+\index{make\_style@{make\_style}!django.core.management.color@{django.core.management.color}}
+\doxysubsubsection{\texorpdfstring{make\_style()}{make\_style()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+color.\+make\+\_\+style (\begin{DoxyParamCaption}\item[{}]{config\+\_\+string = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a Style object from the given config_string.
+
+If config_string is empty django.utils.termcolors.DEFAULT_PALETTE is used.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1core_1_1management_1_1color_a02bb6bc2dcb144b31f2800c0893bece1}\label{namespacedjango_1_1core_1_1management_1_1color_a02bb6bc2dcb144b31f2800c0893bece1}} 
+\index{django.core.management.color@{django.core.management.color}!no\_style@{no\_style}}
+\index{no\_style@{no\_style}!django.core.management.color@{django.core.management.color}}
+\doxysubsubsection{\texorpdfstring{no\_style()}{no\_style()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+color.\+no\+\_\+style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a Style object with no color scheme.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1core_1_1management_1_1color_a592bec95e30a708d2ee430c5aec4e4ab}\label{namespacedjango_1_1core_1_1management_1_1color_a592bec95e30a708d2ee430c5aec4e4ab}} 
+\index{django.core.management.color@{django.core.management.color}!supports\_color@{supports\_color}}
+\index{supports\_color@{supports\_color}!django.core.management.color@{django.core.management.color}}
+\doxysubsubsection{\texorpdfstring{supports\_color()}{supports\_color()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+color.\+supports\+\_\+color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if the running system's terminal supports color,
+and False otherwise.
+\end{DoxyVerb}
+ 

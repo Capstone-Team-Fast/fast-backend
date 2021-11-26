@@ -1,0 +1,45 @@
+\hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter}{}\doxysection{pip.\+\_\+internal.\+network.\+session.\+Insecure\+HTTPAdapter Class Reference}
+\label{classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter}\index{pip.\_internal.network.session.InsecureHTTPAdapter@{pip.\_internal.network.session.InsecureHTTPAdapter}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+network.\+session.\+Insecure\+HTTPAdapter\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+network.\+session.\+Insecure\+HTTPAdapter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter_a4beed4d750b24a0b84e980a8289e6a83}{cert\+\_\+verify}} (self, \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1_connection_pool}{Connection\+Pool}} conn, str url, Union\mbox{[}bool, str\mbox{]} verify, Optional\mbox{[}Union\mbox{[}str, Tuple\mbox{[}str, str\mbox{]}\mbox{]}\mbox{]} cert)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter_a4beed4d750b24a0b84e980a8289e6a83}\label{classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter_a4beed4d750b24a0b84e980a8289e6a83}} 
+\index{pip.\_internal.network.session.InsecureHTTPAdapter@{pip.\_internal.network.session.InsecureHTTPAdapter}!cert\_verify@{cert\_verify}}
+\index{cert\_verify@{cert\_verify}!pip.\_internal.network.session.InsecureHTTPAdapter@{pip.\_internal.network.session.InsecureHTTPAdapter}}
+\doxysubsubsection{\texorpdfstring{cert\_verify()}{cert\_verify()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+session.\+Insecure\+HTTPAdapter.\+cert\+\_\+verify (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1connectionpool_1_1_connection_pool}{Connection\+Pool}}}]{conn,  }\item[{str}]{url,  }\item[{Union\mbox{[}bool, str\mbox{]}}]{verify,  }\item[{Optional\mbox{[}Union\mbox{[}str, Tuple\mbox{[}str, str\mbox{]}\mbox{]}\mbox{]}}]{cert }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verify a SSL certificate. This method should not be called from user
+code, and is only exposed for use when subclassing the
+:class:`HTTPAdapter <requests.adapters.HTTPAdapter>`.
+
+:param conn: The urllib3 connection object associated with the cert.
+:param url: The requested URL.
+:param verify: Either a boolean, in which case it controls whether we verify
+    the server's TLS certificate, or a string, in which case it must be a path
+    to a CA bundle to use
+:param cert: The SSL certificate to verify.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter_a52325d2ffdf6e613ebbbe516c989ff08}{pip.\+\_\+vendor.\+requests.\+adapters.\+HTTPAdapter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/network/session.\+py\end{DoxyCompactItemize}

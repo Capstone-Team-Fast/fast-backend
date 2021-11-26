@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.db.migrations.utils.\lRegexObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1migrations_1_1utils_1_1_regex_object.html",tooltip=" "];
+}

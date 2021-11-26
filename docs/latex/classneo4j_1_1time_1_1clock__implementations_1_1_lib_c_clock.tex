@@ -1,0 +1,78 @@
+\hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock}{}\doxysection{neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock Class Reference}
+\label{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock}\index{neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}}
+
+
+Inheritance diagram for neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_1_1___time_spec}{\+\_\+\+Time\+Spec}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a28bb8b0bcd89a66fc1a6fbdd4088a7c0}{precision}} (cls)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a67ca7d29f265991cbe1760b5e2e2d9ed}{available}} (cls)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_ada63e089e228a91f486391771872a82f}{utc\+\_\+time}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Clock implementation that works only on platforms that provide
+libc. This clock is guaranteed nanosecond precision.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a67ca7d29f265991cbe1760b5e2e2d9ed}\label{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a67ca7d29f265991cbe1760b5e2e2d9ed}} 
+\index{neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}!available@{available}}
+\index{available@{available}!neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock.\+available (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return a boolean flag to indicate whether or not this clock
+implementation is available on this platform.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a4e92aac5758217205ee8c9cf5a1ce481}{neo4j.\+time.\+Clock}}.
+
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a28bb8b0bcd89a66fc1a6fbdd4088a7c0}\label{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_a28bb8b0bcd89a66fc1a6fbdd4088a7c0}} 
+\index{neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}!precision@{precision}}
+\index{precision@{precision}!neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}}
+\doxysubsubsection{\texorpdfstring{precision()}{precision()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock.\+precision (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} The precision of this clock implementation, represented as a
+number of decimal places. Therefore, for a nanosecond precision
+clock, this function returns `9`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a1eefebc49a20d70e23aef80ec0f62d60}{neo4j.\+time.\+Clock}}.
+
+\mbox{\Hypertarget{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_ada63e089e228a91f486391771872a82f}\label{classneo4j_1_1time_1_1clock__implementations_1_1_lib_c_clock_ada63e089e228a91f486391771872a82f}} 
+\index{neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}!utc\_time@{utc\_time}}
+\index{utc\_time@{utc\_time}!neo4j.time.clock\_implementations.LibCClock@{neo4j.time.clock\_implementations.LibCClock}}
+\doxysubsubsection{\texorpdfstring{utc\_time()}{utc\_time()}}
+{\footnotesize\ttfamily def neo4j.\+time.\+clock\+\_\+implementations.\+Lib\+CClock.\+utc\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Read and return the current UTC time from this clock, measured
+relative to the Unix Epoch.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1time_1_1_clock_a06aeb71755b327d1cc0fea566584e9ba}{neo4j.\+time.\+Clock}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/time/clock\+\_\+implementations.\+py\end{DoxyCompactItemize}

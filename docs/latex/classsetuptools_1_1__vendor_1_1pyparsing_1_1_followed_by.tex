@@ -1,0 +1,73 @@
+\hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by}{}\doxysection{setuptools.\+\_\+vendor.\+pyparsing.\+Followed\+By Class Reference}
+\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by}\index{setuptools.\_vendor.pyparsing.FollowedBy@{setuptools.\_vendor.pyparsing.FollowedBy}}
+
+
+Inheritance diagram for setuptools.\+\_\+vendor.\+pyparsing.\+Followed\+By\+:
+% FIG 0
+
+
+Collaboration diagram for setuptools.\+\_\+vendor.\+pyparsing.\+Followed\+By\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_ab11bf746b66b008308751ba04421b142}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expr)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_abf358067885516613c5b35ce5447558f}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_a534e99b8b37694468a8cca1f4572d589}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_a534e99b8b37694468a8cca1f4572d589}} 
+{\bfseries may\+Return\+Empty}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Lookahead matching of the given parse expression.  C{FollowedBy}
+does I{not} advance the parsing position within the input string, it only
+verifies that the specified parse expression matches at the current
+position.  C{FollowedBy} always returns a null token list.
+
+Example::
+    # use FollowedBy to match a label only if it is followed by a ':'
+    data_word = Word(alphas)
+    label = data_word + FollowedBy(':')
+    attr_expr = Group(label + Suppress(':') + OneOrMore(data_word, stopOn=label).setParseAction(' '.join))
+    
+    OneOrMore(attr_expr).parseString("shape: SQUARE color: BLACK posn: upper left").pprint()
+prints::
+    [['shape', 'SQUARE'], ['color', 'BLACK'], ['posn', 'upper left']]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_ab11bf746b66b008308751ba04421b142}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_ab11bf746b66b008308751ba04421b142}} 
+\index{setuptools.\_vendor.pyparsing.FollowedBy@{setuptools.\_vendor.pyparsing.FollowedBy}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!setuptools.\_vendor.pyparsing.FollowedBy@{setuptools.\_vendor.pyparsing.FollowedBy}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+pyparsing.\+Followed\+By.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{setuptools.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_abf358067885516613c5b35ce5447558f}\label{classsetuptools_1_1__vendor_1_1pyparsing_1_1_followed_by_abf358067885516613c5b35ce5447558f}} 
+\index{setuptools.\_vendor.pyparsing.FollowedBy@{setuptools.\_vendor.pyparsing.FollowedBy}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!setuptools.\_vendor.pyparsing.FollowedBy@{setuptools.\_vendor.pyparsing.FollowedBy}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+pyparsing.\+Followed\+By.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{setuptools.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

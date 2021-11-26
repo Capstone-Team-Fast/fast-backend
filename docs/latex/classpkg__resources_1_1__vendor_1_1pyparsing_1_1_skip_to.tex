@@ -1,0 +1,129 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Skip\+To Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to}\index{pkg\_resources.\_vendor.pyparsing.SkipTo@{pkg\_resources.\_vendor.pyparsing.SkipTo}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Skip\+To\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Skip\+To\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_abd30b2c32b599407621f2114b6ba1c14}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, other, include=False, \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance_a231b3fb1c8e2eaeef3e2945185d8c005}{ignore}}=None, fail\+On=None)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_af67786e5f860dd91924d312432d43af3}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_aba87387b4e4ff66d7c6ac2f62a1131dd}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_aba87387b4e4ff66d7c6ac2f62a1131dd}} 
+{\bfseries ignore\+Expr}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ae89db83bfd10c2c9e91772eeda635f19}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ae89db83bfd10c2c9e91772eeda635f19}} 
+{\bfseries may\+Return\+Empty}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_af25363e9ca3be339000f3667551f23ba}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_af25363e9ca3be339000f3667551f23ba}} 
+{\bfseries may\+Index\+Error}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_a43982812393206782d23d1c80fb07e3f}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_a43982812393206782d23d1c80fb07e3f}} 
+{\bfseries include\+Match}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ae8cbae4460fd18f02f8441ec5ef6a05d}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ae8cbae4460fd18f02f8441ec5ef6a05d}} 
+{\bfseries as\+List}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_a64bd202f0a1574332177d81d6f1c7f16}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_a64bd202f0a1574332177d81d6f1c7f16}} 
+{\bfseries fail\+On}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ab5fabcbd146159871d9234ba7d46058c}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_ab5fabcbd146159871d9234ba7d46058c}} 
+{\bfseries errmsg}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Token for skipping over all undefined text until the matched expression is found.
+
+Parameters:
+ - expr - target expression marking the end of the data to be skipped
+ - include - (default=C{False}) if True, the target expression is also parsed 
+      (the skipped text and target expression are returned as a 2-element list).
+ - ignore - (default=C{None}) used to define grammars (typically quoted strings and 
+      comments) that might contain false matches to the target expression
+ - failOn - (default=C{None}) define expressions that are not allowed to be 
+      included in the skipped test; if found before the target expression is found, 
+      the SkipTo is not a match
+
+Example::
+    report = '''
+        Outstanding Issues Report - 1 Jan 2000
+
+           # | Severity | Description                               |  Days Open
+        -----+----------+-------------------------------------------+-----------
+         101 | Critical | Intermittent system crash                 |          6
+          94 | Cosmetic | Spelling error on Login ('log|n')         |         14
+          79 | Minor    | System slow when running too many reports |         47
+        '''
+    integer = Word(nums)
+    SEP = Suppress('|')
+    # use SkipTo to simply match everything up until the next SEP
+    # - ignore quoted strings, so that a '|' character inside a quoted string does not match
+    # - parse action will call token.strip() for each matched token, i.e., the description body
+    string_data = SkipTo(SEP, ignore=quotedString)
+    string_data.setParseAction(tokenMap(str.strip))
+    ticket_expr = (integer("issue_num") + SEP 
+                  + string_data("sev") + SEP 
+                  + string_data("desc") + SEP 
+                  + integer("days_open"))
+    
+    for tkt in ticket_expr.searchString(report):
+        print tkt.dump()
+prints::
+    ['101', 'Critical', 'Intermittent system crash', '6']
+    - days_open: 6
+    - desc: Intermittent system crash
+    - issue_num: 101
+    - sev: Critical
+    ['94', 'Cosmetic', "Spelling error on Login ('log|n')", '14']
+    - days_open: 14
+    - desc: Spelling error on Login ('log|n')
+    - issue_num: 94
+    - sev: Cosmetic
+    ['79', 'Minor', 'System slow when running too many reports', '47']
+    - days_open: 47
+    - desc: System slow when running too many reports
+    - issue_num: 79
+    - sev: Minor
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_abd30b2c32b599407621f2114b6ba1c14}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_abd30b2c32b599407621f2114b6ba1c14}} 
+\index{pkg\_resources.\_vendor.pyparsing.SkipTo@{pkg\_resources.\_vendor.pyparsing.SkipTo}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.SkipTo@{pkg\_resources.\_vendor.pyparsing.SkipTo}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Skip\+To.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other,  }\item[{}]{include = {\ttfamily False},  }\item[{}]{ignore = {\ttfamily None},  }\item[{}]{fail\+On = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_af67786e5f860dd91924d312432d43af3}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_skip_to_af67786e5f860dd91924d312432d43af3}} 
+\index{pkg\_resources.\_vendor.pyparsing.SkipTo@{pkg\_resources.\_vendor.pyparsing.SkipTo}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.SkipTo@{pkg\_resources.\_vendor.pyparsing.SkipTo}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Skip\+To.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder}{}\doxysection{django.\+db.\+migrations.\+recorder.\+Migration\+Recorder Class Reference}
+\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder}\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a60f4738f26026665d1c9837f0a3c89bc}{Migration}} (cls)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a3a54ab7c0646dcc933c96c2bcaf328d7}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a3a54ab7c0646dcc933c96c2bcaf328d7}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a738b189cb566ccae1d6f5169b742bb1c}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a738b189cb566ccae1d6f5169b742bb1c}} 
+def {\bfseries migration\+\_\+qs} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ae3cb9b76f6d051f498c4f46d40f9fcb2}{has\+\_\+table}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a85f0d70357fe2446758ed06644552bfc}{ensure\+\_\+schema}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a070544ccbb80ae4de5defc5ac11289bd}{applied\+\_\+migrations}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ab9ddbb4091deb3cff71fee02a51b1c31}{record\+\_\+applied}} (self, app, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a15a56717f576bbca56fbd041c40fadd7}{record\+\_\+unapplied}} (self, app, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ac55c4e5fe6e28f3d6954f0473fdc448b}{flush}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_aee120c58347c7906f2d5da0ba626592f}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_aee120c58347c7906f2d5da0ba626592f}} 
+{\bfseries connection}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Deal with storing migration records in the database.
+
+Because this table is actually itself used for dealing with model
+creation, it's the one thing we can't do normally via migrations.
+We manually handle table creation/schema updating (using schema backend)
+and then have a floating model to do queries with.
+
+If a migration is unapplied its row is removed from the table. Having
+a row in the table always means a migration is applied.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a070544ccbb80ae4de5defc5ac11289bd}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a070544ccbb80ae4de5defc5ac11289bd}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!applied\_migrations@{applied\_migrations}}
+\index{applied\_migrations@{applied\_migrations}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{applied\_migrations()}{applied\_migrations()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+applied\+\_\+migrations (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dict mapping (app_name, migration_name) to Migration instances
+for all applied migrations.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a85f0d70357fe2446758ed06644552bfc}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a85f0d70357fe2446758ed06644552bfc}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!ensure\_schema@{ensure\_schema}}
+\index{ensure\_schema@{ensure\_schema}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{ensure\_schema()}{ensure\_schema()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+ensure\+\_\+schema (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure the table exists and has the correct schema.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ac55c4e5fe6e28f3d6954f0473fdc448b}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ac55c4e5fe6e28f3d6954f0473fdc448b}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!flush@{flush}}
+\index{flush@{flush}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+flush (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Delete all migration records. Useful for testing migrations.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ae3cb9b76f6d051f498c4f46d40f9fcb2}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ae3cb9b76f6d051f498c4f46d40f9fcb2}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!has\_table@{has\_table}}
+\index{has\_table@{has\_table}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{has\_table()}{has\_table()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+has\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if the django_migrations table exists.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a60f4738f26026665d1c9837f0a3c89bc}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a60f4738f26026665d1c9837f0a3c89bc}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!Migration@{Migration}}
+\index{Migration@{Migration}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{Migration()}{Migration()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+Migration (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Lazy load to avoid AppRegistryNotReady if installed apps import
+MigrationRecorder.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ab9ddbb4091deb3cff71fee02a51b1c31}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_ab9ddbb4091deb3cff71fee02a51b1c31}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!record\_applied@{record\_applied}}
+\index{record\_applied@{record\_applied}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{record\_applied()}{record\_applied()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+record\+\_\+applied (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Record that a migration was applied.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a15a56717f576bbca56fbd041c40fadd7}\label{classdjango_1_1db_1_1migrations_1_1recorder_1_1_migration_recorder_a15a56717f576bbca56fbd041c40fadd7}} 
+\index{django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}!record\_unapplied@{record\_unapplied}}
+\index{record\_unapplied@{record\_unapplied}!django.db.migrations.recorder.MigrationRecorder@{django.db.migrations.recorder.MigrationRecorder}}
+\doxysubsubsection{\texorpdfstring{record\_unapplied()}{record\_unapplied()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+recorder.\+Migration\+Recorder.\+record\+\_\+unapplied (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Record that a migration was unapplied.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/migrations/recorder.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classrest__framework_1_1decorators_1_1_method_mapper}{}\doxysection{rest\+\_\+framework.\+decorators.\+Method\+Mapper Class Reference}
+\label{classrest__framework_1_1decorators_1_1_method_mapper}\index{rest\_framework.decorators.MethodMapper@{rest\_framework.decorators.MethodMapper}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+decorators.\+Method\+Mapper\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+decorators.\+Method\+Mapper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a278deffaaf8308c100755048a6a1f266}\label{classrest__framework_1_1decorators_1_1_method_mapper_a278deffaaf8308c100755048a6a1f266}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, action, methods)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a242049e6fd5502ed849845d240e4fb04}\label{classrest__framework_1_1decorators_1_1_method_mapper_a242049e6fd5502ed849845d240e4fb04}} 
+def {\bfseries get} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_af014a2cc5d1124ae8133561149e7552a}\label{classrest__framework_1_1decorators_1_1_method_mapper_af014a2cc5d1124ae8133561149e7552a}} 
+def {\bfseries post} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a1e6c3a8a7753f2c3a443ec12133bd218}\label{classrest__framework_1_1decorators_1_1_method_mapper_a1e6c3a8a7753f2c3a443ec12133bd218}} 
+def {\bfseries put} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a2c70e60f98912f8ca58f80760bdb6916}\label{classrest__framework_1_1decorators_1_1_method_mapper_a2c70e60f98912f8ca58f80760bdb6916}} 
+def {\bfseries patch} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a30744c7d23529daab1cb45568e26bbaa}\label{classrest__framework_1_1decorators_1_1_method_mapper_a30744c7d23529daab1cb45568e26bbaa}} 
+def {\bfseries delete} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a27e4bf3569f0516e8b9d22eb4a0a053e}\label{classrest__framework_1_1decorators_1_1_method_mapper_a27e4bf3569f0516e8b9d22eb4a0a053e}} 
+def {\bfseries head} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a958bf6e0a15c0f7000609dd7f849c1bf}\label{classrest__framework_1_1decorators_1_1_method_mapper_a958bf6e0a15c0f7000609dd7f849c1bf}} 
+def {\bfseries options} (self, func)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a8692232eefd0896ca5fa71401d625ebb}\label{classrest__framework_1_1decorators_1_1_method_mapper_a8692232eefd0896ca5fa71401d625ebb}} 
+def {\bfseries trace} (self, func)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1decorators_1_1_method_mapper_a6b2b2fdeee89d1c17caece793b337f9c}\label{classrest__framework_1_1decorators_1_1_method_mapper_a6b2b2fdeee89d1c17caece793b337f9c}} 
+{\bfseries action}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Enables mapping HTTP methods to different ViewSet methods for a single,
+logical action.
+
+Example usage:
+
+    class MyViewSet(ViewSet):
+
+        @action(detail=False)
+        def example(self, request, **kwargs):
+            ...
+
+        @example.mapping.post
+        def create_example(self, request, **kwargs):
+            ...
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/decorators.\+py\end{DoxyCompactItemize}

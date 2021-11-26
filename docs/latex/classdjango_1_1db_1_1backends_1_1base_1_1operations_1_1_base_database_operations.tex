@@ -1,0 +1,1066 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations}{}\doxysection{django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations}\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a44b1ce6498c305eb1e834cf762ef66be}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a44b1ce6498c305eb1e834cf762ef66be}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac5d613ed3d787841d9bf6e7803d54f9f}{autoinc\+\_\+sql}} (self, table, column)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2ef5daed5fd788306bc3f6d1c5ec7a52}{bulk\+\_\+batch\+\_\+size}} (self, fields, objs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0b056869ef0ad0a945a99e9647cd1067}{cache\+\_\+key\+\_\+culling\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a05a258187219f65c394e8660a9449cd3}{unification\+\_\+cast\+\_\+sql}} (self, output\+\_\+field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8d0fbddca87360da523da3e43aba358f}{date\+\_\+extract\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad6d0e583729a235fede2a2029cf1c8d8}{date\+\_\+trunc\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name, tzname=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7188ebf198491a78b72b07d2c79dfa3}{datetime\+\_\+cast\+\_\+date\+\_\+sql}} (self, field\+\_\+name, tzname)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7d5451c6169aaafbf521c805827dd80}{datetime\+\_\+cast\+\_\+time\+\_\+sql}} (self, field\+\_\+name, tzname)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5ba02671c85acb90fbfa478c29c69532}{datetime\+\_\+extract\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name, tzname)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab2005b43b8985b929a5c9489c6573ff0}{datetime\+\_\+trunc\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name, tzname)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1e5447d91d55fea8dc1fe280561da99d}{time\+\_\+trunc\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name, tzname=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95bc562464e8171c7416ba94427a6b1b}{time\+\_\+extract\+\_\+sql}} (self, lookup\+\_\+type, field\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeda63fa41dc1ea1ad6b7f907d08fa4de}{deferrable\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_abfea7f5a5d4caae08520fc3a25b1a04d}{distinct\+\_\+sql}} (self, fields, params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a898eecdd50fa9e7275d921dee018f0af}{fetch\+\_\+returned\+\_\+insert\+\_\+columns}} (self, cursor, returning\+\_\+params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a98611bdac53a86a8e2cd59d6ad9fedc5}{field\+\_\+cast\+\_\+sql}} (self, db\+\_\+type, internal\+\_\+type)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a04696128bcc041afaec48ed3b9fe0bf0}{force\+\_\+no\+\_\+ordering}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac34dfb15dfb2d20a48b07e77fa0d53b5}{for\+\_\+update\+\_\+sql}} (self, nowait=False, skip\+\_\+locked=False, of=(), no\+\_\+key=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95f651d2716d6102cf7653970c6d13f6}{limit\+\_\+offset\+\_\+sql}} (self, low\+\_\+mark, high\+\_\+mark)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab43b8a411c722298b3e86a56d096a514}{last\+\_\+executed\+\_\+query}} (self, cursor, sql, params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a03c682ddfdf53857825f7d06bfdb224a}{last\+\_\+insert\+\_\+id}} (self, cursor, table\+\_\+name, pk\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a676856d5b2e030de0932df16413d821a}{lookup\+\_\+cast}} (self, lookup\+\_\+type, internal\+\_\+type=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1b99595302cb48d8f91825f07629d1bc}{max\+\_\+in\+\_\+list\+\_\+size}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a82d71ca226daa842be3179dd1ca835df}{max\+\_\+name\+\_\+length}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afe0e3094b2a195ee86c8f19c71a36b0a}{no\+\_\+limit\+\_\+value}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afa29a98a5b31c242e9bb0c809f4e4a2b}{pk\+\_\+default\+\_\+value}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a38b4c9c65dcedd6d4ff2177972d31a5a}{prepare\+\_\+sql\+\_\+script}} (self, sql)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acdd88d571a63eab2c26fa3f170b86d71}{process\+\_\+clob}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af537b3cd202503fd3384b3fd3291395e}{return\+\_\+insert\+\_\+columns}} (self, fields)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5f6b11eca2ee16f9eeed46453c750d29}{compiler}} (self, compiler\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1317b39ef52de75f263c05a7e9a77323}{quote\+\_\+name}} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6f76c519636eacaf00db2854c177bf2e}{regex\+\_\+lookup}} (self, lookup\+\_\+type)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8ebcab78fa33bb6a5c6eafbf053a9f19}{savepoint\+\_\+create\+\_\+sql}} (self, sid)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6ebe9c6f468668f46dbfee462390f6b0}{savepoint\+\_\+commit\+\_\+sql}} (self, sid)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a714d4a50984f3482f74e5bb5800c0977}{savepoint\+\_\+rollback\+\_\+sql}} (self, sid)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae8e2d25187a74007a3866e4bcde85eb5}{set\+\_\+time\+\_\+zone\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8fb6793a1b9e4ab50834b08e44b94a97}{sql\+\_\+flush}} (self, style, tables, $\ast$reset\+\_\+sequences=False, allow\+\_\+cascade=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeac5189a0b91d60a6fcb519c6cb73ff5}{execute\+\_\+sql\+\_\+flush}} (self, sql\+\_\+list)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a24d2adc61e3d9943ca13b088cb3470da}{sequence\+\_\+reset\+\_\+by\+\_\+name\+\_\+sql}} (self, style, sequences)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a702e32f35e11da35719e65a661670094}{sequence\+\_\+reset\+\_\+sql}} (self, style, model\+\_\+list)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a666d7c5a1de98217e2099a8b6395ecb6}{start\+\_\+transaction\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1cfc03eed5c00d04531c9b385d8a8de5}{end\+\_\+transaction\+\_\+sql}} (self, success=True)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a89d578fe5bba8b3e83d8e1bbb76e3f43}{tablespace\+\_\+sql}} (self, tablespace, inline=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad85ca30e90adafc906115f00e7fc2caf}{prep\+\_\+for\+\_\+like\+\_\+query}} (self, x)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a431805cc7c86aab43c99cbb3e22bec55}{validate\+\_\+autopk\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4e148958522a4567c43c3d9872c45016}{adapt\+\_\+unknown\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0ef5ad22a04db8a44017885a9a800122}{adapt\+\_\+datefield\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a741722188ac7edc88cbdb4fd227af92d}{adapt\+\_\+datetimefield\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acb8c6feefc90ef8e7aa51eb19ae55b34}{adapt\+\_\+timefield\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afc89613d6d8dc2b882a9d6be78238704}{adapt\+\_\+decimalfield\+\_\+value}} (self, value, max\+\_\+digits=None, decimal\+\_\+places=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4edcb51b39c85e79b57bbd014f0b3bb1}{adapt\+\_\+ipaddressfield\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad74d3047e130486fd3cb335846bec796}{year\+\_\+lookup\+\_\+bounds\+\_\+for\+\_\+date\+\_\+field}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae319bd70843f2181c2f3c10e77443e06}{year\+\_\+lookup\+\_\+bounds\+\_\+for\+\_\+datetime\+\_\+field}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2a1cd44c10e0b0d580f091b6fd571bf4}{get\+\_\+db\+\_\+converters}} (self, expression)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3baa4d81f9121710992452254e98ce68}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3baa4d81f9121710992452254e98ce68}} 
+def {\bfseries convert\+\_\+durationfield\+\_\+value} (self, value, expression, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0e77148e24701a2305efc3554a215624}{check\+\_\+expression\+\_\+support}} (self, expression)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_adffdbff1b2d766133b3dd33654baa50e}{conditional\+\_\+expression\+\_\+supported\+\_\+in\+\_\+where\+\_\+clause}} (self, expression)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a14b9c4457115999cbbef3f5bd28e3b45}{combine\+\_\+expression}} (self, connector, sub\+\_\+expressions)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a42e55b03575f88eeec6f8cb4752af97d}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a42e55b03575f88eeec6f8cb4752af97d}} 
+def {\bfseries combine\+\_\+duration\+\_\+expression} (self, connector, sub\+\_\+expressions)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0006801cb98d342159bd9133a5e64735}{binary\+\_\+placeholder\+\_\+sql}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3fa0f3194ed97ba021f4c5ef762a1740}{modify\+\_\+insert\+\_\+params}} (self, placeholder, params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a41beb1fb67fdcc63433bedaec04e6ec9}{integer\+\_\+field\+\_\+range}} (self, internal\+\_\+type)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a9faeede1194b20210caa553f70957234}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a9faeede1194b20210caa553f70957234}} 
+def {\bfseries subtract\+\_\+temporals} (self, internal\+\_\+type, lhs, rhs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_abe528ef282d719b0429aaeda9ff15dbc}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_abe528ef282d719b0429aaeda9ff15dbc}} 
+def {\bfseries window\+\_\+frame\+\_\+start} (self, start)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a441b5a2ce88953399981ddf74b1c3b7a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a441b5a2ce88953399981ddf74b1c3b7a}} 
+def {\bfseries window\+\_\+frame\+\_\+end} (self, end)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a825c5987d4b98260ace09c996a330dfe}{window\+\_\+frame\+\_\+rows\+\_\+start\+\_\+end}} (self, start=None, end=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad982348915c4237e47f91844f58d9c85}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad982348915c4237e47f91844f58d9c85}} 
+def {\bfseries window\+\_\+frame\+\_\+range\+\_\+start\+\_\+end} (self, start=None, end=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a65b72cbfca13afed41cdf942f343b560}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a65b72cbfca13afed41cdf942f343b560}} 
+def {\bfseries explain\+\_\+query\+\_\+prefix} (self, format=None, $\ast$$\ast$options)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae98eeda755a62b436756b9c692c8bfd2}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae98eeda755a62b436756b9c692c8bfd2}} 
+def {\bfseries insert\+\_\+statement} (self, ignore\+\_\+conflicts=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af0b84fc89f0ca1b3c51dc5e90377d756}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af0b84fc89f0ca1b3c51dc5e90377d756}} 
+def {\bfseries ignore\+\_\+conflicts\+\_\+suffix\+\_\+sql} (self, ignore\+\_\+conflicts=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3f8a27447e62c447d94312eb9269f001}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3f8a27447e62c447d94312eb9269f001}} 
+{\bfseries connection}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aff8116a25948730d3b1076a1faec0b8a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aff8116a25948730d3b1076a1faec0b8a}} 
+string {\bfseries compiler\+\_\+module} = \char`\"{}django.\+db.\+models.\+sql.\+compiler\char`\"{}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acbb6b7d60d5a132b5e3b8bab0a75ca3a}{integer\+\_\+field\+\_\+ranges}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a84991c0f301b19084c1a61aa38587b36}{set\+\_\+operators}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a422344a24dcbfa3ef5e25a58e81c7337}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a422344a24dcbfa3ef5e25a58e81c7337}} 
+dictionary {\bfseries cast\+\_\+data\+\_\+types} = \{\}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a083f569354d771c878a379b0f1cdeabb}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a083f569354d771c878a379b0f1cdeabb}} 
+{\bfseries cast\+\_\+char\+\_\+field\+\_\+without\+\_\+max\+\_\+length} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a463365fb1ce3a0457db938432f8b6e11}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a463365fb1ce3a0457db938432f8b6e11}} 
+string {\bfseries PRECEDING} = \textquotesingle{}PRECEDING\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_adfdc7dbba019b862d9de57bf2fa6d4e5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_adfdc7dbba019b862d9de57bf2fa6d4e5}} 
+string {\bfseries FOLLOWING} = \textquotesingle{}FOLLOWING\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afa5c82fc812c09918e8cfca9ced9ef59}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afa5c82fc812c09918e8cfca9ced9ef59}} 
+string {\bfseries UNBOUNDED\+\_\+\+PRECEDING} = \textquotesingle{}UNBOUNDED \textquotesingle{} + PRECEDING
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae18165f92efa78637948f935db039ca2}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae18165f92efa78637948f935db039ca2}} 
+string {\bfseries UNBOUNDED\+\_\+\+FOLLOWING} = \textquotesingle{}UNBOUNDED \textquotesingle{} + FOLLOWING
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aa2d9ed85ff959b699e1f6e81954464ec}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aa2d9ed85ff959b699e1f6e81954464ec}} 
+string {\bfseries CURRENT\+\_\+\+ROW} = \textquotesingle{}CURRENT ROW\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a561ed9ace02f234744fc3f8803445208}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a561ed9ace02f234744fc3f8803445208}} 
+{\bfseries explain\+\_\+prefix} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2fa1bd445ce21f416ffbc99aec24bf09}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2fa1bd445ce21f416ffbc99aec24bf09}} 
+def {\bfseries prep\+\_\+for\+\_\+iexact\+\_\+query} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad85ca30e90adafc906115f00e7fc2caf}{prep\+\_\+for\+\_\+like\+\_\+query}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Encapsulate backend-specific differences, such as the way a backend
+performs ordering or calculates the ID of a recently-inserted row.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0ef5ad22a04db8a44017885a9a800122}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0ef5ad22a04db8a44017885a9a800122}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_datefield\_value@{adapt\_datefield\_value}}
+\index{adapt\_datefield\_value@{adapt\_datefield\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_datefield\_value()}{adapt\_datefield\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+datefield\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a date value to an object compatible with what is expected
+by the backend driver for date columns.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a73aabafbc83914375d0525368cdfe7b7}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_ac87fd27e4aa95c0dfa4d18a67560e442}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a741722188ac7edc88cbdb4fd227af92d}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a741722188ac7edc88cbdb4fd227af92d}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_datetimefield\_value@{adapt\_datetimefield\_value}}
+\index{adapt\_datetimefield\_value@{adapt\_datetimefield\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_datetimefield\_value()}{adapt\_datetimefield\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+datetimefield\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a datetime value to an object compatible with what is expected
+by the backend driver for datetime columns.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_aa282be856d7fdd88e78d173cf48f6f51}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a621dda154c9c7c89ee2800f01ddd255c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a8e4f36e3405fca69f8234e01541bb65c}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_aadce6c85fe1c2f81ec0b02e8d0195249}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afc89613d6d8dc2b882a9d6be78238704}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afc89613d6d8dc2b882a9d6be78238704}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_decimalfield\_value@{adapt\_decimalfield\_value}}
+\index{adapt\_decimalfield\_value@{adapt\_decimalfield\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_decimalfield\_value()}{adapt\_decimalfield\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+decimalfield\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{max\+\_\+digits = {\ttfamily None},  }\item[{}]{decimal\+\_\+places = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a decimal.Decimal value to an object compatible with what is
+expected by the backend driver for decimal (numeric) columns.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a6b2bbf472c0dcd26456069590073e5f6}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_abc632250650933f8969d1334d9feb979}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a2a18f4541f8339e4cb99b7a80778a5a6}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4edcb51b39c85e79b57bbd014f0b3bb1}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4edcb51b39c85e79b57bbd014f0b3bb1}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_ipaddressfield\_value@{adapt\_ipaddressfield\_value}}
+\index{adapt\_ipaddressfield\_value@{adapt\_ipaddressfield\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_ipaddressfield\_value()}{adapt\_ipaddressfield\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+ipaddressfield\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a string representation of an IP address into the expected
+type for the backend driver.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a5f77689720d420fa1deabfdc55451094}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acb8c6feefc90ef8e7aa51eb19ae55b34}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acb8c6feefc90ef8e7aa51eb19ae55b34}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_timefield\_value@{adapt\_timefield\_value}}
+\index{adapt\_timefield\_value@{adapt\_timefield\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_timefield\_value()}{adapt\_timefield\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+timefield\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a time value to an object compatible with what is expected
+by the backend driver for time columns.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_aaf56200304b9f79aa235c08aa33f3165}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a0f56c3722886e4ef79ad79d622c6d97d}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a16db76be1777efb22671b7d729a6fd86}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_afbf612e14475602ead9849d884c98762}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4e148958522a4567c43c3d9872c45016}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a4e148958522a4567c43c3d9872c45016}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!adapt\_unknown\_value@{adapt\_unknown\_value}}
+\index{adapt\_unknown\_value@{adapt\_unknown\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{adapt\_unknown\_value()}{adapt\_unknown\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+adapt\+\_\+unknown\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Transform a value to something compatible with the backend driver.
+
+This method only depends on the type of the value. It's designed for
+cases where the target type isn't known, such as .raw() SQL queries.
+As a consequence it may not work perfectly in all circumstances.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac5d613ed3d787841d9bf6e7803d54f9f}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac5d613ed3d787841d9bf6e7803d54f9f}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!autoinc\_sql@{autoinc\_sql}}
+\index{autoinc\_sql@{autoinc\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{autoinc\_sql()}{autoinc\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+autoinc\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table,  }\item[{}]{column }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return any SQL needed to support auto-incrementing primary keys, or
+None if no SQL is necessary.
+
+This SQL is executed when a table is created.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0006801cb98d342159bd9133a5e64735}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0006801cb98d342159bd9133a5e64735}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!binary\_placeholder\_sql@{binary\_placeholder\_sql}}
+\index{binary\_placeholder\_sql@{binary\_placeholder\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{binary\_placeholder\_sql()}{binary\_placeholder\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+binary\+\_\+placeholder\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Some backends require special syntax to insert binary content (MySQL
+for example uses '_binary %s').
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a7880a4d95c747fc786fa555c730d57e0}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2ef5daed5fd788306bc3f6d1c5ec7a52}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2ef5daed5fd788306bc3f6d1c5ec7a52}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!bulk\_batch\_size@{bulk\_batch\_size}}
+\index{bulk\_batch\_size@{bulk\_batch\_size}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{bulk\_batch\_size()}{bulk\_batch\_size()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+bulk\+\_\+batch\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields,  }\item[{}]{objs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the maximum allowed batch size for the backend. The fields
+are the fields going to be inserted in the batch, the objs contains
+all the objects to be inserted.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a83e758c0fc8a0cdc1d197b3d88b7cac9}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a27761df115c2209d655371e47fff39c1}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0b056869ef0ad0a945a99e9647cd1067}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0b056869ef0ad0a945a99e9647cd1067}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!cache\_key\_culling\_sql@{cache\_key\_culling\_sql}}
+\index{cache\_key\_culling\_sql@{cache\_key\_culling\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{cache\_key\_culling\_sql()}{cache\_key\_culling\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+cache\+\_\+key\+\_\+culling\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return an SQL query that retrieves the first cache key greater than the
+n smallest.
+
+This is used by the 'db' cache backend to determine where to start
+culling.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a77cc7b82e5405a7b361da2fd754678c0}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0e77148e24701a2305efc3554a215624}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a0e77148e24701a2305efc3554a215624}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!check\_expression\_support@{check\_expression\_support}}
+\index{check\_expression\_support@{check\_expression\_support}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{check\_expression\_support()}{check\_expression\_support()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+check\+\_\+expression\+\_\+support (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check that the backend supports the provided expression.
+
+This is used on specific backends to rule out known expressions
+that have problematic or nonexistent implementations. If the
+expression has a known problem, the backend should raise
+NotSupportedError.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_aa930111f31190fe2a0a4399a7cb5fa48}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a14b9c4457115999cbbef3f5bd28e3b45}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a14b9c4457115999cbbef3f5bd28e3b45}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!combine\_expression@{combine\_expression}}
+\index{combine\_expression@{combine\_expression}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{combine\_expression()}{combine\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+combine\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connector,  }\item[{}]{sub\+\_\+expressions }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Combine a list of subexpressions into a single expression, using
+the provided connecting operator. This is required because operators
+can vary between backends (e.g., Oracle with %% and &) and between
+subexpression types (e.g., date expressions).
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a38176b275b36f8a2050798c4232a0db4}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_aef4d8cd38afc2ada2dc6b556e4fac6f7}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a53c9dd0c04b2899d2cc374de3c294e4f}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5f6b11eca2ee16f9eeed46453c750d29}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5f6b11eca2ee16f9eeed46453c750d29}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!compiler@{compiler}}
+\index{compiler@{compiler}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{compiler()}{compiler()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+compiler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQLCompiler class corresponding to the given name,
+in the namespace corresponding to the `compiler_module` attribute
+on this backend.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_adffdbff1b2d766133b3dd33654baa50e}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_adffdbff1b2d766133b3dd33654baa50e}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!conditional\_expression\_supported\_in\_where\_clause@{conditional\_expression\_supported\_in\_where\_clause}}
+\index{conditional\_expression\_supported\_in\_where\_clause@{conditional\_expression\_supported\_in\_where\_clause}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{conditional\_expression\_supported\_in\_where\_clause()}{conditional\_expression\_supported\_in\_where\_clause()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+conditional\+\_\+expression\+\_\+supported\+\_\+in\+\_\+where\+\_\+clause (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True, if the conditional expression is supported in the WHERE
+clause.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ab8db6e7bc4feec737634fa199954d83b}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8d0fbddca87360da523da3e43aba358f}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8d0fbddca87360da523da3e43aba358f}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!date\_extract\_sql@{date\_extract\_sql}}
+\index{date\_extract\_sql@{date\_extract\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{date\_extract\_sql()}{date\_extract\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+date\+\_\+extract\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'year', 'month', or 'day', return the SQL that
+extracts a value from the given date field field_name.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a6286cc763e082a086501ccac11d72e1d}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a48187c84e0befc5ad31954fab098850e}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a1b84b990f8fc14df5f18e4757f2dca0d}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a1a89766988c7a41cb96353b7975a99a1}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad6d0e583729a235fede2a2029cf1c8d8}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad6d0e583729a235fede2a2029cf1c8d8}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!date\_trunc\_sql@{date\_trunc\_sql}}
+\index{date\_trunc\_sql@{date\_trunc\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{date\_trunc\_sql()}{date\_trunc\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+date\+\_\+trunc\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'year', 'month', or 'day', return the SQL that
+truncates the given date or datetime field field_name to a date object
+with only the given specificity.
+
+If `tzname` is provided, the given value is truncated in a specific
+timezone.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_aa6ae34822ea55928e9310dab675b067a}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_aa30306e387f4512ceaa6f1768934e2d7}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a95b63f9202b897d3534b3cd8ccbc0d36}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a4f294a42d526250c9822336505280e15}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7188ebf198491a78b72b07d2c79dfa3}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7188ebf198491a78b72b07d2c79dfa3}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!datetime\_cast\_date\_sql@{datetime\_cast\_date\_sql}}
+\index{datetime\_cast\_date\_sql@{datetime\_cast\_date\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{datetime\_cast\_date\_sql()}{datetime\_cast\_date\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+datetime\+\_\+cast\+\_\+date\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL to cast a datetime value to date value.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_aeeb04312ae0437d1dbc457a5dae51473}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a8b885afe79b6ba15f5433b7d3a2cf445}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a284d503bf92dbe6a3cec72b9553f205c}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a09aaa1d1946e058b3a882fe92874cbdf}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7d5451c6169aaafbf521c805827dd80}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af7d5451c6169aaafbf521c805827dd80}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!datetime\_cast\_time\_sql@{datetime\_cast\_time\_sql}}
+\index{datetime\_cast\_time\_sql@{datetime\_cast\_time\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{datetime\_cast\_time\_sql()}{datetime\_cast\_time\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+datetime\+\_\+cast\+\_\+time\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL to cast a datetime value to time value.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a9baf9d93a546f2e6ae0e4a09d215f013}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a0392bf03a2126e105de365f349aa0c6c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_ac4af49adacebc05482b8ea64e9388e04}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a9c8d89cafc7677298a5594aae29aa4ab}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5ba02671c85acb90fbfa478c29c69532}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a5ba02671c85acb90fbfa478c29c69532}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!datetime\_extract\_sql@{datetime\_extract\_sql}}
+\index{datetime\_extract\_sql@{datetime\_extract\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{datetime\_extract\_sql()}{datetime\_extract\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+datetime\+\_\+extract\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'year', 'month', 'day', 'hour', 'minute', or
+'second', return the SQL that extracts a value from the given
+datetime field field_name.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a5657b92147299a981ea01b9a9eda2562}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ae5169e71c478e73a6dd4624cd2225262}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_ace98c39add36b265320d77f5d660cb19}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a4d32950f4d0f531e379cc581555b021a}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab2005b43b8985b929a5c9489c6573ff0}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab2005b43b8985b929a5c9489c6573ff0}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!datetime\_trunc\_sql@{datetime\_trunc\_sql}}
+\index{datetime\_trunc\_sql@{datetime\_trunc\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{datetime\_trunc\_sql()}{datetime\_trunc\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+datetime\+\_\+trunc\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'year', 'month', 'day', 'hour', 'minute', or
+'second', return the SQL that truncates the given datetime field
+field_name to a datetime object with only the given specificity.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a72dba68d4f0500711c29b31d20a71e06}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ac36f52708753b1e1ec6570d9f33dc8e1}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_ab29b9c9fab4c8419bd3d4f50bce1ad98}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a30696d8b697cd191c167f1cf614539b5}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeda63fa41dc1ea1ad6b7f907d08fa4de}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeda63fa41dc1ea1ad6b7f907d08fa4de}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!deferrable\_sql@{deferrable\_sql}}
+\index{deferrable\_sql@{deferrable\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{deferrable\_sql()}{deferrable\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+deferrable\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL to make a constraint "initially deferred" during a
+CREATE TABLE statement.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a53aec418ef8c5c6c8f83654e76615bfb}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a7f619fb8b3dc7f39ea9ddfd9d9d5d8e3}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_abfea7f5a5d4caae08520fc3a25b1a04d}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_abfea7f5a5d4caae08520fc3a25b1a04d}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!distinct\_sql@{distinct\_sql}}
+\index{distinct\_sql@{distinct\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{distinct\_sql()}{distinct\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+distinct\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return an SQL DISTINCT clause which removes duplicate rows from the
+result set. If any fields are given, only check the given fields for
+duplicates.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a07121c2d50b6daad1a0c16942a4346f3}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1cfc03eed5c00d04531c9b385d8a8de5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1cfc03eed5c00d04531c9b385d8a8de5}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!end\_transaction\_sql@{end\_transaction\_sql}}
+\index{end\_transaction\_sql@{end\_transaction\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{end\_transaction\_sql()}{end\_transaction\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+end\+\_\+transaction\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{success = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL statement required to end a transaction.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeac5189a0b91d60a6fcb519c6cb73ff5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_aeac5189a0b91d60a6fcb519c6cb73ff5}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!execute\_sql\_flush@{execute\_sql\_flush}}
+\index{execute\_sql\_flush@{execute\_sql\_flush}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{execute\_sql\_flush()}{execute\_sql\_flush()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+execute\+\_\+sql\+\_\+flush (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sql\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Execute a list of SQL statements to flush the database.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a898eecdd50fa9e7275d921dee018f0af}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a898eecdd50fa9e7275d921dee018f0af}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!fetch\_returned\_insert\_columns@{fetch\_returned\_insert\_columns}}
+\index{fetch\_returned\_insert\_columns@{fetch\_returned\_insert\_columns}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{fetch\_returned\_insert\_columns()}{fetch\_returned\_insert\_columns()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+fetch\+\_\+returned\+\_\+insert\+\_\+columns (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{returning\+\_\+params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a cursor object that has just performed an INSERT...RETURNING
+statement into a table, return the newly created data.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a9fc217df9ab12d7baed14066dee14c30}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a98611bdac53a86a8e2cd59d6ad9fedc5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a98611bdac53a86a8e2cd59d6ad9fedc5}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!field\_cast\_sql@{field\_cast\_sql}}
+\index{field\_cast\_sql@{field\_cast\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{field\_cast\_sql()}{field\_cast\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+field\+\_\+cast\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{db\+\_\+type,  }\item[{}]{internal\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a column type (e.g. 'BLOB', 'VARCHAR') and an internal type
+(e.g. 'GenericIPAddressField'), return the SQL to cast it before using
+it in a WHERE statement. The resulting string should contain a '%s'
+placeholder for the column being searched against.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ac2cdc6e1050b855412e577bf9b254f93}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac34dfb15dfb2d20a48b07e77fa0d53b5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ac34dfb15dfb2d20a48b07e77fa0d53b5}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!for\_update\_sql@{for\_update\_sql}}
+\index{for\_update\_sql@{for\_update\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{for\_update\_sql()}{for\_update\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+for\+\_\+update\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{nowait = {\ttfamily False},  }\item[{}]{skip\+\_\+locked = {\ttfamily False},  }\item[{}]{of = {\ttfamily ()},  }\item[{}]{no\+\_\+key = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the FOR UPDATE SQL clause to lock rows for an update operation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a04696128bcc041afaec48ed3b9fe0bf0}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a04696128bcc041afaec48ed3b9fe0bf0}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!force\_no\_ordering@{force\_no\_ordering}}
+\index{force\_no\_ordering@{force\_no\_ordering}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{force\_no\_ordering()}{force\_no\_ordering()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+force\+\_\+no\+\_\+ordering (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list used in the "ORDER BY" clause to force no ordering at
+all. Return an empty list to include nothing in the ordering.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_accba2d1674cda899b0341aa41f8845de}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2a1cd44c10e0b0d580f091b6fd571bf4}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a2a1cd44c10e0b0d580f091b6fd571bf4}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!get\_db\_converters@{get\_db\_converters}}
+\index{get\_db\_converters@{get\_db\_converters}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{get\_db\_converters()}{get\_db\_converters()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+get\+\_\+db\+\_\+converters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of functions needed to convert field data.
+
+Some field types on some backends do not provide data in the correct
+format, this is the hook for converter functions.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a5f96767deb2af27b909a67b38f0eb203}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a2cb7d0c37c86667bf769176fb07bcf97}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a5264e566668b21c34abb1ecf1a872df5}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a41beb1fb67fdcc63433bedaec04e6ec9}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a41beb1fb67fdcc63433bedaec04e6ec9}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!integer\_field\_range@{integer\_field\_range}}
+\index{integer\_field\_range@{integer\_field\_range}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{integer\_field\_range()}{integer\_field\_range()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+integer\+\_\+field\+\_\+range (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{internal\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given an integer field internal type (e.g. 'PositiveIntegerField'),
+return a tuple of the (min_value, max_value) form representing the
+range of the column type bound to the field.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a2dc3217731b51bda6a7b4c4e3077e8ea}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab43b8a411c722298b3e86a56d096a514}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ab43b8a411c722298b3e86a56d096a514}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!last\_executed\_query@{last\_executed\_query}}
+\index{last\_executed\_query@{last\_executed\_query}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{last\_executed\_query()}{last\_executed\_query()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+last\+\_\+executed\+\_\+query (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{sql,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a string of the query last executed by the given cursor, with
+placeholders replaced with actual values.
+
+`sql` is the raw query containing placeholders and `params` is the
+sequence of parameters. These are used by default, but this method
+exists for database backends to provide a better implementation
+according to their own quoting schemes.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_ace6452ddd036d0447b459d183096d9f5}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a302b4e224866c3546f99433f24fcd9dc}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_aa29954da82233eaf5b303d533fd75e16}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a2d392a483e0ac685fa5575f0a001ad46}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a03c682ddfdf53857825f7d06bfdb224a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a03c682ddfdf53857825f7d06bfdb224a}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!last\_insert\_id@{last\_insert\_id}}
+\index{last\_insert\_id@{last\_insert\_id}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{last\_insert\_id()}{last\_insert\_id()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+last\+\_\+insert\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cursor,  }\item[{}]{table\+\_\+name,  }\item[{}]{pk\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a cursor object that has just performed an INSERT statement into
+a table that has an auto-incrementing ID, return the newly created ID.
+
+`pk_name` is the name of the primary-key column.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_adad5e41da2f64e832be1b34f55e41e22}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95f651d2716d6102cf7653970c6d13f6}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95f651d2716d6102cf7653970c6d13f6}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!limit\_offset\_sql@{limit\_offset\_sql}}
+\index{limit\_offset\_sql@{limit\_offset\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{limit\_offset\_sql()}{limit\_offset\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+limit\+\_\+offset\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{low\+\_\+mark,  }\item[{}]{high\+\_\+mark }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return LIMIT/OFFSET SQL clause.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_afca74fbaa6c6ed82f536fdf57715566c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a676856d5b2e030de0932df16413d821a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a676856d5b2e030de0932df16413d821a}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!lookup\_cast@{lookup\_cast}}
+\index{lookup\_cast@{lookup\_cast}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{lookup\_cast()}{lookup\_cast()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+lookup\+\_\+cast (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{internal\+\_\+type = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string to use in a query when performing lookups
+("contains", "like", etc.). It should contain a '%s' placeholder for
+the column being searched against.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_ae308a2274df61c4063826fb061a38181}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a78aa9841323f53491bef195bf37c712c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a81737bccc771977938788172d1cf2dca}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1b99595302cb48d8f91825f07629d1bc}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1b99595302cb48d8f91825f07629d1bc}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!max\_in\_list\_size@{max\_in\_list\_size}}
+\index{max\_in\_list\_size@{max\_in\_list\_size}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{max\_in\_list\_size()}{max\_in\_list\_size()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+max\+\_\+in\+\_\+list\+\_\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the maximum number of items that can be passed in a single 'IN'
+list condition, or None if the backend does not impose a limit.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a58ae3c375679b41ec2fecf0892115ba3}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a82d71ca226daa842be3179dd1ca835df}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a82d71ca226daa842be3179dd1ca835df}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!max\_name\_length@{max\_name\_length}}
+\index{max\_name\_length@{max\_name\_length}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{max\_name\_length()}{max\_name\_length()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+max\+\_\+name\+\_\+length (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the maximum length of table and column names, or None if there
+is no limit.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a69d4af79bee5077e89b53eb763165e2e}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a6ef1ba2a3af052ffb12b9c36a30d87bd}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a308b2dc44422da055c7a5b849ce7fbb8}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3fa0f3194ed97ba021f4c5ef762a1740}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a3fa0f3194ed97ba021f4c5ef762a1740}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!modify\_insert\_params@{modify\_insert\_params}}
+\index{modify\_insert\_params@{modify\_insert\_params}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{modify\_insert\_params()}{modify\_insert\_params()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+modify\+\_\+insert\+\_\+params (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{placeholder,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allow modification of insert parameters. Needed for Oracle Spatial
+backend due to #10888.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1operations_1_1_oracle_operations_a9f3b7f1d8c72d6df282f8cdd0c4feb77}{django.\+contrib.\+gis.\+db.\+backends.\+oracle.\+operations.\+Oracle\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afe0e3094b2a195ee86c8f19c71a36b0a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afe0e3094b2a195ee86c8f19c71a36b0a}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!no\_limit\_value@{no\_limit\_value}}
+\index{no\_limit\_value@{no\_limit\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{no\_limit\_value()}{no\_limit\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+no\+\_\+limit\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value to use for the LIMIT when we are wanting "LIMIT
+infinity". Return None if the limit clause can be omitted in this case.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a1119963187ce1c34ac29922f2696aa06}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a53a1973f989f00f8a94da48796fa1c5c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_aba3095164bdb6330674f3a67cc634aa8}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a122e283e374976a322df1685f951822a}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afa29a98a5b31c242e9bb0c809f4e4a2b}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_afa29a98a5b31c242e9bb0c809f4e4a2b}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!pk\_default\_value@{pk\_default\_value}}
+\index{pk\_default\_value@{pk\_default\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{pk\_default\_value()}{pk\_default\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+pk\+\_\+default\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value to use during an INSERT statement to specify that
+the field should use its default value.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a7484d82f707de96c2f008acc75ab56e2}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a7ceb8bdd6d9b99579b4e567202651c8a}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_aa68fcdd8279742b805d4f90c47c18195}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad85ca30e90adafc906115f00e7fc2caf}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad85ca30e90adafc906115f00e7fc2caf}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!prep\_for\_like\_query@{prep\_for\_like\_query}}
+\index{prep\_for\_like\_query@{prep\_for\_like\_query}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{prep\_for\_like\_query()}{prep\_for\_like\_query()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+prep\+\_\+for\+\_\+like\+\_\+query (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prepare a value for use in a LIKE query.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a38b4c9c65dcedd6d4ff2177972d31a5a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a38b4c9c65dcedd6d4ff2177972d31a5a}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!prepare\_sql\_script@{prepare\_sql\_script}}
+\index{prepare\_sql\_script@{prepare\_sql\_script}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{prepare\_sql\_script()}{prepare\_sql\_script()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+prepare\+\_\+sql\+\_\+script (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sql }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take an SQL script that may contain multiple lines and return a list
+of statements to feed to successive cursor.execute() calls.
+
+Since few databases are able to process raw SQL scripts in a single
+cursor.execute() call and PEP 249 doesn't talk about this use case,
+the default implementation is conservative.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a768bb97e1c5b05f80695f0c8cfa37361}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acdd88d571a63eab2c26fa3f170b86d71}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acdd88d571a63eab2c26fa3f170b86d71}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!process\_clob@{process\_clob}}
+\index{process\_clob@{process\_clob}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{process\_clob()}{process\_clob()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+process\+\_\+clob (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value of a CLOB column, for backends that return a locator
+object that requires additional processing.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a82ffcd345d4f99db35e37f5b1cd41eb8}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1317b39ef52de75f263c05a7e9a77323}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1317b39ef52de75f263c05a7e9a77323}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!quote\_name@{quote\_name}}
+\index{quote\_name@{quote\_name}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{quote\_name()}{quote\_name()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+quote\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a quoted version of the given table, index, or column name. Do
+not quote the given name if it's already been quoted.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a7584036904817b70a1483201fee4b31c}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_af2f72bca418dacfb0ec7c04a36ba1866}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_aa7d4385eb15e3368465fe5fd816c9c1f}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a5dc666b9fb16a53d22e56e447558d8dd}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6f76c519636eacaf00db2854c177bf2e}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6f76c519636eacaf00db2854c177bf2e}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!regex\_lookup@{regex\_lookup}}
+\index{regex\_lookup@{regex\_lookup}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{regex\_lookup()}{regex\_lookup()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+regex\+\_\+lookup (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string to use in a query when performing regular expression
+lookups (using "regex" or "iregex"). It should contain a '%s'
+placeholder for the column being searched against.
+
+If the feature is not supported (or part of it is not supported), raise
+NotImplementedError.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a43ef925b0a7e43e1df4f0a8f2d7e3247}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ac87b7c949d672631880f0465b1b8e226}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af537b3cd202503fd3384b3fd3291395e}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_af537b3cd202503fd3384b3fd3291395e}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!return\_insert\_columns@{return\_insert\_columns}}
+\index{return\_insert\_columns@{return\_insert\_columns}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{return\_insert\_columns()}{return\_insert\_columns()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+return\+\_\+insert\+\_\+columns (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}For backends that support returning columns as part of an insert query,
+return the SQL and params to append to the INSERT query. The returned
+fragment should contain a format string to hold the appropriate column.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a38b9de40801ec0a065edae3f71129dd3}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_aea8fcd78e6b97bcefb6075ffce1fb15b}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_afede32ce6a6113c08a12009c271b3bf9}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6ebe9c6f468668f46dbfee462390f6b0}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a6ebe9c6f468668f46dbfee462390f6b0}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!savepoint\_commit\_sql@{savepoint\_commit\_sql}}
+\index{savepoint\_commit\_sql@{savepoint\_commit\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{savepoint\_commit\_sql()}{savepoint\_commit\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+savepoint\+\_\+commit\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL for committing the given savepoint.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8ebcab78fa33bb6a5c6eafbf053a9f19}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8ebcab78fa33bb6a5c6eafbf053a9f19}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!savepoint\_create\_sql@{savepoint\_create\_sql}}
+\index{savepoint\_create\_sql@{savepoint\_create\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{savepoint\_create\_sql()}{savepoint\_create\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+savepoint\+\_\+create\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL for starting a new savepoint. Only required if the
+"uses_savepoints" feature is True. The "sid" parameter is a string
+for the savepoint id.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a714d4a50984f3482f74e5bb5800c0977}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a714d4a50984f3482f74e5bb5800c0977}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!savepoint\_rollback\_sql@{savepoint\_rollback\_sql}}
+\index{savepoint\_rollback\_sql@{savepoint\_rollback\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{savepoint\_rollback\_sql()}{savepoint\_rollback\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+savepoint\+\_\+rollback\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sid }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL for rolling back the given savepoint.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a24d2adc61e3d9943ca13b088cb3470da}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a24d2adc61e3d9943ca13b088cb3470da}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!sequence\_reset\_by\_name\_sql@{sequence\_reset\_by\_name\_sql}}
+\index{sequence\_reset\_by\_name\_sql@{sequence\_reset\_by\_name\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{sequence\_reset\_by\_name\_sql()}{sequence\_reset\_by\_name\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+sequence\+\_\+reset\+\_\+by\+\_\+name\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{style,  }\item[{}]{sequences }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of the SQL statements required to reset sequences
+passed in `sequences`.
+
+The `style` argument is a Style object as returned by either
+color_style() or no_style() in django.core.management.color.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a93cbc422bf32447dd11276fcfea2c688}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_afe7c947a238fb1756227fa6ed2a8edc3}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_aa6519ad7c0ac00160c5c5c247d98028b}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a84d16616f9d385f1ea75f03028f046fa}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a702e32f35e11da35719e65a661670094}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a702e32f35e11da35719e65a661670094}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!sequence\_reset\_sql@{sequence\_reset\_sql}}
+\index{sequence\_reset\_sql@{sequence\_reset\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{sequence\_reset\_sql()}{sequence\_reset\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+sequence\+\_\+reset\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{style,  }\item[{}]{model\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of the SQL statements required to reset sequences for
+the given models.
+
+The `style` argument is a Style object as returned by either
+color_style() or no_style() in django.core.management.color.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ad306aa5ec5c8bf2a4489f4ba0b38263c}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_ab3f82e0350da9d26cfc954da84ad1b03}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae8e2d25187a74007a3866e4bcde85eb5}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae8e2d25187a74007a3866e4bcde85eb5}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!set\_time\_zone\_sql@{set\_time\_zone\_sql}}
+\index{set\_time\_zone\_sql@{set\_time\_zone\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{set\_time\_zone\_sql()}{set\_time\_zone\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+set\+\_\+time\+\_\+zone\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL that will set the connection's time zone.
+
+Return '' if the backend doesn't support time zones.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_aedc40712eed5ba5da6337851b913d166}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8fb6793a1b9e4ab50834b08e44b94a97}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a8fb6793a1b9e4ab50834b08e44b94a97}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!sql\_flush@{sql\_flush}}
+\index{sql\_flush@{sql\_flush}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{sql\_flush()}{sql\_flush()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+sql\+\_\+flush (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{style,  }\item[{}]{tables,  }\item[{$\ast$}]{reset\+\_\+sequences = {\ttfamily False},  }\item[{}]{allow\+\_\+cascade = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of SQL statements required to remove all data from
+the given database tables (without actually removing the tables
+themselves).
+
+The `style` argument is a Style object as returned by either
+color_style() or no_style() in django.core.management.color.
+
+If `reset_sequences` is True, the list includes SQL statements required
+to reset the sequences.
+
+The `allow_cascade` argument determines whether truncation may cascade
+to tables with foreign keys pointing the tables being truncated.
+PostgreSQL requires a cascade even if these tables are empty.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_ae2aa5d09f72a56bf50f4d0f7157408c5}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_ae2e83d637a356b68ea8f1a4cecb86ac6}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a3803762f978526e476c16d71be6c154e}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_a69658cf8fcaf04ac525b0a324ca08d38}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a666d7c5a1de98217e2099a8b6395ecb6}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a666d7c5a1de98217e2099a8b6395ecb6}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!start\_transaction\_sql@{start\_transaction\_sql}}
+\index{start\_transaction\_sql@{start\_transaction\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{start\_transaction\_sql()}{start\_transaction\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+start\+\_\+transaction\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL statement required to start a transaction.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_abab21d180aa8bd83284287e6c9ca0e86}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a89d578fe5bba8b3e83d8e1bbb76e3f43}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a89d578fe5bba8b3e83d8e1bbb76e3f43}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!tablespace\_sql@{tablespace\_sql}}
+\index{tablespace\_sql@{tablespace\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{tablespace\_sql()}{tablespace\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+tablespace\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{tablespace,  }\item[{}]{inline = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the SQL that will be used in a query to define the tablespace.
+
+Return '' if the backend doesn't support tablespaces.
+
+If `inline` is True, append the SQL to a row; otherwise append it to
+the entire CREATE TABLE or CREATE INDEX statement.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a9eb8302cd99064040abb8fa220cbb145}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a55c4d492dca382cb96c5cc8fbff13563}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95bc562464e8171c7416ba94427a6b1b}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a95bc562464e8171c7416ba94427a6b1b}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!time\_extract\_sql@{time\_extract\_sql}}
+\index{time\_extract\_sql@{time\_extract\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{time\_extract\_sql()}{time\_extract\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+time\+\_\+extract\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'hour', 'minute', or 'second', return the SQL
+that extracts a value from the given time field field_name.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_aa46270e987917b280bb64f5ba88a3b5f}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1e5447d91d55fea8dc1fe280561da99d}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a1e5447d91d55fea8dc1fe280561da99d}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!time\_trunc\_sql@{time\_trunc\_sql}}
+\index{time\_trunc\_sql@{time\_trunc\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{time\_trunc\_sql()}{time\_trunc\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+time\+\_\+trunc\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup\+\_\+type,  }\item[{}]{field\+\_\+name,  }\item[{}]{tzname = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a lookup_type of 'hour', 'minute' or 'second', return the SQL
+that truncates the given time or datetime field field_name to a time
+object with only the given specificity.
+
+If `tzname` is provided, the given value is truncated in a specific
+timezone.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a4f0883eedb337d338297d7c595e941d5}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations_a0b5a9fdf20dd457996b7865eb62083f3}{django.\+db.\+backends.\+oracle.\+operations.\+Database\+Operations}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a6a405363ddcb015de2d653a7284ca352}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations_aeb8da99d455cec0e91ba8bc925acf947}{django.\+db.\+backends.\+sqlite3.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a05a258187219f65c394e8660a9449cd3}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a05a258187219f65c394e8660a9449cd3}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!unification\_cast\_sql@{unification\_cast\_sql}}
+\index{unification\_cast\_sql@{unification\_cast\_sql}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{unification\_cast\_sql()}{unification\_cast\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+unification\+\_\+cast\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{output\+\_\+field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a field instance, return the SQL that casts the result of a union
+to that type. The resulting string should contain a '%s' placeholder
+for the expression being cast.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations_a2b576d5ef1f60881b3063d5760a2b07d}{django.\+db.\+backends.\+postgresql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a431805cc7c86aab43c99cbb3e22bec55}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a431805cc7c86aab43c99cbb3e22bec55}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!validate\_autopk\_value@{validate\_autopk\_value}}
+\index{validate\_autopk\_value@{validate\_autopk\_value}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{validate\_autopk\_value()}{validate\_autopk\_value()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+validate\+\_\+autopk\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Certain backends do not accept some values for "serial" fields
+(for example zero in MySQL). Raise a ValueError if the value is
+invalid, otherwise return the validated value.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations_a26319d95bf495fc7838844739cfe17c9}{django.\+db.\+backends.\+mysql.\+operations.\+Database\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a825c5987d4b98260ace09c996a330dfe}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a825c5987d4b98260ace09c996a330dfe}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!window\_frame\_rows\_start\_end@{window\_frame\_rows\_start\_end}}
+\index{window\_frame\_rows\_start\_end@{window\_frame\_rows\_start\_end}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{window\_frame\_rows\_start\_end()}{window\_frame\_rows\_start\_end()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+window\+\_\+frame\+\_\+rows\+\_\+start\+\_\+end (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{start = {\ttfamily None},  }\item[{}]{end = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return SQL for start and end points in an OVER clause window frame.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad74d3047e130486fd3cb335846bec796}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ad74d3047e130486fd3cb335846bec796}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!year\_lookup\_bounds\_for\_date\_field@{year\_lookup\_bounds\_for\_date\_field}}
+\index{year\_lookup\_bounds\_for\_date\_field@{year\_lookup\_bounds\_for\_date\_field}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{year\_lookup\_bounds\_for\_date\_field()}{year\_lookup\_bounds\_for\_date\_field()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+year\+\_\+lookup\+\_\+bounds\+\_\+for\+\_\+date\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a two-elements list with the lower and upper bound to be used
+with a BETWEEN operator to query a DateField value using a year
+lookup.
+
+`value` is an int, containing the looked-up year.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae319bd70843f2181c2f3c10e77443e06}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_ae319bd70843f2181c2f3c10e77443e06}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!year\_lookup\_bounds\_for\_datetime\_field@{year\_lookup\_bounds\_for\_datetime\_field}}
+\index{year\_lookup\_bounds\_for\_datetime\_field@{year\_lookup\_bounds\_for\_datetime\_field}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{year\_lookup\_bounds\_for\_datetime\_field()}{year\_lookup\_bounds\_for\_datetime\_field()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+year\+\_\+lookup\+\_\+bounds\+\_\+for\+\_\+datetime\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a two-elements list with the lower and upper bound to be used
+with a BETWEEN operator to query a DateTimeField value using a year
+lookup.
+
+`value` is an int, containing the looked-up year.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acbb6b7d60d5a132b5e3b8bab0a75ca3a}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_acbb6b7d60d5a132b5e3b8bab0a75ca3a}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!integer\_field\_ranges@{integer\_field\_ranges}}
+\index{integer\_field\_ranges@{integer\_field\_ranges}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{integer\_field\_ranges}{integer\_field\_ranges}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+integer\+\_\+field\+\_\+ranges\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SmallIntegerField'}: (-\/32768, 32767),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'IntegerField'}: (-\/2147483648, 2147483647),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BigIntegerField'}: (-\/9223372036854775808, 9223372036854775807),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveBigIntegerField'}: (0, 9223372036854775807),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveSmallIntegerField'}: (0, 32767),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveIntegerField'}: (0, 2147483647),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SmallAutoField'}: (-\/32768, 32767),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'AutoField'}: (-\/2147483648, 2147483647),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BigAutoField'}: (-\/9223372036854775808, 9223372036854775807),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a84991c0f301b19084c1a61aa38587b36}\label{classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations_a84991c0f301b19084c1a61aa38587b36}} 
+\index{django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}!set\_operators@{set\_operators}}
+\index{set\_operators@{set\_operators}!django.db.backends.base.operations.BaseDatabaseOperations@{django.db.backends.base.operations.BaseDatabaseOperations}}
+\doxysubsubsection{\texorpdfstring{set\_operators}{set\_operators}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+base.\+operations.\+Base\+Database\+Operations.\+set\+\_\+operators\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'union'}: \textcolor{stringliteral}{'UNION'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'intersection'}: \textcolor{stringliteral}{'INTERSECT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'difference'}: \textcolor{stringliteral}{'EXCEPT'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/base/operations.\+py\end{DoxyCompactItemize}

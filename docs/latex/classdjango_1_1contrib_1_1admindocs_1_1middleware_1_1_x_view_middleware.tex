@@ -1,0 +1,40 @@
+\hypertarget{classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware}{}\doxysection{django.\+contrib.\+admindocs.\+middleware.\+XView\+Middleware Class Reference}
+\label{classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware}\index{django.contrib.admindocs.middleware.XViewMiddleware@{django.contrib.admindocs.middleware.XViewMiddleware}}
+
+
+Inheritance diagram for django.\+contrib.\+admindocs.\+middleware.\+XView\+Middleware\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+admindocs.\+middleware.\+XView\+Middleware\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware_a92284652f769e6b963f5b4c502bd495c}{process\+\_\+view}} (self, request, view\+\_\+func, view\+\_\+args, view\+\_\+kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Add an X-View header to internal HEAD requests.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware_a92284652f769e6b963f5b4c502bd495c}\label{classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware_a92284652f769e6b963f5b4c502bd495c}} 
+\index{django.contrib.admindocs.middleware.XViewMiddleware@{django.contrib.admindocs.middleware.XViewMiddleware}!process\_view@{process\_view}}
+\index{process\_view@{process\_view}!django.contrib.admindocs.middleware.XViewMiddleware@{django.contrib.admindocs.middleware.XViewMiddleware}}
+\doxysubsubsection{\texorpdfstring{process\_view()}{process\_view()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admindocs.\+middleware.\+XView\+Middleware.\+process\+\_\+view (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{view\+\_\+func,  }\item[{}]{view\+\_\+args,  }\item[{}]{view\+\_\+kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If the request method is HEAD and either the IP is internal or the
+user is a logged-in staff member, return a response with an x-view
+header indicating the view function. This is used to lookup the view
+function for an arbitrary page.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/admindocs/middleware.\+py\end{DoxyCompactItemize}

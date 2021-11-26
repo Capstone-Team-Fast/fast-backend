@@ -1,0 +1,109 @@
+\hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter}{}\doxysection{pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter Class Reference}
+\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter}\index{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_affc0e3ba15b894c60a4cf974f6cbdbf4}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, cache=None, cache\+\_\+etags=True, controller\+\_\+class=None, serializer=None, heuristic=None, cacheable\+\_\+methods=None, $\ast$args, $\ast$$\ast$kw)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_abddb11a29bd96615d01a19259912ef5d}{send}} (self, request, cacheable\+\_\+methods=None, $\ast$$\ast$kw)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a3989016f8c12cf716f18d8436eeb5416}{build\+\_\+response}} (self, request, response, from\+\_\+cache=False, cacheable\+\_\+methods=None)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a4a0c2c447b066fbb5ac2c0e79c2d3b0d}{close}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a2a60f2cbb159cd1732706a2cc3f77321}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a2a60f2cbb159cd1732706a2cc3f77321}} 
+{\bfseries cache}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a8c7dd66b2ca89aa20daf58f9058a3937}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a8c7dd66b2ca89aa20daf58f9058a3937}} 
+{\bfseries heuristic}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a81865f403ea38521e80ef5122eaed1d0}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a81865f403ea38521e80ef5122eaed1d0}} 
+{\bfseries cacheable\+\_\+methods}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a88b71ad4659a5d2428ed39d199528659}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a88b71ad4659a5d2428ed39d199528659}} 
+{\bfseries controller}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a7138c4afef2413fb8e5ceda9ae674b9e}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a7138c4afef2413fb8e5ceda9ae674b9e}} 
+{\bfseries chunk\+\_\+left}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a439297bd85e6e0a63db3e96772017d65}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a439297bd85e6e0a63db3e96772017d65}} 
+dictionary {\bfseries invalidating\+\_\+methods} = \{\char`\"{}PUT\char`\"{}, \char`\"{}DELETE\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_affc0e3ba15b894c60a4cf974f6cbdbf4}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_affc0e3ba15b894c60a4cf974f6cbdbf4}} 
+\index{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cache = {\ttfamily None},  }\item[{}]{cache\+\_\+etags = {\ttfamily True},  }\item[{}]{controller\+\_\+class = {\ttfamily None},  }\item[{}]{serializer = {\ttfamily None},  }\item[{}]{heuristic = {\ttfamily None},  }\item[{}]{cacheable\+\_\+methods = {\ttfamily None},  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter}{pip.\+\_\+vendor.\+requests.\+adapters.\+HTTPAdapter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a3989016f8c12cf716f18d8436eeb5416}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a3989016f8c12cf716f18d8436eeb5416}} 
+\index{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}!build\_response@{build\_response}}
+\index{build\_response@{build\_response}!pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}}
+\doxysubsubsection{\texorpdfstring{build\_response()}{build\_response()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter.\+build\+\_\+response (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{response,  }\item[{}]{from\+\_\+cache = {\ttfamily False},  }\item[{}]{cacheable\+\_\+methods = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build a response by making a request or using the cache.
+
+This will end up calling send and returning a potentially
+cached response
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter_ae82a7e8c98f9f7e8317f903249a59444}{pip.\+\_\+vendor.\+requests.\+adapters.\+HTTPAdapter}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a4a0c2c447b066fbb5ac2c0e79c2d3b0d}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_a4a0c2c447b066fbb5ac2c0e79c2d3b0d}} 
+\index{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}!close@{close}}
+\index{close@{close}!pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Disposes of any internal state.
+
+Currently, this closes the PoolManager and any active ProxyManager,
+which closes any pooled connections.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter_a0540e50f88f63545aa6ff41f238a939e}{pip.\+\_\+vendor.\+requests.\+adapters.\+HTTPAdapter}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_abddb11a29bd96615d01a19259912ef5d}\label{classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter_abddb11a29bd96615d01a19259912ef5d}} 
+\index{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}!send@{send}}
+\index{send@{send}!pip.\_vendor.cachecontrol.adapter.CacheControlAdapter@{pip.\_vendor.cachecontrol.adapter.CacheControlAdapter}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+cachecontrol.\+adapter.\+Cache\+Control\+Adapter.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{cacheable\+\_\+methods = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send a request. Use the request information to see if it
+exists in the cache and cache the response if we need to and can.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter_a6b8cb9b4129cbc1c9aa685dc69f869a4}{pip.\+\_\+vendor.\+requests.\+adapters.\+HTTPAdapter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/cachecontrol/adapter.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,47 @@
+\hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta}{}\doxysection{pip.\+\_\+vendor.\+pep517.\+meta Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1pep517_1_1meta}\index{pip.\_vendor.pep517.meta@{pip.\_vendor.pep517.meta}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_a268d7368d393df7cd613764e1b457110}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_a268d7368d393df7cd613764e1b457110}} 
+def {\bfseries build} (source\+\_\+dir=\textquotesingle{}.\textquotesingle{}, dest=None, system=None)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_a0f718bf0af37ccfc6b1cf8124f498f9c}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_a0f718bf0af37ccfc6b1cf8124f498f9c}} 
+def {\bfseries build\+\_\+as\+\_\+zip} (builder=build)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pep517_1_1meta_ae5c1c88dc43abec3ab110d0ed1292186}{load}} (root)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_aa81c6f273bbc1526acb00f0e99fabcc1}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_aa81c6f273bbc1526acb00f0e99fabcc1}} 
+def {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_a39e0eb0e25477e7551186fb7bcb3892f}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_a39e0eb0e25477e7551186fb7bcb3892f}} 
+{\bfseries log} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_a8793abd36ebe2982ab377200f6de6d52}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_a8793abd36ebe2982ab377200f6de6d52}} 
+{\bfseries parser} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_a874b44bbb0a98309d8c0fe9464574f19}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_a874b44bbb0a98309d8c0fe9464574f19}} 
+{\bfseries help}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Build metadata for a project using PEP 517 hooks.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1meta_ae5c1c88dc43abec3ab110d0ed1292186}\label{namespacepip_1_1__vendor_1_1pep517_1_1meta_ae5c1c88dc43abec3ab110d0ed1292186}} 
+\index{pip.\_vendor.pep517.meta@{pip.\_vendor.pep517.meta}!load@{load}}
+\index{load@{load}!pip.\_vendor.pep517.meta@{pip.\_vendor.pep517.meta}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pep517.\+meta.\+load (\begin{DoxyParamCaption}\item[{}]{root }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a source directory (root) of a package,
+return an importlib.metadata.Distribution object
+with metadata build from that package.
+\end{DoxyVerb}
+ 

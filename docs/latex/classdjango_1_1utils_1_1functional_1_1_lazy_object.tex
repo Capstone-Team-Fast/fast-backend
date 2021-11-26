@@ -1,0 +1,74 @@
+\hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object}{}\doxysection{django.\+utils.\+functional.\+Lazy\+Object Class Reference}
+\label{classdjango_1_1utils_1_1functional_1_1_lazy_object}\index{django.utils.functional.LazyObject@{django.utils.functional.LazyObject}}
+
+
+Inheritance diagram for django.\+utils.\+functional.\+Lazy\+Object\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object_a624ef9d467d3ce4da4e7f5b814daa108}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object_ae1c9a505b45805d1dd52bff3095f1075}{\+\_\+\+\_\+setattr\+\_\+\+\_\+}} (self, name, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object_a897338291d8121448b8b7fe5741db5c8}{\+\_\+\+\_\+delattr\+\_\+\+\_\+}} (self, name)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_a88002d0cac1c5b8c4902bbb32e4c8d26}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_a88002d0cac1c5b8c4902bbb32e4c8d26}} 
+def {\bfseries \+\_\+\+\_\+reduce\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_aa0182241595e50b733c4ec521dbdae1b}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_aa0182241595e50b733c4ec521dbdae1b}} 
+def {\bfseries \+\_\+\+\_\+copy\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_ab63b2d3ba82e2196a95f75020a170c36}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_ab63b2d3ba82e2196a95f75020a170c36}} 
+def {\bfseries \+\_\+\+\_\+deepcopy\+\_\+\+\_\+} (self, memo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A wrapper for another class that can be used to delay instantiation of the
+wrapped class.
+
+By subclassing, you have the opportunity to intercept and alter the
+instantiation. If you don't need to do that, use SimpleLazyObject.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_a624ef9d467d3ce4da4e7f5b814daa108}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_a624ef9d467d3ce4da4e7f5b814daa108}} 
+\index{django.utils.functional.LazyObject@{django.utils.functional.LazyObject}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.utils.functional.LazyObject@{django.utils.functional.LazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Lazy\+Object.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a266f8e01839c6a4c34bcfaadd3d25978}{django.\+utils.\+functional.\+Simple\+Lazy\+Object}}, and \mbox{\hyperlink{classdjango_1_1utils_1_1text_1_1_truncator_a37a09e852cd2807921bd7dfe0d2ef9cf}{django.\+utils.\+text.\+Truncator}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_a897338291d8121448b8b7fe5741db5c8}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_a897338291d8121448b8b7fe5741db5c8}} 
+\index{django.utils.functional.LazyObject@{django.utils.functional.LazyObject}!\_\_delattr\_\_@{\_\_delattr\_\_}}
+\index{\_\_delattr\_\_@{\_\_delattr\_\_}!django.utils.functional.LazyObject@{django.utils.functional.LazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_delattr\_\_()}{\_\_delattr\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Lazy\+Object.\+\_\+\+\_\+delattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_aa50ff35ccd3ab835a757e0930aefc6e8}{django.\+conf.\+Lazy\+Settings}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_lazy_object_ae1c9a505b45805d1dd52bff3095f1075}\label{classdjango_1_1utils_1_1functional_1_1_lazy_object_ae1c9a505b45805d1dd52bff3095f1075}} 
+\index{django.utils.functional.LazyObject@{django.utils.functional.LazyObject}!\_\_setattr\_\_@{\_\_setattr\_\_}}
+\index{\_\_setattr\_\_@{\_\_setattr\_\_}!django.utils.functional.LazyObject@{django.utils.functional.LazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_setattr\_\_()}{\_\_setattr\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Lazy\+Object.\+\_\+\+\_\+setattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_a1ee2e0214491decbd4134ea5b4a8f05d}{django.\+conf.\+Lazy\+Settings}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/functional.\+py\end{DoxyCompactItemize}

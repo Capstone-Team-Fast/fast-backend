@@ -1,0 +1,74 @@
+\hypertarget{namespacepip_1_1__internal_1_1index_1_1package__finder}{}\doxysection{pip.\+\_\+internal.\+index.\+package\+\_\+finder Namespace Reference}
+\label{namespacepip_1_1__internal_1_1index_1_1package__finder}\index{pip.\_internal.index.package\_finder@{pip.\_internal.index.package\_finder}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1_best_candidate_result}{Best\+Candidate\+Result}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1_candidate_evaluator}{Candidate\+Evaluator}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1_candidate_preferences}{Candidate\+Preferences}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1_link_evaluator}{Link\+Evaluator}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1index_1_1package__finder_1_1_package_finder}{Package\+Finder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1candidate_1_1_installation_candidate}{Installation\+Candidate}}\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1index_1_1package__finder_a835d6821144421e0dbc636ccaa250de4}{filter\+\_\+unallowed\+\_\+hashes}} (List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1candidate_1_1_installation_candidate}{Installation\+Candidate}}\mbox{]} candidates, \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1_hashes}{Hashes}} hashes, str project\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1index_1_1package__finder_a230f7eba264091230ab47832046fc2f5}\label{namespacepip_1_1__internal_1_1index_1_1package__finder_a230f7eba264091230ab47832046fc2f5}} 
+{\bfseries logger} = get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1index_1_1package__finder_a6e43cd6584e1508c9578cad30e0fdc2a}\label{namespacepip_1_1__internal_1_1index_1_1package__finder_a6e43cd6584e1508c9578cad30e0fdc2a}} 
+{\bfseries Build\+Tag} = Union\mbox{[}Tuple\mbox{[}()\mbox{]}, Tuple\mbox{[}int, str\mbox{]}\mbox{]}
+\item 
+tuple \mbox{\hyperlink{namespacepip_1_1__internal_1_1index_1_1package__finder_aed2ebdb9b68aa324426dac8374b59dd6}{Candidate\+Sorting\+Key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Routines related to PyPI, indexes\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1index_1_1package__finder_a835d6821144421e0dbc636ccaa250de4}\label{namespacepip_1_1__internal_1_1index_1_1package__finder_a835d6821144421e0dbc636ccaa250de4}} 
+\index{pip.\_internal.index.package\_finder@{pip.\_internal.index.package\_finder}!filter\_unallowed\_hashes@{filter\_unallowed\_hashes}}
+\index{filter\_unallowed\_hashes@{filter\_unallowed\_hashes}!pip.\_internal.index.package\_finder@{pip.\_internal.index.package\_finder}}
+\doxysubsubsection{\texorpdfstring{filter\_unallowed\_hashes()}{filter\_unallowed\_hashes()}}
+{\footnotesize\ttfamily  List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1candidate_1_1_installation_candidate}{Installation\+Candidate}}\mbox{]} pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+filter\+\_\+unallowed\+\_\+hashes (\begin{DoxyParamCaption}\item[{List\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1candidate_1_1_installation_candidate}{Installation\+Candidate}}\mbox{]}}]{candidates,  }\item[{\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1_hashes}{Hashes}}}]{hashes,  }\item[{str}]{project\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Filter out candidates whose hashes aren't allowed, and return a new
+list of candidates.
+
+If at least one candidate has an allowed hash, then all candidates with
+either an allowed hash or no hash specified are returned.  Otherwise,
+the given candidates are returned.
+
+Including the candidates with no hash specified when there is a match
+allows a warning to be logged if there is a more preferred candidate
+with no hash specified.  Returning all candidates in the case of no
+matches lets pip report the hash of the candidate that would otherwise
+have been installed (e.g. permitting the user to more easily update
+their requirements file with the desired hash).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1index_1_1package__finder_aed2ebdb9b68aa324426dac8374b59dd6}\label{namespacepip_1_1__internal_1_1index_1_1package__finder_aed2ebdb9b68aa324426dac8374b59dd6}} 
+\index{pip.\_internal.index.package\_finder@{pip.\_internal.index.package\_finder}!CandidateSortingKey@{CandidateSortingKey}}
+\index{CandidateSortingKey@{CandidateSortingKey}!pip.\_internal.index.package\_finder@{pip.\_internal.index.package\_finder}}
+\doxysubsubsection{\texorpdfstring{CandidateSortingKey}{CandidateSortingKey}}
+{\footnotesize\ttfamily tuple pip.\+\_\+internal.\+index.\+package\+\_\+finder.\+Candidate\+Sorting\+Key}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (}
+\DoxyCodeLine{2     Tuple[int, int, int, \_BaseVersion, Optional[int], BuildTag]}
+\DoxyCodeLine{3 )}
+
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry}{}\doxysection{django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry}\index{django.contrib.gis.geos.geometry.GEOSGeometry@{django.contrib.gis.geos.geometry.GEOSGeometry}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_a98c69297e1157685f5b8b60e0d08d194}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, geo\+\_\+input, srid=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_aecea3154ba0e20f5fd0c311610c84b09}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_aecea3154ba0e20f5fd0c311610c84b09}} 
+{\bfseries srid}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_a98c69297e1157685f5b8b60e0d08d194}\label{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_a98c69297e1157685f5b8b60e0d08d194}} 
+\index{django.contrib.gis.geos.geometry.GEOSGeometry@{django.contrib.gis.geos.geometry.GEOSGeometry}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.geos.geometry.GEOSGeometry@{django.contrib.gis.geos.geometry.GEOSGeometry}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geo\+\_\+input,  }\item[{}]{srid = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The base constructor for GEOS geometry objects. It may take the
+following inputs:
+
+ * strings:
+    - WKT
+    - HEXEWKB (a PostGIS-specific canonical form)
+    - GeoJSON (requires GDAL)
+ * buffer:
+    - WKB
+
+The `srid` keyword specifies the Source Reference Identifier (SRID)
+number for this Geometry. If not provided, it defaults to None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_base}{django.\+contrib.\+gis.\+geos.\+geometry.\+GEOSGeometry\+Base}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection_aec3f0f8a3fe86a2c2da7f7cdcff419d7}{django.\+contrib.\+gis.\+geos.\+collections.\+Geometry\+Collection}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1linestring_1_1_line_string_a56e1878a4a52d745ed46a823e88aca2f}{django.\+contrib.\+gis.\+geos.\+linestring.\+Line\+String}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1polygon_1_1_polygon_a7ebe647ea767b6009411f00d87c85835}{django.\+contrib.\+gis.\+geos.\+polygon.\+Polygon}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1point_1_1_point_ad8ca56551a41b55f3ea9b58b8cd5239c}{django.\+contrib.\+gis.\+geos.\+point.\+Point}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/geos/geometry.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection}\index{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa418ff69a0c9d0cb0152fd8eb6e64cf8}{get\+\_\+field\+\_\+type}} (self, data\+\_\+type, description)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aae5721faff12a18b88e4668ddd21245f}{get\+\_\+geometry\+\_\+type}} (self, table\+\_\+name, description)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_ab990c2e9864e5014dbb0dbed46d97f35}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_ab990c2e9864e5014dbb0dbed46d97f35}} 
+{\bfseries postgis\+\_\+oid\+\_\+lookup}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa06c6046e6b1afabe63234fff8b9a7b0}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa06c6046e6b1afabe63234fff8b9a7b0}} 
+dictionary {\bfseries postgis\+\_\+oid\+\_\+lookup} = \{\}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_a69e9f46c19c12ba805dd4364c014dc31}{ignored\+\_\+tables}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa418ff69a0c9d0cb0152fd8eb6e64cf8}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aa418ff69a0c9d0cb0152fd8eb6e64cf8}} 
+\index{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}!get\_field\_type@{get\_field\_type}}
+\index{get\_field\_type@{get\_field\_type}!django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_field\_type()}{get\_field\_type()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection.\+get\+\_\+field\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+type,  }\item[{}]{description }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook for a database backend to use the cursor description to
+match a Django field type to a database column.
+
+For Oracle, the column data_type on its own is insufficient to
+distinguish between a FloatField and IntegerField, for example.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1introspection_1_1_database_introspection_a8b1bb42265a5fd9e2498885591724c5b}{django.\+db.\+backends.\+postgresql.\+introspection.\+Database\+Introspection}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aae5721faff12a18b88e4668ddd21245f}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_aae5721faff12a18b88e4668ddd21245f}} 
+\index{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}!get\_geometry\_type@{get\_geometry\_type}}
+\index{get\_geometry\_type@{get\_geometry\_type}!django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}}
+\doxysubsubsection{\texorpdfstring{get\_geometry\_type()}{get\_geometry\_type()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection.\+get\+\_\+geometry\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table\+\_\+name,  }\item[{}]{description }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The geometry type OID used by PostGIS does not indicate the particular
+type of field that a geometry column is (e.g., whether it's a
+PointField or a PolygonField).  Thus, this routine queries the PostGIS
+metadata tables to determine the geometry type.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_a69e9f46c19c12ba805dd4364c014dc31}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1introspection_1_1_post_g_i_s_introspection_a69e9f46c19c12ba805dd4364c014dc31}} 
+\index{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}!ignored\_tables@{ignored\_tables}}
+\index{ignored\_tables@{ignored\_tables}!django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection@{django.contrib.gis.db.backends.postgis.introspection.PostGISIntrospection}}
+\doxysubsubsection{\texorpdfstring{ignored\_tables}{ignored\_tables}}
+{\footnotesize\ttfamily django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+introspection.\+Post\+GISIntrospection.\+ignored\+\_\+tables\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  DatabaseIntrospection.ignored\_tables + [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'geography\_columns'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'geometry\_columns'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'raster\_columns'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'spatial\_ref\_sys'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'raster\_overviews'},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/backends/postgis/introspection.\+py\end{DoxyCompactItemize}

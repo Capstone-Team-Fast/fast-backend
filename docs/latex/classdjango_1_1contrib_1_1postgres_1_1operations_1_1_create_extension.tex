@@ -1,0 +1,114 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension}{}\doxysection{django.\+contrib.\+postgres.\+operations.\+Create\+Extension Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension}\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+operations.\+Create\+Extension\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+operations.\+Create\+Extension\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a9c4573c6adce31ed55caf9cfaa422a5c}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a9c4573c6adce31ed55caf9cfaa422a5c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_aa6e70fef446e7982740f7b413d0e2315}{state\+\_\+forwards}} (self, app\+\_\+label, state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a1bc9a161f0a046f7b746b8872952b42b}{database\+\_\+forwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a589246fe40d4f9e66ff2719603924581}{database\+\_\+backwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a499500c1f0af170d6f587aa4d8bb4651}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a499500c1f0af170d6f587aa4d8bb4651}} 
+def {\bfseries extension\+\_\+exists} (self, schema\+\_\+editor, extension)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_ad961b931235f3ffd20d54ac7bd54b470}{describe}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_af63d0865b84c79a0ecb5e40c0ac15df4}{migration\+\_\+name\+\_\+fragment}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_af1e184fd0aafa36010ef577090647eb8}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_af1e184fd0aafa36010ef577090647eb8}} 
+{\bfseries name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a3a59c1f84156e0f644a3b2e13526fc31}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a3a59c1f84156e0f644a3b2e13526fc31}} 
+bool {\bfseries reversible} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a589246fe40d4f9e66ff2719603924581}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a589246fe40d4f9e66ff2719603924581}} 
+\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}!database\_backwards@{database\_backwards}}
+\index{database\_backwards@{database\_backwards}!django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+\doxysubsubsection{\texorpdfstring{database\_backwards()}{database\_backwards()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+operations.\+Create\+Extension.\+database\+\_\+backwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the reverse
+direction - e.g. if this were CreateModel, it would in fact
+drop the model's table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9f9a4f6caf098cfef46a18181b5d3e1f}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a1bc9a161f0a046f7b746b8872952b42b}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_a1bc9a161f0a046f7b746b8872952b42b}} 
+\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}!database\_forwards@{database\_forwards}}
+\index{database\_forwards@{database\_forwards}!django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+\doxysubsubsection{\texorpdfstring{database\_forwards()}{database\_forwards()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+operations.\+Create\+Extension.\+database\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the normal
+(forwards) direction.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a6fb30ff727ddd37e2133a22f270dfd7e}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_ad961b931235f3ffd20d54ac7bd54b470}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_ad961b931235f3ffd20d54ac7bd54b470}} 
+\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}!describe@{describe}}
+\index{describe@{describe}!django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+operations.\+Create\+Extension.\+describe (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Output a brief summary of what the action does.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9ab7813dce1563587a2972d4d4f4fa00}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_af63d0865b84c79a0ecb5e40c0ac15df4}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_af63d0865b84c79a0ecb5e40c0ac15df4}} 
+\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}!migration\_name\_fragment@{migration\_name\_fragment}}
+\index{migration\_name\_fragment@{migration\_name\_fragment}!django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+\doxysubsubsection{\texorpdfstring{migration\_name\_fragment()}{migration\_name\_fragment()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+operations.\+Create\+Extension.\+migration\+\_\+name\+\_\+fragment (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A filename part suitable for automatically naming a migration
+containing this operation, or None if not applicable.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a12262150d6d1ff19ab68879e46c1660d}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_aa6e70fef446e7982740f7b413d0e2315}\label{classdjango_1_1contrib_1_1postgres_1_1operations_1_1_create_extension_aa6e70fef446e7982740f7b413d0e2315}} 
+\index{django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}!state\_forwards@{state\_forwards}}
+\index{state\_forwards@{state\_forwards}!django.contrib.postgres.operations.CreateExtension@{django.contrib.postgres.operations.CreateExtension}}
+\doxysubsubsection{\texorpdfstring{state\_forwards()}{state\_forwards()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+operations.\+Create\+Extension.\+state\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take the state from the previous migration, and mutate it
+so that it matches what this migration would perform.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a5717e1a47b2551aab4fbf9475f9dae7b}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/operations.\+py\end{DoxyCompactItemize}

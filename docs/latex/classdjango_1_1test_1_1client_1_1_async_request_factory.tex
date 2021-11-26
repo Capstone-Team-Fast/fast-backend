@@ -1,0 +1,67 @@
+\hypertarget{classdjango_1_1test_1_1client_1_1_async_request_factory}{}\doxysection{django.\+test.\+client.\+Async\+Request\+Factory Class Reference}
+\label{classdjango_1_1test_1_1client_1_1_async_request_factory}\index{django.test.client.AsyncRequestFactory@{django.test.client.AsyncRequestFactory}}
+
+
+Inheritance diagram for django.\+test.\+client.\+Async\+Request\+Factory\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+test.\+client.\+Async\+Request\+Factory\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_request_factory_a8dcee74bc0f05203aa2aa2aad95555a9}{request}} (self, $\ast$$\ast$request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_request_factory_ad24a6bfecd117237b4d6181f3d9fad6a}{generic}} (self, method, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class that lets you create mock ASGI-like Request objects for use in
+testing. Usage:
+
+rf = AsyncRequestFactory()
+get_request = await rf.get('/hello/')
+post_request = await rf.post('/submit/', {'foo': 'bar'})
+
+Once you have a request object you can pass it to any view function,
+including synchronous ones. The reason we have a separate class here is:
+a) this makes ASGIRequest subclasses, and
+b) AsyncTestClient can subclass it.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_request_factory_ad24a6bfecd117237b4d6181f3d9fad6a}\label{classdjango_1_1test_1_1client_1_1_async_request_factory_ad24a6bfecd117237b4d6181f3d9fad6a}} 
+\index{django.test.client.AsyncRequestFactory@{django.test.client.AsyncRequestFactory}!generic@{generic}}
+\index{generic@{generic}!django.test.client.AsyncRequestFactory@{django.test.client.AsyncRequestFactory}}
+\doxysubsubsection{\texorpdfstring{generic()}{generic()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Async\+Request\+Factory.\+generic (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{method,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct an arbitrary HTTP request.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a3c9694a635970d08cea3d0797fe4a41f}{django.\+test.\+client.\+Request\+Factory}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_request_factory_a8dcee74bc0f05203aa2aa2aad95555a9}\label{classdjango_1_1test_1_1client_1_1_async_request_factory_a8dcee74bc0f05203aa2aa2aad95555a9}} 
+\index{django.test.client.AsyncRequestFactory@{django.test.client.AsyncRequestFactory}!request@{request}}
+\index{request@{request}!django.test.client.AsyncRequestFactory@{django.test.client.AsyncRequestFactory}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Async\+Request\+Factory.\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a generic request object.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory}{django.\+test.\+client.\+Request\+Factory}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_client_a38330cfdf01cb69d3dd0bdb8b9777bd9}{django.\+test.\+client.\+Async\+Client}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/client.\+py\end{DoxyCompactItemize}

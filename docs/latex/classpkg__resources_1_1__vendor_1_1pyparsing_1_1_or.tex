@@ -1,0 +1,100 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or}\index{pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a212a05688c290595d8ad7020bcaff634}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, exprs, savelist=False)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ad5892cd5acb9b39df835cb1031f05cdf}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a6a15222b5a1759e4e7a222d1a3e33b88}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a6a15222b5a1759e4e7a222d1a3e33b88}} 
+def {\bfseries \+\_\+\+\_\+ixor\+\_\+\+\_\+} (self, other)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a3b8a60a0f29fb71fe31a0436d83c8e67}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ab91469b6c2dca271fb8dd0e5e25acbfd}{check\+Recursion}} (self, parse\+Element\+List)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a796f8a67719705c07ba78e9b1dcdc5c8}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a796f8a67719705c07ba78e9b1dcdc5c8}} 
+{\bfseries may\+Return\+Empty}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a922e28b586173a8c73cdcd93fc29cd47}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a922e28b586173a8c73cdcd93fc29cd47}} 
+{\bfseries str\+Repr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Requires that at least one C{ParseExpression} is found.
+If two expressions match, the expression that matches the longest string will be used.
+May be constructed using the C{'^'} operator.
+
+Example::
+    # construct Or using '^' operator
+    
+    number = Word(nums) ^ Combine(Word(nums) + '.' + Word(nums))
+    print(number.searchString("123 3.1416 789"))
+prints::
+    [['123'], ['3.1416'], ['789']]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a212a05688c290595d8ad7020bcaff634}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a212a05688c290595d8ad7020bcaff634}} 
+\index{pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs,  }\item[{}]{savelist = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_expression}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a3b8a60a0f29fb71fe31a0436d83c8e67}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_a3b8a60a0f29fb71fe31a0436d83c8e67}} 
+\index{pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_expression}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Expression}}.
+
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ab91469b6c2dca271fb8dd0e5e25acbfd}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ab91469b6c2dca271fb8dd0e5e25acbfd}} 
+\index{pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}!checkRecursion@{checkRecursion}}
+\index{checkRecursion@{checkRecursion}!pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}}
+\doxysubsubsection{\texorpdfstring{checkRecursion()}{checkRecursion()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or.\+check\+Recursion (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parse\+Element\+List }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ad5892cd5acb9b39df835cb1031f05cdf}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_or_ad5892cd5acb9b39df835cb1031f05cdf}} 
+\index{pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.Or@{pkg\_resources.\_vendor.pyparsing.Or}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Or.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler}{}\doxysection{pip.\+\_\+internal.\+utils.\+logging.\+Colorized\+Stream\+Handler Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler}\index{pip.\_internal.utils.logging.ColorizedStreamHandler@{pip.\_internal.utils.logging.ColorizedStreamHandler}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+logging.\+Colorized\+Stream\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+utils.\+logging.\+Colorized\+Stream\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_af17a12d8bf73767811ee7af0bd6ee649}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_af17a12d8bf73767811ee7af0bd6ee649}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, stream=None, no\+\_\+color=None)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ae2a17f5081e545f5aebbd1796d0b1b21}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ae2a17f5081e545f5aebbd1796d0b1b21}} 
+def {\bfseries should\+\_\+color} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ab486689630cd72874c843dc410954bf6}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ab486689630cd72874c843dc410954bf6}} 
+def {\bfseries format} (self, record)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_a8f90092882446c1c4bdd13c6b750dcaa}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_a8f90092882446c1c4bdd13c6b750dcaa}} 
+def {\bfseries handle\+Error} (self, record)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_a10d6dd5ad74f65d0814bd61b16fdbd9c}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_a10d6dd5ad74f65d0814bd61b16fdbd9c}} 
+{\bfseries stream}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ab4c3db38f7c059ac6f2e0f77c803158a}{COLORS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ab4c3db38f7c059ac6f2e0f77c803158a}\label{classpip_1_1__internal_1_1utils_1_1logging_1_1_colorized_stream_handler_ab4c3db38f7c059ac6f2e0f77c803158a}} 
+\index{pip.\_internal.utils.logging.ColorizedStreamHandler@{pip.\_internal.utils.logging.ColorizedStreamHandler}!COLORS@{COLORS}}
+\index{COLORS@{COLORS}!pip.\_internal.utils.logging.ColorizedStreamHandler@{pip.\_internal.utils.logging.ColorizedStreamHandler}}
+\doxysubsubsection{\texorpdfstring{COLORS}{COLORS}}
+{\footnotesize\ttfamily list pip.\+\_\+internal.\+utils.\+logging.\+Colorized\+Stream\+Handler.\+COLORS\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{            \textcolor{comment}{\# This needs to be in order from highest logging level to lowest.}}
+\DoxyCodeLine{            (logging.ERROR, \_color\_wrap(colorama.Fore.RED)),}
+\DoxyCodeLine{            (logging.WARNING, \_color\_wrap(colorama.Fore.YELLOW)),}
+\DoxyCodeLine{        ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/utils/logging.\+py\end{DoxyCompactItemize}

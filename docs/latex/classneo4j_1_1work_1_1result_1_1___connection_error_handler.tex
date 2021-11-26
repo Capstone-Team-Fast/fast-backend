@@ -1,0 +1,40 @@
+\hypertarget{classneo4j_1_1work_1_1result_1_1___connection_error_handler}{}\doxysection{neo4j.\+work.\+result.\+\_\+\+Connection\+Error\+Handler Class Reference}
+\label{classneo4j_1_1work_1_1result_1_1___connection_error_handler}\index{neo4j.work.result.\_ConnectionErrorHandler@{neo4j.work.result.\_ConnectionErrorHandler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1result_1_1___connection_error_handler_abe0e565b77428dd6dff2b7aca35b19cc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, connection, on\+\_\+network\+\_\+error)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1___connection_error_handler_a1a3a477aec52b4e72d31861e188d7287}\label{classneo4j_1_1work_1_1result_1_1___connection_error_handler_a1a3a477aec52b4e72d31861e188d7287}} 
+def {\bfseries \+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, item)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Wrapper class for handling connection errors.
+
+The class will wrap each method to invoke a callback if the method raises
+SessionExpired or ServiceUnavailable.
+The error will be re-raised after the callback.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneo4j_1_1work_1_1result_1_1___connection_error_handler_abe0e565b77428dd6dff2b7aca35b19cc}\label{classneo4j_1_1work_1_1result_1_1___connection_error_handler_abe0e565b77428dd6dff2b7aca35b19cc}} 
+\index{neo4j.work.result.\_ConnectionErrorHandler@{neo4j.work.result.\_ConnectionErrorHandler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neo4j.work.result.\_ConnectionErrorHandler@{neo4j.work.result.\_ConnectionErrorHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+result.\+\_\+\+Connection\+Error\+Handler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection,  }\item[{}]{on\+\_\+network\+\_\+error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param connection the connection object to warp
+:type connection Bolt
+:param on_network_error the function to be called when a method of
+    connection raises of of the caught errors. The callback takes the
+    error as argument.
+:type on_network_error callable
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/work/result.\+py\end{DoxyCompactItemize}

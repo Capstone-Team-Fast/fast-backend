@@ -1,0 +1,67 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform}{}\doxysection{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Len\+Transform Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform}\index{django.contrib.postgres.fields.array.ArrayLenTransform@{django.contrib.postgres.fields.array.ArrayLenTransform}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Len\+Transform\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Len\+Transform\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a58938fe07246957113dda8460195727e}{as\+\_\+sql}} (self, compiler, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a08f0f6e0d6394ac781d41cf871fd680c}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a08f0f6e0d6394ac781d41cf871fd680c}} 
+string {\bfseries lookup\+\_\+name} = \textquotesingle{}len\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a266189bc7b5154b6ae5322ccf9ebee7a}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a266189bc7b5154b6ae5322ccf9ebee7a}} 
+{\bfseries output\+\_\+field} = \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_integer_field}{Integer\+Field}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a58938fe07246957113dda8460195727e}\label{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a58938fe07246957113dda8460195727e}} 
+\index{django.contrib.postgres.fields.array.ArrayLenTransform@{django.contrib.postgres.fields.array.ArrayLenTransform}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.contrib.postgres.fields.array.ArrayLenTransform@{django.contrib.postgres.fields.array.ArrayLenTransform}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Len\+Transform.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/fields/array.\+py\end{DoxyCompactItemize}

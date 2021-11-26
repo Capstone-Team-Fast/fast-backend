@@ -1,0 +1,83 @@
+\hypertarget{namespacesetuptools}{}\doxysection{setuptools Namespace Reference}
+\label{namespacesetuptools}\index{setuptools@{setuptools}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1__distutils}{\+\_\+distutils}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1__imp}{\+\_\+imp}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1archive__util}{archive\+\_\+util}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1build__meta}{build\+\_\+meta}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1errors}{errors}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1glob}{glob}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1launch}{launch}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1lib2to3__ex}{lib2to3\+\_\+ex}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1monkey}{monkey}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1msvc}{msvc}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1package__index}{package\+\_\+index}}
+\item 
+namespace \mbox{\hyperlink{namespacesetuptools_1_1wheel}{wheel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1_command}{Command}}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1_package_finder}{Package\+Finder}}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1_p_e_p420_package_finder}{PEP420\+Package\+Finder}}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1sic}{sic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_ae4a80a06168cf6867a9bd7b93fb4e725}\label{namespacesetuptools_ae4a80a06168cf6867a9bd7b93fb4e725}} 
+def {\bfseries setup} ($\ast$$\ast$attrs)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_a9d3e6b5f82f1d22fb1d7ad0daf6018f6}{findall}} (dir=os.\+curdir)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_a7d51d85e64a02e0808685340753eec38}\label{namespacesetuptools_a7d51d85e64a02e0808685340753eec38}} 
+{\bfseries bootstrap\+\_\+install\+\_\+from} = None
+\item 
+\mbox{\Hypertarget{namespacesetuptools_a579fb1acef3ca217a470e0a0a1659503}\label{namespacesetuptools_a579fb1acef3ca217a470e0a0a1659503}} 
+bool {\bfseries run\+\_\+2to3\+\_\+on\+\_\+doctests} = True
+\item 
+\mbox{\Hypertarget{namespacesetuptools_a2a9aa3f4107914fedf47fbf0b6c97620}\label{namespacesetuptools_a2a9aa3f4107914fedf47fbf0b6c97620}} 
+list {\bfseries lib2to3\+\_\+fixer\+\_\+packages} = \mbox{[}\textquotesingle{}lib2to3.\+fixes\textquotesingle{}\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_af3f752d8ed43dd0bf1640292cf7f2540}\label{namespacesetuptools_af3f752d8ed43dd0bf1640292cf7f2540}} 
+{\bfseries find\+\_\+packages} = \mbox{\hyperlink{classsetuptools_1_1_package_finder_a0ccdb7e47a8fbb515482bf3e6044e7ac}{Package\+Finder.\+find}}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_aca679eba14fa84f44af47d19f837694b}\label{namespacesetuptools_aca679eba14fa84f44af47d19f837694b}} 
+{\bfseries find\+\_\+namespace\+\_\+packages} = \mbox{\hyperlink{classsetuptools_1_1_package_finder_a0ccdb7e47a8fbb515482bf3e6044e7ac}{PEP420\+Package\+Finder.\+find}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Extensions to the 'distutils' for large or complex distributions\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_a9d3e6b5f82f1d22fb1d7ad0daf6018f6}\label{namespacesetuptools_a9d3e6b5f82f1d22fb1d7ad0daf6018f6}} 
+\index{setuptools@{setuptools}!findall@{findall}}
+\index{findall@{findall}!setuptools@{setuptools}}
+\doxysubsubsection{\texorpdfstring{findall()}{findall()}}
+{\footnotesize\ttfamily def setuptools.\+findall (\begin{DoxyParamCaption}\item[{}]{dir = {\ttfamily os.curdir} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find all files under 'dir' and return the list of full filenames.
+Unless dir is '.', return full filenames with dir prepended.
+\end{DoxyVerb}
+ 

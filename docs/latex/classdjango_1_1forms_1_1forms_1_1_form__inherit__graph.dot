@@ -1,0 +1,38 @@
+digraph "django.forms.forms.Form"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.forms.forms.Form",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="django.forms.forms.BaseForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1forms_1_1_base_form.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="metaclass",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="django.forms.forms.Declarative\lFieldsMetaclass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1forms_1_1_declarative_fields_metaclass.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="django.forms.widgets.Media\lDefiningClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1widgets_1_1_media_defining_class.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="django.contrib.admin.helpers.\lActionForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1helpers_1_1_action_form.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="django.contrib.admin.views.main.\lChangeListSearchForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1views_1_1main_1_1_change_list_search_form.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="django.contrib.auth.forms.\lAdminPasswordChangeForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1forms_1_1_admin_password_change_form.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="django.contrib.auth.forms.\lAuthenticationForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1forms_1_1_authentication_form.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="django.contrib.admin.forms.\lAdminAuthenticationForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="django.contrib.auth.forms.\lPasswordResetForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1forms_1_1_password_reset_form.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="django.contrib.auth.forms.\lSetPasswordForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1forms_1_1_set_password_form.html",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="django.contrib.auth.forms.\lPasswordChangeForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1forms_1_1_password_change_form.html",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="django.contrib.admin.forms.\lAdminPasswordChangeForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_password_change_form.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="django.forms.formsets.ManagementForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1formsets_1_1_management_form.html",tooltip=" "];
+}

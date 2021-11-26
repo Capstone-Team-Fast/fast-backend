@@ -1,0 +1,118 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector}{}\doxysection{django.\+contrib.\+postgres.\+search.\+Search\+Vector Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector}\index{django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+search.\+Search\+Vector\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+search.\+Search\+Vector\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_ab0eb8d04d547b290c739bd74c4357292}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$expressions, config=None, weight=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a85b56d98effffcc5ae139d1cf5a087c7}{resolve\+\_\+expression}} (self, query=None, allow\+\_\+joins=True, reuse=None, summarize=False, for\+\_\+save=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a20b770d5d88a5d8d2c6b3f60feb66e07}{as\+\_\+sql}} (self, compiler, connection, function=None, template=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_abd672aa5ae877ab20c084d22747d29ec}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_abd672aa5ae877ab20c084d22747d29ec}} 
+{\bfseries config}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a4ac1b72fe53db53129c9046cbdba43e3}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a4ac1b72fe53db53129c9046cbdba43e3}} 
+{\bfseries weight}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a22f06d500f15936273bf4454e87ef0e1}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a22f06d500f15936273bf4454e87ef0e1}} 
+string {\bfseries function} = \textquotesingle{}to\+\_\+tsvector\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_aa109d6e63305272536d0ecbc83e267d3}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_aa109d6e63305272536d0ecbc83e267d3}} 
+string {\bfseries arg\+\_\+joiner} = \char`\"{} $\vert$$\vert$ \textquotesingle{} \textquotesingle{} $\vert$$\vert$ \char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_afe1498d1dda0d16559c2371e85d5be24}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_afe1498d1dda0d16559c2371e85d5be24}} 
+{\bfseries output\+\_\+field} = \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_field}{Search\+Vector\+Field}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_ab0eb8d04d547b290c739bd74c4357292}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_ab0eb8d04d547b290c739bd74c4357292}} 
+\index{django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+search.\+Search\+Vector.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{expressions,  }\item[{}]{config = {\ttfamily None},  }\item[{}]{weight = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a20b770d5d88a5d8d2c6b3f60feb66e07}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a20b770d5d88a5d8d2c6b3f60feb66e07}} 
+\index{django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+search.\+Search\+Vector.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{}]{function = {\ttfamily None},  }\item[{}]{template = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{django.\+db.\+models.\+expressions.\+Func}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a85b56d98effffcc5ae139d1cf5a087c7}\label{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a85b56d98effffcc5ae139d1cf5a087c7}} 
+\index{django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}!resolve\_expression@{resolve\_expression}}
+\index{resolve\_expression@{resolve\_expression}!django.contrib.postgres.search.SearchVector@{django.contrib.postgres.search.SearchVector}}
+\doxysubsubsection{\texorpdfstring{resolve\_expression()}{resolve\_expression()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+search.\+Search\+Vector.\+resolve\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{allow\+\_\+joins = {\ttfamily True},  }\item[{}]{reuse = {\ttfamily None},  }\item[{}]{summarize = {\ttfamily False},  }\item[{}]{for\+\_\+save = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the chance to do any preprocessing or validation before being
+added to the query.
+
+Arguments:
+ * query: the backend query implementation
+ * allow_joins: boolean allowing or denying use of joins
+   in this query
+ * reuse: a set of reusable joins for multijoins
+ * summarize: a terminal aggregate clause
+ * for_save: whether this expression about to be used in a save or update
+
+Return: an Expression to be added to the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ad831ab3b8c4ec8e2c9ea0353d6790d38}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/search.\+py\end{DoxyCompactItemize}

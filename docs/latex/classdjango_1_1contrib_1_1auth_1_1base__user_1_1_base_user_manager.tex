@@ -1,0 +1,46 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager}{}\doxysection{django.\+contrib.\+auth.\+base\+\_\+user.\+Base\+User\+Manager Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager}\index{django.contrib.auth.base\_user.BaseUserManager@{django.contrib.auth.base\_user.BaseUserManager}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+base\+\_\+user.\+Base\+User\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+base\+\_\+user.\+Base\+User\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_a079e4b86ddee69481ebbd805c0a4f2aa}{normalize\+\_\+email}} (cls, email)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_afc9a6db1973fae4566941386188c02a0}{make\+\_\+random\+\_\+password}} (self, length=10, allowed\+\_\+chars=\textquotesingle{}abcdefghjkmnpqrstuvwxyz\textquotesingle{} \textquotesingle{}ABCDEFGHJKLMNPQRSTUVWXYZ\textquotesingle{} \textquotesingle{}23456789\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_aacab57a037e2f3493bae953c77096c15}\label{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_aacab57a037e2f3493bae953c77096c15}} 
+def {\bfseries get\+\_\+by\+\_\+natural\+\_\+key} (self, username)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_afc9a6db1973fae4566941386188c02a0}\label{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_afc9a6db1973fae4566941386188c02a0}} 
+\index{django.contrib.auth.base\_user.BaseUserManager@{django.contrib.auth.base\_user.BaseUserManager}!make\_random\_password@{make\_random\_password}}
+\index{make\_random\_password@{make\_random\_password}!django.contrib.auth.base\_user.BaseUserManager@{django.contrib.auth.base\_user.BaseUserManager}}
+\doxysubsubsection{\texorpdfstring{make\_random\_password()}{make\_random\_password()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+base\+\_\+user.\+Base\+User\+Manager.\+make\+\_\+random\+\_\+password (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{length = {\ttfamily 10},  }\item[{}]{allowed\+\_\+chars = {\ttfamily \textquotesingle{}abcdefghjkmnpqrstuvwxyz\textquotesingle{} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}ABCDEFGHJKLMNPQRSTUVWXYZ\textquotesingle{} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\textquotesingle{}23456789\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a random password with the given length and given
+allowed_chars. The default value of allowed_chars does not have "I" or
+"O" or letters and digits that look similar -- just to avoid confusion.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_a079e4b86ddee69481ebbd805c0a4f2aa}\label{classdjango_1_1contrib_1_1auth_1_1base__user_1_1_base_user_manager_a079e4b86ddee69481ebbd805c0a4f2aa}} 
+\index{django.contrib.auth.base\_user.BaseUserManager@{django.contrib.auth.base\_user.BaseUserManager}!normalize\_email@{normalize\_email}}
+\index{normalize\_email@{normalize\_email}!django.contrib.auth.base\_user.BaseUserManager@{django.contrib.auth.base\_user.BaseUserManager}}
+\doxysubsubsection{\texorpdfstring{normalize\_email()}{normalize\_email()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+base\+\_\+user.\+Base\+User\+Manager.\+normalize\+\_\+email (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{email }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Normalize the email address by lowercasing the domain part of it.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/base\+\_\+user.\+py\end{DoxyCompactItemize}

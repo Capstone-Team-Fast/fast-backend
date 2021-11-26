@@ -1,0 +1,76 @@
+\hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field}{}\doxysection{django.\+forms.\+fields.\+Date\+Field Class Reference}
+\label{classdjango_1_1forms_1_1fields_1_1_date_field}\index{django.forms.fields.DateField@{django.forms.fields.DateField}}
+
+
+Inheritance diagram for django.\+forms.\+fields.\+Date\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+fields.\+Date\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_date_field_a8f4111aa451cb84d666a1bb0ab340263}{to\+\_\+python}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_date_field_a036c94cebee3226700417494fc454435}{strptime}} (self, value, format)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field_a4b637ef2f107503ecc566cbce2b05815}\label{classdjango_1_1forms_1_1fields_1_1_date_field_a4b637ef2f107503ecc566cbce2b05815}} 
+{\bfseries widget} = \mbox{\hyperlink{classdjango_1_1forms_1_1widgets_1_1_date_input}{Date\+Input}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field_a66c7e28584c4a5825baa9a733e645e42}\label{classdjango_1_1forms_1_1fields_1_1_date_field_a66c7e28584c4a5825baa9a733e645e42}} 
+{\bfseries input\+\_\+formats} = formats.\+get\+\_\+format\+\_\+lazy(\textquotesingle{}DATE\+\_\+\+INPUT\+\_\+\+FORMATS\textquotesingle{})
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_date_field_ab34324437cc8a0c1e909643635c50ea5}{default\+\_\+error\+\_\+messages}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field_a036c94cebee3226700417494fc454435}\label{classdjango_1_1forms_1_1fields_1_1_date_field_a036c94cebee3226700417494fc454435}} 
+\index{django.forms.fields.DateField@{django.forms.fields.DateField}!strptime@{strptime}}
+\index{strptime@{strptime}!django.forms.fields.DateField@{django.forms.fields.DateField}}
+\doxysubsubsection{\texorpdfstring{strptime()}{strptime()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Date\+Field.\+strptime (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{format }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_base_temporal_field}{django.\+forms.\+fields.\+Base\+Temporal\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field_a8f4111aa451cb84d666a1bb0ab340263}\label{classdjango_1_1forms_1_1fields_1_1_date_field_a8f4111aa451cb84d666a1bb0ab340263}} 
+\index{django.forms.fields.DateField@{django.forms.fields.DateField}!to\_python@{to\_python}}
+\index{to\_python@{to\_python}!django.forms.fields.DateField@{django.forms.fields.DateField}}
+\doxysubsubsection{\texorpdfstring{to\_python()}{to\_python()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Date\+Field.\+to\+\_\+python (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate that the input can be converted to a date. Return a Python
+datetime.date object.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_base_temporal_field}{django.\+forms.\+fields.\+Base\+Temporal\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_date_field_ab34324437cc8a0c1e909643635c50ea5}\label{classdjango_1_1forms_1_1fields_1_1_date_field_ab34324437cc8a0c1e909643635c50ea5}} 
+\index{django.forms.fields.DateField@{django.forms.fields.DateField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.forms.fields.DateField@{django.forms.fields.DateField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+forms.\+fields.\+Date\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Enter a valid date.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/fields.\+py\end{DoxyCompactItemize}

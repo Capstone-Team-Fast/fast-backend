@@ -1,0 +1,125 @@
+\hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying}{}\doxysection{pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying Class Reference}
+\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying}\index{pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a157200b312e1e7a6034187bb0fbc1a25}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a157200b312e1e7a6034187bb0fbc1a25}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, t.\+Callable\mbox{[}\mbox{[}t.\+Union\mbox{[}int, float\mbox{]}\mbox{]}, None\mbox{]} sleep=sleep, \char`\"{}stop\+\_\+base\char`\"{} stop=stop\+\_\+never, \char`\"{}wait\+\_\+base\char`\"{} wait=\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1wait_1_1wait__none}{wait\+\_\+none}}(), \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1retry_1_1retry__base}{retry\+\_\+base}} retry=\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1retry_1_1retry__if__exception__type}{retry\+\_\+if\+\_\+exception\+\_\+type}}(), t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]} before=before\+\_\+nothing, t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]} after=after\+\_\+nothing, t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}\mbox{]} before\+\_\+sleep=None, bool reraise=False, t.\+Type\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_retry_error}{Retry\+Error}}\mbox{]} retry\+\_\+error\+\_\+cls=\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_retry_error}{Retry\+Error}}, t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, t.\+Any\mbox{]}\mbox{]} retry\+\_\+error\+\_\+callback=None)
+\item 
+\char`\"{}Base\+Retrying\char`\"{} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ab5c09e65ae6e2adebba1441b10bd57a9}{copy}} (self, t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}t.\+Union\mbox{[}int, float\mbox{]}\mbox{]}, None\mbox{]}, object\mbox{]} sleep=\+\_\+unset, t.\+Union\mbox{[}\char`\"{}stop\+\_\+base\char`\"{}, object\mbox{]} stop=\+\_\+unset, t.\+Union\mbox{[}\char`\"{}wait\+\_\+base\char`\"{}, object\mbox{]} wait=\+\_\+unset, t.\+Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1retry_1_1retry__base}{retry\+\_\+base}}, object\mbox{]} retry=\+\_\+unset, t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}, object\mbox{]} before=\+\_\+unset, t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}, object\mbox{]} after=\+\_\+unset, t.\+Union\mbox{[}t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}\mbox{]}, object\mbox{]} before\+\_\+sleep=\+\_\+unset, t.\+Union\mbox{[}bool, object\mbox{]} reraise=\+\_\+unset, t.\+Union\mbox{[}t.\+Type\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_retry_error}{Retry\+Error}}\mbox{]}, object\mbox{]} retry\+\_\+error\+\_\+cls=\+\_\+unset, t.\+Union\mbox{[}t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, t.\+Any\mbox{]}\mbox{]}, object\mbox{]} retry\+\_\+error\+\_\+callback=\+\_\+unset)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ab7b603bd6b45892353edba570730b8d2}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ab7b603bd6b45892353edba570730b8d2}} 
+str {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+t.\+Dict\mbox{[}str, t.\+Any\mbox{]} \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aaac76bfd6880c6ba7c3e2f83f80e3663}{statistics}} (self)
+\item 
+Wrapped\+Fn \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ac425e76589ab1ebafc9603fc6f5d6784}{wraps}} (self, Wrapped\+Fn f)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aef480c880418aa3f0688687209ce50d7}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aef480c880418aa3f0688687209ce50d7}} 
+None {\bfseries begin} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a5606e1522961712b7e8693caf58a4d9c}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a5606e1522961712b7e8693caf58a4d9c}} 
+t.\+Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_do_attempt}{Do\+Attempt}}, \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_do_sleep}{Do\+Sleep}}, t.\+Any\mbox{]} {\bfseries iter} (self, \char`\"{}Retry\+Call\+State\char`\"{} retry\+\_\+state)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a3ea9b4e00e29cd042bc8d0b8be4d9339}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a3ea9b4e00e29cd042bc8d0b8be4d9339}} 
+t.\+Generator\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_attempt_manager}{Attempt\+Manager}}, None, None\mbox{]} {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a06f44f62fbbf7a16065d458e2f368581}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a06f44f62fbbf7a16065d458e2f368581}} 
+\+\_\+\+Ret\+ValT {\bfseries \+\_\+\+\_\+call\+\_\+\+\_\+} (self, t.\+Callable\mbox{[}..., \+\_\+\+Ret\+ValT\mbox{]} fn, $\ast$t.\+Any args, $\ast$$\ast$t.\+Any kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a9d97fa089a33ae73adbdc338f11100a7}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a9d97fa089a33ae73adbdc338f11100a7}} 
+{\bfseries sleep}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ae8283d304a9618d0216957317fa5eaed}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ae8283d304a9618d0216957317fa5eaed}} 
+{\bfseries stop}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a95d8004fd93876c471b494e6d937fa4a}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a95d8004fd93876c471b494e6d937fa4a}} 
+{\bfseries wait}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aa6cadd235e48f7ef8f89e77a6acc3daf}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aa6cadd235e48f7ef8f89e77a6acc3daf}} 
+{\bfseries retry}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a09dd9fd66fdf26c183ef972cd2a576a7}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a09dd9fd66fdf26c183ef972cd2a576a7}} 
+{\bfseries before}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a30a5819f77176f9a2c9ecade5c29e454}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a30a5819f77176f9a2c9ecade5c29e454}} 
+{\bfseries after}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a486c28542b77067e5026a6b1cd6b2e7a}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a486c28542b77067e5026a6b1cd6b2e7a}} 
+{\bfseries before\+\_\+sleep}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a75520fa87ff6083c08e871460f495c4c}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a75520fa87ff6083c08e871460f495c4c}} 
+{\bfseries reraise}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a9e985b4d3ee1bbae3085f0010631ea69}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_a9e985b4d3ee1bbae3085f0010631ea69}} 
+{\bfseries retry\+\_\+error\+\_\+cls}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ac2db7468722e57ede5851fb9e0dbfc6f}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ac2db7468722e57ede5851fb9e0dbfc6f}} 
+{\bfseries retry\+\_\+error\+\_\+callback}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ab5c09e65ae6e2adebba1441b10bd57a9}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ab5c09e65ae6e2adebba1441b10bd57a9}} 
+\index{pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}!copy@{copy}}
+\index{copy@{copy}!pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily  \char`\"{}Base\+Retrying\char`\"{} pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying.\+copy (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}t.\+Union\mbox{[}int, float\mbox{]}\mbox{]}, None\mbox{]}, object\mbox{]} }]{sleep = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}\char`\"{}stop\+\_\+base\char`\"{}, object\mbox{]} }]{stop = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}\char`\"{}wait\+\_\+base\char`\"{}, object\mbox{]} }]{wait = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1retry_1_1retry__base}{retry\+\_\+base}}, object\mbox{]} }]{retry = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}, object\mbox{]} }]{before = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}, object\mbox{]} }]{after = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, None\mbox{]}\mbox{]}, object\mbox{]} }]{before\+\_\+sleep = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}bool, object\mbox{]} }]{reraise = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}t.\+Type\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1_retry_error}{Retry\+Error}}\mbox{]}, object\mbox{]} }]{retry\+\_\+error\+\_\+cls = {\ttfamily \+\_\+unset},  }\item[{t.\+Union\mbox{[}t.\+Optional\mbox{[}t.\+Callable\mbox{[}\mbox{[}\char`\"{}Retry\+Call\+State\char`\"{}\mbox{]}, t.\+Any\mbox{]}\mbox{]}, object\mbox{]} }]{retry\+\_\+error\+\_\+callback = {\ttfamily \+\_\+unset} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Copy this object with some parameters changed if needed.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aaac76bfd6880c6ba7c3e2f83f80e3663}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_aaac76bfd6880c6ba7c3e2f83f80e3663}} 
+\index{pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}!statistics@{statistics}}
+\index{statistics@{statistics}!pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}}
+\doxysubsubsection{\texorpdfstring{statistics()}{statistics()}}
+{\footnotesize\ttfamily  t.\+Dict\mbox{[}str, t.\+Any\mbox{]} pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying.\+statistics (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary of runtime statistics.
+
+This dictionary will be empty when the controller has never been
+ran. When it is running or has ran previously it should have (but
+may not) have useful and/or informational keys and values when
+running is underway and/or completed.
+
+.. warning:: The keys in this dictionary **should** be some what
+             stable (not changing), but there existence **may**
+             change between major releases as new statistics are
+             gathered or removed so before accessing keys ensure that
+             they actually exist and handle when they do not.
+
+.. note:: The values in this dictionary are local to the thread
+          running call (so if multiple threads share the same retrying
+          object - either directly or indirectly) they will each have
+          there own view of statistics they have collected (in the
+          future we may provide a way to aggregate the various
+          statistics from each thread).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ac425e76589ab1ebafc9603fc6f5d6784}\label{classpip_1_1__vendor_1_1tenacity_1_1_base_retrying_ac425e76589ab1ebafc9603fc6f5d6784}} 
+\index{pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}!wraps@{wraps}}
+\index{wraps@{wraps}!pip.\_vendor.tenacity.BaseRetrying@{pip.\_vendor.tenacity.BaseRetrying}}
+\doxysubsubsection{\texorpdfstring{wraps()}{wraps()}}
+{\footnotesize\ttfamily  Wrapped\+Fn pip.\+\_\+vendor.\+tenacity.\+Base\+Retrying.\+wraps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{Wrapped\+Fn}]{f }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Wrap a function for retrying.
+
+:param f: A function to wraps for retrying.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpip_1_1__vendor_1_1tenacity_1_1__asyncio_1_1_async_retrying_afd273c2e178cad214756a8c8afb5a95a}{pip.\+\_\+vendor.\+tenacity.\+\_\+asyncio.\+Async\+Retrying}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/tenacity/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}
