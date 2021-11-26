@@ -73,6 +73,12 @@ class RouteListView(APIView):
         routes = json.loads(routes)
         routes = routes.get('routes')
 
+        f = open('routing_log.txt', 'a')
+        f.write('Route Data:\n')
+        f.write(routes)
+        f.write('\n')
+        f.close()
+
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(data=routes, many=True)
         if serializer.is_valid():
