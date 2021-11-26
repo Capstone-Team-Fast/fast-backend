@@ -17,6 +17,7 @@ class RouteSerializer(serializers.ModelSerializer):
         f.write('\n')
         f.write('itinerary_data:\n')
         f.write(itinerary_data)
+        f.close()
 
         assigned_to = Driver.objects.get_or_create(**assigned_to_data)
 
