@@ -74,7 +74,7 @@ class RouteListView(APIView):
         routes = routes.get('routes')
 
         # TODO: ensure routes are correctly going through serializer
-        serializer = RouteSerializer(routes, many=True)
+        serializer = RouteSerializer(data=routes, many=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
