@@ -70,7 +70,6 @@ class RouteListView(APIView):
 
         route_manager = RouteManager(settings.NEO4J_BOLT_URL)
         routes = route_manager.request_routes(departure, clients, drivers)
-        routes = json.loads(routes)
 
         now = datetime.now()
         f = open('routing_log.txt', 'a')
@@ -82,6 +81,7 @@ class RouteListView(APIView):
         f.close()
 
         # TODO: Test this after getting real data from routing app
+        routes = json.loads(routes)
         # routes = routes.get('routes')
 
         # TODO: ensure routes are correctly going through serializer
