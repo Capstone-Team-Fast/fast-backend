@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from backend.models import Route, Driver, Client
-from serializers import DriverSerializer, ClientSerializer
+from backend.serializers import DriverSerializer, ClientSerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
