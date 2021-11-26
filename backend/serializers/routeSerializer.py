@@ -11,6 +11,13 @@ class RouteSerializer(serializers.ModelSerializer):
         assigned_to_data = validated_data.pop('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
+        f = open('routing_log', 'a')
+        f.write('Assigned_To Data:\n')
+        f.write(assigned_to_data)
+        f.write('\n')
+        f.write('itinerary_data:\n')
+        f.write(itinerary_data)
+
         assigned_to = Driver.objects.get_or_create(**assigned_to_data)
 
         for i_data in itinerary_data:
