@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 
 from django.http import Http404
@@ -67,22 +68,28 @@ class RouteListView(APIView):
 
         # driver_serializer = DriverSerializer(drivers, many=True)
 
-        # TODO: Test routing app function call
         route_manager = RouteManager(settings.NEO4J_BOLT_URL)
         routes = route_manager.request_routes(departure, clients, drivers)
 
+        now = datetime.now()
         f = open('routing_log.txt', 'a')
-        f.write('Route Data:\n')
+        f.write('Route Data - ')
+        f.write(now.strftime("%m/%d/%Y, %H:%M:%S"))
+        f.write(' : \n')
         f.write(routes)
         f.write('\n')
         f.close()
 
-        routes = json.loads(routes)
-        routes = routes.get('routes')
+        # TODO: Test this after getting real data from routing app
+        # routes = json.loads(routes)
+        # routes = routes.get('routes')
 
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(data=routes, many=True)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        # if serializer.is_valid():
+        #     serializer.save()
+        #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(routes, status=status.HTTP_200_OK)
