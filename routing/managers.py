@@ -198,6 +198,11 @@ class RouteManager:
         SOLVED = 3
         INFEASIBLE = 4
 
+    class _Status(enum.Enum):
+        ALL_LOCATIONS_ASSIGNED = 1
+        SOME_LOCATIONS_ASSIGNED = 2
+        NO_LOCATIONS_ASSIGNED = 3
+
     class _Alphabet(enum.Enum):
         FALSE = 0
         TRUE = 1
@@ -401,8 +406,9 @@ class RouteManager:
     @staticmethod
     def response_template():
         return json.dumps({
-            'solver_status': 1,
-            'message': '',
+            'solver_status': 1,  # Different status code based on one of 3 scenarios
+            'message': '',  # Short description
+            'others': [],  # Clients' id not assigned
             'description': '',
             'routes': [
                 {
@@ -544,7 +550,20 @@ class NodeParser:
         if drivers:
             for driver in drivers:
                 driver = json.loads(driver)
-                driver_node = NodeParser.parse_driver(driver).save()
+                driver_node = NodeParser.parse_driver(driver)
+                if driver_node not in Driver.nodes.all():
+                    driver_node.save()
+                else:
+                    node_set = Driver.nodes.filter(first_name=driver_node.first_name, last_name=driver_node.last_name,
+                                                   employee_status=driver_node.employee_status)
+                    object_node = node_set[0]
+                    object_node.capacity = driver_node.capacity
+                    object_node.start_time = driver_node.start_time
+                    object_node.end_time = driver_node.end_time
+                    object_node.max_delivery = driver_node.max_delivery
+                    driver_node = object_node
+                    driver_node.save()
+
                 driver_node = NodeParser.set_languages(driver_node, driver['languages'])
                 driver_node = NodeParser.set_availability(driver_node, driver['availability'])
                 node_drivers.append(driver_node)
@@ -552,13 +571,19 @@ class NodeParser:
 
     @staticmethod
     def create_departure(departure: str):
-        node_departures = None
+        node_departure = None
         if departure:
             departure = json.loads(departure)
-            node_departures = Depot().save()
+            node_departure = Depot()
+            if node_departure not in Depot.nodes.all():
+                node_departure.save()
+            else:
+                node_set = Depot.nodes.filter(uid=node_departure.uid, is_center=node_departure.is_center)
+                node_departure = node_set[0]
+                node_departure.save()
             address = NodeParser.parse_address(departure['location'])
-            node_departures.set_address(address)
-        return node_departures
+            node_departure.set_address(address)
+        return node_departure
 
     @staticmethod
     def create_customers(customers: list):
