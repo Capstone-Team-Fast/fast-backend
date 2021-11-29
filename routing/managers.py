@@ -574,13 +574,12 @@ class NodeParser:
         node_departure = None
         if departure:
             departure = json.loads(departure)
-            node_departure = Depot()
-            if node_departure not in Depot.nodes.all():
-                node_departure.save()
-            else:
-                node_set = Depot.nodes.filter(uid=node_departure.uid, is_center=node_departure.is_center)
+            node_departure = NodeParser.parse_depot(depot=departure)
+            if node_departure in Depot.nodes.all():
+                node_set = Depot.nodes.filter(external_id=node_departure.external_id,
+                                              is_center=node_departure.is_center)
                 node_departure = node_set[0]
-                node_departure.save()
+            node_departure.save()
             address = NodeParser.parse_address(departure['location'])
             node_departure.set_address(address)
         return node_departure
@@ -591,8 +590,11 @@ class NodeParser:
         if customers:
             for location in customers:
                 location = json.loads(location)
-                customer = NodeParser.parse_customer(location).save()
-
+                customer = NodeParser.parse_customer(location)
+                if customer in Customer.nodes.all():
+                    node_set = Customer.nodes.filter(external_id=customer.external_id)
+                    customer = node_set[0]
+                customer.save()
                 address = NodeParser.parse_address(location['location'])
                 if address not in Address.nodes.all():
                     address.save()
@@ -617,15 +619,18 @@ class NodeParser:
         if employee_status == Driver.Role.VOLUNTEER.value:
             driver_node.max_delivery = driver['delivery_limit']
         if driver.get('duration'):
-            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=driver['duration'])
+            driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=int(driver['duration']))
         else:
             driver_node.end_time = driver_node.start_time + datetime.timedelta(hours=24)
         return driver_node
 
     @staticmethod
     def parse_customer(customer: dict):
-        return Customer(external_id=customer['id'], demand=customer['quantity'],
-                        is_center=customer['location']['is_center'])
+        return Customer(external_id=customer['id'], demand=customer['quantity'])
+
+    @staticmethod
+    def parse_depot(depot: dict):
+        return Depot(external_id=depot['location']['id'])
 
     @staticmethod
     def parse_address(geographical_location: dict):

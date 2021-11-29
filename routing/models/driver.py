@@ -137,7 +137,7 @@ class Driver(StructuredNode):
     def __eq__(self, other):
         if isinstance(other, type(self)):
             return (self.first_name == other.first_name and self.last_name == other.last_name
-                    and self.employee_status == other.employee_status)
+                    and self.employee_status == other.employee_status and self.external_id == other.external_id)
         raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
