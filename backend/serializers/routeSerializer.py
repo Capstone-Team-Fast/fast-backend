@@ -11,7 +11,9 @@ class RouteSerializer(serializers.ModelSerializer):
     def get_assigned_to(self, obj):
         driver_id = obj.assigned_to.id
         f = open('Route-driver_log.txt', 'a')
-        f.write('Assigned_to Data - \n')
+        f.write('Object = ')
+        f.write(obj)
+        f.write('\nAssigned_to Data - \n')
         f.write(driver_id)
         f.write('\n')
         f.close()
