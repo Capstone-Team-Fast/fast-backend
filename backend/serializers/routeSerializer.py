@@ -15,7 +15,8 @@ class RouteSerializer(serializers.ModelSerializer):
 
         for i_data in itinerary_data:
             if i_data.get('is_center') == False or i_data.get('is_center') == 'false':
-                itinerary = Client.objects.get_or_create(**i_data)
+                i_id = i_data.get('id')
+                itinerary = Client.objects.get_or_create(id=i_id)
 
         return Route.objects.create(**validated_data)
 
