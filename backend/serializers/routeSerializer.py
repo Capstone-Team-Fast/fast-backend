@@ -4,7 +4,7 @@ from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
-    assigned_to = DriverSerializer
+    # assigned_to = DriverSerializer
     itinerary = ItinerarySerializer(many=True)
 
     def create(self, validated_data):
@@ -12,7 +12,8 @@ class RouteSerializer(serializers.ModelSerializer):
         itinerary_data = validated_data.pop('itinerary')
 
         emp_id = assigned_to_data.get('id')
-        print('employee id: ' + emp_id)
+        print('employee id: ' + emp_id + '\n')
+        print(assigned_to_data)
 
         driver = Driver.objects.get_or_create(id=emp_id)
 
