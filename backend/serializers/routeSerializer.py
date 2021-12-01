@@ -1,17 +1,19 @@
 from rest_framework import serializers
 from backend.models import Route, Driver, Client
-from backend.serializers import DriverSerializer, ClientSerializer
+from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
     assigned_to = DriverSerializer
-    itinerary = ClientSerializer(many=True)
+    itinerary = ItinerarySerializer(many=True)
 
     def create(self, validated_data):
         assigned_to_data = validated_data.pop('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
-        assigned_to = Driver.objects.get_or_create(**assigned_to_data)
+        emp_id = assigned_to_data.get('id')
+
+        assigned_to = Driver.objects.get_or_create(**emp_id)
 
         route = Route.objects.create(**validated_data)
 

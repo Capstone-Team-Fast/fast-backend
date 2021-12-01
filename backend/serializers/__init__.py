@@ -7,3 +7,4 @@ from .locationSerializer import LocationSerializer
 from .clientRoutingSerializer import ClientRoutingSerializer
 from .clientSerializer import ClientSerializer
 from .driverSerializer import DriverSerializer
+from .itinerarySerializer import ItinerarySerializer
