@@ -14,9 +14,13 @@ class RouteSerializer(serializers.ModelSerializer):
         emp_id = assigned_to_data.get('id')
         print('employee id: ' + emp_id)
 
-        assigned_to = Driver.objects.get_or_create(id=emp_id)
+        driver = Driver.objects.get_or_create(id=emp_id)
+
+        assigned_to = driver.id
 
         route = Route.objects.create(**validated_data)
+
+        route.assigned_to.add(assigned_to)
 
         for i_data in itinerary_data:
             if i_data.get('is_center') == False or i_data.get('is_center') == 'false':
