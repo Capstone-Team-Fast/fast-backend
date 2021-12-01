@@ -15,6 +15,12 @@ class RouteSerializer(serializers.ModelSerializer):
         print('employee id: ' + emp_id + '\n')
         print(assigned_to_data)
 
+        f = open('routing_log.txt', 'a')
+        f.write('Assigned_to Data - \n')
+        f.write(assigned_to_data)
+        f.write('\n')
+        f.close()
+
         driver = Driver.objects.get_or_create(id=emp_id)
 
         assigned_to = driver.id
