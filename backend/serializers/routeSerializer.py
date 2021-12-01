@@ -21,7 +21,7 @@ class RouteSerializer(serializers.ModelSerializer):
         # f.close()
 
         driver = Driver.objects.get_or_create(id=emp_id)
-        driver = DriverSerializer(driver)
+        driver = DriverSerializer(data=driver)
         if driver.is_valid():
             driver = driver.save()
         else:
