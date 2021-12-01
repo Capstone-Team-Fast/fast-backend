@@ -14,11 +14,11 @@ class RouteSerializer(serializers.ModelSerializer):
 
         emp_id = assigned_to_data.get('id')
 
-        f = open('driver_log.txt', 'a')
-        f.write('\nAssigned_to Data - \n')
-        f.write(emp_id)
-        f.write('\n')
-        f.close()
+        # f = open('driver_log.txt', 'a')
+        # f.write('\nAssigned_to Data - \n')
+        # f.write(emp_id)
+        # f.write('\n')
+        # f.close()
 
         # driver = Driver.objects.get_or_create(id=emp_id)
         #
