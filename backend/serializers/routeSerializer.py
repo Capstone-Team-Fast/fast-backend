@@ -9,7 +9,7 @@ class RouteSerializer(serializers.ModelSerializer):
     itinerary = ItinerarySerializer(many=True)
 
     def get_assigned_to(self, obj):
-        driver_id = obj.assigned_to.id
+        driver_id = obj.assigned_to.get('id')
         f = open('driver_log.txt', 'a')
         f.write('Object = ')
         f.write(obj)
