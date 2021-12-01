@@ -4,7 +4,7 @@ from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
-    # assigned_to = DriverSerializer
+    assigned_to = DriverSerializer
     itinerary = ItinerarySerializer(many=True)
 
     def create(self, validated_data):
@@ -15,7 +15,7 @@ class RouteSerializer(serializers.ModelSerializer):
         print('employee id: ' + emp_id + '\n')
         print(assigned_to_data)
 
-        f = open('routing_log.txt', 'a')
+        f = open('Route-driver_log.txt', 'a')
         f.write('Assigned_to Data - \n')
         f.write(assigned_to_data)
         f.write('\n')
