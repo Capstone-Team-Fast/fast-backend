@@ -10,7 +10,11 @@ class RouteSerializer(serializers.ModelSerializer):
 
     def get_assigned_to(self, obj):
         driver_id = obj.get('id')
-        print('Driver ID: ' + driver_id)
+        f = open('Route-driver_log.txt', 'a')
+        f.write('Assigned_to Data - \n')
+        f.write(driver_id)
+        f.write('\n')
+        f.close()
         return driver_id
 
     def create(self, validated_data):
@@ -21,11 +25,7 @@ class RouteSerializer(serializers.ModelSerializer):
         # print('employee id: ' + emp_id + '\n')
         # print(assigned_to_data)
         #
-        f = open('Route-driver_log.txt', 'a')
-        f.write('Assigned_to Data - \n')
-        f.write(assigned_to_data)
-        f.write('\n')
-        f.close()
+
 
         # driver = Driver.objects.get_or_create(id=emp_id)
         #
