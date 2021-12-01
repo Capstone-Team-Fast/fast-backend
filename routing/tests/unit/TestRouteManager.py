@@ -7,7 +7,7 @@ from neomodel import config, db
 
 from backend import settings
 from routing import constant
-from routing.managers import RouteManager, NodeParser
+from routing.managers import RouteManager
 from routing.tests.unit import data
 
 
@@ -54,21 +54,11 @@ class MyTestCase(unittest.TestCase):
             'location': {'id': 7, 'address': '9999 Bagel St', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68123,
                          'is_center': False, 'room_number': '123', 'latitude': None, 'longitude': None}
         })]
-        departure = json.dumps({
-            'location': {
-                'id': 7,
-                'address': '9999 Bagel St',
-                'city': 'Omaha',
-                'state': 'NE',
-                'zipcode': 68123,
-                'is_center': False,
-                'room_number': None,
-                'latitude': None,
-                'longitude': None
-            }
-        })
+        departure = data.departure
+
         response = route_manager.request_routes(departure=departure, locations=locations, drivers=drivers)
         self.assertEqual(response, route_manager.response_template())
+
 
     def test_request_route_empty_connection_string(self):
         with self.assertRaises(ValueError):
