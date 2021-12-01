@@ -5,35 +5,27 @@ from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
-    assigned_to = SerializerMethodField()
     itinerary = ItinerarySerializer(many=True)
 
-    def get_assigned_to(self, obj):
-        driver_id = obj.assigned_to.get('id')
-        f = open('driver_log.txt', 'a')
-        f.write('Object = ')
-        f.write(obj)
-        f.write('\nAssigned_to Data - \n')
-        f.write(driver_id)
-        f.write('\n')
-        f.close()
-        return driver_id
-
     def create(self, validated_data):
-        assigned_to_data = validated_data.get('assigned_to')
+        assigned_to_data = validated_data.pop('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
-        # emp_id = assigned_to_data.get('id')
-        # print('employee id: ' + emp_id + '\n')
-        # print(assigned_to_data)
-        #
+        emp_id = assigned_to_data.get('id')
 
+        f = open('driver_log.txt', 'a')
+        f.write('Object = ')
+        f.write(assigned_to_data)
+        f.write('\nAssigned_to Data - \n')
+        f.write(emp_id)
+        f.write('\n')
+        f.close()
 
         # driver = Driver.objects.get_or_create(id=emp_id)
         #
         # assigned_to = driver.id
 
-        route = Route.objects.create(assigned_to=assigned_to_data, **validated_data)
+        route = Route.objects.create(assigned_to=emp_id, **validated_data)
 
         # route.assigned_to.add(assigned_to)
 
