@@ -59,7 +59,6 @@ class MyTestCase(unittest.TestCase):
         response = route_manager.request_routes(departure=departure, locations=locations, drivers=drivers)
         self.assertEqual(response, route_manager.response_template())
 
-
     def test_request_route_empty_connection_string(self):
         with self.assertRaises(ValueError):
             route_manager = RouteManager(db_connection='')
@@ -109,6 +108,9 @@ class MyTestCase(unittest.TestCase):
 
         # Cleanup database
         # data.cleanup()
+
+    def test_request_route_with_invalid_addresses(self):
+        pass
 
 
 if __name__ == '__main__':

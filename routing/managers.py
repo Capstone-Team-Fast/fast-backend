@@ -202,6 +202,7 @@ class RouteManager:
         ALL_LOCATIONS_ASSIGNED = 1
         SOME_LOCATIONS_ASSIGNED = 2
         NO_LOCATIONS_ASSIGNED = 3
+        OTHER_ERROR = 4
 
     class _Alphabet(enum.Enum):
         FALSE = 0
@@ -209,6 +210,13 @@ class RouteManager:
         DONE = 2
 
     __NUMBER_OF_ITERATIONS = 1
+    __Response = {
+        'solver_status': '',    # Different status code based on one of 3 scenarios
+        'message': '',          # Short description
+        'description': '',
+        'others': [],           # Clients' id not assigned
+        'routes': [],
+    }
 
     def __init__(self, db_connection: str):
         try:
@@ -239,23 +247,22 @@ class RouteManager:
         self.__locations = NodeParser.create_customers(locations)
         self.__depot = NodeParser.create_departure(departure)
         self.__drivers_heap = self.__build_driver_heap()
-        self.__prioritize_volunteer = False
+        self.__prioritize_volunteer = self.__contains_volunteers()
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
         self.__final_locations = self.__build_routes()
         return self.__build_response()
+
+    def __contains_volunteers(self):
+        for driver in self.__drivers:
+            if driver.employee_status == Driver.Role.VOLUNTEER.value:
+                return True
+        return False
 
     def __build_response(self):
         routes = []
         for driver in self.__best_allocation:
             if not driver.route.is_empty:
                 routes.append(json.loads(driver.route.serialize()))
-
-        response = json.dumps({
-            'solver_status': '',
-            'message': '',
-            'description': '',
-            'routes': routes,
-        })
 
         print()
         for driver in self.__best_allocation:
@@ -278,7 +285,9 @@ class RouteManager:
             else:
                 print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
             print()
-        return response
+
+        RouteManager.__Response['routes'] = routes
+        return json.dumps(RouteManager.__Response)
 
     @property
     def objective_function_value(self):
