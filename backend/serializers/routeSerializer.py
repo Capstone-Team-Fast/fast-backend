@@ -12,8 +12,9 @@ class RouteSerializer(serializers.ModelSerializer):
         itinerary_data = validated_data.pop('itinerary')
 
         emp_id = assigned_to_data.get('id')
+        print('employee id: ' + emp_id)
 
-        assigned_to = Driver.objects.get_or_create(**emp_id)
+        assigned_to = Driver.objects.get_or_create(id=emp_id)
 
         route = Route.objects.create(**validated_data)
 
