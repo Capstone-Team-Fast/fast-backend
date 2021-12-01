@@ -69,7 +69,7 @@ class RouteListView(APIView):
         # driver_serializer = DriverSerializer(drivers, many=True)
 
         route_manager = RouteManager(settings.NEO4J_BOLT_URL)
-        routes = route_manager.request_routes(departure, clients, drivers)
+        routes = route_manager.request_routes_test(departure, clients, drivers)
 
         now = datetime.now()
         f = open('routing_log.txt', 'a')
