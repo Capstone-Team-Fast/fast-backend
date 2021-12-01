@@ -14,7 +14,8 @@ class RouteSerializer(serializers.ModelSerializer):
         assigned_to = Driver.objects.get_or_create(**assigned_to_data)
 
         for i_data in itinerary_data:
-            itinerary = Client.objects.get_or_create(**i_data)
+            if i_data.get('is_center') == False or i_data.get('is_center') == 'false':
+                itinerary = Client.objects.get_or_create(**i_data)
 
         return Route.objects.create(**validated_data)
 
