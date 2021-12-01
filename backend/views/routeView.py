@@ -74,14 +74,7 @@ class RouteListView(APIView):
         routes_json = json.loads(routes_json)
         routes = routes_json.get('routes')
 
-        # itinerary_list = []
-        #
-        # for route in routes:
-        #     itinerary = route.get('itinerary')
-        #     if not itinerary.get('is_center'):
-        #         i_id = itinerary.get('id')
-        #         i_obj = Client.objects.get(id=i_id)
-        #         itinerary_list.append(i_obj)
+
 
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteSerializer(data=routes, many=True)

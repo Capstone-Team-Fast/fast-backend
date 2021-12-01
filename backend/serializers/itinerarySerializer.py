@@ -9,5 +9,5 @@ class ItinerarySerializer(serializers.ModelSerializer):
         model = Client
         fields = ['id', 'user', 'first_name', 'last_name', 'comments', 'quantity', 'phone']
 
-        def create(self, validated_data):
-            return Client.objects.create(**validated_data)
+    def create(self, validated_data):
+        return Client.objects.create(**validated_data)
