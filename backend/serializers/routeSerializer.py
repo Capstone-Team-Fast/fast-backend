@@ -14,22 +14,22 @@ class RouteSerializer(serializers.ModelSerializer):
         return driver_id
 
     def create(self, validated_data):
-        assigned_to = validated_data.get('assigned_to')
+        assigned_to_data = validated_data.get('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
-        # assigned_to = assigned_to_data.get('id')
+        emp_id = assigned_to_data.get('id')
         # print('employee id: ' + emp_id + '\n')
         # print(assigned_to_data)
         #
-        # f = open('Route-driver_log.txt', 'a')
-        # f.write('Assigned_to Data - \n')
-        # f.write(assigned_to_data)
-        # f.write('\n')
-        # f.close()
+        f = open('Route-driver_log.txt', 'a')
+        f.write('Assigned_to Data - \n')
+        f.write(assigned_to_data)
+        f.write('\n')
+        f.close()
 
-        # driver = Driver.objects.get_or_create(id=emp_id)
+        driver = Driver.objects.get_or_create(id=emp_id)
         #
-        # assigned_to = driver.id
+        assigned_to = driver.id
 
         route = Route.objects.create(assigned_to=assigned_to, **validated_data)
 
