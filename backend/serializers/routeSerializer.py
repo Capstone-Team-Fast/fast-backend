@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from rest_framework.fields import SerializerMethodField
+from rest_framework.fields import SerializerMethodField, DictField
 from backend.models import Route, Driver, Client
 from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
     itinerary = ItinerarySerializer(many=True)
+    assigned_to = DictField()
 
     def create(self, validated_data):
         assigned_to_data = validated_data.pop('assigned_to')
