@@ -9,14 +9,13 @@ class RouteSerializer(serializers.ModelSerializer):
     itinerary = ItinerarySerializer(many=True)
 
     def get_assigned_to(self, obj):
-        driver_id = obj.get('id')
-        return driver_id
+        return obj.assigned_to.id
 
     def create(self, validated_data):
-        assigned_to_data = validated_data.pop('assigned_to')
+        assigned_to = validated_data.get('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
-        assigned_to = assigned_to_data.get('id')
+        # assigned_to = assigned_to_data.get('id')
         # print('employee id: ' + emp_id + '\n')
         # print(assigned_to_data)
         #
@@ -30,9 +29,9 @@ class RouteSerializer(serializers.ModelSerializer):
         #
         # assigned_to = driver.id
 
-        route = Route.objects.create(**validated_data)
+        route = Route.objects.create(assigned_to=assigned_to, **validated_data)
 
-        route.assigned_to.add(assigned_to)
+        # route.assigned_to.add(assigned_to)
 
         for i_data in itinerary_data:
             if i_data.get('is_center') == False or i_data.get('is_center') == 'false':
