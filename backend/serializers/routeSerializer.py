@@ -9,7 +9,9 @@ class RouteSerializer(serializers.ModelSerializer):
     itinerary = ItinerarySerializer(many=True)
 
     def get_assigned_to(self, obj):
-        return obj.assigned_to.id
+        driver_id = obj.get('id')
+        print('Driver ID: ' + driver_id)
+        return driver_id
 
     def create(self, validated_data):
         assigned_to = validated_data.get('assigned_to')
