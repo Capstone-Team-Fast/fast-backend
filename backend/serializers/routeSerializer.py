@@ -9,10 +9,11 @@ class RouteSerializer(serializers.ModelSerializer):
     assigned_to = DictField()
 
     def create(self, validated_data):
-        assigned_to_data = validated_data.pop('assigned_to')
+        assigned_to_data = validated_data.get('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
         emp_id = assigned_to_data.get('id')
+        validated_data["assigned_to"] = emp_id
 
         # f = open('driver_log.txt', 'a')
         # f.write('\nAssigned_to Data - \n')
@@ -29,7 +30,9 @@ class RouteSerializer(serializers.ModelSerializer):
         #
         # assigned_to = driver.id
 
-        route = Route.objects.create(assigned_to=driver, **validated_data)
+        # route = Route.objects.create(assigned_to=driver, **validated_data)
+
+        route = Route.objects.create(**validated_data)
 
         # route.assigned_to.add(assigned_to)
 
