@@ -13,7 +13,6 @@ class RouteSerializer(serializers.ModelSerializer):
         itinerary_data = validated_data.pop('itinerary')
 
         emp_id = assigned_to_data.get('id')
-        validated_data["assigned_to"] = emp_id
 
         # f = open('driver_log.txt', 'a')
         # f.write('\nAssigned_to Data - \n')
@@ -22,17 +21,16 @@ class RouteSerializer(serializers.ModelSerializer):
         # f.close()
 
         driver = Driver.objects.get_or_create(id=emp_id)
-        driver = DriverSerializer(data=driver)
-        if driver.is_valid():
-            driver = driver.save()
-        else:
-            driver = None
-        #
+        driver_serializer = DriverSerializer(data=driver)
+        driver_instance = None
+        if driver_serializer.is_valid():
+            driver_instance = driver_serializer.save()
+
         # assigned_to = driver.id
 
-        # route = Route.objects.create(assigned_to=driver, **validated_data)
+        route = Route.objects.create(assigned_to=driver_instance, **validated_data)
 
-        route = Route.objects.create(**validated_data)
+        # route = Route.objects.create(**validated_data)
 
         # route.assigned_to.add(assigned_to)
 
