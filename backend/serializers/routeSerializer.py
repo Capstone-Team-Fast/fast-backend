@@ -6,7 +6,7 @@ from backend.serializers import DriverSerializer, ItinerarySerializer
 
 class RouteSerializer(serializers.ModelSerializer):
     itinerary = ItinerarySerializer(many=True)
-    assigned_to = DictField()
+    assigned_to = DictField(allow_null=True)
 
     def create(self, validated_data):
         assigned_to_data = validated_data.pop('assigned_to')
@@ -15,7 +15,7 @@ class RouteSerializer(serializers.ModelSerializer):
         emp_id = assigned_to_data.get('id')
 
         driver = Driver.objects.get_or_create(id=emp_id)
-        driver_instance = DriverSerializer(data=driver).instance
+        # driver_instance = DriverSerializer(data=driver).instance(data=driver)
         # driver_serializer = DriverSerializer(data=driver)
         # driver_instance = None
         #
@@ -26,7 +26,8 @@ class RouteSerializer(serializers.ModelSerializer):
         # assigned_to = driver.id
         # validated_data.pop('assigned_to')
 
-        route = Route.objects.create(assigned_to=driver_instance, **validated_data)
+        route = Route.objects.create(**validated_data)
+        route.assigned_to.add(driver)
 
         # route = Route.objects.create(**validated_data)
 
