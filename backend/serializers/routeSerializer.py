@@ -25,6 +25,8 @@ class RouteSerializer(serializers.ModelSerializer):
         driver_instance = None
         if driver_serializer.is_valid():
             driver_instance = driver_serializer.save()
+        else:
+            driver_instance = 37
 
         # driver_instance = DriverSerializer(data=driver).instance
 
