@@ -77,11 +77,11 @@ class RouteListView(APIView):
 
 
         # TODO: ensure routes are correctly going through serializer
-        serializer = RouteSerializer(data=routes, many=True)
+        # serializer = RouteSerializer(data=routes, many=True)
 
-        if serializer.is_valid():
-            serializer.save()
-            return Response(routes_json, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # if serializer.is_valid():
+        #     serializer.save()
+        #     return Response(routes_json, status=status.HTTP_201_CREATED)
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        # return Response(routes_json, status=status.HTTP_200_OK)
+        return Response(routes_json, status=status.HTTP_200_OK)
