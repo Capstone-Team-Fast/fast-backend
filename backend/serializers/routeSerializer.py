@@ -22,11 +22,11 @@ class RouteSerializer(serializers.ModelSerializer):
 
         driver = Driver.objects.get_or_create(id=emp_id)
         driver_serializer = DriverSerializer(data=driver)
-        # driver_instance = None
-        # if driver_serializer.is_valid():
-            # driver_instance = driver_serializer.save()
+        driver_instance = None
+        if driver_serializer.is_valid():
+            driver_instance = driver_serializer.save()
 
-        driver_instance = DriverSerializer(data=driver).instance
+        # driver_instance = DriverSerializer(data=driver).instance
 
         # assigned_to = driver.id
         validated_data.pop('assigned_to')
