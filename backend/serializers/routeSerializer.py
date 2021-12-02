@@ -9,29 +9,23 @@ class RouteSerializer(serializers.ModelSerializer):
     assigned_to = DictField()
 
     def create(self, validated_data):
-        assigned_to_data = validated_data.get('assigned_to')
+        assigned_to_data = validated_data.pop('assigned_to')
         itinerary_data = validated_data.pop('itinerary')
 
         emp_id = assigned_to_data.get('id')
 
-        # f = open('driver_log.txt', 'a')
-        # f.write('\nAssigned_to Data - \n')
-        # f.write(emp_id)
-        # f.write('\n')
-        # f.close()
-
         driver = Driver.objects.get_or_create(id=emp_id)
-        driver_serializer = DriverSerializer(data=driver)
-        driver_instance = None
-
-        driver_instance = driver_serializer.instance(data=driver)
+        # driver_serializer = DriverSerializer(data=driver)
+        # driver_instance = None
+        #
+        # driver_instance = driver_serializer.instance(data=driver)
 
         # driver_instance = DriverSerializer(data=driver).instance
 
         # assigned_to = driver.id
-        validated_data.pop('assigned_to')
+        # validated_data.pop('assigned_to')
 
-        route = Route.objects.create(assigned_to=driver_instance, **validated_data)
+        route = Route.objects.create(assigned_to=driver, **validated_data)
 
         # route = Route.objects.create(**validated_data)
 
