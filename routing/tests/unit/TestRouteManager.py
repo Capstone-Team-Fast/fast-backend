@@ -110,7 +110,18 @@ class MyTestCase(unittest.TestCase):
         # data.cleanup()
 
     def test_request_route_with_invalid_addresses(self):
-        pass
+        departure = data.departure
+        customers = data.get_random_customers(n=1)
+        drivers = data.get_random_drivers(n=3)
+
+        # Create routes
+        route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
+        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
+        log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
+        log_filename = log_filename + '.json'
+        with open(file=log_filename, mode='w') as file:
+            json.dump(json.loads(response), file, ensure_ascii=False, indent=4)
 
 
 if __name__ == '__main__':

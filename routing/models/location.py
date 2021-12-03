@@ -140,7 +140,13 @@ class Location(StructuredNode):
 
     def __eq__(self, other):
         if issubclass(type(other), Location) and issubclass(type(self), Location):
-            return self.external_id == other.external_id and self.is_center == other.is_center
+            equal = False
+            try:
+                if self.external_id and other.external_id:
+                    equal = self.external_id == other.external_id and self.is_center == other.is_center
+            except AttributeError:
+                pass
+            return equal
         raise TypeError(f'{type(other)} and {type(self)} do not subclass {Location}.')
 
     def __hash__(self):
