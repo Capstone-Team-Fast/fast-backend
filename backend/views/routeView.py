@@ -40,6 +40,7 @@ class RoutingView(APIView):
         driver_id_list = data.get('driver_ids')
         delivery_limit = data.get('delivery_limit')
         departure = data.get('departure')
+        duration_limit = data.get('duration_limit')
 
         departure = json.dumps(departure)
 
@@ -56,6 +57,7 @@ class RoutingView(APIView):
 
         for driver_id in driver_id_list:
             driver = Driver.objects.get(id=driver_id)
+            driver.duration = duration_limit
             if driver.employee_status != 'Employee':
                 driver.delivery_limit = delivery_limit
             else:
