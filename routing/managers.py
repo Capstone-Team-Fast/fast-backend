@@ -71,14 +71,14 @@ class LocationManager:
                     if location not in Depot.nodes.all():
                         location.save()
 
-                if location.address.zipcode == 99999:
-                    print('Found!')
-
                 address = location.address
                 if address and (address.latitude is None or address.longitude is None):
                     print(f'\nRetrieving geocode for location {address}\n')
-                    address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
-                    address = address.save()
+                    try:
+                        address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
+                        address = address.save()
+                    except GeocodeError as err:
+                        raise err
 
                 if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
                     print(f'Failed to build matrix between {location} and {self.__locations}')
@@ -160,22 +160,45 @@ class LocationManager:
 class SavingsManager:
     def __init__(self, db_connection: str, depot: Address, locations: list):
         self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
-        self.__heap = self.__heapify(locations=locations)
+        self.__heap, self.__valid_addresses, self.__invalid_addresses = self.__heapify(locations=locations)
+
+    @property
+    def invalid_addresses(self):
+        return list(self.__invalid_addresses)
+
+    @property
+    def valid_addresses(self):
+        return list(self.__valid_addresses)
 
     def __heapify(self, locations: list):
         savings = []
+        invalid_addresses = set()
+        valid_addresses = set()
         if locations:
             for i in range(len(locations)):
                 for j in range(i + 1, len(locations)):
                     if locations[i].uid != locations[j].uid:
                         pair = Pair(locations[i], locations[j])
                         pair.set_origin(self.__location_manager.depot)
-                        saving = self.__location_manager.get_distance_savings(location1=pair.location1,
-                                                                              location2=pair.location2)
-                        pair.set_saving(saving)
-                        savings.append(pair)
+                        try:
+                            saving = self.__location_manager.get_distance_savings(location1=pair.first,
+                                                                                  location2=pair.last)
+                            pair.set_saving(saving)
+                            savings.append(pair)
+                            valid_addresses.add(pair.first)
+                            valid_addresses.add(pair.last)
+                        except GeocodeError:
+                            if pair.first.address.longitude is None or pair.first.address.latitude is None:
+                                invalid_addresses.add(pair.first)
+                            else:
+                                valid_addresses.add(pair.first)
+                            if pair.last.address.longitude is None or pair.last.address.latitude is None:
+                                invalid_addresses.add(pair.last)
+                            else:
+                                valid_addresses.add(pair.last)
+                            continue
         savings.sort(reverse=True)
-        return savings
+        return savings, valid_addresses, invalid_addresses
 
     def __next__(self):
         if self.__heap:
@@ -235,6 +258,7 @@ class RouteManager:
         self.__best_allocation = None
         self.__final_locations = None
         self.__objective_function_values_list = []
+        self.__invalid_addresses = set()
 
     def request_routes(self, departure: str, locations: list, drivers: list):
         self.__drivers = NodeParser.create_drivers(drivers)
@@ -246,8 +270,8 @@ class RouteManager:
         self.__drivers = NodeParser.create_drivers(drivers)
         self.__locations = NodeParser.create_customers(locations)
         self.__depot = NodeParser.create_departure(departure)
-        self.__drivers_heap = self.__build_driver_heap()
         self.__prioritize_volunteer = self.__contains_volunteers()
+        self.__drivers_heap = self.__build_driver_heap()
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
             self.__final_locations = self.__build_routes()
         return self.__build_response()
@@ -313,9 +337,9 @@ class RouteManager:
                 employees = []
                 for index, driver_capacity in driver_dictionary:
                     if self.__drivers[index].is_volunteer():
-                        volunteers.append(self.__drivers)
-                    elif self.__drivers[index].is_fulltime():
-                        employees.append(self.__drivers)
+                        volunteers.append(self.__drivers[index])
+                    elif self.__drivers[index].is_full_time():
+                        employees.append(self.__drivers[index])
                 drivers_heap.extend(volunteers)
                 drivers_heap.extend(employees)
             else:
@@ -362,24 +386,27 @@ class RouteManager:
         return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
-        invalid_addresses = []
         locations_to_insert = self.__tally_locations(locations)
+        self.__invalid_addresses.update(savings_manager.invalid_addresses)
+        locations = savings_manager.valid_addresses
         assigned_locations_list = list()
         heapq.heapify(assigned_locations_list)
         if len(locations) == 1:
             try:
                 print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
                 for driver in drivers_heap[::-1]:
-                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
+                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Status:\033[0m {driver.employee_status} '
+                          f'\033[1m Capacity:\033[0m {driver.capacity}')
                     if driver.departure is None:
                         driver.set_departure(self.__depot)
                     if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
                         break
                     if locations[0].is_assigned:
+                        heapq.heappush(assigned_locations_list, locations[0].uid)
                         break
             except GeocodeError:
                 if locations[0].address.latitude is None or locations[0].address.longitude is None:
-                    invalid_addresses.append(locations[0].external_id)
+                    self.__invalid_addresses.append(locations[0])
         elif savings_manager:
             for pair in savings_manager:
                 try:
@@ -401,8 +428,11 @@ class RouteManager:
                     if assigned_locations_list == locations_to_insert:
                         break
                 except GeocodeError:
-                    if locations[0].address.latitude is None or locations[0].address.longitude is None:
-                        invalid_addresses.append(locations[0].external_id)
+                    if pair.first.address.latitude is None or pair.last.address.longitude is None:
+                        self.__invalid_addresses.append(pair.first)
+                    if pair.first.address.latitude is None or pair.last.address.longitude is None:
+                        self.__invalid_addresses.append(pair.last)
+                    continue
 
         for driver in drivers_heap:
             if driver.route.is_empty:
@@ -410,16 +440,16 @@ class RouteManager:
             elif not driver.route.is_empty and driver.route.is_open:
                 driver.route.close_route()
 
-        if assigned_locations_list == locations_to_insert:
+        if len(assigned_locations_list) != 0 and assigned_locations_list == locations_to_insert:
             RouteManager.__Response['solver_status'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'All locations were assigned.'
-        elif len(invalid_addresses) == len(locations_to_insert):
+        elif len(locations_to_insert) == 0 or len(self.__invalid_addresses) == len(locations_to_insert):
             RouteManager.__Response['solver_status'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'No address could be geocoded.'
-            RouteManager.__Response['others'] = invalid_addresses
-        elif len(invalid_addresses) == 0 and assigned_locations_list != locations_to_insert:
+            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
+        elif len(self.__invalid_addresses) == 0 and assigned_locations_list != locations_to_insert:
             RouteManager.__Response['solver_status'] = RouteManager._Status.OTHER_ERROR.value
             RouteManager.__Response['message'] = RouteManager._Status.OTHER_ERROR.name
             if len(assigned_locations_list) == 0:
@@ -430,7 +460,7 @@ class RouteManager:
             RouteManager.__Response['solver_status'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'Some addresses could not be geocoded.'
-            RouteManager.__Response['others'] = invalid_addresses
+            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
 
         return RouteManager._State.TERMINATED, drivers_heap
 

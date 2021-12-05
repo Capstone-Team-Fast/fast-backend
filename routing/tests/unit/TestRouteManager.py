@@ -111,8 +111,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_request_route_with_invalid_addresses(self):
         departure = data.departure
-        customers = data.get_random_customers(n=1)
-        drivers = data.get_random_drivers(n=3)
+        customers = data.get_random_customers(n=2)
+        drivers = data.get_random_drivers(n=4)
 
         # Create routes
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)

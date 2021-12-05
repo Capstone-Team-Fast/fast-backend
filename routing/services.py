@@ -68,8 +68,6 @@ class BingGeocodeService(GeocodeService):
 
     @staticmethod
     def __validate_geocode(address_response: dict, address: Address):
-        print(address_response)
-        print(address)
         condition1 = (
                 address_response.get('locality') is not None and address_response.get('postalCode') is not None
                 and address_response.get('countryRegion') is not None
@@ -80,10 +78,7 @@ class BingGeocodeService(GeocodeService):
                 and address_response.get('countryRegion').lower() == 'United States'.lower()
         )
 
-        if condition1:
-            if condition2:
-                return True
-        return False
+        return condition1 and condition2
 
 
 class MatrixService(ABC):
