@@ -20,3 +20,11 @@ class RouteListView(APIView):
         route_list = self.get_object(pk)
         serializer = RouteListSerializer(route_list)
         return Response(serializer.data)
+
+
+class RouteListAllView(APIView):
+
+    def get(self, request, format=None):
+        route_lists = RouteList.objects.all()
+        serializer = RouteListSerializer(route_lists, many=True)
+        return Response(serializer.data)
