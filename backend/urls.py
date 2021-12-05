@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 from backend.views.clientView import ClientListView, ClientView
-from backend.views.routeView import RouteListView, RouteView
+from backend.views.routeView import RoutingView, RouteView
 from backend.views.locationView import LocationView, LocationListView
 from backend.views.driverView import DriverView, DriverListView
 from backend.views.managerView import ManagerView, ManagerListView
 from backend.views.bulkClientView import BulkClientView
 from backend.views.bulkDriverView import BulkDriverView
+from backend.views.routeListView import RouteListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,8 +32,9 @@ urlpatterns = [
     path('api/locations/<int:pk>/', LocationView.as_view()),
     path('api/clients/', ClientListView.as_view()),
     path('api/clients/<int:pk>/', ClientView.as_view()),
-    path('api/routes/', RouteListView.as_view()),
+    path('api/routes/', RoutingView.as_view()),
     path('api/routes/<int:pk>/', RouteView.as_view()),
+    path('api/routeList/<int:pk>/', RouteListView.as_view()),
     path('api/drivers/', DriverListView.as_view()),
     path('api/drivers/<int:pk>/', DriverView.as_view()),
     path('api/managers/', ManagerListView.as_view()),

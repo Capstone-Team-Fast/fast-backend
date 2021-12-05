@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from backend.models.language import Language
 from backend.models.location import Location
+# from backend.models.route import Route
 
 
 class Client(models.Model):
@@ -16,3 +17,4 @@ class Client(models.Model):
     languages = models.ManyToManyField(to=Language, blank=False)
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
     modified_on = models.DateTimeField(auto_now=True, editable=False)
+    # route = models.ManyToManyField(to=Route, related_name='itinerary', blank=True, null=True)
