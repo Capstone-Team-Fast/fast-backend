@@ -78,9 +78,16 @@ class RoutingView(APIView):
             route['assigned_to'] = route['assigned_to']['id']
             # route['itinerary'] = [item for item in route['itinerary'] if(item['is_center'] == False or item['is_center'] == 'false')]
 
-        # f = open("anger.txt", "a")
-        # f.write(json.dumps(routes_json))
-        # f.close()
+        now = datetime.now()
+        now = now.strftime("%m/%d/%Y")
+
+        f = open("routesLog.txt", "a")
+        f.write('Route - ')
+        f.write(now)
+        f.write('\n')
+        f.write(json.dumps(routes_json))
+        f.write('\n\n')
+        f.close()
 
         # TODO: ensure routes are correctly going through serializer
         serializer = RouteListSerializer(data=routes_json)
