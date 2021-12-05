@@ -7,7 +7,11 @@ class ItinerarySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Client
-        fields = ['id', 'user', 'first_name', 'last_name', 'comments', 'quantity', 'phone']
+        fields = '__all__'
+        read_only_fields = ['location', 'languages']
 
-    def create(self, validated_data):
-        return Client.objects.create(**validated_data)
+    # def create(self, validated_data):
+    #     return Client.objects.create(**validated_data)
+    #
+    # def update(self, validated_data):
+

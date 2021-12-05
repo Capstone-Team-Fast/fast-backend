@@ -5,42 +5,32 @@ from backend.serializers import DriverSerializer, ItinerarySerializer
 
 
 class RouteSerializer(serializers.ModelSerializer):
-    itinerary = ItinerarySerializer(many=True)
-    assigned_to = DictField(allow_null=True)
+    # itinerary = ItinerarySerializer(many=True)
+    # assigned_to = DictField(allow_null=True)
 
     def create(self, validated_data):
-        assigned_to_data = validated_data.pop('assigned_to')
-        itinerary_data = validated_data.pop('itinerary')
+        # assigned_to_data = validated_data.pop('assigned_to')
+        # itinerary_data = validated_data.pop('itinerary')
 
-        emp_id = assigned_to_data.get('id')
 
-        driver = Driver.objects.get_or_create(id=emp_id)
-        # driver_instance = DriverSerializer(data=driver).instance(data=driver)
-        # driver_serializer = DriverSerializer(data=driver)
-        # driver_instance = None
-        #
-        # driver_instance = driver_serializer.instance(data=driver)
-
-        # driver_instance = DriverSerializer(data=driver).instance
-
-        # assigned_to = driver.id
-        # validated_data.pop('assigned_to')
+        f = open("anger.txt", "a")
+        f.write(validated_data)
+        f.close()
 
         route = Route.objects.create(**validated_data)
-        route.assigned_to.add(driver)
 
-        # route = Route.objects.create(**validated_data)
+        # for i_data in itinerary_data:
+        #     i_id = i_data.get('id')
+        #     itinerary_obj = Client.objects.get(id=i_id)
+        #
+        #     route.itinerary.add(itinerary_obj)
 
-        # route.assigned_to.add(assigned_to)
-
-        for i_data in itinerary_data:
-            if i_data.get('is_center') == False or i_data.get('is_center') == 'false':
-                i_id = i_data.get('id')
-                itinerary = Client.objects.get(id=i_id)
-                route.itinerary.add(itinerary)
+        # route.itinerary.set(i_list)
+        route.save()
 
         return route
 
     class Meta:
         model = Route
-        fields = '__all__'
+        fields = ['id', 'assigned_to', 'created_on', 'total_quantity', 'total_distance',
+                  'total_duration', 'route_list', 'itinerary']

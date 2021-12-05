@@ -8,8 +8,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from backend.models import Route, Client, Driver
-from backend.serializers.routeSerializer import RouteSerializer
-from backend.serializers import ClientSerializer, DriverSerializer, ClientRoutingSerializer
+from backend.serializers import ClientSerializer, DriverSerializer, RouteListSerializer, RouteSerializer
 from routing.managers import RouteManager
 from django.conf import settings
 
@@ -28,7 +27,7 @@ class RouteView(APIView):
         return Response(serializer.data)
 
 
-class RouteListView(APIView):
+class RoutingView(APIView):
 
     def get(self, request, format=None):
         routes = Route.objects.all()
@@ -72,16 +71,21 @@ class RouteListView(APIView):
         routes_json = route_manager.request_routes_test(departure, clients, drivers)
 
         routes_json = json.loads(routes_json)
-        routes = routes_json.get('routes')
 
+        for route in routes_json.get('routes'):
+            route['assigned_to'] = route['assigned_to']['id']
+            # route['itinerary'] = [item for item in route['itinerary'] if(item['is_center'] == False or item['is_center'] == 'false')]
 
+        # f = open("anger.txt", "a")
+        # f.write(json.dumps(routes_json))
+        # f.close()
 
         # TODO: ensure routes are correctly going through serializer
-        # serializer = RouteSerializer(data=routes, many=True)
+        serializer = RouteListSerializer(data=routes_json)
 
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(routes_json, status=status.HTTP_201_CREATED)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        return Response(routes_json, status=status.HTTP_200_OK)
+        # return Response(routes_json, status=status.HTTP_200_OK)
