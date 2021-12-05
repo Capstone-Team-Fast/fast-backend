@@ -6,7 +6,8 @@ import os
 import sys
 from datetime import datetime
 
-from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
+from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, \
+    RelationshipTo, AttemptedCardinalityViolation
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
@@ -53,16 +54,23 @@ class Driver(StructuredNode):
         self.__route.set_departure(None)
         self.__is_saved = False
 
-    def save_route(self):
+    def __save_route(self):
         self.__route.save()
         self.__route.set_total_demand()
         self.__route.set_total_distance()
         self.__route.set_total_duration()
-        self.__route.assigned_to.connect(self)
+        try:
+            self.__route.assigned_to.connect(self)
+        except AttemptedCardinalityViolation:
+            self.__route.assigned_to.reconnect(self, self)
         self.__is_saved = True
 
     def reset(self):
-        self.__route = Route()
+        self.__route = Route().save()
+        try:
+            self.__route.assigned_to.connect(self)
+        except AttemptedCardinalityViolation:
+            self.__route.assigned_to.reconnect(self, self)
         self.__route.set_departure(None)
 
     def set_departure(self, depot: Depot):
@@ -71,7 +79,7 @@ class Driver(StructuredNode):
     @property
     def route(self) -> Route:
         if not self.__is_saved:
-            self.save_route()
+            self.__save_route()
         return self.__route
 
     @property
@@ -102,6 +110,8 @@ class Driver(StructuredNode):
                         and (self.__route.total_demand < self.capacity):
                     if self.max_delivery:
                         if len(self.__route) - 1 == self.max_delivery:
+                            print(f'\nVolunteer reached delivery limit.\n')
+                            self.__route.close_route()
                             return False
                     else:
                         continue

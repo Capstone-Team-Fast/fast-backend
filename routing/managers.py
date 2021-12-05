@@ -1,13 +1,12 @@
 import copy
 import datetime
 import enum
-import heapq
 import json
 import sys
 
 import neomodel
 
-from routing.exceptions import RouteStateException
+from routing.exceptions import RouteStateException, GeocodeError
 from routing.models.availability import Availability
 from routing.models.driver import Driver
 from routing.models.language import Language
@@ -71,14 +70,14 @@ class LocationManager:
                     if location not in Depot.nodes.all():
                         location.save()
 
-                if location.address.zipcode == 99999:
-                    print('Found!')
-
                 address = location.address
                 if address and (address.latitude is None or address.longitude is None):
                     print(f'\nRetrieving geocode for location {address}\n')
-                    address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
-                    address = address.save()
+                    try:
+                        address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
+                        address = address.save()
+                    except GeocodeError as err:
+                        raise err
 
                 if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
                     print(f'Failed to build matrix between {location} and {self.__locations}')
@@ -160,22 +159,45 @@ class LocationManager:
 class SavingsManager:
     def __init__(self, db_connection: str, depot: Address, locations: list):
         self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
-        self.__heap = self.__heapify(locations=locations)
+        self.__heap, self.__valid_addresses, self.__invalid_addresses = self.__heapify(locations=locations)
+
+    @property
+    def invalid_addresses(self):
+        return list(self.__invalid_addresses)
+
+    @property
+    def valid_addresses(self):
+        return list(self.__valid_addresses)
 
     def __heapify(self, locations: list):
         savings = []
+        invalid_addresses = set()
+        valid_addresses = set()
         if locations:
             for i in range(len(locations)):
                 for j in range(i + 1, len(locations)):
                     if locations[i].uid != locations[j].uid:
                         pair = Pair(locations[i], locations[j])
                         pair.set_origin(self.__location_manager.depot)
-                        saving = self.__location_manager.get_distance_savings(location1=pair.location1,
-                                                                              location2=pair.location2)
-                        pair.set_saving(saving)
-                        savings.append(pair)
+                        try:
+                            saving = self.__location_manager.get_distance_savings(location1=pair.first,
+                                                                                  location2=pair.last)
+                            pair.set_saving(saving)
+                            savings.append(pair)
+                            valid_addresses.add(pair.first)
+                            valid_addresses.add(pair.last)
+                        except GeocodeError:
+                            if pair.first.address.longitude is None or pair.first.address.latitude is None:
+                                invalid_addresses.add(pair.first)
+                            else:
+                                valid_addresses.add(pair.first)
+                            if pair.last.address.longitude is None or pair.last.address.latitude is None:
+                                invalid_addresses.add(pair.last)
+                            else:
+                                valid_addresses.add(pair.last)
+                            continue
         savings.sort(reverse=True)
-        return savings
+        return savings, valid_addresses, invalid_addresses
 
     def __next__(self):
         if self.__heap:
@@ -195,13 +217,14 @@ class RouteManager:
         IDLE = 0
         HARD_SOLVING = 1
         SOFT_SOLVING = 2
-        SOLVED = 3
+        TERMINATED = 3
         INFEASIBLE = 4
 
     class _Status(enum.Enum):
         ALL_LOCATIONS_ASSIGNED = 1
         SOME_LOCATIONS_ASSIGNED = 2
         NO_LOCATIONS_ASSIGNED = 3
+        OTHER_ERROR = 4
 
     class _Alphabet(enum.Enum):
         FALSE = 0
@@ -209,6 +232,13 @@ class RouteManager:
         DONE = 2
 
     __NUMBER_OF_ITERATIONS = 1
+    __Response = {
+        'solver_status': '',  # Different status code based on one of 3 scenarios
+        'message': '',  # Short description
+        'description': '',
+        'others': [],  # Clients' id not assigned
+        'routes': [],
+    }
 
     def __init__(self, db_connection: str):
         try:
@@ -227,6 +257,7 @@ class RouteManager:
         self.__best_allocation = None
         self.__final_locations = None
         self.__objective_function_values_list = []
+        self.__invalid_addresses = set()
 
     def request_routes(self, departure: str, locations: list, drivers: list):
         self.__drivers = NodeParser.create_drivers(drivers)
@@ -238,24 +269,23 @@ class RouteManager:
         self.__drivers = NodeParser.create_drivers(drivers)
         self.__locations = NodeParser.create_customers(locations)
         self.__depot = NodeParser.create_departure(departure)
+        self.__prioritize_volunteer = self.__contains_volunteers()
         self.__drivers_heap = self.__build_driver_heap()
-        self.__prioritize_volunteer = False
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
         self.__final_locations = self.__build_routes()
         return self.__build_response()
+
+    def __contains_volunteers(self):
+        for driver in self.__drivers:
+            if driver.employee_status == Driver.Role.VOLUNTEER.value:
+                return True
+        return False
 
     def __build_response(self):
         routes = []
         for driver in self.__best_allocation:
             if not driver.route.is_empty:
                 routes.append(json.loads(driver.route.serialize()))
-
-        response = json.dumps({
-            'solver_status': '',
-            'message': '',
-            'description': '',
-            'routes': routes,
-        })
 
         print()
         for driver in self.__best_allocation:
@@ -278,7 +308,9 @@ class RouteManager:
             else:
                 print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
             print()
-        return response
+
+        RouteManager.__Response['routes'] = routes
+        return json.dumps(RouteManager.__Response)
 
     @property
     def objective_function_value(self):
@@ -304,9 +336,9 @@ class RouteManager:
                 employees = []
                 for index, driver_capacity in driver_dictionary:
                     if self.__drivers[index].is_volunteer():
-                        volunteers.append(self.__drivers)
-                    elif self.__drivers[index].is_fulltime():
-                        employees.append(self.__drivers)
+                        volunteers.append(self.__drivers[index])
+                    elif self.__drivers[index].is_full_time():
+                        employees.append(self.__drivers[index])
                 drivers_heap.extend(volunteers)
                 drivers_heap.extend(employees)
             else:
@@ -331,12 +363,13 @@ class RouteManager:
 
             savings_manager = SavingsManager(db_connection=self.__db_connection, depot=self.__depot,
                                              locations=locations)
-            solver_status, drivers = self.__build_route_instance(savings_manager=savings_manager, locations=locations,
-                                                                 drivers_heap=drivers)
+            solver_status, drivers, locations = self.__build_route_instance(savings_manager=savings_manager,
+                                                                            locations=locations,
+                                                                            drivers_heap=drivers)
             local_objective_function_distance, local_objective_function_duration = \
                 RouteManager.__get_instance_objective_function(drivers)
 
-            if solver_status == RouteManager._State.SOLVED:
+            if solver_status == RouteManager._State.TERMINATED:
                 objective_function_values_list.append(local_objective_function_distance)
                 if global_objective_function_value > local_objective_function_distance:
                     global_objective_function_value = local_objective_function_distance
@@ -345,53 +378,111 @@ class RouteManager:
         return global_objective_function_value, best_allocation, objective_function_values_list, final_locations
 
     def __tally_locations(self, locations: list):
-        tally = []
-        heapq.heapify(tally)
+        tally = set()
         if locations:
             for location in locations:
-                heapq.heappush(tally, location.uid)
+                tally.add(location.uid)
         return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
+        locations_to_insert = self.__tally_locations(locations)
+        self.__invalid_addresses.update(savings_manager.invalid_addresses)
+        locations = savings_manager.valid_addresses
+        assigned_locations_list = set()
         if len(locations) == 1:
-            print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
-            for driver in drivers_heap[::-1]:
-                print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
-                if driver.departure is None:
-                    driver.set_departure(self.__depot)
-                if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
-                    break
-                if locations[0].is_assigned:
-                    break
-        elif savings_manager:
-            locations_to_insert = self.__tally_locations(locations)
-            assigned_locations_list = list()
-            heapq.heapify(assigned_locations_list)
-            for pair in savings_manager:
-                print(f'\n\033[1m Processing pair\033[0m ({pair.first}, {pair.last})')
-                for driver in drivers_heap:
-                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m Capacity:\033[0m {driver.capacity}')
+            try:
+                print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
+                for driver in drivers_heap[::-1]:
+                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m UID:\033[0m {driver.uid} \033[1m '
+                          f'Status:\033[0m {driver.employee_status} '
+                          f'\033[1m Capacity:\033[0m {driver.capacity}')
                     if driver.departure is None:
                         driver.set_departure(self.__depot)
-                    if driver.route.is_open and driver.add(pair=pair):
+                    if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
                         break
-                if pair.is_assignable():
-                    print(f'{RouteManager._State.INFEASIBLE}')
-                if pair.first.is_assigned:
-                    if pair.first.uid not in assigned_locations_list:
-                        heapq.heappush(assigned_locations_list, pair.first.uid)
-                if pair.last.is_assigned:
-                    if pair.last.uid not in assigned_locations_list:
-                        heapq.heappush(assigned_locations_list, pair.last.uid)
-                if assigned_locations_list == locations_to_insert:
+                    if locations[0].is_assigned:
+                        assigned_locations_list.add(locations[0].uid)
+                        break
+            except GeocodeError:
+                if locations[0].address.latitude is None or locations[0].address.longitude is None:
+                    self.__invalid_addresses.add(locations[0])
+        elif savings_manager:
+            numbers_of_drivers = 0
+            max_drivers_count = len(drivers_heap)
+            state = RouteManager._State.HARD_SOLVING
+            while state != RouteManager._State.TERMINATED:
+                if numbers_of_drivers == max_drivers_count:
                     break
+                numbers_of_drivers = min(numbers_of_drivers + 1, max_drivers_count)
+                print(f'\n==========Using minimum of {numbers_of_drivers} drivers==========\n')
+                drivers = drivers_heap[:numbers_of_drivers]
+                for driver in drivers:
+                    driver.reset()
+                local_savings_manager = copy.deepcopy(savings_manager)
+                locations = local_savings_manager.valid_addresses
+                locations.extend(local_savings_manager.invalid_addresses)
+                locations_to_insert = self.__tally_locations(locations)
+                self.__invalid_addresses.update(savings_manager.invalid_addresses)
+                assigned_locations_list = set()
+                for pair in local_savings_manager:
+                    try:
+                        print(f'\n\033[1mProcessing pair\033[0m ({pair.first}, {pair.last})')
+                        for driver in drivers:
+                            print(
+                                f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m UID:\033[0m {driver.uid} \033[1m '
+                                f'Capacity:\033[0m {driver.capacity}')
+                            if driver.departure is None:
+                                driver.set_departure(self.__depot)
+                            if driver.route.is_open and driver.add(pair=pair):
+                                break
+                        if pair.is_assignable():
+                            print(f'{RouteManager._State.INFEASIBLE}')
+                        if pair.first.is_assigned:
+                            assigned_locations_list.add(pair.first.uid)
+                        if pair.last.is_assigned:
+                            assigned_locations_list.add(pair.last.uid)
+                        if assigned_locations_list == locations_to_insert:
+                            break
+                    except GeocodeError:
+                        if pair.first.address.latitude is None or pair.last.address.longitude is None:
+                            self.__invalid_addresses.add(pair.first)
+                        if pair.first.address.latitude is None or pair.last.address.longitude is None:
+                            self.__invalid_addresses.add(pair.last)
+                        continue
+                if assigned_locations_list == locations_to_insert:
+                    state = RouteManager._State.TERMINATED
+                else:
+                    state = RouteManager._State.INFEASIBLE
 
         for driver in drivers_heap:
             if driver.route.is_empty:
                 driver.reset()
             elif not driver.route.is_empty and driver.route.is_open:
                 driver.route.close_route()
-        return RouteManager._State.SOLVED, drivers_heap
+
+        if len(assigned_locations_list) != 0 and assigned_locations_list == locations_to_insert:
+            RouteManager.__Response['solver_status'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.value
+            RouteManager.__Response['message'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.name
+            RouteManager.__Response['description'] = 'All locations were assigned.'
+        elif len(locations_to_insert) == 0 or len(self.__invalid_addresses) == len(locations_to_insert):
+            RouteManager.__Response['solver_status'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.value
+            RouteManager.__Response['message'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.name
+            RouteManager.__Response['description'] = 'No address could be geocoded.'
+            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
+        elif len(self.__invalid_addresses) == 0 and assigned_locations_list != locations_to_insert:
+            RouteManager.__Response['solver_status'] = RouteManager._Status.OTHER_ERROR.value
+            RouteManager.__Response['message'] = RouteManager._Status.OTHER_ERROR.name
+            if len(assigned_locations_list) == 0:
+                RouteManager.__Response['description'] = 'Assignment is infeasible.'
+            else:
+                RouteManager.__Response['description'] = 'Some addresses were assigned.'
+        else:
+            RouteManager.__Response['solver_status'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.value
+            RouteManager.__Response['message'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.name
+            RouteManager.__Response['description'] = 'Some addresses could not be geocoded.'
+            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
+
+        return RouteManager._State.TERMINATED, drivers_heap, locations
 
     @staticmethod
     def __get_instance_objective_function(drivers):
@@ -555,6 +646,7 @@ class NodeParser:
                     driver_node.save()
                 else:
                     node_set = Driver.nodes.filter(first_name=driver_node.first_name, last_name=driver_node.last_name,
+                                                   external_id=driver_node.external_id,
                                                    employee_status=driver_node.employee_status)
                     object_node = node_set[0]
                     object_node.capacity = driver_node.capacity
@@ -609,7 +701,7 @@ class NodeParser:
 
     @staticmethod
     def parse_driver(driver: dict):
-        if driver.get('employee_status') and driver['employee_status'] == 'employee':
+        if driver.get('employee_status') and driver['employee_status'].lower() == 'employee':
             employee_status = Driver.Role.EMPLOYEE.value
         else:
             employee_status = Driver.Role.VOLUNTEER.value
