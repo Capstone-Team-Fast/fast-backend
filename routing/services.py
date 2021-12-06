@@ -118,8 +118,9 @@ class BingMatrixService(MatrixService):
             except GeocodeError as err:
                 raise err
 
-        url = '{BASE_URL}?key={API_KEY}'.format(BASE_URL=BingMatrixService.__DEFAULT_URL,
-                                                API_KEY=BingMatrixService.__API_KEY)
+        url = '{BASE_URL}?key={API_KEY}&distanceUnit={DISTANCE_UNIT}'.format(BASE_URL=BingMatrixService.__DEFAULT_URL,
+                                                                             API_KEY=BingMatrixService.__API_KEY,
+                                                                             DISTANCE_UNIT='mi')
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
