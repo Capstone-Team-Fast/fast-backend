@@ -10,7 +10,6 @@ pytz==2021.1
 Shapely==1.7.1
 six==1.16.0
 sqlparse~=0.4.2
-pip~=21.2.4
 wheel~=0.36.2
 connection~=2021.7.20
 cryptography~=3.4.7
