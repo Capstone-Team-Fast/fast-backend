@@ -233,11 +233,11 @@ class RouteManager:
 
     __NUMBER_OF_ITERATIONS = 1
     __Response = {
-        'solver_status': '',  # Different status code based on one of 3 scenarios
-        'message': '',  # Short description
-        'description': '',
-        'others': [],  # Clients' id not assigned
-        'routes': [],
+        'solver_status': '',    # Different status code based on one of 3 scenarios
+        'message': '',          # Short description
+        'description': '',      # Detailed description
+        'others': [],           # Clients' id not assigned
+        'routes': [],           # List of routes assigned to driver
     }
 
     def __init__(self, db_connection: str):
