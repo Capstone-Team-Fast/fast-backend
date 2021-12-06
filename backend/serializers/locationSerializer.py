@@ -13,7 +13,7 @@ class LocationSerializer(serializers.ModelSerializer):
     city = serializers.CharField(max_length=250)
     state = serializers.CharField(max_length=50)
     zipcode = serializers.IntegerField()
-    room_number = serializers.CharField(max_length=50, required=False)
+    room_number = serializers.CharField(max_length=50, required=False, allow_null=True, allow_blank=True)
     is_center = serializers.BooleanField(default=False)
     latitude = serializers.DecimalField(max_digits=18, decimal_places=15, required=False, allow_null=True)
     longitude = serializers.DecimalField(max_digits=18, decimal_places=15, required=False, allow_null=True)
