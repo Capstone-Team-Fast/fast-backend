@@ -1,0 +1,74 @@
+\hypertarget{classsetuptools_1_1sandbox_1_1_directory_sandbox}{}\doxysection{setuptools.\+sandbox.\+Directory\+Sandbox Class Reference}
+\label{classsetuptools_1_1sandbox_1_1_directory_sandbox}\index{setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}}
+
+
+Inheritance diagram for setuptools.\+sandbox.\+Directory\+Sandbox\+:
+% FIG 0
+
+
+Collaboration diagram for setuptools.\+sandbox.\+Directory\+Sandbox\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1sandbox_1_1_directory_sandbox_a64ffc139aee0544ed4eea933a195b894}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, sandbox, exceptions=\+\_\+\+EXCEPTIONS)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1sandbox_1_1_directory_sandbox_a18c44e615e844e4b235eb65cdbc0faea}\label{classsetuptools_1_1sandbox_1_1_directory_sandbox_a18c44e615e844e4b235eb65cdbc0faea}} 
+def {\bfseries tmpnam} (self)
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1sandbox_1_1_directory_sandbox_acebf216aa39cf42fbebf005f1b722f99}{open}} (self, file, flags, mode=0o777, $\ast$args, $\ast$$\ast$kw)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsetuptools_1_1sandbox_1_1_directory_sandbox_aff584c6cf57155616b5e0c03db1dd317}{write\+\_\+ops}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Restrict operations to a single subdirectory - pseudo-chroot\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1sandbox_1_1_directory_sandbox_a64ffc139aee0544ed4eea933a195b894}\label{classsetuptools_1_1sandbox_1_1_directory_sandbox_a64ffc139aee0544ed4eea933a195b894}} 
+\index{setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def setuptools.\+sandbox.\+Directory\+Sandbox.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sandbox,  }\item[{}]{exceptions = {\ttfamily \+\_\+EXCEPTIONS} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsetuptools_1_1sandbox_1_1_abstract_sandbox}{setuptools.\+sandbox.\+Abstract\+Sandbox}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1sandbox_1_1_directory_sandbox_acebf216aa39cf42fbebf005f1b722f99}\label{classsetuptools_1_1sandbox_1_1_directory_sandbox_acebf216aa39cf42fbebf005f1b722f99}} 
+\index{setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}!open@{open}}
+\index{open@{open}!setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def setuptools.\+sandbox.\+Directory\+Sandbox.\+open (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file,  }\item[{}]{flags,  }\item[{}]{mode = {\ttfamily 0o777},  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called for low-level os.open()\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1sandbox_1_1_directory_sandbox_aff584c6cf57155616b5e0c03db1dd317}\label{classsetuptools_1_1sandbox_1_1_directory_sandbox_aff584c6cf57155616b5e0c03db1dd317}} 
+\index{setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}!write\_ops@{write\_ops}}
+\index{write\_ops@{write\_ops}!setuptools.sandbox.DirectorySandbox@{setuptools.sandbox.DirectorySandbox}}
+\doxysubsubsection{\texorpdfstring{write\_ops}{write\_ops}}
+{\footnotesize\ttfamily setuptools.\+sandbox.\+Directory\+Sandbox.\+write\+\_\+ops\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  dict.fromkeys([}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}open"{}}, \textcolor{stringliteral}{"{}chmod"{}}, \textcolor{stringliteral}{"{}chown"{}}, \textcolor{stringliteral}{"{}mkdir"{}}, \textcolor{stringliteral}{"{}remove"{}}, \textcolor{stringliteral}{"{}unlink"{}}, \textcolor{stringliteral}{"{}rmdir"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}utime"{}}, \textcolor{stringliteral}{"{}lchown"{}}, \textcolor{stringliteral}{"{}chroot"{}}, \textcolor{stringliteral}{"{}mkfifo"{}}, \textcolor{stringliteral}{"{}mknod"{}}, \textcolor{stringliteral}{"{}tempnam"{}},}
+\DoxyCodeLine{    ])}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/sandbox.\+py\end{DoxyCompactItemize}

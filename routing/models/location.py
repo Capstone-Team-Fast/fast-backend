@@ -6,8 +6,6 @@ from datetime import datetime
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
     DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
 
-from routing.models.language import Language
-
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
 
@@ -142,7 +140,13 @@ class Location(StructuredNode):
 
     def __eq__(self, other):
         if issubclass(type(other), Location) and issubclass(type(self), Location):
-            return self.address == other.address
+            equal = False
+            try:
+                if self.external_id and other.external_id:
+                    equal = self.external_id == other.external_id and self.is_center == other.is_center
+            except AttributeError:
+                pass
+            return equal
         raise TypeError(f'{type(other)} and {type(self)} do not subclass {Location}.')
 
     def __hash__(self):
@@ -236,33 +240,59 @@ class Depot(Location):
 
 class Pair:
     def __init__(self, location1: Location, location2: Location):
-        self.location1 = location1
-        self.location2 = location2
+        self.__location1 = location1
+        self.__location2 = location2
+        self.__origin = None
+        self.__distance_saving = None
+
+    def set_origin(self, origin):
+        self.__origin = origin
+
+    def set_saving(self, saving):
+        self.__distance_saving = saving
+
+    @property
+    def distance_saving(self):
+        return self.__distance_saving
+
+    @property
+    def origin(self):
+        return self.__origin
 
     def is_first(self, location: Location):
-        return self.location1 == location
+        return self.__location1 == location
 
     def is_last(self, location: Location):
-        return self.location2 == location
+        return self.__location2 == location
 
     @property
     def first(self):
-        return self.location1
+        return self.__location1
 
     @property
     def last(self):
-        return self.location2
+        return self.__location2
 
     def get_pair(self):
-        return self.location1, self.location2
+        return self.__location1, self.__location2
 
     def is_assignable(self):
-        if self.location1 and self.location2:
-            return not (self.location1.is_assigned or self.location2.is_assigned)
-        elif (self.location1 is None and self.location2) or (self.location1 and self.location2 is None):
+        if self.__location1 and self.__location2:
+            return not (self.__location1.is_assigned or self.__location2.is_assigned)
+        elif (self.__location1 is None and self.__location2) or (self.__location1 and self.__location2 is None):
             return True
 
         return False
 
+    def __eq__(self, other):
+        if isinstance(other, type(self)):
+            return self.__distance_saving == other.__distance_saving
+        raise ValueError(f'Type {type(other)} not supported.')
+
+    def __lt__(self, other):
+        if isinstance(other, type(self)):
+            return self.__distance_saving < other.__distance_saving
+        raise ValueError(f'Type {type(other)} not supported.')
+
     def __str__(self):
-        return '({}, {})'.format(self.location1, self.location2)
+        return '({}, {})'.format(self.__location1, self.__location2)

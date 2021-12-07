@@ -6,7 +6,8 @@ import os
 import sys
 from datetime import datetime
 
-from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, RelationshipTo
+from neomodel import StructuredNode, IntegerProperty, StringProperty, DateTimeProperty, UniqueIdProperty, \
+    RelationshipTo, AttemptedCardinalityViolation
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
@@ -53,16 +54,23 @@ class Driver(StructuredNode):
         self.__route.set_departure(None)
         self.__is_saved = False
 
-    def save_route(self):
+    def __save_route(self):
         self.__route.save()
         self.__route.set_total_demand()
         self.__route.set_total_distance()
         self.__route.set_total_duration()
-        self.__route.assigned_to.connect(self)
+        try:
+            self.__route.assigned_to.connect(self)
+        except AttemptedCardinalityViolation:
+            self.__route.assigned_to.reconnect(self, self)
         self.__is_saved = True
 
     def reset(self):
-        self.__route = Route()
+        self.__route = Route().save()
+        try:
+            self.__route.assigned_to.connect(self)
+        except AttemptedCardinalityViolation:
+            self.__route.assigned_to.reconnect(self, self)
         self.__route.set_departure(None)
 
     def set_departure(self, depot: Depot):
@@ -71,7 +79,7 @@ class Driver(StructuredNode):
     @property
     def route(self) -> Route:
         if not self.__is_saved:
-            self.save_route()
+            self.__save_route()
         return self.__route
 
     @property
@@ -94,12 +102,19 @@ class Driver(StructuredNode):
             for location in pair.get_pair():
                 if not self.__route.add(location=location, pair=pair):
                     return False
+
                 cumulative_duration_minutes = math.trunc(self.__route.total_duration)
                 cumulative_duration_seconds = self.__route.total_duration - cumulative_duration_minutes
                 cumulative_duration = cumulative_duration_minutes * 60 + cumulative_duration_seconds
                 if (cumulative_duration < (self.end_time - self.start_time).total_seconds()) \
                         and (self.__route.total_demand < self.capacity):
-                    continue
+                    if self.max_delivery:
+                        if len(self.__route) - 1 == self.max_delivery:
+                            print(f'\nVolunteer reached delivery limit.\n')
+                            self.__route.close_route()
+                            return False
+                    else:
+                        continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
                     print(f'\nDriver has met allocated time.')
                 elif self.__route.total_demand == self.capacity:
@@ -112,6 +127,7 @@ class Driver(StructuredNode):
                     print(f'\nRoute is overcapacity.')
                     self.__route.undo()
                     print(f'\nUndid insertion of {location}')
+
             return pair.first.is_assigned and pair.last.is_assigned
         return False
 
@@ -131,7 +147,7 @@ class Driver(StructuredNode):
     def __eq__(self, other):
         if isinstance(other, type(self)):
             return (self.first_name == other.first_name and self.last_name == other.last_name
-                    and self.employee_status == other.employee_status)
+                    and self.employee_status == other.employee_status and self.external_id == other.external_id)
         raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):

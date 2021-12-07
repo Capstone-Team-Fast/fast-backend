@@ -1,0 +1,93 @@
+\hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware}{}\doxysection{django.\+middleware.\+common.\+Common\+Middleware Class Reference}
+\label{classdjango_1_1middleware_1_1common_1_1_common_middleware}\index{django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}}
+
+
+Inheritance diagram for django.\+middleware.\+common.\+Common\+Middleware\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+middleware.\+common.\+Common\+Middleware\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1common_1_1_common_middleware_aec64deb95081360d770c7f83a79f62a3}{process\+\_\+request}} (self, request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab5821345b6539830541b32eda93deeea}{should\+\_\+redirect\+\_\+with\+\_\+slash}} (self, request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1common_1_1_common_middleware_a5feb074a7b10faa5fe7abb45ca7fbc1c}{get\+\_\+full\+\_\+path\+\_\+with\+\_\+slash}} (self, request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab07c9a82996932bc8a6f927ef3dc5e97}{process\+\_\+response}} (self, request, response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware_a3f6907936d4f11699239a81c1b461382}\label{classdjango_1_1middleware_1_1common_1_1_common_middleware_a3f6907936d4f11699239a81c1b461382}} 
+{\bfseries response\+\_\+redirect\+\_\+class} = \mbox{\hyperlink{classdjango_1_1http_1_1response_1_1_http_response_permanent_redirect}{Http\+Response\+Permanent\+Redirect}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}"Common" middleware for taking care of some basic operations:
+
+    - Forbid access to User-Agents in settings.DISALLOWED_USER_AGENTS
+
+    - URL rewriting: Based on the APPEND_SLASH and PREPEND_WWW settings,
+      append missing slashes and/or prepends missing "www."s.
+
+        - If APPEND_SLASH is set and the initial URL doesn't end with a
+          slash, and it is not found in urlpatterns, form a new URL by
+          appending a slash at the end. If this new URL is found in
+          urlpatterns, return an HTTP redirect to this new URL; otherwise
+          process the initial URL as usual.
+
+      This behavior can be customized by subclassing CommonMiddleware and
+      overriding the response_redirect_class attribute.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware_a5feb074a7b10faa5fe7abb45ca7fbc1c}\label{classdjango_1_1middleware_1_1common_1_1_common_middleware_a5feb074a7b10faa5fe7abb45ca7fbc1c}} 
+\index{django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}!get\_full\_path\_with\_slash@{get\_full\_path\_with\_slash}}
+\index{get\_full\_path\_with\_slash@{get\_full\_path\_with\_slash}!django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}}
+\doxysubsubsection{\texorpdfstring{get\_full\_path\_with\_slash()}{get\_full\_path\_with\_slash()}}
+{\footnotesize\ttfamily def django.\+middleware.\+common.\+Common\+Middleware.\+get\+\_\+full\+\_\+path\+\_\+with\+\_\+slash (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the full path of the request with a trailing slash appended.
+
+Raise a RuntimeError if settings.DEBUG is True and request.method is
+POST, PUT, or PATCH.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware_aec64deb95081360d770c7f83a79f62a3}\label{classdjango_1_1middleware_1_1common_1_1_common_middleware_aec64deb95081360d770c7f83a79f62a3}} 
+\index{django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}!process\_request@{process\_request}}
+\index{process\_request@{process\_request}!django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}}
+\doxysubsubsection{\texorpdfstring{process\_request()}{process\_request()}}
+{\footnotesize\ttfamily def django.\+middleware.\+common.\+Common\+Middleware.\+process\+\_\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check for denied User-Agents and rewrite the URL based on
+settings.APPEND_SLASH and settings.PREPEND_WWW
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab07c9a82996932bc8a6f927ef3dc5e97}\label{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab07c9a82996932bc8a6f927ef3dc5e97}} 
+\index{django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}!process\_response@{process\_response}}
+\index{process\_response@{process\_response}!django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}}
+\doxysubsubsection{\texorpdfstring{process\_response()}{process\_response()}}
+{\footnotesize\ttfamily def django.\+middleware.\+common.\+Common\+Middleware.\+process\+\_\+response (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{response }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}When the status code of the response is 404, it may redirect to a path
+with an appended slash if should_redirect_with_slash() returns True.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab5821345b6539830541b32eda93deeea}\label{classdjango_1_1middleware_1_1common_1_1_common_middleware_ab5821345b6539830541b32eda93deeea}} 
+\index{django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}!should\_redirect\_with\_slash@{should\_redirect\_with\_slash}}
+\index{should\_redirect\_with\_slash@{should\_redirect\_with\_slash}!django.middleware.common.CommonMiddleware@{django.middleware.common.CommonMiddleware}}
+\doxysubsubsection{\texorpdfstring{should\_redirect\_with\_slash()}{should\_redirect\_with\_slash()}}
+{\footnotesize\ttfamily def django.\+middleware.\+common.\+Common\+Middleware.\+should\+\_\+redirect\+\_\+with\+\_\+slash (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if settings.APPEND_SLASH is True and appending a slash to
+the request path turns an invalid path into a valid one.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/middleware/common.\+py\end{DoxyCompactItemize}

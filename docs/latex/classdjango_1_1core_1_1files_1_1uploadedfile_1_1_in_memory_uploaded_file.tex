@@ -1,0 +1,93 @@
+\hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file}{}\doxysection{django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File Class Reference}
+\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file}\index{django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}}
+
+
+Inheritance diagram for django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a4335fb6bc381974eb333a2a009705efd}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, file, field\+\_\+name, name, content\+\_\+type, size, charset, content\+\_\+type\+\_\+extra=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_ad288ff889a4be2509f4925991a1040cd}{open}} (self, mode=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a8b2966ff4b2dfe58a8a6cf835ecc3fe4}{chunks}} (self, chunk\+\_\+size=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a2d39a60df1ddce531f85b346c18eedd1}{multiple\+\_\+chunks}} (self, chunk\+\_\+size=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a4bb73db43187a28c012c06e962206aed}\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a4bb73db43187a28c012c06e962206aed}} 
+{\bfseries field\+\_\+name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A file uploaded into memory (i.e. stream-to-memory).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a4335fb6bc381974eb333a2a009705efd}\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a4335fb6bc381974eb333a2a009705efd}} 
+\index{django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file,  }\item[{}]{field\+\_\+name,  }\item[{}]{name,  }\item[{}]{content\+\_\+type,  }\item[{}]{size,  }\item[{}]{charset,  }\item[{}]{content\+\_\+type\+\_\+extra = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_uploaded_file}{django.\+core.\+files.\+uploadedfile.\+Uploaded\+File}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a8b2966ff4b2dfe58a8a6cf835ecc3fe4}\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a8b2966ff4b2dfe58a8a6cf835ecc3fe4}} 
+\index{django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}!chunks@{chunks}}
+\index{chunks@{chunks}!django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}}
+\doxysubsubsection{\texorpdfstring{chunks()}{chunks()}}
+{\footnotesize\ttfamily def django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File.\+chunks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{chunk\+\_\+size = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read the file and yield chunks of ``chunk_size`` bytes (defaults to
+``File.DEFAULT_CHUNK_SIZE``).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1base_1_1_file_acad8c74f6b2c84a2740d7e98e569e308}{django.\+core.\+files.\+base.\+File}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a2d39a60df1ddce531f85b346c18eedd1}\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_a2d39a60df1ddce531f85b346c18eedd1}} 
+\index{django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}!multiple\_chunks@{multiple\_chunks}}
+\index{multiple\_chunks@{multiple\_chunks}!django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}}
+\doxysubsubsection{\texorpdfstring{multiple\_chunks()}{multiple\_chunks()}}
+{\footnotesize\ttfamily def django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File.\+multiple\+\_\+chunks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{chunk\+\_\+size = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return ``True`` if you can expect multiple chunks.
+
+NB: If a particular file representation is in memory, subclasses should
+always return ``False`` -- there's no good reason to read from memory in
+chunks.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1base_1_1_file_a41708b1d92779c4397c67d10cfcf159e}{django.\+core.\+files.\+base.\+File}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_ad288ff889a4be2509f4925991a1040cd}\label{classdjango_1_1core_1_1files_1_1uploadedfile_1_1_in_memory_uploaded_file_ad288ff889a4be2509f4925991a1040cd}} 
+\index{django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}!open@{open}}
+\index{open@{open}!django.core.files.uploadedfile.InMemoryUploadedFile@{django.core.files.uploadedfile.InMemoryUploadedFile}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily def django.\+core.\+files.\+uploadedfile.\+In\+Memory\+Uploaded\+File.\+open (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1base_1_1_file}{django.\+core.\+files.\+base.\+File}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/files/uploadedfile.\+py\end{DoxyCompactItemize}

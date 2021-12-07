@@ -1,0 +1,48 @@
+\hypertarget{namespacesetuptools_1_1__vendor_1_1ordered__set}{}\doxysection{setuptools.\+\_\+vendor.\+ordered\+\_\+set Namespace Reference}
+\label{namespacesetuptools_1_1__vendor_1_1ordered__set}\index{setuptools.\_vendor.ordered\_set@{setuptools.\_vendor.ordered\_set}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__vendor_1_1ordered__set_1_1_ordered_set}{Ordered\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__vendor_1_1ordered__set_a01beb552fed7ce9816e5ffcb877d9560}{is\+\_\+iterable}} (obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__vendor_1_1ordered__set_a71176dd52bbe2f4c416ba37f3efb4ed4}\label{namespacesetuptools_1_1__vendor_1_1ordered__set_a71176dd52bbe2f4c416ba37f3efb4ed4}} 
+{\bfseries SLICE\+\_\+\+ALL} = slice(None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An OrderedSet is a custom MutableSet that remembers its order, so that every
+entry has an index that can be looked up.
+
+Based on a recipe originally posted to ActiveState Recipes by Raymond Hettiger,
+and released under the MIT license.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__vendor_1_1ordered__set_a01beb552fed7ce9816e5ffcb877d9560}\label{namespacesetuptools_1_1__vendor_1_1ordered__set_a01beb552fed7ce9816e5ffcb877d9560}} 
+\index{setuptools.\_vendor.ordered\_set@{setuptools.\_vendor.ordered\_set}!is\_iterable@{is\_iterable}}
+\index{is\_iterable@{is\_iterable}!setuptools.\_vendor.ordered\_set@{setuptools.\_vendor.ordered\_set}}
+\doxysubsubsection{\texorpdfstring{is\_iterable()}{is\_iterable()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+vendor.\+ordered\+\_\+set.\+is\+\_\+iterable (\begin{DoxyParamCaption}\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Are we being asked to look up a list of things, instead of a single thing?
+We check for the `__iter__` attribute so that this can cover types that
+don't have to be known by this module, such as NumPy arrays.
+
+Strings, however, should be considered as atomic values to look up, not
+iterables. The same goes for tuples, since they are immutable and therefore
+valid entries.
+
+We don't need to check for the Python 2 `unicode` type, because it doesn't
+have an `__iter__` attribute anyway.
+\end{DoxyVerb}
+ 

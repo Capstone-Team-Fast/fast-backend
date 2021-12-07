@@ -1,0 +1,82 @@
+\hypertarget{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object}{}\doxysection{django.\+utils.\+functional.\+Simple\+Lazy\+Object Class Reference}
+\label{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object}\index{django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}}
+
+
+Inheritance diagram for django.\+utils.\+functional.\+Simple\+Lazy\+Object\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+utils.\+functional.\+Simple\+Lazy\+Object\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a266f8e01839c6a4c34bcfaadd3d25978}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, func)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_ad2f18e03bd2c710b7220400f6c35f3db}\label{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_ad2f18e03bd2c710b7220400f6c35f3db}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a802427ac80654edc2302124f3ed02bc2}{\+\_\+\+\_\+copy\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_aa3a0cce1e3b224a9aa4092f749d4aee9}{\+\_\+\+\_\+deepcopy\+\_\+\+\_\+}} (self, memo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A lazy object initialized from any function.
+
+Designed for compound objects of unknown type. For builtins or objects of
+known type, use django.utils.functional.lazy.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a266f8e01839c6a4c34bcfaadd3d25978}\label{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a266f8e01839c6a4c34bcfaadd3d25978}} 
+\index{django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Simple\+Lazy\+Object.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{func }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pass in a callable that returns the object to be wrapped.
+
+If copies are made of the resulting SimpleLazyObject, which can happen
+in various circumstances within Django, then you must ensure that the
+callable can be safely run more than once and will return the same
+value.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1utils_1_1text_1_1_truncator_a37a09e852cd2807921bd7dfe0d2ef9cf}{django.\+utils.\+text.\+Truncator}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a802427ac80654edc2302124f3ed02bc2}\label{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_a802427ac80654edc2302124f3ed02bc2}} 
+\index{django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}!\_\_copy\_\_@{\_\_copy\_\_}}
+\index{\_\_copy\_\_@{\_\_copy\_\_}!django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_copy\_\_()}{\_\_copy\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Simple\+Lazy\+Object.\+\_\+\+\_\+copy\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_aa3a0cce1e3b224a9aa4092f749d4aee9}\label{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object_aa3a0cce1e3b224a9aa4092f749d4aee9}} 
+\index{django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}!\_\_deepcopy\_\_@{\_\_deepcopy\_\_}}
+\index{\_\_deepcopy\_\_@{\_\_deepcopy\_\_}!django.utils.functional.SimpleLazyObject@{django.utils.functional.SimpleLazyObject}}
+\doxysubsubsection{\texorpdfstring{\_\_deepcopy\_\_()}{\_\_deepcopy\_\_()}}
+{\footnotesize\ttfamily def django.\+utils.\+functional.\+Simple\+Lazy\+Object.\+\_\+\+\_\+deepcopy\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{memo }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/functional.\+py\end{DoxyCompactItemize}

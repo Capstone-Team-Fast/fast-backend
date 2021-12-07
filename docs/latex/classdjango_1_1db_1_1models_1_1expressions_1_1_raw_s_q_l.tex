@@ -1,0 +1,119 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l}{}\doxysection{django.\+db.\+models.\+expressions.\+Raw\+SQL Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l}\index{django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Raw\+SQL\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Raw\+SQL\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad1e74bd0eab6d0b8d591dcd8868726c0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, sql, params, output\+\_\+field=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_aafca2dccefa76742ea5e25b64b60c1ce}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_aafca2dccefa76742ea5e25b64b60c1ce}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a8b5afedf9ced828bad59c819edd9a789}{as\+\_\+sql}} (self, compiler, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad82dd23539a8ad915b4d4745f80efa0d}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a7125ab648f65e5b8c58d4f112c617e7a}{resolve\+\_\+expression}} (self, query=None, allow\+\_\+joins=True, reuse=None, summarize=False, for\+\_\+save=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a7f651aa4d4bf38989e7440910c91e573}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a7f651aa4d4bf38989e7440910c91e573}} 
+{\bfseries params}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad1e74bd0eab6d0b8d591dcd8868726c0}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad1e74bd0eab6d0b8d591dcd8868726c0}} 
+\index{django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Raw\+SQL.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sql,  }\item[{}]{params,  }\item[{}]{output\+\_\+field = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a8b5afedf9ced828bad59c819edd9a789}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a8b5afedf9ced828bad59c819edd9a789}} 
+\index{django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Raw\+SQL.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad82dd23539a8ad915b4d4745f80efa0d}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_ad82dd23539a8ad915b4d4745f80efa0d}} 
+\index{django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Raw\+SQL.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a7125ab648f65e5b8c58d4f112c617e7a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_raw_s_q_l_a7125ab648f65e5b8c58d4f112c617e7a}} 
+\index{django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}!resolve\_expression@{resolve\_expression}}
+\index{resolve\_expression@{resolve\_expression}!django.db.models.expressions.RawSQL@{django.db.models.expressions.RawSQL}}
+\doxysubsubsection{\texorpdfstring{resolve\_expression()}{resolve\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Raw\+SQL.\+resolve\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{allow\+\_\+joins = {\ttfamily True},  }\item[{}]{reuse = {\ttfamily None},  }\item[{}]{summarize = {\ttfamily False},  }\item[{}]{for\+\_\+save = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the chance to do any preprocessing or validation before being
+added to the query.
+
+Arguments:
+ * query: the backend query implementation
+ * allow_joins: boolean allowing or denying use of joins
+   in this query
+ * reuse: a set of reusable joins for multijoins
+ * summarize: a terminal aggregate clause
+ * for_save: whether this expression about to be used in a save or update
+
+Return: an Expression to be added to the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_aa13750acce26e49830dd7f797f938bdc}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

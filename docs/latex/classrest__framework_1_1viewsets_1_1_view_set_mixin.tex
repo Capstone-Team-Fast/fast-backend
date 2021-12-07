@@ -1,0 +1,117 @@
+\hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin}{}\doxysection{rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin Class Reference}
+\label{classrest__framework_1_1viewsets_1_1_view_set_mixin}\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1viewsets_1_1_view_set_mixin_ab57221a68375dfaf9b829641d1c712e4}{as\+\_\+view}} (cls, actions=None, $\ast$$\ast$initkwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1viewsets_1_1_view_set_mixin_a0a5c83a2699a8edce3b447619244389e}{initialize\+\_\+request}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1viewsets_1_1_view_set_mixin_adb4503e9a0d9fe9993377464eb99951b}{reverse\+\_\+action}} (self, url\+\_\+name, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1viewsets_1_1_view_set_mixin_ae783876d57493be5235eeaadb473cc88}{get\+\_\+extra\+\_\+actions}} (cls)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1viewsets_1_1_view_set_mixin_a9dfc0206c4fd25250dcde1dd0d8739f0}{get\+\_\+extra\+\_\+action\+\_\+url\+\_\+map}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_ab70587743f4ab14c6fbb04f587b19f36}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_ab70587743f4ab14c6fbb04f587b19f36}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a728e0685429cde228f59694098fa24bc}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a728e0685429cde228f59694098fa24bc}} 
+{\bfseries description}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a1106e6f043341b9af01c195b78c5c323}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a1106e6f043341b9af01c195b78c5c323}} 
+{\bfseries suffix}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_ace723a26c4747520dbc329d91e5caeb3}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_ace723a26c4747520dbc329d91e5caeb3}} 
+{\bfseries detail}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_af2a1fc291c57836a5c44c44c63f0171a}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_af2a1fc291c57836a5c44c44c63f0171a}} 
+{\bfseries basename}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a913fb94fa1031060541151b2c47ed754}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a913fb94fa1031060541151b2c47ed754}} 
+{\bfseries action\+\_\+map}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a213b1d5af7a7d9c922ccb7f8f40af30f}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a213b1d5af7a7d9c922ccb7f8f40af30f}} 
+{\bfseries request}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a9d987953d463e057444c3eaf8011d2fb}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a9d987953d463e057444c3eaf8011d2fb}} 
+{\bfseries args}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a2eaa651f97f49bfe358de8bcadc3cde1}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a2eaa651f97f49bfe358de8bcadc3cde1}} 
+{\bfseries kwargs}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a26222d2aae094059f6f50d5b4ddb8613}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a26222d2aae094059f6f50d5b4ddb8613}} 
+{\bfseries action}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This is the magic.
+
+Overrides `.as_view()` so that it takes an `actions` keyword that performs
+the binding of HTTP methods to actions on the Resource.
+
+For example, to create a concrete view binding the 'GET' and 'POST' methods
+to the 'list' and 'create' actions...
+
+view = MyViewSet.as_view({'get': 'list', 'post': 'create'})
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_ab57221a68375dfaf9b829641d1c712e4}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_ab57221a68375dfaf9b829641d1c712e4}} 
+\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}!as\_view@{as\_view}}
+\index{as\_view@{as\_view}!rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+\doxysubsubsection{\texorpdfstring{as\_view()}{as\_view()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin.\+as\+\_\+view (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{actions = {\ttfamily None},  }\item[{$\ast$$\ast$}]{initkwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Because of the way class based views create a closure around the
+instantiated view, we need to totally reimplement `.as_view`,
+and slightly modify the view function that is created and returned.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a9dfc0206c4fd25250dcde1dd0d8739f0}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a9dfc0206c4fd25250dcde1dd0d8739f0}} 
+\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}!get\_extra\_action\_url\_map@{get\_extra\_action\_url\_map}}
+\index{get\_extra\_action\_url\_map@{get\_extra\_action\_url\_map}!rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+\doxysubsubsection{\texorpdfstring{get\_extra\_action\_url\_map()}{get\_extra\_action\_url\_map()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin.\+get\+\_\+extra\+\_\+action\+\_\+url\+\_\+map (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Build a map of {names: urls} for the extra actions.
+
+This method will noop if `detail` was not provided as a view initkwarg.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_ae783876d57493be5235eeaadb473cc88}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_ae783876d57493be5235eeaadb473cc88}} 
+\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}!get\_extra\_actions@{get\_extra\_actions}}
+\index{get\_extra\_actions@{get\_extra\_actions}!rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+\doxysubsubsection{\texorpdfstring{get\_extra\_actions()}{get\_extra\_actions()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin.\+get\+\_\+extra\+\_\+actions (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the methods that are marked as an extra ViewSet `@action`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_a0a5c83a2699a8edce3b447619244389e}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_a0a5c83a2699a8edce3b447619244389e}} 
+\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}!initialize\_request@{initialize\_request}}
+\index{initialize\_request@{initialize\_request}!rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+\doxysubsubsection{\texorpdfstring{initialize\_request()}{initialize\_request()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin.\+initialize\+\_\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the `.action` attribute on the view, depending on the request method.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1viewsets_1_1_view_set_mixin_adb4503e9a0d9fe9993377464eb99951b}\label{classrest__framework_1_1viewsets_1_1_view_set_mixin_adb4503e9a0d9fe9993377464eb99951b}} 
+\index{rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}!reverse\_action@{reverse\_action}}
+\index{reverse\_action@{reverse\_action}!rest\_framework.viewsets.ViewSetMixin@{rest\_framework.viewsets.ViewSetMixin}}
+\doxysubsubsection{\texorpdfstring{reverse\_action()}{reverse\_action()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+viewsets.\+View\+Set\+Mixin.\+reverse\+\_\+action (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url\+\_\+name,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reverse the action for the given `url_name`.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/viewsets.\+py\end{DoxyCompactItemize}

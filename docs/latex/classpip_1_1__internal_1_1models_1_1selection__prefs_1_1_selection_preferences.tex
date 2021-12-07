@@ -1,0 +1,57 @@
+\hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences}{}\doxysection{pip.\+\_\+internal.\+models.\+selection\+\_\+prefs.\+Selection\+Preferences Class Reference}
+\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences}\index{pip.\_internal.models.selection\_prefs.SelectionPreferences@{pip.\_internal.models.selection\_prefs.SelectionPreferences}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_ac8cbb04f40c636b0f398ab0f0c7eb601}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, bool allow\+\_\+yanked, bool allow\+\_\+all\+\_\+prereleases=False, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1format__control_1_1_format_control}{Format\+Control}}\mbox{]} format\+\_\+control=None, bool prefer\+\_\+binary=False, Optional\mbox{[}bool\mbox{]} ignore\+\_\+requires\+\_\+python=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_aa96973ab36d67714b4707eee1ea42ea6}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_aa96973ab36d67714b4707eee1ea42ea6}} 
+{\bfseries allow\+\_\+yanked}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_a5654189f74daa041a4be49af71e367ab}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_a5654189f74daa041a4be49af71e367ab}} 
+{\bfseries allow\+\_\+all\+\_\+prereleases}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_abdb334388cc5baad8a777f6d6fdd26c2}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_abdb334388cc5baad8a777f6d6fdd26c2}} 
+{\bfseries format\+\_\+control}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_a44d406c39de271606a18f520f881cbb5}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_a44d406c39de271606a18f520f881cbb5}} 
+{\bfseries prefer\+\_\+binary}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_ab9352edcf277b94c8e28d583df35fe80}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_ab9352edcf277b94c8e28d583df35fe80}} 
+{\bfseries ignore\+\_\+requires\+\_\+python}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Encapsulates the candidate selection preferences for downloading
+and installing files.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_ac8cbb04f40c636b0f398ab0f0c7eb601}\label{classpip_1_1__internal_1_1models_1_1selection__prefs_1_1_selection_preferences_ac8cbb04f40c636b0f398ab0f0c7eb601}} 
+\index{pip.\_internal.models.selection\_prefs.SelectionPreferences@{pip.\_internal.models.selection\_prefs.SelectionPreferences}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.models.selection\_prefs.SelectionPreferences@{pip.\_internal.models.selection\_prefs.SelectionPreferences}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+models.\+selection\+\_\+prefs.\+Selection\+Preferences.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{bool}]{allow\+\_\+yanked,  }\item[{bool }]{allow\+\_\+all\+\_\+prereleases = {\ttfamily False},  }\item[{Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1format__control_1_1_format_control}{Format\+Control}}\mbox{]} }]{format\+\_\+control = {\ttfamily None},  }\item[{bool }]{prefer\+\_\+binary = {\ttfamily False},  }\item[{Optional\mbox{[}bool\mbox{]} }]{ignore\+\_\+requires\+\_\+python = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a SelectionPreferences object.
+
+:param allow_yanked: Whether files marked as yanked (in the sense
+    of PEP 592) are permitted to be candidates for install.
+:param format_control: A FormatControl object or None. Used to control
+    the selection of source packages / binary packages when consulting
+    the index and links.
+:param prefer_binary: Whether to prefer an old, but valid, binary
+    dist over a new source dist.
+:param ignore_requires_python: Whether to ignore incompatible
+    "Requires-Python" values in links. Defaults to False.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/models/selection\+\_\+prefs.\+py\end{DoxyCompactItemize}

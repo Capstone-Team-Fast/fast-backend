@@ -1,0 +1,62 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck}{}\doxysection{django.\+contrib.\+gis.\+geos.\+prototypes.\+errcheck Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck}\index{django.contrib.gis.geos.prototypes.errcheck@{django.contrib.gis.geos.prototypes.errcheck}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a3790b53137b6e648d349af01ff376a98}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a3790b53137b6e648d349af01ff376a98}} 
+def {\bfseries last\+\_\+arg\+\_\+byref} (args)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a8fc6b2e34403f3218efe6b4b225b60ff}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a8fc6b2e34403f3218efe6b4b225b60ff}} 
+def {\bfseries check\+\_\+dbl} (result, func, cargs)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_afa18053c89a48db4c4a01ee2eacd4687}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_afa18053c89a48db4c4a01ee2eacd4687}} 
+def {\bfseries check\+\_\+geom} (result, func, cargs)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a733b522ee744451b8e20dbf6bd0d4fa9}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a733b522ee744451b8e20dbf6bd0d4fa9}} 
+def {\bfseries check\+\_\+minus\+\_\+one} (result, func, cargs)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_ab23e4845aa389ce8a46f6aecf2a0ebc6}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_ab23e4845aa389ce8a46f6aecf2a0ebc6}} 
+def {\bfseries check\+\_\+predicate} (result, func, cargs)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a67d3161b5f084b9eac4cd2ba6748e7c5}{check\+\_\+sized\+\_\+string}} (result, func, cargs)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_aaad21b4154dbed4994a35a1660817d87}{check\+\_\+string}} (result, func, cargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a1abaab6a39d0c173fd50a2d8bbcf1318}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a1abaab6a39d0c173fd50a2d8bbcf1318}} 
+{\bfseries free} = \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_func_factory}{GEOSFunc\+Factory}}(\textquotesingle{}GEOSFree\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a1e04eea12638e774db3204778ed25f14}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a1e04eea12638e774db3204778ed25f14}} 
+{\bfseries argtypes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Error checking functions for GEOS ctypes prototype functions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a67d3161b5f084b9eac4cd2ba6748e7c5}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_a67d3161b5f084b9eac4cd2ba6748e7c5}} 
+\index{django.contrib.gis.geos.prototypes.errcheck@{django.contrib.gis.geos.prototypes.errcheck}!check\_sized\_string@{check\_sized\_string}}
+\index{check\_sized\_string@{check\_sized\_string}!django.contrib.gis.geos.prototypes.errcheck@{django.contrib.gis.geos.prototypes.errcheck}}
+\doxysubsubsection{\texorpdfstring{check\_sized\_string()}{check\_sized\_string()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+prototypes.\+errcheck.\+check\+\_\+sized\+\_\+string (\begin{DoxyParamCaption}\item[{}]{result,  }\item[{}]{func,  }\item[{}]{cargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Error checking for routines that return explicitly sized strings.
+
+This frees the memory allocated by GEOS at the result pointer.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_aaad21b4154dbed4994a35a1660817d87}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1errcheck_aaad21b4154dbed4994a35a1660817d87}} 
+\index{django.contrib.gis.geos.prototypes.errcheck@{django.contrib.gis.geos.prototypes.errcheck}!check\_string@{check\_string}}
+\index{check\_string@{check\_string}!django.contrib.gis.geos.prototypes.errcheck@{django.contrib.gis.geos.prototypes.errcheck}}
+\doxysubsubsection{\texorpdfstring{check\_string()}{check\_string()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+prototypes.\+errcheck.\+check\+\_\+string (\begin{DoxyParamCaption}\item[{}]{result,  }\item[{}]{func,  }\item[{}]{cargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Error checking for routines that return strings.
+
+This frees the memory allocated by GEOS at the result pointer.
+\end{DoxyVerb}
+ 

@@ -1,0 +1,85 @@
+\hypertarget{classneomodel_1_1match_1_1_traversal}{}\doxysection{neomodel.\+match.\+Traversal Class Reference}
+\label{classneomodel_1_1match_1_1_traversal}\index{neomodel.match.Traversal@{neomodel.match.Traversal}}
+
+
+Inheritance diagram for neomodel.\+match.\+Traversal\+:
+% FIG 0
+
+
+Collaboration diagram for neomodel.\+match.\+Traversal\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneomodel_1_1match_1_1_traversal_aea9bd896e519bd63438ec4ae1db580a5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, source, name, definition)
+\item 
+def \mbox{\hyperlink{classneomodel_1_1match_1_1_traversal_a8d05246928717ddc300ecb375582b5ad}{match}} (self, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_a7606509caf3090ac7ad0a5660de4107c}\label{classneomodel_1_1match_1_1_traversal_a7606509caf3090ac7ad0a5660de4107c}} 
+{\bfseries source}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_a12d6b55af6e9b2eaf71e4fb946491b81}\label{classneomodel_1_1match_1_1_traversal_a12d6b55af6e9b2eaf71e4fb946491b81}} 
+{\bfseries source\+\_\+class}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_a394d0e4e8643d658de72ca8420c6c2c8}\label{classneomodel_1_1match_1_1_traversal_a394d0e4e8643d658de72ca8420c6c2c8}} 
+{\bfseries definition}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_acf70eff7d01a460ba655107f5c225781}\label{classneomodel_1_1match_1_1_traversal_acf70eff7d01a460ba655107f5c225781}} 
+{\bfseries target\+\_\+class}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_a37226e3cc20f2882ccc0d72654fdfb18}\label{classneomodel_1_1match_1_1_traversal_a37226e3cc20f2882ccc0d72654fdfb18}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_ab111a56fb9eefd6a7ccb215b8fb82bda}\label{classneomodel_1_1match_1_1_traversal_ab111a56fb9eefd6a7ccb215b8fb82bda}} 
+{\bfseries filters}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Models a traversal from a node to another.
+
+:param source: Starting of the traversal.
+:type source: A :class:`~neomodel.core.StructuredNode` subclass, an
+              instance of such, a :class:`~neomodel.match.NodeSet` instance
+              or a :class:`~neomodel.match.Traversal` instance.
+:param name: A name for the traversal.
+:type name: :class:`str`
+:param definition: A relationship definition that most certainly deserves
+                   a documentation here.
+:type defintion: :class:`dict`
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_aea9bd896e519bd63438ec4ae1db580a5}\label{classneomodel_1_1match_1_1_traversal_aea9bd896e519bd63438ec4ae1db580a5}} 
+\index{neomodel.match.Traversal@{neomodel.match.Traversal}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neomodel.match.Traversal@{neomodel.match.Traversal}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neomodel.\+match.\+Traversal.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{source,  }\item[{}]{name,  }\item[{}]{definition }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a traversal\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneomodel_1_1match_1_1_traversal_a8d05246928717ddc300ecb375582b5ad}\label{classneomodel_1_1match_1_1_traversal_a8d05246928717ddc300ecb375582b5ad}} 
+\index{neomodel.match.Traversal@{neomodel.match.Traversal}!match@{match}}
+\index{match@{match}!neomodel.match.Traversal@{neomodel.match.Traversal}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily def neomodel.\+match.\+Traversal.\+match (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Traverse relationships with properties matching the given parameters.
+
+    e.g: `.match(price__lt=10)`
+
+:param kwargs: see `NodeSet.filter()` for syntax
+:return: self
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neomodel/match.\+py\end{DoxyCompactItemize}

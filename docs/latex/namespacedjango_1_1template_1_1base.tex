@@ -1,0 +1,252 @@
+\hypertarget{namespacedjango_1_1template_1_1base}{}\doxysection{django.\+template.\+base Namespace Reference}
+\label{namespacedjango_1_1template_1_1base}\index{django.template.base@{django.template.base}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_debug_lexer}{Debug\+Lexer}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_filter_expression}{Filter\+Expression}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_lexer}{Lexer}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_node}{Node}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_node_list}{Node\+List}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_origin}{Origin}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_parser}{Parser}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_template}{Template}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_text_node}{Text\+Node}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_token}{Token}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_token_type}{Token\+Type}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_variable}{Variable}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_variable_does_not_exist}{Variable\+Does\+Not\+Exist}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_variable_node}{Variable\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_acb3540d110eadc3ff3e885bc55181ff0}\label{namespacedjango_1_1template_1_1base_acb3540d110eadc3ff3e885bc55181ff0}} 
+def {\bfseries linebreak\+\_\+iter} (template\+\_\+source)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1base_aaf2df5379cb8b26ab6b14ea474288534}{render\+\_\+value\+\_\+in\+\_\+context}} (value, context)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1base_a9e7df529350e308aeb5dfe200b8235f7}{token\+\_\+kwargs}} (bits, parser, support\+\_\+legacy=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ac466ebd8515ec80e421b1a616435a0fc}\label{namespacedjango_1_1template_1_1base_ac466ebd8515ec80e421b1a616435a0fc}} 
+string {\bfseries FILTER\+\_\+\+SEPARATOR} = \textquotesingle{}$\vert$\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a341549c5c225e0cf77077b3eb7d053e6}\label{namespacedjango_1_1template_1_1base_a341549c5c225e0cf77077b3eb7d053e6}} 
+string {\bfseries FILTER\+\_\+\+ARGUMENT\+\_\+\+SEPARATOR} = \textquotesingle{}\+:\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a8a1eb3475b256157be8b9cfc5e6a9597}\label{namespacedjango_1_1template_1_1base_a8a1eb3475b256157be8b9cfc5e6a9597}} 
+string {\bfseries VARIABLE\+\_\+\+ATTRIBUTE\+\_\+\+SEPARATOR} = \textquotesingle{}.\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_acac1b12840d30ebd393e9a68d23179a0}\label{namespacedjango_1_1template_1_1base_acac1b12840d30ebd393e9a68d23179a0}} 
+string {\bfseries BLOCK\+\_\+\+TAG\+\_\+\+START} = \textquotesingle{}\{\%\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ab86bea290879669761ce4bdc8f9fe1b4}\label{namespacedjango_1_1template_1_1base_ab86bea290879669761ce4bdc8f9fe1b4}} 
+string {\bfseries BLOCK\+\_\+\+TAG\+\_\+\+END} = \textquotesingle{}\%\}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a5d65f19c4fb235f97d89bc032b904dc6}\label{namespacedjango_1_1template_1_1base_a5d65f19c4fb235f97d89bc032b904dc6}} 
+string {\bfseries VARIABLE\+\_\+\+TAG\+\_\+\+START} = \textquotesingle{}\{\{\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ada5a52b4a300b12e4ebae37f13e06416}\label{namespacedjango_1_1template_1_1base_ada5a52b4a300b12e4ebae37f13e06416}} 
+string {\bfseries VARIABLE\+\_\+\+TAG\+\_\+\+END} = \textquotesingle{}\}\}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_acf738087ed59d238cc5aa6d4c4b033cc}\label{namespacedjango_1_1template_1_1base_acf738087ed59d238cc5aa6d4c4b033cc}} 
+string {\bfseries COMMENT\+\_\+\+TAG\+\_\+\+START} = \textquotesingle{}\{\#\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a8c9662f61605700f51a7578093673fce}\label{namespacedjango_1_1template_1_1base_a8c9662f61605700f51a7578093673fce}} 
+string {\bfseries COMMENT\+\_\+\+TAG\+\_\+\+END} = \textquotesingle{}\#\}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a990a1676de7bb32e9360b86229305b34}\label{namespacedjango_1_1template_1_1base_a990a1676de7bb32e9360b86229305b34}} 
+string {\bfseries TRANSLATOR\+\_\+\+COMMENT\+\_\+\+MARK} = \textquotesingle{}Translators\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a9a0463c2d426990a2ba98d94550c45e4}\label{namespacedjango_1_1template_1_1base_a9a0463c2d426990a2ba98d94550c45e4}} 
+string {\bfseries SINGLE\+\_\+\+BRACE\+\_\+\+START} = \textquotesingle{}\{\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_af2e92fa2cb003497545ddc7f5d4a27a4}\label{namespacedjango_1_1template_1_1base_af2e92fa2cb003497545ddc7f5d4a27a4}} 
+string {\bfseries SINGLE\+\_\+\+BRACE\+\_\+\+END} = \textquotesingle{}\}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a322443665f9bd2fd9cd403da9c022ed5}\label{namespacedjango_1_1template_1_1base_a322443665f9bd2fd9cd403da9c022ed5}} 
+string {\bfseries UNKNOWN\+\_\+\+SOURCE} = \textquotesingle{}$<$unknown source$>$\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{namespacedjango_1_1template_1_1base_ab5cf2ffd68443d0f465ff47dc23b5855}{tag\+\_\+re}}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a48b93687bd05616e30a3837fbf8e0d8e}\label{namespacedjango_1_1template_1_1base_a48b93687bd05616e30a3837fbf8e0d8e}} 
+{\bfseries logger} = logging.\+get\+Logger(\textquotesingle{}django.\+template\textquotesingle{})
+\item 
+string \mbox{\hyperlink{namespacedjango_1_1template_1_1base_ac1cf50b117405a9aa829f206e4f29cd1}{constant\+\_\+string}}
+\item 
+string \mbox{\hyperlink{namespacedjango_1_1template_1_1base_a8aed77e54dc337353d17c9146d0b54bb}{filter\+\_\+raw\+\_\+string}}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ab810d728971f44ca265fe41156c808f5}\label{namespacedjango_1_1template_1_1base_ab810d728971f44ca265fe41156c808f5}} 
+{\bfseries filter\+\_\+re} = \+\_\+lazy\+\_\+re\+\_\+compile(filter\+\_\+raw\+\_\+string, re.\+VERBOSE)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a458dc74d75a7305a01e36359e343fe0f}\label{namespacedjango_1_1template_1_1base_a458dc74d75a7305a01e36359e343fe0f}} 
+{\bfseries kwarg\+\_\+re} = \+\_\+lazy\+\_\+re\+\_\+compile(r\char`\"{}(?\+:(\textbackslash{}w+)=)?(.+)\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This is the Django template system.
+
+How it works:
+
+The Lexer.tokenize() method converts a template string (i.e., a string
+containing markup with custom template tags) to tokens, which can be either
+plain text (TokenType.TEXT), variables (TokenType.VAR), or block statements
+(TokenType.BLOCK).
+
+The Parser() class takes a list of tokens in its constructor, and its parse()
+method returns a compiled template -- which is, under the hood, a list of
+Node objects.
+
+Each Node is responsible for creating some sort of output -- e.g. simple text
+(TextNode), variable values in a given context (VariableNode), results of basic
+logic (IfNode), results of looping (ForNode), or anything else. The core Node
+types are TextNode, VariableNode, IfNode and ForNode, but plugin modules can
+define their own custom node types.
+
+Each Node has a render() method, which takes a Context and returns a string of
+the rendered node. For example, the render() method of a Variable Node returns
+the variable's value as a string. The render() method of a ForNode returns the
+rendered output of whatever was inside the loop, recursively.
+
+The Template class is a convenient wrapper that takes care of template
+compilation and rendering.
+
+Usage:
+
+The only thing you should ever use directly in this file is the Template class.
+Create a compiled template object with a template_string, then call render()
+with a context. In the compilation stage, the TemplateSyntaxError exception
+will be raised if the template doesn't have proper syntax.
+
+Sample code:
+
+>>> from django import template
+>>> s = '<html>{% if test %}<h1>{{ varvalue }}</h1>{% endif %}</html>'
+>>> t = template.Template(s)
+
+(t is now a compiled template, and its render() method can be called multiple
+times with multiple contexts)
+
+>>> c = template.Context({'test':True, 'varvalue': 'Hello'})
+>>> t.render(c)
+'<html><h1>Hello</h1></html>'
+>>> c = template.Context({'test':False, 'varvalue': 'Hello'})
+>>> t.render(c)
+'<html></html>'
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_aaf2df5379cb8b26ab6b14ea474288534}\label{namespacedjango_1_1template_1_1base_aaf2df5379cb8b26ab6b14ea474288534}} 
+\index{django.template.base@{django.template.base}!render\_value\_in\_context@{render\_value\_in\_context}}
+\index{render\_value\_in\_context@{render\_value\_in\_context}!django.template.base@{django.template.base}}
+\doxysubsubsection{\texorpdfstring{render\_value\_in\_context()}{render\_value\_in\_context()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+render\+\_\+value\+\_\+in\+\_\+context (\begin{DoxyParamCaption}\item[{}]{value,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert any value to a string to become part of a rendered template. This
+means escaping, if required, and conversion to a string. If value is a
+string, it's expected to already be translated.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a9e7df529350e308aeb5dfe200b8235f7}\label{namespacedjango_1_1template_1_1base_a9e7df529350e308aeb5dfe200b8235f7}} 
+\index{django.template.base@{django.template.base}!token\_kwargs@{token\_kwargs}}
+\index{token\_kwargs@{token\_kwargs}!django.template.base@{django.template.base}}
+\doxysubsubsection{\texorpdfstring{token\_kwargs()}{token\_kwargs()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+token\+\_\+kwargs (\begin{DoxyParamCaption}\item[{}]{bits,  }\item[{}]{parser,  }\item[{}]{support\+\_\+legacy = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse token keyword arguments and return a dictionary of the arguments
+retrieved from the ``bits`` token list.
+
+`bits` is a list containing the remainder of the token (split by spaces)
+that is to be checked for arguments. Valid arguments are removed from this
+list.
+
+`support_legacy` - if True, the legacy format ``1 as foo`` is accepted.
+Otherwise, only the standard ``foo=1`` format is allowed.
+
+There is no requirement for all remaining token ``bits`` to be keyword
+arguments, so return the dictionary as soon as an invalid argument format
+is reached.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ac1cf50b117405a9aa829f206e4f29cd1}\label{namespacedjango_1_1template_1_1base_ac1cf50b117405a9aa829f206e4f29cd1}} 
+\index{django.template.base@{django.template.base}!constant\_string@{constant\_string}}
+\index{constant\_string@{constant\_string}!django.template.base@{django.template.base}}
+\doxysubsubsection{\texorpdfstring{constant\_string}{constant\_string}}
+{\footnotesize\ttfamily string django.\+template.\+base.\+constant\+\_\+string}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{r"{}"{}"{}}}
+\DoxyCodeLine{2 \textcolor{stringliteral}{(?:\%(i18n\_open)s\%(strdq)s\%(i18n\_close)s|}}
+\DoxyCodeLine{3 \textcolor{stringliteral}{\%(i18n\_open)s\%(strsq)s\%(i18n\_close)s|}}
+\DoxyCodeLine{4 \textcolor{stringliteral}{\%(strdq)s|}}
+\DoxyCodeLine{5 \textcolor{stringliteral}{\%(strsq)s)}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{"{}"{}"{}} \% \{}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'strdq'}: \textcolor{stringliteral}{r'"{}[\string^"{}\(\backslash\)\(\backslash\)]*(?:\(\backslash\)\(\backslash\).[\string^"{}\(\backslash\)\(\backslash\)]*)*"{}'},  \textcolor{comment}{\# double-\/quoted string}}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'strsq'}: \textcolor{stringliteral}{r"{}'[\string^'\(\backslash\)\(\backslash\)]*(?:\(\backslash\)\(\backslash\).[\string^'\(\backslash\)\(\backslash\)]*)*'"{}},  \textcolor{comment}{\# single-\/quoted string}}
+\DoxyCodeLine{9     \textcolor{stringliteral}{'i18n\_open'}: re.escape(\textcolor{stringliteral}{"{}\_("{}}),}
+\DoxyCodeLine{10     \textcolor{stringliteral}{'i18n\_close'}: re.escape(\textcolor{stringliteral}{"{})"{}}),}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_a8aed77e54dc337353d17c9146d0b54bb}\label{namespacedjango_1_1template_1_1base_a8aed77e54dc337353d17c9146d0b54bb}} 
+\index{django.template.base@{django.template.base}!filter\_raw\_string@{filter\_raw\_string}}
+\index{filter\_raw\_string@{filter\_raw\_string}!django.template.base@{django.template.base}}
+\doxysubsubsection{\texorpdfstring{filter\_raw\_string}{filter\_raw\_string}}
+{\footnotesize\ttfamily string django.\+template.\+base.\+filter\+\_\+raw\+\_\+string}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{r"{}"{}"{}}}
+\DoxyCodeLine{2 \textcolor{stringliteral}{\string^(?P<constant>\%(constant)s)|}}
+\DoxyCodeLine{3 \textcolor{stringliteral}{\string^(?P<var>[\%(var\_chars)s]+|\%(num)s)|}}
+\DoxyCodeLine{4 \textcolor{stringliteral}{ (?:\(\backslash\)s*\%(filter\_sep)s\(\backslash\)s*}}
+\DoxyCodeLine{5 \textcolor{stringliteral}{     (?P<filter\_name>\(\backslash\)w+)}}
+\DoxyCodeLine{6 \textcolor{stringliteral}{         (?:\%(arg\_sep)s}}
+\DoxyCodeLine{7 \textcolor{stringliteral}{             (?:}}
+\DoxyCodeLine{8 \textcolor{stringliteral}{              (?P<constant\_arg>\%(constant)s)|}}
+\DoxyCodeLine{9 \textcolor{stringliteral}{              (?P<var\_arg>[\%(var\_chars)s]+|\%(num)s)}}
+\DoxyCodeLine{10 \textcolor{stringliteral}{             )}}
+\DoxyCodeLine{11 \textcolor{stringliteral}{         )?}}
+\DoxyCodeLine{12 \textcolor{stringliteral}{ )"{}"{}"{} \% \{}}
+\DoxyCodeLine{13 \textcolor{stringliteral}{    'constant'}: constant\_string,}
+\DoxyCodeLine{14     \textcolor{stringliteral}{'num'}: \textcolor{stringliteral}{r'[-\/+\(\backslash\).]?\(\backslash\)d[\(\backslash\)d\(\backslash\).e]*'},}
+\DoxyCodeLine{15     \textcolor{stringliteral}{'var\_chars'}: \textcolor{stringliteral}{r'\(\backslash\)w\(\backslash\).'},}
+\DoxyCodeLine{16     \textcolor{stringliteral}{'filter\_sep'}: re.escape(FILTER\_SEPARATOR),}
+\DoxyCodeLine{17     \textcolor{stringliteral}{'arg\_sep'}: re.escape(FILTER\_ARGUMENT\_SEPARATOR),}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1base_ab5cf2ffd68443d0f465ff47dc23b5855}\label{namespacedjango_1_1template_1_1base_ab5cf2ffd68443d0f465ff47dc23b5855}} 
+\index{django.template.base@{django.template.base}!tag\_re@{tag\_re}}
+\index{tag\_re@{tag\_re}!django.template.base@{django.template.base}}
+\doxysubsubsection{\texorpdfstring{tag\_re}{tag\_re}}
+{\footnotesize\ttfamily tuple django.\+template.\+base.\+tag\+\_\+re}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (\_lazy\_re\_compile(\textcolor{stringliteral}{'(\%s.*?\%s|\%s.*?\%s|\%s.*?\%s)'} \%}
+\DoxyCodeLine{2           (re.escape(BLOCK\_TAG\_START), re.escape(BLOCK\_TAG\_END),}
+\DoxyCodeLine{3            re.escape(VARIABLE\_TAG\_START), re.escape(VARIABLE\_TAG\_END),}
+\DoxyCodeLine{4            re.escape(COMMENT\_TAG\_START), re.escape(COMMENT\_TAG\_END))))}
+
+\end{DoxyCode}

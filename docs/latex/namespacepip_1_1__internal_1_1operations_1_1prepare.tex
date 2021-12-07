@@ -1,0 +1,58 @@
+\hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare}{}\doxysection{pip.\+\_\+internal.\+operations.\+prepare Namespace Reference}
+\label{namespacepip_1_1__internal_1_1operations_1_1prepare}\index{pip.\_internal.operations.prepare@{pip.\_internal.operations.prepare}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1_file}{File}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1operations_1_1prepare_1_1_requirement_preparer}{Requirement\+Preparer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare_a51749831006429999baef3eb8b71c8a0}\label{namespacepip_1_1__internal_1_1operations_1_1prepare_a51749831006429999baef3eb8b71c8a0}} 
+def {\bfseries unpack\+\_\+vcs\+\_\+link} (link, location)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare_a1b810f7f0cec5fe7b3b2296548d80f6d}\label{namespacepip_1_1__internal_1_1operations_1_1prepare_a1b810f7f0cec5fe7b3b2296548d80f6d}} 
+def {\bfseries get\+\_\+http\+\_\+url} (link, download, download\+\_\+dir=None, hashes=None)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1operations_1_1prepare_a10a9df8c34e4824a1b3ce7dc3616736d}{get\+\_\+file\+\_\+url}} (link, download\+\_\+dir=None, hashes=None \# type\+:\+Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1_hashes}{Hashes}}\mbox{]})
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1operations_1_1prepare_a7d45b87bf33198f796af1e437cf4bebe}{unpack\+\_\+url}} (link, location, download, download\+\_\+dir=None, hashes=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare_a5711b6d724733a124cdb792d179f0940}\label{namespacepip_1_1__internal_1_1operations_1_1prepare_a5711b6d724733a124cdb792d179f0940}} 
+{\bfseries logger} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Prepares a distribution for installation
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare_a10a9df8c34e4824a1b3ce7dc3616736d}\label{namespacepip_1_1__internal_1_1operations_1_1prepare_a10a9df8c34e4824a1b3ce7dc3616736d}} 
+\index{pip.\_internal.operations.prepare@{pip.\_internal.operations.prepare}!get\_file\_url@{get\_file\_url}}
+\index{get\_file\_url@{get\_file\_url}!pip.\_internal.operations.prepare@{pip.\_internal.operations.prepare}}
+\doxysubsubsection{\texorpdfstring{get\_file\_url()}{get\_file\_url()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+operations.\+prepare.\+get\+\_\+file\+\_\+url (\begin{DoxyParamCaption}\item[{}]{link,  }\item[{}]{download\+\_\+dir = {\ttfamily None},  }\item[{}]{hashes = {\ttfamily None~~\#~type\+:~Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1hashes_1_1_hashes}{Hashes}}\mbox{]}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get file and optionally check its hash.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1operations_1_1prepare_a7d45b87bf33198f796af1e437cf4bebe}\label{namespacepip_1_1__internal_1_1operations_1_1prepare_a7d45b87bf33198f796af1e437cf4bebe}} 
+\index{pip.\_internal.operations.prepare@{pip.\_internal.operations.prepare}!unpack\_url@{unpack\_url}}
+\index{unpack\_url@{unpack\_url}!pip.\_internal.operations.prepare@{pip.\_internal.operations.prepare}}
+\doxysubsubsection{\texorpdfstring{unpack\_url()}{unpack\_url()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+operations.\+prepare.\+unpack\+\_\+url (\begin{DoxyParamCaption}\item[{}]{link,  }\item[{}]{location,  }\item[{}]{download,  }\item[{}]{download\+\_\+dir = {\ttfamily None},  }\item[{}]{hashes = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Unpack link into location, downloading if required.
+
+:param hashes: A Hashes object, one of whose embedded hashes must match,
+    or HashMismatch will be raised. If the Hashes is empty, no matches are
+    required, and unhashable types of requirements (like VCS ones, which
+    would ordinarily raise HashUnsupported) are allowed.
+\end{DoxyVerb}
+ 

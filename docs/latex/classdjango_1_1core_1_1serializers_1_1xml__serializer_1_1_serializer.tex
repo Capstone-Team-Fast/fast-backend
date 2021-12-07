@@ -1,0 +1,137 @@
+\hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer}{}\doxysection{django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer Class Reference}
+\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer}\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+
+
+Inheritance diagram for django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a45d3801576253e54d72ebaeaf7febed2}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a45d3801576253e54d72ebaeaf7febed2}} 
+def {\bfseries indent} (self, level)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a69533ac1db45ee31b9870e4c15993836}{start\+\_\+serialization}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_af1f8a72a7d97c8334c4f073eaa56108c}{end\+\_\+serialization}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_ac7860ab677741b702d11da16651ee34b}{start\+\_\+object}} (self, obj)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a341dbe428fea5a9f3a3601aaf62c375b}{end\+\_\+object}} (self, obj)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4ba3b6f582712692f3679d3d985f592f}{handle\+\_\+field}} (self, obj, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4594a2a5c2065cc2ce71fd80fa412cc0}{handle\+\_\+fk\+\_\+field}} (self, obj, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a3f05ebad5fccc3326f81cd47d923e57f}{handle\+\_\+m2m\+\_\+field}} (self, obj, field)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a48b7d637cf9acdd78a391d44cd274829}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a48b7d637cf9acdd78a391d44cd274829}} 
+{\bfseries xml}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Serialize a QuerySet to XML.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a341dbe428fea5a9f3a3601aaf62c375b}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a341dbe428fea5a9f3a3601aaf62c375b}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!end\_object@{end\_object}}
+\index{end\_object@{end\_object}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{end\_object()}{end\_object()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+end\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called after handling all fields for an object.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_ad84459b5c572b476dc62cfaf43c24311}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_af1f8a72a7d97c8334c4f073eaa56108c}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_af1f8a72a7d97c8334c4f073eaa56108c}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!end\_serialization@{end\_serialization}}
+\index{end\_serialization@{end\_serialization}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{end\_serialization()}{end\_serialization()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+end\+\_\+serialization (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}End serialization -- end the document.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_a74150544bfc21e2b427d4023681d305d}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4ba3b6f582712692f3679d3d985f592f}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4ba3b6f582712692f3679d3d985f592f}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!handle\_field@{handle\_field}}
+\index{handle\_field@{handle\_field}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{handle\_field()}{handle\_field()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+handle\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle each field on an object (except for ForeignKeys and
+ManyToManyFields).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_afeb13db1ce3ae26e16c27f1373887836}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4594a2a5c2065cc2ce71fd80fa412cc0}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a4594a2a5c2065cc2ce71fd80fa412cc0}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!handle\_fk\_field@{handle\_fk\_field}}
+\index{handle\_fk\_field@{handle\_fk\_field}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{handle\_fk\_field()}{handle\_fk\_field()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+handle\+\_\+fk\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle a ForeignKey (they need to be treated slightly
+differently from regular fields).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_a87e9a88e433e0aa90407e70b6378419a}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a3f05ebad5fccc3326f81cd47d923e57f}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a3f05ebad5fccc3326f81cd47d923e57f}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!handle\_m2m\_field@{handle\_m2m\_field}}
+\index{handle\_m2m\_field@{handle\_m2m\_field}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{handle\_m2m\_field()}{handle\_m2m\_field()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+handle\+\_\+m2m\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handle a ManyToManyField. Related objects are only serialized as
+references to the object's PK (i.e. the related *data* is not dumped,
+just the relation).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_ac267b2612bbb6a56d417529642c7f736}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_ac7860ab677741b702d11da16651ee34b}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_ac7860ab677741b702d11da16651ee34b}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!start\_object@{start\_object}}
+\index{start\_object@{start\_object}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{start\_object()}{start\_object()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+start\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called as each object is handled.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_a2a731cf114ef480dd8cfface4ff6fa93}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a69533ac1db45ee31b9870e4c15993836}\label{classdjango_1_1core_1_1serializers_1_1xml__serializer_1_1_serializer_a69533ac1db45ee31b9870e4c15993836}} 
+\index{django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}!start\_serialization@{start\_serialization}}
+\index{start\_serialization@{start\_serialization}!django.core.serializers.xml\_serializer.Serializer@{django.core.serializers.xml\_serializer.Serializer}}
+\doxysubsubsection{\texorpdfstring{start\_serialization()}{start\_serialization()}}
+{\footnotesize\ttfamily def django.\+core.\+serializers.\+xml\+\_\+serializer.\+Serializer.\+start\+\_\+serialization (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start serialization -- open the XML document and the root element.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1base_1_1_serializer_a724d6dcce1248a8de7fb393e3e39ed51}{django.\+core.\+serializers.\+base.\+Serializer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/serializers/xml\+\_\+serializer.\+py\end{DoxyCompactItemize}

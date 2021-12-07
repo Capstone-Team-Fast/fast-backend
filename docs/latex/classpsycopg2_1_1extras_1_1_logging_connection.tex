@@ -1,0 +1,72 @@
+\hypertarget{classpsycopg2_1_1extras_1_1_logging_connection}{}\doxysection{psycopg2.\+extras.\+Logging\+Connection Class Reference}
+\label{classpsycopg2_1_1extras_1_1_logging_connection}\index{psycopg2.extras.LoggingConnection@{psycopg2.extras.LoggingConnection}}
+
+
+Inheritance diagram for psycopg2.\+extras.\+Logging\+Connection\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+extras.\+Logging\+Connection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_logging_connection_a8048cd9a110db173de0a03dd0489731c}{initialize}} (self, logobj)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_logging_connection_a012ffd5bbf3ad67a2453e1200ebb1503}{filter}} (self, msg, curs)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_logging_connection_a5baa4650fa0f4bdefaf02c5250b0d738}\label{classpsycopg2_1_1extras_1_1_logging_connection_a5baa4650fa0f4bdefaf02c5250b0d738}} 
+def {\bfseries cursor} (self, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_logging_connection_ab58d190c1cd8db25ed4e236d6bca142d}\label{classpsycopg2_1_1extras_1_1_logging_connection_ab58d190c1cd8db25ed4e236d6bca142d}} 
+{\bfseries log}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A connection that logs all queries to a file or logger__ object.
+
+.. __: https://docs.python.org/library/logging.html
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_logging_connection_a012ffd5bbf3ad67a2453e1200ebb1503}\label{classpsycopg2_1_1extras_1_1_logging_connection_a012ffd5bbf3ad67a2453e1200ebb1503}} 
+\index{psycopg2.extras.LoggingConnection@{psycopg2.extras.LoggingConnection}!filter@{filter}}
+\index{filter@{filter}!psycopg2.extras.LoggingConnection@{psycopg2.extras.LoggingConnection}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Logging\+Connection.\+filter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg,  }\item[{}]{curs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Filter the query before logging it.
+
+This is the method to overwrite to filter unwanted queries out of the
+log or to add some extra data to the output. The default implementation
+just does nothing.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_min_time_logging_connection_a168285f80343eed76d73ea8fe5a77eeb}{psycopg2.\+extras.\+Min\+Time\+Logging\+Connection}}.
+
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_logging_connection_a8048cd9a110db173de0a03dd0489731c}\label{classpsycopg2_1_1extras_1_1_logging_connection_a8048cd9a110db173de0a03dd0489731c}} 
+\index{psycopg2.extras.LoggingConnection@{psycopg2.extras.LoggingConnection}!initialize@{initialize}}
+\index{initialize@{initialize}!psycopg2.extras.LoggingConnection@{psycopg2.extras.LoggingConnection}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Logging\+Connection.\+initialize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{logobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the connection to log to `!logobj`.
+
+The `!logobj` parameter can be an open file object or a Logger/LoggerAdapter
+instance from the standard logging module.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_min_time_logging_connection_ac67bdde5ce90755293e14e912ec680d1}{psycopg2.\+extras.\+Min\+Time\+Logging\+Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/extras.\+py\end{DoxyCompactItemize}

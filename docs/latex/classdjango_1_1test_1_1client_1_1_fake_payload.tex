@@ -1,0 +1,36 @@
+\hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload}{}\doxysection{django.\+test.\+client.\+Fake\+Payload Class Reference}
+\label{classdjango_1_1test_1_1client_1_1_fake_payload}\index{django.test.client.FakePayload@{django.test.client.FakePayload}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload_a690cb392a611d646d81f85b92d167289}\label{classdjango_1_1test_1_1client_1_1_fake_payload_a690cb392a611d646d81f85b92d167289}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, content=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload_a57e40e2be2cfbc7b221d1e53e068555d}\label{classdjango_1_1test_1_1client_1_1_fake_payload_a57e40e2be2cfbc7b221d1e53e068555d}} 
+def {\bfseries \+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload_aa75dfc5f1d13f17471c94f2897be328d}\label{classdjango_1_1test_1_1client_1_1_fake_payload_aa75dfc5f1d13f17471c94f2897be328d}} 
+def {\bfseries read} (self, num\+\_\+bytes=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload_a8b330d60dc2fcaf4097d027404536edd}\label{classdjango_1_1test_1_1client_1_1_fake_payload_a8b330d60dc2fcaf4097d027404536edd}} 
+def {\bfseries write} (self, content)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_fake_payload_a61b194fafd894d365e6dbdf90e2fd216}\label{classdjango_1_1test_1_1client_1_1_fake_payload_a61b194fafd894d365e6dbdf90e2fd216}} 
+{\bfseries read\+\_\+started}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A wrapper around BytesIO that restricts what can be read since data from
+the network can't be sought and cannot be read outside of its content
+length. This makes sure that views can't do anything under the test client
+that wouldn't work in real life.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/client.\+py\end{DoxyCompactItemize}

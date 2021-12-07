@@ -1,0 +1,112 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex}\index{pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a344d143fdcdc1ff4aef98404422781f1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, pattern, flags=0)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_af18815c256629aaf99e23f3cbf1bb90c}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_aaccca833661bfd93cd288838783438f6}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a668261616fecfa783128d422936c5822}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a668261616fecfa783128d422936c5822}} 
+{\bfseries pattern}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a438ead3932bb9a1d00342361d6ec727b}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a438ead3932bb9a1d00342361d6ec727b}} 
+{\bfseries flags}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_aae387dae124bc460ef7bba1f12628136}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_aae387dae124bc460ef7bba1f12628136}} 
+{\bfseries re}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a16b354129ae1d3bf6bd74cf36da30194}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a16b354129ae1d3bf6bd74cf36da30194}} 
+{\bfseries re\+String}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a139cd5bc18957e505678b78632fa60c5}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a139cd5bc18957e505678b78632fa60c5}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a94cb2e44d62f673392540af4809d8626}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a94cb2e44d62f673392540af4809d8626}} 
+{\bfseries errmsg}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a1eaa09ac3af53d744f5c7ca94e5c852d}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a1eaa09ac3af53d744f5c7ca94e5c852d}} 
+{\bfseries may\+Index\+Error}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_ad6d563920c30c08162bacb9e3fc6f812}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_ad6d563920c30c08162bacb9e3fc6f812}} 
+{\bfseries may\+Return\+Empty}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a010942a4fcef59631b098f59d26aaeba}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a010942a4fcef59631b098f59d26aaeba}} 
+{\bfseries str\+Repr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_acf52ddb23c1ec08f8c580c6e28c49bc5}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_acf52ddb23c1ec08f8c580c6e28c49bc5}} 
+{\bfseries compiled\+REtype} = type(re.\+compile(\char`\"{}\mbox{[}A-\/Z\mbox{]}\char`\"{}))
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Token for matching strings that match a given regular expression.
+Defined with string specifying the regular expression in a form recognized by the inbuilt Python re module.
+If the given regex contains named groups (defined using C{(?P<name>...)}), these will be preserved as 
+named parse results.
+
+Example::
+    realnum = Regex(r"[+-]?\d+\.\d*")
+    date = Regex(r'(?P<year>\d{4})-(?P<month>\d\d?)-(?P<day>\d\d?)')
+    # ref: http://stackoverflow.com/questions/267399/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
+    roman = Regex(r"M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})")
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a344d143fdcdc1ff4aef98404422781f1}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_a344d143fdcdc1ff4aef98404422781f1}} 
+\index{pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pattern,  }\item[{}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The parameters C{pattern} and C{flags} are passed to the C{re.compile()} function as-is. See the Python C{re} module for an explanation of the acceptable patterns and flags.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_token}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Token}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_aaccca833661bfd93cd288838783438f6}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_aaccca833661bfd93cd288838783438f6}} 
+\index{pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_af18815c256629aaf99e23f3cbf1bb90c}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_regex_af18815c256629aaf99e23f3cbf1bb90c}} 
+\index{pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.Regex@{pkg\_resources.\_vendor.pyparsing.Regex}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Regex.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

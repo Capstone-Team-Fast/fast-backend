@@ -1,0 +1,51 @@
+\hypertarget{classsetuptools_1_1command_1_1py36compat_1_1sdist__add__defaults}{}\doxysection{setuptools.\+command.\+py36compat.\+sdist\+\_\+add\+\_\+defaults Class Reference}
+\label{classsetuptools_1_1command_1_1py36compat_1_1sdist__add__defaults}\index{setuptools.command.py36compat.sdist\_add\_defaults@{setuptools.command.py36compat.sdist\_add\_defaults}}
+
+
+Inheritance diagram for setuptools.\+command.\+py36compat.\+sdist\+\_\+add\+\_\+defaults\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsetuptools_1_1command_1_1py36compat_1_1sdist__add__defaults_a91682de24cf13a3d7552a8b35db9a04a}{add\+\_\+defaults}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Mix-in providing forward-compatibility for functionality as found in
+distutils on Python 3.7.
+
+Do not edit the code in this class except to update functionality
+as implemented in distutils. Instead, override in the subclass.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsetuptools_1_1command_1_1py36compat_1_1sdist__add__defaults_a91682de24cf13a3d7552a8b35db9a04a}\label{classsetuptools_1_1command_1_1py36compat_1_1sdist__add__defaults_a91682de24cf13a3d7552a8b35db9a04a}} 
+\index{setuptools.command.py36compat.sdist\_add\_defaults@{setuptools.command.py36compat.sdist\_add\_defaults}!add\_defaults@{add\_defaults}}
+\index{add\_defaults@{add\_defaults}!setuptools.command.py36compat.sdist\_add\_defaults@{setuptools.command.py36compat.sdist\_add\_defaults}}
+\doxysubsubsection{\texorpdfstring{add\_defaults()}{add\_defaults()}}
+{\footnotesize\ttfamily def setuptools.\+command.\+py36compat.\+sdist\+\_\+add\+\_\+defaults.\+add\+\_\+defaults (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add all the default files to self.filelist:
+  - README or README.txt
+  - setup.py
+  - test/test*.py
+  - all pure Python modules mentioned in setup script
+  - all files pointed by package_data (build_py)
+  - all files defined in data_files.
+  - all files defined as scripts.
+  - all C sources listed as part of extensions or C libraries
+    in the setup script (doesn't catch C headers!)
+Warns if (README or README.txt) or setup.py are missing; everything
+else is optional.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classsetuptools_1_1command_1_1egg__info_1_1manifest__maker_a5bb8f3befc6b69fe079f67aa239e7ef5}{setuptools.\+command.\+egg\+\_\+info.\+manifest\+\_\+maker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/command/py36compat.\+py\end{DoxyCompactItemize}

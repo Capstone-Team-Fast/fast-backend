@@ -1,0 +1,83 @@
+\hypertarget{classpytz_1_1_u_t_c}{}\doxysection{pytz.\+UTC Class Reference}
+\label{classpytz_1_1_u_t_c}\index{pytz.UTC@{pytz.UTC}}
+
+
+Inheritance diagram for pytz.\+UTC\+:
+% FIG 0
+
+
+Collaboration diagram for pytz.\+UTC\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_a51afc7c64356bb95b55a0ccb82e868ac}\label{classpytz_1_1_u_t_c_a51afc7c64356bb95b55a0ccb82e868ac}} 
+def {\bfseries fromutc} (self, dt)
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_ab4ee42d4c2c53b9c852ee9da9e4d8be6}\label{classpytz_1_1_u_t_c_ab4ee42d4c2c53b9c852ee9da9e4d8be6}} 
+def {\bfseries utcoffset} (self, dt)
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_a6cc1374abd563ce95fffade469f3967f}\label{classpytz_1_1_u_t_c_a6cc1374abd563ce95fffade469f3967f}} 
+def {\bfseries tzname} (self, dt)
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_a20e03135c63a6a16845d0ce0c98e8f4f}\label{classpytz_1_1_u_t_c_a20e03135c63a6a16845d0ce0c98e8f4f}} 
+def {\bfseries dst} (self, dt)
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_a2fe0fc2e6bf127a2a66f28a6bf495ece}\label{classpytz_1_1_u_t_c_a2fe0fc2e6bf127a2a66f28a6bf495ece}} 
+def {\bfseries \+\_\+\+\_\+reduce\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classpytz_1_1_u_t_c_ad867add53d488933e35a47a721257d07}{localize}} (self, dt, is\+\_\+dst=False)
+\item 
+def \mbox{\hyperlink{classpytz_1_1_u_t_c_ad1f7dad060e31bfa019282128ddcb85c}{normalize}} (self, dt, is\+\_\+dst=False)
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_af0874b98debca6fd5976145a55677391}\label{classpytz_1_1_u_t_c_af0874b98debca6fd5976145a55677391}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classpytz_1_1_u_t_c_aa527c2357fd281316bfd83e8d15c060b}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_a29772df60b34275af0a5a967a5dd9091}\label{classpytz_1_1_u_t_c_a29772df60b34275af0a5a967a5dd9091}} 
+string {\bfseries zone} = \char`\"{}UTC\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}UTC
+
+Optimized UTC implementation. It unpickles using the single module global
+instance defined beneath this class declaration.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_aa527c2357fd281316bfd83e8d15c060b}\label{classpytz_1_1_u_t_c_aa527c2357fd281316bfd83e8d15c060b}} 
+\index{pytz.UTC@{pytz.UTC}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pytz.UTC@{pytz.UTC}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pytz.\+UTC.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpytz_1_1tzinfo_1_1_base_tz_info}{pytz.\+tzinfo.\+Base\+Tz\+Info}}.
+
+\mbox{\Hypertarget{classpytz_1_1_u_t_c_ad867add53d488933e35a47a721257d07}\label{classpytz_1_1_u_t_c_ad867add53d488933e35a47a721257d07}} 
+\index{pytz.UTC@{pytz.UTC}!localize@{localize}}
+\index{localize@{localize}!pytz.UTC@{pytz.UTC}}
+\doxysubsubsection{\texorpdfstring{localize()}{localize()}}
+{\footnotesize\ttfamily def pytz.\+UTC.\+localize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dt,  }\item[{}]{is\+\_\+dst = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert naive time to local time\end{DoxyVerb}
+ \mbox{\Hypertarget{classpytz_1_1_u_t_c_ad1f7dad060e31bfa019282128ddcb85c}\label{classpytz_1_1_u_t_c_ad1f7dad060e31bfa019282128ddcb85c}} 
+\index{pytz.UTC@{pytz.UTC}!normalize@{normalize}}
+\index{normalize@{normalize}!pytz.UTC@{pytz.UTC}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily def pytz.\+UTC.\+normalize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dt,  }\item[{}]{is\+\_\+dst = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Correct the timezone information on the given datetime\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pytz/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

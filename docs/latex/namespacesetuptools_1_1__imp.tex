@@ -1,0 +1,51 @@
+\hypertarget{namespacesetuptools_1_1__imp}{}\doxysection{setuptools.\+\_\+imp Namespace Reference}
+\label{namespacesetuptools_1_1__imp}\index{setuptools.\_imp@{setuptools.\_imp}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a0948fee2f0b613efbcfc70af9a16f646}\label{namespacesetuptools_1_1__imp_a0948fee2f0b613efbcfc70af9a16f646}} 
+def {\bfseries find\+\_\+spec} (module, paths)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__imp_aa220762980afbe3d3c2b7a54eab55472}{find\+\_\+module}} (module, paths=None)
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a3059e0b1d9667fd5c64fdc16e8fd156f}\label{namespacesetuptools_1_1__imp_a3059e0b1d9667fd5c64fdc16e8fd156f}} 
+def {\bfseries get\+\_\+frozen\+\_\+object} (module, paths=None)
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a8066804db6b3f28aa5a2a57c0f2510a2}\label{namespacesetuptools_1_1__imp_a8066804db6b3f28aa5a2a57c0f2510a2}} 
+def {\bfseries get\+\_\+module} (module, paths, info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_ad646674b67d6fcff02be6babd29f90d9}\label{namespacesetuptools_1_1__imp_ad646674b67d6fcff02be6babd29f90d9}} 
+int {\bfseries PY\+\_\+\+SOURCE} = 1
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a7a307e31d9910446b0458121133bd26b}\label{namespacesetuptools_1_1__imp_a7a307e31d9910446b0458121133bd26b}} 
+int {\bfseries PY\+\_\+\+COMPILED} = 2
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a1833748136ca95ab275007bf6222c9ca}\label{namespacesetuptools_1_1__imp_a1833748136ca95ab275007bf6222c9ca}} 
+int {\bfseries C\+\_\+\+EXTENSION} = 3
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a12f5e8b1c953f619b1deb4f9083680ca}\label{namespacesetuptools_1_1__imp_a12f5e8b1c953f619b1deb4f9083680ca}} 
+int {\bfseries C\+\_\+\+BUILTIN} = 6
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_a2a31dd79ba83088971158070400a7a4d}\label{namespacesetuptools_1_1__imp_a2a31dd79ba83088971158070400a7a4d}} 
+int {\bfseries PY\+\_\+\+FROZEN} = 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Re-implementation of find_module and get_frozen_object
+from the deprecated imp module.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__imp_aa220762980afbe3d3c2b7a54eab55472}\label{namespacesetuptools_1_1__imp_aa220762980afbe3d3c2b7a54eab55472}} 
+\index{setuptools.\_imp@{setuptools.\_imp}!find\_module@{find\_module}}
+\index{find\_module@{find\_module}!setuptools.\_imp@{setuptools.\_imp}}
+\doxysubsubsection{\texorpdfstring{find\_module()}{find\_module()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+imp.\+find\+\_\+module (\begin{DoxyParamCaption}\item[{}]{module,  }\item[{}]{paths = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Just like 'imp.find_module()', but with package support\end{DoxyVerb}
+ 

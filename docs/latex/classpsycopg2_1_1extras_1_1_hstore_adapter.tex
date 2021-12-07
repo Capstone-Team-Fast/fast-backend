@@ -1,0 +1,73 @@
+\hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter}{}\doxysection{psycopg2.\+extras.\+Hstore\+Adapter Class Reference}
+\label{classpsycopg2_1_1extras_1_1_hstore_adapter}\index{psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_ae7c303c3a4b0a845c2aa41a99dc44d1a}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_ae7c303c3a4b0a845c2aa41a99dc44d1a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, wrapped)
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_a5aa1903133c9f8201fe7379c476959dc}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_a5aa1903133c9f8201fe7379c476959dc}} 
+def {\bfseries prepare} (self, conn)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_hstore_adapter_a344bf42215c0461cbe490e50b769b08d}{parse}} (self, s, cur, \+\_\+bsdec=\+\_\+re.\+compile(r\char`\"{}\textbackslash{}\textbackslash{}(.)\char`\"{}))
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_hstore_adapter_ac2c03c70ca59b238becac7520001375b}{parse\+\_\+unicode}} (self, s, cur)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1extras_1_1_hstore_adapter_a9976e934c9f9c883d524b14e1b151cb9}{get\+\_\+oids}} (self, conn\+\_\+or\+\_\+curs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_a4702298dcac1aaba04082a6b202c9d54}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_a4702298dcac1aaba04082a6b202c9d54}} 
+{\bfseries wrapped}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_a0e1c23966c251af30dcf987d5ad56d51}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_a0e1c23966c251af30dcf987d5ad56d51}} 
+{\bfseries conn}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_ac3a9fec80bcddcd84965eda8fe08a1a7}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_ac3a9fec80bcddcd84965eda8fe08a1a7}} 
+{\bfseries getquoted}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Adapt a Python dict to the hstore syntax.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_a9976e934c9f9c883d524b14e1b151cb9}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_a9976e934c9f9c883d524b14e1b151cb9}} 
+\index{psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}!get\_oids@{get\_oids}}
+\index{get\_oids@{get\_oids}!psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}}
+\doxysubsubsection{\texorpdfstring{get\_oids()}{get\_oids()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Hstore\+Adapter.\+get\+\_\+oids (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn\+\_\+or\+\_\+curs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the lists of OID of the hstore and hstore[] types.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_a344bf42215c0461cbe490e50b769b08d}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_a344bf42215c0461cbe490e50b769b08d}} 
+\index{psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}!parse@{parse}}
+\index{parse@{parse}!psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Hstore\+Adapter.\+parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{s,  }\item[{}]{cur,  }\item[{}]{\+\_\+bsdec = {\ttfamily \+\_\+re.compile(r\char`\"{}\textbackslash{}\textbackslash{}(.)\char`\"{})} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse an hstore representation in a Python string.
+
+The hstore is represented as something like::
+
+    "a"=>"1", "b"=>"2"
+
+with backslash-escaped strings.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpsycopg2_1_1extras_1_1_hstore_adapter_ac2c03c70ca59b238becac7520001375b}\label{classpsycopg2_1_1extras_1_1_hstore_adapter_ac2c03c70ca59b238becac7520001375b}} 
+\index{psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}!parse\_unicode@{parse\_unicode}}
+\index{parse\_unicode@{parse\_unicode}!psycopg2.extras.HstoreAdapter@{psycopg2.extras.HstoreAdapter}}
+\doxysubsubsection{\texorpdfstring{parse\_unicode()}{parse\_unicode()}}
+{\footnotesize\ttfamily def psycopg2.\+extras.\+Hstore\+Adapter.\+parse\+\_\+unicode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{s,  }\item[{}]{cur }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse an hstore returning unicode keys and values.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/extras.\+py\end{DoxyCompactItemize}

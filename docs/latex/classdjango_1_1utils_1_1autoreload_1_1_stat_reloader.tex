@@ -1,0 +1,61 @@
+\hypertarget{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader}{}\doxysection{django.\+utils.\+autoreload.\+Stat\+Reloader Class Reference}
+\label{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader}\index{django.utils.autoreload.StatReloader@{django.utils.autoreload.StatReloader}}
+
+
+Inheritance diagram for django.\+utils.\+autoreload.\+Stat\+Reloader\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+utils.\+autoreload.\+Stat\+Reloader\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a634c7638ec92075042aa28b716914b14}{tick}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_ac1afff3f274bd859c84c14ebd8b4c03b}\label{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_ac1afff3f274bd859c84c14ebd8b4c03b}} 
+def {\bfseries snapshot\+\_\+files} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a8703d31df1c7d635f3e68345e3f6d83a}{check\+\_\+availability}} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a8afdc5241616307d80fc44058d4d5d94}\label{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a8afdc5241616307d80fc44058d4d5d94}} 
+int {\bfseries SLEEP\+\_\+\+TIME} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a8703d31df1c7d635f3e68345e3f6d83a}\label{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a8703d31df1c7d635f3e68345e3f6d83a}} 
+\index{django.utils.autoreload.StatReloader@{django.utils.autoreload.StatReloader}!check\_availability@{check\_availability}}
+\index{check\_availability@{check\_availability}!django.utils.autoreload.StatReloader@{django.utils.autoreload.StatReloader}}
+\doxysubsubsection{\texorpdfstring{check\_availability()}{check\_availability()}}
+{\footnotesize\ttfamily def django.\+utils.\+autoreload.\+Stat\+Reloader.\+check\+\_\+availability (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1autoreload_1_1_base_reloader}{django.\+utils.\+autoreload.\+Base\+Reloader}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a634c7638ec92075042aa28b716914b14}\label{classdjango_1_1utils_1_1autoreload_1_1_stat_reloader_a634c7638ec92075042aa28b716914b14}} 
+\index{django.utils.autoreload.StatReloader@{django.utils.autoreload.StatReloader}!tick@{tick}}
+\index{tick@{tick}!django.utils.autoreload.StatReloader@{django.utils.autoreload.StatReloader}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily def django.\+utils.\+autoreload.\+Stat\+Reloader.\+tick (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This generator is called in a loop from run_loop. It's important that
+the method takes care of pausing or otherwise waiting for a period of
+time. This split between run_loop() and tick() is to improve the
+testability of the reloader implementations by decoupling the work they
+do from the loop.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1autoreload_1_1_base_reloader_a0e9fd8cd7deeddbde73ded3890f2f2e5}{django.\+utils.\+autoreload.\+Base\+Reloader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/autoreload.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field}{}\doxysection{django.\+forms.\+fields.\+Multi\+Value\+Field Class Reference}
+\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field}\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+
+
+Inheritance diagram for django.\+forms.\+fields.\+Multi\+Value\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+forms.\+fields.\+Multi\+Value\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a40f75544de3130de6389732aa3595a29}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, fields, $\ast$require\+\_\+all\+\_\+fields=True, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_aa2a133874c0882796db1c769be10a7aa}{\+\_\+\+\_\+deepcopy\+\_\+\+\_\+}} (self, memo)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_add182a8c1d2b69c3320ffe64c84e5351}{validate}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a3c81eed402e2d4259b57d2b23feb3796}{clean}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a6e86443a322fc624ba04fc023a6852d4}{compress}} (self, data\+\_\+list)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a59616b657f90df5db85af3ecf2d87188}{has\+\_\+changed}} (self, initial, data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a58723d83a086cd2055a2a60a2f4ede10}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a58723d83a086cd2055a2a60a2f4ede10}} 
+{\bfseries require\+\_\+all\+\_\+fields}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a69b53d6c34e4c4acd5618a92abe5cdca}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a69b53d6c34e4c4acd5618a92abe5cdca}} 
+{\bfseries fields}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a9e2a9a9600107ed14d0cc8ab6e61cd33}{default\+\_\+error\+\_\+messages}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Aggregate the logic of multiple Fields.
+
+Its clean() method takes a "decompressed" list of values, which are then
+cleaned into a single value according to self.fields. Each value in
+this list is cleaned by the corresponding field -- the first value is
+cleaned by the first field, the second value is cleaned by the second
+field, etc. Once all fields are cleaned, the list of clean values is
+"compressed" into a single value.
+
+Subclasses should not have to implement clean(). Instead, they must
+implement compress(), which takes a list of valid values and returns a
+"compressed" version of those values -- a single value.
+
+You'll probably want to use this with MultiWidget.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a40f75544de3130de6389732aa3595a29}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a40f75544de3130de6389732aa3595a29}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields,  }\item[{$\ast$}]{require\+\_\+all\+\_\+fields = {\ttfamily True},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_aa2a133874c0882796db1c769be10a7aa}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_aa2a133874c0882796db1c769be10a7aa}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!\_\_deepcopy\_\_@{\_\_deepcopy\_\_}}
+\index{\_\_deepcopy\_\_@{\_\_deepcopy\_\_}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{\_\_deepcopy\_\_()}{\_\_deepcopy\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+\_\+\+\_\+deepcopy\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{memo }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a3c81eed402e2d4259b57d2b23feb3796}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a3c81eed402e2d4259b57d2b23feb3796}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!clean@{clean}}
+\index{clean@{clean}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+clean (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Validate every value in the given list. A value is validated against
+the corresponding Field in self.fields.
+
+For example, if this MultiValueField was instantiated with
+fields=(DateField(), TimeField()), clean() would call
+DateField.clean(value[0]) and TimeField.clean(value[1]).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field_ac067d0195ef0f3a2c37b00ec6118c25a}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a6e86443a322fc624ba04fc023a6852d4}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a6e86443a322fc624ba04fc023a6852d4}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!compress@{compress}}
+\index{compress@{compress}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+compress (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single value for the given list of values. The values can be
+assumed to be valid.
+
+For example, if this MultiValueField was instantiated with
+fields=(DateField(), TimeField()), this might return a datetime
+object created by combining the date and time in data_list.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_split_date_time_field_a57811d9bfac73177ca933ce3440fe870}{django.\+forms.\+fields.\+Split\+Date\+Time\+Field}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_ab041200824023d442d812baa1ca11c19}{django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a59616b657f90df5db85af3ecf2d87188}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a59616b657f90df5db85af3ecf2d87188}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!has\_changed@{has\_changed}}
+\index{has\_changed@{has\_changed}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{has\_changed()}{has\_changed()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+has\+\_\+changed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{initial,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if data differs from initial.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field_a9192474a05440bb16801552d4a348a73}{django.\+forms.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_add182a8c1d2b69c3320ffe64c84e5351}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_add182a8c1d2b69c3320ffe64c84e5351}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!validate@{validate}}
+\index{validate@{validate}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily def django.\+forms.\+fields.\+Multi\+Value\+Field.\+validate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a9e2a9a9600107ed14d0cc8ab6e61cd33}\label{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a9e2a9a9600107ed14d0cc8ab6e61cd33}} 
+\index{django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.forms.fields.MultiValueField@{django.forms.fields.MultiValueField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+forms.\+fields.\+Multi\+Value\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Enter a list of values.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'incomplete'}: \_(\textcolor{stringliteral}{'Enter a complete value.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/fields.\+py\end{DoxyCompactItemize}

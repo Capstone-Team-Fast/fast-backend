@@ -1,0 +1,37 @@
+\hypertarget{namespacepsycopg2_1_1tz}{}\doxysection{psycopg2.\+tz Namespace Reference}
+\label{namespacepsycopg2_1_1tz}\index{psycopg2.tz@{psycopg2.tz}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1tz_1_1_fixed_offset_timezone}{Fixed\+Offset\+Timezone}}
+\item 
+class \mbox{\hyperlink{classpsycopg2_1_1tz_1_1_local_timezone}{Local\+Timezone}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1tz_a81fbc4f68c8e0984f730a9d61a576555}\label{namespacepsycopg2_1_1tz_a81fbc4f68c8e0984f730a9d61a576555}} 
+{\bfseries ZERO} = datetime.\+timedelta(0)
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1tz_ae328797972f64703533daf7c39e37f79}\label{namespacepsycopg2_1_1tz_ae328797972f64703533daf7c39e37f79}} 
+{\bfseries STDOFFSET} = datetime.\+timedelta(seconds=-\/time.\+timezone)
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1tz_a5fd191b68688bb4e06f85dac6d2eb16e}\label{namespacepsycopg2_1_1tz_a5fd191b68688bb4e06f85dac6d2eb16e}} 
+{\bfseries DSTOFFSET} = datetime.\+timedelta(seconds=-\/time.\+altzone)
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1tz_abdc2814301f0125df0c1a903265a5984}\label{namespacepsycopg2_1_1tz_abdc2814301f0125df0c1a903265a5984}} 
+{\bfseries DSTDIFF} = DSTOFFSET -\/ STDOFFSET
+\item 
+\mbox{\Hypertarget{namespacepsycopg2_1_1tz_aa4b5925c18f11ca490ade8ff3665fce8}\label{namespacepsycopg2_1_1tz_aa4b5925c18f11ca490ade8ff3665fce8}} 
+{\bfseries LOCAL} = \mbox{\hyperlink{classpsycopg2_1_1tz_1_1_local_timezone}{Local\+Timezone}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}tzinfo implementations for psycopg2
+
+This module holds two different tzinfo implementations that can be used as
+the 'tzinfo' argument to datetime constructors, directly passed to psycopg
+functions or used to set the .tzinfo_factory attribute in cursors.
+\end{DoxyVerb}
+ 

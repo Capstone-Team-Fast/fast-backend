@@ -1,0 +1,339 @@
+\hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector}{}\doxysection{django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector Class Reference}
+\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector}\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acd15fe92264cf553c8f8b6e0ea2aaadf}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acd15fe92264cf553c8f8b6e0ea2aaadf}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, from\+\_\+state, to\+\_\+state, questioner=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae47a70a3c1b2b3af6a5daf9e67fb9d2e}{changes}} (self, graph, trim\+\_\+to\+\_\+apps=None, convert\+\_\+apps=None, migration\+\_\+name=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_adae9df5e4b0e96aa7132047386675439}{deep\+\_\+deconstruct}} (self, obj)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a14e7f81ee4b4de6f2f4c5076b8e88d91}{only\+\_\+relation\+\_\+agnostic\+\_\+fields}} (self, fields)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a7d0e823ce8f5ee33ddac47585d55de3d}{check\+\_\+dependency}} (self, operation, dependency)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a67a47c10f0572231599fbf826e0f804e}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a67a47c10f0572231599fbf826e0f804e}} 
+def {\bfseries add\+\_\+operation} (self, app\+\_\+label, operation, dependencies=None, beginning=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a6ab772eb2170495ce2cdc1086e4be539}{swappable\+\_\+first\+\_\+key}} (self, item)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a4d1384ea4d2dcd9ad418f80a5919fb62}{generate\+\_\+renamed\+\_\+models}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a0b0c8e14dbfc2cf0a6cae1e9e2416697}{generate\+\_\+created\+\_\+models}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad84476499b3552338d3c1b3bd4a58811}{generate\+\_\+created\+\_\+proxies}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af31d9046abc189b0bb404b9f5e9b729c}{generate\+\_\+deleted\+\_\+models}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a3efb78fd23b0a7607b0d87568b16c8eb}{generate\+\_\+deleted\+\_\+proxies}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aa6cc5921ffc4c351c4b203256ed99bc2}{generate\+\_\+renamed\+\_\+fields}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a37678140bb847674cc1dc5e7afab189e}{generate\+\_\+added\+\_\+fields}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ab5844f64ba18dc6ec861a13e61cb5767}{generate\+\_\+removed\+\_\+fields}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a572175350ebf7a04cfd018d6ec157de9}{generate\+\_\+altered\+\_\+fields}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aa1d4a3f7fd88699ca22c928d6fd93711}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aa1d4a3f7fd88699ca22c928d6fd93711}} 
+def {\bfseries create\+\_\+altered\+\_\+indexes} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a5da54fe4d262e0a6435e07e1e55266b9}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a5da54fe4d262e0a6435e07e1e55266b9}} 
+def {\bfseries generate\+\_\+added\+\_\+indexes} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aace6e6a8471264e48b1d7dabba57bff3}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aace6e6a8471264e48b1d7dabba57bff3}} 
+def {\bfseries generate\+\_\+removed\+\_\+indexes} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a11c0112fb5915ba8ae22ea066d85ab3f}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a11c0112fb5915ba8ae22ea066d85ab3f}} 
+def {\bfseries create\+\_\+altered\+\_\+constraints} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acab15965fbcfa87e329cbcac150f60d6}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acab15965fbcfa87e329cbcac150f60d6}} 
+def {\bfseries generate\+\_\+added\+\_\+constraints} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a44f48671bf9dd6483a72f587ebfbdfad}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a44f48671bf9dd6483a72f587ebfbdfad}} 
+def {\bfseries generate\+\_\+removed\+\_\+constraints} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_afbec4828f13a7d8c480b0ae98c55daea}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_afbec4828f13a7d8c480b0ae98c55daea}} 
+def {\bfseries generate\+\_\+altered\+\_\+unique\+\_\+together} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_abcb67aae41c0e1ad863711dd7e9d0452}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_abcb67aae41c0e1ad863711dd7e9d0452}} 
+def {\bfseries generate\+\_\+altered\+\_\+index\+\_\+together} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a29c1639cba6a1d73951fadd6eb4fef9a}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a29c1639cba6a1d73951fadd6eb4fef9a}} 
+def {\bfseries generate\+\_\+altered\+\_\+db\+\_\+table} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a77d6ac038a336df90c95097ec1219271}{generate\+\_\+altered\+\_\+options}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acd576fdf3f772c881b0642c1d02a5e87}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acd576fdf3f772c881b0642c1d02a5e87}} 
+def {\bfseries generate\+\_\+altered\+\_\+order\+\_\+with\+\_\+respect\+\_\+to} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af2c6e22c302b85262cff3e743b0db04f}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af2c6e22c302b85262cff3e743b0db04f}} 
+def {\bfseries generate\+\_\+altered\+\_\+managers} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a238c75c10450361b3c4f4cab9b9a9b4d}{arrange\+\_\+for\+\_\+graph}} (self, \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae47a70a3c1b2b3af6a5daf9e67fb9d2e}{changes}}, graph, migration\+\_\+name=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a701d28f772e7ef71326b94babf0904d4}{parse\+\_\+number}} (cls, name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae3935993133c78ec4bcac747661221c6}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae3935993133c78ec4bcac747661221c6}} 
+{\bfseries from\+\_\+state}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae481e4bba8448edbffe5eda74a7169bd}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae481e4bba8448edbffe5eda74a7169bd}} 
+{\bfseries to\+\_\+state}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a76aec2ce3dd7c311c1b6c45933c3e81c}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a76aec2ce3dd7c311c1b6c45933c3e81c}} 
+{\bfseries questioner}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a16067ec18814410e401d8ad558232195}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a16067ec18814410e401d8ad558232195}} 
+{\bfseries existing\+\_\+apps}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae064abf9d094023a19f4afcaa8e83bd6}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae064abf9d094023a19f4afcaa8e83bd6}} 
+{\bfseries generated\+\_\+operations}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_afd2b26836c8dff1a1b9e4a7f0799e592}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_afd2b26836c8dff1a1b9e4a7f0799e592}} 
+{\bfseries altered\+\_\+indexes}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a7cd5e590263522fec85cf0c073334d7f}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a7cd5e590263522fec85cf0c073334d7f}} 
+{\bfseries altered\+\_\+constraints}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ac047f6767cecdd86931881ead87a3926}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ac047f6767cecdd86931881ead87a3926}} 
+{\bfseries old\+\_\+apps}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad4677c4ce46657d8f28ad9adee3355cf}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad4677c4ce46657d8f28ad9adee3355cf}} 
+{\bfseries new\+\_\+apps}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a27fc3da1c7714b60fc3ddd078e9eaf7b}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a27fc3da1c7714b60fc3ddd078e9eaf7b}} 
+{\bfseries old\+\_\+model\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a65fe03dbaad2fc1a6f9687c9d394819e}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a65fe03dbaad2fc1a6f9687c9d394819e}} 
+{\bfseries old\+\_\+proxy\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a475932761b0856d91b3bd5cd6f4e29d9}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a475932761b0856d91b3bd5cd6f4e29d9}} 
+{\bfseries old\+\_\+unmanaged\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aca782281b2c8f16702d8a7cfa97e6a04}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aca782281b2c8f16702d8a7cfa97e6a04}} 
+{\bfseries new\+\_\+model\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ac813b271465b35a1ab0f7e0176e169d8}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ac813b271465b35a1ab0f7e0176e169d8}} 
+{\bfseries new\+\_\+proxy\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a4119d514d649df84612160f721638c00}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a4119d514d649df84612160f721638c00}} 
+{\bfseries new\+\_\+unmanaged\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a9ff0aef9e237d17156720d41d2b674e7}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a9ff0aef9e237d17156720d41d2b674e7}} 
+{\bfseries kept\+\_\+model\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a303f64576427a2fa5166fb13aacaa696}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a303f64576427a2fa5166fb13aacaa696}} 
+{\bfseries kept\+\_\+proxy\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a1f95191e638375e25599d9b4e5adff5d}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a1f95191e638375e25599d9b4e5adff5d}} 
+{\bfseries kept\+\_\+unmanaged\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a1237e58ad5f46bf4e3c11069cec43fb2}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a1237e58ad5f46bf4e3c11069cec43fb2}} 
+{\bfseries through\+\_\+users}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_adb43a7ce6e815a75874a9ce838716f4c}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_adb43a7ce6e815a75874a9ce838716f4c}} 
+{\bfseries old\+\_\+field\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad3eeb3350ff50d7b7a0f5064d985e171}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad3eeb3350ff50d7b7a0f5064d985e171}} 
+{\bfseries new\+\_\+field\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af5fd1c1ff7949f299c6c4c78ffbe7247}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af5fd1c1ff7949f299c6c4c78ffbe7247}} 
+{\bfseries migrations}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a3c05b7a15d16dbdb7ee5cb890895e3f5}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a3c05b7a15d16dbdb7ee5cb890895e3f5}} 
+{\bfseries renamed\+\_\+models}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acb17381eb763c17d64d8f49de590f241}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_acb17381eb763c17d64d8f49de590f241}} 
+{\bfseries renamed\+\_\+models\+\_\+rel}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae186cd36db2486286bd6f32d2be16b93}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae186cd36db2486286bd6f32d2be16b93}} 
+{\bfseries renamed\+\_\+fields}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Take a pair of ProjectStates and compare them to see what the first would
+need doing to make it match the second (the second usually being the
+project's current state).
+
+Note that this naturally operates on entire projects at a time,
+as it's likely that changes interact (for example, you can't
+add a ForeignKey without having a migration to add the table it
+depends on first). A user interface may offer single-app usage
+if it wishes, with the caveat that it may not always be possible.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a238c75c10450361b3c4f4cab9b9a9b4d}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a238c75c10450361b3c4f4cab9b9a9b4d}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!arrange\_for\_graph@{arrange\_for\_graph}}
+\index{arrange\_for\_graph@{arrange\_for\_graph}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{arrange\_for\_graph()}{arrange\_for\_graph()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+arrange\+\_\+for\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{changes,  }\item[{}]{graph,  }\item[{}]{migration\+\_\+name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a result from changes() and a MigrationGraph, and fix the names
+and dependencies of the changes so they extend the graph from the leaf
+nodes for each app.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae47a70a3c1b2b3af6a5daf9e67fb9d2e}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ae47a70a3c1b2b3af6a5daf9e67fb9d2e}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!changes@{changes}}
+\index{changes@{changes}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{changes()}{changes()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+changes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{graph,  }\item[{}]{trim\+\_\+to\+\_\+apps = {\ttfamily None},  }\item[{}]{convert\+\_\+apps = {\ttfamily None},  }\item[{}]{migration\+\_\+name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Main entry point to produce a list of applicable changes.
+Take a graph to base names on and an optional set of apps
+to try and restrict to (restriction is not guaranteed)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a7d0e823ce8f5ee33ddac47585d55de3d}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a7d0e823ce8f5ee33ddac47585d55de3d}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!check\_dependency@{check\_dependency}}
+\index{check\_dependency@{check\_dependency}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{check\_dependency()}{check\_dependency()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+check\+\_\+dependency (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{operation,  }\item[{}]{dependency }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if the given operation depends on the given dependency,
+False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_adae9df5e4b0e96aa7132047386675439}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_adae9df5e4b0e96aa7132047386675439}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!deep\_deconstruct@{deep\_deconstruct}}
+\index{deep\_deconstruct@{deep\_deconstruct}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{deep\_deconstruct()}{deep\_deconstruct()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+deep\+\_\+deconstruct (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recursive deconstruction for a field and its arguments.
+Used for full comparison for rename/alter; sometimes a single-level
+deconstruction will not compare correctly.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a37678140bb847674cc1dc5e7afab189e}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a37678140bb847674cc1dc5e7afab189e}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_added\_fields@{generate\_added\_fields}}
+\index{generate\_added\_fields@{generate\_added\_fields}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_added\_fields()}{generate\_added\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+added\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make AddField operations.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a572175350ebf7a04cfd018d6ec157de9}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a572175350ebf7a04cfd018d6ec157de9}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_altered\_fields@{generate\_altered\_fields}}
+\index{generate\_altered\_fields@{generate\_altered\_fields}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_altered\_fields()}{generate\_altered\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+altered\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make AlterField operations, or possibly RemovedField/AddField if alter
+isn's possible.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a77d6ac038a336df90c95097ec1219271}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a77d6ac038a336df90c95097ec1219271}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_altered\_options@{generate\_altered\_options}}
+\index{generate\_altered\_options@{generate\_altered\_options}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_altered\_options()}{generate\_altered\_options()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+altered\+\_\+options (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Work out if any non-schema-affecting options have changed and make an
+operation to represent them in state changes (in case Python code in
+migrations needs them).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a0b0c8e14dbfc2cf0a6cae1e9e2416697}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a0b0c8e14dbfc2cf0a6cae1e9e2416697}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_created\_models@{generate\_created\_models}}
+\index{generate\_created\_models@{generate\_created\_models}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_created\_models()}{generate\_created\_models()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+created\+\_\+models (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find all new models (both managed and unmanaged) and make create
+operations for them as well as separate operations to create any
+foreign key or M2M relationships (these are optimized later, if
+possible).
+
+Defer any model options that refer to collections of fields that might
+be deferred (e.g. unique_together, index_together).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad84476499b3552338d3c1b3bd4a58811}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ad84476499b3552338d3c1b3bd4a58811}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_created\_proxies@{generate\_created\_proxies}}
+\index{generate\_created\_proxies@{generate\_created\_proxies}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_created\_proxies()}{generate\_created\_proxies()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+created\+\_\+proxies (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make CreateModel statements for proxy models. Use the same statements
+as that way there's less code duplication, but for proxy models it's
+safe to skip all the pointless field stuff and chuck out an operation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af31d9046abc189b0bb404b9f5e9b729c}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_af31d9046abc189b0bb404b9f5e9b729c}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_deleted\_models@{generate\_deleted\_models}}
+\index{generate\_deleted\_models@{generate\_deleted\_models}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_deleted\_models()}{generate\_deleted\_models()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+deleted\+\_\+models (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find all deleted models (managed and unmanaged) and make delete
+operations for them as well as separate operations to delete any
+foreign key or M2M relationships (these are optimized later, if
+possible).
+
+Also bring forward removal of any model options that refer to
+collections of fields - the inverse of generate_created_models().
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a3efb78fd23b0a7607b0d87568b16c8eb}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a3efb78fd23b0a7607b0d87568b16c8eb}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_deleted\_proxies@{generate\_deleted\_proxies}}
+\index{generate\_deleted\_proxies@{generate\_deleted\_proxies}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_deleted\_proxies()}{generate\_deleted\_proxies()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+deleted\+\_\+proxies (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make DeleteModel options for proxy models.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ab5844f64ba18dc6ec861a13e61cb5767}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_ab5844f64ba18dc6ec861a13e61cb5767}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_removed\_fields@{generate\_removed\_fields}}
+\index{generate\_removed\_fields@{generate\_removed\_fields}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_removed\_fields()}{generate\_removed\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+removed\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make RemoveField operations.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aa6cc5921ffc4c351c4b203256ed99bc2}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_aa6cc5921ffc4c351c4b203256ed99bc2}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_renamed\_fields@{generate\_renamed\_fields}}
+\index{generate\_renamed\_fields@{generate\_renamed\_fields}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_renamed\_fields()}{generate\_renamed\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+renamed\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Work out renamed fields.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a4d1384ea4d2dcd9ad418f80a5919fb62}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a4d1384ea4d2dcd9ad418f80a5919fb62}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!generate\_renamed\_models@{generate\_renamed\_models}}
+\index{generate\_renamed\_models@{generate\_renamed\_models}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{generate\_renamed\_models()}{generate\_renamed\_models()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+generate\+\_\+renamed\+\_\+models (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find any renamed models, generate the operations for them, and remove
+the old entry from the model lists. Must be run before other
+model-level generation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a14e7f81ee4b4de6f2f4c5076b8e88d91}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a14e7f81ee4b4de6f2f4c5076b8e88d91}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!only\_relation\_agnostic\_fields@{only\_relation\_agnostic\_fields}}
+\index{only\_relation\_agnostic\_fields@{only\_relation\_agnostic\_fields}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{only\_relation\_agnostic\_fields()}{only\_relation\_agnostic\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+only\+\_\+relation\+\_\+agnostic\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fields }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a definition of the fields that ignores field names and
+what related fields actually relate to. Used for detecting renames (as
+the related fields change during renames).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a701d28f772e7ef71326b94babf0904d4}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a701d28f772e7ef71326b94babf0904d4}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!parse\_number@{parse\_number}}
+\index{parse\_number@{parse\_number}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{parse\_number()}{parse\_number()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+parse\+\_\+number (\begin{DoxyParamCaption}\item[{}]{cls,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a migration name, try to extract a number from the beginning of
+it. If no number is found, return None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a6ab772eb2170495ce2cdc1086e4be539}\label{classdjango_1_1db_1_1migrations_1_1autodetector_1_1_migration_autodetector_a6ab772eb2170495ce2cdc1086e4be539}} 
+\index{django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}!swappable\_first\_key@{swappable\_first\_key}}
+\index{swappable\_first\_key@{swappable\_first\_key}!django.db.migrations.autodetector.MigrationAutodetector@{django.db.migrations.autodetector.MigrationAutodetector}}
+\doxysubsubsection{\texorpdfstring{swappable\_first\_key()}{swappable\_first\_key()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+autodetector.\+Migration\+Autodetector.\+swappable\+\_\+first\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Place potential swappable models first in lists of created models (only
+real way to solve #22783).
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/migrations/autodetector.\+py\end{DoxyCompactItemize}

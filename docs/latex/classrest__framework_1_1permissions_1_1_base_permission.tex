@@ -1,0 +1,54 @@
+\hypertarget{classrest__framework_1_1permissions_1_1_base_permission}{}\doxysection{rest\+\_\+framework.\+permissions.\+Base\+Permission Class Reference}
+\label{classrest__framework_1_1permissions_1_1_base_permission}\index{rest\_framework.permissions.BasePermission@{rest\_framework.permissions.BasePermission}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+permissions.\+Base\+Permission\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+permissions.\+Base\+Permission\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_base_permission_a97ee09c8f2fa7eff12125d4a4edb8f95}{has\+\_\+permission}} (self, request, view)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_base_permission_a8cc578648989d411e7eb96e882554955}{has\+\_\+object\+\_\+permission}} (self, request, view, obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A base class from which all permission classes should inherit.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1permissions_1_1_base_permission_a8cc578648989d411e7eb96e882554955}\label{classrest__framework_1_1permissions_1_1_base_permission_a8cc578648989d411e7eb96e882554955}} 
+\index{rest\_framework.permissions.BasePermission@{rest\_framework.permissions.BasePermission}!has\_object\_permission@{has\_object\_permission}}
+\index{has\_object\_permission@{has\_object\_permission}!rest\_framework.permissions.BasePermission@{rest\_framework.permissions.BasePermission}}
+\doxysubsubsection{\texorpdfstring{has\_object\_permission()}{has\_object\_permission()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+permissions.\+Base\+Permission.\+has\+\_\+object\+\_\+permission (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{view,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return `True` if permission is granted, `False` otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_django_object_permissions_af1415d8a9d34bbd915dece1014b020cf}{rest\+\_\+framework.\+permissions.\+Django\+Object\+Permissions}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1permissions_1_1_base_permission_a97ee09c8f2fa7eff12125d4a4edb8f95}\label{classrest__framework_1_1permissions_1_1_base_permission_a97ee09c8f2fa7eff12125d4a4edb8f95}} 
+\index{rest\_framework.permissions.BasePermission@{rest\_framework.permissions.BasePermission}!has\_permission@{has\_permission}}
+\index{has\_permission@{has\_permission}!rest\_framework.permissions.BasePermission@{rest\_framework.permissions.BasePermission}}
+\doxysubsubsection{\texorpdfstring{has\_permission()}{has\_permission()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+permissions.\+Base\+Permission.\+has\+\_\+permission (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{view }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return `True` if permission is granted, `False` otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_allow_any_a275fbb1ca1aefaf0153eb47974f1bbb9}{rest\+\_\+framework.\+permissions.\+Allow\+Any}}, \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_is_authenticated_af8e76fc853371348817971fa23330013}{rest\+\_\+framework.\+permissions.\+Is\+Authenticated}}, \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_is_admin_user_a0c2c986667cdd56a4aaa9aefedabf24c}{rest\+\_\+framework.\+permissions.\+Is\+Admin\+User}}, \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_is_authenticated_or_read_only_a0218322d1e7d5d18187b633c32227935}{rest\+\_\+framework.\+permissions.\+Is\+Authenticated\+Or\+Read\+Only}}, and \mbox{\hyperlink{classrest__framework_1_1permissions_1_1_django_model_permissions_a8563be2a0f97715c94ec7e7007e3e3d0}{rest\+\_\+framework.\+permissions.\+Django\+Model\+Permissions}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/permissions.\+py\end{DoxyCompactItemize}

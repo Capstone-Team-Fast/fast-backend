@@ -1,0 +1,92 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos}{}\doxysection{django.\+contrib.\+gis.\+geos.\+libgeos Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos}\index{django.contrib.gis.geos.libgeos@{django.contrib.gis.geos.libgeos}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_context_handle__t}{GEOSContext\+Handle\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_coord_seq__t}{GEOSCoord\+Seq\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_func_factory}{GEOSFunc\+Factory}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_geom__t}{GEOSGeom\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_prep_geom__t}{GEOSPrep\+Geom\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a25dc6cccf7eb4af77158138762c501a0}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a25dc6cccf7eb4af77158138762c501a0}} 
+def {\bfseries load\+\_\+geos} ()
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a99570f8b5027f6805932bba9f829ebff}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a99570f8b5027f6805932bba9f829ebff}} 
+def {\bfseries notice\+\_\+h} (fmt, lst)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a41f3b4752b219884a393c39870f1d18a}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a41f3b4752b219884a393c39870f1d18a}} 
+def {\bfseries error\+\_\+h} (fmt, lst)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_affd4f78adb3511aecf5f8534698fbc4a}{geos\+\_\+version}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_afcf7bc1e466e06edf0b18fd0cc81aa94}{geos\+\_\+version\+\_\+tuple}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a5493f726ed6481cfe2ca4e110849e2c0}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a5493f726ed6481cfe2ca4e110849e2c0}} 
+{\bfseries logger} = logging.\+get\+Logger(\textquotesingle{}django.\+contrib.\+gis\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_adaea023498cfc4d441f9900f47e1cfcb}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_adaea023498cfc4d441f9900f47e1cfcb}} 
+{\bfseries NOTICEFUNC} = CFUNCTYPE(None, c\+\_\+char\+\_\+p, c\+\_\+char\+\_\+p)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a6035abeda057bf2559dc2e0da41bee50}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a6035abeda057bf2559dc2e0da41bee50}} 
+{\bfseries notice\+\_\+h} = NOTICEFUNC(notice\+\_\+h)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a8eb99f9dcfdec646ea88130dbb62b69c}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a8eb99f9dcfdec646ea88130dbb62b69c}} 
+{\bfseries ERRORFUNC} = CFUNCTYPE(None, c\+\_\+char\+\_\+p, c\+\_\+char\+\_\+p)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_aefdd92f50bffee55ccd3aa19d48e04de}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_aefdd92f50bffee55ccd3aa19d48e04de}} 
+{\bfseries error\+\_\+h} = ERRORFUNC(error\+\_\+h)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a2a39dd13cacae45b5a0922c668a2ed6e}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a2a39dd13cacae45b5a0922c668a2ed6e}} 
+{\bfseries GEOM\+\_\+\+PTR} = POINTER(\mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_geom__t}{GEOSGeom\+\_\+t}})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a1e12c3c6e29c7e3b8cb91567f27c18b0}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a1e12c3c6e29c7e3b8cb91567f27c18b0}} 
+{\bfseries PREPGEOM\+\_\+\+PTR} = POINTER(\mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_prep_geom__t}{GEOSPrep\+Geom\+\_\+t}})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_ab99222eb5dbccfcbd649f2a1e0d86b6c}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_ab99222eb5dbccfcbd649f2a1e0d86b6c}} 
+{\bfseries CS\+\_\+\+PTR} = POINTER(\mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_coord_seq__t}{GEOSCoord\+Seq\+\_\+t}})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a129b935a26d9e153b41d2e57af8aa6b6}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a129b935a26d9e153b41d2e57af8aa6b6}} 
+{\bfseries CONTEXT\+\_\+\+PTR} = POINTER(\mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_1_1_g_e_o_s_context_handle__t}{GEOSContext\+Handle\+\_\+t}})
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a23aa32e8b2f023e1b971cfccc26e0a4c}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_a23aa32e8b2f023e1b971cfccc26e0a4c}} 
+{\bfseries lgeos} = \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_simple_lazy_object}{Simple\+Lazy\+Object}}(load\+\_\+geos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} This module houses the ctypes initialization procedures, as well
+ as the notice and error handler function callbacks (get called
+ when an error occurs in GEOS).
+
+ This module also houses GEOS Pointer utilities, including
+ get_pointer_arr(), and GEOM_PTR.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_affd4f78adb3511aecf5f8534698fbc4a}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_affd4f78adb3511aecf5f8534698fbc4a}} 
+\index{django.contrib.gis.geos.libgeos@{django.contrib.gis.geos.libgeos}!geos\_version@{geos\_version}}
+\index{geos\_version@{geos\_version}!django.contrib.gis.geos.libgeos@{django.contrib.gis.geos.libgeos}}
+\doxysubsubsection{\texorpdfstring{geos\_version()}{geos\_version()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+libgeos.\+geos\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the string version of the GEOS library.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_afcf7bc1e466e06edf0b18fd0cc81aa94}\label{namespacedjango_1_1contrib_1_1gis_1_1geos_1_1libgeos_afcf7bc1e466e06edf0b18fd0cc81aa94}} 
+\index{django.contrib.gis.geos.libgeos@{django.contrib.gis.geos.libgeos}!geos\_version\_tuple@{geos\_version\_tuple}}
+\index{geos\_version\_tuple@{geos\_version\_tuple}!django.contrib.gis.geos.libgeos@{django.contrib.gis.geos.libgeos}}
+\doxysubsubsection{\texorpdfstring{geos\_version\_tuple()}{geos\_version\_tuple()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+geos.\+libgeos.\+geos\+\_\+version\+\_\+tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the GEOS version as a tuple (major, minor, subminor).\end{DoxyVerb}
+ 

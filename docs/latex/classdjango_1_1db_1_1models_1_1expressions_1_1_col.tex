@@ -1,0 +1,126 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col}{}\doxysection{django.\+db.\+models.\+expressions.\+Col Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col}\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Col\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Col\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a450fea05ec94838f75ed4b8c87bd1918}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, alias, target, output\+\_\+field=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a658550f3022e8ab7883958510f14c530}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a658550f3022e8ab7883958510f14c530}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a8df396a637308583fa1f920e433bf7f7}{as\+\_\+sql}} (self, compiler, connection)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a85c269fab888c60d7544a6da23948db0}{relabeled\+\_\+clone}} (self, relabels)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a7b6b1ed426ac647db23c64e1714f5a15}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a72f394065bc75a39507dc61a7a192584}{get\+\_\+db\+\_\+converters}} (self, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_ada1e3e67f23651ef5643a34c0609b1c2}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_ada1e3e67f23651ef5643a34c0609b1c2}} 
+{\bfseries target}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a23fa50fd60ad4af6ee68b6e16beeaafe}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a23fa50fd60ad4af6ee68b6e16beeaafe}} 
+bool {\bfseries contains\+\_\+column\+\_\+references} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_afecb79bab78e37a22f0e407a8b9642dd}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_afecb79bab78e37a22f0e407a8b9642dd}} 
+bool {\bfseries possibly\+\_\+multivalued} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a450fea05ec94838f75ed4b8c87bd1918}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a450fea05ec94838f75ed4b8c87bd1918}} 
+\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Col.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias,  }\item[{}]{target,  }\item[{}]{output\+\_\+field = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a8df396a637308583fa1f920e433bf7f7}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a8df396a637308583fa1f920e433bf7f7}} 
+\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Col.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a72f394065bc75a39507dc61a7a192584}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a72f394065bc75a39507dc61a7a192584}} 
+\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}!get\_db\_converters@{get\_db\_converters}}
+\index{get\_db\_converters@{get\_db\_converters}!django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+\doxysubsubsection{\texorpdfstring{get\_db\_converters()}{get\_db\_converters()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Col.\+get\+\_\+db\+\_\+converters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a7b6b1ed426ac647db23c64e1714f5a15}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a7b6b1ed426ac647db23c64e1714f5a15}} 
+\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Col.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a85c269fab888c60d7544a6da23948db0}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_col_a85c269fab888c60d7544a6da23948db0}} 
+\index{django.db.models.expressions.Col@{django.db.models.expressions.Col}!relabeled\_clone@{relabeled\_clone}}
+\index{relabeled\_clone@{relabeled\_clone}!django.db.models.expressions.Col@{django.db.models.expressions.Col}}
+\doxysubsubsection{\texorpdfstring{relabeled\_clone()}{relabeled\_clone()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Col.\+relabeled\+\_\+clone (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{relabels }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator}{}\doxysection{rest\+\_\+framework.\+schemas.\+generators.\+Endpoint\+Enumerator Class Reference}
+\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator}\index{rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a55ecc37d77083909ea2d39eb422f3595}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a55ecc37d77083909ea2d39eb422f3595}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, patterns=None, urlconf=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac93f3e36cc8481f1edcb439ad0ecad2a}{get\+\_\+api\+\_\+endpoints}} (self, patterns=None, prefix=\textquotesingle{}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac744caf396a66ca23641d9dae03b8ca2}{get\+\_\+path\+\_\+from\+\_\+regex}} (self, path\+\_\+regex)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a620d752cdc97176feb3b2a8cd29d7e09}{should\+\_\+include\+\_\+endpoint}} (self, path, callback)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a67abfb930d52a9c97805e4c8db189249}{get\+\_\+allowed\+\_\+methods}} (self, callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_afea8c48db67c864df7aa49984727c32c}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_afea8c48db67c864df7aa49984727c32c}} 
+{\bfseries patterns}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to determine the available API endpoints that a project exposes.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a67abfb930d52a9c97805e4c8db189249}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a67abfb930d52a9c97805e4c8db189249}} 
+\index{rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}!get\_allowed\_methods@{get\_allowed\_methods}}
+\index{get\_allowed\_methods@{get\_allowed\_methods}!rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}}
+\doxysubsubsection{\texorpdfstring{get\_allowed\_methods()}{get\_allowed\_methods()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+generators.\+Endpoint\+Enumerator.\+get\+\_\+allowed\+\_\+methods (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{callback }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of the valid HTTP methods for this endpoint.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac93f3e36cc8481f1edcb439ad0ecad2a}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac93f3e36cc8481f1edcb439ad0ecad2a}} 
+\index{rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}!get\_api\_endpoints@{get\_api\_endpoints}}
+\index{get\_api\_endpoints@{get\_api\_endpoints}!rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}}
+\doxysubsubsection{\texorpdfstring{get\_api\_endpoints()}{get\_api\_endpoints()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+generators.\+Endpoint\+Enumerator.\+get\+\_\+api\+\_\+endpoints (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{patterns = {\ttfamily None},  }\item[{}]{prefix = {\ttfamily \textquotesingle{}\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of all available API endpoints by inspecting the URL conf.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac744caf396a66ca23641d9dae03b8ca2}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_ac744caf396a66ca23641d9dae03b8ca2}} 
+\index{rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}!get\_path\_from\_regex@{get\_path\_from\_regex}}
+\index{get\_path\_from\_regex@{get\_path\_from\_regex}!rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}}
+\doxysubsubsection{\texorpdfstring{get\_path\_from\_regex()}{get\_path\_from\_regex()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+generators.\+Endpoint\+Enumerator.\+get\+\_\+path\+\_\+from\+\_\+regex (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path\+\_\+regex }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a URL conf regex, return a URI template string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a620d752cdc97176feb3b2a8cd29d7e09}\label{classrest__framework_1_1schemas_1_1generators_1_1_endpoint_enumerator_a620d752cdc97176feb3b2a8cd29d7e09}} 
+\index{rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}!should\_include\_endpoint@{should\_include\_endpoint}}
+\index{should\_include\_endpoint@{should\_include\_endpoint}!rest\_framework.schemas.generators.EndpointEnumerator@{rest\_framework.schemas.generators.EndpointEnumerator}}
+\doxysubsubsection{\texorpdfstring{should\_include\_endpoint()}{should\_include\_endpoint()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+generators.\+Endpoint\+Enumerator.\+should\+\_\+include\+\_\+endpoint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{callback }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return `True` if the given endpoint should be included.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/schemas/generators.\+py\end{DoxyCompactItemize}

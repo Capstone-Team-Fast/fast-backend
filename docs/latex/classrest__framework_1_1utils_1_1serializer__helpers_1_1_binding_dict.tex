@@ -1,0 +1,57 @@
+\hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict}{}\doxysection{rest\+\_\+framework.\+utils.\+serializer\+\_\+helpers.\+Binding\+Dict Class Reference}
+\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict}\index{rest\_framework.utils.serializer\_helpers.BindingDict@{rest\_framework.utils.serializer\_helpers.BindingDict}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+utils.\+serializer\+\_\+helpers.\+Binding\+Dict\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+utils.\+serializer\+\_\+helpers.\+Binding\+Dict\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a72ac54264c60c63a99679360d241709b}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a72ac54264c60c63a99679360d241709b}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, serializer)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aa44f75d6f4fca17aeb8e1e7dcd3d4db2}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aa44f75d6f4fca17aeb8e1e7dcd3d4db2}} 
+def {\bfseries \+\_\+\+\_\+setitem\+\_\+\+\_\+} (self, key, field)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_af36b2f3a293313204ac076b9c1a15d79}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_af36b2f3a293313204ac076b9c1a15d79}} 
+def {\bfseries \+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, key)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aea0e7f76966847e86480606d1bb7e992}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aea0e7f76966847e86480606d1bb7e992}} 
+def {\bfseries \+\_\+\+\_\+delitem\+\_\+\+\_\+} (self, key)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a1b06a46a07f579e6e18989326bd6d264}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a1b06a46a07f579e6e18989326bd6d264}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a6962f1e563bec9936862106e33cd953a}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a6962f1e563bec9936862106e33cd953a}} 
+def {\bfseries \+\_\+\+\_\+len\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a4726118e4027fb964259d933c5dc9a03}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_a4726118e4027fb964259d933c5dc9a03}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aa2ed40ef4131a024e407b1f42ac598e4}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_aa2ed40ef4131a024e407b1f42ac598e4}} 
+{\bfseries serializer}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_ac1dddaf17ec936d600849e3c610d1094}\label{classrest__framework_1_1utils_1_1serializer__helpers_1_1_binding_dict_ac1dddaf17ec936d600849e3c610d1094}} 
+{\bfseries fields}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This dict-like object is used to store fields on a serializer.
+
+This ensures that whenever fields are added to the serializer we call
+`field.bind()` so that the `field_name` and `parent` attributes
+can be set correctly.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/utils/serializer\+\_\+helpers.\+py\end{DoxyCompactItemize}

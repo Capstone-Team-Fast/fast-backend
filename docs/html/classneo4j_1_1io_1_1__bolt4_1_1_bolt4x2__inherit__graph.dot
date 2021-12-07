@@ -1,0 +1,17 @@
+digraph "neo4j.io._bolt4.Bolt4x2"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="neo4j.io._bolt4.Bolt4x2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.io._bolt4.Bolt4x1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classneo4j_1_1io_1_1__bolt4_1_1_bolt4x1.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neo4j.io._bolt4.Bolt4x0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="neo4j.io.Bolt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classneo4j_1_1io_1_1_bolt.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="abc::ABC",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="neo4j.io._bolt4.Bolt4x3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classneo4j_1_1io_1_1__bolt4_1_1_bolt4x3.html",tooltip=" "];
+}

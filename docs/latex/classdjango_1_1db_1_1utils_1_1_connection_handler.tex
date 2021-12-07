@@ -1,0 +1,81 @@
+\hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler}{}\doxysection{django.\+db.\+utils.\+Connection\+Handler Class Reference}
+\label{classdjango_1_1db_1_1utils_1_1_connection_handler}\index{django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}}
+
+
+Inheritance diagram for django.\+db.\+utils.\+Connection\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+utils.\+Connection\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1utils_1_1_connection_handler_aac7532a82829458d139fb80794c2e7fe}{configure\+\_\+settings}} (self, databases)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_a5e800a37cb03e64c6ce6b1da2d5d9f7d}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_a5e800a37cb03e64c6ce6b1da2d5d9f7d}} 
+def {\bfseries databases} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1utils_1_1_connection_handler_a2fdacc49d0659e6cc082ae00bb1f989a}{ensure\+\_\+defaults}} (self, alias)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1utils_1_1_connection_handler_a291325800bb94b5d58f77d3442fca03e}{prepare\+\_\+test\+\_\+settings}} (self, alias)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1utils_1_1_connection_handler_a5ae2f62f14b7bf6bf207623ec421eba8}{create\+\_\+connection}} (self, alias)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_aefdfa1d96aa5d47919639cc02936ca52}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_aefdfa1d96aa5d47919639cc02936ca52}} 
+def {\bfseries close\+\_\+all} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_a4e015aa3e491e98e6828e2386312b7d4}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_a4e015aa3e491e98e6828e2386312b7d4}} 
+string {\bfseries settings\+\_\+name} = \textquotesingle{}DATABASES\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_aa3c56bb009c0eeffddcaeec0002faedb}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_aa3c56bb009c0eeffddcaeec0002faedb}} 
+bool {\bfseries thread\+\_\+critical} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_aac7532a82829458d139fb80794c2e7fe}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_aac7532a82829458d139fb80794c2e7fe}} 
+\index{django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}!configure\_settings@{configure\_settings}}
+\index{configure\_settings@{configure\_settings}!django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{configure\_settings()}{configure\_settings()}}
+{\footnotesize\ttfamily def django.\+db.\+utils.\+Connection\+Handler.\+configure\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{databases }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1connection_1_1_base_connection_handler}{django.\+utils.\+connection.\+Base\+Connection\+Handler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_a5ae2f62f14b7bf6bf207623ec421eba8}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_a5ae2f62f14b7bf6bf207623ec421eba8}} 
+\index{django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}!create\_connection@{create\_connection}}
+\index{create\_connection@{create\_connection}!django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{create\_connection()}{create\_connection()}}
+{\footnotesize\ttfamily def django.\+db.\+utils.\+Connection\+Handler.\+create\+\_\+connection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1connection_1_1_base_connection_handler}{django.\+utils.\+connection.\+Base\+Connection\+Handler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_a2fdacc49d0659e6cc082ae00bb1f989a}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_a2fdacc49d0659e6cc082ae00bb1f989a}} 
+\index{django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}!ensure\_defaults@{ensure\_defaults}}
+\index{ensure\_defaults@{ensure\_defaults}!django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{ensure\_defaults()}{ensure\_defaults()}}
+{\footnotesize\ttfamily def django.\+db.\+utils.\+Connection\+Handler.\+ensure\+\_\+defaults (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Put the defaults into the settings dictionary for a given connection
+where no settings is provided.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1utils_1_1_connection_handler_a291325800bb94b5d58f77d3442fca03e}\label{classdjango_1_1db_1_1utils_1_1_connection_handler_a291325800bb94b5d58f77d3442fca03e}} 
+\index{django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}!prepare\_test\_settings@{prepare\_test\_settings}}
+\index{prepare\_test\_settings@{prepare\_test\_settings}!django.db.utils.ConnectionHandler@{django.db.utils.ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{prepare\_test\_settings()}{prepare\_test\_settings()}}
+{\footnotesize\ttfamily def django.\+db.\+utils.\+Connection\+Handler.\+prepare\+\_\+test\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make sure the test settings are available in the 'TEST' sub-dictionary.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/utils.\+py\end{DoxyCompactItemize}

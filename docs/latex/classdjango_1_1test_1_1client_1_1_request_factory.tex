@@ -1,0 +1,177 @@
+\hypertarget{classdjango_1_1test_1_1client_1_1_request_factory}{}\doxysection{django.\+test.\+client.\+Request\+Factory Class Reference}
+\label{classdjango_1_1test_1_1client_1_1_request_factory}\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+
+
+Inheritance diagram for django.\+test.\+client.\+Request\+Factory\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_af26d7c801884b4cfbb303c50ca91bfa9}\label{classdjango_1_1test_1_1client_1_1_request_factory_af26d7c801884b4cfbb303c50ca91bfa9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, $\ast$json\+\_\+encoder=\mbox{\hyperlink{classdjango_1_1core_1_1serializers_1_1json_1_1_django_j_s_o_n_encoder}{Django\+JSONEncoder}}, $\ast$$\ast$defaults)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a12550839ba4cbabcf38bff0d2ff69f0a}{request}} (self, $\ast$$\ast$request)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_ae98b7772526436b2d7d485e99ad0bcb6}{get}} (self, path, data=None, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_abdb0862e5f448b83035f87a2ad59f35d}{post}} (self, path, data=None, content\+\_\+type=MULTIPART\+\_\+\+CONTENT, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a9525d397a709a423a0b2440941453c59}{head}} (self, path, data=None, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a00b0290ac5f379fbe75d1c2ca95a9d6d}{trace}} (self, path, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a3074017fe1473bafd8111cf3db0f4994}{options}} (self, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_aafaecc43099930d9ed17bf9c3358316e}{put}} (self, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a29d301506a3cc1942661e310c38f622c}{patch}} (self, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_ac3912de7786624d2d6b5f5eb9422bd17}{delete}} (self, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory_a3c9694a635970d08cea3d0797fe4a41f}{generic}} (self, method, path, data=\textquotesingle{}\textquotesingle{}, content\+\_\+type=\textquotesingle{}application/octet-\/stream\textquotesingle{}, secure=False, $\ast$$\ast$extra)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_ac06549a5330e60ff917724b29d9b7e3d}\label{classdjango_1_1test_1_1client_1_1_request_factory_ac06549a5330e60ff917724b29d9b7e3d}} 
+{\bfseries json\+\_\+encoder}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a70bd883c7b6a5c4780e4a1fb526db0e5}\label{classdjango_1_1test_1_1client_1_1_request_factory_a70bd883c7b6a5c4780e4a1fb526db0e5}} 
+{\bfseries defaults}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a6423c1c7fbe6186b4813c151f8cc8c3a}\label{classdjango_1_1test_1_1client_1_1_request_factory_a6423c1c7fbe6186b4813c151f8cc8c3a}} 
+{\bfseries cookies}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a100756b5bfc33aac9721746a6d8ef8c4}\label{classdjango_1_1test_1_1client_1_1_request_factory_a100756b5bfc33aac9721746a6d8ef8c4}} 
+{\bfseries errors}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class that lets you create mock Request objects for use in testing.
+
+Usage:
+
+rf = RequestFactory()
+get_request = rf.get('/hello/')
+post_request = rf.post('/submit/', {'foo': 'bar'})
+
+Once you have a request object you can pass it to any view function,
+just as if that view had been hooked up using a URLconf.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_ac3912de7786624d2d6b5f5eb9422bd17}\label{classdjango_1_1test_1_1client_1_1_request_factory_ac3912de7786624d2d6b5f5eb9422bd17}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!delete@{delete}}
+\index{delete@{delete}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+delete (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a DELETE request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_adba3d4bb560f275067cec97540e87683}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a3c9694a635970d08cea3d0797fe4a41f}\label{classdjango_1_1test_1_1client_1_1_request_factory_a3c9694a635970d08cea3d0797fe4a41f}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!generic@{generic}}
+\index{generic@{generic}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{generic()}{generic()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+generic (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{method,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct an arbitrary HTTP request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_request_factory_ad24a6bfecd117237b4d6181f3d9fad6a}{django.\+test.\+client.\+Async\+Request\+Factory}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_ae98b7772526436b2d7d485e99ad0bcb6}\label{classdjango_1_1test_1_1client_1_1_request_factory_ae98b7772526436b2d7d485e99ad0bcb6}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!get@{get}}
+\index{get@{get}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a GET request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_ad05f3de2e6baf7ebed2a814767b942f3}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a9525d397a709a423a0b2440941453c59}\label{classdjango_1_1test_1_1client_1_1_request_factory_a9525d397a709a423a0b2440941453c59}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!head@{head}}
+\index{head@{head}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+head (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a HEAD request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_acc1b7314ce828e1067c66fc452b10cc2}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a3074017fe1473bafd8111cf3db0f4994}\label{classdjango_1_1test_1_1client_1_1_request_factory_a3074017fe1473bafd8111cf3db0f4994}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!options@{options}}
+\index{options@{options}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{options()}{options()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+options (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_a5b3e5328b444683e8158e3cc8f7c5776}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a29d301506a3cc1942661e310c38f622c}\label{classdjango_1_1test_1_1client_1_1_request_factory_a29d301506a3cc1942661e310c38f622c}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!patch@{patch}}
+\index{patch@{patch}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{patch()}{patch()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+patch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a PATCH request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_ac4c3d71368b2bf079487f8d4307c2271}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_abdb0862e5f448b83035f87a2ad59f35d}\label{classdjango_1_1test_1_1client_1_1_request_factory_abdb0862e5f448b83035f87a2ad59f35d}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!post@{post}}
+\index{post@{post}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+post (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{content\+\_\+type = {\ttfamily MULTIPART\+\_\+CONTENT},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a POST request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_a66f3547f60d33e644640ba6b805b6981}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_aafaecc43099930d9ed17bf9c3358316e}\label{classdjango_1_1test_1_1client_1_1_request_factory_aafaecc43099930d9ed17bf9c3358316e}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!put@{put}}
+\index{put@{put}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+put (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{data = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{content\+\_\+type = {\ttfamily \textquotesingle{}application/octet-\/stream\textquotesingle{}},  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a PUT request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_aa95b6f24b197830ea55c1ec03a0d3612}{django.\+test.\+client.\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a12550839ba4cbabcf38bff0d2ff69f0a}\label{classdjango_1_1test_1_1client_1_1_request_factory_a12550839ba4cbabcf38bff0d2ff69f0a}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!request@{request}}
+\index{request@{request}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_request_factory_a8dcee74bc0f05203aa2aa2aad95555a9}{django.\+test.\+client.\+Async\+Request\+Factory}}, \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_a4b25cead120a234c08a522e016cb6138}{django.\+test.\+client.\+Client}}, and \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_client_a38330cfdf01cb69d3dd0bdb8b9777bd9}{django.\+test.\+client.\+Async\+Client}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_request_factory_a00b0290ac5f379fbe75d1c2ca95a9d6d}\label{classdjango_1_1test_1_1client_1_1_request_factory_a00b0290ac5f379fbe75d1c2ca95a9d6d}} 
+\index{django.test.client.RequestFactory@{django.test.client.RequestFactory}!trace@{trace}}
+\index{trace@{trace}!django.test.client.RequestFactory@{django.test.client.RequestFactory}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Request\+Factory.\+trace (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{secure = {\ttfamily False},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Construct a TRACE request.\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_client_a29d49ac4b15a62fcca77fa29cc7bf1ac}{django.\+test.\+client.\+Client}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/client.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations}\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8db148a7c871f1b4a09dfa05ee2a69e8}{mariadb}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_afbf15ec6af9db3e0f392c0d748949485}{mysql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af84726dd3dafe853d3cd4548bb3df463}{select}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a9ff53b0b69cd99dc3e029ca638063c65}{from\+\_\+text}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a4191bdf97bfa7ec143515f946697b50c}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a4191bdf97bfa7ec143515f946697b50c}} 
+def {\bfseries gis\+\_\+operators} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8015112b1e3ec16e846248e260217e3e}{unsupported\+\_\+functions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a7b251f65b2bd0ee8e5057d7287a22114}{geo\+\_\+db\+\_\+type}} (self, f)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_aea7627df007ebcf98257066f1e0cc346}{get\+\_\+distance}} (self, f, value, lookup\+\_\+type)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af8551ce61b420ffcb22565c3768c6bb4}{get\+\_\+geometry\+\_\+converter}} (self, expression)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_aa095e3c546271f90f29a77d9a0d6cdff}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_aa095e3c546271f90f29a77d9a0d6cdff}} 
+string {\bfseries name} = \textquotesingle{}mysql\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a0c325eeb2f67471b12e0e1a5cca933e8}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a0c325eeb2f67471b12e0e1a5cca933e8}} 
+string {\bfseries geom\+\_\+func\+\_\+prefix} = \textquotesingle{}ST\+\_\+\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a795a7a7b1b4b2207e99898d21629ff13}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a795a7a7b1b4b2207e99898d21629ff13}} 
+{\bfseries Adapter} = \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1adapter_1_1_w_k_t_adapter}{WKTAdapter}}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a94909832769ee0b20f1d66b12114f8c5}{disallowed\+\_\+aggregates}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a9ff53b0b69cd99dc3e029ca638063c65}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a9ff53b0b69cd99dc3e029ca638063c65}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!from\_text@{from\_text}}
+\index{from\_text@{from\_text}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{from\_text()}{from\_text()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+from\+\_\+text (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a7b251f65b2bd0ee8e5057d7287a22114}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a7b251f65b2bd0ee8e5057d7287a22114}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!geo\_db\_type@{geo\_db\_type}}
+\index{geo\_db\_type@{geo\_db\_type}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{geo\_db\_type()}{geo\_db\_type()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+geo\+\_\+db\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the database column type for the geometry field on
+the spatial backend.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations_a1963b6db4b068321920a6824f4fe0748}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_aea7627df007ebcf98257066f1e0cc346}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_aea7627df007ebcf98257066f1e0cc346}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!get\_distance@{get\_distance}}
+\index{get\_distance@{get\_distance}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{get\_distance()}{get\_distance()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+get\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{f,  }\item[{}]{value,  }\item[{}]{lookup\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the distance parameters for the given geometry field,
+lookup value, and lookup type.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations_ae51aca7fc8b81201f22029cd5bfb8eae}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af8551ce61b420ffcb22565c3768c6bb4}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af8551ce61b420ffcb22565c3768c6bb4}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!get\_geometry\_converter@{get\_geometry\_converter}}
+\index{get\_geometry\_converter@{get\_geometry\_converter}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{get\_geometry\_converter()}{get\_geometry\_converter()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+get\+\_\+geometry\+\_\+converter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8db148a7c871f1b4a09dfa05ee2a69e8}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8db148a7c871f1b4a09dfa05ee2a69e8}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!mariadb@{mariadb}}
+\index{mariadb@{mariadb}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{mariadb()}{mariadb()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+mariadb (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_afbf15ec6af9db3e0f392c0d748949485}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_afbf15ec6af9db3e0f392c0d748949485}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!mysql@{mysql}}
+\index{mysql@{mysql}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{mysql()}{mysql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+mysql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af84726dd3dafe853d3cd4548bb3df463}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_af84726dd3dafe853d3cd4548bb3df463}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!select@{select}}
+\index{select@{select}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+select (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8015112b1e3ec16e846248e260217e3e}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a8015112b1e3ec16e846248e260217e3e}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!unsupported\_functions@{unsupported\_functions}}
+\index{unsupported\_functions@{unsupported\_functions}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{unsupported\_functions()}{unsupported\_functions()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+unsupported\+\_\+functions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1operations_1_1_base_spatial_operations}{django.\+contrib.\+gis.\+db.\+backends.\+base.\+operations.\+Base\+Spatial\+Operations}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a94909832769ee0b20f1d66b12114f8c5}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1operations_1_1_my_s_q_l_operations_a94909832769ee0b20f1d66b12114f8c5}} 
+\index{django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}!disallowed\_aggregates@{disallowed\_aggregates}}
+\index{disallowed\_aggregates@{disallowed\_aggregates}!django.contrib.gis.db.backends.mysql.operations.MySQLOperations@{django.contrib.gis.db.backends.mysql.operations.MySQLOperations}}
+\doxysubsubsection{\texorpdfstring{disallowed\_aggregates}{disallowed\_aggregates}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+operations.\+My\+SQLOperations.\+disallowed\+\_\+aggregates\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        models.Collect, models.Extent, models.Extent3D, models.MakeLine,}
+\DoxyCodeLine{        models.Union,}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/backends/mysql/operations.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classshapely_1_1prepared_1_1_prepared_geometry}{}\doxysection{shapely.\+prepared.\+Prepared\+Geometry Class Reference}
+\label{classshapely_1_1prepared_1_1_prepared_geometry}\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+
+
+Inheritance diagram for shapely.\+prepared.\+Prepared\+Geometry\+:
+% FIG 0
+
+
+Collaboration diagram for shapely.\+prepared.\+Prepared\+Geometry\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a5d9ed9a1dda66e2d4ab68ff81c3db4b1}\label{classshapely_1_1prepared_1_1_prepared_geometry_a5d9ed9a1dda66e2d4ab68ff81c3db4b1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, context)
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a10b8ac92a57f7fa575525b89ff294b1c}\label{classshapely_1_1prepared_1_1_prepared_geometry_a10b8ac92a57f7fa575525b89ff294b1c}} 
+def {\bfseries \+\_\+\+\_\+del\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_ae7afac984a4eda29af722be86e73a510}{contains}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_adf43c3086315f165a4843261dc3df188}{contains\+\_\+properly}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a6460d3a5206b06d4179a808e55a7ab7d}{covers}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a64c75366137b99f227362538afef7519}{crosses}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a786bef54f41e9fde4066b9b068650f26}{disjoint}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_ae70be38e23b7af3c2a0b830346577805}{intersects}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a368cfe619affda2f0ec67d6712afd605}{overlaps}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a42961c66e9250dd47be22eb378e5bddf}{touches}} (self, other)
+\item 
+def \mbox{\hyperlink{classshapely_1_1prepared_1_1_prepared_geometry_a389f9efd23ef1db6041d6d5ef0a271e2}{within}} (self, other)
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a2d292ea547521a9c278da05c3eb2c877}\label{classshapely_1_1prepared_1_1_prepared_geometry_a2d292ea547521a9c278da05c3eb2c877}} 
+def {\bfseries \+\_\+\+\_\+reduce\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_adabad0ea954ce1dbdf2ffa80e888ec74}\label{classshapely_1_1prepared_1_1_prepared_geometry_adabad0ea954ce1dbdf2ffa80e888ec74}} 
+{\bfseries context}
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a77b19f1e20f440a18a2f33aa40db8fcd}\label{classshapely_1_1prepared_1_1_prepared_geometry_a77b19f1e20f440a18a2f33aa40db8fcd}} 
+{\bfseries prepared}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_aee2939d36609547cebee0720be42d6cc}\label{classshapely_1_1prepared_1_1_prepared_geometry_aee2939d36609547cebee0720be42d6cc}} 
+{\bfseries impl} = Default\+Implementation
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A geometry prepared for efficient comparison to a set of other geometries.
+
+Example:
+
+  >>> from shapely.geometry import Point, Polygon
+  >>> triangle = Polygon(((0.0, 0.0), (1.0, 1.0), (1.0, -1.0)))
+  >>> p = prep(triangle)
+  >>> p.intersects(Point(0.5, 0.5))
+  True
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_ae7afac984a4eda29af722be86e73a510}\label{classshapely_1_1prepared_1_1_prepared_geometry_ae7afac984a4eda29af722be86e73a510}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!contains@{contains}}
+\index{contains@{contains}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+contains (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the geometry contains the other, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_adf43c3086315f165a4843261dc3df188}\label{classshapely_1_1prepared_1_1_prepared_geometry_adf43c3086315f165a4843261dc3df188}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!contains\_properly@{contains\_properly}}
+\index{contains\_properly@{contains\_properly}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{contains\_properly()}{contains\_properly()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+contains\+\_\+properly (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the geometry properly contains the other, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a6460d3a5206b06d4179a808e55a7ab7d}\label{classshapely_1_1prepared_1_1_prepared_geometry_a6460d3a5206b06d4179a808e55a7ab7d}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!covers@{covers}}
+\index{covers@{covers}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{covers()}{covers()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+covers (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the geometry covers the other, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a64c75366137b99f227362538afef7519}\label{classshapely_1_1prepared_1_1_prepared_geometry_a64c75366137b99f227362538afef7519}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!crosses@{crosses}}
+\index{crosses@{crosses}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{crosses()}{crosses()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+crosses (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the geometries cross, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a786bef54f41e9fde4066b9b068650f26}\label{classshapely_1_1prepared_1_1_prepared_geometry_a786bef54f41e9fde4066b9b068650f26}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!disjoint@{disjoint}}
+\index{disjoint@{disjoint}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{disjoint()}{disjoint()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+disjoint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if geometries are disjoint, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_ae70be38e23b7af3c2a0b830346577805}\label{classshapely_1_1prepared_1_1_prepared_geometry_ae70be38e23b7af3c2a0b830346577805}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!intersects@{intersects}}
+\index{intersects@{intersects}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+intersects (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if geometries intersect, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a368cfe619affda2f0ec67d6712afd605}\label{classshapely_1_1prepared_1_1_prepared_geometry_a368cfe619affda2f0ec67d6712afd605}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{overlaps()}{overlaps()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+overlaps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if geometries overlap, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a42961c66e9250dd47be22eb378e5bddf}\label{classshapely_1_1prepared_1_1_prepared_geometry_a42961c66e9250dd47be22eb378e5bddf}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!touches@{touches}}
+\index{touches@{touches}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{touches()}{touches()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+touches (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if geometries touch, else False\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1prepared_1_1_prepared_geometry_a389f9efd23ef1db6041d6d5ef0a271e2}\label{classshapely_1_1prepared_1_1_prepared_geometry_a389f9efd23ef1db6041d6d5ef0a271e2}} 
+\index{shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}!within@{within}}
+\index{within@{within}!shapely.prepared.PreparedGeometry@{shapely.prepared.PreparedGeometry}}
+\doxysubsubsection{\texorpdfstring{within()}{within()}}
+{\footnotesize\ttfamily def shapely.\+prepared.\+Prepared\+Geometry.\+within (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if geometry is within the other, else False\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/shapely/prepared.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance}{}\doxysection{asgiref.\+wsgi.\+Wsgi\+To\+Asgi\+Instance Class Reference}
+\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance}\index{asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_abae4832a8a679bf0b3fbd82b8a43b5bd}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_abae4832a8a679bf0b3fbd82b8a43b5bd}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, wsgi\+\_\+application)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_abf61d10c8961dec7acfa085b9e317bbe}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_abf61d10c8961dec7acfa085b9e317bbe}} 
+def {\bfseries \+\_\+\+\_\+call\+\_\+\+\_\+} (self, scope, receive, send)
+\item 
+def \mbox{\hyperlink{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ab1890929fc892805de48400a39a5e292}{build\+\_\+environ}} (self, scope, body)
+\item 
+def \mbox{\hyperlink{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ae797d7dbeab15c587c27a901f6f91397}{start\+\_\+response}} (self, status, response\+\_\+headers, exc\+\_\+info=None)
+\item 
+def \mbox{\hyperlink{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_af322b736b1f0ecd5b5567b830f899c9e}{run\+\_\+wsgi\+\_\+app}} (self, body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a1894d0063160eb980beec510856ffab7}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a1894d0063160eb980beec510856ffab7}} 
+{\bfseries wsgi\+\_\+application}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a691116965054b24282ab6e19a747f1f9}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a691116965054b24282ab6e19a747f1f9}} 
+{\bfseries response\+\_\+started}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a00e0ef2686bff82d89a45b1d8dad27ba}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a00e0ef2686bff82d89a45b1d8dad27ba}} 
+{\bfseries response\+\_\+content\+\_\+length}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a0d288e4bdffbf472184ec3c400c64f7e}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a0d288e4bdffbf472184ec3c400c64f7e}} 
+{\bfseries scope}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a9a71241990622bd5db9f2962d5ac34fd}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_a9a71241990622bd5db9f2962d5ac34fd}} 
+{\bfseries sync\+\_\+send}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ae6c70407740a9b750b35add525f535d3}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ae6c70407740a9b750b35add525f535d3}} 
+{\bfseries response\+\_\+start}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Per-socket instance of a wrapped WSGI application
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ab1890929fc892805de48400a39a5e292}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ab1890929fc892805de48400a39a5e292}} 
+\index{asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}!build\_environ@{build\_environ}}
+\index{build\_environ@{build\_environ}!asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}}
+\doxysubsubsection{\texorpdfstring{build\_environ()}{build\_environ()}}
+{\footnotesize\ttfamily def asgiref.\+wsgi.\+Wsgi\+To\+Asgi\+Instance.\+build\+\_\+environ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scope,  }\item[{}]{body }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Builds a scope and request body into a WSGI environ object.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_af322b736b1f0ecd5b5567b830f899c9e}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_af322b736b1f0ecd5b5567b830f899c9e}} 
+\index{asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}!run\_wsgi\_app@{run\_wsgi\_app}}
+\index{run\_wsgi\_app@{run\_wsgi\_app}!asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}}
+\doxysubsubsection{\texorpdfstring{run\_wsgi\_app()}{run\_wsgi\_app()}}
+{\footnotesize\ttfamily def asgiref.\+wsgi.\+Wsgi\+To\+Asgi\+Instance.\+run\+\_\+wsgi\+\_\+app (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{body }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called in a subthread to run the WSGI app. We encapsulate like
+this so that the start_response callable is called in the same thread.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ae797d7dbeab15c587c27a901f6f91397}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_instance_ae797d7dbeab15c587c27a901f6f91397}} 
+\index{asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}!start\_response@{start\_response}}
+\index{start\_response@{start\_response}!asgiref.wsgi.WsgiToAsgiInstance@{asgiref.wsgi.WsgiToAsgiInstance}}
+\doxysubsubsection{\texorpdfstring{start\_response()}{start\_response()}}
+{\footnotesize\ttfamily def asgiref.\+wsgi.\+Wsgi\+To\+Asgi\+Instance.\+start\+\_\+response (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status,  }\item[{}]{response\+\_\+headers,  }\item[{}]{exc\+\_\+info = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}WSGI start_response callable.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/asgiref/wsgi.\+py\end{DoxyCompactItemize}

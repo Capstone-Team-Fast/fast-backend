@@ -1,0 +1,112 @@
+\hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum}{}\doxysection{django.\+utils.\+lorem\+\_\+ipsum Namespace Reference}
+\label{namespacedjango_1_1utils_1_1lorem__ipsum}\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_a781541369a6aa6343a93ebf8ed1d9a16}{sentence}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_a3e1dffe4ac38d37b35f66acdb81ae86a}{paragraph}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_ac8575def17bf0f6c6475d1a5f73fb954}{paragraphs}} (count, common=True)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_ad4956bdfe3b761b5a39b1ce98ebbd873}{words}} (count, common=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_ae7503ad0625b2006e4d03a2d8655cadc}{COMMON\+\_\+P}}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_af807f10cc25d4a4e3409a1315afd7441}\label{namespacedjango_1_1utils_1_1lorem__ipsum_af807f10cc25d4a4e3409a1315afd7441}} 
+tuple {\bfseries WORDS}
+\item 
+tuple \mbox{\hyperlink{namespacedjango_1_1utils_1_1lorem__ipsum_a377246aa04776d6d29196198d435f2e7}{COMMON\+\_\+\+WORDS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Utility functions for generating "lorem ipsum" Latin text.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_a3e1dffe4ac38d37b35f66acdb81ae86a}\label{namespacedjango_1_1utils_1_1lorem__ipsum_a3e1dffe4ac38d37b35f66acdb81ae86a}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!paragraph@{paragraph}}
+\index{paragraph@{paragraph}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{paragraph()}{paragraph()}}
+{\footnotesize\ttfamily def django.\+utils.\+lorem\+\_\+ipsum.\+paragraph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a randomly generated paragraph of lorem ipsum text.
+
+The paragraph consists of between 1 and 4 sentences, inclusive.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_ac8575def17bf0f6c6475d1a5f73fb954}\label{namespacedjango_1_1utils_1_1lorem__ipsum_ac8575def17bf0f6c6475d1a5f73fb954}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!paragraphs@{paragraphs}}
+\index{paragraphs@{paragraphs}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{paragraphs()}{paragraphs()}}
+{\footnotesize\ttfamily def django.\+utils.\+lorem\+\_\+ipsum.\+paragraphs (\begin{DoxyParamCaption}\item[{}]{count,  }\item[{}]{common = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of paragraphs as returned by paragraph().
+
+If `common` is True, then the first paragraph will be the standard
+'lorem ipsum' paragraph. Otherwise, the first paragraph will be random
+Latin text. Either way, subsequent paragraphs will be random Latin text.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_a781541369a6aa6343a93ebf8ed1d9a16}\label{namespacedjango_1_1utils_1_1lorem__ipsum_a781541369a6aa6343a93ebf8ed1d9a16}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!sentence@{sentence}}
+\index{sentence@{sentence}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{sentence()}{sentence()}}
+{\footnotesize\ttfamily def django.\+utils.\+lorem\+\_\+ipsum.\+sentence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a randomly generated sentence of lorem ipsum text.
+
+The first word is capitalized, and the sentence ends in either a period or
+question mark. Commas are added at random.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_ad4956bdfe3b761b5a39b1ce98ebbd873}\label{namespacedjango_1_1utils_1_1lorem__ipsum_ad4956bdfe3b761b5a39b1ce98ebbd873}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!words@{words}}
+\index{words@{words}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{words()}{words()}}
+{\footnotesize\ttfamily def django.\+utils.\+lorem\+\_\+ipsum.\+words (\begin{DoxyParamCaption}\item[{}]{count,  }\item[{}]{common = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a string of `count` lorem ipsum words separated by a single space.
+
+If `common` is True, then the first 19 words will be the standard
+'lorem ipsum' words. Otherwise, all words will be selected randomly.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_ae7503ad0625b2006e4d03a2d8655cadc}\label{namespacedjango_1_1utils_1_1lorem__ipsum_ae7503ad0625b2006e4d03a2d8655cadc}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!COMMON\_P@{COMMON\_P}}
+\index{COMMON\_P@{COMMON\_P}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{COMMON\_P}{COMMON\_P}}
+{\footnotesize\ttfamily tuple django.\+utils.\+lorem\+\_\+ipsum.\+COMMON\+\_\+P}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod '}}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim '}}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea '}}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'commodo consequat. Duis aute irure dolor in reprehenderit in voluptate '}}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint '}}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'occaecat cupidatat non proident, sunt in culpa qui officia deserunt '}}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'mollit anim id est laborum.'}}
+\DoxyCodeLine{9 )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1lorem__ipsum_a377246aa04776d6d29196198d435f2e7}\label{namespacedjango_1_1utils_1_1lorem__ipsum_a377246aa04776d6d29196198d435f2e7}} 
+\index{django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}!COMMON\_WORDS@{COMMON\_WORDS}}
+\index{COMMON\_WORDS@{COMMON\_WORDS}!django.utils.lorem\_ipsum@{django.utils.lorem\_ipsum}}
+\doxysubsubsection{\texorpdfstring{COMMON\_WORDS}{COMMON\_WORDS}}
+{\footnotesize\ttfamily tuple django.\+utils.\+lorem\+\_\+ipsum.\+COMMON\+\_\+\+WORDS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'lorem'}, \textcolor{stringliteral}{'ipsum'}, \textcolor{stringliteral}{'dolor'}, \textcolor{stringliteral}{'sit'}, \textcolor{stringliteral}{'amet'}, \textcolor{stringliteral}{'consectetur'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'adipisicing'}, \textcolor{stringliteral}{'elit'}, \textcolor{stringliteral}{'sed'}, \textcolor{stringliteral}{'do'}, \textcolor{stringliteral}{'eiusmod'}, \textcolor{stringliteral}{'tempor'}, \textcolor{stringliteral}{'incididunt'},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'ut'}, \textcolor{stringliteral}{'labore'}, \textcolor{stringliteral}{'et'}, \textcolor{stringliteral}{'dolore'}, \textcolor{stringliteral}{'magna'}, \textcolor{stringliteral}{'aliqua'},}
+\DoxyCodeLine{5 )}
+
+\end{DoxyCode}

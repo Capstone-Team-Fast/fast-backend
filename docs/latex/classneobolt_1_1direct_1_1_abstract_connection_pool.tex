@@ -1,0 +1,153 @@
+\hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool}{}\doxysection{neobolt.\+direct.\+Abstract\+Connection\+Pool Class Reference}
+\label{classneobolt_1_1direct_1_1_abstract_connection_pool}\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+
+
+Inheritance diagram for neobolt.\+direct.\+Abstract\+Connection\+Pool\+:
+% FIG 0
+
+
+Collaboration diagram for neobolt.\+direct.\+Abstract\+Connection\+Pool\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_ac722e7c63bda080e2afcbb412f57e3b8}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_ac722e7c63bda080e2afcbb412f57e3b8}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connector, connection\+\_\+error\+\_\+handler, $\ast$$\ast$config)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a6a7f58fb31a7564d2fd0fed83c8103a1}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a6a7f58fb31a7564d2fd0fed83c8103a1}} 
+def {\bfseries \+\_\+\+\_\+enter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_ab3e0c1db0d0bbcedd41ea926f7eba22e}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_ab3e0c1db0d0bbcedd41ea926f7eba22e}} 
+def {\bfseries \+\_\+\+\_\+exit\+\_\+\+\_\+} (self, exc\+\_\+type, exc\+\_\+value, traceback)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a0668c26232adf50591c8b4cfbf0a646f}{acquire\+\_\+direct}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a060cbe80af57e0a95d03409cc0fe4655}{acquire}} (self, access\+\_\+mode=None)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a3534079358c5d7c3d3499482aad03caf}{release}} (self, connection)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a86aa8d6840ba4777b2bb5be405e7f2a6}{in\+\_\+use\+\_\+connection\+\_\+count}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a8c0b47750e271292ebfe7e09bab92ae7}{deactivate}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a66ba32763865c9f1615160d992477912}{remove}} (self, address)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a0469a6a947b4242c95d0341ef9fd48ba}{close}} (self)
+\item 
+def \mbox{\hyperlink{classneobolt_1_1direct_1_1_abstract_connection_pool_a554145fd4502cab0def40d197d975010}{closed}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a85c4a7d62c1d4b32e5fc48ce9aa9fe37}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a85c4a7d62c1d4b32e5fc48ce9aa9fe37}} 
+{\bfseries connector}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_ab60bf33eccd7639ec0845a78bc58792d}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_ab60bf33eccd7639ec0845a78bc58792d}} 
+{\bfseries connection\+\_\+error\+\_\+handler}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a7d3acd7abed9be2c73b9309bd6fc23c5}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a7d3acd7abed9be2c73b9309bd6fc23c5}} 
+{\bfseries connections}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a9833cf26d7819d6aa8b11ac954ccdc43}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a9833cf26d7819d6aa8b11ac954ccdc43}} 
+{\bfseries lock}
+\item 
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a47bd1f9643d1f47c5c23242264183a44}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a47bd1f9643d1f47c5c23242264183a44}} 
+{\bfseries cond}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A collection of connections to one or more server addresses.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a060cbe80af57e0a95d03409cc0fe4655}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a060cbe80af57e0a95d03409cc0fe4655}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!acquire@{acquire}}
+\index{acquire@{acquire}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+acquire (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{access\+\_\+mode = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Acquire a connection to a server that can satisfy a set of parameters.
+
+:param access_mode:
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneobolt_1_1direct_1_1_connection_pool_a3056b89b17b3d25c0226ebc53f477001}{neobolt.\+direct.\+Connection\+Pool}}, and \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a2b9873acaddbbdfa059cd66e903e689d}{neobolt.\+routing.\+Routing\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a0668c26232adf50591c8b4cfbf0a646f}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a0668c26232adf50591c8b4cfbf0a646f}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!acquire\_direct@{acquire\_direct}}
+\index{acquire\_direct@{acquire\_direct}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{acquire\_direct()}{acquire\_direct()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+acquire\+\_\+direct (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Acquire a connection to a given address from the pool.
+The address supplied should always be an IP address, not
+a host name.
+
+This method is thread safe.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a0469a6a947b4242c95d0341ef9fd48ba}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a0469a6a947b4242c95d0341ef9fd48ba}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!close@{close}}
+\index{close@{close}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Close all connections and empty the pool.
+This method is thread safe.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a554145fd4502cab0def40d197d975010}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a554145fd4502cab0def40d197d975010}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!closed@{closed}}
+\index{closed@{closed}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{closed()}{closed()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+closed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return :const:`True` if this pool is closed, :const:`False`
+otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a8c0b47750e271292ebfe7e09bab92ae7}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a8c0b47750e271292ebfe7e09bab92ae7}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+deactivate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Deactivate an address from the connection pool, if present, closing
+all idle connection to that address
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneobolt_1_1routing_1_1_routing_connection_pool_a7681c98c8637a17b811aab54f14d48ea}{neobolt.\+routing.\+Routing\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a86aa8d6840ba4777b2bb5be405e7f2a6}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a86aa8d6840ba4777b2bb5be405e7f2a6}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!in\_use\_connection\_count@{in\_use\_connection\_count}}
+\index{in\_use\_connection\_count@{in\_use\_connection\_count}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{in\_use\_connection\_count()}{in\_use\_connection\_count()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+in\+\_\+use\+\_\+connection\+\_\+count (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Count the number of connections currently in use to a given
+address.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a3534079358c5d7c3d3499482aad03caf}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a3534079358c5d7c3d3499482aad03caf}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!release@{release}}
+\index{release@{release}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+release (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Release a connection back into the pool.
+This method is thread safe.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneobolt_1_1direct_1_1_abstract_connection_pool_a66ba32763865c9f1615160d992477912}\label{classneobolt_1_1direct_1_1_abstract_connection_pool_a66ba32763865c9f1615160d992477912}} 
+\index{neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}!remove@{remove}}
+\index{remove@{remove}!neobolt.direct.AbstractConnectionPool@{neobolt.direct.AbstractConnectionPool}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def neobolt.\+direct.\+Abstract\+Connection\+Pool.\+remove (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Remove an address from the connection pool, if present, closing
+all connections to that address.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neobolt/direct.\+py\end{DoxyCompactItemize}

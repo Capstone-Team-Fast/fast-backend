@@ -1,0 +1,130 @@
+\hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint}{}\doxysection{django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint Class Reference}
+\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint}\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+
+
+Inheritance diagram for django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_af4fbce4d451d1f3fa6dde3c3e6d47867}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_af4fbce4d451d1f3fa6dde3c3e6d47867}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+name, constraint)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a124f93ab5e58da9cccc53a39b36c6ef2}{state\+\_\+forwards}} (self, app\+\_\+label, state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a94a28442fab477b16e8922f34a6dd2e5}{database\+\_\+forwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae7719adbac8593f9ef73b013029446c5}{database\+\_\+backwards}} (self, app\+\_\+label, schema\+\_\+editor, from\+\_\+state, to\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a3306201fa2b9bf49479c4a9a8afee264}{deconstruct}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a7c401d80c4d0f89252f08f897768875c}{describe}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae56df701bce041c4da3137249adc9c36}{migration\+\_\+name\+\_\+fragment}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a9050f04070f56e0c5b8354dfd44d9c9a}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a9050f04070f56e0c5b8354dfd44d9c9a}} 
+{\bfseries model\+\_\+name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a26086d399105ac20e5c0d910f2961b19}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a26086d399105ac20e5c0d910f2961b19}} 
+{\bfseries constraint}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_af668dfd0bc3eb7f4d71569cb80cd9c77}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_af668dfd0bc3eb7f4d71569cb80cd9c77}} 
+string {\bfseries option\+\_\+name} = \textquotesingle{}constraints\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae7719adbac8593f9ef73b013029446c5}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae7719adbac8593f9ef73b013029446c5}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!database\_backwards@{database\_backwards}}
+\index{database\_backwards@{database\_backwards}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{database\_backwards()}{database\_backwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+database\+\_\+backwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the reverse
+direction - e.g. if this were CreateModel, it would in fact
+drop the model's table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9f9a4f6caf098cfef46a18181b5d3e1f}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a94a28442fab477b16e8922f34a6dd2e5}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a94a28442fab477b16e8922f34a6dd2e5}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!database\_forwards@{database\_forwards}}
+\index{database\_forwards@{database\_forwards}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{database\_forwards()}{database\_forwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+database\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{schema\+\_\+editor,  }\item[{}]{from\+\_\+state,  }\item[{}]{to\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the mutation on the database schema in the normal
+(forwards) direction.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a6fb30ff727ddd37e2133a22f270dfd7e}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a3306201fa2b9bf49479c4a9a8afee264}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a3306201fa2b9bf49479c4a9a8afee264}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!deconstruct@{deconstruct}}
+\index{deconstruct@{deconstruct}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{deconstruct()}{deconstruct()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+deconstruct (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a 3-tuple of class import path (or just name if it lives
+under django.db.migrations), positional arguments, and keyword
+arguments.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_ad75a5d5505068e79957819c47964bbf5}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a7c401d80c4d0f89252f08f897768875c}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a7c401d80c4d0f89252f08f897768875c}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!describe@{describe}}
+\index{describe@{describe}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+describe (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Output a brief summary of what the action does.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a9ab7813dce1563587a2972d4d4f4fa00}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae56df701bce041c4da3137249adc9c36}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_ae56df701bce041c4da3137249adc9c36}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!migration\_name\_fragment@{migration\_name\_fragment}}
+\index{migration\_name\_fragment@{migration\_name\_fragment}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{migration\_name\_fragment()}{migration\_name\_fragment()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+migration\+\_\+name\+\_\+fragment (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A filename part suitable for automatically naming a migration
+containing this operation, or None if not applicable.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a12262150d6d1ff19ab68879e46c1660d}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a124f93ab5e58da9cccc53a39b36c6ef2}\label{classdjango_1_1db_1_1migrations_1_1operations_1_1models_1_1_add_constraint_a124f93ab5e58da9cccc53a39b36c6ef2}} 
+\index{django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}!state\_forwards@{state\_forwards}}
+\index{state\_forwards@{state\_forwards}!django.db.migrations.operations.models.AddConstraint@{django.db.migrations.operations.models.AddConstraint}}
+\doxysubsubsection{\texorpdfstring{state\_forwards()}{state\_forwards()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+operations.\+models.\+Add\+Constraint.\+state\+\_\+forwards (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label,  }\item[{}]{state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take the state from the previous migration, and mutate it
+so that it matches what this migration would perform.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1operations_1_1base_1_1_operation_a5717e1a47b2551aab4fbf9475f9dae7b}{django.\+db.\+migrations.\+operations.\+base.\+Operation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/migrations/operations/models.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classpsycopg2_1_1pool_1_1_threaded_connection_pool}{}\doxysection{psycopg2.\+pool.\+Threaded\+Connection\+Pool Class Reference}
+\label{classpsycopg2_1_1pool_1_1_threaded_connection_pool}\index{psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}}
+
+
+Inheritance diagram for psycopg2.\+pool.\+Threaded\+Connection\+Pool\+:
+% FIG 0
+
+
+Collaboration diagram for psycopg2.\+pool.\+Threaded\+Connection\+Pool\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1pool_1_1_threaded_connection_pool_a65cf2238131385904c3abbcf77568e6b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, minconn, maxconn, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1pool_1_1_threaded_connection_pool_acc9f631aa1b62f2037dc96056964a2d7}{getconn}} (self, key=None)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1pool_1_1_threaded_connection_pool_ae3445b8e292b7952b6598cba369ec902}{putconn}} (self, conn=None, key=None, close=False)
+\item 
+def \mbox{\hyperlink{classpsycopg2_1_1pool_1_1_threaded_connection_pool_affcfab9e87abcf4b615998642ab1f926}{closeall}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A connection pool that works with the threading module.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1pool_1_1_threaded_connection_pool_a65cf2238131385904c3abbcf77568e6b}\label{classpsycopg2_1_1pool_1_1_threaded_connection_pool_a65cf2238131385904c3abbcf77568e6b}} 
+\index{psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def psycopg2.\+pool.\+Threaded\+Connection\+Pool.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{minconn,  }\item[{}]{maxconn,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the threading lock.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpsycopg2_1_1pool_1_1_abstract_connection_pool_a7bb473b96577eb94056909854d537aaf}{psycopg2.\+pool.\+Abstract\+Connection\+Pool}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpsycopg2_1_1pool_1_1_threaded_connection_pool_affcfab9e87abcf4b615998642ab1f926}\label{classpsycopg2_1_1pool_1_1_threaded_connection_pool_affcfab9e87abcf4b615998642ab1f926}} 
+\index{psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}!closeall@{closeall}}
+\index{closeall@{closeall}!psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}}
+\doxysubsubsection{\texorpdfstring{closeall()}{closeall()}}
+{\footnotesize\ttfamily def psycopg2.\+pool.\+Threaded\+Connection\+Pool.\+closeall (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Close all connections (even the one currently in use.)\end{DoxyVerb}
+ \mbox{\Hypertarget{classpsycopg2_1_1pool_1_1_threaded_connection_pool_acc9f631aa1b62f2037dc96056964a2d7}\label{classpsycopg2_1_1pool_1_1_threaded_connection_pool_acc9f631aa1b62f2037dc96056964a2d7}} 
+\index{psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}!getconn@{getconn}}
+\index{getconn@{getconn}!psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}}
+\doxysubsubsection{\texorpdfstring{getconn()}{getconn()}}
+{\footnotesize\ttfamily def psycopg2.\+pool.\+Threaded\+Connection\+Pool.\+getconn (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a free connection and assign it to 'key' if not None.\end{DoxyVerb}
+ \mbox{\Hypertarget{classpsycopg2_1_1pool_1_1_threaded_connection_pool_ae3445b8e292b7952b6598cba369ec902}\label{classpsycopg2_1_1pool_1_1_threaded_connection_pool_ae3445b8e292b7952b6598cba369ec902}} 
+\index{psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}!putconn@{putconn}}
+\index{putconn@{putconn}!psycopg2.pool.ThreadedConnectionPool@{psycopg2.pool.ThreadedConnectionPool}}
+\doxysubsubsection{\texorpdfstring{putconn()}{putconn()}}
+{\footnotesize\ttfamily def psycopg2.\+pool.\+Threaded\+Connection\+Pool.\+putconn (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn = {\ttfamily None},  }\item[{}]{key = {\ttfamily None},  }\item[{}]{close = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Put away an unused connection.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/psycopg2/pool.\+py\end{DoxyCompactItemize}

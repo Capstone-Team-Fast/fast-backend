@@ -1,0 +1,84 @@
+\hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case}{}\doxysection{django.\+test.\+testcases.\+Live\+Server\+Test\+Case Class Reference}
+\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case}\index{django.test.testcases.LiveServerTestCase@{django.test.testcases.LiveServerTestCase}}
+
+
+Inheritance diagram for django.\+test.\+testcases.\+Live\+Server\+Test\+Case\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+test.\+testcases.\+Live\+Server\+Test\+Case\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a5a0c31a662f1ab3b490422c4dd0af991}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a5a0c31a662f1ab3b490422c4dd0af991}} 
+def {\bfseries live\+\_\+server\+\_\+url} (cls)
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_afa5582cf948b5211099a911f0b8dcaa7}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_afa5582cf948b5211099a911f0b8dcaa7}} 
+def {\bfseries allowed\+\_\+host} (cls)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_afcad994c585f01c69a9263070c91a44a}{set\+Up\+Class}} (cls)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_aa304a2358a01201b04e4c81aeb54d8b0}{tear\+Down\+Class}} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a33c4772d264bef0f84581179ac32e41b}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a33c4772d264bef0f84581179ac32e41b}} 
+{\bfseries server\+\_\+thread}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_af13599afba3c74069c1edab0dad6333c}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_af13599afba3c74069c1edab0dad6333c}} 
+string {\bfseries host} = \textquotesingle{}localhost\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_af7df31713fdb78a83bedbedc7289d7ac}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_af7df31713fdb78a83bedbedc7289d7ac}} 
+int {\bfseries port} = 0
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_ac13c24c509e1831ab63540b101f52f93}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_ac13c24c509e1831ab63540b101f52f93}} 
+{\bfseries server\+\_\+thread\+\_\+class} = \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1_live_server_thread}{Live\+Server\+Thread}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a3388fce757b8d6f98bc65d6962a826f0}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_a3388fce757b8d6f98bc65d6962a826f0}} 
+{\bfseries static\+\_\+handler} = \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1___static_files_handler}{\+\_\+\+Static\+Files\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Do basically the same as TransactionTestCase but also launch a live HTTP
+server in a separate thread so that the tests may use another testing
+framework, such as Selenium for example, instead of the built-in dummy
+client.
+It inherits from TransactionTestCase instead of TestCase because the
+threads don't share the same transactions (unless if using in-memory sqlite)
+and each thread needs to commit all their transactions so that the other
+thread can see the changes.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_afcad994c585f01c69a9263070c91a44a}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_afcad994c585f01c69a9263070c91a44a}} 
+\index{django.test.testcases.LiveServerTestCase@{django.test.testcases.LiveServerTestCase}!setUpClass@{setUpClass}}
+\index{setUpClass@{setUpClass}!django.test.testcases.LiveServerTestCase@{django.test.testcases.LiveServerTestCase}}
+\doxysubsubsection{\texorpdfstring{setUpClass()}{setUpClass()}}
+{\footnotesize\ttfamily def django.\+test.\+testcases.\+Live\+Server\+Test\+Case.\+set\+Up\+Class (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1_simple_test_case}{django.\+test.\+testcases.\+Simple\+Test\+Case}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_aa304a2358a01201b04e4c81aeb54d8b0}\label{classdjango_1_1test_1_1testcases_1_1_live_server_test_case_aa304a2358a01201b04e4c81aeb54d8b0}} 
+\index{django.test.testcases.LiveServerTestCase@{django.test.testcases.LiveServerTestCase}!tearDownClass@{tearDownClass}}
+\index{tearDownClass@{tearDownClass}!django.test.testcases.LiveServerTestCase@{django.test.testcases.LiveServerTestCase}}
+\doxysubsubsection{\texorpdfstring{tearDownClass()}{tearDownClass()}}
+{\footnotesize\ttfamily def django.\+test.\+testcases.\+Live\+Server\+Test\+Case.\+tear\+Down\+Class (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1testcases_1_1_simple_test_case}{django.\+test.\+testcases.\+Simple\+Test\+Case}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/testcases.\+py\end{DoxyCompactItemize}

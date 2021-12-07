@@ -1,0 +1,121 @@
+\hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin}{}\doxysection{django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin Class Reference}
+\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin}\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+
+
+Inheritance diagram for django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a2dd2bbde8d843929b3af3056125586d7}{get\+\_\+object}} (self, queryset=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a7471c8ca174db55504da01b1a06cc5ba}{get\+\_\+queryset}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5db2e616971eeeec53524d8e55088016}{get\+\_\+slug\+\_\+field}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ac25d012a4c49012ebcd5e2054d811601}{get\+\_\+context\+\_\+object\+\_\+name}} (self, obj)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5ec8d3c5e41f62f8b8e3332f19f2629b}{get\+\_\+context\+\_\+data}} (self, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_aff5c9f4ff23c6e853eb39f449b617688}{model}} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a49ef41774f4a8f4b7b4f4b976cf744cc}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a49ef41774f4a8f4b7b4f4b976cf744cc}} 
+{\bfseries queryset} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ad158c055eb8e1088a724ef04f90569d2}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ad158c055eb8e1088a724ef04f90569d2}} 
+string {\bfseries slug\+\_\+field} = \textquotesingle{}slug\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ac3497a5bce7b565ebade3d010dbd7900}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ac3497a5bce7b565ebade3d010dbd7900}} 
+{\bfseries context\+\_\+object\+\_\+name} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a52a7dd0e0ffb9758a3258d6ab3c9997e}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a52a7dd0e0ffb9758a3258d6ab3c9997e}} 
+string {\bfseries slug\+\_\+url\+\_\+kwarg} = \textquotesingle{}slug\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a7514eed9c50c19d6e48a81faa6eee0dd}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a7514eed9c50c19d6e48a81faa6eee0dd}} 
+string {\bfseries pk\+\_\+url\+\_\+kwarg} = \textquotesingle{}pk\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ad243f4cc371db08cd877f6df3654191a}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ad243f4cc371db08cd877f6df3654191a}} 
+bool {\bfseries query\+\_\+pk\+\_\+and\+\_\+slug} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Provide the ability to retrieve a single object for further manipulation.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5ec8d3c5e41f62f8b8e3332f19f2629b}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5ec8d3c5e41f62f8b8e3332f19f2629b}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!get\_context\_data@{get\_context\_data}}
+\index{get\_context\_data@{get\_context\_data}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_context\_data()}{get\_context\_data()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+get\+\_\+context\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Insert the single object into the context dict.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1base_1_1_context_mixin}{django.\+views.\+generic.\+base.\+Context\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ac25d012a4c49012ebcd5e2054d811601}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_ac25d012a4c49012ebcd5e2054d811601}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!get\_context\_object\_name@{get\_context\_object\_name}}
+\index{get\_context\_object\_name@{get\_context\_object\_name}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_context\_object\_name()}{get\_context\_object\_name()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+get\+\_\+context\+\_\+object\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the name to use for the object.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a2dd2bbde8d843929b3af3056125586d7}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a2dd2bbde8d843929b3af3056125586d7}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!get\_object@{get\_object}}
+\index{get\_object@{get\_object}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_object()}{get\_object()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+get\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{queryset = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the object the view is displaying.
+
+Require `self.queryset` and a `pk` or `slug` argument in the URLconf.
+Subclasses can override this to return any object.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_detail_view_a32d05a2df829a53a3423b48d22d56845}{django.\+views.\+generic.\+dates.\+Base\+Date\+Detail\+View}}.
+
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a7471c8ca174db55504da01b1a06cc5ba}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a7471c8ca174db55504da01b1a06cc5ba}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!get\_queryset@{get\_queryset}}
+\index{get\_queryset@{get\_queryset}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_queryset()}{get\_queryset()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+get\+\_\+queryset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the `QuerySet` that will be used to look up the object.
+
+This method is called by the default implementation of get_object() and
+may not be called if get_object() is overridden.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5db2e616971eeeec53524d8e55088016}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_a5db2e616971eeeec53524d8e55088016}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!get\_slug\_field@{get\_slug\_field}}
+\index{get\_slug\_field@{get\_slug\_field}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{get\_slug\_field()}{get\_slug\_field()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+get\+\_\+slug\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the name of a slug field to be used to look up by slug.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_aff5c9f4ff23c6e853eb39f449b617688}\label{classdjango_1_1views_1_1generic_1_1detail_1_1_single_object_mixin_aff5c9f4ff23c6e853eb39f449b617688}} 
+\index{django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}!model@{model}}
+\index{model@{model}!django.views.generic.detail.SingleObjectMixin@{django.views.generic.detail.SingleObjectMixin}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily django.\+views.\+generic.\+detail.\+Single\+Object\+Mixin.\+model = None\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Provide the ability to retrieve a single object for further manipulation.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/views/generic/detail.\+py\end{DoxyCompactItemize}

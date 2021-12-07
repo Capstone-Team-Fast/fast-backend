@@ -1,0 +1,40 @@
+\hypertarget{namespacedjango_1_1urls_1_1resolvers}{}\doxysection{django.\+urls.\+resolvers Namespace Reference}
+\label{namespacedjango_1_1urls_1_1resolvers}\index{django.urls.resolvers@{django.urls.resolvers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_check_u_r_l_mixin}{Check\+URLMixin}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_locale_prefix_pattern}{Locale\+Prefix\+Pattern}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_locale_regex_descriptor}{Locale\+Regex\+Descriptor}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_regex_pattern}{Regex\+Pattern}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_resolver_match}{Resolver\+Match}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_route_pattern}{Route\+Pattern}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_u_r_l_pattern}{URLPattern}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1urls_1_1resolvers_1_1_u_r_l_resolver}{URLResolver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1urls_1_1resolvers_a78a6306723ad53575239d829deea3cca}\label{namespacedjango_1_1urls_1_1resolvers_a78a6306723ad53575239d829deea3cca}} 
+def {\bfseries get\+\_\+resolver} (urlconf=None)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1urls_1_1resolvers_a37a27c3c2051de2824ade4e6fbb03a43}\label{namespacedjango_1_1urls_1_1resolvers_a37a27c3c2051de2824ade4e6fbb03a43}} 
+def {\bfseries get\+\_\+ns\+\_\+resolver} (ns\+\_\+pattern, resolver, converters)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This module converts requested URLs to callback view functions.
+
+URLResolver is the main class here. Its resolve() method takes a URL (as
+a string) and returns a ResolverMatch object which provides access to all
+attributes of the resolved URL match.
+\end{DoxyVerb}
+ 

@@ -1,0 +1,45 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal}{}\doxysection{django.\+contrib.\+gis.\+gdal Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1gdal}\index{django.contrib.gis.gdal@{django.contrib.gis.gdal}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1datasource}{datasource}}
+\item 
+namespace \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1envelope}{envelope}}
+\item 
+namespace \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error}{error}}
+\item 
+namespace \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1geometries}{geometries}}
+\item 
+namespace \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1srs}{srs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} This module houses ctypes interfaces for GDAL objects.  The following GDAL
+ objects are supported:
+
+ CoordTransform: Used for coordinate transformations from one spatial
+  reference system to another.
+
+ Driver: Wraps an OGR data source driver.
+
+ DataSource: Wrapper for the OGR data source object, supports
+  OGR-supported data sources.
+
+ Envelope: A ctypes structure for bounding boxes (GDAL library
+  not required).
+
+ OGRGeometry: Object for accessing OGR Geometry functionality.
+
+ OGRGeomType: A class for representing the different OGR Geometry
+  types (GDAL library not required).
+
+ SpatialReference: Represents OSR Spatial Reference objects.
+
+ The GDAL library will be imported from the system path using the default
+ library name for the current OS. The default library path may be overridden
+ by setting `GDAL_LIBRARY_PATH` in your settings with the path to the GDAL C
+ library on your system.
+\end{DoxyVerb}
+ 

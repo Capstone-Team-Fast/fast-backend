@@ -1,10 +1,10 @@
 import json
-import os
 from abc import ABC
 from urllib.parse import quote
 
 import requests
 
+from backend import settings
 from routing.exceptions import GeocodeError, MatrixServiceError
 from routing.models.location import Address
 
@@ -18,7 +18,7 @@ class GeocodeService(ABC):
 
 class BingGeocodeService(GeocodeService):
     __DEFAULT_URL = 'http://dev.virtualearth.net/REST/v1/Locations'
-    __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
+    __API_KEY = settings.BING_MAPS_API_KEY
 
     @staticmethod
     def get_geocode(address: Address, payload=None, headers=None):
@@ -27,7 +27,7 @@ class BingGeocodeService(GeocodeService):
         if headers is None:
             headers = {}
         response = BingGeocodeService.__request_geocode(location=address, payload=payload, headers=headers)
-        return BingGeocodeService.__get_coordinates(response)
+        return BingGeocodeService.__get_coordinates(response, address)
 
     @staticmethod
     def __request_geocode(location: Address, payload=None, headers=None):
@@ -46,21 +46,39 @@ class BingGeocodeService(GeocodeService):
         return response.json()
 
     @staticmethod
-    def __get_coordinates(response: dict):
+    def __get_coordinates(response: dict, address: Address):
         if 'resourceSets' in response.keys():
             resource_sets = response['resourceSets'][0] if len(response['resourceSets']) > 0 else None
             if resource_sets and 'resources' in resource_sets:
                 resources = resource_sets['resources'][0] if len(resource_sets['resources']) > 0 else None
-                if resources and 'point' in resources.keys():
-                    point = resources['point'] if len(resources['point']) > 0 else None
-                    if point and 'coordinates' in point.keys():
-                        coordinates = point['coordinates']
-                        if coordinates[0] < -90 or coordinates[0] > 90:
-                            raise GeocodeError('Latitude must be between -90 and 90')
-                        if coordinates[1] < -180 or coordinates[1] > 180:
-                            raise GeocodeError('Longitude must be between -180 and 180')
-                        return coordinates[0], coordinates[1]
+                if resources and resources.get('address'):
+                    address_response = resources.get('address')
+                    if BingGeocodeService.__validate_geocode(address_response, address):
+                        if resources and 'point' in resources.keys():
+                            point = resources['point'] if len(resources['point']) > 0 else None
+                            if point and 'coordinates' in point.keys():
+                                coordinates = point['coordinates']
+                                if coordinates[0] < -90 or coordinates[0] > 90:
+                                    raise GeocodeError('Latitude must be between -90 and 90')
+                                if coordinates[1] < -180 or coordinates[1] > 180:
+                                    raise GeocodeError('Longitude must be between -180 and 180')
+                                return coordinates[0], coordinates[1]
+                    raise GeocodeError('Invalid Geocode')
         raise GeocodeError('API Error')
+
+    @staticmethod
+    def __validate_geocode(address_response: dict, address: Address):
+        condition1 = (
+                address_response.get('locality') is not None and address_response.get('postalCode') is not None
+                and address_response.get('countryRegion') is not None
+        )
+        condition2 = (
+                address_response.get('locality').lower() == address.city.lower()
+                and int(address_response.get('postalCode')) == address.zipcode
+                and address_response.get('countryRegion').lower() == 'United States'.lower()
+        )
+
+        return condition1 and condition2
 
 
 class MatrixService(ABC):
@@ -79,7 +97,7 @@ class BingMatrixService(MatrixService):
     This class defines the logic for retrieving distance and duration matrices of a list of locations.
     """
     __DEFAULT_URL = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix'
-    __API_KEY = os.environ.get('BING_MAPS_API_KEY', os.environ['BING_MAPS_API_KEY'])
+    __API_KEY = settings.BING_MAPS_API_KEY
     __duration_matrix = []
     __distance_matrix = []
 
@@ -94,11 +112,15 @@ class BingMatrixService(MatrixService):
             start = node_set[0]
 
         if start.latitude is None or start.longitude is None:
-            start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
-            start = start.save()
+            try:
+                start.latitude, start.longitude = BingGeocodeService.get_geocode(start)
+                start = start.save()
+            except GeocodeError as err:
+                raise err
 
-        url = '{BASE_URL}?key={API_KEY}'.format(BASE_URL=BingMatrixService.__DEFAULT_URL,
-                                                API_KEY=BingMatrixService.__API_KEY)
+        url = '{BASE_URL}?key={API_KEY}&distanceUnit={DISTANCE_UNIT}'.format(BASE_URL=BingMatrixService.__DEFAULT_URL,
+                                                                             API_KEY=BingMatrixService.__API_KEY,
+                                                                             DISTANCE_UNIT='mi')
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
@@ -119,8 +141,11 @@ class BingMatrixService(MatrixService):
 
                     if address.latitude is None or address.longitude is None:
                         print(f'\nRetrieving geocode for address {address}\n')
-                        address.latitude, address.longitude = BingGeocodeService.get_geocode(address)
-                        address.save()
+                        try:
+                            address.latitude, address.longitude = BingGeocodeService.get_geocode(address)
+                            address.save()
+                        except GeocodeError as err:
+                            raise err
                     if address != start and start.neighbor.relationship(address) is None:
                         destinations.append({'latitude': address.latitude, 'longitude': address.longitude})
 

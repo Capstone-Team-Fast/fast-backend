@@ -1,0 +1,124 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper}{}\doxysection{django.\+db.\+models.\+expressions.\+Expression\+Wrapper Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper}\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Expression\+Wrapper\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Expression\+Wrapper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a52005eeb47f228165d614716bac014dc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expression, output\+\_\+field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ac486fdd9b74fef5fef6cd9dab9422ac1}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_aaf918e0158219e225d53e591558248ff}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ab47ecfc9886dfd1787c85cc85bd16d3c}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a66c010c6b7f285aec9a107dd409c119b}{as\+\_\+sql}} (self, compiler, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ada36aa97a67588b3dbce944df5bbe1f4}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ada36aa97a67588b3dbce944df5bbe1f4}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a340fc95b8a2752c0968e9edeabd57471}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a340fc95b8a2752c0968e9edeabd57471}} 
+{\bfseries expression}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An expression that can wrap another expression so that it can provide
+extra context to the inner expression, such as the output_field.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a52005eeb47f228165d614716bac014dc}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a52005eeb47f228165d614716bac014dc}} 
+\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Expression\+Wrapper.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression,  }\item[{}]{output\+\_\+field }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a66c010c6b7f285aec9a107dd409c119b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_a66c010c6b7f285aec9a107dd409c119b}} 
+\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Expression\+Wrapper.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ab47ecfc9886dfd1787c85cc85bd16d3c}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ab47ecfc9886dfd1787c85cc85bd16d3c}} 
+\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Expression\+Wrapper.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_aaf918e0158219e225d53e591558248ff}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_aaf918e0158219e225d53e591558248ff}} 
+\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Expression\+Wrapper.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ac486fdd9b74fef5fef6cd9dab9422ac1}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_wrapper_ac486fdd9b74fef5fef6cd9dab9422ac1}} 
+\index{django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.expressions.ExpressionWrapper@{django.db.models.expressions.ExpressionWrapper}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Expression\+Wrapper.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

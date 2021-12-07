@@ -1,0 +1,60 @@
+\hypertarget{namespacesetuptools_1_1monkey}{}\doxysection{setuptools.\+monkey Namespace Reference}
+\label{namespacesetuptools_1_1monkey}\index{setuptools.monkey@{setuptools.monkey}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1monkey_aca0a412fd577e44c2a0d0847019103db}\label{namespacesetuptools_1_1monkey_aca0a412fd577e44c2a0d0847019103db}} 
+def {\bfseries get\+\_\+unpatched} (item)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1monkey_ad46b685f3cc7245cde194b4b7831b38a}{get\+\_\+unpatched\+\_\+class}} (cls)
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1monkey_a593eccd6bead483dc9479ed13d1c4f16}\label{namespacesetuptools_1_1monkey_a593eccd6bead483dc9479ed13d1c4f16}} 
+def {\bfseries patch\+\_\+all} ()
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1monkey_ac6c1bb45a1d90ebcaf099ada0682616b}{patch\+\_\+func}} (replacement, target\+\_\+mod, func\+\_\+name)
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1monkey_a394451d3a77b5f2ff32bc108d7b677d4}\label{namespacesetuptools_1_1monkey_a394451d3a77b5f2ff32bc108d7b677d4}} 
+def {\bfseries get\+\_\+unpatched\+\_\+function} (candidate)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1monkey_a496bc1769e481213444b1d53185b1b89}{patch\+\_\+for\+\_\+msvc\+\_\+specialized\+\_\+compiler}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Monkey patching of distutils.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1monkey_ad46b685f3cc7245cde194b4b7831b38a}\label{namespacesetuptools_1_1monkey_ad46b685f3cc7245cde194b4b7831b38a}} 
+\index{setuptools.monkey@{setuptools.monkey}!get\_unpatched\_class@{get\_unpatched\_class}}
+\index{get\_unpatched\_class@{get\_unpatched\_class}!setuptools.monkey@{setuptools.monkey}}
+\doxysubsubsection{\texorpdfstring{get\_unpatched\_class()}{get\_unpatched\_class()}}
+{\footnotesize\ttfamily def setuptools.\+monkey.\+get\+\_\+unpatched\+\_\+class (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Protect against re-patching the distutils if reloaded
+
+Also ensures that no other distutils extension monkeypatched the distutils
+first.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1monkey_a496bc1769e481213444b1d53185b1b89}\label{namespacesetuptools_1_1monkey_a496bc1769e481213444b1d53185b1b89}} 
+\index{setuptools.monkey@{setuptools.monkey}!patch\_for\_msvc\_specialized\_compiler@{patch\_for\_msvc\_specialized\_compiler}}
+\index{patch\_for\_msvc\_specialized\_compiler@{patch\_for\_msvc\_specialized\_compiler}!setuptools.monkey@{setuptools.monkey}}
+\doxysubsubsection{\texorpdfstring{patch\_for\_msvc\_specialized\_compiler()}{patch\_for\_msvc\_specialized\_compiler()}}
+{\footnotesize\ttfamily def setuptools.\+monkey.\+patch\+\_\+for\+\_\+msvc\+\_\+specialized\+\_\+compiler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Patch functions in distutils to use standalone Microsoft Visual C++
+compilers.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1monkey_ac6c1bb45a1d90ebcaf099ada0682616b}\label{namespacesetuptools_1_1monkey_ac6c1bb45a1d90ebcaf099ada0682616b}} 
+\index{setuptools.monkey@{setuptools.monkey}!patch\_func@{patch\_func}}
+\index{patch\_func@{patch\_func}!setuptools.monkey@{setuptools.monkey}}
+\doxysubsubsection{\texorpdfstring{patch\_func()}{patch\_func()}}
+{\footnotesize\ttfamily def setuptools.\+monkey.\+patch\+\_\+func (\begin{DoxyParamCaption}\item[{}]{replacement,  }\item[{}]{target\+\_\+mod,  }\item[{}]{func\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Patch func_name in target_mod with replacement
+
+Important - original must be resolved by name to avoid
+patching an already patched function.
+\end{DoxyVerb}
+ 

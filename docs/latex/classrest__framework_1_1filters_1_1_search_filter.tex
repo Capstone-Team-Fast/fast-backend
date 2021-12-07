@@ -1,0 +1,134 @@
+\hypertarget{classrest__framework_1_1filters_1_1_search_filter}{}\doxysection{rest\+\_\+framework.\+filters.\+Search\+Filter Class Reference}
+\label{classrest__framework_1_1filters_1_1_search_filter}\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+filters.\+Search\+Filter\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+filters.\+Search\+Filter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a09d13aa808ece39934891954c4443680}{get\+\_\+search\+\_\+fields}} (self, view, request)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a2c628ee3f493f3fbd332581959af28f0}{get\+\_\+search\+\_\+terms}} (self, request)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a85a8bd8e7ed53cb60db747aeb9e99ad2}\label{classrest__framework_1_1filters_1_1_search_filter_a85a8bd8e7ed53cb60db747aeb9e99ad2}} 
+def {\bfseries construct\+\_\+search} (self, field\+\_\+name)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a048c71d46110fd10c43b40ffcc6cb791}{must\+\_\+call\+\_\+distinct}} (self, queryset, search\+\_\+fields)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a66840fcc3a7bec1fd02d4f13c945bbe3}{filter\+\_\+queryset}} (self, request, queryset, view)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_ada828133607fe79029ea24120c5c06b3}\label{classrest__framework_1_1filters_1_1_search_filter_ada828133607fe79029ea24120c5c06b3}} 
+def {\bfseries to\+\_\+html} (self, request, queryset, view)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a6269844d44475ad2ac010909d0ddfa1d}{get\+\_\+schema\+\_\+fields}} (self, view)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a40164348d3610f621337fe473cc7272c}{get\+\_\+schema\+\_\+operation\+\_\+parameters}} (self, view)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a0c05b964acdf9938ee52de5454d9884c}\label{classrest__framework_1_1filters_1_1_search_filter_a0c05b964acdf9938ee52de5454d9884c}} 
+{\bfseries search\+\_\+param} = api\+\_\+settings.\+SEARCH\+\_\+\+PARAM
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a68159b472ca805b4f7c0c2a098a175e0}\label{classrest__framework_1_1filters_1_1_search_filter_a68159b472ca805b4f7c0c2a098a175e0}} 
+string {\bfseries template} = \textquotesingle{}rest\+\_\+framework/filters/search.\+html\textquotesingle{}
+\item 
+dictionary \mbox{\hyperlink{classrest__framework_1_1filters_1_1_search_filter_a574f465d8e7d5164b28ccd25948882e7}{lookup\+\_\+prefixes}}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_aa201753592f36b0b506d052cb74fa7c3}\label{classrest__framework_1_1filters_1_1_search_filter_aa201753592f36b0b506d052cb74fa7c3}} 
+{\bfseries search\+\_\+title} = \+\_\+(\textquotesingle{}Search\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a31f36dbee1c1e7d0cf7693a4924b7295}\label{classrest__framework_1_1filters_1_1_search_filter_a31f36dbee1c1e7d0cf7693a4924b7295}} 
+{\bfseries search\+\_\+description} = \+\_\+(\textquotesingle{}A search term.\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a66840fcc3a7bec1fd02d4f13c945bbe3}\label{classrest__framework_1_1filters_1_1_search_filter_a66840fcc3a7bec1fd02d4f13c945bbe3}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!filter\_queryset@{filter\_queryset}}
+\index{filter\_queryset@{filter\_queryset}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{filter\_queryset()}{filter\_queryset()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+filter\+\_\+queryset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{queryset,  }\item[{}]{view }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a filtered queryset.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1filters_1_1_base_filter_backend_aa4bdead40d84dfae0625253eec6ead8a}{rest\+\_\+framework.\+filters.\+Base\+Filter\+Backend}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a6269844d44475ad2ac010909d0ddfa1d}\label{classrest__framework_1_1filters_1_1_search_filter_a6269844d44475ad2ac010909d0ddfa1d}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!get\_schema\_fields@{get\_schema\_fields}}
+\index{get\_schema\_fields@{get\_schema\_fields}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{get\_schema\_fields()}{get\_schema\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+get\+\_\+schema\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{view }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1filters_1_1_base_filter_backend}{rest\+\_\+framework.\+filters.\+Base\+Filter\+Backend}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a40164348d3610f621337fe473cc7272c}\label{classrest__framework_1_1filters_1_1_search_filter_a40164348d3610f621337fe473cc7272c}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!get\_schema\_operation\_parameters@{get\_schema\_operation\_parameters}}
+\index{get\_schema\_operation\_parameters@{get\_schema\_operation\_parameters}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{get\_schema\_operation\_parameters()}{get\_schema\_operation\_parameters()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+get\+\_\+schema\+\_\+operation\+\_\+parameters (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{view }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1filters_1_1_base_filter_backend}{rest\+\_\+framework.\+filters.\+Base\+Filter\+Backend}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a09d13aa808ece39934891954c4443680}\label{classrest__framework_1_1filters_1_1_search_filter_a09d13aa808ece39934891954c4443680}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!get\_search\_fields@{get\_search\_fields}}
+\index{get\_search\_fields@{get\_search\_fields}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{get\_search\_fields()}{get\_search\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+get\+\_\+search\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{view,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Search fields are obtained from the view, but the request is always
+passed to this method. Sub-classes can override this method to
+dynamically change the search fields based on request content.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a2c628ee3f493f3fbd332581959af28f0}\label{classrest__framework_1_1filters_1_1_search_filter_a2c628ee3f493f3fbd332581959af28f0}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!get\_search\_terms@{get\_search\_terms}}
+\index{get\_search\_terms@{get\_search\_terms}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{get\_search\_terms()}{get\_search\_terms()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+get\+\_\+search\+\_\+terms (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Search terms are set by a ?search=... query parameter,
+and may be comma and/or whitespace delimited.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a048c71d46110fd10c43b40ffcc6cb791}\label{classrest__framework_1_1filters_1_1_search_filter_a048c71d46110fd10c43b40ffcc6cb791}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!must\_call\_distinct@{must\_call\_distinct}}
+\index{must\_call\_distinct@{must\_call\_distinct}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{must\_call\_distinct()}{must\_call\_distinct()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+filters.\+Search\+Filter.\+must\+\_\+call\+\_\+distinct (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{queryset,  }\item[{}]{search\+\_\+fields }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if 'distinct()' should be used to query the given lookups.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1filters_1_1_search_filter_a574f465d8e7d5164b28ccd25948882e7}\label{classrest__framework_1_1filters_1_1_search_filter_a574f465d8e7d5164b28ccd25948882e7}} 
+\index{rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}!lookup\_prefixes@{lookup\_prefixes}}
+\index{lookup\_prefixes@{lookup\_prefixes}!rest\_framework.filters.SearchFilter@{rest\_framework.filters.SearchFilter}}
+\doxysubsubsection{\texorpdfstring{lookup\_prefixes}{lookup\_prefixes}}
+{\footnotesize\ttfamily dictionary rest\+\_\+framework.\+filters.\+Search\+Filter.\+lookup\+\_\+prefixes\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'\string^'}: \textcolor{stringliteral}{'istartswith'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'='}: \textcolor{stringliteral}{'iexact'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'@'}: \textcolor{stringliteral}{'search'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'\$'}: \textcolor{stringliteral}{'iregex'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/filters.\+py\end{DoxyCompactItemize}

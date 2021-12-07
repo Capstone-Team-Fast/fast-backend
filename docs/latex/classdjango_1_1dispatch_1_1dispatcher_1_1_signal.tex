@@ -1,0 +1,179 @@
+\hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal}{}\doxysection{django.\+dispatch.\+dispatcher.\+Signal Class Reference}
+\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal}\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+
+
+Inheritance diagram for django.\+dispatch.\+dispatcher.\+Signal\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_aba36b6e7b2d06d3383f059ba09824244}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, providing\+\_\+args=None, use\+\_\+caching=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af13c4c74992404e5e66f4660172c6811}{connect}} (self, receiver, sender=None, weak=True, dispatch\+\_\+uid=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af2b159ce7e9da0a3fff3501a4c07097a}{disconnect}} (self, receiver=None, sender=None, dispatch\+\_\+uid=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_ac886dbff024601b447a205887cb24b65}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_ac886dbff024601b447a205887cb24b65}} 
+def {\bfseries has\+\_\+listeners} (self, sender=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a07a0ab4d36f331ee1b1472be7d18472d}{send}} (self, sender, $\ast$$\ast$named)
+\item 
+def \mbox{\hyperlink{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a8a710435a7d585b7cafb996fdb3ffefe}{send\+\_\+robust}} (self, sender, $\ast$$\ast$named)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a9ef7fff70b476c5f2471b328f0a15902}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a9ef7fff70b476c5f2471b328f0a15902}} 
+{\bfseries receivers}
+\item 
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_aeabc4f2254f8bca93cce95a8f21f52dc}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_aeabc4f2254f8bca93cce95a8f21f52dc}} 
+{\bfseries lock}
+\item 
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_ad181bd2eb061a79b02183f0ad046db6c}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_ad181bd2eb061a79b02183f0ad046db6c}} 
+{\bfseries use\+\_\+caching}
+\item 
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a428362c380c07294d5e34b2d99ba6fe9}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a428362c380c07294d5e34b2d99ba6fe9}} 
+{\bfseries sender\+\_\+receivers\+\_\+cache}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for all signals
+
+Internal attributes:
+
+    receivers
+        { receiverkey (id) : weakref(receiver) }
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_aba36b6e7b2d06d3383f059ba09824244}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_aba36b6e7b2d06d3383f059ba09824244}} 
+\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+dispatch.\+dispatcher.\+Signal.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{providing\+\_\+args = {\ttfamily None},  }\item[{}]{use\+\_\+caching = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a new signal.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af13c4c74992404e5e66f4660172c6811}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af13c4c74992404e5e66f4660172c6811}} 
+\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}!connect@{connect}}
+\index{connect@{connect}!django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily def django.\+dispatch.\+dispatcher.\+Signal.\+connect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{receiver,  }\item[{}]{sender = {\ttfamily None},  }\item[{}]{weak = {\ttfamily True},  }\item[{}]{dispatch\+\_\+uid = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Connect receiver to sender for signal.
+
+Arguments:
+
+    receiver
+        A function or an instance method which is to receive signals.
+        Receivers must be hashable objects.
+
+        If weak is True, then receiver must be weak referenceable.
+
+        Receivers must be able to accept keyword arguments.
+
+        If a receiver is connected with a dispatch_uid argument, it
+        will not be added if another receiver was already connected
+        with that dispatch_uid.
+
+    sender
+        The sender to which the receiver should respond. Must either be
+        a Python object, or None to receive events from any sender.
+
+    weak
+        Whether to use weak references to the receiver. By default, the
+        module will attempt to use weak references to the receiver
+        objects. If this parameter is false, then strong references will
+        be used.
+
+    dispatch_uid
+        An identifier used to uniquely identify a particular instance of
+        a receiver. This will usually be a string, though it may be
+        anything hashable.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_abf54fb0b53faee8a34d2e85cebacbd17}{django.\+db.\+models.\+signals.\+Model\+Signal}}.
+
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af2b159ce7e9da0a3fff3501a4c07097a}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_af2b159ce7e9da0a3fff3501a4c07097a}} 
+\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily def django.\+dispatch.\+dispatcher.\+Signal.\+disconnect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{receiver = {\ttfamily None},  }\item[{}]{sender = {\ttfamily None},  }\item[{}]{dispatch\+\_\+uid = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Disconnect receiver from sender for signal.
+
+If weak references are used, disconnect need not be called. The receiver
+will be removed from dispatch automatically.
+
+Arguments:
+
+    receiver
+        The registered receiver to disconnect. May be none if
+        dispatch_uid is specified.
+
+    sender
+        The registered sender to disconnect
+
+    dispatch_uid
+        the unique identifier of the receiver to disconnect
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1signals_1_1_model_signal_acc7c785c7909eeb49446deb75270f94e}{django.\+db.\+models.\+signals.\+Model\+Signal}}.
+
+\mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a07a0ab4d36f331ee1b1472be7d18472d}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a07a0ab4d36f331ee1b1472be7d18472d}} 
+\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}!send@{send}}
+\index{send@{send}!django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def django.\+dispatch.\+dispatcher.\+Signal.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sender,  }\item[{$\ast$$\ast$}]{named }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send signal from sender to all connected receivers.
+
+If any receiver raises an error, the error propagates back through send,
+terminating the dispatch loop. So it's possible that all receivers
+won't be called if an error is raised.
+
+Arguments:
+
+    sender
+        The sender of the signal. Either a specific object or None.
+
+    named
+        Named arguments which will be passed to receivers.
+
+Return a list of tuple pairs [(receiver, response), ... ].
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a8a710435a7d585b7cafb996fdb3ffefe}\label{classdjango_1_1dispatch_1_1dispatcher_1_1_signal_a8a710435a7d585b7cafb996fdb3ffefe}} 
+\index{django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}!send\_robust@{send\_robust}}
+\index{send\_robust@{send\_robust}!django.dispatch.dispatcher.Signal@{django.dispatch.dispatcher.Signal}}
+\doxysubsubsection{\texorpdfstring{send\_robust()}{send\_robust()}}
+{\footnotesize\ttfamily def django.\+dispatch.\+dispatcher.\+Signal.\+send\+\_\+robust (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sender,  }\item[{$\ast$$\ast$}]{named }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send signal from sender to all connected receivers catching errors.
+
+Arguments:
+
+    sender
+        The sender of the signal. Can be any Python object (normally one
+        registered with a connect if you actually want something to
+        occur).
+
+    named
+        Named arguments which will be passed to receivers.
+
+Return a list of tuple pairs [(receiver, response), ... ].
+
+If any receiver raises an error (specifically any subclass of
+Exception), return the error instance as the result for that receiver.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/dispatch/dispatcher.\+py\end{DoxyCompactItemize}

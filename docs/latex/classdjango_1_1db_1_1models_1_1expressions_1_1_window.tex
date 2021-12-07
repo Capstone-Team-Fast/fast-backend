@@ -1,0 +1,156 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window}{}\doxysection{django.\+db.\+models.\+expressions.\+Window Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window}\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+Window\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Window\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aa9a9a5f2f287a2418f5f3d6baf997783}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expression, partition\+\_\+by=None, order\+\_\+by=None, frame=None, output\+\_\+field=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a640ec00395ed746d70f30b69ff3969ac}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a7d6a7a81fd97a2f8e0e9d3f88212be1a}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a2a81a422e2884ef2026394b0f83416dc}{as\+\_\+sql}} (self, compiler, connection, template=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_adde0cb9753f74e1be3186a25d3898a39}{as\+\_\+sqlite}} (self, compiler, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a417bcf366e4e653a619af4944251449a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a417bcf366e4e653a619af4944251449a}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aa0546666e21ce6e22796118ecb4952c7}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aa0546666e21ce6e22796118ecb4952c7}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a9c7454c2c867bed1322bb313dfd1137c}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aca8cb30fcd9519f06dd38f53fd6a433b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aca8cb30fcd9519f06dd38f53fd6a433b}} 
+{\bfseries partition\+\_\+by}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a8179e2277020e89c512657b1e5f90a8a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a8179e2277020e89c512657b1e5f90a8a}} 
+{\bfseries order\+\_\+by}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a82cc65eb8833b5fa8d43b83be09f2726}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a82cc65eb8833b5fa8d43b83be09f2726}} 
+{\bfseries frame}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a96bec1c25e32fd7192a7f0c8e153a240}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a96bec1c25e32fd7192a7f0c8e153a240}} 
+{\bfseries source\+\_\+expression}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_af1f4b66951a9d9a63e8f7fef15683f42}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_af1f4b66951a9d9a63e8f7fef15683f42}} 
+string {\bfseries template} = \textquotesingle{}\%(expression)s OVER (\%(window)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a051eb50349176330cb64d02a227c770d}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a051eb50349176330cb64d02a227c770d}} 
+bool {\bfseries contains\+\_\+aggregate} = False
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a81fd37d943230bb8e551c46ab5cc778a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a81fd37d943230bb8e551c46ab5cc778a}} 
+bool {\bfseries contains\+\_\+over\+\_\+clause} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a44ec0a575b2eb3e2445dc91e306e378c}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a44ec0a575b2eb3e2445dc91e306e378c}} 
+bool {\bfseries filterable} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aa9a9a5f2f287a2418f5f3d6baf997783}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_aa9a9a5f2f287a2418f5f3d6baf997783}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expression,  }\item[{}]{partition\+\_\+by = {\ttfamily None},  }\item[{}]{order\+\_\+by = {\ttfamily None},  }\item[{}]{frame = {\ttfamily None},  }\item[{}]{output\+\_\+field = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a2a81a422e2884ef2026394b0f83416dc}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a2a81a422e2884ef2026394b0f83416dc}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{}]{template = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_adde0cb9753f74e1be3186a25d3898a39}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_adde0cb9753f74e1be3186a25d3898a39}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!as\_sqlite@{as\_sqlite}}
+\index{as\_sqlite@{as\_sqlite}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{as\_sqlite()}{as\_sqlite()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+as\+\_\+sqlite (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_s_q_lite_numeric_mixin}{django.\+db.\+models.\+expressions.\+SQLite\+Numeric\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a9c7454c2c867bed1322bb313dfd1137c}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a9c7454c2c867bed1322bb313dfd1137c}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a640ec00395ed746d70f30b69ff3969ac}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a640ec00395ed746d70f30b69ff3969ac}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a7d6a7a81fd97a2f8e0e9d3f88212be1a}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_window_a7d6a7a81fd97a2f8e0e9d3f88212be1a}} 
+\index{django.db.models.expressions.Window@{django.db.models.expressions.Window}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.expressions.Window@{django.db.models.expressions.Window}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Window.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

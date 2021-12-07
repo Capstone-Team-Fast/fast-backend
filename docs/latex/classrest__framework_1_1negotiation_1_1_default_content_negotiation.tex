@@ -1,0 +1,79 @@
+\hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation}{}\doxysection{rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation Class Reference}
+\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation}\index{rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a223e2bf2a59d1087155b01e236eee003}{select\+\_\+parser}} (self, request, parsers)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_default_content_negotiation_acd9b61f5b4a5539720535080b1468d71}{select\+\_\+renderer}} (self, request, renderers, format\+\_\+suffix=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a6a34d6930636ffd5a48440f241bde779}{filter\+\_\+renderers}} (self, renderers, format)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a82b9f9fb1d62aaf9438cbd7f21531012}{get\+\_\+accept\+\_\+list}} (self, request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a6de8c80f358e07fa72e04ba2eb9d8584}\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a6de8c80f358e07fa72e04ba2eb9d8584}} 
+{\bfseries settings} = api\+\_\+settings
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a6a34d6930636ffd5a48440f241bde779}\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a6a34d6930636ffd5a48440f241bde779}} 
+\index{rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}!filter\_renderers@{filter\_renderers}}
+\index{filter\_renderers@{filter\_renderers}!rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}}
+\doxysubsubsection{\texorpdfstring{filter\_renderers()}{filter\_renderers()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation.\+filter\+\_\+renderers (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{renderers,  }\item[{}]{format }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If there is a '.json' style format suffix, filter the renderers
+so that we only negotiation against those that accept that format.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a82b9f9fb1d62aaf9438cbd7f21531012}\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a82b9f9fb1d62aaf9438cbd7f21531012}} 
+\index{rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}!get\_accept\_list@{get\_accept\_list}}
+\index{get\_accept\_list@{get\_accept\_list}!rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}}
+\doxysubsubsection{\texorpdfstring{get\_accept\_list()}{get\_accept\_list()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation.\+get\+\_\+accept\+\_\+list (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given the incoming request, return a tokenized list of media
+type strings.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a223e2bf2a59d1087155b01e236eee003}\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation_a223e2bf2a59d1087155b01e236eee003}} 
+\index{rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}!select\_parser@{select\_parser}}
+\index{select\_parser@{select\_parser}!rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}}
+\doxysubsubsection{\texorpdfstring{select\_parser()}{select\_parser()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation.\+select\+\_\+parser (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{parsers }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a list of parsers and a media type, return the appropriate
+parser to handle the incoming request.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_base_content_negotiation}{rest\+\_\+framework.\+negotiation.\+Base\+Content\+Negotiation}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1negotiation_1_1_default_content_negotiation_acd9b61f5b4a5539720535080b1468d71}\label{classrest__framework_1_1negotiation_1_1_default_content_negotiation_acd9b61f5b4a5539720535080b1468d71}} 
+\index{rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}!select\_renderer@{select\_renderer}}
+\index{select\_renderer@{select\_renderer}!rest\_framework.negotiation.DefaultContentNegotiation@{rest\_framework.negotiation.DefaultContentNegotiation}}
+\doxysubsubsection{\texorpdfstring{select\_renderer()}{select\_renderer()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+negotiation.\+Default\+Content\+Negotiation.\+select\+\_\+renderer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{renderers,  }\item[{}]{format\+\_\+suffix = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a request and a list of renderers, return a two-tuple of:
+(renderer, media type).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1negotiation_1_1_base_content_negotiation}{rest\+\_\+framework.\+negotiation.\+Base\+Content\+Negotiation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/negotiation.\+py\end{DoxyCompactItemize}

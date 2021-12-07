@@ -1,0 +1,75 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin}{}\doxysection{django.\+contrib.\+auth.\+mixins.\+Access\+Mixin Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin}\index{django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+mixins.\+Access\+Mixin\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+mixins.\+Access\+Mixin\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a809d11be83e8147b6b6b6fedb8318ef6}{get\+\_\+login\+\_\+url}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_af50eab0d73f78c49d433dc770e157bbf}{get\+\_\+permission\+\_\+denied\+\_\+message}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_abf988b609f1e927ea5b7ef262466b6ca}{get\+\_\+redirect\+\_\+field\+\_\+name}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_abd3b8d31ab32897ab2c1c32e70b0694a}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_abd3b8d31ab32897ab2c1c32e70b0694a}} 
+def {\bfseries handle\+\_\+no\+\_\+permission} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a625401db4c5668e054c56b4bb5747b6b}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a625401db4c5668e054c56b4bb5747b6b}} 
+{\bfseries login\+\_\+url} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a3b0e754289199a870bac7e1b0baa90f6}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a3b0e754289199a870bac7e1b0baa90f6}} 
+string {\bfseries permission\+\_\+denied\+\_\+message} = \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a3f57dae5a01c974f98cdc710d804b550}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a3f57dae5a01c974f98cdc710d804b550}} 
+bool {\bfseries raise\+\_\+exception} = False
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a147cb74fc1d942518d0ff081a885da9a}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a147cb74fc1d942518d0ff081a885da9a}} 
+{\bfseries redirect\+\_\+field\+\_\+name} = REDIRECT\+\_\+\+FIELD\+\_\+\+NAME
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Abstract CBV mixin that gives access mixins the same customizable
+functionality.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a809d11be83e8147b6b6b6fedb8318ef6}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_a809d11be83e8147b6b6b6fedb8318ef6}} 
+\index{django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}!get\_login\_url@{get\_login\_url}}
+\index{get\_login\_url@{get\_login\_url}!django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}}
+\doxysubsubsection{\texorpdfstring{get\_login\_url()}{get\_login\_url()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+mixins.\+Access\+Mixin.\+get\+\_\+login\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override this method to override the login_url attribute.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_af50eab0d73f78c49d433dc770e157bbf}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_af50eab0d73f78c49d433dc770e157bbf}} 
+\index{django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}!get\_permission\_denied\_message@{get\_permission\_denied\_message}}
+\index{get\_permission\_denied\_message@{get\_permission\_denied\_message}!django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}}
+\doxysubsubsection{\texorpdfstring{get\_permission\_denied\_message()}{get\_permission\_denied\_message()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+mixins.\+Access\+Mixin.\+get\+\_\+permission\+\_\+denied\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override this method to override the permission_denied_message attribute.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_abf988b609f1e927ea5b7ef262466b6ca}\label{classdjango_1_1contrib_1_1auth_1_1mixins_1_1_access_mixin_abf988b609f1e927ea5b7ef262466b6ca}} 
+\index{django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}!get\_redirect\_field\_name@{get\_redirect\_field\_name}}
+\index{get\_redirect\_field\_name@{get\_redirect\_field\_name}!django.contrib.auth.mixins.AccessMixin@{django.contrib.auth.mixins.AccessMixin}}
+\doxysubsubsection{\texorpdfstring{get\_redirect\_field\_name()}{get\_redirect\_field\_name()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+mixins.\+Access\+Mixin.\+get\+\_\+redirect\+\_\+field\+\_\+name (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Override this method to override the redirect_field_name attribute.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/mixins.\+py\end{DoxyCompactItemize}

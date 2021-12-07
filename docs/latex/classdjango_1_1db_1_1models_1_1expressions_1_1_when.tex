@@ -1,0 +1,170 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when}{}\doxysection{django.\+db.\+models.\+expressions.\+When Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when}\index{django.db.models.expressions.When@{django.db.models.expressions.When}}
+
+
+Inheritance diagram for django.\+db.\+models.\+expressions.\+When\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+When\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a7b6471658978e0412abe7b6a8c658529}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, condition=None, then=None, $\ast$$\ast$lookups)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_afbe5ffbe0fa80fa72b95e65881283c67}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_afbe5ffbe0fa80fa72b95e65881283c67}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a29fcf04f0708079f9c0d2a8611af23d8}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a29fcf04f0708079f9c0d2a8611af23d8}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a3e2e34c41f24d436a97ffc5f3e61e5cb}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_ab8ec58fda3464596876286ece1b08454}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0726614bcdfb6d8544823eadfd1d86c8}{get\+\_\+source\+\_\+fields}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0a28feb711df427e6c0eae219e5b5981}{resolve\+\_\+expression}} (self, query=None, allow\+\_\+joins=True, reuse=None, summarize=False, for\+\_\+save=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a6b2f57141c0e8ee8d3855955f68169cb}{as\+\_\+sql}} (self, compiler, connection, template=None, $\ast$$\ast$extra\+\_\+context)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a1235814c56d5b7607a60ae9595c3c588}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a33f46a5d9dfa99a1ae49c6bab06e005f}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a33f46a5d9dfa99a1ae49c6bab06e005f}} 
+{\bfseries condition}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a93839d19888339707cd2c6645bd34e21}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a93839d19888339707cd2c6645bd34e21}} 
+{\bfseries result}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a37c7bbc268826e63901ffe432229e8c4}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a37c7bbc268826e63901ffe432229e8c4}} 
+string {\bfseries template} = \textquotesingle{}WHEN \%(condition)s THEN \%(result)s\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_ad47a1d06f9370f52b093879c1fa874a5}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_ad47a1d06f9370f52b093879c1fa874a5}} 
+bool {\bfseries conditional} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a7b6471658978e0412abe7b6a8c658529}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a7b6471658978e0412abe7b6a8c658529}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{condition = {\ttfamily None},  }\item[{}]{then = {\ttfamily None},  }\item[{$\ast$$\ast$}]{lookups }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a6b2f57141c0e8ee8d3855955f68169cb}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a6b2f57141c0e8ee8d3855955f68169cb}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{}]{template = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra\+\_\+context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a1235814c56d5b7607a60ae9595c3c588}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a1235814c56d5b7607a60ae9595c3c588}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a3e2e34c41f24d436a97ffc5f3e61e5cb}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a3e2e34c41f24d436a97ffc5f3e61e5cb}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0726614bcdfb6d8544823eadfd1d86c8}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0726614bcdfb6d8544823eadfd1d86c8}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!get\_source\_fields@{get\_source\_fields}}
+\index{get\_source\_fields@{get\_source\_fields}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{get\_source\_fields()}{get\_source\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+get\+\_\+source\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the underlying field types used by this aggregate.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_ae46497fe5850710921bc52df049b1b31}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0a28feb711df427e6c0eae219e5b5981}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_a0a28feb711df427e6c0eae219e5b5981}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!resolve\_expression@{resolve\_expression}}
+\index{resolve\_expression@{resolve\_expression}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{resolve\_expression()}{resolve\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+resolve\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{allow\+\_\+joins = {\ttfamily True},  }\item[{}]{reuse = {\ttfamily None},  }\item[{}]{summarize = {\ttfamily False},  }\item[{}]{for\+\_\+save = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the chance to do any preprocessing or validation before being
+added to the query.
+
+Arguments:
+ * query: the backend query implementation
+ * allow_joins: boolean allowing or denying use of joins
+   in this query
+ * reuse: a set of reusable joins for multijoins
+ * summarize: a terminal aggregate clause
+ * for_save: whether this expression about to be used in a save or update
+
+Return: an Expression to be added to the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_aa13750acce26e49830dd7f797f938bdc}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_when_ab8ec58fda3464596876286ece1b08454}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_when_ab8ec58fda3464596876286ece1b08454}} 
+\index{django.db.models.expressions.When@{django.db.models.expressions.When}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.expressions.When@{django.db.models.expressions.When}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+When.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

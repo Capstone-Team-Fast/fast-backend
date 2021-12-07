@@ -1,0 +1,52 @@
+\hypertarget{classneo4j_1_1time_1_1_clock_time}{}\doxysection{neo4j.\+time.\+Clock\+Time Class Reference}
+\label{classneo4j_1_1time_1_1_clock_time}\index{neo4j.time.ClockTime@{neo4j.time.ClockTime}}
+
+
+Inheritance diagram for neo4j.\+time.\+Clock\+Time\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+time.\+Clock\+Time\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_a9e7299af5edd3e9d2a63729581cd8bc1}\label{classneo4j_1_1time_1_1_clock_time_a9e7299af5edd3e9d2a63729581cd8bc1}} 
+def {\bfseries \+\_\+\+\_\+new\+\_\+\+\_\+} (cls, seconds=0, nanoseconds=0)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_a1e36d3db0d40040ba2bb8394640163de}\label{classneo4j_1_1time_1_1_clock_time_a1e36d3db0d40040ba2bb8394640163de}} 
+def {\bfseries \+\_\+\+\_\+add\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_a54dfe1dff4629cfb2b33b9d3d5c8da52}\label{classneo4j_1_1time_1_1_clock_time_a54dfe1dff4629cfb2b33b9d3d5c8da52}} 
+def {\bfseries \+\_\+\+\_\+sub\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_a677fabc51a449f4730767d9797eb7d8f}\label{classneo4j_1_1time_1_1_clock_time_a677fabc51a449f4730767d9797eb7d8f}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_af277b9550a98d8a7cbc9c31726ac0ec4}\label{classneo4j_1_1time_1_1_clock_time_af277b9550a98d8a7cbc9c31726ac0ec4}} 
+def {\bfseries seconds} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1time_1_1_clock_time_a0bb456125f2d9f58e1e5263c0b6e7c2e}\label{classneo4j_1_1time_1_1_clock_time_a0bb456125f2d9f58e1e5263c0b6e7c2e}} 
+def {\bfseries nanoseconds} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A count of `seconds` and `nanoseconds`. This class can be used to
+mark a particular point in time, relative to an externally-specified
+epoch.
+
+The `seconds` and `nanoseconds` values provided to the constructor can
+can have any sign but will be normalized internally into a positive or
+negative `seconds` value along with a positive `nanoseconds` value
+between `0` and `999,999,999`. Therefore ``ClockTime(-1, -1)`` is
+normalized to ``ClockTime(-2, 999999999)``.
+
+Note that the structure of a :class:`.ClockTime` object is similar to
+the ``timespec`` struct in C.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/time/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

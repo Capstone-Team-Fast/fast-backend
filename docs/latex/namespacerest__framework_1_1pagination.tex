@@ -1,0 +1,32 @@
+\hypertarget{namespacerest__framework_1_1pagination}{}\doxysection{rest\+\_\+framework.\+pagination Namespace Reference}
+\label{namespacerest__framework_1_1pagination}\index{rest\_framework.pagination@{rest\_framework.pagination}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1pagination_1_1_base_pagination}{Base\+Pagination}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1pagination_1_1_cursor_pagination}{Cursor\+Pagination}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1pagination_1_1_limit_offset_pagination}{Limit\+Offset\+Pagination}}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1pagination_1_1_page_number_pagination}{Page\+Number\+Pagination}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1pagination_a88ab1f6f7fc6e3fa116c8a75f4309d54}\label{namespacerest__framework_1_1pagination_a88ab1f6f7fc6e3fa116c8a75f4309d54}} 
+{\bfseries Cursor} = namedtuple(\textquotesingle{}Cursor\textquotesingle{}, \mbox{[}\textquotesingle{}offset\textquotesingle{}, \textquotesingle{}reverse\textquotesingle{}, \textquotesingle{}position\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1pagination_ae42bc3837dcc6c84458137c33f7bd9b2}\label{namespacerest__framework_1_1pagination_ae42bc3837dcc6c84458137c33f7bd9b2}} 
+{\bfseries Page\+Link} = namedtuple(\textquotesingle{}Page\+Link\textquotesingle{}, \mbox{[}\textquotesingle{}url\textquotesingle{}, \textquotesingle{}number\textquotesingle{}, \textquotesingle{}is\+\_\+active\textquotesingle{}, \textquotesingle{}is\+\_\+break\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1pagination_ace6c41d24b090ab5f6d0e167eaaed7c2}\label{namespacerest__framework_1_1pagination_ace6c41d24b090ab5f6d0e167eaaed7c2}} 
+{\bfseries PAGE\+\_\+\+BREAK} = Page\+Link(url=None, number=None, is\+\_\+active=False, is\+\_\+break=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Pagination serializers determine the structure of the output that should
+be used for paginated responses.
+\end{DoxyVerb}
+ 

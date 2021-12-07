@@ -1,0 +1,15 @@
+digraph "django.contrib.postgres.fields.citext.CICharField"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="django.contrib.postgres.fields.citext.\lCICharField",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="django.contrib.postgres.fields.citext.\lCIText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1fields_1_1citext_1_1_c_i_text.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="django.db.models.fields.\lCharField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1fields_1_1_char_field.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="django.db.models.fields.\lField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1fields_1_1_field.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="django.db.models.query\l_utils.RegisterLookupMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1query__utils_1_1_register_lookup_mixin.html",tooltip=" "];
+}

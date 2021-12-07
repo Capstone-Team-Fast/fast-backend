@@ -1,0 +1,70 @@
+\hypertarget{classdjango_1_1http_1_1response_1_1_file_response}{}\doxysection{django.\+http.\+response.\+File\+Response Class Reference}
+\label{classdjango_1_1http_1_1response_1_1_file_response}\index{django.http.response.FileResponse@{django.http.response.FileResponse}}
+
+
+Inheritance diagram for django.\+http.\+response.\+File\+Response\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+http.\+response.\+File\+Response\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1http_1_1response_1_1_file_response_a807f6cd4ade4009a0013127f16e3a883}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, as\+\_\+attachment=False, filename=\textquotesingle{}\textquotesingle{}, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1http_1_1response_1_1_file_response_a3c96a6d233330d2e59789bc669a2ec04}{set\+\_\+headers}} (self, filelike)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a9582a806b06b50bf52d904db4ee49c27}\label{classdjango_1_1http_1_1response_1_1_file_response_a9582a806b06b50bf52d904db4ee49c27}} 
+{\bfseries as\+\_\+attachment}
+\item 
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a76f1611a717eb7fafd099bc5847a4303}\label{classdjango_1_1http_1_1response_1_1_file_response_a76f1611a717eb7fafd099bc5847a4303}} 
+{\bfseries filename}
+\item 
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a75ed3fa5d2f6254e7cb87d7cc24e0083}\label{classdjango_1_1http_1_1response_1_1_file_response_a75ed3fa5d2f6254e7cb87d7cc24e0083}} 
+{\bfseries file\+\_\+to\+\_\+stream}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a7d6adb8cdf28b03a2181a35f6c9b04e2}\label{classdjango_1_1http_1_1response_1_1_file_response_a7d6adb8cdf28b03a2181a35f6c9b04e2}} 
+int {\bfseries block\+\_\+size} = 4096
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A streaming HTTP response class optimized for files.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a807f6cd4ade4009a0013127f16e3a883}\label{classdjango_1_1http_1_1response_1_1_file_response_a807f6cd4ade4009a0013127f16e3a883}} 
+\index{django.http.response.FileResponse@{django.http.response.FileResponse}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.http.response.FileResponse@{django.http.response.FileResponse}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+http.\+response.\+File\+Response.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{}]{as\+\_\+attachment = {\ttfamily False},  }\item[{}]{filename = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1http_1_1response_1_1_streaming_http_response}{django.\+http.\+response.\+Streaming\+Http\+Response}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1http_1_1response_1_1_file_response_a3c96a6d233330d2e59789bc669a2ec04}\label{classdjango_1_1http_1_1response_1_1_file_response_a3c96a6d233330d2e59789bc669a2ec04}} 
+\index{django.http.response.FileResponse@{django.http.response.FileResponse}!set\_headers@{set\_headers}}
+\index{set\_headers@{set\_headers}!django.http.response.FileResponse@{django.http.response.FileResponse}}
+\doxysubsubsection{\texorpdfstring{set\_headers()}{set\_headers()}}
+{\footnotesize\ttfamily def django.\+http.\+response.\+File\+Response.\+set\+\_\+headers (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filelike }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set some common response headers (Content-Length, Content-Type, and
+Content-Disposition) based on the `filelike` response content.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/http/response.\+py\end{DoxyCompactItemize}

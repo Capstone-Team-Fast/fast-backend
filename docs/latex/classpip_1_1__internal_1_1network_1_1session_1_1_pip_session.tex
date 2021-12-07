@@ -1,0 +1,74 @@
+\hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session}{}\doxysection{pip.\+\_\+internal.\+network.\+session.\+Pip\+Session Class Reference}
+\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session}\index{pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+network.\+session.\+Pip\+Session\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+network.\+session.\+Pip\+Session\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ab05530a49f9abea1f5c50ed33bcf5451}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$Any args, int retries=0, Optional\mbox{[}str\mbox{]} cache=None, Sequence\mbox{[}str\mbox{]} trusted\+\_\+hosts=(), Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} index\+\_\+urls=None, $\ast$$\ast$Any kwargs)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ad99f2f1dba479a628554b4bdb9aa3a57}{update\+\_\+index\+\_\+urls}} (self, List\mbox{[}str\mbox{]} new\+\_\+index\+\_\+urls)
+\item 
+None \mbox{\hyperlink{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a9d1d8d7e2e77cc78d3d39fcbf8e0a3f9}{add\+\_\+trusted\+\_\+host}} (self, str host, Optional\mbox{[}str\mbox{]} source=None, bool suppress\+\_\+logging=False)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_aad106c813d9e42455312b4a56067a517}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_aad106c813d9e42455312b4a56067a517}} 
+Iterator\mbox{[}Secure\+Origin\mbox{]} {\bfseries iter\+\_\+secure\+\_\+origins} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a549123ac367d512f0f8d7a9edb325a8c}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a549123ac367d512f0f8d7a9edb325a8c}} 
+bool {\bfseries is\+\_\+secure\+\_\+origin} (self, \mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1link_1_1_link}{Link}} location)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a9c968f2f764cbd41db6684fafb5b1e6a}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a9c968f2f764cbd41db6684fafb5b1e6a}} 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1requests_1_1models_1_1_response}{Response}} {\bfseries request} (self, str method, str url, $\ast$Any args, $\ast$$\ast$Any kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a928c7de9a84a62e9eb9d1cd7d02860ed}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a928c7de9a84a62e9eb9d1cd7d02860ed}} 
+{\bfseries auth}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ab05530a49f9abea1f5c50ed33bcf5451}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ab05530a49f9abea1f5c50ed33bcf5451}} 
+\index{pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+session.\+Pip\+Session.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$Any}]{args,  }\item[{int }]{retries = {\ttfamily 0},  }\item[{Optional\mbox{[}str\mbox{]} }]{cache = {\ttfamily None},  }\item[{Sequence\mbox{[}str\mbox{]} }]{trusted\+\_\+hosts = {\ttfamily ()},  }\item[{Optional\mbox{[}List\mbox{[}str\mbox{]}\mbox{]} }]{index\+\_\+urls = {\ttfamily None},  }\item[{$\ast$$\ast$Any}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param trusted_hosts: Domains not to emit warnings for when not using
+    HTTPS.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a9d1d8d7e2e77cc78d3d39fcbf8e0a3f9}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_a9d1d8d7e2e77cc78d3d39fcbf8e0a3f9}} 
+\index{pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}!add\_trusted\_host@{add\_trusted\_host}}
+\index{add\_trusted\_host@{add\_trusted\_host}!pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}}
+\doxysubsubsection{\texorpdfstring{add\_trusted\_host()}{add\_trusted\_host()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+session.\+Pip\+Session.\+add\+\_\+trusted\+\_\+host (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{host,  }\item[{Optional\mbox{[}str\mbox{]} }]{source = {\ttfamily None},  }\item[{bool }]{suppress\+\_\+logging = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param host: It is okay to provide a host that has previously been
+    added.
+:param source: An optional source string, for logging where the host
+    string came from.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ad99f2f1dba479a628554b4bdb9aa3a57}\label{classpip_1_1__internal_1_1network_1_1session_1_1_pip_session_ad99f2f1dba479a628554b4bdb9aa3a57}} 
+\index{pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}!update\_index\_urls@{update\_index\_urls}}
+\index{update\_index\_urls@{update\_index\_urls}!pip.\_internal.network.session.PipSession@{pip.\_internal.network.session.PipSession}}
+\doxysubsubsection{\texorpdfstring{update\_index\_urls()}{update\_index\_urls()}}
+{\footnotesize\ttfamily  None pip.\+\_\+internal.\+network.\+session.\+Pip\+Session.\+update\+\_\+index\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{List\mbox{[}str\mbox{]}}]{new\+\_\+index\+\_\+urls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param new_index_urls: New index urls to update the authentication
+    handler with.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/network/session.\+py\end{DoxyCompactItemize}

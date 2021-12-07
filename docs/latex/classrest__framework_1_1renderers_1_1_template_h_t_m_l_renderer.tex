@@ -1,0 +1,111 @@
+\hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer}{}\doxysection{rest\+\_\+framework.\+renderers.\+Template\+HTMLRenderer Class Reference}
+\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer}\index{rest\_framework.renderers.TemplateHTMLRenderer@{rest\_framework.renderers.TemplateHTMLRenderer}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+renderers.\+Template\+HTMLRenderer\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+renderers.\+Template\+HTMLRenderer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_abf6171569059f43b2f49f4bd94a4446d}{render}} (self, data, accepted\+\_\+media\+\_\+type=None, renderer\+\_\+context=None)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a2d4b8f456c09a1793b0a347616670aea}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a2d4b8f456c09a1793b0a347616670aea}} 
+def {\bfseries resolve\+\_\+template} (self, template\+\_\+names)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a0764f28a1cdd2599cd2e3d9df8d5bed9}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a0764f28a1cdd2599cd2e3d9df8d5bed9}} 
+def {\bfseries get\+\_\+template\+\_\+context} (self, data, renderer\+\_\+context)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a666c93d1d1b57308912d25bef3cef731}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a666c93d1d1b57308912d25bef3cef731}} 
+def {\bfseries get\+\_\+template\+\_\+names} (self, response, view)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_af2aded1846f95e974300056be06fe1bc}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_af2aded1846f95e974300056be06fe1bc}} 
+def {\bfseries get\+\_\+exception\+\_\+template} (self, response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a5caea8b5578735e75455a0ed02a5bfd7}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a5caea8b5578735e75455a0ed02a5bfd7}} 
+string {\bfseries media\+\_\+type} = \textquotesingle{}text/html\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a594c477ddd57d71a3f698c4ab2106849}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a594c477ddd57d71a3f698c4ab2106849}} 
+string {\bfseries format} = \textquotesingle{}html\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a7f88bbfcb5c931e11daea93883e93768}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a7f88bbfcb5c931e11daea93883e93768}} 
+{\bfseries template\+\_\+name} = None
+\item 
+list \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a06f6aef5dee9ff0a3d3302997fe6b2cf}{exception\+\_\+template\+\_\+names}}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a2e4a86c73121725624174c20db5b3749}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a2e4a86c73121725624174c20db5b3749}} 
+string {\bfseries charset} = \textquotesingle{}utf-\/8\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An HTML renderer for use with templates.
+
+The data supplied to the Response object should be a dictionary that will
+be used as context for the template.
+
+The template name is determined by (in order of preference):
+
+1. An explicit `.template_name` attribute set on the response.
+2. An explicit `.template_name` attribute set on this class.
+3. The return result of calling `view.get_template_names()`.
+
+For example:
+    data = {'users': User.objects.all()}
+    return Response(data, template_name='users.html')
+
+For pre-rendered HTML, see StaticHTMLRenderer.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_abf6171569059f43b2f49f4bd94a4446d}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_abf6171569059f43b2f49f4bd94a4446d}} 
+\index{rest\_framework.renderers.TemplateHTMLRenderer@{rest\_framework.renderers.TemplateHTMLRenderer}!render@{render}}
+\index{render@{render}!rest\_framework.renderers.TemplateHTMLRenderer@{rest\_framework.renderers.TemplateHTMLRenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+renderers.\+Template\+HTMLRenderer.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{accepted\+\_\+media\+\_\+type = {\ttfamily None},  }\item[{}]{renderer\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Renders data to HTML, using Django's standard template rendering.
+
+The template name is determined by (in order of preference):
+
+1. An explicit .template_name set on the response.
+2. An explicit .template_name set on this class.
+3. The return result of calling view.get_template_names().
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_base_renderer}{rest\+\_\+framework.\+renderers.\+Base\+Renderer}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_static_h_t_m_l_renderer_ae0b0067afd1de2835b8563182838f4bb}{rest\+\_\+framework.\+renderers.\+Static\+HTMLRenderer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a06f6aef5dee9ff0a3d3302997fe6b2cf}\label{classrest__framework_1_1renderers_1_1_template_h_t_m_l_renderer_a06f6aef5dee9ff0a3d3302997fe6b2cf}} 
+\index{rest\_framework.renderers.TemplateHTMLRenderer@{rest\_framework.renderers.TemplateHTMLRenderer}!exception\_template\_names@{exception\_template\_names}}
+\index{exception\_template\_names@{exception\_template\_names}!rest\_framework.renderers.TemplateHTMLRenderer@{rest\_framework.renderers.TemplateHTMLRenderer}}
+\doxysubsubsection{\texorpdfstring{exception\_template\_names}{exception\_template\_names}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+renderers.\+Template\+HTMLRenderer.\+exception\+\_\+template\+\_\+names\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        \textcolor{stringliteral}{'\%(status\_code)s.html'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'api\_exception.html'}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/renderers.\+py\end{DoxyCompactItemize}

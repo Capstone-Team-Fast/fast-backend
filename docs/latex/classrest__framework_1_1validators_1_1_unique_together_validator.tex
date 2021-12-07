@@ -1,0 +1,82 @@
+\hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator}{}\doxysection{rest\+\_\+framework.\+validators.\+Unique\+Together\+Validator Class Reference}
+\label{classrest__framework_1_1validators_1_1_unique_together_validator}\index{rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_aa6d2369bb38003117c73444ed9f7c859}\label{classrest__framework_1_1validators_1_1_unique_together_validator_aa6d2369bb38003117c73444ed9f7c859}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, queryset, fields, message=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_together_validator_a2a2b61e098e1f3d55c7e138853979090}{enforce\+\_\+required\+\_\+fields}} (self, attrs, serializer)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_together_validator_a4febe85f06aaa05c2e5372e409847ae1}{filter\+\_\+queryset}} (self, attrs, queryset, serializer)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1validators_1_1_unique_together_validator_a872e5afbee8c4160bba291bf2dbc9a96}{exclude\+\_\+current\+\_\+instance}} (self, attrs, queryset, instance)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a13233f3c525d61ce0cd551e4186002e7}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a13233f3c525d61ce0cd551e4186002e7}} 
+def {\bfseries \+\_\+\+\_\+call\+\_\+\+\_\+} (self, attrs, serializer)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a7e7ccdd90533bd1cc03af29a22ce4901}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a7e7ccdd90533bd1cc03af29a22ce4901}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a53097a5e137f3224ad513c5db054cf7b}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a53097a5e137f3224ad513c5db054cf7b}} 
+{\bfseries queryset}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a3e540fe327ca4b0b3c8ee05494492116}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a3e540fe327ca4b0b3c8ee05494492116}} 
+{\bfseries fields}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a5ff7f326704279d3754f694a6bd991ec}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a5ff7f326704279d3754f694a6bd991ec}} 
+{\bfseries message} = \+\_\+(\textquotesingle{}The fields \{field\+\_\+names\} must make a unique set.\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_ab18c08b3988c82709121876675b85aae}\label{classrest__framework_1_1validators_1_1_unique_together_validator_ab18c08b3988c82709121876675b85aae}} 
+{\bfseries missing\+\_\+message} = \+\_\+(\textquotesingle{}This field is required.\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_ac80fe9dacdce741d6e5cc4f0c0e58a09}\label{classrest__framework_1_1validators_1_1_unique_together_validator_ac80fe9dacdce741d6e5cc4f0c0e58a09}} 
+bool {\bfseries requires\+\_\+context} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Validator that corresponds to `unique_together = (...)` on a model class.
+
+Should be applied to the serializer class, not to an individual field.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a2a2b61e098e1f3d55c7e138853979090}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a2a2b61e098e1f3d55c7e138853979090}} 
+\index{rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}!enforce\_required\_fields@{enforce\_required\_fields}}
+\index{enforce\_required\_fields@{enforce\_required\_fields}!rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}}
+\doxysubsubsection{\texorpdfstring{enforce\_required\_fields()}{enforce\_required\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+validators.\+Unique\+Together\+Validator.\+enforce\+\_\+required\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attrs,  }\item[{}]{serializer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The `UniqueTogetherValidator` always forces an implied 'required'
+state on the fields it applies to.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a872e5afbee8c4160bba291bf2dbc9a96}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a872e5afbee8c4160bba291bf2dbc9a96}} 
+\index{rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}!exclude\_current\_instance@{exclude\_current\_instance}}
+\index{exclude\_current\_instance@{exclude\_current\_instance}!rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}}
+\doxysubsubsection{\texorpdfstring{exclude\_current\_instance()}{exclude\_current\_instance()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+validators.\+Unique\+Together\+Validator.\+exclude\+\_\+current\+\_\+instance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attrs,  }\item[{}]{queryset,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If an instance is being updated, then do not include
+that instance itself as a uniqueness conflict.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1validators_1_1_unique_together_validator_a4febe85f06aaa05c2e5372e409847ae1}\label{classrest__framework_1_1validators_1_1_unique_together_validator_a4febe85f06aaa05c2e5372e409847ae1}} 
+\index{rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}!filter\_queryset@{filter\_queryset}}
+\index{filter\_queryset@{filter\_queryset}!rest\_framework.validators.UniqueTogetherValidator@{rest\_framework.validators.UniqueTogetherValidator}}
+\doxysubsubsection{\texorpdfstring{filter\_queryset()}{filter\_queryset()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+validators.\+Unique\+Together\+Validator.\+filter\+\_\+queryset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attrs,  }\item[{}]{queryset,  }\item[{}]{serializer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Filter the queryset to all instances matching the given attributes.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/validators.\+py\end{DoxyCompactItemize}

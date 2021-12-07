@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node623 [label="BaseLoader",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node623 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.template.loaders.cached.\lLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1template_1_1loaders_1_1cached_1_1_loader.html",tooltip=" "];
+  Node623 -> Node625 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node625 [label="django.template.loaders.filesystem.\lLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1template_1_1loaders_1_1filesystem_1_1_loader.html",tooltip=" "];
+  Node623 -> Node626 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node626 [label="django.template.loaders.locmem.\lLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1template_1_1loaders_1_1locmem_1_1_loader.html",tooltip=" "];
+}

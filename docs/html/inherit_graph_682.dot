@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="setuptools._vendor.more\l_itertools.more.islice\l_extended",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1islice__extended.html",tooltip=" "];
+}

@@ -1,6 +1,5 @@
 import datetime
 import json
-import random
 import re
 import unittest
 
@@ -8,7 +7,7 @@ from neomodel import config, db
 
 from backend import settings
 from routing import constant
-from routing.managers import RouteManager, NodeParser
+from routing.managers import RouteManager
 from routing.tests.unit import data
 
 
@@ -55,19 +54,8 @@ class MyTestCase(unittest.TestCase):
             'location': {'id': 7, 'address': '9999 Bagel St', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68123,
                          'is_center': False, 'room_number': '123', 'latitude': None, 'longitude': None}
         })]
-        departure = json.dumps({
-            'location': {
-                'id': 7,
-                'address': '9999 Bagel St',
-                'city': 'Omaha',
-                'state': 'NE',
-                'zipcode': 68123,
-                'is_center': False,
-                'room_number': None,
-                'latitude': None,
-                'longitude': None
-            }
-        })
+        departure = data.departure
+
         response = route_manager.request_routes(departure=departure, locations=locations, drivers=drivers)
         self.assertEqual(response, route_manager.response_template())
 
@@ -103,6 +91,39 @@ class MyTestCase(unittest.TestCase):
 
         # Cleanup database
         # data.cleanup()
+
+    def test_request_route_generalization(self):
+        departure = data.departure
+        customers = data.get_random_customers(n=2)
+        drivers = data.get_random_drivers(n=4)
+
+        # Create routes
+        route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
+        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
+        log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
+        log_filename = log_filename + '.json'
+        with open(file=log_filename, mode='w') as file:
+            json.dump(json.loads(response), file, ensure_ascii=False, indent=4)
+
+        # Cleanup database
+        # data.cleanup()
+
+    def test_request_route_with_invalid_addresses(self):
+        departure = data.departure
+        customers = data.get_random_customers(n=100000)
+        drivers = data.get_random_drivers(n=1000, min_capacity=5000, max_capacity=10000,
+                                          min_duration=10, max_duration=50,
+                                          min_delivery_limit=2000, max_delivery_limit=5000)
+
+        # Create routes
+        route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
+        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
+        log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
+        log_filename = log_filename + '.json'
+        with open(file=log_filename, mode='w') as file:
+            json.dump(json.loads(response), file, ensure_ascii=False, indent=4)
 
 
 if __name__ == '__main__':

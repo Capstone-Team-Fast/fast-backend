@@ -1,0 +1,53 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg}{}\doxysection{django.\+contrib.\+postgres.\+aggregates.\+general.\+JSONBAgg Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg}\index{django.contrib.postgres.aggregates.general.JSONBAgg@{django.contrib.postgres.aggregates.general.JSONBAgg}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+aggregates.\+general.\+JSONBAgg\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+aggregates.\+general.\+JSONBAgg\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a8ad4dceeac74589d75e1f2c069f19f46}{convert\+\_\+value}} (self, value, expression, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a9989ba89d0474fad41f706a75a6d4005}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a9989ba89d0474fad41f706a75a6d4005}} 
+string {\bfseries function} = \textquotesingle{}JSONB\+\_\+\+AGG\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_ad58680b970389888de2f422d1934df83}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_ad58680b970389888de2f422d1934df83}} 
+string {\bfseries template} = \textquotesingle{}\%(function)s(\%(distinct)s\%(expressions)s \%(ordering)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_aebbbecdc7e266da2e282db88a2210c3d}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_aebbbecdc7e266da2e282db88a2210c3d}} 
+bool {\bfseries allow\+\_\+distinct} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a9f6e870aff05e3a3eb2d6bc6a83361ef}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a9f6e870aff05e3a3eb2d6bc6a83361ef}} 
+{\bfseries output\+\_\+field} = \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1json_1_1_j_s_o_n_field}{JSONField}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a8ad4dceeac74589d75e1f2c069f19f46}\label{classdjango_1_1contrib_1_1postgres_1_1aggregates_1_1general_1_1_j_s_o_n_b_agg_a8ad4dceeac74589d75e1f2c069f19f46}} 
+\index{django.contrib.postgres.aggregates.general.JSONBAgg@{django.contrib.postgres.aggregates.general.JSONBAgg}!convert\_value@{convert\_value}}
+\index{convert\_value@{convert\_value}!django.contrib.postgres.aggregates.general.JSONBAgg@{django.contrib.postgres.aggregates.general.JSONBAgg}}
+\doxysubsubsection{\texorpdfstring{convert\_value()}{convert\_value()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+aggregates.\+general.\+JSONBAgg.\+convert\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{expression,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Expressions provide their own converters because users have the option
+of manually specifying the output_field which may be a different type
+from the one the database returns.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a17a709653d93ba657fb2ed791346e38f}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/aggregates/general.\+py\end{DoxyCompactItemize}

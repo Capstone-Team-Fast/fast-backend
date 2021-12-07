@@ -1,0 +1,59 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory}{}\doxysection{pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Adjacent\+Temp\+Directory Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory}\index{pip.\_internal.utils.temp\_dir.AdjacentTempDirectory@{pip.\_internal.utils.temp\_dir.AdjacentTempDirectory}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Adjacent\+Temp\+Directory\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Adjacent\+Temp\+Directory\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_aa9aeb5704a6b3e0aeb75895eb99ee6ca}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, original, delete=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_afec831e8f80d0162660d0e8a8509080f}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_afec831e8f80d0162660d0e8a8509080f}} 
+{\bfseries original}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_ae180b26a4bd88fa940c358ae5e27a7fb}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_ae180b26a4bd88fa940c358ae5e27a7fb}} 
+string {\bfseries LEADING\+\_\+\+CHARS} = \char`\"{}-\/$\sim$.=\%0123456789\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helper class that creates a temporary directory adjacent to a real one.
+
+Attributes:
+    original
+        The original directory to create a temp directory for.
+    path
+        After calling create() or entering, contains the full
+        path to the temporary directory.
+    delete
+        Whether the directory should be deleted when exiting
+        (when used as a contextmanager)\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_aa9aeb5704a6b3e0aeb75895eb99ee6ca}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_adjacent_temp_directory_aa9aeb5704a6b3e0aeb75895eb99ee6ca}} 
+\index{pip.\_internal.utils.temp\_dir.AdjacentTempDirectory@{pip.\_internal.utils.temp\_dir.AdjacentTempDirectory}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_internal.utils.temp\_dir.AdjacentTempDirectory@{pip.\_internal.utils.temp\_dir.AdjacentTempDirectory}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Adjacent\+Temp\+Directory.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{original,  }\item[{}]{delete = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory}{pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/utils/temp\+\_\+dir.\+py\end{DoxyCompactItemize}

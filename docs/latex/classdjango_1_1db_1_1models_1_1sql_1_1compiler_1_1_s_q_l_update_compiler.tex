@@ -1,0 +1,73 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler}{}\doxysection{django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler Class Reference}
+\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler}\index{django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}}
+
+
+Inheritance diagram for django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a4bef8c7334b28c25eeeeff3085c9b28b}{as\+\_\+sql}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a8f64e5acc96dc3ff35263634a757e9f3}{execute\+\_\+sql}} (self, result\+\_\+type)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_afcc9f1b98f39034d9ba8ad4dddbf4172}{pre\+\_\+sql\+\_\+setup}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a4bef8c7334b28c25eeeeff3085c9b28b}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a4bef8c7334b28c25eeeeff3085c9b28b}} 
+\index{django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create the SQL for this query. Return the SQL string and list of
+parameters.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_compiler_aaf2893416f62d6ad2ea27d4786d65d32}{django.\+db.\+models.\+sql.\+compiler.\+SQLCompiler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a8f64e5acc96dc3ff35263634a757e9f3}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_a8f64e5acc96dc3ff35263634a757e9f3}} 
+\index{django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}!execute\_sql@{execute\_sql}}
+\index{execute\_sql@{execute\_sql}!django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}}
+\doxysubsubsection{\texorpdfstring{execute\_sql()}{execute\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler.\+execute\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{result\+\_\+type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Execute the specified update. Return the number of rows affected by
+the primary update query. The "primary update query" is the first
+non-empty query that is executed. Row counts for any subsequent,
+related queries are not available.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_compiler_a2547088c51124a0d09620d04cf56b050}{django.\+db.\+models.\+sql.\+compiler.\+SQLCompiler}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_afcc9f1b98f39034d9ba8ad4dddbf4172}\label{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_update_compiler_afcc9f1b98f39034d9ba8ad4dddbf4172}} 
+\index{django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}!pre\_sql\_setup@{pre\_sql\_setup}}
+\index{pre\_sql\_setup@{pre\_sql\_setup}!django.db.models.sql.compiler.SQLUpdateCompiler@{django.db.models.sql.compiler.SQLUpdateCompiler}}
+\doxysubsubsection{\texorpdfstring{pre\_sql\_setup()}{pre\_sql\_setup()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+sql.\+compiler.\+SQLUpdate\+Compiler.\+pre\+\_\+sql\+\_\+setup (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If the update depends on results from other tables, munge the "where"
+conditions to match the format required for (portable) SQL updates.
+
+If multiple updates are required, pull out the id values to update at
+this point so that they don't change as a result of the progressive
+updates.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1sql_1_1compiler_1_1_s_q_l_compiler_a6c2c8793628fdded85a1f685bff9e2ec}{django.\+db.\+models.\+sql.\+compiler.\+SQLCompiler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/sql/compiler.\+py\end{DoxyCompactItemize}

@@ -2,6 +2,13 @@
 routing/tests/unit/data.py
 routing/tests/unit/_trial*/
 routing/tests/_*/
+routing/tests/log*
+routing/tests/routing_algorithm_log.txt
+Doxyfile
+
+# Local files
+routing/tests/languages.*
+routing/tests/main.py
 
 # Django
 *.log

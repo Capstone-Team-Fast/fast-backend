@@ -1,0 +1,64 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper}{}\doxysection{django.\+db.\+backends.\+mysql.\+base.\+Cursor\+Wrapper Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper}\index{django.db.backends.mysql.base.CursorWrapper@{django.db.backends.mysql.base.CursorWrapper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_ab7ad80ed5f7224d4fdb0732bdfbe5566}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_ab7ad80ed5f7224d4fdb0732bdfbe5566}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, cursor)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_a8df9e0e654602d65023eedf23e91cbf8}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_a8df9e0e654602d65023eedf23e91cbf8}} 
+def {\bfseries execute} (self, query, args=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_abc34bdaae46d45faf9d9a66de6d9c49a}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_abc34bdaae46d45faf9d9a66de6d9c49a}} 
+def {\bfseries executemany} (self, query, args)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_afb384abf869f33f7faf857cdc5d41556}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_afb384abf869f33f7faf857cdc5d41556}} 
+def {\bfseries \+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, attr)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_ae79ca72c6f3c36c19d9f1a867b2f0b40}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_ae79ca72c6f3c36c19d9f1a867b2f0b40}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_abd52e7069f4ddba3438531ee41b3ad40}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_abd52e7069f4ddba3438531ee41b3ad40}} 
+{\bfseries cursor}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_a9723002bbd98763fc8d72d7ccbbaceb1}{codes\+\_\+for\+\_\+integrityerror}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A thin wrapper around MySQLdb's normal cursor class that catches particular
+exception instances and reraises them with the correct types.
+
+Implemented as a wrapper, rather than a subclass, so that it isn't stuck
+to the particular underlying representation returned by Connection.cursor().
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_a9723002bbd98763fc8d72d7ccbbaceb1}\label{classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_cursor_wrapper_a9723002bbd98763fc8d72d7ccbbaceb1}} 
+\index{django.db.backends.mysql.base.CursorWrapper@{django.db.backends.mysql.base.CursorWrapper}!codes\_for\_integrityerror@{codes\_for\_integrityerror}}
+\index{codes\_for\_integrityerror@{codes\_for\_integrityerror}!django.db.backends.mysql.base.CursorWrapper@{django.db.backends.mysql.base.CursorWrapper}}
+\doxysubsubsection{\texorpdfstring{codes\_for\_integrityerror}{codes\_for\_integrityerror}}
+{\footnotesize\ttfamily tuple django.\+db.\+backends.\+mysql.\+base.\+Cursor\+Wrapper.\+codes\+\_\+for\+\_\+integrityerror\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        1048,  \textcolor{comment}{\# Column cannot be null}}
+\DoxyCodeLine{        1690,  \textcolor{comment}{\# BIGINT UNSIGNED value is out of range}}
+\DoxyCodeLine{        3819,  \textcolor{comment}{\# CHECK constraint is violated}}
+\DoxyCodeLine{        4025,  \textcolor{comment}{\# CHECK constraint failed}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/mysql/base.\+py\end{DoxyCompactItemize}

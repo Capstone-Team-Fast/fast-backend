@@ -1,0 +1,67 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+One\+Or\+More Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more}\index{pip.\_vendor.pyparsing.OneOrMore@{pip.\_vendor.pyparsing.OneOrMore}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+One\+Or\+More\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+One\+Or\+More\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more_a05a6d077598f5d88ac4b7d3dd1330f9f}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more_aa07e4efeedbf25ec752ce44259343ada}\label{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more_aa07e4efeedbf25ec752ce44259343ada}} 
+{\bfseries str\+Repr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Repetition of one or more of the given expression.
+
+Parameters:
+ - expr - expression that must match one or more times
+ - stopOn - (default= ``None``) - expression for a terminating sentinel
+      (only required if the sentinel would ordinarily match the repetition
+      expression)
+
+Example::
+
+    data_word = Word(alphas)
+    label = data_word + FollowedBy(':')
+    attr_expr = Group(label + Suppress(':') + OneOrMore(data_word).setParseAction(' '.join))
+
+    text = "shape: SQUARE posn: upper left color: BLACK"
+    OneOrMore(attr_expr).parseString(text).pprint()  # Fail! read 'color' as data instead of next label -> [['shape', 'SQUARE color']]
+
+    # use stopOn attribute for OneOrMore to avoid reading label string as part of the data
+    attr_expr = Group(label + Suppress(':') + OneOrMore(data_word, stopOn=label).setParseAction(' '.join))
+    OneOrMore(attr_expr).parseString(text).pprint() # Better -> [['shape', 'SQUARE'], ['posn', 'upper left'], ['color', 'BLACK']]
+
+    # could also be written as
+    (attr_expr * (1,)).parseString(text).pprint()
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more_a05a6d077598f5d88ac4b7d3dd1330f9f}\label{classpip_1_1__vendor_1_1pyparsing_1_1_one_or_more_a05a6d077598f5d88ac4b7d3dd1330f9f}} 
+\index{pip.\_vendor.pyparsing.OneOrMore@{pip.\_vendor.pyparsing.OneOrMore}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pip.\_vendor.pyparsing.OneOrMore@{pip.\_vendor.pyparsing.OneOrMore}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+One\+Or\+More.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pip.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

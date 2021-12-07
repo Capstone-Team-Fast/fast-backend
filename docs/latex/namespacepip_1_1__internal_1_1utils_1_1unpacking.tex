@@ -1,0 +1,102 @@
+\hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking}{}\doxysection{pip.\+\_\+internal.\+utils.\+unpacking Namespace Reference}
+\label{namespacepip_1_1__internal_1_1utils_1_1unpacking}\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_a6dd9757f268ca7738e456b81fea6b8d0}{current\+\_\+umask}} ()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a2ab7a0113a82a18150c48158f8a80cb2}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a2ab7a0113a82a18150c48158f8a80cb2}} 
+def {\bfseries split\+\_\+leading\+\_\+dir} (path)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_a48f899e2c4e1caada411b7681202380d}{has\+\_\+leading\+\_\+dir}} (paths)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_a7fa6fd1203599fea3464f86d65866d71}{is\+\_\+within\+\_\+directory}} (directory, target)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_a90a6ff776b7d910535c138c11eb22428}{set\+\_\+extracted\+\_\+file\+\_\+to\+\_\+default\+\_\+mode\+\_\+plus\+\_\+executable}} (path)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_adbe68be28fbb02223e62d18869c3e0fb}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_adbe68be28fbb02223e62d18869c3e0fb}} 
+def {\bfseries zip\+\_\+item\+\_\+is\+\_\+executable} (info)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_ac680d7976163e5e647a0e14958948bed}{unzip\+\_\+file}} (filename, location, flatten=True)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__internal_1_1utils_1_1unpacking_a5acf8cffa33829350a298940743e4087}{untar\+\_\+file}} (filename, location)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_aeef866b94a84eeb722a39d15afdea530}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_aeef866b94a84eeb722a39d15afdea530}} 
+def {\bfseries unpack\+\_\+file} (filename, location, content\+\_\+type=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_ab665e7a32bc6ae5cd73faa4d9990f820}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_ab665e7a32bc6ae5cd73faa4d9990f820}} 
+{\bfseries logger} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a134a634aafbed500d5cb183a1fa6eec8}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a134a634aafbed500d5cb183a1fa6eec8}} 
+{\bfseries SUPPORTED\+\_\+\+EXTENSIONS} = ZIP\+\_\+\+EXTENSIONS + TAR\+\_\+\+EXTENSIONS
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Utilities related archives.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a6dd9757f268ca7738e456b81fea6b8d0}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a6dd9757f268ca7738e456b81fea6b8d0}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!current\_umask@{current\_umask}}
+\index{current\_umask@{current\_umask}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{current\_umask()}{current\_umask()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+current\+\_\+umask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the current umask which involves having to set it temporarily.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a48f899e2c4e1caada411b7681202380d}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a48f899e2c4e1caada411b7681202380d}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!has\_leading\_dir@{has\_leading\_dir}}
+\index{has\_leading\_dir@{has\_leading\_dir}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{has\_leading\_dir()}{has\_leading\_dir()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+has\+\_\+leading\+\_\+dir (\begin{DoxyParamCaption}\item[{}]{paths }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns true if all the paths have the same leading path name
+(i.e., everything is in one subdirectory in an archive)\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a7fa6fd1203599fea3464f86d65866d71}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a7fa6fd1203599fea3464f86d65866d71}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!is\_within\_directory@{is\_within\_directory}}
+\index{is\_within\_directory@{is\_within\_directory}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{is\_within\_directory()}{is\_within\_directory()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+is\+\_\+within\+\_\+directory (\begin{DoxyParamCaption}\item[{}]{directory,  }\item[{}]{target }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return true if the absolute path of target is within the directory
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a90a6ff776b7d910535c138c11eb22428}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a90a6ff776b7d910535c138c11eb22428}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!set\_extracted\_file\_to\_default\_mode\_plus\_executable@{set\_extracted\_file\_to\_default\_mode\_plus\_executable}}
+\index{set\_extracted\_file\_to\_default\_mode\_plus\_executable@{set\_extracted\_file\_to\_default\_mode\_plus\_executable}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{set\_extracted\_file\_to\_default\_mode\_plus\_executable()}{set\_extracted\_file\_to\_default\_mode\_plus\_executable()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+set\+\_\+extracted\+\_\+file\+\_\+to\+\_\+default\+\_\+mode\+\_\+plus\+\_\+executable (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Make file present at path have execute for user/group/world
+(chmod +x) is no-op on windows per python docs
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_a5acf8cffa33829350a298940743e4087}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_a5acf8cffa33829350a298940743e4087}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!untar\_file@{untar\_file}}
+\index{untar\_file@{untar\_file}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{untar\_file()}{untar\_file()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+untar\+\_\+file (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{location }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Untar the file (with path `filename`) to the destination `location`.
+All files are written based on system defaults and umask (i.e. permissions
+are not preserved), except that regular file members with any execute
+permissions (user, group, or world) have "chmod +x" applied after being
+written.  Note that for windows, any execute changes using os.chmod are
+no-ops per the python docs.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1utils_1_1unpacking_ac680d7976163e5e647a0e14958948bed}\label{namespacepip_1_1__internal_1_1utils_1_1unpacking_ac680d7976163e5e647a0e14958948bed}} 
+\index{pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}!unzip\_file@{unzip\_file}}
+\index{unzip\_file@{unzip\_file}!pip.\_internal.utils.unpacking@{pip.\_internal.utils.unpacking}}
+\doxysubsubsection{\texorpdfstring{unzip\_file()}{unzip\_file()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+unpacking.\+unzip\+\_\+file (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{location,  }\item[{}]{flatten = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Unzip the file (with path `filename`) to the destination `location`.  All
+files are written based on system defaults and umask (i.e. permissions are
+not preserved), except that regular file members with any execute
+permissions (user, group, or world) have "chmod +x" applied after being
+written. Note that for windows, any execute changes using os.chmod are
+no-ops per the python docs.
+\end{DoxyVerb}
+ 

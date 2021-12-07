@@ -1,0 +1,55 @@
+\hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml}{}\doxysection{pip.\+\_\+vendor.\+html5lib.\+treebuilders.\+etree\+\_\+lxml Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml}\index{pip.\_vendor.html5lib.treebuilders.etree\_lxml@{pip.\_vendor.html5lib.treebuilders.etree\_lxml}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_1_1_document}{Document}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_1_1_document_type}{Document\+Type}}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_1_1_tree_builder}{Tree\+Builder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_aa7b80f9257214665ee9b57995e458cb2}\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_aa7b80f9257214665ee9b57995e458cb2}} 
+def {\bfseries test\+Serializer} (element)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_af108ba67eca36b49a3d75e78d0d35be8}{tostring}} (element)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_a31f5ac7d4540eb04271a3d17752312a4}\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_a31f5ac7d4540eb04271a3d17752312a4}} 
+bool {\bfseries full\+Tree} = True
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_ac56cb1903d366869ebbc73f2aeef1ebe}\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_ac56cb1903d366869ebbc73f2aeef1ebe}} 
+{\bfseries tag\+\_\+regexp} = re.\+compile(\char`\"{}\{(\mbox{[}$^\wedge$\}\mbox{]}$\ast$)\}(.$\ast$)\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_a8613b8362263a338310f8fcd95866c83}\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_a8613b8362263a338310f8fcd95866c83}} 
+{\bfseries comment\+\_\+type} = etree.\+Comment(\char`\"{}asd\char`\"{}).tag
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Module for supporting the lxml.etree library. The idea here is to use as much
+of the native library as possible, without using fragile hacks like custom element
+names that break between releases. The downside of this is that we cannot represent
+all possible trees; specifically the following are known to cause problems:
+
+Text or comments as siblings of the root element
+Docypes with no name
+
+When any of these things occur, we emit a DataLossWarning
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_af108ba67eca36b49a3d75e78d0d35be8}\label{namespacepip_1_1__vendor_1_1html5lib_1_1treebuilders_1_1etree__lxml_af108ba67eca36b49a3d75e78d0d35be8}} 
+\index{pip.\_vendor.html5lib.treebuilders.etree\_lxml@{pip.\_vendor.html5lib.treebuilders.etree\_lxml}!tostring@{tostring}}
+\index{tostring@{tostring}!pip.\_vendor.html5lib.treebuilders.etree\_lxml@{pip.\_vendor.html5lib.treebuilders.etree\_lxml}}
+\doxysubsubsection{\texorpdfstring{tostring()}{tostring()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+html5lib.\+treebuilders.\+etree\+\_\+lxml.\+tostring (\begin{DoxyParamCaption}\item[{}]{element }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serialize an element and its child nodes to a string\end{DoxyVerb}
+ 

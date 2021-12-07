@@ -1,0 +1,45 @@
+\hypertarget{namespacedjango_1_1utils_1_1safestring}{}\doxysection{django.\+utils.\+safestring Namespace Reference}
+\label{namespacedjango_1_1utils_1_1safestring}\index{django.utils.safestring@{django.utils.safestring}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1utils_1_1safestring_1_1_safe_data}{Safe\+Data}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1utils_1_1safestring_1_1_safe_string}{Safe\+String}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1safestring_ad619fcdb2667e8e30d2bfe5e0f062869}{mark\+\_\+safe}} (s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1safestring_af21ebfd60b8cc86b6abcaea254cb0408}\label{namespacedjango_1_1utils_1_1safestring_af21ebfd60b8cc86b6abcaea254cb0408}} 
+{\bfseries Safe\+Text} = \mbox{\hyperlink{classdjango_1_1utils_1_1safestring_1_1_safe_string}{Safe\+String}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Functions for working with "safe strings": strings that can be displayed safely
+without further escaping in HTML. Marking something as a "safe string" means
+that the producer of the string has already turned characters that should not
+be interpreted by the HTML engine (e.g. '<') into the appropriate entities.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1safestring_ad619fcdb2667e8e30d2bfe5e0f062869}\label{namespacedjango_1_1utils_1_1safestring_ad619fcdb2667e8e30d2bfe5e0f062869}} 
+\index{django.utils.safestring@{django.utils.safestring}!mark\_safe@{mark\_safe}}
+\index{mark\_safe@{mark\_safe}!django.utils.safestring@{django.utils.safestring}}
+\doxysubsubsection{\texorpdfstring{mark\_safe()}{mark\_safe()}}
+{\footnotesize\ttfamily def django.\+utils.\+safestring.\+mark\+\_\+safe (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Explicitly mark a string as safe for (HTML) output purposes. The returned
+object can be used everywhere a string is appropriate.
+
+If used on a method as a decorator, mark the returned data as safe.
+
+Can be called multiple times on a single string.
+\end{DoxyVerb}
+ 

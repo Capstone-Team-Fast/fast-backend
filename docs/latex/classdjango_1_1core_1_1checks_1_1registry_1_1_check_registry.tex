@@ -1,0 +1,66 @@
+\hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry}{}\doxysection{django.\+core.\+checks.\+registry.\+Check\+Registry Class Reference}
+\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry}\index{django.core.checks.registry.CheckRegistry@{django.core.checks.registry.CheckRegistry}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a4dbc4fb8491bc3ea9357143f51d90d86}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a4dbc4fb8491bc3ea9357143f51d90d86}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a8f08c32622071a15b3a62699adf2572c}{register}} (self, check=None, $\ast$tags, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a022691b4c75e0710389ee4b74022ceb8}{run\+\_\+checks}} (self, app\+\_\+configs=None, tags=None, include\+\_\+deployment\+\_\+checks=False, databases=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a6ef685361831740b686536e79f9d6dc9}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a6ef685361831740b686536e79f9d6dc9}} 
+def {\bfseries tag\+\_\+exists} (self, tag, include\+\_\+deployment\+\_\+checks=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a01384d6dd86647900f3f75d490e978ac}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a01384d6dd86647900f3f75d490e978ac}} 
+def {\bfseries tags\+\_\+available} (self, deployment\+\_\+checks=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_ab7fd3a82685594c9216802bba63115d4}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_ab7fd3a82685594c9216802bba63115d4}} 
+def {\bfseries get\+\_\+checks} (self, include\+\_\+deployment\+\_\+checks=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_af374a85a9963d7db58701f23c97dbb43}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_af374a85a9963d7db58701f23c97dbb43}} 
+{\bfseries registered\+\_\+checks}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_aaaa928a57bfcf30afac43c5ef8747d7c}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_aaaa928a57bfcf30afac43c5ef8747d7c}} 
+{\bfseries deployment\+\_\+checks}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a8f08c32622071a15b3a62699adf2572c}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a8f08c32622071a15b3a62699adf2572c}} 
+\index{django.core.checks.registry.CheckRegistry@{django.core.checks.registry.CheckRegistry}!register@{register}}
+\index{register@{register}!django.core.checks.registry.CheckRegistry@{django.core.checks.registry.CheckRegistry}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily def django.\+core.\+checks.\+registry.\+Check\+Registry.\+register (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{check = {\ttfamily None},  }\item[{$\ast$}]{tags,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Can be used as a function or a decorator. Register given function
+`f` labeled with given `tags`. The function should receive **kwargs
+and return list of Errors and Warnings.
+
+Example::
+
+    registry = CheckRegistry()
+    @registry.register('mytag', 'anothertag')
+    def my_check(app_configs, **kwargs):
+        # ... perform checks and collect `errors` ...
+        return errors
+    # or
+    registry.register(my_check, 'mytag', 'anothertag')
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a022691b4c75e0710389ee4b74022ceb8}\label{classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry_a022691b4c75e0710389ee4b74022ceb8}} 
+\index{django.core.checks.registry.CheckRegistry@{django.core.checks.registry.CheckRegistry}!run\_checks@{run\_checks}}
+\index{run\_checks@{run\_checks}!django.core.checks.registry.CheckRegistry@{django.core.checks.registry.CheckRegistry}}
+\doxysubsubsection{\texorpdfstring{run\_checks()}{run\_checks()}}
+{\footnotesize\ttfamily def django.\+core.\+checks.\+registry.\+Check\+Registry.\+run\+\_\+checks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+configs = {\ttfamily None},  }\item[{}]{tags = {\ttfamily None},  }\item[{}]{include\+\_\+deployment\+\_\+checks = {\ttfamily False},  }\item[{}]{databases = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run all registered checks and return list of Errors and Warnings.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/checks/registry.\+py\end{DoxyCompactItemize}

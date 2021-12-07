@@ -1,0 +1,96 @@
+\hypertarget{classdjango_1_1conf_1_1_lazy_settings}{}\doxysection{django.\+conf.\+Lazy\+Settings Class Reference}
+\label{classdjango_1_1conf_1_1_lazy_settings}\index{django.conf.LazySettings@{django.conf.LazySettings}}
+
+
+Inheritance diagram for django.\+conf.\+Lazy\+Settings\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+conf.\+Lazy\+Settings\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_a88c879904bba9001e759742aa7a40e90}\label{classdjango_1_1conf_1_1_lazy_settings_a88c879904bba9001e759742aa7a40e90}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_ab3502ebf3f7e9748cb667a3c2708254c}{\+\_\+\+\_\+getattr\+\_\+\+\_\+}} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_a1ee2e0214491decbd4134ea5b4a8f05d}{\+\_\+\+\_\+setattr\+\_\+\+\_\+}} (self, name, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_aa50ff35ccd3ab835a757e0930aefc6e8}{\+\_\+\+\_\+delattr\+\_\+\+\_\+}} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_a1ddb8f18546a81ce92929bf662515768}{configure}} (self, default\+\_\+settings=global\+\_\+settings, $\ast$$\ast$options)
+\item 
+def \mbox{\hyperlink{classdjango_1_1conf_1_1_lazy_settings_a7ed7bcef467d27210611e7d9dceeac14}{configured}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_a3d1b866b24f1d6726a3394b4eac3b63a}\label{classdjango_1_1conf_1_1_lazy_settings_a3d1b866b24f1d6726a3394b4eac3b63a}} 
+def {\bfseries PASSWORD\+\_\+\+RESET\+\_\+\+TIMEOUT\+\_\+\+DAYS} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A lazy proxy for either global Django settings or a custom settings object.
+The user can manually configure settings prior to using them. Otherwise,
+Django uses the settings module pointed to by DJANGO_SETTINGS_MODULE.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_aa50ff35ccd3ab835a757e0930aefc6e8}\label{classdjango_1_1conf_1_1_lazy_settings_aa50ff35ccd3ab835a757e0930aefc6e8}} 
+\index{django.conf.LazySettings@{django.conf.LazySettings}!\_\_delattr\_\_@{\_\_delattr\_\_}}
+\index{\_\_delattr\_\_@{\_\_delattr\_\_}!django.conf.LazySettings@{django.conf.LazySettings}}
+\doxysubsubsection{\texorpdfstring{\_\_delattr\_\_()}{\_\_delattr\_\_()}}
+{\footnotesize\ttfamily def django.\+conf.\+Lazy\+Settings.\+\_\+\+\_\+delattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Delete a setting and clear it from cache if needed.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_ab3502ebf3f7e9748cb667a3c2708254c}\label{classdjango_1_1conf_1_1_lazy_settings_ab3502ebf3f7e9748cb667a3c2708254c}} 
+\index{django.conf.LazySettings@{django.conf.LazySettings}!\_\_getattr\_\_@{\_\_getattr\_\_}}
+\index{\_\_getattr\_\_@{\_\_getattr\_\_}!django.conf.LazySettings@{django.conf.LazySettings}}
+\doxysubsubsection{\texorpdfstring{\_\_getattr\_\_()}{\_\_getattr\_\_()}}
+{\footnotesize\ttfamily def django.\+conf.\+Lazy\+Settings.\+\_\+\+\_\+getattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the value of a setting and cache it in self.__dict__.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_a1ee2e0214491decbd4134ea5b4a8f05d}\label{classdjango_1_1conf_1_1_lazy_settings_a1ee2e0214491decbd4134ea5b4a8f05d}} 
+\index{django.conf.LazySettings@{django.conf.LazySettings}!\_\_setattr\_\_@{\_\_setattr\_\_}}
+\index{\_\_setattr\_\_@{\_\_setattr\_\_}!django.conf.LazySettings@{django.conf.LazySettings}}
+\doxysubsubsection{\texorpdfstring{\_\_setattr\_\_()}{\_\_setattr\_\_()}}
+{\footnotesize\ttfamily def django.\+conf.\+Lazy\+Settings.\+\_\+\+\_\+setattr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the value of setting. Clear all cached values if _wrapped changes
+(@override_settings does this) or clear single values when set.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1functional_1_1_lazy_object}{django.\+utils.\+functional.\+Lazy\+Object}}.
+
+\mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_a1ddb8f18546a81ce92929bf662515768}\label{classdjango_1_1conf_1_1_lazy_settings_a1ddb8f18546a81ce92929bf662515768}} 
+\index{django.conf.LazySettings@{django.conf.LazySettings}!configure@{configure}}
+\index{configure@{configure}!django.conf.LazySettings@{django.conf.LazySettings}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily def django.\+conf.\+Lazy\+Settings.\+configure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{default\+\_\+settings = {\ttfamily global\+\_\+settings},  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called to manually configure the settings. The 'default_settings'
+parameter sets where to retrieve any unspecified values from (its
+argument must support attribute access (__getattr__)).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1conf_1_1_lazy_settings_a7ed7bcef467d27210611e7d9dceeac14}\label{classdjango_1_1conf_1_1_lazy_settings_a7ed7bcef467d27210611e7d9dceeac14}} 
+\index{django.conf.LazySettings@{django.conf.LazySettings}!configured@{configured}}
+\index{configured@{configured}!django.conf.LazySettings@{django.conf.LazySettings}}
+\doxysubsubsection{\texorpdfstring{configured()}{configured()}}
+{\footnotesize\ttfamily def django.\+conf.\+Lazy\+Settings.\+configured (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if the settings have already been configured.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/conf/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

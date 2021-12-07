@@ -1,0 +1,72 @@
+\hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin}{}\doxysection{django.\+views.\+generic.\+dates.\+Month\+Mixin Class Reference}
+\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin}\index{django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}}
+
+
+Inheritance diagram for django.\+views.\+generic.\+dates.\+Month\+Mixin\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+views.\+generic.\+dates.\+Month\+Mixin\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a8159f506a4b83a0e6a7abc9c5b84b7aa}{get\+\_\+month\+\_\+format}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a1279c3c7a535b838a7693db7689a170d}{get\+\_\+month}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_af3123fc740f1d28f5315330d115376e3}{get\+\_\+next\+\_\+month}} (self, date)
+\item 
+def \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a49400673b18217033066dcb6ee0b4e11}{get\+\_\+previous\+\_\+month}} (self, date)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a4d02451a3b6995b6d6cd7891b23efede}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a4d02451a3b6995b6d6cd7891b23efede}} 
+string {\bfseries month\+\_\+format} = \textquotesingle{}\%b\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_ad6ad93b6ade952251cf0e527754593ff}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_ad6ad93b6ade952251cf0e527754593ff}} 
+{\bfseries month} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Mixin for views manipulating month-based data.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a1279c3c7a535b838a7693db7689a170d}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a1279c3c7a535b838a7693db7689a170d}} 
+\index{django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}!get\_month@{get\_month}}
+\index{get\_month@{get\_month}!django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}}
+\doxysubsubsection{\texorpdfstring{get\_month()}{get\_month()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Month\+Mixin.\+get\+\_\+month (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the month for which this view should display data.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a8159f506a4b83a0e6a7abc9c5b84b7aa}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a8159f506a4b83a0e6a7abc9c5b84b7aa}} 
+\index{django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}!get\_month\_format@{get\_month\_format}}
+\index{get\_month\_format@{get\_month\_format}!django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}}
+\doxysubsubsection{\texorpdfstring{get\_month\_format()}{get\_month\_format()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Month\+Mixin.\+get\+\_\+month\+\_\+format (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get a month format string in strptime syntax to be used to parse the
+month from url variables.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_af3123fc740f1d28f5315330d115376e3}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_af3123fc740f1d28f5315330d115376e3}} 
+\index{django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}!get\_next\_month@{get\_next\_month}}
+\index{get\_next\_month@{get\_next\_month}!django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}}
+\doxysubsubsection{\texorpdfstring{get\_next\_month()}{get\_next\_month()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Month\+Mixin.\+get\+\_\+next\+\_\+month (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{date }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the next valid month.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a49400673b18217033066dcb6ee0b4e11}\label{classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin_a49400673b18217033066dcb6ee0b4e11}} 
+\index{django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}!get\_previous\_month@{get\_previous\_month}}
+\index{get\_previous\_month@{get\_previous\_month}!django.views.generic.dates.MonthMixin@{django.views.generic.dates.MonthMixin}}
+\doxysubsubsection{\texorpdfstring{get\_previous\_month()}{get\_previous\_month()}}
+{\footnotesize\ttfamily def django.\+views.\+generic.\+dates.\+Month\+Mixin.\+get\+\_\+previous\+\_\+month (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{date }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the previous valid month.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/views/generic/dates.\+py\end{DoxyCompactItemize}

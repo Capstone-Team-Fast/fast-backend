@@ -1,0 +1,166 @@
+\hypertarget{classneo4j_1_1data_1_1_record}{}\doxysection{neo4j.\+data.\+Record Class Reference}
+\label{classneo4j_1_1data_1_1_record}\index{neo4j.data.Record@{neo4j.data.Record}}
+
+
+Inheritance diagram for neo4j.\+data.\+Record\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+data.\+Record\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a733440b37849f7dbfc80dcd100d8051b}\label{classneo4j_1_1data_1_1_record_a733440b37849f7dbfc80dcd100d8051b}} 
+def {\bfseries \+\_\+\+\_\+new\+\_\+\+\_\+} (cls, iterable=())
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_abe520cf669d95ea1ff2af7c7d62880b0}\label{classneo4j_1_1data_1_1_record_abe520cf669d95ea1ff2af7c7d62880b0}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_a677599a593c35d675d8960d72462df9f}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, other)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a936b18e81ac8e8eff7e8cc52161c4a1b}\label{classneo4j_1_1data_1_1_record_a936b18e81ac8e8eff7e8cc52161c4a1b}} 
+def {\bfseries \+\_\+\+\_\+ne\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_aec4061015ae58c98a01a76c74c24e4a3}\label{classneo4j_1_1data_1_1_record_aec4061015ae58c98a01a76c74c24e4a3}} 
+def {\bfseries \+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a2f509f7937865bb93992ea37e4495329}\label{classneo4j_1_1data_1_1_record_a2f509f7937865bb93992ea37e4495329}} 
+def {\bfseries \+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, key)
+\item 
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a74adc99937dbe25a5591a61dc7699f08}\label{classneo4j_1_1data_1_1_record_a74adc99937dbe25a5591a61dc7699f08}} 
+def {\bfseries \+\_\+\+\_\+getslice\+\_\+\+\_\+} (self, start, stop)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_aed4b63e2e470f8a61ebac3a66eced8a1}{get}} (self, key, default=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_aa340d7c2dc0ce8f84d5e69470775e708}{index}} (self, key)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_ae2d53cb92bb656f253f3114f9fce90fe}{value}} (self, key=0, default=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}{keys}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_ac65f0756e2ef88b65e802bc8f908d078}{values}} (self, $\ast$\mbox{\hyperlink{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}{keys}})
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_aa82fb1c1ac368d26d9decaa7a8339be1}{items}} (self, $\ast$\mbox{\hyperlink{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}{keys}})
+\item 
+def \mbox{\hyperlink{classneo4j_1_1data_1_1_record_a24123084c9f60275847a4509076677bf}{data}} (self, $\ast$\mbox{\hyperlink{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}{keys}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A :class:`.Record` is an immutable ordered collection of key-value
+pairs. It is generally closer to a :py:class:`namedtuple` than to a
+:py:class:`OrderedDict` inasmuch as iteration of the collection will
+yield values rather than keys.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a677599a593c35d675d8960d72462df9f}\label{classneo4j_1_1data_1_1_record_a677599a593c35d675d8960d72462df9f}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} In order to be flexible regarding comparison, the equality rules
+for a record permit comparison with any other Sequence or Mapping.
+
+:param other:
+:return:
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a24123084c9f60275847a4509076677bf}\label{classneo4j_1_1data_1_1_record_a24123084c9f60275847a4509076677bf}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!data@{data}}
+\index{data@{data}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the keys and values of this record as a dictionary,
+optionally including only certain values by index or key. Keys
+provided in the items that are not in the record will be
+inserted with a value of :const:`None`; indexes provided
+that are out of bounds will trigger an :exc:`IndexError`.
+
+:param keys: indexes or keys of the items to include; if none
+              are provided, all values will be included
+:return: dictionary of values, keyed by field name
+:raises: :exc:`IndexError` if an out-of-bounds index is specified
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_aed4b63e2e470f8a61ebac3a66eced8a1}\label{classneo4j_1_1data_1_1_record_aed4b63e2e470f8a61ebac3a66eced8a1}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!get@{get}}
+\index{get@{get}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+get (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key,  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Obtain a value from the record by key, returning a default
+value if the key does not exist.
+
+:param key: a key
+:param default: default value
+:return: a value
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_aa340d7c2dc0ce8f84d5e69470775e708}\label{classneo4j_1_1data_1_1_record_aa340d7c2dc0ce8f84d5e69470775e708}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!index@{index}}
+\index{index@{index}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+index (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the index of the given item.
+
+:param key: a key
+:return: index
+:rtype: int
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_aa82fb1c1ac368d26d9decaa7a8339be1}\label{classneo4j_1_1data_1_1_record_aa82fb1c1ac368d26d9decaa7a8339be1}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!items@{items}}
+\index{items@{items}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{items()}{items()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+items (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the fields of the record as a list of key and value tuples
+
+:return: a list of value tuples
+:rtype: list
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}\label{classneo4j_1_1data_1_1_record_a1f7dd4d0747d73f39cebf97c0e53cc67}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!keys@{keys}}
+\index{keys@{keys}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{keys()}{keys()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+keys (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the keys of the record.
+
+:return: list of key names
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_ae2d53cb92bb656f253f3114f9fce90fe}\label{classneo4j_1_1data_1_1_record_ae2d53cb92bb656f253f3114f9fce90fe}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!value@{value}}
+\index{value@{value}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{key = {\ttfamily 0},  }\item[{}]{default = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Obtain a single value from the record by index or key. If no
+index or key is specified, the first value is returned. If the
+specified item does not exist, the default value is returned.
+
+:param key: an index or key
+:param default: default value
+:return: a single value
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1data_1_1_record_ac65f0756e2ef88b65e802bc8f908d078}\label{classneo4j_1_1data_1_1_record_ac65f0756e2ef88b65e802bc8f908d078}} 
+\index{neo4j.data.Record@{neo4j.data.Record}!values@{values}}
+\index{values@{values}!neo4j.data.Record@{neo4j.data.Record}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}}
+{\footnotesize\ttfamily def neo4j.\+data.\+Record.\+values (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{keys }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Return the values of the record, optionally filtering to
+include only certain values by index or key.
+
+:param keys: indexes or keys of the items to include; if none
+             are provided, all values will be included
+:return: list of values
+:rtype: list
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/data.\+py\end{DoxyCompactItemize}

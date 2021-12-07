@@ -1,0 +1,93 @@
+\hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field}{}\doxysection{django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field Class Reference}
+\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field}\index{django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}}
+
+
+Inheritance diagram for django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a8cfca03ed9a14885181f66e0ab00780d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a1fdfa4e243569e6cadda25bcd0ad15a6}{prepare\+\_\+value}} (self, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_ab041200824023d442d812baa1ca11c19}{compress}} (self, values)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a966e22b1abe00693ce5638e6ae2c2f77}{default\+\_\+error\+\_\+messages}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a9bd86517f60872a5833d0e55d26531d8}\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a9bd86517f60872a5833d0e55d26531d8}} 
+{\bfseries hidden\+\_\+widget} = \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_hidden_range_widget}{Hidden\+Range\+Widget}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a8cfca03ed9a14885181f66e0ab00780d}\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a8cfca03ed9a14885181f66e0ab00780d}} 
+\index{django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field}{django.\+forms.\+fields.\+Multi\+Value\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_ab041200824023d442d812baa1ca11c19}\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_ab041200824023d442d812baa1ca11c19}} 
+\index{django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}!compress@{compress}}
+\index{compress@{compress}!django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field.\+compress (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a single value for the given list of values. The values can be
+assumed to be valid.
+
+For example, if this MultiValueField was instantiated with
+fields=(DateField(), TimeField()), this might return a datetime
+object created by combining the date and time in data_list.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_multi_value_field_a6e86443a322fc624ba04fc023a6852d4}{django.\+forms.\+fields.\+Multi\+Value\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a1fdfa4e243569e6cadda25bcd0ad15a6}\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a1fdfa4e243569e6cadda25bcd0ad15a6}} 
+\index{django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}!prepare\_value@{prepare\_value}}
+\index{prepare\_value@{prepare\_value}!django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}}
+\doxysubsubsection{\texorpdfstring{prepare\_value()}{prepare\_value()}}
+{\footnotesize\ttfamily def django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field.\+prepare\+\_\+value (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1forms_1_1fields_1_1_field}{django.\+forms.\+fields.\+Field}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a966e22b1abe00693ce5638e6ae2c2f77}\label{classdjango_1_1contrib_1_1postgres_1_1forms_1_1ranges_1_1_base_range_field_a966e22b1abe00693ce5638e6ae2c2f77}} 
+\index{django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}!default\_error\_messages@{default\_error\_messages}}
+\index{default\_error\_messages@{default\_error\_messages}!django.contrib.postgres.forms.ranges.BaseRangeField@{django.contrib.postgres.forms.ranges.BaseRangeField}}
+\doxysubsubsection{\texorpdfstring{default\_error\_messages}{default\_error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+postgres.\+forms.\+ranges.\+Base\+Range\+Field.\+default\+\_\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid'}: \_(\textcolor{stringliteral}{'Enter two valid values.'}),}
+\DoxyCodeLine{        \textcolor{stringliteral}{'bound\_ordering'}: \_(\textcolor{stringliteral}{'The start of the range must not exceed the end of the range.'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/postgres/forms/ranges.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited}{}\doxysection{setuptools.\+\_\+vendor.\+more\+\_\+itertools.\+more.\+time\+\_\+limited Class Reference}
+\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited}\index{setuptools.\_vendor.more\_itertools.more.time\_limited@{setuptools.\_vendor.more\_itertools.more.time\_limited}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a5216044d2d66082b691e81ff550f5852}\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a5216044d2d66082b691e81ff550f5852}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, limit\+\_\+seconds, iterable)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_ad067f53e0b929535792e20c4d1d9e354}\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_ad067f53e0b929535792e20c4d1d9e354}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a1100c3ff67bbeb84a1468548a144b1e7}\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a1100c3ff67bbeb84a1468548a144b1e7}} 
+def {\bfseries \+\_\+\+\_\+next\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_afd9a751859ddb2a44350cc60410ee67c}\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_afd9a751859ddb2a44350cc60410ee67c}} 
+{\bfseries limit\+\_\+seconds}
+\item 
+\mbox{\Hypertarget{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a2ba9fc293c2fd559a84c1ad9a1f653d1}\label{classsetuptools_1_1__vendor_1_1more__itertools_1_1more_1_1time__limited_a2ba9fc293c2fd559a84c1ad9a1f653d1}} 
+{\bfseries timed\+\_\+out}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Yield items from *iterable* until *limit_seconds* have passed.
+If the time limit expires before all items have been yielded, the
+``timed_out`` parameter will be set to ``True``.
+
+>>> from time import sleep
+>>> def generator():
+...     yield 1
+...     yield 2
+...     sleep(0.2)
+...     yield 3
+>>> iterable = time_limited(0.1, generator())
+>>> list(iterable)
+[1, 2]
+>>> iterable.timed_out
+True
+
+Note that the time is checked before each item is yielded, and iteration
+stops if  the time elapsed is greater than *limit_seconds*. If your time
+limit is 1 second, but it takes 2 seconds to generate the first item from
+the iterable, the function will run for 2 seconds and not yield anything.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/setuptools/\+\_\+vendor/more\+\_\+itertools/more.\+py\end{DoxyCompactItemize}

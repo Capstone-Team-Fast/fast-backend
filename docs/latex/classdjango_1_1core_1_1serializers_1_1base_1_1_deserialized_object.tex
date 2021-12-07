@@ -1,0 +1,46 @@
+\hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object}{}\doxysection{django.\+core.\+serializers.\+base.\+Deserialized\+Object Class Reference}
+\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object}\index{django.core.serializers.base.DeserializedObject@{django.core.serializers.base.DeserializedObject}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_aedf201650b6d15d5955b12c1d3f93144}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_aedf201650b6d15d5955b12c1d3f93144}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, obj, m2m\+\_\+data=None, deferred\+\_\+fields=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a24c1e35f43e5cc62f4195d5831124b74}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a24c1e35f43e5cc62f4195d5831124b74}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a2f237fefced72c033551cd975389c435}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a2f237fefced72c033551cd975389c435}} 
+def {\bfseries save} (self, save\+\_\+m2m=True, using=None, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_af1e5c4bbf172a0be9cbfb91d390d03e3}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_af1e5c4bbf172a0be9cbfb91d390d03e3}} 
+def {\bfseries save\+\_\+deferred\+\_\+fields} (self, using=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a6901820be67e416183ebaa81db0906fd}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a6901820be67e416183ebaa81db0906fd}} 
+{\bfseries object}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a298353a34f4482f3299a50a04fc280b9}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a298353a34f4482f3299a50a04fc280b9}} 
+{\bfseries m2m\+\_\+data}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a37b9ab700bdda1700e3090144176c000}\label{classdjango_1_1core_1_1serializers_1_1base_1_1_deserialized_object_a37b9ab700bdda1700e3090144176c000}} 
+{\bfseries deferred\+\_\+fields}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A deserialized model.
+
+Basically a container for holding the pre-saved deserialized data along
+with the many-to-many data saved with the object.
+
+Call ``save()`` to save the object (with the many-to-many data) to the
+database; call ``save(save_m2m=False)`` to save just the object fields
+(and not touch the many-to-many stuff.)
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/serializers/base.\+py\end{DoxyCompactItemize}
