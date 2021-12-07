@@ -734,7 +734,8 @@ class NodeParser:
     def parse_language(language: dict):
         if language.get('name'):
             if language.get('name') in Language.options():
-                return Language(external_id=language['id'], language=language['name'])
+                name = ' '.join([part.capitalize() for part in language.get('name').split()])
+                return Language(external_id=language['id'], language=name)
             else:
                 Language.add_languages(language.get('name'))
                 return Language(external_id=language['id'], language=language['name'])
