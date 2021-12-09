@@ -225,6 +225,7 @@ class RouteManager:
         SOME_LOCATIONS_ASSIGNED = 2
         NO_LOCATIONS_ASSIGNED = 3
         OTHER_ERROR = 4
+        NO_LOCATIONS_TO_ASSIGN = 5
 
     class _Alphabet(enum.Enum):
         FALSE = 0
@@ -385,11 +386,10 @@ class RouteManager:
         return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
-        locations_to_insert = self.__tally_locations(locations)
-        self.__invalid_addresses.update(savings_manager.invalid_addresses)
-        locations = savings_manager.valid_addresses
         assigned_locations_list = set()
+        locations_to_insert = set()
         if len(locations) == 1:
+            locations_to_insert = self.__tally_locations(locations)
             try:
                 print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
                 for driver in drivers_heap[::-1]:
@@ -407,6 +407,7 @@ class RouteManager:
                 if locations[0].address.latitude is None or locations[0].address.longitude is None:
                     self.__invalid_addresses.add(locations[0])
         elif savings_manager:
+            self.__invalid_addresses.update(savings_manager.invalid_addresses)
             numbers_of_drivers = 0
             max_drivers_count = len(drivers_heap)
             state = RouteManager._State.HARD_SOLVING
@@ -460,7 +461,11 @@ class RouteManager:
             elif not driver.route.is_empty and driver.route.is_open:
                 driver.route.close_route()
 
-        if len(assigned_locations_list) != 0 and assigned_locations_list == locations_to_insert:
+        if len(assigned_locations_list) == 0 and assigned_locations_list == locations_to_insert:
+            RouteManager.__Response['solver_status'] = RouteManager._Status.NO_LOCATIONS_TO_ASSIGN.value
+            RouteManager.__Response['message'] = RouteManager._Status.NO_LOCATIONS_TO_ASSIGN.name
+            RouteManager.__Response['description'] = 'No location to assign.'
+        elif len(assigned_locations_list) != 0 and assigned_locations_list == locations_to_insert:
             RouteManager.__Response['solver_status'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'All locations were assigned.'
@@ -476,6 +481,8 @@ class RouteManager:
                 RouteManager.__Response['description'] = 'Assignment is infeasible.'
             else:
                 RouteManager.__Response['description'] = 'Some addresses were assigned.'
+            RouteManager.__Response['others'] = [address.external_id for address in
+                                                 locations_to_insert.difference(assigned_locations_list)]
         else:
             RouteManager.__Response['solver_status'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.name
@@ -737,7 +744,6 @@ class NodeParser:
                 return Language(external_id=language['id'], language=language.get('name'))
             else:
                 name = ' '.join([part.capitalize() for part in language.get('name').split()])
-                Language.add_languages(name)
                 return Language(external_id=language['id'], language=name)
 
     @staticmethod
