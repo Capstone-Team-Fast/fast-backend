@@ -9,7 +9,7 @@ import unittest, time, re
 
 class UntitledTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path=r'./chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path=r'../chromedriver.exe')
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
         self.verificationErrors = []
@@ -17,22 +17,10 @@ class UntitledTestCase(unittest.TestCase):
     
     def test_untitled_test_case(self):
         driver = self.driver
-        driver.get("http://3.144.105.249:3000/")
-        driver.find_element_by_id("search").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("james")
-        driver.find_element_by_id("search").send_keys(Keys.ENTER)
-        self.assertEqual("James", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td").text)
-        self.assertEqual("James", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr[2]/td").text)
-        driver.find_element_by_xpath("//div[@id='root']/div/div/div/div/div/div").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("jones")
-        self.assertEqual("Jones", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td[2]").text)
-        driver.find_element_by_xpath("//div[@id='root']/div/div/div/div/div/div").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("166")
-        self.assertEqual("402-166-7811", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td[3]").text)
-        self.assertEqual("402-166-7811", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr[2]/td[3]").text)
+        driver.get("http://3.144.105.249:3000/routeResults/137")
+        driver.find_element_by_link_text("Print").click()
+        #ERROR: Caught exception [ERROR: Unsupported command [selectWindow | win_ser_1 | ]]
+        self.assertEqual("Scooby Doo", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div/div/div/div/div").text)
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
