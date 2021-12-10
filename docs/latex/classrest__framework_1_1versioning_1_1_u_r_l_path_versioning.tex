@@ -1,0 +1,69 @@
+\hypertarget{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning}{}\doxysection{rest\+\_\+framework.\+versioning.\+URLPath\+Versioning Class Reference}
+\label{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning}\index{rest\_framework.versioning.URLPathVersioning@{rest\_framework.versioning.URLPathVersioning}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+versioning.\+URLPath\+Versioning\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+versioning.\+URLPath\+Versioning\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_a51ccb406d9054019801e4c0443fe32e7}{determine\+\_\+version}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_ac6eeb8e6c6217ca444968ba58cdcb5f9}{reverse}} (self, viewname, args=None, kwargs=None, request=None, format=None, $\ast$$\ast$extra)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_ab949d472df0dca4fbafe6a2907b3865f}\label{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_ab949d472df0dca4fbafe6a2907b3865f}} 
+{\bfseries invalid\+\_\+version\+\_\+message} = \+\_\+(\textquotesingle{}Invalid version in URL path.\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}To the client this is the same style as `NamespaceVersioning`.
+The difference is in the backend - this implementation uses
+Django's URL keyword arguments to determine the version.
+
+An example URL conf for two views that accept two different versions.
+
+urlpatterns = [
+    re_path(r'^(?P<version>[v1|v2]+)/users/$', users_list, name='users-list'),
+    re_path(r'^(?P<version>[v1|v2]+)/users/(?P<pk>[0-9]+)/$', users_detail, name='users-detail')
+]
+
+GET /1.0/something/ HTTP/1.1
+Host: example.com
+Accept: application/json
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_a51ccb406d9054019801e4c0443fe32e7}\label{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_a51ccb406d9054019801e4c0443fe32e7}} 
+\index{rest\_framework.versioning.URLPathVersioning@{rest\_framework.versioning.URLPathVersioning}!determine\_version@{determine\_version}}
+\index{determine\_version@{determine\_version}!rest\_framework.versioning.URLPathVersioning@{rest\_framework.versioning.URLPathVersioning}}
+\doxysubsubsection{\texorpdfstring{determine\_version()}{determine\_version()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+versioning.\+URLPath\+Versioning.\+determine\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_base_versioning}{rest\+\_\+framework.\+versioning.\+Base\+Versioning}}.
+
+\mbox{\Hypertarget{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_ac6eeb8e6c6217ca444968ba58cdcb5f9}\label{classrest__framework_1_1versioning_1_1_u_r_l_path_versioning_ac6eeb8e6c6217ca444968ba58cdcb5f9}} 
+\index{rest\_framework.versioning.URLPathVersioning@{rest\_framework.versioning.URLPathVersioning}!reverse@{reverse}}
+\index{reverse@{reverse}!rest\_framework.versioning.URLPathVersioning@{rest\_framework.versioning.URLPathVersioning}}
+\doxysubsubsection{\texorpdfstring{reverse()}{reverse()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+versioning.\+URLPath\+Versioning.\+reverse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{viewname,  }\item[{}]{args = {\ttfamily None},  }\item[{}]{kwargs = {\ttfamily None},  }\item[{}]{request = {\ttfamily None},  }\item[{}]{format = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1versioning_1_1_base_versioning}{rest\+\_\+framework.\+versioning.\+Base\+Versioning}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/versioning.\+py\end{DoxyCompactItemize}

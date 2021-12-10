@@ -1,0 +1,100 @@
+\hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner}{}\doxysection{django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner Class Reference}
+\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner}\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+
+
+Inheritance diagram for django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a7e1357701ea82da69522044aedf7f044}{ask\+\_\+not\+\_\+null\+\_\+addition}} (self, field\+\_\+name, model\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_afc25812379c3a7401902d70d8c240af4}{ask\+\_\+not\+\_\+null\+\_\+alteration}} (self, field\+\_\+name, model\+\_\+name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a9f8ea1e240c6c24285898e80de159f1b}{ask\+\_\+rename}} (self, model\+\_\+name, old\+\_\+name, new\+\_\+name, field\+\_\+instance)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a75c3f3737196faddecb9779566035c74}{ask\+\_\+rename\+\_\+model}} (self, old\+\_\+model\+\_\+state, new\+\_\+model\+\_\+state)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_ad24adf15de1643de1f365017f96775d4}{ask\+\_\+merge}} (self, app\+\_\+label)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a17497b98fdcc793992c3da935572d36e}{ask\+\_\+auto\+\_\+now\+\_\+add\+\_\+addition}} (self, field\+\_\+name, model\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a17497b98fdcc793992c3da935572d36e}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a17497b98fdcc793992c3da935572d36e}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_auto\_now\_add\_addition@{ask\_auto\_now\_add\_addition}}
+\index{ask\_auto\_now\_add\_addition@{ask\_auto\_now\_add\_addition}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_auto\_now\_add\_addition()}{ask\_auto\_now\_add\_addition()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+auto\+\_\+now\+\_\+add\+\_\+addition (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{model\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adding an auto_now_add field to a model.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_a8a199b82a0b07e2d3190f15f610bb3dc}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_ad24adf15de1643de1f365017f96775d4}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_ad24adf15de1643de1f365017f96775d4}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_merge@{ask\_merge}}
+\index{ask\_merge@{ask\_merge}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_merge()}{ask\_merge()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+merge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+label }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do you really want to merge these migrations?\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_aeafa1f7e6c13246d478da21448871428}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a7e1357701ea82da69522044aedf7f044}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a7e1357701ea82da69522044aedf7f044}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_not\_null\_addition@{ask\_not\_null\_addition}}
+\index{ask\_not\_null\_addition@{ask\_not\_null\_addition}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_not\_null\_addition()}{ask\_not\_null\_addition()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+not\+\_\+null\+\_\+addition (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{model\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adding a NOT NULL field to a model.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_ab0f4499b1ba8e0279d2b0b7afb25c1ae}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_afc25812379c3a7401902d70d8c240af4}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_afc25812379c3a7401902d70d8c240af4}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_not\_null\_alteration@{ask\_not\_null\_alteration}}
+\index{ask\_not\_null\_alteration@{ask\_not\_null\_alteration}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_not\_null\_alteration()}{ask\_not\_null\_alteration()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+not\+\_\+null\+\_\+alteration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field\+\_\+name,  }\item[{}]{model\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changing a NULL field to NOT NULL.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_a1033568bff739853b2d1d75c244e5c50}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a9f8ea1e240c6c24285898e80de159f1b}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a9f8ea1e240c6c24285898e80de159f1b}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_rename@{ask\_rename}}
+\index{ask\_rename@{ask\_rename}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_rename()}{ask\_rename()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+rename (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model\+\_\+name,  }\item[{}]{old\+\_\+name,  }\item[{}]{new\+\_\+name,  }\item[{}]{field\+\_\+instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Was this field really renamed?\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_a9ac5e47dba322dfb33be6075ed53da5a}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a75c3f3737196faddecb9779566035c74}\label{classdjango_1_1db_1_1migrations_1_1questioner_1_1_interactive_migration_questioner_a75c3f3737196faddecb9779566035c74}} 
+\index{django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}!ask\_rename\_model@{ask\_rename\_model}}
+\index{ask\_rename\_model@{ask\_rename\_model}!django.db.migrations.questioner.InteractiveMigrationQuestioner@{django.db.migrations.questioner.InteractiveMigrationQuestioner}}
+\doxysubsubsection{\texorpdfstring{ask\_rename\_model()}{ask\_rename\_model()}}
+{\footnotesize\ttfamily def django.\+db.\+migrations.\+questioner.\+Interactive\+Migration\+Questioner.\+ask\+\_\+rename\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{old\+\_\+model\+\_\+state,  }\item[{}]{new\+\_\+model\+\_\+state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Was this model really renamed?\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1migrations_1_1questioner_1_1_migration_questioner_aa871d1f0c869a88586864badf2c35041}{django.\+db.\+migrations.\+questioner.\+Migration\+Questioner}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/migrations/questioner.\+py\end{DoxyCompactItemize}

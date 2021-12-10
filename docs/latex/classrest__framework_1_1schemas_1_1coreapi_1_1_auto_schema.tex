@@ -1,0 +1,129 @@
+\hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema}{}\doxysection{rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema Class Reference}
+\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema}\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a9d2f4437336e7b0799c6120ce8705013}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, manual\+\_\+fields=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a6fcfeba867044dac87befb54d34b6411}{get\+\_\+link}} (self, path, method, base\+\_\+url)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a092c20a4f6d3f1a3416fdb64d2066cec}{get\+\_\+path\+\_\+fields}} (self, path, method)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_acd12883b89ceff0afb3a24ad966bbcf0}{get\+\_\+serializer\+\_\+fields}} (self, path, method)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a253f822f4013d90f95c053f6f92cfcd2}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a253f822f4013d90f95c053f6f92cfcd2}} 
+def {\bfseries get\+\_\+pagination\+\_\+fields} (self, path, method)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_aadfa4ddc70e7c198aedc174d2f4619db}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_aadfa4ddc70e7c198aedc174d2f4619db}} 
+def {\bfseries get\+\_\+filter\+\_\+fields} (self, path, method)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a975541e7cb36ac781c45ffc707073afc}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a975541e7cb36ac781c45ffc707073afc}} 
+def {\bfseries get\+\_\+manual\+\_\+fields} (self, path, method)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab2d42c9f49b32d057d074803990459e9}{get\+\_\+encoding}} (self, path, method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab30433e3d03b83259357075914ab2442}{update\+\_\+fields}} (fields, update\+\_\+with)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Default inspector for APIView
+
+Responsible for per-view introspection and schema generation.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a9d2f4437336e7b0799c6120ce8705013}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a9d2f4437336e7b0799c6120ce8705013}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{manual\+\_\+fields = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parameters:
+
+* `manual_fields`: list of `coreapi.Field` instances that
+    will be added to auto-generated fields, overwriting on `Field.name`
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1schemas_1_1inspectors_1_1_view_inspector}{rest\+\_\+framework.\+schemas.\+inspectors.\+View\+Inspector}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab2d42c9f49b32d057d074803990459e9}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab2d42c9f49b32d057d074803990459e9}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!get\_encoding@{get\_encoding}}
+\index{get\_encoding@{get\_encoding}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{get\_encoding()}{get\_encoding()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+get\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{method }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the 'encoding' parameter to use for a given endpoint.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a6fcfeba867044dac87befb54d34b6411}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a6fcfeba867044dac87befb54d34b6411}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!get\_link@{get\_link}}
+\index{get\_link@{get\_link}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{get\_link()}{get\_link()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+get\+\_\+link (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{method,  }\item[{}]{base\+\_\+url }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate `coreapi.Link` for self.view, path and method.
+
+This is the main _public_ access point.
+
+Parameters:
+
+* path: Route path for view from URLConf.
+* method: The HTTP request method.
+* base_url: The project "mount point" as given to SchemaGenerator
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a092c20a4f6d3f1a3416fdb64d2066cec}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_a092c20a4f6d3f1a3416fdb64d2066cec}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!get\_path\_fields@{get\_path\_fields}}
+\index{get\_path\_fields@{get\_path\_fields}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{get\_path\_fields()}{get\_path\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+get\+\_\+path\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{method }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of `coreapi.Field` instances corresponding to any
+templated path variables.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_acd12883b89ceff0afb3a24ad966bbcf0}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_acd12883b89ceff0afb3a24ad966bbcf0}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!get\_serializer\_fields@{get\_serializer\_fields}}
+\index{get\_serializer\_fields@{get\_serializer\_fields}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{get\_serializer\_fields()}{get\_serializer\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+get\+\_\+serializer\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{method }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of `coreapi.Field` instances corresponding to any
+request body input, as determined by the serializer class.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab30433e3d03b83259357075914ab2442}\label{classrest__framework_1_1schemas_1_1coreapi_1_1_auto_schema_ab30433e3d03b83259357075914ab2442}} 
+\index{rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}!update\_fields@{update\_fields}}
+\index{update\_fields@{update\_fields}!rest\_framework.schemas.coreapi.AutoSchema@{rest\_framework.schemas.coreapi.AutoSchema}}
+\doxysubsubsection{\texorpdfstring{update\_fields()}{update\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+schemas.\+coreapi.\+Auto\+Schema.\+update\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{fields,  }\item[{}]{update\+\_\+with }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Update list of coreapi.Field instances, overwriting on `Field.name`.
+
+Utility function to handle replacing coreapi.Field fields
+from a list by name. Used to handle `manual_fields`.
+
+Parameters:
+
+* `fields`: list of `coreapi.Field` instances to update
+* `update_with: list of `coreapi.Field` instances to add or replace.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/schemas/coreapi.\+py\end{DoxyCompactItemize}

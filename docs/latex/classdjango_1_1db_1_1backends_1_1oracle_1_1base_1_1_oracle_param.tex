@@ -1,0 +1,32 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param}{}\doxysection{django.\+db.\+backends.\+oracle.\+base.\+Oracle\+Param Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param}\index{django.db.backends.oracle.base.OracleParam@{django.db.backends.oracle.base.OracleParam}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_a9af68719bee17d824d07b53242eed1aa}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_a9af68719bee17d824d07b53242eed1aa}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, param, cursor, strings\+\_\+only=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_a774506a6b2e4e2f31cc7abe7582420e3}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_a774506a6b2e4e2f31cc7abe7582420e3}} 
+{\bfseries force\+\_\+bytes}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_ac22c2fae91219ef9c298e9290ade67cf}\label{classdjango_1_1db_1_1backends_1_1oracle_1_1base_1_1_oracle_param_ac22c2fae91219ef9c298e9290ade67cf}} 
+{\bfseries input\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Wrapper object for formatting parameters for Oracle. If the string
+representation of the value is large enough (greater than 4000 characters)
+the input size needs to be set as CLOB. Alternatively, if the parameter
+has an `input_size` attribute, then the value of the `input_size` attribute
+will be used instead. Otherwise, no input size will be set for the
+parameter when executing the query.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/oracle/base.\+py\end{DoxyCompactItemize}

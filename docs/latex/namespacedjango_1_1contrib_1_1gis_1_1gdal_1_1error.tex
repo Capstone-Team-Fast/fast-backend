@@ -1,0 +1,87 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error}{}\doxysection{django.\+contrib.\+gis.\+gdal.\+error Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error}\index{django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1gdal_1_1error_1_1_g_d_a_l_exception}{GDALException}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1gdal_1_1error_1_1_s_r_s_exception}{SRSException}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a24f2b06c8c1b7a45aa94e5e78886b7cb}{check\+\_\+err}} (code, cpl=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a80558669a349e5e43dd03480789e1071}{OGRERR\+\_\+\+DICT}}
+\item 
+dictionary \mbox{\hyperlink{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a10aa5339ff061058463d2dfabeef0d9c}{CPLERR\+\_\+\+DICT}}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a266297e08d1fad5fda333ad5c63bb30d}\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a266297e08d1fad5fda333ad5c63bb30d}} 
+int {\bfseries ERR\+\_\+\+NONE} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} This module houses the GDAL & SRS Exception objects, and the
+ check_err() routine which checks the status code returned by
+ GDAL/OGR methods.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a24f2b06c8c1b7a45aa94e5e78886b7cb}\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a24f2b06c8c1b7a45aa94e5e78886b7cb}} 
+\index{django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}!check\_err@{check\_err}}
+\index{check\_err@{check\_err}!django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}}
+\doxysubsubsection{\texorpdfstring{check\_err()}{check\_err()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+gdal.\+error.\+check\+\_\+err (\begin{DoxyParamCaption}\item[{}]{code,  }\item[{}]{cpl = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the given CPL/OGRERR and raise an exception where appropriate.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a10aa5339ff061058463d2dfabeef0d9c}\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a10aa5339ff061058463d2dfabeef0d9c}} 
+\index{django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}!CPLERR\_DICT@{CPLERR\_DICT}}
+\index{CPLERR\_DICT@{CPLERR\_DICT}!django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}}
+\doxysubsubsection{\texorpdfstring{CPLERR\_DICT}{CPLERR\_DICT}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+gis.\+gdal.\+error.\+CPLERR\+\_\+\+DICT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     1: (GDALException, \textcolor{stringliteral}{'AppDefined'}),}
+\DoxyCodeLine{3     2: (GDALException, \textcolor{stringliteral}{'OutOfMemory'}),}
+\DoxyCodeLine{4     3: (GDALException, \textcolor{stringliteral}{'FileIO'}),}
+\DoxyCodeLine{5     4: (GDALException, \textcolor{stringliteral}{'OpenFailed'}),}
+\DoxyCodeLine{6     5: (GDALException, \textcolor{stringliteral}{'IllegalArg'}),}
+\DoxyCodeLine{7     6: (GDALException, \textcolor{stringliteral}{'NotSupported'}),}
+\DoxyCodeLine{8     7: (GDALException, \textcolor{stringliteral}{'AssertionFailed'}),}
+\DoxyCodeLine{9     8: (GDALException, \textcolor{stringliteral}{'NoWriteAccess'}),}
+\DoxyCodeLine{10     9: (GDALException, \textcolor{stringliteral}{'UserInterrupt'}),}
+\DoxyCodeLine{11     10: (GDALException, \textcolor{stringliteral}{'ObjectNull'}),}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a80558669a349e5e43dd03480789e1071}\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1error_a80558669a349e5e43dd03480789e1071}} 
+\index{django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}!OGRERR\_DICT@{OGRERR\_DICT}}
+\index{OGRERR\_DICT@{OGRERR\_DICT}!django.contrib.gis.gdal.error@{django.contrib.gis.gdal.error}}
+\doxysubsubsection{\texorpdfstring{OGRERR\_DICT}{OGRERR\_DICT}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+gis.\+gdal.\+error.\+OGRERR\+\_\+\+DICT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     1: (GDALException, \textcolor{stringliteral}{'Not enough data.'}),}
+\DoxyCodeLine{3     2: (GDALException, \textcolor{stringliteral}{'Not enough memory.'}),}
+\DoxyCodeLine{4     3: (GDALException, \textcolor{stringliteral}{'Unsupported geometry type.'}),}
+\DoxyCodeLine{5     4: (GDALException, \textcolor{stringliteral}{'Unsupported operation.'}),}
+\DoxyCodeLine{6     5: (GDALException, \textcolor{stringliteral}{'Corrupt data.'}),}
+\DoxyCodeLine{7     6: (GDALException, \textcolor{stringliteral}{'OGR failure.'}),}
+\DoxyCodeLine{8     7: (SRSException, \textcolor{stringliteral}{'Unsupported SRS.'}),}
+\DoxyCodeLine{9     8: (GDALException, \textcolor{stringliteral}{'Invalid handle.'}),}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}

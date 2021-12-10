@@ -1,0 +1,45 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+unicode\+\_\+set Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set}\index{pip.\_vendor.pyparsing.unicode\_set@{pip.\_vendor.pyparsing.unicode\_set}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+unicode\+\_\+set\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+unicode\+\_\+set\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a1adcb48a62fc23eaa9df7de3ce25a81f}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a1adcb48a62fc23eaa9df7de3ce25a81f}} 
+def {\bfseries printables} (cls)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a9b868e8f62d00e2c58ea9144af4de695}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a9b868e8f62d00e2c58ea9144af4de695}} 
+def {\bfseries alphas} (cls)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a6be272817dada15ab03cff8b6e269d8e}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a6be272817dada15ab03cff8b6e269d8e}} 
+def {\bfseries nums} (cls)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a077f72cd0675eb9eeeff1f536ba0e484}\label{classpip_1_1__vendor_1_1pyparsing_1_1unicode__set_a077f72cd0675eb9eeeff1f536ba0e484}} 
+def {\bfseries alphanums} (cls)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A set of Unicode characters, for language-specific strings for
+``alphas``, ``nums``, ``alphanums``, and ``printables``.
+A unicode_set is defined by a list of ranges in the Unicode character
+set, in a class attribute ``_ranges``, such as::
+
+    _ranges = [(0x0020, 0x007e), (0x00a0, 0x00ff),]
+
+A unicode set can also be defined using multiple inheritance of other unicode sets::
+
+    class CJK(Chinese, Japanese, Korean):
+        pass
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

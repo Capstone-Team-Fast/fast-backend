@@ -1,0 +1,113 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip}\index{pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a8e2f4bf3c50fe02ad8cd906c37aae197}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expr, must\+\_\+skip=False)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_add4fa4df847c2ff61988c1a49876ab1d}{\+\_\+\+\_\+add\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a89db89d7c85a369639b9c6ea4387ac6d}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a110192947e47e80dcb09b7b4c30a6647}{parse\+Impl}} (self, $\ast$args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_abd1d3b76aeffeeec22adc2f64b255d90}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_abd1d3b76aeffeeec22adc2f64b255d90}} 
+{\bfseries str\+Repr}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a361d6cfc183abd8e776eaf5b158a8a37}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a361d6cfc183abd8e776eaf5b158a8a37}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a3ba2a157e63371f8c3e6c2a9c42f1088}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a3ba2a157e63371f8c3e6c2a9c42f1088}} 
+{\bfseries anchor}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a671bdce51c238172c9c3e8cd3c7027b1}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a671bdce51c238172c9c3e8cd3c7027b1}} 
+{\bfseries must\+\_\+skip}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a8e2f4bf3c50fe02ad8cd906c37aae197}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a8e2f4bf3c50fe02ad8cd906c37aae197}} 
+\index{pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{must\+\_\+skip = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parser_element}{pip.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_add4fa4df847c2ff61988c1a49876ab1d}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_add4fa4df847c2ff61988c1a49876ab1d}} 
+\index{pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}!\_\_add\_\_@{\_\_add\_\_}}
+\index{\_\_add\_\_@{\_\_add\_\_}!pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}}
+\doxysubsubsection{\texorpdfstring{\_\_add\_\_()}{\_\_add\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip.\+\_\+\+\_\+add\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Implementation of + operator - returns :class:`And`. Adding strings to a ParserElement
+converts them to :class:`Literal`s by default.
+
+Example::
+
+    greet = Word(alphas) + "," + Word(alphas) + "!"
+    hello = "Hello, World!"
+    print (hello, "->", greet.parseString(hello))
+
+prints::
+
+    Hello, World! -> ['Hello', ',', 'World', '!']
+
+``...`` may be used as a parse expression as a short form of :class:`SkipTo`.
+
+    Literal('start') + ... + Literal('end')
+
+is equivalent to:
+
+    Literal('start') + SkipTo('end')("_skipped*") + Literal('end')
+
+Note that the skipped text is returned with '_skipped' as a results name,
+and to support having multiple skips in the same parser, the value returned is
+a list of all skipped text.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parser_element_a0d585e312acf3c39459f56ac77effdd7}{pip.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a89db89d7c85a369639b9c6ea4387ac6d}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a89db89d7c85a369639b9c6ea4387ac6d}} 
+\index{pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parser_element}{pip.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a110192947e47e80dcb09b7b4c30a6647}\label{classpip_1_1__vendor_1_1pyparsing_1_1___pending_skip_a110192947e47e80dcb09b7b4c30a6647}} 
+\index{pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pip.\_vendor.pyparsing.\_PendingSkip@{pip.\_vendor.pyparsing.\_PendingSkip}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+\_\+\+Pending\+Skip.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parser_element}{pip.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

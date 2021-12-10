@@ -1,0 +1,47 @@
+\hypertarget{namespacedjango_1_1core_1_1files_1_1uploadhandler}{}\doxysection{django.\+core.\+files.\+uploadhandler Namespace Reference}
+\label{namespacedjango_1_1core_1_1files_1_1uploadhandler}\index{django.core.files.uploadhandler@{django.core.files.uploadhandler}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_file_upload_handler}{File\+Upload\+Handler}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_memory_file_upload_handler}{Memory\+File\+Upload\+Handler}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_skip_file}{Skip\+File}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_stop_future_handlers}{Stop\+Future\+Handlers}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_stop_upload}{Stop\+Upload}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_temporary_file_upload_handler}{Temporary\+File\+Upload\+Handler}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1core_1_1files_1_1uploadhandler_1_1_upload_file_exception}{Upload\+File\+Exception}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1core_1_1files_1_1uploadhandler_a5a8aed5af4ba2e0cfeeebd5b7b26f2df}{load\+\_\+handler}} (path, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base file upload handler classes, and the built-in concrete subclasses
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1core_1_1files_1_1uploadhandler_a5a8aed5af4ba2e0cfeeebd5b7b26f2df}\label{namespacedjango_1_1core_1_1files_1_1uploadhandler_a5a8aed5af4ba2e0cfeeebd5b7b26f2df}} 
+\index{django.core.files.uploadhandler@{django.core.files.uploadhandler}!load\_handler@{load\_handler}}
+\index{load\_handler@{load\_handler}!django.core.files.uploadhandler@{django.core.files.uploadhandler}}
+\doxysubsubsection{\texorpdfstring{load\_handler()}{load\_handler()}}
+{\footnotesize\ttfamily def django.\+core.\+files.\+uploadhandler.\+load\+\_\+handler (\begin{DoxyParamCaption}\item[{}]{path,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a path to a handler, return an instance of that handler.
+
+E.g.::
+    >>> from django.http import HttpRequest
+    >>> request = HttpRequest()
+    >>> load_handler('django.core.files.uploadhandler.TemporaryFileUploadHandler', request)
+    <TemporaryFileUploadHandler object at 0x...>
+\end{DoxyVerb}
+ 

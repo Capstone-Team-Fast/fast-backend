@@ -1,0 +1,112 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional}\index{pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a961ba4ed7d732d2e1c2c4ff451a59828}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expr, default=\+\_\+optional\+Not\+Matched)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a29bcd35d3c4372bee814ce583f27b8d9}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a5b76d791b02bd21e12274019877a26e5}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a5ad6e109513ef4cb30bc943fefb0aea7}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a5ad6e109513ef4cb30bc943fefb0aea7}} 
+{\bfseries save\+As\+List}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a11404c083f62200af585f06f475038e3}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a11404c083f62200af585f06f475038e3}} 
+{\bfseries default\+Value}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a552045a3dc2e454a60c533ad305ad7c5}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a552045a3dc2e454a60c533ad305ad7c5}} 
+{\bfseries may\+Return\+Empty}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_af1f15a2115ea411762e3acc46c32123b}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_af1f15a2115ea411762e3acc46c32123b}} 
+{\bfseries str\+Repr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Optional matching of the given expression.
+
+Parameters:
+ - expr - expression that must match zero or more times
+ - default (optional) - value to be returned if the optional expression is not found.
+
+Example::
+    # US postal code can be a 5-digit zip, plus optional 4-digit qualifier
+    zip = Combine(Word(nums, exact=5) + Optional('-' + Word(nums, exact=4)))
+    zip.runTests('''
+        # traditional ZIP code
+        12345
+        
+        # ZIP+4 form
+        12101-0001
+        
+        # invalid ZIP
+        98765-
+        ''')
+prints::
+    # traditional ZIP code
+    12345
+    ['12345']
+
+    # ZIP+4 form
+    12101-0001
+    ['12101-0001']
+
+    # invalid ZIP
+    98765-
+         ^
+    FAIL: Expected end of text (at char 5), (line:1, col:6)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a961ba4ed7d732d2e1c2c4ff451a59828}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a961ba4ed7d732d2e1c2c4ff451a59828}} 
+\index{pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{default = {\ttfamily \+\_\+optionalNotMatched} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a5b76d791b02bd21e12274019877a26e5}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a5b76d791b02bd21e12274019877a26e5}} 
+\index{pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a29bcd35d3c4372bee814ce583f27b8d9}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_optional_a29bcd35d3c4372bee814ce583f27b8d9}} 
+\index{pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.Optional@{pkg\_resources.\_vendor.pyparsing.Optional}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Optional.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

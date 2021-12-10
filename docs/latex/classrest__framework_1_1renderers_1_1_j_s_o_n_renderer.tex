@@ -1,0 +1,67 @@
+\hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer}{}\doxysection{rest\+\_\+framework.\+renderers.\+JSONRenderer Class Reference}
+\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer}\index{rest\_framework.renderers.JSONRenderer@{rest\_framework.renderers.JSONRenderer}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+renderers.\+JSONRenderer\+:
+% FIG 0
+
+
+Collaboration diagram for rest\+\_\+framework.\+renderers.\+JSONRenderer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ae5cece3b58b326528078e7c61635c797}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ae5cece3b58b326528078e7c61635c797}} 
+def {\bfseries get\+\_\+indent} (self, accepted\+\_\+media\+\_\+type, renderer\+\_\+context)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a3e68a58fce6d25d84bd9c6028cf752b2}{render}} (self, data, accepted\+\_\+media\+\_\+type=None, renderer\+\_\+context=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a4f7570b307467dfb24555e6b4d4d0d74}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a4f7570b307467dfb24555e6b4d4d0d74}} 
+string {\bfseries media\+\_\+type} = \textquotesingle{}application/json\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a9c285db9d40d27a366267483bbd05e87}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a9c285db9d40d27a366267483bbd05e87}} 
+string {\bfseries format} = \textquotesingle{}json\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a841ffef60dc0caaf9e4721c035c95eaa}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a841ffef60dc0caaf9e4721c035c95eaa}} 
+{\bfseries encoder\+\_\+class} = encoders.\+JSONEncoder
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a3e1f19989aff62478c242d9d0ca9e28a}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a3e1f19989aff62478c242d9d0ca9e28a}} 
+{\bfseries ensure\+\_\+ascii} = not api\+\_\+settings.\+UNICODE\+\_\+\+JSON
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ab890d7db6867a3c09a7c3508abb36218}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ab890d7db6867a3c09a7c3508abb36218}} 
+{\bfseries compact} = api\+\_\+settings.\+COMPACT\+\_\+\+JSON
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a8e718b7c7c1df6f3d58ed6b25d3ff7bd}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a8e718b7c7c1df6f3d58ed6b25d3ff7bd}} 
+{\bfseries strict} = api\+\_\+settings.\+STRICT\+\_\+\+JSON
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ac8da6ce8d66f01fd0c5332bfb9d0c928}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_ac8da6ce8d66f01fd0c5332bfb9d0c928}} 
+{\bfseries charset} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Renderer which serializes to JSON.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a3e68a58fce6d25d84bd9c6028cf752b2}\label{classrest__framework_1_1renderers_1_1_j_s_o_n_renderer_a3e68a58fce6d25d84bd9c6028cf752b2}} 
+\index{rest\_framework.renderers.JSONRenderer@{rest\_framework.renderers.JSONRenderer}!render@{render}}
+\index{render@{render}!rest\_framework.renderers.JSONRenderer@{rest\_framework.renderers.JSONRenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+renderers.\+JSONRenderer.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{accepted\+\_\+media\+\_\+type = {\ttfamily None},  }\item[{}]{renderer\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Render `data` into JSON, returning a bytestring.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrest__framework_1_1renderers_1_1_base_renderer}{rest\+\_\+framework.\+renderers.\+Base\+Renderer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/renderers.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller}{}\doxysection{pip.\+\_\+vendor.\+cachecontrol.\+controller Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller}\index{pip.\_vendor.cachecontrol.controller@{pip.\_vendor.cachecontrol.controller}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1cachecontrol_1_1controller_1_1_cache_controller}{Cache\+Controller}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_a32f0488a331e99accfbd0e6b40b6170d}{parse\+\_\+uri}} (uri)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_ae5e296bfc4ef86a74b58f0685cd21d84}\label{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_ae5e296bfc4ef86a74b58f0685cd21d84}} 
+{\bfseries logger} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_ae4a3ff8b73ed94a6a378a51c0a12afc5}\label{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_ae4a3ff8b73ed94a6a378a51c0a12afc5}} 
+{\bfseries URI} = re.\+compile(r\char`\"{}$^\wedge$((\mbox{[}$^\wedge$\+:/?\#\mbox{]}+)\+:)?(//(\mbox{[}$^\wedge$/?\#\mbox{]}$\ast$))?(\mbox{[}$^\wedge$?\#\mbox{]}$\ast$)(\textbackslash{}?(\mbox{[}$^\wedge$\#\mbox{]}$\ast$))?(\#(.$\ast$))?\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The httplib2 algorithms ported for use with requests.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_a32f0488a331e99accfbd0e6b40b6170d}\label{namespacepip_1_1__vendor_1_1cachecontrol_1_1controller_a32f0488a331e99accfbd0e6b40b6170d}} 
+\index{pip.\_vendor.cachecontrol.controller@{pip.\_vendor.cachecontrol.controller}!parse\_uri@{parse\_uri}}
+\index{parse\_uri@{parse\_uri}!pip.\_vendor.cachecontrol.controller@{pip.\_vendor.cachecontrol.controller}}
+\doxysubsubsection{\texorpdfstring{parse\_uri()}{parse\_uri()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+cachecontrol.\+controller.\+parse\+\_\+uri (\begin{DoxyParamCaption}\item[{}]{uri }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parses a URI using the regex given in Appendix B of RFC 3986.
+
+    (scheme, authority, path, query, fragment) = parse_uri(uri)
+\end{DoxyVerb}
+ 

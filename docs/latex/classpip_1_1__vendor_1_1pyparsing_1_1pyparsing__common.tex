@@ -1,0 +1,309 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+pyparsing\+\_\+common Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common}\index{pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a4e94dcf87ca3c72e569ed1f350e1557e}{convert\+To\+Date}} (fmt=\char`\"{}\%Y-\/\%m-\/\%d\char`\"{})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a63ddf1630dca0a46873eaee404d0264e}{convert\+To\+Datetime}} (fmt=\char`\"{}\%Y-\/\%m-\/\%dT\%H\+:\%M\+:\%S.\%f\char`\"{})
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_addd017ae430585480cddba7df09fcbed}{strip\+HTMLTags}} (s, l, tokens)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a9886b6fe6e73f19b350c7afb8bbb2be8}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a9886b6fe6e73f19b350c7afb8bbb2be8}} 
+{\bfseries convert\+To\+Integer} = token\+Map(int)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_afd082fa6758510baa724a12cb8a3d00a}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_afd082fa6758510baa724a12cb8a3d00a}} 
+{\bfseries convert\+To\+Float} = token\+Map(float)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a8ede11fe457c264fa7c6aef0876b1f7f}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a8ede11fe457c264fa7c6aef0876b1f7f}} 
+{\bfseries integer} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_word}{Word}}(nums).set\+Name(\char`\"{}integer\char`\"{}).set\+Parse\+Action(convert\+To\+Integer)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_af48e73b9c89c0120217ede1d50c71d01}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_af48e73b9c89c0120217ede1d50c71d01}} 
+{\bfseries hex\+\_\+integer} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_word}{Word}}(hexnums).set\+Name(\char`\"{}hex integer\char`\"{}).set\+Parse\+Action(token\+Map(int, 16))
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ac5eb2396d0c141fa33844a24bad2162e}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ac5eb2396d0c141fa33844a24bad2162e}} 
+{\bfseries signed\+\_\+integer} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+\textquotesingle{}).set\+Name(\char`\"{}signed integer\char`\"{}).set\+Parse\+Action(convert\+To\+Integer)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a517392dad80a749c7e81ae432f28ff13}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a517392dad80a749c7e81ae432f28ff13}} 
+tuple {\bfseries fraction} = (signed\+\_\+integer().set\+Parse\+Action(convert\+To\+Float) + \textquotesingle{}/\textquotesingle{} + signed\+\_\+integer().set\+Parse\+Action(convert\+To\+Float)).set\+Name(\char`\"{}fraction\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ac77f9fda08dd991b17af6436520ab0d1}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ac77f9fda08dd991b17af6436520ab0d1}} 
+tuple {\bfseries mixed\+\_\+integer} = (fraction $\vert$ signed\+\_\+integer + \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_optional}{Optional}}(\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_optional}{Optional}}(\textquotesingle{}-\/\textquotesingle{}).suppress() + fraction)).set\+Name(\char`\"{}fraction or mixed integer-\/fraction\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a02a81be163f4ff69fc5ba869f5353ef8}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a02a81be163f4ff69fc5ba869f5353ef8}} 
+{\bfseries real} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}+-\/\mbox{]}?(?\+:\textbackslash{}d+\textbackslash{}.\textbackslash{}d$\ast$$\vert$\textbackslash{}.\textbackslash{}d+)\textquotesingle{}).set\+Name(\char`\"{}real number\char`\"{}).set\+Parse\+Action(convert\+To\+Float)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a9683480579512073040e1a9150773242}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a9683480579512073040e1a9150773242}} 
+{\bfseries sci\+\_\+real} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}+-\/\mbox{]}?(?\+:\textbackslash{}d+(?\+:\mbox{[}eE\mbox{]}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+)$\vert$(?\+:\textbackslash{}d+\textbackslash{}.\textbackslash{}d$\ast$$\vert$\textbackslash{}.\textbackslash{}d+)(?\+:\mbox{[}eE\mbox{]}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+)?)\textquotesingle{}).set\+Name(\char`\"{}real number with scientific notation\char`\"{}).set\+Parse\+Action(convert\+To\+Float)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a6d3105c61f1e9662967edd6211caf66f}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a6d3105c61f1e9662967edd6211caf66f}} 
+tuple {\bfseries number} = (sci\+\_\+real $\vert$ real $\vert$ signed\+\_\+integer).streamline()
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a8818a21fd4aa91eee87ff1564da962ae}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a8818a21fd4aa91eee87ff1564da962ae}} 
+{\bfseries fnumber} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+\textbackslash{}.?\textbackslash{}d$\ast$(\mbox{[}eE\mbox{]}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+)?\textquotesingle{}).set\+Name(\char`\"{}fnumber\char`\"{}).set\+Parse\+Action(convert\+To\+Float)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a3133c2f4bd3335f1cd4bd93e8c1a87df}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a3133c2f4bd3335f1cd4bd93e8c1a87df}} 
+{\bfseries identifier} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_word}{Word}}(alphas + \textquotesingle{}\+\_\+\textquotesingle{}, alphanums + \textquotesingle{}\+\_\+\textquotesingle{}).set\+Name(\char`\"{}identifier\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a6cb241df0b5a0782db16beac17d5ae0b}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a6cb241df0b5a0782db16beac17d5ae0b}} 
+{\bfseries ipv4\+\_\+address} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}(25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$1?\mbox{[}0-\/9\mbox{]}\{1,2\})(\textbackslash{}.(25\mbox{[}0-\/5\mbox{]}$\vert$2\mbox{[}0-\/4\mbox{]}\mbox{[}0-\/9\mbox{]}$\vert$1?\mbox{[}0-\/9\mbox{]}\{1,2\}))\{3\}\textquotesingle{}).set\+Name(\char`\"{}IPv4 address\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a84cc8fe1d0ed7e7a96ae010c5651b7d0}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a84cc8fe1d0ed7e7a96ae010c5651b7d0}} 
+{\bfseries ipv6\+\_\+address} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_combine}{Combine}}((\+\_\+full\+\_\+ipv6\+\_\+address $\vert$ \+\_\+mixed\+\_\+ipv6\+\_\+address $\vert$ \+\_\+short\+\_\+ipv6\+\_\+address).set\+Name(\char`\"{}IPv6 address\char`\"{})).set\+Name(\char`\"{}IPv6 address\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a76f9e94db36e0329a3c377aeb593fa47}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a76f9e94db36e0329a3c377aeb593fa47}} 
+{\bfseries mac\+\_\+address} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{2\}(\mbox{[}\+:.-\/\mbox{]})\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{2\}(?\+:\textbackslash{}1\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{2\})\{4\}\textquotesingle{}).set\+Name(\char`\"{}MAC address\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_afb8c3f44f1aaf714e369db29e8a3f14a}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_afb8c3f44f1aaf714e369db29e8a3f14a}} 
+{\bfseries iso8601\+\_\+date} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}(?P$<$year$>$\textbackslash{}d\{4\})(?\+:-\/(?P$<$month$>$\textbackslash{}d\textbackslash{}d)(?\+:-\/(?P$<$day$>$\textbackslash{}d\textbackslash{}d))?)?\textquotesingle{}).set\+Name(\char`\"{}ISO8601 date\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ad9aafc38e2cd9117f01662dec5ca20b7}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_ad9aafc38e2cd9117f01662dec5ca20b7}} 
+{\bfseries iso8601\+\_\+datetime} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}(?P$<$year$>$\textbackslash{}d\{4\})-\/(?P$<$month$>$\textbackslash{}d\textbackslash{}d)-\/(?P$<$day$>$\textbackslash{}d\textbackslash{}d)\mbox{[}T \mbox{]}(?P$<$hour$>$\textbackslash{}d\textbackslash{}d)\+:(?P$<$minute$>$\textbackslash{}d\textbackslash{}d)(\+:(?P$<$second$>$\textbackslash{}d\textbackslash{}d(\textbackslash{}.\textbackslash{}d$\ast$)?)?)?(?P$<$tz$>$Z$\vert$\mbox{[}+-\/\mbox{]}\textbackslash{}d\textbackslash{}d\+:?\textbackslash{}d\textbackslash{}d)?\textquotesingle{}).set\+Name(\char`\"{}ISO8601 datetime\char`\"{})
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a4d10c2f2141bae40e57f677cf24cc8b5}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a4d10c2f2141bae40e57f677cf24cc8b5}} 
+{\bfseries uuid} = \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_regex}{Regex}}(r\textquotesingle{}\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{8\}(-\/\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{4\})\{3\}-\/\mbox{[}0-\/9a-\/fA-\/F\mbox{]}\{12\}\textquotesingle{}).set\+Name(\char`\"{}UUID\char`\"{})
+\item 
+\mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_aa91d21536990bd35ee927c9847a5c145}{comma\+\_\+separated\+\_\+list}}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a5bf6277a67c862eef44a9abb030dd6a8}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a5bf6277a67c862eef44a9abb030dd6a8}} 
+{\bfseries upcase\+Tokens} = staticmethod(token\+Map(lambda t\+: \+\_\+ustr(t).upper()))
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a7fe67e39fc2cc58f54f04c3f4095e363}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a7fe67e39fc2cc58f54f04c3f4095e363}} 
+{\bfseries downcase\+Tokens} = staticmethod(token\+Map(lambda t\+: \+\_\+ustr(t).lower()))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Here are some common low-level expressions that may be useful in
+jump-starting parser development:
+
+ - numeric forms (:class:`integers<integer>`, :class:`reals<real>`,
+   :class:`scientific notation<sci_real>`)
+ - common :class:`programming identifiers<identifier>`
+ - network addresses (:class:`MAC<mac_address>`,
+   :class:`IPv4<ipv4_address>`, :class:`IPv6<ipv6_address>`)
+ - ISO8601 :class:`dates<iso8601_date>` and
+   :class:`datetime<iso8601_datetime>`
+ - :class:`UUID<uuid>`
+ - :class:`comma-separated list<comma_separated_list>`
+
+Parse actions:
+
+ - :class:`convertToInteger`
+ - :class:`convertToFloat`
+ - :class:`convertToDate`
+ - :class:`convertToDatetime`
+ - :class:`stripHTMLTags`
+ - :class:`upcaseTokens`
+ - :class:`downcaseTokens`
+
+Example::
+
+    pyparsing_common.number.runTests('''
+        # any int or real number, returned as the appropriate type
+        100
+        -100
+        +100
+        3.14159
+        6.02e23
+        1e-12
+        ''')
+
+    pyparsing_common.fnumber.runTests('''
+        # any int or real number, returned as float
+        100
+        -100
+        +100
+        3.14159
+        6.02e23
+        1e-12
+        ''')
+
+    pyparsing_common.hex_integer.runTests('''
+        # hex numbers
+        100
+        FF
+        ''')
+
+    pyparsing_common.fraction.runTests('''
+        # fractions
+        1/2
+        -3/4
+        ''')
+
+    pyparsing_common.mixed_integer.runTests('''
+        # mixed fractions
+        1
+        1/2
+        -3/4
+        1-3/4
+        ''')
+
+    import uuid
+    pyparsing_common.uuid.setParseAction(tokenMap(uuid.UUID))
+    pyparsing_common.uuid.runTests('''
+        # uuid
+        12345678-1234-5678-1234-567812345678
+        ''')
+
+prints::
+
+    # any int or real number, returned as the appropriate type
+    100
+    [100]
+
+    -100
+    [-100]
+
+    +100
+    [100]
+
+    3.14159
+    [3.14159]
+
+    6.02e23
+    [6.02e+23]
+
+    1e-12
+    [1e-12]
+
+    # any int or real number, returned as float
+    100
+    [100.0]
+
+    -100
+    [-100.0]
+
+    +100
+    [100.0]
+
+    3.14159
+    [3.14159]
+
+    6.02e23
+    [6.02e+23]
+
+    1e-12
+    [1e-12]
+
+    # hex numbers
+    100
+    [256]
+
+    FF
+    [255]
+
+    # fractions
+    1/2
+    [0.5]
+
+    -3/4
+    [-0.75]
+
+    # mixed fractions
+    1
+    [1]
+
+    1/2
+    [0.5]
+
+    -3/4
+    [-0.75]
+
+    1-3/4
+    [1.75]
+
+    # uuid
+    12345678-1234-5678-1234-567812345678
+    [UUID('12345678-1234-5678-1234-567812345678')]
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a4e94dcf87ca3c72e569ed1f350e1557e}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a4e94dcf87ca3c72e569ed1f350e1557e}} 
+\index{pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}!convertToDate@{convertToDate}}
+\index{convertToDate@{convertToDate}!pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}}
+\doxysubsubsection{\texorpdfstring{convertToDate()}{convertToDate()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+pyparsing\+\_\+common.\+convert\+To\+Date (\begin{DoxyParamCaption}\item[{}]{fmt = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%d\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Helper to create a parse action for converting parsed date string to Python datetime.date
+
+Params -
+ - fmt - format to be passed to datetime.strptime (default= ``"%Y-%m-%d"``)
+
+Example::
+
+    date_expr = pyparsing_common.iso8601_date.copy()
+    date_expr.setParseAction(pyparsing_common.convertToDate())
+    print(date_expr.parseString("1999-12-31"))
+
+prints::
+
+    [datetime.date(1999, 12, 31)]
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a63ddf1630dca0a46873eaee404d0264e}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_a63ddf1630dca0a46873eaee404d0264e}} 
+\index{pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}!convertToDatetime@{convertToDatetime}}
+\index{convertToDatetime@{convertToDatetime}!pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}}
+\doxysubsubsection{\texorpdfstring{convertToDatetime()}{convertToDatetime()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+pyparsing\+\_\+common.\+convert\+To\+Datetime (\begin{DoxyParamCaption}\item[{}]{fmt = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%dT\%H\+:\%M\+:\%S.\%f\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Helper to create a parse action for converting parsed
+datetime string to Python datetime.datetime
+
+Params -
+ - fmt - format to be passed to datetime.strptime (default= ``"%Y-%m-%dT%H:%M:%S.%f"``)
+
+Example::
+
+    dt_expr = pyparsing_common.iso8601_datetime.copy()
+    dt_expr.setParseAction(pyparsing_common.convertToDatetime())
+    print(dt_expr.parseString("1999-12-31T23:59:59.999"))
+
+prints::
+
+    [datetime.datetime(1999, 12, 31, 23, 59, 59, 999000)]
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_addd017ae430585480cddba7df09fcbed}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_addd017ae430585480cddba7df09fcbed}} 
+\index{pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}!stripHTMLTags@{stripHTMLTags}}
+\index{stripHTMLTags@{stripHTMLTags}!pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}}
+\doxysubsubsection{\texorpdfstring{stripHTMLTags()}{stripHTMLTags()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+pyparsing\+\_\+common.\+strip\+HTMLTags (\begin{DoxyParamCaption}\item[{}]{s,  }\item[{}]{l,  }\item[{}]{tokens }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Parse action to remove HTML tags from web page HTML source
+
+Example::
+
+    # strip HTML links from normal text
+    text = '<td>More info at the <a href="https://github.com/pyparsing/pyparsing/wiki">pyparsing</a> wiki page</td>'
+    td, td_end = makeHTMLTags("TD")
+    table_text = td + SkipTo(td_end).setParseAction(pyparsing_common.stripHTMLTags)("body") + td_end
+    print(table_text.parseString(text).body)
+
+Prints::
+
+    More info at the pyparsing wiki page
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_aa91d21536990bd35ee927c9847a5c145}\label{classpip_1_1__vendor_1_1pyparsing_1_1pyparsing__common_aa91d21536990bd35ee927c9847a5c145}} 
+\index{pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}!comma\_separated\_list@{comma\_separated\_list}}
+\index{comma\_separated\_list@{comma\_separated\_list}!pip.\_vendor.pyparsing.pyparsing\_common@{pip.\_vendor.pyparsing.pyparsing\_common}}
+\doxysubsubsection{\texorpdfstring{comma\_separated\_list}{comma\_separated\_list}}
+{\footnotesize\ttfamily pip.\+\_\+vendor.\+pyparsing.\+pyparsing\+\_\+common.\+comma\+\_\+separated\+\_\+list\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  delimitedList(Optional(quotedString.copy()}
+\DoxyCodeLine{                                                  | \_commasepitem, default=\textcolor{stringliteral}{''})}
+\DoxyCodeLine{                                         ).setName(\textcolor{stringliteral}{"{}comma separated list"{}})}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{classsqlparse_1_1sql_1_1_statement}{}\doxysection{sqlparse.\+sql.\+Statement Class Reference}
+\label{classsqlparse_1_1sql_1_1_statement}\index{sqlparse.sql.Statement@{sqlparse.sql.Statement}}
+
+
+Inheritance diagram for sqlparse.\+sql.\+Statement\+:
+% FIG 0
+
+
+Collaboration diagram for sqlparse.\+sql.\+Statement\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classsqlparse_1_1sql_1_1_statement_a600774810d4f483ef95b5da480aeb51c}{get\+\_\+type}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents a SQL statement.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsqlparse_1_1sql_1_1_statement_a600774810d4f483ef95b5da480aeb51c}\label{classsqlparse_1_1sql_1_1_statement_a600774810d4f483ef95b5da480aeb51c}} 
+\index{sqlparse.sql.Statement@{sqlparse.sql.Statement}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!sqlparse.sql.Statement@{sqlparse.sql.Statement}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily def sqlparse.\+sql.\+Statement.\+get\+\_\+type (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the type of a statement.
+
+The returned value is a string holding an upper-cased reprint of
+the first DML or DDL keyword. If the first token in this group
+isn't a DML or DDL keyword "UNKNOWN" is returned.
+
+Whitespaces and comments at the beginning of the statement
+are ignored.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/sqlparse/sql.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\hypertarget{namespaceshapely_1_1affinity}{}\doxysection{shapely.\+affinity Namespace Reference}
+\label{namespaceshapely_1_1affinity}\index{shapely.affinity@{shapely.affinity}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_acdde8225c7a319feea21e28e879e9069}{affine\+\_\+transform}} (geom, matrix)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_a18e57d283665b042cc701d1aa622f597}{interpret\+\_\+origin}} (geom, origin, ndim)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_a261f06f833e10c87c289a980c36945b2}{rotate}} (geom, angle, origin=\textquotesingle{}center\textquotesingle{}, use\+\_\+radians=False)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_a4e19f1b20281a3124f778d3f8e73443d}{scale}} (geom, xfact=1.\+0, yfact=1.\+0, zfact=1.\+0, origin=\textquotesingle{}center\textquotesingle{})
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_aae624dc2c44a7051e5d8992daff58475}{skew}} (geom, xs=0.\+0, ys=0.\+0, origin=\textquotesingle{}center\textquotesingle{}, use\+\_\+radians=False)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1affinity_aa3126ddad612e8f05254c3f2ace27026}{translate}} (geom, xoff=0.\+0, yoff=0.\+0, zoff=0.\+0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Affine transforms, both in general and specific, named transforms.\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1affinity_acdde8225c7a319feea21e28e879e9069}\label{namespaceshapely_1_1affinity_acdde8225c7a319feea21e28e879e9069}} 
+\index{shapely.affinity@{shapely.affinity}!affine\_transform@{affine\_transform}}
+\index{affine\_transform@{affine\_transform}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{affine\_transform()}{affine\_transform()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+affine\+\_\+transform (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{matrix }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a transformed geometry using an affine transformation matrix.
+
+The coefficient matrix is provided as a list or tuple with 6 or 12 items
+for 2D or 3D transformations, respectively.
+
+For 2D affine transformations, the 6 parameter matrix is::
+
+    [a, b, d, e, xoff, yoff]
+
+which represents the augmented matrix::
+
+    [x']   / a  b xoff \ [x]
+    [y'] = | d  e yoff | [y]
+    [1 ]   \ 0  0   1  / [1]
+
+or the equations for the transformed coordinates::
+
+    x' = a * x + b * y + xoff
+    y' = d * x + e * y + yoff
+
+For 3D affine transformations, the 12 parameter matrix is::
+
+    [a, b, c, d, e, f, g, h, i, xoff, yoff, zoff]
+
+which represents the augmented matrix::
+
+    [x']   / a  b  c xoff \ [x]
+    [y'] = | d  e  f yoff | [y]
+    [z']   | g  h  i zoff | [z]
+    [1 ]   \ 0  0  0   1  / [1]
+
+or the equations for the transformed coordinates::
+
+    x' = a * x + b * y + c * z + xoff
+    y' = d * x + e * y + f * z + yoff
+    z' = g * x + h * y + i * z + zoff
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1affinity_a18e57d283665b042cc701d1aa622f597}\label{namespaceshapely_1_1affinity_a18e57d283665b042cc701d1aa622f597}} 
+\index{shapely.affinity@{shapely.affinity}!interpret\_origin@{interpret\_origin}}
+\index{interpret\_origin@{interpret\_origin}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{interpret\_origin()}{interpret\_origin()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+interpret\+\_\+origin (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{origin,  }\item[{}]{ndim }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns interpreted coordinate tuple for origin parameter.
+
+This is a helper function for other transform functions.
+
+The point of origin can be a keyword 'center' for the 2D bounding box
+center, 'centroid' for the geometry's 2D centroid, a Point object or a
+coordinate tuple (x0, y0, z0).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1affinity_a261f06f833e10c87c289a980c36945b2}\label{namespaceshapely_1_1affinity_a261f06f833e10c87c289a980c36945b2}} 
+\index{shapely.affinity@{shapely.affinity}!rotate@{rotate}}
+\index{rotate@{rotate}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+rotate (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{angle,  }\item[{}]{origin = {\ttfamily \textquotesingle{}center\textquotesingle{}},  }\item[{}]{use\+\_\+radians = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a rotated geometry on a 2D plane.
+
+The angle of rotation can be specified in either degrees (default) or
+radians by setting ``use_radians=True``. Positive angles are
+counter-clockwise and negative are clockwise rotations.
+
+The point of origin can be a keyword 'center' for the bounding box
+center (default), 'centroid' for the geometry's centroid, a Point object
+or a coordinate tuple (x0, y0).
+
+The affine transformation matrix for 2D rotation is:
+
+  / cos(r) -sin(r) xoff \ 
+  | sin(r)  cos(r) yoff |
+  \   0       0      1  /
+
+where the offsets are calculated from the origin Point(x0, y0):
+
+    xoff = x0 - x0 * cos(r) + y0 * sin(r)
+    yoff = y0 - x0 * sin(r) - y0 * cos(r)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1affinity_a4e19f1b20281a3124f778d3f8e73443d}\label{namespaceshapely_1_1affinity_a4e19f1b20281a3124f778d3f8e73443d}} 
+\index{shapely.affinity@{shapely.affinity}!scale@{scale}}
+\index{scale@{scale}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+scale (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{xfact = {\ttfamily 1.0},  }\item[{}]{yfact = {\ttfamily 1.0},  }\item[{}]{zfact = {\ttfamily 1.0},  }\item[{}]{origin = {\ttfamily \textquotesingle{}center\textquotesingle{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a scaled geometry, scaled by factors along each dimension.
+
+The point of origin can be a keyword 'center' for the 2D bounding box
+center (default), 'centroid' for the geometry's 2D centroid, a Point
+object or a coordinate tuple (x0, y0, z0).
+
+Negative scale factors will mirror or reflect coordinates.
+
+The general 3D affine transformation matrix for scaling is:
+
+    / xfact  0    0   xoff \ 
+    |   0  yfact  0   yoff |
+    |   0    0  zfact zoff |
+    \   0    0    0     1  /
+
+where the offsets are calculated from the origin Point(x0, y0, z0):
+
+    xoff = x0 - x0 * xfact
+    yoff = y0 - y0 * yfact
+    zoff = z0 - z0 * zfact
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1affinity_aae624dc2c44a7051e5d8992daff58475}\label{namespaceshapely_1_1affinity_aae624dc2c44a7051e5d8992daff58475}} 
+\index{shapely.affinity@{shapely.affinity}!skew@{skew}}
+\index{skew@{skew}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{skew()}{skew()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+skew (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{xs = {\ttfamily 0.0},  }\item[{}]{ys = {\ttfamily 0.0},  }\item[{}]{origin = {\ttfamily \textquotesingle{}center\textquotesingle{}},  }\item[{}]{use\+\_\+radians = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a skewed geometry, sheared by angles along x and y dimensions.
+
+The shear angle can be specified in either degrees (default) or radians
+by setting ``use_radians=True``.
+
+The point of origin can be a keyword 'center' for the bounding box
+center (default), 'centroid' for the geometry's centroid, a Point object
+or a coordinate tuple (x0, y0).
+
+The general 2D affine transformation matrix for skewing is:
+
+    /   1    tan(xs) xoff \ 
+    | tan(ys)  1     yoff |
+    \   0      0       1  /
+
+where the offsets are calculated from the origin Point(x0, y0):
+
+    xoff = -y0 * tan(xs)
+    yoff = -x0 * tan(ys)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1affinity_aa3126ddad612e8f05254c3f2ace27026}\label{namespaceshapely_1_1affinity_aa3126ddad612e8f05254c3f2ace27026}} 
+\index{shapely.affinity@{shapely.affinity}!translate@{translate}}
+\index{translate@{translate}!shapely.affinity@{shapely.affinity}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily def shapely.\+affinity.\+translate (\begin{DoxyParamCaption}\item[{}]{geom,  }\item[{}]{xoff = {\ttfamily 0.0},  }\item[{}]{yoff = {\ttfamily 0.0},  }\item[{}]{zoff = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a translated geometry shifted by offsets along each dimension.
+
+The general 3D affine transformation matrix for translation is:
+
+    / 1  0  0 xoff \ 
+    | 0  1  0 yoff |
+    | 0  0  1 zoff |
+    \ 0  0  0   1  /
+\end{DoxyVerb}
+ 

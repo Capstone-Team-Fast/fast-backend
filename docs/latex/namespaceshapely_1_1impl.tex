@@ -1,0 +1,153 @@
+\hypertarget{namespaceshapely_1_1impl}{}\doxysection{shapely.\+impl Namespace Reference}
+\label{namespaceshapely_1_1impl}\index{shapely.impl@{shapely.impl}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classshapely_1_1impl_1_1_base_impl}{Base\+Impl}}
+\item 
+class \mbox{\hyperlink{classshapely_1_1impl_1_1_g_e_o_s_impl}{GEOSImpl}}
+\item 
+class \mbox{\hyperlink{classshapely_1_1impl_1_1_implementation_error}{Implementation\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1impl_aa23dc0bf382d5de283fea26f6e5a163f}{delegated}} (func)
+\item 
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a369b13438b1084938b06ce579ee13302}\label{namespaceshapely_1_1impl_a369b13438b1084938b06ce579ee13302}} 
+def {\bfseries impl\+\_\+items} (defs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a5511437ce543e4e35a1b6b18aa5c96a5}\label{namespaceshapely_1_1impl_a5511437ce543e4e35a1b6b18aa5c96a5}} 
+dictionary {\bfseries IMPL300}
+\item 
+dictionary \mbox{\hyperlink{namespaceshapely_1_1impl_aa4d1009eceafe1cf64e5d5036ce2dc7e}{IMPL310}}
+\item 
+dictionary \mbox{\hyperlink{namespaceshapely_1_1impl_a755cbd8a2c674b09ff7e7fb61a4430f7}{IMPL311}}
+\item 
+dictionary \mbox{\hyperlink{namespaceshapely_1_1impl_ac7a2421f9b6c270c2704440dfd745485}{IMPL320}}
+\item 
+dictionary \mbox{\hyperlink{namespaceshapely_1_1impl_a24785f47dbe9246b9ddfd051b832977d}{IMPL330}}
+\item 
+dictionary \mbox{\hyperlink{namespaceshapely_1_1impl_a86f515cb5fc1f79e944a1d9725931fdc}{IMPL360}}
+\item 
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a78590956d3cccddb48e151e78cdce03e}\label{namespaceshapely_1_1impl_a78590956d3cccddb48e151e78cdce03e}} 
+{\bfseries imp} = \mbox{\hyperlink{classshapely_1_1impl_1_1_g_e_o_s_impl}{GEOSImpl}}(dict(impl\+\_\+items(IMPL300)))
+\item 
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a3dab0771e33c653453d712ab508876fc}\label{namespaceshapely_1_1impl_a3dab0771e33c653453d712ab508876fc}} 
+{\bfseries Default\+Implementation} = imp
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the intermediary layer between Shapely and GEOS
+
+This is layer number 2 from the list below.
+
+1) geometric objects: the Python OO API.
+2) implementation map: an abstraction that permits different backends.
+3) backend: callable objects that take Shapely geometric objects as arguments
+   and, with GEOS as a backend, translate them to C data structures.
+4) GEOS library: algorithms implemented in C++.
+
+Shapely 1.2 includes a GEOS backend and it is the default.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_aa23dc0bf382d5de283fea26f6e5a163f}\label{namespaceshapely_1_1impl_aa23dc0bf382d5de283fea26f6e5a163f}} 
+\index{shapely.impl@{shapely.impl}!delegated@{delegated}}
+\index{delegated@{delegated}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{delegated()}{delegated()}}
+{\footnotesize\ttfamily def shapely.\+impl.\+delegated (\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A delegated method raises AttributeError in the absence of backend
+support.\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_aa4d1009eceafe1cf64e5d5036ce2dc7e}\label{namespaceshapely_1_1impl_aa4d1009eceafe1cf64e5d5036ce2dc7e}} 
+\index{shapely.impl@{shapely.impl}!IMPL310@{IMPL310}}
+\index{IMPL310@{IMPL310}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{IMPL310}{IMPL310}}
+{\footnotesize\ttfamily dictionary shapely.\+impl.\+IMPL310}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'simplify'}: (UnaryTopologicalOp, \textcolor{stringliteral}{'simplify'}),}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'topology\_preserve\_simplify'}:}
+\DoxyCodeLine{4         (UnaryTopologicalOp, \textcolor{stringliteral}{'topology\_preserve\_simplify'}),}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'prepared\_disjoint'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_disjoint'}),}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'prepared\_touches'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_touches'}),}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'prepared\_crosses'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_crosses'}),}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'prepared\_within'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_within'}),}
+\DoxyCodeLine{9     \textcolor{stringliteral}{'prepared\_overlaps'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_overlaps'}),}
+\DoxyCodeLine{10     \textcolor{stringliteral}{'prepared\_intersects'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_intersects'}),}
+\DoxyCodeLine{11     \textcolor{stringliteral}{'prepared\_contains'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_contains'}),}
+\DoxyCodeLine{12     \textcolor{stringliteral}{'prepared\_contains\_properly'}:}
+\DoxyCodeLine{13         (BinaryPredicate, \textcolor{stringliteral}{'prepared\_contains\_properly'}),}
+\DoxyCodeLine{14     \textcolor{stringliteral}{'prepared\_covers'}: (BinaryPredicate, \textcolor{stringliteral}{'prepared\_covers'}),}
+\DoxyCodeLine{15     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a755cbd8a2c674b09ff7e7fb61a4430f7}\label{namespaceshapely_1_1impl_a755cbd8a2c674b09ff7e7fb61a4430f7}} 
+\index{shapely.impl@{shapely.impl}!IMPL311@{IMPL311}}
+\index{IMPL311@{IMPL311}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{IMPL311}{IMPL311}}
+{\footnotesize\ttfamily dictionary shapely.\+impl.\+IMPL311}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_ac7a2421f9b6c270c2704440dfd745485}\label{namespaceshapely_1_1impl_ac7a2421f9b6c270c2704440dfd745485}} 
+\index{shapely.impl@{shapely.impl}!IMPL320@{IMPL320}}
+\index{IMPL320@{IMPL320}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{IMPL320}{IMPL320}}
+{\footnotesize\ttfamily dictionary shapely.\+impl.\+IMPL320}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'parallel\_offset'}: (UnaryTopologicalOp, \textcolor{stringliteral}{'parallel\_offset'}),}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'project\_normalized'}: (ProjectOp, \textcolor{stringliteral}{'project\_normalized'}),}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'project'}: (ProjectOp, \textcolor{stringliteral}{'project'}),}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'interpolate\_normalized'}: (InterpolateOp, \textcolor{stringliteral}{'interpolate\_normalized'}),}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'interpolate'}: (InterpolateOp, \textcolor{stringliteral}{'interpolate'}),}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'buffer\_with\_style'}: (UnaryTopologicalOp, \textcolor{stringliteral}{'buffer\_with\_style'}),}
+\DoxyCodeLine{8     \textcolor{stringliteral}{'hausdorff\_distance'}: (BinaryRealProperty, \textcolor{stringliteral}{'hausdorff\_distance'}),}
+\DoxyCodeLine{9     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a24785f47dbe9246b9ddfd051b832977d}\label{namespaceshapely_1_1impl_a24785f47dbe9246b9ddfd051b832977d}} 
+\index{shapely.impl@{shapely.impl}!IMPL330@{IMPL330}}
+\index{IMPL330@{IMPL330}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{IMPL330}{IMPL330}}
+{\footnotesize\ttfamily dictionary shapely.\+impl.\+IMPL330}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'is\_closed'}: (UnaryPredicate, \textcolor{stringliteral}{'is\_closed'}),}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'buffer\_with\_params'}: (UnaryTopologicalOp, \textcolor{stringliteral}{'buffer\_with\_params'}),}
+\DoxyCodeLine{4 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceshapely_1_1impl_a86f515cb5fc1f79e944a1d9725931fdc}\label{namespaceshapely_1_1impl_a86f515cb5fc1f79e944a1d9725931fdc}} 
+\index{shapely.impl@{shapely.impl}!IMPL360@{IMPL360}}
+\index{IMPL360@{IMPL360}!shapely.impl@{shapely.impl}}
+\doxysubsubsection{\texorpdfstring{IMPL360}{IMPL360}}
+{\footnotesize\ttfamily dictionary shapely.\+impl.\+IMPL360}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'minimum\_clearance'}: (UnaryRealProperty, \textcolor{stringliteral}{'minimum\_clearance'})}
+\DoxyCodeLine{3 \}}
+
+\end{DoxyCode}

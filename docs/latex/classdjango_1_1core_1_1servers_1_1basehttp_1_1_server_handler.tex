@@ -1,0 +1,49 @@
+\hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler}{}\doxysection{django.\+core.\+servers.\+basehttp.\+Server\+Handler Class Reference}
+\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler}\index{django.core.servers.basehttp.ServerHandler@{django.core.servers.basehttp.ServerHandler}}
+
+
+Inheritance diagram for django.\+core.\+servers.\+basehttp.\+Server\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+servers.\+basehttp.\+Server\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a5ed6c870d2bcdabe38e5350dbc3e5356}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, stdin, stdout, stderr, environ, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a68b4507418c8cf89be11daa6abbbaf7b}\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a68b4507418c8cf89be11daa6abbbaf7b}} 
+def {\bfseries cleanup\+\_\+headers} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a399f90b0984f836b3438fbc0b01366d3}\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a399f90b0984f836b3438fbc0b01366d3}} 
+def {\bfseries close} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a799d2720407593ab5460ed7865e362da}\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a799d2720407593ab5460ed7865e362da}} 
+def {\bfseries handle\+\_\+error} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a05a0b2eee1be3627c4dc6db36d177970}\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a05a0b2eee1be3627c4dc6db36d177970}} 
+string {\bfseries http\+\_\+version} = \textquotesingle{}1.\+1\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a5ed6c870d2bcdabe38e5350dbc3e5356}\label{classdjango_1_1core_1_1servers_1_1basehttp_1_1_server_handler_a5ed6c870d2bcdabe38e5350dbc3e5356}} 
+\index{django.core.servers.basehttp.ServerHandler@{django.core.servers.basehttp.ServerHandler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.core.servers.basehttp.ServerHandler@{django.core.servers.basehttp.ServerHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+core.\+servers.\+basehttp.\+Server\+Handler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{stdin,  }\item[{}]{stdout,  }\item[{}]{stderr,  }\item[{}]{environ,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Use a LimitedStream so that unread request data will be ignored at
+the end of the request. WSGIRequest uses a LimitedStream but it
+shouldn't discard the data since the upstream servers usually do this.
+This fix applies only for testserver/runserver.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/servers/basehttp.\+py\end{DoxyCompactItemize}

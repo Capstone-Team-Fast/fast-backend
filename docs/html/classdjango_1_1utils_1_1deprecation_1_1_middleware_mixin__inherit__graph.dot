@@ -1,0 +1,57 @@
+digraph "django.utils.deprecation.MiddlewareMixin"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.utils.deprecation.\lMiddlewareMixin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.tests.\lCSPMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admin_1_1tests_1_1_c_s_p_middleware.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.admindocs.middleware.\lXViewMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1admindocs_1_1middleware_1_1_x_view_middleware.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.auth.middleware.\lAuthenticationMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1middleware_1_1_authentication_middleware.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.auth.middleware.\lRemoteUserMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1middleware_1_1_remote_user_middleware.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.auth.middleware.\lPersistentRemoteUserMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1auth_1_1middleware_1_1_persistent_remote_user_middleware.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.flatpages.middleware.\lFlatpageFallbackMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1flatpages_1_1middleware_1_1_flatpage_fallback_middleware.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.contrib.messages.middleware.\lMessageMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1messages_1_1middleware_1_1_message_middleware.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.contrib.redirects.middleware.\lRedirectFallbackMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1redirects_1_1middleware_1_1_redirect_fallback_middleware.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.contrib.sessions.middleware.\lSessionMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sessions_1_1middleware_1_1_session_middleware.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.contrib.sites.middleware.\lCurrentSiteMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sites_1_1middleware_1_1_current_site_middleware.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.middleware.cache.\lFetchFromCacheMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1cache_1_1_fetch_from_cache_middleware.html",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="django.middleware.cache.\lCacheMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1cache_1_1_cache_middleware.html",tooltip=" "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="django.middleware.cache.\lUpdateCacheMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware.html",tooltip=" "];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.middleware.clickjacking.\lXFrameOptionsMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1clickjacking_1_1_x_frame_options_middleware.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="django.middleware.common.\lBrokenLinkEmailsMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1common_1_1_broken_link_emails_middleware.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="django.middleware.common.\lCommonMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1common_1_1_common_middleware.html",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="django.middleware.csrf.Csrf\lViewMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1csrf_1_1_csrf_view_middleware.html",tooltip=" "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="django.views.decorators.csrf.\l_EnsureCsrfCookie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1views_1_1decorators_1_1csrf_1_1___ensure_csrf_cookie.html",tooltip=" "];
+  Node18 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="django.views.decorators.csrf.\l_EnsureCsrfToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1views_1_1decorators_1_1csrf_1_1___ensure_csrf_token.html",tooltip=" "];
+  Node18 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="rest_framework.authentication.\lCSRFCheck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1authentication_1_1_c_s_r_f_check.html",tooltip=" "];
+  Node1 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="django.middleware.gzip.GZip\lMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1gzip_1_1_g_zip_middleware.html",tooltip=" "];
+  Node1 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="django.middleware.http.Conditional\lGetMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1http_1_1_conditional_get_middleware.html",tooltip=" "];
+  Node1 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="django.middleware.locale.\lLocaleMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1locale_1_1_locale_middleware.html",tooltip=" "];
+  Node1 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="django.middleware.security.\lSecurityMiddleware",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1middleware_1_1security_1_1_security_middleware.html",tooltip=" "];
+}

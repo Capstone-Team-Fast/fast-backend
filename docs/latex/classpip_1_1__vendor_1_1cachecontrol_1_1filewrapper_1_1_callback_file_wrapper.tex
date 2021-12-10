@@ -1,0 +1,39 @@
+\hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper}{}\doxysection{pip.\+\_\+vendor.\+cachecontrol.\+filewrapper.\+Callback\+File\+Wrapper Class Reference}
+\label{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper}\index{pip.\_vendor.cachecontrol.filewrapper.CallbackFileWrapper@{pip.\_vendor.cachecontrol.filewrapper.CallbackFileWrapper}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+cachecontrol.\+filewrapper.\+Callback\+File\+Wrapper\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+cachecontrol.\+filewrapper.\+Callback\+File\+Wrapper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_a49ca3fa44244778ae11183381e0481b0}\label{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_a49ca3fa44244778ae11183381e0481b0}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, fp, callback)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_a01696af37bc6df0e23472e0f0c5b1c4d}\label{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_a01696af37bc6df0e23472e0f0c5b1c4d}} 
+def {\bfseries \+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, name)
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_acde77ec4143104f35f677e9c96a32434}\label{classpip_1_1__vendor_1_1cachecontrol_1_1filewrapper_1_1_callback_file_wrapper_acde77ec4143104f35f677e9c96a32434}} 
+def {\bfseries read} (self, amt=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Small wrapper around a fp object which will tee everything read into a
+buffer, and when that file is closed it will execute a callback with the
+contents of that buffer.
+
+All attributes are proxied to the underlying file object.
+
+This class uses members with a double underscore (__) leading prefix so as
+not to accidentally shadow an attribute.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/cachecontrol/filewrapper.\+py\end{DoxyCompactItemize}

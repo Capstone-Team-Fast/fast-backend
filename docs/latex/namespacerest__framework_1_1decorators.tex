@@ -1,0 +1,81 @@
+\hypertarget{namespacerest__framework_1_1decorators}{}\doxysection{rest\+\_\+framework.\+decorators Namespace Reference}
+\label{namespacerest__framework_1_1decorators}\index{rest\_framework.decorators@{rest\_framework.decorators}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrest__framework_1_1decorators_1_1_method_mapper}{Method\+Mapper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1decorators_a5e554abd55f24c514dc0f9c87b1cc99e}{api\+\_\+view}} (http\+\_\+method\+\_\+names=None)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a47e08185c249d4878353d9fe2dc22518}\label{namespacerest__framework_1_1decorators_a47e08185c249d4878353d9fe2dc22518}} 
+def {\bfseries renderer\+\_\+classes} (renderer\+\_\+classes)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a361caa60cd3cef31b150a80334e4e170}\label{namespacerest__framework_1_1decorators_a361caa60cd3cef31b150a80334e4e170}} 
+def {\bfseries parser\+\_\+classes} (parser\+\_\+classes)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_ab01a12412b56c24c7afa0c1c3bc69e79}\label{namespacerest__framework_1_1decorators_ab01a12412b56c24c7afa0c1c3bc69e79}} 
+def {\bfseries authentication\+\_\+classes} (authentication\+\_\+classes)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a955ea8df1407ae1a69648e8026668b0b}\label{namespacerest__framework_1_1decorators_a955ea8df1407ae1a69648e8026668b0b}} 
+def {\bfseries throttle\+\_\+classes} (throttle\+\_\+classes)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a0efe172c568f32343f5716855cdf7355}\label{namespacerest__framework_1_1decorators_a0efe172c568f32343f5716855cdf7355}} 
+def {\bfseries permission\+\_\+classes} (permission\+\_\+classes)
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a835b55ef558a6fe58a926eae8bc7671b}\label{namespacerest__framework_1_1decorators_a835b55ef558a6fe58a926eae8bc7671b}} 
+def {\bfseries schema} (view\+\_\+inspector)
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1decorators_a158beefd42f88a55c39894d1c7bce4e6}{action}} (methods=None, detail=None, url\+\_\+path=None, url\+\_\+name=None, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The most important decorator in this module is `@api_view`, which is used
+for writing function-based views with REST framework.
+
+There are also various decorators for setting the API policies on function
+based views, as well as the `@action` decorator, which is used to annotate
+methods on viewsets that should be included by routers.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1decorators_a158beefd42f88a55c39894d1c7bce4e6}\label{namespacerest__framework_1_1decorators_a158beefd42f88a55c39894d1c7bce4e6}} 
+\index{rest\_framework.decorators@{rest\_framework.decorators}!action@{action}}
+\index{action@{action}!rest\_framework.decorators@{rest\_framework.decorators}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+decorators.\+action (\begin{DoxyParamCaption}\item[{}]{methods = {\ttfamily None},  }\item[{}]{detail = {\ttfamily None},  }\item[{}]{url\+\_\+path = {\ttfamily None},  }\item[{}]{url\+\_\+name = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Mark a ViewSet method as a routable action.
+
+`@action`-decorated functions will be endowed with a `mapping` property,
+a `MethodMapper` that can be used to add additional method-based behaviors
+on the routed action.
+
+:param methods: A list of HTTP method names this action responds to.
+                Defaults to GET only.
+:param detail: Required. Determines whether this action applies to
+               instance/detail requests or collection/list requests.
+:param url_path: Define the URL segment for this action. Defaults to the
+                 name of the method decorated.
+:param url_name: Define the internal (`reverse`) URL name for this action.
+                 Defaults to the name of the method decorated with underscores
+                 replaced with dashes.
+:param kwargs: Additional properties to set on the view.  This can be used
+               to override viewset-level *_classes settings, equivalent to
+               how the `@renderer_classes` etc. decorators work for function-
+               based API views.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerest__framework_1_1decorators_a5e554abd55f24c514dc0f9c87b1cc99e}\label{namespacerest__framework_1_1decorators_a5e554abd55f24c514dc0f9c87b1cc99e}} 
+\index{rest\_framework.decorators@{rest\_framework.decorators}!api\_view@{api\_view}}
+\index{api\_view@{api\_view}!rest\_framework.decorators@{rest\_framework.decorators}}
+\doxysubsubsection{\texorpdfstring{api\_view()}{api\_view()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+decorators.\+api\+\_\+view (\begin{DoxyParamCaption}\item[{}]{http\+\_\+method\+\_\+names = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Decorator that converts a function-based view into an APIView subclass.
+Takes a list of allowed methods for the view as an argument.
+\end{DoxyVerb}
+ 

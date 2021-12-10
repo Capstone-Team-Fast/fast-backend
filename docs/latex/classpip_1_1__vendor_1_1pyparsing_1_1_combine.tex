@@ -1,0 +1,108 @@
+\hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine}{}\doxysection{pip.\+\_\+vendor.\+pyparsing.\+Combine Class Reference}
+\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine}\index{pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}}
+
+
+Inheritance diagram for pip.\+\_\+vendor.\+pyparsing.\+Combine\+:
+% FIG 0
+
+
+Collaboration diagram for pip.\+\_\+vendor.\+pyparsing.\+Combine\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a405256dc18913b78cb734d63a1760f82}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, expr, join\+String=\char`\"{}\char`\"{}, adjacent=True)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a52c285338d1dcd3aa52ea876620d1053}{ignore}} (self, other)
+\item 
+def \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a4f8026a744fafdc7fda560220b27aabe}{post\+Parse}} (self, instring, loc, tokenlist)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_ab2a725e5ca77b07bf7ce08028fa863e8}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_ab2a725e5ca77b07bf7ce08028fa863e8}} 
+{\bfseries adjacent}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a54d0ecbf4343411706a60a750cd4bf41}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a54d0ecbf4343411706a60a750cd4bf41}} 
+{\bfseries skip\+Whitespace}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_ab5a6bba58ca69cd1fca48a09cca161f1}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_ab5a6bba58ca69cd1fca48a09cca161f1}} 
+{\bfseries join\+String}
+\item 
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a225a534f9da0520438f99b0ea8c388e8}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a225a534f9da0520438f99b0ea8c388e8}} 
+{\bfseries call\+Preparse}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Converter to concatenate all matching tokens to a single string.
+By default, the matching patterns must also be contiguous in the
+input string; this can be disabled by specifying
+``'adjacent=False'`` in the constructor.
+
+Example::
+
+    real = Word(nums) + '.' + Word(nums)
+    print(real.parseString('3.1416')) # -> ['3', '.', '1416']
+    # will also erroneously match the following
+    print(real.parseString('3. 1416')) # -> ['3', '.', '1416']
+
+    real = Combine(Word(nums) + '.' + Word(nums))
+    print(real.parseString('3.1416')) # -> ['3.1416']
+    # no match when there are internal spaces
+    print(real.parseString('3. 1416')) # -> Exception: Expected W:(0123...)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a405256dc18913b78cb734d63a1760f82}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a405256dc18913b78cb734d63a1760f82}} 
+\index{pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+Combine.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expr,  }\item[{}]{join\+String = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{adjacent = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_token_converter}{pip.\+\_\+vendor.\+pyparsing.\+Token\+Converter}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a52c285338d1dcd3aa52ea876620d1053}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a52c285338d1dcd3aa52ea876620d1053}} 
+\index{pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}!ignore@{ignore}}
+\index{ignore@{ignore}!pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{ignore()}{ignore()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+Combine.\+ignore (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define expression to be ignored (e.g., comments) while doing pattern
+matching; may be called repeatedly, to define multiple comment or other
+ignorable patterns.
+
+Example::
+
+    patt = OneOrMore(Word(alphas))
+    patt.parseString('ablaj /* comment */ lskjd') # -> ['ablaj']
+
+    patt.ignore(cStyleComment)
+    patt.parseString('ablaj /* comment */ lskjd') # -> ['ablaj', 'lskjd']
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parse_element_enhance_a255dfc9812e718bab064c6db0ab3ef56}{pip.\+\_\+vendor.\+pyparsing.\+Parse\+Element\+Enhance}}.
+
+\mbox{\Hypertarget{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a4f8026a744fafdc7fda560220b27aabe}\label{classpip_1_1__vendor_1_1pyparsing_1_1_combine_a4f8026a744fafdc7fda560220b27aabe}} 
+\index{pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}!postParse@{postParse}}
+\index{postParse@{postParse}!pip.\_vendor.pyparsing.Combine@{pip.\_vendor.pyparsing.Combine}}
+\doxysubsubsection{\texorpdfstring{postParse()}{postParse()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pyparsing.\+Combine.\+post\+Parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{tokenlist }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpip_1_1__vendor_1_1pyparsing_1_1_parser_element}{pip.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

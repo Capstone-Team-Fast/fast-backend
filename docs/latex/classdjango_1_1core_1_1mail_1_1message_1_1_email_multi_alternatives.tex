@@ -1,0 +1,67 @@
+\hypertarget{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives}{}\doxysection{django.\+core.\+mail.\+message.\+Email\+Multi\+Alternatives Class Reference}
+\label{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives}\index{django.core.mail.message.EmailMultiAlternatives@{django.core.mail.message.EmailMultiAlternatives}}
+
+
+Inheritance diagram for django.\+core.\+mail.\+message.\+Email\+Multi\+Alternatives\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+mail.\+message.\+Email\+Multi\+Alternatives\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_acc8454be6dd5a3cd2105400713bb4427}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, subject=\textquotesingle{}\textquotesingle{}, body=\textquotesingle{}\textquotesingle{}, from\+\_\+email=None, to=None, bcc=None, connection=None, attachments=None, headers=None, alternatives=None, cc=None, reply\+\_\+to=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_a477c945a9e529f306b71fdd7f2bc1c89}{attach\+\_\+alternative}} (self, content, mimetype)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_ad63a0d501ad4c129327d909566af19bf}\label{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_ad63a0d501ad4c129327d909566af19bf}} 
+{\bfseries alternatives}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_a6fbf00ef766ba62ccf822d2f12b15640}\label{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_a6fbf00ef766ba62ccf822d2f12b15640}} 
+string {\bfseries alternative\+\_\+subtype} = \textquotesingle{}alternative\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A version of EmailMessage that makes it easy to send multipart/alternative
+messages. For example, including text and HTML versions of the text is
+made easier.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_acc8454be6dd5a3cd2105400713bb4427}\label{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_acc8454be6dd5a3cd2105400713bb4427}} 
+\index{django.core.mail.message.EmailMultiAlternatives@{django.core.mail.message.EmailMultiAlternatives}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.core.mail.message.EmailMultiAlternatives@{django.core.mail.message.EmailMultiAlternatives}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+core.\+mail.\+message.\+Email\+Multi\+Alternatives.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{subject = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{body = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{from\+\_\+email = {\ttfamily None},  }\item[{}]{to = {\ttfamily None},  }\item[{}]{bcc = {\ttfamily None},  }\item[{}]{connection = {\ttfamily None},  }\item[{}]{attachments = {\ttfamily None},  }\item[{}]{headers = {\ttfamily None},  }\item[{}]{alternatives = {\ttfamily None},  }\item[{}]{cc = {\ttfamily None},  }\item[{}]{reply\+\_\+to = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize a single email message (which can be sent to multiple
+recipients).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1mail_1_1message_1_1_email_message_a267a2c5d6c4716aefeedecbf53a35666}{django.\+core.\+mail.\+message.\+Email\+Message}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_a477c945a9e529f306b71fdd7f2bc1c89}\label{classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives_a477c945a9e529f306b71fdd7f2bc1c89}} 
+\index{django.core.mail.message.EmailMultiAlternatives@{django.core.mail.message.EmailMultiAlternatives}!attach\_alternative@{attach\_alternative}}
+\index{attach\_alternative@{attach\_alternative}!django.core.mail.message.EmailMultiAlternatives@{django.core.mail.message.EmailMultiAlternatives}}
+\doxysubsubsection{\texorpdfstring{attach\_alternative()}{attach\_alternative()}}
+{\footnotesize\ttfamily def django.\+core.\+mail.\+message.\+Email\+Multi\+Alternatives.\+attach\+\_\+alternative (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{content,  }\item[{}]{mimetype }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Attach an alternative content representation.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/mail/message.\+py\end{DoxyCompactItemize}

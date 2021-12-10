@@ -1,0 +1,55 @@
+\hypertarget{classdjango_1_1template_1_1base_1_1_lexer}{}\doxysection{django.\+template.\+base.\+Lexer Class Reference}
+\label{classdjango_1_1template_1_1base_1_1_lexer}\index{django.template.base.Lexer@{django.template.base.Lexer}}
+
+
+Inheritance diagram for django.\+template.\+base.\+Lexer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_lexer_a3d3f4e38d7e481e81ba47105cbc4bef7}\label{classdjango_1_1template_1_1base_1_1_lexer_a3d3f4e38d7e481e81ba47105cbc4bef7}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, template\+\_\+string)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_lexer_ab51d98ac4c249ecce3cdc3920cd56f6d}{tokenize}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_lexer_ab6ea4b4c0d67ed354b53b7c5a773dda6}{create\+\_\+token}} (self, token\+\_\+string, position, lineno, in\+\_\+tag)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_lexer_ac41a20b88af4ebc45d3aebad4dff5387}\label{classdjango_1_1template_1_1base_1_1_lexer_ac41a20b88af4ebc45d3aebad4dff5387}} 
+{\bfseries template\+\_\+string}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_lexer_aefbc6d0a9ada2c6a2796f5e302a21784}\label{classdjango_1_1template_1_1base_1_1_lexer_aefbc6d0a9ada2c6a2796f5e302a21784}} 
+{\bfseries verbatim}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_lexer_ab6ea4b4c0d67ed354b53b7c5a773dda6}\label{classdjango_1_1template_1_1base_1_1_lexer_ab6ea4b4c0d67ed354b53b7c5a773dda6}} 
+\index{django.template.base.Lexer@{django.template.base.Lexer}!create\_token@{create\_token}}
+\index{create\_token@{create\_token}!django.template.base.Lexer@{django.template.base.Lexer}}
+\doxysubsubsection{\texorpdfstring{create\_token()}{create\_token()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+Lexer.\+create\+\_\+token (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{token\+\_\+string,  }\item[{}]{position,  }\item[{}]{lineno,  }\item[{}]{in\+\_\+tag }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert the given token string into a new Token object and return it.
+If in_tag is True, we are processing something that matched a tag,
+otherwise it should be treated as a literal string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_lexer_ab51d98ac4c249ecce3cdc3920cd56f6d}\label{classdjango_1_1template_1_1base_1_1_lexer_ab51d98ac4c249ecce3cdc3920cd56f6d}} 
+\index{django.template.base.Lexer@{django.template.base.Lexer}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!django.template.base.Lexer@{django.template.base.Lexer}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+Lexer.\+tokenize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a list of tokens from a given template_string.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_debug_lexer_ac58090b6d507bb70a8cc9618e4bcd947}{django.\+template.\+base.\+Debug\+Lexer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/base.\+py\end{DoxyCompactItemize}

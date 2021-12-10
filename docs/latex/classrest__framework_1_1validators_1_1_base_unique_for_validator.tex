@@ -1,0 +1,75 @@
+\hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator}{}\doxysection{rest\+\_\+framework.\+validators.\+Base\+Unique\+For\+Validator Class Reference}
+\label{classrest__framework_1_1validators_1_1_base_unique_for_validator}\index{rest\_framework.validators.BaseUniqueForValidator@{rest\_framework.validators.BaseUniqueForValidator}}
+
+
+Inheritance diagram for rest\+\_\+framework.\+validators.\+Base\+Unique\+For\+Validator\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_af060835d6f8ffa7111224eddeb261217}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_af060835d6f8ffa7111224eddeb261217}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, queryset, field, date\+\_\+field, message=None)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1validators_1_1_base_unique_for_validator_a39fdc71837943aa55b9185a5f19bac0e}{enforce\+\_\+required\+\_\+fields}} (self, attrs)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_ace8b3c145c3261d2e2f4a824cab92729}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_ace8b3c145c3261d2e2f4a824cab92729}} 
+def {\bfseries filter\+\_\+queryset} (self, attrs, queryset, field\+\_\+name, date\+\_\+field\+\_\+name)
+\item 
+def \mbox{\hyperlink{classrest__framework_1_1validators_1_1_base_unique_for_validator_a695aa68f1278ccc42fad6fa2153c5da0}{exclude\+\_\+current\+\_\+instance}} (self, attrs, queryset, instance)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_af399b7e2e23fac310a10053e24add072}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_af399b7e2e23fac310a10053e24add072}} 
+def {\bfseries \+\_\+\+\_\+call\+\_\+\+\_\+} (self, attrs, serializer)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a47d39f9a2a478c4a806c072d65d861eb}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a47d39f9a2a478c4a806c072d65d861eb}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a29e5ec0ec5647f88ddf498257c3fa676}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a29e5ec0ec5647f88ddf498257c3fa676}} 
+{\bfseries queryset}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_ae3c3e7a65e84c5a9d32354d4c7587a87}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_ae3c3e7a65e84c5a9d32354d4c7587a87}} 
+{\bfseries field}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a6506a90e93eae58b4ddf81f59c43f8a3}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a6506a90e93eae58b4ddf81f59c43f8a3}} 
+{\bfseries date\+\_\+field}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a42cb1e1322f5c04cf3d0052177ddbac2}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a42cb1e1322f5c04cf3d0052177ddbac2}} 
+{\bfseries message} = None
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a677287d573f7ccf71a5f8e12bdd81a1c}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a677287d573f7ccf71a5f8e12bdd81a1c}} 
+{\bfseries missing\+\_\+message} = \+\_\+(\textquotesingle{}This field is required.\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_ade426e2df3c6969b4d37e5a0ea09b8c4}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_ade426e2df3c6969b4d37e5a0ea09b8c4}} 
+bool {\bfseries requires\+\_\+context} = True
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a39fdc71837943aa55b9185a5f19bac0e}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a39fdc71837943aa55b9185a5f19bac0e}} 
+\index{rest\_framework.validators.BaseUniqueForValidator@{rest\_framework.validators.BaseUniqueForValidator}!enforce\_required\_fields@{enforce\_required\_fields}}
+\index{enforce\_required\_fields@{enforce\_required\_fields}!rest\_framework.validators.BaseUniqueForValidator@{rest\_framework.validators.BaseUniqueForValidator}}
+\doxysubsubsection{\texorpdfstring{enforce\_required\_fields()}{enforce\_required\_fields()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+validators.\+Base\+Unique\+For\+Validator.\+enforce\+\_\+required\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attrs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The `UniqueFor<Range>Validator` classes always force an implied
+'required' state on the fields they are applied to.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrest__framework_1_1validators_1_1_base_unique_for_validator_a695aa68f1278ccc42fad6fa2153c5da0}\label{classrest__framework_1_1validators_1_1_base_unique_for_validator_a695aa68f1278ccc42fad6fa2153c5da0}} 
+\index{rest\_framework.validators.BaseUniqueForValidator@{rest\_framework.validators.BaseUniqueForValidator}!exclude\_current\_instance@{exclude\_current\_instance}}
+\index{exclude\_current\_instance@{exclude\_current\_instance}!rest\_framework.validators.BaseUniqueForValidator@{rest\_framework.validators.BaseUniqueForValidator}}
+\doxysubsubsection{\texorpdfstring{exclude\_current\_instance()}{exclude\_current\_instance()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+validators.\+Base\+Unique\+For\+Validator.\+exclude\+\_\+current\+\_\+instance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{attrs,  }\item[{}]{queryset,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If an instance is being updated, then do not include
+that instance itself as a uniqueness conflict.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/validators.\+py\end{DoxyCompactItemize}

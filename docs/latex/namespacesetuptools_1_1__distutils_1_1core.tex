@@ -1,0 +1,158 @@
+\hypertarget{namespacesetuptools_1_1__distutils_1_1core}{}\doxysection{setuptools.\+\_\+distutils.\+core Namespace Reference}
+\label{namespacesetuptools_1_1__distutils_1_1core}\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_adb8f605eb0e9d85ea8d6ed878f127245}\label{namespacesetuptools_1_1__distutils_1_1core_adb8f605eb0e9d85ea8d6ed878f127245}} 
+def {\bfseries gen\+\_\+usage} (script\+\_\+name)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1core_ab3dc0f392f06a27b24c46ec6b9457ec6}{setup}} ($\ast$$\ast$attrs)
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1core_a275c69fa82364f007c1e4c1f067a9d1c}{run\+\_\+setup}} (script\+\_\+name, script\+\_\+args=None, stop\+\_\+after=\char`\"{}run\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1core_a44d75b042cee2f2ca7e877bf35d3e47f}{USAGE}}
+\item 
+tuple \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1core_a376a03876347ad21eef3ecc12b05c507}{setup\+\_\+keywords}}
+\item 
+tuple \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1core_abc669917a603eb6c5a2d87257650b686}{extension\+\_\+keywords}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}distutils.core
+
+The only module that needs to be imported to use the Distutils; provides
+the 'setup' function (which is to be called from the setup script).  Also
+indirectly provides the Distribution and Command classes, although they are
+really defined in distutils.dist and distutils.cmd.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_a275c69fa82364f007c1e4c1f067a9d1c}\label{namespacesetuptools_1_1__distutils_1_1core_a275c69fa82364f007c1e4c1f067a9d1c}} 
+\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}!run\_setup@{run\_setup}}
+\index{run\_setup@{run\_setup}!setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsubsection{\texorpdfstring{run\_setup()}{run\_setup()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+core.\+run\+\_\+setup (\begin{DoxyParamCaption}\item[{}]{script\+\_\+name,  }\item[{}]{script\+\_\+args = {\ttfamily None},  }\item[{}]{stop\+\_\+after = {\ttfamily \char`\"{}run\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run a setup script in a somewhat controlled environment, and
+return the Distribution instance that drives things.  This is useful
+if you need to find out the distribution meta-data (passed as
+keyword args from 'script' to 'setup()', or the contents of the
+config files or command-line.
+
+'script_name' is a file that will be read and run with 'exec()';
+'sys.argv[0]' will be replaced with 'script' for the duration of the
+call.  'script_args' is a list of strings; if supplied,
+'sys.argv[1:]' will be replaced by 'script_args' for the duration of
+the call.
+
+'stop_after' tells 'setup()' when to stop processing; possible
+values:
+  init
+    stop after the Distribution instance has been created and
+    populated with the keyword arguments to 'setup()'
+  config
+    stop after config files have been parsed (and their data
+    stored in the Distribution instance)
+  commandline
+    stop after the command-line ('sys.argv[1:]' or 'script_args')
+    have been parsed (and the data stored in the Distribution)
+  run [default]
+    stop after all commands have been run (the same as if 'setup()'
+    had been called in the usual way
+
+Returns the Distribution instance, which provides all information
+used to drive the Distutils.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_ab3dc0f392f06a27b24c46ec6b9457ec6}\label{namespacesetuptools_1_1__distutils_1_1core_ab3dc0f392f06a27b24c46ec6b9457ec6}} 
+\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}!setup@{setup}}
+\index{setup@{setup}!setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+core.\+setup (\begin{DoxyParamCaption}\item[{$\ast$$\ast$}]{attrs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The gateway to the Distutils: do everything your setup script needs
+to do, in a highly flexible and user-driven way.  Briefly: create a
+Distribution instance; find and parse config files; parse the command
+line; run each Distutils command found there, customized by the options
+supplied to 'setup()' (as keyword arguments), in config files, and on
+the command line.
+
+The Distribution instance might be an instance of a class supplied via
+the 'distclass' keyword argument to 'setup'; if no such class is
+supplied, then the Distribution class (in dist.py) is instantiated.
+All other arguments to 'setup' (except for 'cmdclass') are used to set
+attributes of the Distribution instance.
+
+The 'cmdclass' argument, if supplied, is a dictionary mapping command
+names to command classes.  Each command encountered on the command line
+will be turned into a command class, which is in turn instantiated; any
+class found in 'cmdclass' is used in place of the default, which is
+(for command 'foo_bar') class 'foo_bar' in module
+'distutils.command.foo_bar'.  The command class must provide a
+'user_options' attribute which is a list of option specifiers for
+'distutils.fancy_getopt'.  Any command-line options between the current
+and the next command are used to set attributes of the current command
+object.
+
+When the entire command-line has been successfully parsed, calls the
+'run()' method on each command object in turn.  This method will be
+driven entirely by the Distribution object (which each command object
+has a reference to, thanks to its constructor), and the
+command-specific options that became attributes of each command
+object.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_abc669917a603eb6c5a2d87257650b686}\label{namespacesetuptools_1_1__distutils_1_1core_abc669917a603eb6c5a2d87257650b686}} 
+\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}!extension\_keywords@{extension\_keywords}}
+\index{extension\_keywords@{extension\_keywords}!setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsubsection{\texorpdfstring{extension\_keywords}{extension\_keywords}}
+{\footnotesize\ttfamily tuple setuptools.\+\_\+distutils.\+core.\+extension\+\_\+keywords}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (\textcolor{stringliteral}{'name'}, \textcolor{stringliteral}{'sources'}, \textcolor{stringliteral}{'include\_dirs'},}
+\DoxyCodeLine{2                       \textcolor{stringliteral}{'define\_macros'}, \textcolor{stringliteral}{'undef\_macros'},}
+\DoxyCodeLine{3                       \textcolor{stringliteral}{'library\_dirs'}, \textcolor{stringliteral}{'libraries'}, \textcolor{stringliteral}{'runtime\_library\_dirs'},}
+\DoxyCodeLine{4                       \textcolor{stringliteral}{'extra\_objects'}, \textcolor{stringliteral}{'extra\_compile\_args'}, \textcolor{stringliteral}{'extra\_link\_args'},}
+\DoxyCodeLine{5                       \textcolor{stringliteral}{'swig\_opts'}, \textcolor{stringliteral}{'export\_symbols'}, \textcolor{stringliteral}{'depends'}, \textcolor{stringliteral}{'language'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_a376a03876347ad21eef3ecc12b05c507}\label{namespacesetuptools_1_1__distutils_1_1core_a376a03876347ad21eef3ecc12b05c507}} 
+\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}!setup\_keywords@{setup\_keywords}}
+\index{setup\_keywords@{setup\_keywords}!setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsubsection{\texorpdfstring{setup\_keywords}{setup\_keywords}}
+{\footnotesize\ttfamily tuple setuptools.\+\_\+distutils.\+core.\+setup\+\_\+keywords}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (\textcolor{stringliteral}{'distclass'}, \textcolor{stringliteral}{'script\_name'}, \textcolor{stringliteral}{'script\_args'}, \textcolor{stringliteral}{'options'},}
+\DoxyCodeLine{2                   \textcolor{stringliteral}{'name'}, \textcolor{stringliteral}{'version'}, \textcolor{stringliteral}{'author'}, \textcolor{stringliteral}{'author\_email'},}
+\DoxyCodeLine{3                   \textcolor{stringliteral}{'maintainer'}, \textcolor{stringliteral}{'maintainer\_email'}, \textcolor{stringliteral}{'url'}, \textcolor{stringliteral}{'license'},}
+\DoxyCodeLine{4                   \textcolor{stringliteral}{'description'}, \textcolor{stringliteral}{'long\_description'}, \textcolor{stringliteral}{'keywords'},}
+\DoxyCodeLine{5                   \textcolor{stringliteral}{'platforms'}, \textcolor{stringliteral}{'classifiers'}, \textcolor{stringliteral}{'download\_url'},}
+\DoxyCodeLine{6                   \textcolor{stringliteral}{'requires'}, \textcolor{stringliteral}{'provides'}, \textcolor{stringliteral}{'obsoletes'},}
+\DoxyCodeLine{7                   )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1core_a44d75b042cee2f2ca7e877bf35d3e47f}\label{namespacesetuptools_1_1__distutils_1_1core_a44d75b042cee2f2ca7e877bf35d3e47f}} 
+\index{setuptools.\_distutils.core@{setuptools.\_distutils.core}!USAGE@{USAGE}}
+\index{USAGE@{USAGE}!setuptools.\_distutils.core@{setuptools.\_distutils.core}}
+\doxysubsubsection{\texorpdfstring{USAGE}{USAGE}}
+{\footnotesize\ttfamily string setuptools.\+\_\+distutils.\+core.\+USAGE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \textcolor{stringliteral}{"{}"{}"{}\(\backslash\)}}
+\DoxyCodeLine{2 \textcolor{stringliteral}{usage: \%(script)s [global\_opts] cmd1 [cmd1\_opts] [cmd2 [cmd2\_opts] ...]}}
+\DoxyCodeLine{3 \textcolor{stringliteral}{   }\textcolor{keywordflow}{or}: \%(script)s -\/-\/help [cmd1 cmd2 ...]}
+\DoxyCodeLine{4    \textcolor{keywordflow}{or}: \%(script)s -\/-\/help-\/commands}
+\DoxyCodeLine{5    \textcolor{keywordflow}{or}: \%(script)s cmd -\/-\/help}
+\DoxyCodeLine{6 \textcolor{stringliteral}{"{}"{}"{}}}
+
+\end{DoxyCode}

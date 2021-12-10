@@ -1,0 +1,24 @@
+digraph "django.contrib.gis.forms.fields.GeometryField"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.gis.forms.fields.\lGeometryField",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.forms.fields.Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1forms_1_1fields_1_1_field.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.forms.fields.\lGeometryCollectionField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_geometry_collection_field.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.gis.forms.fields.\lLineStringField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_line_string_field.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.gis.forms.fields.\lMultiLineStringField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_multi_line_string_field.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.gis.forms.fields.\lMultiPointField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_multi_point_field.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.gis.forms.fields.\lMultiPolygonField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_multi_polygon_field.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.contrib.gis.forms.fields.\lPointField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_point_field.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.contrib.gis.forms.fields.\lPolygonField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1gis_1_1forms_1_1fields_1_1_polygon_field.html",tooltip=" "];
+}

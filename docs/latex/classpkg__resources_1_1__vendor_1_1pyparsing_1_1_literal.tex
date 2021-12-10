@@ -1,0 +1,88 @@
+\hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal}{}\doxysection{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Literal Class Reference}
+\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal}\index{pkg\_resources.\_vendor.pyparsing.Literal@{pkg\_resources.\_vendor.pyparsing.Literal}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Literal\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Literal\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a84998933148a451f733fc5c60058f6ad}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, match\+String)
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a9cfffbc7224a82b98c5ee7bbdce631e0}{parse\+Impl}} (self, instring, loc, do\+Actions=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a83789374482c801753304343287fd8d4}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a83789374482c801753304343287fd8d4}} 
+{\bfseries match}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a3fde914473e208702a039e58081cf0be}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a3fde914473e208702a039e58081cf0be}} 
+{\bfseries match\+Len}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_aec4f3f98aed13658904caa5c0a6c209f}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_aec4f3f98aed13658904caa5c0a6c209f}} 
+{\bfseries first\+Match\+Char}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_afa4486ddd889e03d88c49014e22fdde0}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_afa4486ddd889e03d88c49014e22fdde0}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a6169396e891b64d7ef283c239a612bb1}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a6169396e891b64d7ef283c239a612bb1}} 
+{\bfseries errmsg}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_ab0af42a4a656bcb7f907087f5a5e6192}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_ab0af42a4a656bcb7f907087f5a5e6192}} 
+{\bfseries may\+Return\+Empty}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_aea07276f0ad0b03b665b95021cd1ff06}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_aea07276f0ad0b03b665b95021cd1ff06}} 
+{\bfseries may\+Index\+Error}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Token to exactly match a specified string.
+
+Example::
+    Literal('blah').parseString('blah')  # -> ['blah']
+    Literal('blah').parseString('blahfooblah')  # -> ['blah']
+    Literal('blah').parseString('bla')  # -> Exception: Expected "blah"
+
+For case-insensitive matching, use L{CaselessLiteral}.
+
+For keyword matching (force word break before and after the matched string),
+use L{Keyword} or L{CaselessKeyword}.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a84998933148a451f733fc5c60058f6ad}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a84998933148a451f733fc5c60058f6ad}} 
+\index{pkg\_resources.\_vendor.pyparsing.Literal@{pkg\_resources.\_vendor.pyparsing.Literal}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.\_vendor.pyparsing.Literal@{pkg\_resources.\_vendor.pyparsing.Literal}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Literal.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{match\+String }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_token}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Token}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a9cfffbc7224a82b98c5ee7bbdce631e0}\label{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_literal_a9cfffbc7224a82b98c5ee7bbdce631e0}} 
+\index{pkg\_resources.\_vendor.pyparsing.Literal@{pkg\_resources.\_vendor.pyparsing.Literal}!parseImpl@{parseImpl}}
+\index{parseImpl@{parseImpl}!pkg\_resources.\_vendor.pyparsing.Literal@{pkg\_resources.\_vendor.pyparsing.Literal}}
+\doxysubsubsection{\texorpdfstring{parseImpl()}{parseImpl()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Literal.\+parse\+Impl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{instring,  }\item[{}]{loc,  }\item[{}]{do\+Actions = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1__vendor_1_1pyparsing_1_1_parser_element}{pkg\+\_\+resources.\+\_\+vendor.\+pyparsing.\+Parser\+Element}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+vendor/pyparsing.\+py\end{DoxyCompactItemize}

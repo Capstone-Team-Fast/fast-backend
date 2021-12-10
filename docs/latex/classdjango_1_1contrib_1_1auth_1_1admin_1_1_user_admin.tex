@@ -1,0 +1,179 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin}{}\doxysection{django.\+contrib.\+auth.\+admin.\+User\+Admin Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin}\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+admin.\+User\+Admin\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+admin.\+User\+Admin\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a018dc3d5472ed20f8a5a426476063886}{get\+\_\+fieldsets}} (self, request, obj=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a30a0a369e3f81b055b79cf3961971466}{get\+\_\+form}} (self, request, obj=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab8885c1442b762a4155bc698fafe1974}{get\+\_\+urls}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a779311c988c476746dad862be9fc4a1e}{lookup\+\_\+allowed}} (self, lookup, value)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a343c27750bcc883cf2252b23ef23607a}{add\+\_\+view}} (self, request, form\+\_\+url=\textquotesingle{}\textquotesingle{}, extra\+\_\+context=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4a929005f89dea9c6025bd3c4587879f}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4a929005f89dea9c6025bd3c4587879f}} 
+def {\bfseries user\+\_\+change\+\_\+password} (self, request, id, form\+\_\+url=\textquotesingle{}\textquotesingle{})
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab68356aa10e52a94f8ab03590b6c3b40}{response\+\_\+add}} (self, request, obj, post\+\_\+url\+\_\+continue=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a94df878fbbccbdfbde33080b9af3067f}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a94df878fbbccbdfbde33080b9af3067f}} 
+string {\bfseries add\+\_\+form\+\_\+template} = \textquotesingle{}admin/auth/user/add\+\_\+form.\+html\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ad729971abc0e632f8eb36f927c57ec18}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ad729971abc0e632f8eb36f927c57ec18}} 
+{\bfseries change\+\_\+user\+\_\+password\+\_\+template} = None
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4fa89948bc36569505be8ad6c60c0eee}{fieldsets}}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_aa541bd01895c7813210c4c0fe31c7293}{add\+\_\+fieldsets}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4401998de8b71522aa7d36ec66662167}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4401998de8b71522aa7d36ec66662167}} 
+{\bfseries form} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_user_change_form}{User\+Change\+Form}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a6a919e3be28f131f68bbda65fce8a59d}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a6a919e3be28f131f68bbda65fce8a59d}} 
+{\bfseries add\+\_\+form} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_user_creation_form}{User\+Creation\+Form}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a8dcc0b356bc1c81b1f71c0eba22c08c6}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a8dcc0b356bc1c81b1f71c0eba22c08c6}} 
+{\bfseries change\+\_\+password\+\_\+form} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_admin_password_change_form}{Admin\+Password\+Change\+Form}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a2252d0f388ff689be172d9b63962faae}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a2252d0f388ff689be172d9b63962faae}} 
+tuple {\bfseries list\+\_\+display} = (\textquotesingle{}username\textquotesingle{}, \textquotesingle{}email\textquotesingle{}, \textquotesingle{}first\+\_\+name\textquotesingle{}, \textquotesingle{}last\+\_\+name\textquotesingle{}, \textquotesingle{}is\+\_\+staff\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a3bcbe0ee577ac7dd6bfc7be92f90f5d3}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a3bcbe0ee577ac7dd6bfc7be92f90f5d3}} 
+tuple {\bfseries list\+\_\+filter} = (\textquotesingle{}is\+\_\+staff\textquotesingle{}, \textquotesingle{}is\+\_\+superuser\textquotesingle{}, \textquotesingle{}is\+\_\+active\textquotesingle{}, \textquotesingle{}groups\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a31f633ae4a9cef63188ff0d87753a92c}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a31f633ae4a9cef63188ff0d87753a92c}} 
+tuple {\bfseries search\+\_\+fields} = (\textquotesingle{}username\textquotesingle{}, \textquotesingle{}first\+\_\+name\textquotesingle{}, \textquotesingle{}last\+\_\+name\textquotesingle{}, \textquotesingle{}email\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a0b610b5f603042ed61717663454d95f6}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a0b610b5f603042ed61717663454d95f6}} 
+tuple {\bfseries ordering} = (\textquotesingle{}username\textquotesingle{},)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a244bcb2d227cd767e3520576f1bb71ab}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a244bcb2d227cd767e3520576f1bb71ab}} 
+tuple {\bfseries filter\+\_\+horizontal} = (\textquotesingle{}groups\textquotesingle{}, \textquotesingle{}user\+\_\+permissions\textquotesingle{},)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a343c27750bcc883cf2252b23ef23607a}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a343c27750bcc883cf2252b23ef23607a}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!add\_view@{add\_view}}
+\index{add\_view@{add\_view}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{add\_view()}{add\_view()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+add\+\_\+view (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{form\+\_\+url = {\ttfamily \textquotesingle{}\textquotesingle{}},  }\item[{}]{extra\+\_\+context = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin}{django.\+contrib.\+admin.\+options.\+Model\+Admin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a018dc3d5472ed20f8a5a426476063886}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a018dc3d5472ed20f8a5a426476063886}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!get\_fieldsets@{get\_fieldsets}}
+\index{get\_fieldsets@{get\_fieldsets}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{get\_fieldsets()}{get\_fieldsets()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+get\+\_\+fieldsets (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{obj = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Hook for specifying fieldsets.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_base_model_admin_ae980d705adad22c463d965501262953b}{django.\+contrib.\+admin.\+options.\+Base\+Model\+Admin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a30a0a369e3f81b055b79cf3961971466}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a30a0a369e3f81b055b79cf3961971466}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!get\_form@{get\_form}}
+\index{get\_form@{get\_form}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{get\_form()}{get\_form()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+get\+\_\+form (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{obj = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Use special form during user creation
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin_abd0de623835773d013e595da1b643402}{django.\+contrib.\+admin.\+options.\+Model\+Admin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab8885c1442b762a4155bc698fafe1974}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab8885c1442b762a4155bc698fafe1974}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!get\_urls@{get\_urls}}
+\index{get\_urls@{get\_urls}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{get\_urls()}{get\_urls()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+get\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin}{django.\+contrib.\+admin.\+options.\+Model\+Admin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a779311c988c476746dad862be9fc4a1e}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a779311c988c476746dad862be9fc4a1e}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!lookup\_allowed@{lookup\_allowed}}
+\index{lookup\_allowed@{lookup\_allowed}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{lookup\_allowed()}{lookup\_allowed()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+lookup\+\_\+allowed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lookup,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_base_model_admin}{django.\+contrib.\+admin.\+options.\+Base\+Model\+Admin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab68356aa10e52a94f8ab03590b6c3b40}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_ab68356aa10e52a94f8ab03590b6c3b40}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!response\_add@{response\_add}}
+\index{response\_add@{response\_add}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{response\_add()}{response\_add()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+admin.\+User\+Admin.\+response\+\_\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{obj,  }\item[{}]{post\+\_\+url\+\_\+continue = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determine the HttpResponse for the add_view stage. It mostly defers to
+its superclass implementation but is customized because the User model
+has a slightly different workflow.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin_a2ee06720815845c7a2dd5ff4d4287c79}{django.\+contrib.\+admin.\+options.\+Model\+Admin}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_aa541bd01895c7813210c4c0fe31c7293}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_aa541bd01895c7813210c4c0fe31c7293}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!add\_fieldsets@{add\_fieldsets}}
+\index{add\_fieldsets@{add\_fieldsets}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{add\_fieldsets}{add\_fieldsets}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+auth.\+admin.\+User\+Admin.\+add\+\_\+fieldsets\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        (\textcolor{keywordtype}{None}, \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{'classes'}: (\textcolor{stringliteral}{'wide'},),}
+\DoxyCodeLine{            \textcolor{stringliteral}{'fields'}: (\textcolor{stringliteral}{'username'}, \textcolor{stringliteral}{'password1'}, \textcolor{stringliteral}{'password2'}),}
+\DoxyCodeLine{        \}),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4fa89948bc36569505be8ad6c60c0eee}\label{classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin_a4fa89948bc36569505be8ad6c60c0eee}} 
+\index{django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}!fieldsets@{fieldsets}}
+\index{fieldsets@{fieldsets}!django.contrib.auth.admin.UserAdmin@{django.contrib.auth.admin.UserAdmin}}
+\doxysubsubsection{\texorpdfstring{fieldsets}{fieldsets}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+auth.\+admin.\+User\+Admin.\+fieldsets\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        (\textcolor{keywordtype}{None}, \{\textcolor{stringliteral}{'fields'}: (\textcolor{stringliteral}{'username'}, \textcolor{stringliteral}{'password'})\}),}
+\DoxyCodeLine{        (\_(\textcolor{stringliteral}{'Personal info'}), \{\textcolor{stringliteral}{'fields'}: (\textcolor{stringliteral}{'first\_name'}, \textcolor{stringliteral}{'last\_name'}, \textcolor{stringliteral}{'email'})\}),}
+\DoxyCodeLine{        (\_(\textcolor{stringliteral}{'Permissions'}), \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{'fields'}: (\textcolor{stringliteral}{'is\_active'}, \textcolor{stringliteral}{'is\_staff'}, \textcolor{stringliteral}{'is\_superuser'}, \textcolor{stringliteral}{'groups'}, \textcolor{stringliteral}{'user\_permissions'}),}
+\DoxyCodeLine{        \}),}
+\DoxyCodeLine{        (\_(\textcolor{stringliteral}{'Important dates'}), \{\textcolor{stringliteral}{'fields'}: (\textcolor{stringliteral}{'last\_login'}, \textcolor{stringliteral}{'date\_joined'})\}),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/admin.\+py\end{DoxyCompactItemize}

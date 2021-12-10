@@ -1,0 +1,65 @@
+\hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils}{}\doxysection{pip.\+\_\+internal.\+locations.\+\_\+distutils Namespace Reference}
+\label{namespacepip_1_1__internal_1_1locations_1_1__distutils}\index{pip.\_internal.locations.\_distutils@{pip.\_internal.locations.\_distutils}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dict\mbox{[}str, str\mbox{]} \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1__distutils_a563b0d95a7478da23269ab494dfbb3ee}{distutils\+\_\+scheme}} (str dist\+\_\+name, bool user=False, str home=None, str root=None, bool isolated=False, str prefix=None, $\ast$bool ignore\+\_\+config\+\_\+files=False)
+\item 
+\mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1scheme_1_1_scheme}{Scheme}} \mbox{\hyperlink{namespacepip_1_1__internal_1_1locations_1_1__distutils_ae2a1cd59cf56c851b2c67b28e62241d6}{get\+\_\+scheme}} (str dist\+\_\+name, bool user=False, Optional\mbox{[}str\mbox{]} home=None, Optional\mbox{[}str\mbox{]} root=None, bool isolated=False, Optional\mbox{[}str\mbox{]} prefix=None)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_aee017a4d8d4f5a00df705591e4da4525}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_aee017a4d8d4f5a00df705591e4da4525}} 
+str {\bfseries get\+\_\+bin\+\_\+prefix} ()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_a7d2bf9dfa7c735614abbaf7d468245ef}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_a7d2bf9dfa7c735614abbaf7d468245ef}} 
+str {\bfseries get\+\_\+purelib} ()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_a6f1fff0bca5f21541f9e8c981d89bd85}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_a6f1fff0bca5f21541f9e8c981d89bd85}} 
+str {\bfseries get\+\_\+platlib} ()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_affa517c77a4b74e24772908e7b87a0cd}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_affa517c77a4b74e24772908e7b87a0cd}} 
+Tuple\mbox{[}str, str\mbox{]} {\bfseries get\+\_\+prefixed\+\_\+libs} (str prefix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_ae32ba9cca99a76e803b4a0370d5dfa26}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_ae32ba9cca99a76e803b4a0370d5dfa26}} 
+{\bfseries logger} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Locations where we look for configs, install stuff, etc\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_a563b0d95a7478da23269ab494dfbb3ee}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_a563b0d95a7478da23269ab494dfbb3ee}} 
+\index{pip.\_internal.locations.\_distutils@{pip.\_internal.locations.\_distutils}!distutils\_scheme@{distutils\_scheme}}
+\index{distutils\_scheme@{distutils\_scheme}!pip.\_internal.locations.\_distutils@{pip.\_internal.locations.\_distutils}}
+\doxysubsubsection{\texorpdfstring{distutils\_scheme()}{distutils\_scheme()}}
+{\footnotesize\ttfamily  Dict\mbox{[}str, str\mbox{]} pip.\+\_\+internal.\+locations.\+\_\+distutils.\+distutils\+\_\+scheme (\begin{DoxyParamCaption}\item[{str}]{dist\+\_\+name,  }\item[{bool }]{user = {\ttfamily False},  }\item[{str }]{home = {\ttfamily None},  }\item[{str }]{root = {\ttfamily None},  }\item[{bool }]{isolated = {\ttfamily False},  }\item[{str }]{prefix = {\ttfamily None},  }\item[{$\ast$bool }]{ignore\+\_\+config\+\_\+files = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a distutils install scheme
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__internal_1_1locations_1_1__distutils_ae2a1cd59cf56c851b2c67b28e62241d6}\label{namespacepip_1_1__internal_1_1locations_1_1__distutils_ae2a1cd59cf56c851b2c67b28e62241d6}} 
+\index{pip.\_internal.locations.\_distutils@{pip.\_internal.locations.\_distutils}!get\_scheme@{get\_scheme}}
+\index{get\_scheme@{get\_scheme}!pip.\_internal.locations.\_distutils@{pip.\_internal.locations.\_distutils}}
+\doxysubsubsection{\texorpdfstring{get\_scheme()}{get\_scheme()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classpip_1_1__internal_1_1models_1_1scheme_1_1_scheme}{Scheme}} pip.\+\_\+internal.\+locations.\+\_\+distutils.\+get\+\_\+scheme (\begin{DoxyParamCaption}\item[{str}]{dist\+\_\+name,  }\item[{bool }]{user = {\ttfamily False},  }\item[{Optional\mbox{[}str\mbox{]} }]{home = {\ttfamily None},  }\item[{Optional\mbox{[}str\mbox{]} }]{root = {\ttfamily None},  }\item[{bool }]{isolated = {\ttfamily False},  }\item[{Optional\mbox{[}str\mbox{]} }]{prefix = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the "scheme" corresponding to the input parameters. The distutils
+documentation provides the context for the available schemes:
+https://docs.python.org/3/install/index.html#alternate-installation
+
+:param dist_name: the name of the package to retrieve the scheme for, used
+    in the headers scheme path
+:param user: indicates to use the "user" scheme
+:param home: indicates to use the "home" scheme and provides the base
+    directory for the same
+:param root: root under which other directories are re-based
+:param isolated: equivalent to --no-user-cfg, i.e. do not consider
+    ~/.pydistutils.cfg (posix) or ~/pydistutils.cfg (non-posix) for
+    scheme paths
+:param prefix: indicates to use the "prefix" scheme and provides the
+    base directory for the same
+\end{DoxyVerb}
+ 

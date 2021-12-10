@@ -1,0 +1,187 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate}{}\doxysection{django.\+db.\+models.\+aggregates.\+Aggregate Class Reference}
+\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate}\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+
+
+Inheritance diagram for django.\+db.\+models.\+aggregates.\+Aggregate\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+aggregates.\+Aggregate\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aed4ec33bc3ecfd46246d58f9348eee77}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$expressions, distinct=False, filter=None, $\ast$$\ast$extra)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a5da80b0be86ca1671954bc8fc0fc5c2c}{get\+\_\+source\+\_\+fields}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a6d962141f98ebbc444dab691b9a288bd}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_ae8c97a52a776240a4d49270dc334f95b}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_af01f19f273c47ee8225d50465a384703}{resolve\+\_\+expression}} (self, query=None, allow\+\_\+joins=True, reuse=None, summarize=False, for\+\_\+save=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_afc9bd928649cebb36bb6e1faf120e18a}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_afc9bd928649cebb36bb6e1faf120e18a}} 
+def {\bfseries default\+\_\+alias} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aa22e35abf3f6ee60bad82fefcc6e0d5c}{get\+\_\+group\+\_\+by\+\_\+cols}} (self, alias=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a86af10d7994d4f7a535cb7476201db71}{as\+\_\+sql}} (self, compiler, connection, $\ast$$\ast$extra\+\_\+context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a8d98c8718d86f97e722e455a51702dba}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a8d98c8718d86f97e722e455a51702dba}} 
+{\bfseries distinct}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a671cdde4bbc6447a5b3921f85ecbc11c}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a671cdde4bbc6447a5b3921f85ecbc11c}} 
+{\bfseries filter}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a97bbbbf4864fe561c3f2620a4f868439}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a97bbbbf4864fe561c3f2620a4f868439}} 
+string {\bfseries template} = \textquotesingle{}\%(function)s(\%(distinct)s\%(expressions)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a27869668aef0e1f14aa79da54e2b4a97}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a27869668aef0e1f14aa79da54e2b4a97}} 
+bool {\bfseries contains\+\_\+aggregate} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aff48e8a4666c4ebd935c8f0eedb24442}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aff48e8a4666c4ebd935c8f0eedb24442}} 
+{\bfseries name} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a12c037530399b879380bc26b6143996d}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a12c037530399b879380bc26b6143996d}} 
+string {\bfseries filter\+\_\+template} = \textquotesingle{}\%s FILTER (WHERE \%\%(filter)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a64c74c8dd647c31d481b8195543be6a9}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a64c74c8dd647c31d481b8195543be6a9}} 
+bool {\bfseries window\+\_\+compatible} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_ac24aa23c978b7a211704ec082225d54a}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_ac24aa23c978b7a211704ec082225d54a}} 
+bool {\bfseries allow\+\_\+distinct} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aed4ec33bc3ecfd46246d58f9348eee77}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aed4ec33bc3ecfd46246d58f9348eee77}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{expressions,  }\item[{}]{distinct = {\ttfamily False},  }\item[{}]{filter = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a86af10d7994d4f7a535cb7476201db71}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a86af10d7994d4f7a535cb7476201db71}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{$\ast$$\ast$}]{extra\+\_\+context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1aggregates_1_1_geo_aggregate_a129bfb83cb8d965d40be63e974594fa7}{django.\+contrib.\+gis.\+db.\+models.\+aggregates.\+Geo\+Aggregate}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aa22e35abf3f6ee60bad82fefcc6e0d5c}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_aa22e35abf3f6ee60bad82fefcc6e0d5c}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!get\_group\_by\_cols@{get\_group\_by\_cols}}
+\index{get\_group\_by\_cols@{get\_group\_by\_cols}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{get\_group\_by\_cols()}{get\_group\_by\_cols()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+get\+\_\+group\+\_\+by\+\_\+cols (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{alias = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a6d962141f98ebbc444dab691b9a288bd}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a6d962141f98ebbc444dab691b9a288bd}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a5da80b0be86ca1671954bc8fc0fc5c2c}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a5da80b0be86ca1671954bc8fc0fc5c2c}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!get\_source\_fields@{get\_source\_fields}}
+\index{get\_source\_fields@{get\_source\_fields}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{get\_source\_fields()}{get\_source\_fields()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+get\+\_\+source\+\_\+fields (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the underlying field types used by this aggregate.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_ae46497fe5850710921bc52df049b1b31}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_af01f19f273c47ee8225d50465a384703}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_af01f19f273c47ee8225d50465a384703}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!resolve\_expression@{resolve\_expression}}
+\index{resolve\_expression@{resolve\_expression}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{resolve\_expression()}{resolve\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+resolve\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{allow\+\_\+joins = {\ttfamily True},  }\item[{}]{reuse = {\ttfamily None},  }\item[{}]{summarize = {\ttfamily False},  }\item[{}]{for\+\_\+save = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the chance to do any preprocessing or validation before being
+added to the query.
+
+Arguments:
+ * query: the backend query implementation
+ * allow_joins: boolean allowing or denying use of joins
+   in this query
+ * reuse: a set of reusable joins for multijoins
+ * summarize: a terminal aggregate clause
+ * for_save: whether this expression about to be used in a save or update
+
+Return: an Expression to be added to the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ad831ab3b8c4ec8e2c9ea0353d6790d38}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1aggregates_1_1_geo_aggregate_aff28d2e0df62eacfdda3a13cc42929ca}{django.\+contrib.\+gis.\+db.\+models.\+aggregates.\+Geo\+Aggregate}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_ae8c97a52a776240a4d49270dc334f95b}\label{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_ae8c97a52a776240a4d49270dc334f95b}} 
+\index{django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.aggregates.Aggregate@{django.db.models.aggregates.Aggregate}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+aggregates.\+Aggregate.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{django.\+db.\+models.\+expressions.\+Func}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/aggregates.\+py\end{DoxyCompactItemize}

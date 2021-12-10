@@ -1,0 +1,71 @@
+\hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build}{}\doxysection{pip.\+\_\+vendor.\+pep517.\+build Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1pep517_1_1build}\index{pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pep517_1_1build_ae8c3647d1dec58659de94743307b912e}{validate\+\_\+system}} (system)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pep517_1_1build_a947629dd0956e56b2c1c7e0119bb8124}{load\+\_\+system}} (source\+\_\+dir)
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1pep517_1_1build_ac17573f87b3f31c04bf634150ef5f368}{compat\+\_\+system}} (source\+\_\+dir)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_aabcc54a837545e9cadf3ab91aaa6a611}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_aabcc54a837545e9cadf3ab91aaa6a611}} 
+def {\bfseries build} (source\+\_\+dir, dist, dest=None, system=None)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_aa3bf9002f1471764cf8359ec8a9e5ce0}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_aa3bf9002f1471764cf8359ec8a9e5ce0}} 
+def {\bfseries main} (args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_a7467ff642f69ca992afb884de5974812}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_a7467ff642f69ca992afb884de5974812}} 
+{\bfseries log} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_ae881c344a56185303239155da09abfc6}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_ae881c344a56185303239155da09abfc6}} 
+{\bfseries parser} = argparse.\+Argument\+Parser()
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_a13e317f500e061959aabfae774114463}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_a13e317f500e061959aabfae774114463}} 
+{\bfseries help}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_a39b21193847f339149e48542484724c3}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_a39b21193847f339149e48542484724c3}} 
+{\bfseries action}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_a0e44cd200daee3b36dea2c5252d52c97}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_a0e44cd200daee3b36dea2c5252d52c97}} 
+{\bfseries default}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Build a project using PEP 517 hooks.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_ac17573f87b3f31c04bf634150ef5f368}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_ac17573f87b3f31c04bf634150ef5f368}} 
+\index{pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}!compat\_system@{compat\_system}}
+\index{compat\_system@{compat\_system}!pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}}
+\doxysubsubsection{\texorpdfstring{compat\_system()}{compat\_system()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pep517.\+build.\+compat\+\_\+system (\begin{DoxyParamCaption}\item[{}]{source\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a source dir, attempt to get a build system backend
+and requirements from pyproject.toml. Fallback to
+setuptools but only if the file was not found or a build
+system was not indicated.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_a947629dd0956e56b2c1c7e0119bb8124}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_a947629dd0956e56b2c1c7e0119bb8124}} 
+\index{pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}!load\_system@{load\_system}}
+\index{load\_system@{load\_system}!pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}}
+\doxysubsubsection{\texorpdfstring{load\_system()}{load\_system()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pep517.\+build.\+load\+\_\+system (\begin{DoxyParamCaption}\item[{}]{source\+\_\+dir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the build system from a source dir (pyproject.toml).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepip_1_1__vendor_1_1pep517_1_1build_ae8c3647d1dec58659de94743307b912e}\label{namespacepip_1_1__vendor_1_1pep517_1_1build_ae8c3647d1dec58659de94743307b912e}} 
+\index{pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}!validate\_system@{validate\_system}}
+\index{validate\_system@{validate\_system}!pip.\_vendor.pep517.build@{pip.\_vendor.pep517.build}}
+\doxysubsubsection{\texorpdfstring{validate\_system()}{validate\_system()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+pep517.\+build.\+validate\+\_\+system (\begin{DoxyParamCaption}\item[{}]{system }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure build system has the requisite fields.
+\end{DoxyVerb}
+ 

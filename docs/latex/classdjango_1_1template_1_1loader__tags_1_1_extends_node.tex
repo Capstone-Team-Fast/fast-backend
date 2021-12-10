@@ -1,0 +1,81 @@
+\hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node}{}\doxysection{django.\+template.\+loader\+\_\+tags.\+Extends\+Node Class Reference}
+\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node}\index{django.template.loader\_tags.ExtendsNode@{django.template.loader\_tags.ExtendsNode}}
+
+
+Inheritance diagram for django.\+template.\+loader\+\_\+tags.\+Extends\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+template.\+loader\+\_\+tags.\+Extends\+Node\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a437fe70c4f9fa82efdd027a9be3774a2}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a437fe70c4f9fa82efdd027a9be3774a2}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, nodelist, parent\+\_\+name, template\+\_\+dirs=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a6d677bda8f0a95754110cee3b7832967}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a6d677bda8f0a95754110cee3b7832967}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a8de80d0ebe6e3e95089623e7153fc374}{find\+\_\+template}} (self, template\+\_\+name, context)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a87b815a6660a42ee8fbebd264bcee151}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a87b815a6660a42ee8fbebd264bcee151}} 
+def {\bfseries get\+\_\+parent} (self, context)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a30f633fb22c13f9b9de4dd435875590d}{render}} (self, context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_aba46746e0e01a3c5f3af715160182631}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_aba46746e0e01a3c5f3af715160182631}} 
+{\bfseries nodelist}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a7a96e0784643c353f21b065a844942b8}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a7a96e0784643c353f21b065a844942b8}} 
+{\bfseries parent\+\_\+name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a6db15147b4cfa16b2a40d2617894f0bf}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a6db15147b4cfa16b2a40d2617894f0bf}} 
+{\bfseries template\+\_\+dirs}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a3f0d0364ca60fe9ea0344db92cf3bb12}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a3f0d0364ca60fe9ea0344db92cf3bb12}} 
+{\bfseries blocks}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_ace461f875184eff13c1a26d64f66f049}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_ace461f875184eff13c1a26d64f66f049}} 
+bool {\bfseries must\+\_\+be\+\_\+first} = True
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a48d2811564cc89a966317cecd2ecaaa3}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a48d2811564cc89a966317cecd2ecaaa3}} 
+string {\bfseries context\+\_\+key} = \textquotesingle{}extends\+\_\+context\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a8de80d0ebe6e3e95089623e7153fc374}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a8de80d0ebe6e3e95089623e7153fc374}} 
+\index{django.template.loader\_tags.ExtendsNode@{django.template.loader\_tags.ExtendsNode}!find\_template@{find\_template}}
+\index{find\_template@{find\_template}!django.template.loader\_tags.ExtendsNode@{django.template.loader\_tags.ExtendsNode}}
+\doxysubsubsection{\texorpdfstring{find\_template()}{find\_template()}}
+{\footnotesize\ttfamily def django.\+template.\+loader\+\_\+tags.\+Extends\+Node.\+find\+\_\+template (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{template\+\_\+name,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a wrapper around engine.find_template(). A history is kept in
+the render_context attribute between successive extends calls and
+passed as the skip argument. This enables extends to work recursively
+without extending the same template twice.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a30f633fb22c13f9b9de4dd435875590d}\label{classdjango_1_1template_1_1loader__tags_1_1_extends_node_a30f633fb22c13f9b9de4dd435875590d}} 
+\index{django.template.loader\_tags.ExtendsNode@{django.template.loader\_tags.ExtendsNode}!render@{render}}
+\index{render@{render}!django.template.loader\_tags.ExtendsNode@{django.template.loader\_tags.ExtendsNode}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def django.\+template.\+loader\+\_\+tags.\+Extends\+Node.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the node rendered as a string.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_node_a57f50cbc3cd9aec01b4a07fee48c1d6e}{django.\+template.\+base.\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/loader\+\_\+tags.\+py\end{DoxyCompactItemize}

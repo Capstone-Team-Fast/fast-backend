@@ -1,0 +1,28 @@
+digraph "django.core.handlers.base.BaseHandler"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.core.handlers.base.\lBaseHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.core.handlers.asgi.\lASGIHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1handlers_1_1asgi_1_1_a_s_g_i_handler.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.staticfiles.handlers.\lASGIStaticFilesHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.core.handlers.wsgi.\lWSGIHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1core_1_1handlers_1_1wsgi_1_1_w_s_g_i_handler.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.staticfiles.handlers.\lStaticFilesHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_static_files_handler.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.test.testcases.FSFiles\lHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1testcases_1_1_f_s_files_handler.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.test.testcases.\l_MediaFilesHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1testcases_1_1___media_files_handler.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.test.testcases.\l_StaticFilesHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1testcases_1_1___static_files_handler.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.test.client.Async\lClientHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1client_1_1_async_client_handler.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.test.client.Client\lHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdjango_1_1test_1_1client_1_1_client_handler.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="rest_framework.test.Force\lAuthClientHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrest__framework_1_1test_1_1_force_auth_client_handler.html",tooltip=" "];
+}

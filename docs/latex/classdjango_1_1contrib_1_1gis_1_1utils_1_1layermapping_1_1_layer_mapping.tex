@@ -1,0 +1,282 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping}{}\doxysection{django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping}\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a441abbcdca471c0850e042f57479dcf7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, model, data, mapping, layer=0, source\+\_\+srs=None, encoding=\textquotesingle{}utf-\/8\textquotesingle{}, transaction\+\_\+mode=\textquotesingle{}commit\+\_\+on\+\_\+success\textquotesingle{}, transform=True, unique=None, using=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_adc7d0b34c2fc063a86677635d87707b8}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_adc7d0b34c2fc063a86677635d87707b8}} 
+def {\bfseries check\+\_\+fid\+\_\+range} (self, fid\+\_\+range)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_aec7350f495bee5299f2692d7b00ae62e}{check\+\_\+layer}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ab34e30515bc3fa3a6f5f8b45de4ceadd}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ab34e30515bc3fa3a6f5f8b45de4ceadd}} 
+def {\bfseries check\+\_\+srs} (self, source\+\_\+srs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a0419f2572bcaa9127519de27e23b4b8d}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a0419f2572bcaa9127519de27e23b4b8d}} 
+def {\bfseries check\+\_\+unique} (self, unique)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a2ce667d8211089d090e8bac0189c6e8d}{feature\+\_\+kwargs}} (self, feat)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99d2ec0fc4ff6a2290abceb37c1215a7}{unique\+\_\+kwargs}} (self, kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99de49f833d735fb47ed64713c800517}{verify\+\_\+ogr\+\_\+field}} (self, ogr\+\_\+field, model\+\_\+field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a849b7607c70382567eb8ea23ba1b984d}{verify\+\_\+fk}} (self, feat, rel\+\_\+model, rel\+\_\+mapping)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a890f581dde917ba02fda1ab9f42132c7}{verify\+\_\+geom}} (self, geom, model\+\_\+field)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a55d696ae4cbaae50e1d0a3346f390089}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a55d696ae4cbaae50e1d0a3346f390089}} 
+def {\bfseries coord\+\_\+transform} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af31952d49ae214c6605c3a2edff645ff}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af31952d49ae214c6605c3a2edff645ff}} 
+def {\bfseries geometry\+\_\+field} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a932d2189f0a67518f73dcbd11468744e}{make\+\_\+multi}} (self, geom\+\_\+type, model\+\_\+field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af7d13bf27b58a98727872783d4f05c01}{save}} (self, verbose=False, fid\+\_\+range=False, step=False, progress=False, silent=False, stream=sys.\+stdout, strict=False)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af6b045787b4cce453c69620b0c99fbb1}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af6b045787b4cce453c69620b0c99fbb1}} 
+{\bfseries ds}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_adb583b6aa18d41d8ce4987782f1dc288}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_adb583b6aa18d41d8ce4987782f1dc288}} 
+{\bfseries layer}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a5436c7045c0ea29c2fd57c058d8681e9}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a5436c7045c0ea29c2fd57c058d8681e9}} 
+{\bfseries using}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_acbbc11ace2a50d25d5fa3ef34632969d}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_acbbc11ace2a50d25d5fa3ef34632969d}} 
+{\bfseries spatial\+\_\+backend}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a0946a1d5c44fc5647293bfb6dfed1b9e}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a0946a1d5c44fc5647293bfb6dfed1b9e}} 
+{\bfseries mapping}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a4f3e8654c1359475ed5e2575bfff0fa6}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a4f3e8654c1359475ed5e2575bfff0fa6}} 
+{\bfseries model}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ad5456971fd97e1d4d80563c8a247df26}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ad5456971fd97e1d4d80563c8a247df26}} 
+{\bfseries geo\+\_\+field}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_acd74086bfb07e4c1bec54a51898861ca}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_acd74086bfb07e4c1bec54a51898861ca}} 
+{\bfseries source\+\_\+srs}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a65ece0a1825a6de66c8701064c954937}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a65ece0a1825a6de66c8701064c954937}} 
+{\bfseries transform}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ad1ebbbce26dcc1e06f07709ae1f7a5b0}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ad1ebbbce26dcc1e06f07709ae1f7a5b0}} 
+{\bfseries encoding}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ada2ecb7ba44a919119a597a2d263ec06}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ada2ecb7ba44a919119a597a2d263ec06}} 
+{\bfseries unique}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a8285e2a218281438f0e0373f2399f099}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a8285e2a218281438f0e0373f2399f099}} 
+{\bfseries transaction\+\_\+mode}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a78151231ca0b131df43930c51eeab152}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a78151231ca0b131df43930c51eeab152}} 
+{\bfseries transaction\+\_\+decorator}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a5420c2c5d56a73bf9a4e5163a92b3365}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a5420c2c5d56a73bf9a4e5163a92b3365}} 
+{\bfseries geom\+\_\+field}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a6e8389917bbada6f6f2bac3252b999b0}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a6e8389917bbada6f6f2bac3252b999b0}} 
+{\bfseries fields}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a6095c5f26951bfbc6844df41928a857c}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a6095c5f26951bfbc6844df41928a857c}} 
+{\bfseries coord\+\_\+dim}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a81d3b2c8125a6f1071a6c5179890cc3b}{MULTI\+\_\+\+TYPES}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ac8b1c9812b73603a7f81c9e1e3d30c1f}{FIELD\+\_\+\+TYPES}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a441abbcdca471c0850e042f57479dcf7}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a441abbcdca471c0850e042f57479dcf7}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{data,  }\item[{}]{mapping,  }\item[{}]{layer = {\ttfamily 0},  }\item[{}]{source\+\_\+srs = {\ttfamily None},  }\item[{}]{encoding = {\ttfamily \textquotesingle{}utf-\/8\textquotesingle{}},  }\item[{}]{transaction\+\_\+mode = {\ttfamily \textquotesingle{}commit\+\_\+on\+\_\+success\textquotesingle{}},  }\item[{}]{transform = {\ttfamily True},  }\item[{}]{unique = {\ttfamily None},  }\item[{}]{using = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A LayerMapping object is initialized using the given Model (not an instance),
+a DataSource (or string path to an OGR-supported data file), and a mapping
+dictionary.  See the module level docstring for more details and keyword
+argument usage.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_aec7350f495bee5299f2692d7b00ae62e}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_aec7350f495bee5299f2692d7b00ae62e}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!check\_layer@{check\_layer}}
+\index{check\_layer@{check\_layer}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{check\_layer()}{check\_layer()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+check\+\_\+layer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check the Layer metadata and ensure that it's compatible with the
+mapping information and model. Unlike previous revisions, there is no
+need to increment through each feature in the Layer.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a2ce667d8211089d090e8bac0189c6e8d}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a2ce667d8211089d090e8bac0189c6e8d}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!feature\_kwargs@{feature\_kwargs}}
+\index{feature\_kwargs@{feature\_kwargs}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{feature\_kwargs()}{feature\_kwargs()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+feature\+\_\+kwargs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{feat }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given an OGR Feature, return a dictionary of keyword arguments for
+constructing the mapped model.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a932d2189f0a67518f73dcbd11468744e}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a932d2189f0a67518f73dcbd11468744e}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!make\_multi@{make\_multi}}
+\index{make\_multi@{make\_multi}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{make\_multi()}{make\_multi()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+make\+\_\+multi (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geom\+\_\+type,  }\item[{}]{model\+\_\+field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given the OGRGeomType for a geometry and its associated GeometryField,
+determine whether the geometry should be turned into a GeometryCollection.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af7d13bf27b58a98727872783d4f05c01}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_af7d13bf27b58a98727872783d4f05c01}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!save@{save}}
+\index{save@{save}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{verbose = {\ttfamily False},  }\item[{}]{fid\+\_\+range = {\ttfamily False},  }\item[{}]{step = {\ttfamily False},  }\item[{}]{progress = {\ttfamily False},  }\item[{}]{silent = {\ttfamily False},  }\item[{}]{stream = {\ttfamily sys.stdout},  }\item[{}]{strict = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save the contents from the OGR DataSource Layer into the database
+according to the mapping dictionary given at initialization.
+
+Keyword Parameters:
+ verbose:
+   If set, information will be printed subsequent to each model save
+   executed on the database.
+
+ fid_range:
+   May be set with a slice or tuple of (begin, end) feature ID's to map
+   from the data source.  In other words, this keyword enables the user
+   to selectively import a subset range of features in the geographic
+   data source.
+
+ step:
+   If set with an integer, transactions will occur at every step
+   interval. For example, if step=1000, a commit would occur after
+   the 1,000th feature, the 2,000th feature etc.
+
+ progress:
+   When this keyword is set, status information will be printed giving
+   the number of features processed and successfully saved.  By default,
+   progress information will pe printed every 1000 features processed,
+   however, this default may be overridden by setting this keyword with an
+   integer for the desired interval.
+
+ stream:
+   Status information will be written to this file handle.  Defaults to
+   using `sys.stdout`, but any object with a `write` method is supported.
+
+ silent:
+   By default, non-fatal error notifications are printed to stdout, but
+   this keyword may be set to disable these notifications.
+
+ strict:
+   Execution of the model mapping will cease upon the first error
+   encountered.  The default behavior is to attempt to continue.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99d2ec0fc4ff6a2290abceb37c1215a7}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99d2ec0fc4ff6a2290abceb37c1215a7}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!unique\_kwargs@{unique\_kwargs}}
+\index{unique\_kwargs@{unique\_kwargs}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{unique\_kwargs()}{unique\_kwargs()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+unique\+\_\+kwargs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given the feature keyword arguments (from `feature_kwargs`), construct
+and return the uniqueness keyword arguments -- a subset of the feature
+kwargs.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a849b7607c70382567eb8ea23ba1b984d}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a849b7607c70382567eb8ea23ba1b984d}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!verify\_fk@{verify\_fk}}
+\index{verify\_fk@{verify\_fk}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{verify\_fk()}{verify\_fk()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+verify\+\_\+fk (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{feat,  }\item[{}]{rel\+\_\+model,  }\item[{}]{rel\+\_\+mapping }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given an OGR Feature, the related model and its dictionary mapping,
+retrieve the related model for the ForeignKey mapping.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a890f581dde917ba02fda1ab9f42132c7}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a890f581dde917ba02fda1ab9f42132c7}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!verify\_geom@{verify\_geom}}
+\index{verify\_geom@{verify\_geom}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{verify\_geom()}{verify\_geom()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+verify\+\_\+geom (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geom,  }\item[{}]{model\+\_\+field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verify the geometry -- construct and return a GeometryCollection
+if necessary (for example if the model field is MultiPolygonField while
+the mapped shapefile only contains Polygons).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99de49f833d735fb47ed64713c800517}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a99de49f833d735fb47ed64713c800517}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!verify\_ogr\_field@{verify\_ogr\_field}}
+\index{verify\_ogr\_field@{verify\_ogr\_field}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{verify\_ogr\_field()}{verify\_ogr\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+verify\+\_\+ogr\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ogr\+\_\+field,  }\item[{}]{model\+\_\+field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verify if the OGR Field contents are acceptable to the model field. If
+they are, return the verified value, otherwise raise an exception.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ac8b1c9812b73603a7f81c9e1e3d30c1f}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_ac8b1c9812b73603a7f81c9e1e3d30c1f}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!FIELD\_TYPES@{FIELD\_TYPES}}
+\index{FIELD\_TYPES@{FIELD\_TYPES}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{FIELD\_TYPES}{FIELD\_TYPES}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+FIELD\+\_\+\+TYPES\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        models.AutoField: OFTInteger,}
+\DoxyCodeLine{        models.BigAutoField: OFTInteger64,}
+\DoxyCodeLine{        models.SmallAutoField: OFTInteger,}
+\DoxyCodeLine{        models.BooleanField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.IntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.FloatField: (OFTInteger, OFTReal),}
+\DoxyCodeLine{        models.DateField: OFTDate,}
+\DoxyCodeLine{        models.DateTimeField: OFTDateTime,}
+\DoxyCodeLine{        models.EmailField: OFTString,}
+\DoxyCodeLine{        models.TimeField: OFTTime,}
+\DoxyCodeLine{        models.DecimalField: (OFTInteger, OFTReal),}
+\DoxyCodeLine{        models.CharField: OFTString,}
+\DoxyCodeLine{        models.SlugField: OFTString,}
+\DoxyCodeLine{        models.TextField: OFTString,}
+\DoxyCodeLine{        models.URLField: OFTString,}
+\DoxyCodeLine{        models.UUIDField: OFTString,}
+\DoxyCodeLine{        models.BigIntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.SmallIntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.PositiveBigIntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.PositiveIntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{        models.PositiveSmallIntegerField: (OFTInteger, OFTReal, OFTString),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a81d3b2c8125a6f1071a6c5179890cc3b}\label{classdjango_1_1contrib_1_1gis_1_1utils_1_1layermapping_1_1_layer_mapping_a81d3b2c8125a6f1071a6c5179890cc3b}} 
+\index{django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}!MULTI\_TYPES@{MULTI\_TYPES}}
+\index{MULTI\_TYPES@{MULTI\_TYPES}!django.contrib.gis.utils.layermapping.LayerMapping@{django.contrib.gis.utils.layermapping.LayerMapping}}
+\doxysubsubsection{\texorpdfstring{MULTI\_TYPES}{MULTI\_TYPES}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+gis.\+utils.\+layermapping.\+Layer\+Mapping.\+MULTI\+\_\+\+TYPES\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        1: OGRGeomType(\textcolor{stringliteral}{'MultiPoint'}),}
+\DoxyCodeLine{        2: OGRGeomType(\textcolor{stringliteral}{'MultiLineString'}),}
+\DoxyCodeLine{        3: OGRGeomType(\textcolor{stringliteral}{'MultiPolygon'}),}
+\DoxyCodeLine{        OGRGeomType(\textcolor{stringliteral}{'Point25D'}).num: OGRGeomType(\textcolor{stringliteral}{'MultiPoint25D'}),}
+\DoxyCodeLine{        OGRGeomType(\textcolor{stringliteral}{'LineString25D'}).num: OGRGeomType(\textcolor{stringliteral}{'MultiLineString25D'}),}
+\DoxyCodeLine{        OGRGeomType(\textcolor{stringliteral}{'Polygon25D'}).num: OGRGeomType(\textcolor{stringliteral}{'MultiPolygon25D'}),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/utils/layermapping.\+py\end{DoxyCompactItemize}

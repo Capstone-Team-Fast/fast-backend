@@ -1,0 +1,74 @@
+\hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware}{}\doxysection{django.\+middleware.\+cache.\+Update\+Cache\+Middleware Class Reference}
+\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware}\index{django.middleware.cache.UpdateCacheMiddleware@{django.middleware.cache.UpdateCacheMiddleware}}
+
+
+Inheritance diagram for django.\+middleware.\+cache.\+Update\+Cache\+Middleware\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+middleware.\+cache.\+Update\+Cache\+Middleware\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_ab45139b3240ea1612c4622b2f1722bf7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, get\+\_\+response=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a923e563146c968dcfb4217a470822900}{process\+\_\+response}} (self, request, response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a1df3a8f267ca7063bc1fa2e060477817}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a1df3a8f267ca7063bc1fa2e060477817}} 
+{\bfseries cache\+\_\+timeout}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a9e4c6f28572ce17f399d279390588914}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a9e4c6f28572ce17f399d279390588914}} 
+{\bfseries page\+\_\+timeout}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a3a0072b32dc7c756f469aa91113a509c}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a3a0072b32dc7c756f469aa91113a509c}} 
+{\bfseries key\+\_\+prefix}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a456a2ce21fcd196e828724c618326729}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a456a2ce21fcd196e828724c618326729}} 
+{\bfseries cache\+\_\+alias}
+\item 
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a70790c95d4174817bf6c7d63e30aed12}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a70790c95d4174817bf6c7d63e30aed12}} 
+{\bfseries cache}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Response-phase cache middleware that updates the cache if the response is
+cacheable.
+
+Must be used as part of the two-part update/fetch cache middleware.
+UpdateCacheMiddleware must be the first piece of middleware in MIDDLEWARE
+so that it'll get called last during the response phase.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_ab45139b3240ea1612c4622b2f1722bf7}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_ab45139b3240ea1612c4622b2f1722bf7}} 
+\index{django.middleware.cache.UpdateCacheMiddleware@{django.middleware.cache.UpdateCacheMiddleware}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.middleware.cache.UpdateCacheMiddleware@{django.middleware.cache.UpdateCacheMiddleware}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+middleware.\+cache.\+Update\+Cache\+Middleware.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{get\+\_\+response = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1deprecation_1_1_middleware_mixin}{django.\+utils.\+deprecation.\+Middleware\+Mixin}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a923e563146c968dcfb4217a470822900}\label{classdjango_1_1middleware_1_1cache_1_1_update_cache_middleware_a923e563146c968dcfb4217a470822900}} 
+\index{django.middleware.cache.UpdateCacheMiddleware@{django.middleware.cache.UpdateCacheMiddleware}!process\_response@{process\_response}}
+\index{process\_response@{process\_response}!django.middleware.cache.UpdateCacheMiddleware@{django.middleware.cache.UpdateCacheMiddleware}}
+\doxysubsubsection{\texorpdfstring{process\_response()}{process\_response()}}
+{\footnotesize\ttfamily def django.\+middleware.\+cache.\+Update\+Cache\+Middleware.\+process\+\_\+response (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{}]{response }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the cache, if needed.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/middleware/cache.\+py\end{DoxyCompactItemize}

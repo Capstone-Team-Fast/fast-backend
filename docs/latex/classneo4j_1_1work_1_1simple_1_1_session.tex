@@ -1,0 +1,264 @@
+\hypertarget{classneo4j_1_1work_1_1simple_1_1_session}{}\doxysection{neo4j.\+work.\+simple.\+Session Class Reference}
+\label{classneo4j_1_1work_1_1simple_1_1_session}\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+
+
+Inheritance diagram for neo4j.\+work.\+simple.\+Session\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+work.\+simple.\+Session\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_af860d7ee3c8b911f305c5dcbdbcafa39}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, pool, session\+\_\+config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_a6adbb86ca11bf7d456bb2de26d038c68}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_a67f635d7af0286549ceadb623b95e6b1}{\+\_\+\+\_\+enter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_aa37e69d55d2039ebb5c0eb007040c37c}{\+\_\+\+\_\+exit\+\_\+\+\_\+}} (self, exception\+\_\+type, exception\+\_\+value, traceback)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_a5b9805837cff2e5932135143b89454df}{close}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_ad8737f39e5d98385055fd8e286feb94b}{run}} (self, query, parameters=None, $\ast$$\ast$kwparameters)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_a6978f3c4cf25de62033093e119a82767}{last\+\_\+bookmark}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_aeffdef79033d28d697146387a175f8c2}{begin\+\_\+transaction}} (self, metadata=None, timeout=None)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_ad1590fa7bb9ee60e1f699a0bfedf33fb}{read\+\_\+transaction}} (self, transaction\+\_\+function, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1work_1_1simple_1_1_session_a255da4118f8fc9811e21d72805be189f}{write\+\_\+transaction}} (self, transaction\+\_\+function, $\ast$args, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A :class:`.Session` is a logical context for transactional units
+of work. Connections are drawn from the :class:`.Driver` connection
+pool as required.
+
+Session creation is a lightweight operation and sessions are not thread
+safe. Therefore a session should generally be short-lived, and not
+span multiple threads.
+
+In general, sessions will be created and destroyed within a `with`
+context. For example::
+
+    with driver.session() as session:
+        result = session.run("MATCH (n:Person) RETURN n.name AS name")
+        # do something with the result...
+
+:param pool: connection pool instance
+:param config: session config instance
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_af860d7ee3c8b911f305c5dcbdbcafa39}\label{classneo4j_1_1work_1_1simple_1_1_session_af860d7ee3c8b911f305c5dcbdbcafa39}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pool,  }\item[{}]{session\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1work_1_1_workspace}{neo4j.\+work.\+Workspace}}.
+
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_a6adbb86ca11bf7d456bb2de26d038c68}\label{classneo4j_1_1work_1_1simple_1_1_session_a6adbb86ca11bf7d456bb2de26d038c68}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!\_\_del\_\_@{\_\_del\_\_}}
+\index{\_\_del\_\_@{\_\_del\_\_}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{\_\_del\_\_()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1work_1_1_workspace}{neo4j.\+work.\+Workspace}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_a67f635d7af0286549ceadb623b95e6b1}\label{classneo4j_1_1work_1_1simple_1_1_session_a67f635d7af0286549ceadb623b95e6b1}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!\_\_enter\_\_@{\_\_enter\_\_}}
+\index{\_\_enter\_\_@{\_\_enter\_\_}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{\_\_enter\_\_()}{\_\_enter\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+\_\+\+\_\+enter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1work_1_1_workspace}{neo4j.\+work.\+Workspace}}.
+
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_aa37e69d55d2039ebb5c0eb007040c37c}\label{classneo4j_1_1work_1_1simple_1_1_session_aa37e69d55d2039ebb5c0eb007040c37c}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!\_\_exit\_\_@{\_\_exit\_\_}}
+\index{\_\_exit\_\_@{\_\_exit\_\_}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{\_\_exit\_\_()}{\_\_exit\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+\_\+\+\_\+exit\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exception\+\_\+type,  }\item[{}]{exception\+\_\+value,  }\item[{}]{traceback }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1work_1_1_workspace}{neo4j.\+work.\+Workspace}}.
+
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_aeffdef79033d28d697146387a175f8c2}\label{classneo4j_1_1work_1_1simple_1_1_session_aeffdef79033d28d697146387a175f8c2}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!begin\_transaction@{begin\_transaction}}
+\index{begin\_transaction@{begin\_transaction}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{begin\_transaction()}{begin\_transaction()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+begin\+\_\+transaction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{metadata = {\ttfamily None},  }\item[{}]{timeout = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Begin a new unmanaged transaction. Creates a new :class:`.Transaction` within this session.
+    At most one transaction may exist in a session at any point in time.
+    To maintain multiple concurrent transactions, use multiple concurrent sessions.
+
+    Note: For auto-transaction (Session.run) this will trigger an consume for the current result.
+
+:param metadata:
+    a dictionary with metadata.
+    Specified metadata will be attached to the executing transaction and visible in the output of ``dbms.listQueries`` and ``dbms.listTransactions`` procedures.
+    It will also get logged to the ``query.log``.
+    This functionality makes it easier to tag transactions and is equivalent to ``dbms.setTXMetaData`` procedure, see https://neo4j.com/docs/operations-manual/current/reference/procedures/ for procedure reference.
+:type metadata: dict
+
+:param timeout:
+    the transaction timeout in seconds.
+    Transactions that execute longer than the configured timeout will be terminated by the database.
+    This functionality allows to limit query/transaction execution time.
+    Specified timeout overrides the default timeout configured in the database using ``dbms.transaction.timeout`` setting.
+    Value should not represent a duration of zero or negative duration.
+:type timeout: int
+
+:returns: A new transaction instance.
+:rtype: :class:`neo4j.Transaction`
+
+:raises TransactionError: :class:`neo4j.exceptions.TransactionError` if a transaction is already open.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_a5b9805837cff2e5932135143b89454df}\label{classneo4j_1_1work_1_1simple_1_1_session_a5b9805837cff2e5932135143b89454df}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!close@{close}}
+\index{close@{close}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Close the session. This will release any borrowed resources, such as connections, and will roll back any outstanding transactions.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1work_1_1_workspace}{neo4j.\+work.\+Workspace}}.
+
+\mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_a6978f3c4cf25de62033093e119a82767}\label{classneo4j_1_1work_1_1simple_1_1_session_a6978f3c4cf25de62033093e119a82767}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!last\_bookmark@{last\_bookmark}}
+\index{last\_bookmark@{last\_bookmark}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{last\_bookmark()}{last\_bookmark()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+last\+\_\+bookmark (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the bookmark received following the last completed transaction.
+Note: For auto-transaction (Session.run) this will trigger an consume for the current result.
+
+:returns: :class:`neo4j.Bookmark` object
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_ad1590fa7bb9ee60e1f699a0bfedf33fb}\label{classneo4j_1_1work_1_1simple_1_1_session_ad1590fa7bb9ee60e1f699a0bfedf33fb}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!read\_transaction@{read\_transaction}}
+\index{read\_transaction@{read\_transaction}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{read\_transaction()}{read\_transaction()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+read\+\_\+transaction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{transaction\+\_\+function,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Execute a unit of work in a managed read transaction.
+This transaction will automatically be committed unless an exception is thrown during query execution or by the user code.
+Note, that this function perform retries and that the supplied `transaction_function` might get invoked more than once.
+
+Managed transactions should not generally be explicitly committed (via tx.commit()).
+
+Example::
+
+    def do_cypher_tx(tx, cypher):
+        result = tx.run(cypher)
+        values = []
+        for record in result:
+            values.append(record.values())
+        return values
+
+    with driver.session() as session:
+        values = session.read_transaction(do_cypher_tx, "RETURN 1 AS x")
+
+Example::
+
+    def get_two_tx(tx):
+        result = tx.run("UNWIND [1,2,3,4] AS x RETURN x")
+        values = []
+        for ix, record in enumerate(result):
+            if x > 1:
+                break
+            values.append(record.values())
+        info = result.consume()  # discard the remaining records if there are any
+        # use the info for logging etc.
+        return values
+
+    with driver.session() as session:
+        values = session.read_transaction(get_two_tx)
+
+:param transaction_function: a function that takes a transaction as an argument and does work with the transaction. `tx_function(tx, *args, **kwargs)`
+:param args: arguments for the `transaction_function`
+:param kwargs: key word arguments for the `transaction_function`
+:return: a result as returned by the given unit of work
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_ad8737f39e5d98385055fd8e286feb94b}\label{classneo4j_1_1work_1_1simple_1_1_session_ad8737f39e5d98385055fd8e286feb94b}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!run@{run}}
+\index{run@{run}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query,  }\item[{}]{parameters = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwparameters }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run a Cypher query within an auto-commit transaction.
+
+The query is sent and the result header received
+immediately but the :class:`neo4j.Result` content is
+fetched lazily as consumed by the client application.
+
+If a query is executed before a previous
+:class:`neo4j.Result` in the same :class:`.Session` has
+been fully consumed, the first result will be fully fetched
+and buffered. Note therefore that the generally recommended
+pattern of usage is to fully consume one result before
+executing a subsequent query. If two results need to be
+consumed in parallel, multiple :class:`.Session` objects
+can be used as an alternative to result buffering.
+
+For more usage details, see :meth:`.Transaction.run`.
+
+:param query: cypher query
+:type query: str, neo4j.Query
+:param parameters: dictionary of parameters
+:type parameters: dict
+:param kwparameters: additional keyword parameters
+:returns: a new :class:`neo4j.Result` object
+:rtype: :class:`neo4j.Result`
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1work_1_1simple_1_1_session_a255da4118f8fc9811e21d72805be189f}\label{classneo4j_1_1work_1_1simple_1_1_session_a255da4118f8fc9811e21d72805be189f}} 
+\index{neo4j.work.simple.Session@{neo4j.work.simple.Session}!write\_transaction@{write\_transaction}}
+\index{write\_transaction@{write\_transaction}!neo4j.work.simple.Session@{neo4j.work.simple.Session}}
+\doxysubsubsection{\texorpdfstring{write\_transaction()}{write\_transaction()}}
+{\footnotesize\ttfamily def neo4j.\+work.\+simple.\+Session.\+write\+\_\+transaction (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{transaction\+\_\+function,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Execute a unit of work in a managed write transaction.
+This transaction will automatically be committed unless an exception is thrown during query execution or by the user code.
+Note, that this function perform retries and that the supplied `transaction_function` might get invoked more than once.
+
+Managed transactions should not generally be explicitly committed (via tx.commit()).
+
+Example::
+
+    def create_node_tx(tx, name):
+        result = tx.run("CREATE (n:NodeExample { name: $name }) RETURN id(n) AS node_id", name=name)
+        record = result.single()
+        return record["node_id"]
+
+    with driver.session() as session:
+        node_id = session.write_transaction(create_node_tx, "example")
+
+
+:param transaction_function: a function that takes a transaction as an argument and does work with the transaction. `tx_function(tx, *args, **kwargs)`
+:param args: key word arguments for the `transaction_function`
+:param kwargs: key word arguments for the `transaction_function`
+:return: a result as returned by the given unit of work
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/work/simple.\+py\end{DoxyCompactItemize}

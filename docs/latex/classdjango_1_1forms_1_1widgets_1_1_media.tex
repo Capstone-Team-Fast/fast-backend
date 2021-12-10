@@ -1,0 +1,73 @@
+\hypertarget{classdjango_1_1forms_1_1widgets_1_1_media}{}\doxysection{django.\+forms.\+widgets.\+Media Class Reference}
+\label{classdjango_1_1forms_1_1widgets_1_1_media}\index{django.forms.widgets.Media@{django.forms.widgets.Media}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_ad12c3a604300480704445b95ae904c87}\label{classdjango_1_1forms_1_1widgets_1_1_media_ad12c3a604300480704445b95ae904c87}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, media=None, css=None, js=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a0e639e1b88c31d300e94a763f0e6733a}\label{classdjango_1_1forms_1_1widgets_1_1_media_a0e639e1b88c31d300e94a763f0e6733a}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a0e4a19dea13251e926d6e295c1c0f8c3}\label{classdjango_1_1forms_1_1widgets_1_1_media_a0e4a19dea13251e926d6e295c1c0f8c3}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a2759d1fca814aee0e3e984d85a051265}\label{classdjango_1_1forms_1_1widgets_1_1_media_a2759d1fca814aee0e3e984d85a051265}} 
+def {\bfseries render} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_ad433a62bc189da8ee89186a413d79875}\label{classdjango_1_1forms_1_1widgets_1_1_media_ad433a62bc189da8ee89186a413d79875}} 
+def {\bfseries render\+\_\+js} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a034d01dc7daa9bc817f586b105ddc4db}\label{classdjango_1_1forms_1_1widgets_1_1_media_a034d01dc7daa9bc817f586b105ddc4db}} 
+def {\bfseries render\+\_\+css} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1widgets_1_1_media_a6fee99c6112c64cb591ceaa2b8fecfe0}{absolute\+\_\+path}} (self, path)
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1widgets_1_1_media_ad55a55df311d9c211f6406bd77430299}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, name)
+\item 
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a8777d334067c43f0f09c13a7e52859b7}\label{classdjango_1_1forms_1_1widgets_1_1_media_a8777d334067c43f0f09c13a7e52859b7}} 
+def {\bfseries \+\_\+\+\_\+add\+\_\+\+\_\+} (self, other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1forms_1_1widgets_1_1_media_a5a9774464a5353dcd61cd393dd71fd03}{merge}} ($\ast$lists)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_ad55a55df311d9c211f6406bd77430299}\label{classdjango_1_1forms_1_1widgets_1_1_media_ad55a55df311d9c211f6406bd77430299}} 
+\index{django.forms.widgets.Media@{django.forms.widgets.Media}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!django.forms.widgets.Media@{django.forms.widgets.Media}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def django.\+forms.\+widgets.\+Media.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a Media object that only contains media of the given type.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a6fee99c6112c64cb591ceaa2b8fecfe0}\label{classdjango_1_1forms_1_1widgets_1_1_media_a6fee99c6112c64cb591ceaa2b8fecfe0}} 
+\index{django.forms.widgets.Media@{django.forms.widgets.Media}!absolute\_path@{absolute\_path}}
+\index{absolute\_path@{absolute\_path}!django.forms.widgets.Media@{django.forms.widgets.Media}}
+\doxysubsubsection{\texorpdfstring{absolute\_path()}{absolute\_path()}}
+{\footnotesize\ttfamily def django.\+forms.\+widgets.\+Media.\+absolute\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a relative or absolute path to a static asset, return an absolute
+path. An absolute path will be returned unchanged while a relative path
+will be passed to django.templatetags.static.static().
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1forms_1_1widgets_1_1_media_a5a9774464a5353dcd61cd393dd71fd03}\label{classdjango_1_1forms_1_1widgets_1_1_media_a5a9774464a5353dcd61cd393dd71fd03}} 
+\index{django.forms.widgets.Media@{django.forms.widgets.Media}!merge@{merge}}
+\index{merge@{merge}!django.forms.widgets.Media@{django.forms.widgets.Media}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily def django.\+forms.\+widgets.\+Media.\+merge (\begin{DoxyParamCaption}\item[{$\ast$}]{lists }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Merge lists while trying to keep the relative order of the elements.
+Warn if the lists have the same elements in a different relative order.
+
+For static assets it can be important to have them included in the DOM
+in a certain order. In JavaScript you may not be able to reference a
+global or in CSS you might want to override a style.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/forms/widgets.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{classneo4j_1_1exceptions_1_1_transient_error}{}\doxysection{neo4j.\+exceptions.\+Transient\+Error Class Reference}
+\label{classneo4j_1_1exceptions_1_1_transient_error}\index{neo4j.exceptions.TransientError@{neo4j.exceptions.TransientError}}
+
+
+Inheritance diagram for neo4j.\+exceptions.\+Transient\+Error\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+exceptions.\+Transient\+Error\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneo4j_1_1exceptions_1_1_transient_error_a0c794ad24dd113b0ed3611873c2fe9a9}{is\+\_\+retriable}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} The database cannot service the request right now, retrying later might yield a successful outcome.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1exceptions_1_1_transient_error_a0c794ad24dd113b0ed3611873c2fe9a9}\label{classneo4j_1_1exceptions_1_1_transient_error_a0c794ad24dd113b0ed3611873c2fe9a9}} 
+\index{neo4j.exceptions.TransientError@{neo4j.exceptions.TransientError}!is\_retriable@{is\_retriable}}
+\index{is\_retriable@{is\_retriable}!neo4j.exceptions.TransientError@{neo4j.exceptions.TransientError}}
+\doxysubsubsection{\texorpdfstring{is\_retriable()}{is\_retriable()}}
+{\footnotesize\ttfamily def neo4j.\+exceptions.\+Transient\+Error.\+is\+\_\+retriable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}These are really client errors but classification on the server is not entirely correct and they are classified as transient.
+
+:return: True if it is a retriable TransientError, otherwise False.
+:rtype: bool
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/exceptions.\+py\end{DoxyCompactItemize}

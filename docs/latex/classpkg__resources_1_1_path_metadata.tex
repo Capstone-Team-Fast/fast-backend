@@ -1,0 +1,64 @@
+\hypertarget{classpkg__resources_1_1_path_metadata}{}\doxysection{pkg\+\_\+resources.\+Path\+Metadata Class Reference}
+\label{classpkg__resources_1_1_path_metadata}\index{pkg\_resources.PathMetadata@{pkg\_resources.PathMetadata}}
+
+
+Inheritance diagram for pkg\+\_\+resources.\+Path\+Metadata\+:
+% FIG 0
+
+
+Collaboration diagram for pkg\+\_\+resources.\+Path\+Metadata\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpkg__resources_1_1_path_metadata_a42afa04f667e8f792f431ec4eba76a5b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, path, egg\+\_\+info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1_path_metadata_a32d4f91934149b639e6b3e88e802bd9f}\label{classpkg__resources_1_1_path_metadata_a32d4f91934149b639e6b3e88e802bd9f}} 
+{\bfseries module\+\_\+path}
+\item 
+\mbox{\Hypertarget{classpkg__resources_1_1_path_metadata_a61a445362a417dfb470ebee020a73762}\label{classpkg__resources_1_1_path_metadata_a61a445362a417dfb470ebee020a73762}} 
+{\bfseries egg\+\_\+info}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Metadata provider for egg directories
+
+Usage::
+
+    # Development eggs:
+
+    egg_info = "/path/to/PackageName.egg-info"
+    base_dir = os.path.dirname(egg_info)
+    metadata = PathMetadata(base_dir, egg_info)
+    dist_name = os.path.splitext(os.path.basename(egg_info))[0]
+    dist = Distribution(basedir, project_name=dist_name, metadata=metadata)
+
+    # Unpacked egg directories:
+
+    egg_path = "/path/to/PackageName-ver-pyver-etc.egg"
+    metadata = PathMetadata(egg_path, os.path.join(egg_path,'EGG-INFO'))
+    dist = Distribution.from_filename(egg_path, metadata=metadata)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpkg__resources_1_1_path_metadata_a42afa04f667e8f792f431ec4eba76a5b}\label{classpkg__resources_1_1_path_metadata_a42afa04f667e8f792f431ec4eba76a5b}} 
+\index{pkg\_resources.PathMetadata@{pkg\_resources.PathMetadata}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!pkg\_resources.PathMetadata@{pkg\_resources.PathMetadata}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pkg\+\_\+resources.\+Path\+Metadata.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path,  }\item[{}]{egg\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpkg__resources_1_1_egg_provider}{pkg\+\_\+resources.\+Egg\+Provider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pkg\+\_\+resources/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command}{}\doxysection{django.\+core.\+management.\+commands.\+migrate.\+Command Class Reference}
+\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command}\index{django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}}
+
+
+Inheritance diagram for django.\+core.\+management.\+commands.\+migrate.\+Command\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+management.\+commands.\+migrate.\+Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_aba58bba442a0d22604801632a73a0b38}{add\+\_\+arguments}} (self, parser)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a0a514c50c496fa64329ee697cc56a11a}{handle}} (self, $\ast$args, $\ast$$\ast$options)
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a6bf7f3c9b4d750e505dc3832bcb59e0a}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a6bf7f3c9b4d750e505dc3832bcb59e0a}} 
+def {\bfseries migration\+\_\+progress\+\_\+callback} (self, action, migration=None, fake=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a7a5d94245072abb5b6dfee1d9d490640}{sync\+\_\+apps}} (self, connection, app\+\_\+labels)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a33b9566a1184e716c360da247a6050d8}{describe\+\_\+operation}} (operation, backwards)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_aff7bd8bd93ae75050cf2c45c2ad9f08b}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_aff7bd8bd93ae75050cf2c45c2ad9f08b}} 
+{\bfseries verbosity}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a9d898efdab9a2edc05bd5f4404fea485}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a9d898efdab9a2edc05bd5f4404fea485}} 
+{\bfseries interactive}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_ac852f4e6a181afef57940580dfda13ea}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_ac852f4e6a181afef57940580dfda13ea}} 
+{\bfseries start}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a43b962d851a0c9cfa93140d2e0c9de59}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a43b962d851a0c9cfa93140d2e0c9de59}} 
+string {\bfseries help} = \char`\"{}Updates database schema. Manages both apps with migrations and those without.\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a1c240a6ce5f5d294f8b1bb17a0817e2e}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a1c240a6ce5f5d294f8b1bb17a0817e2e}} 
+list {\bfseries requires\+\_\+system\+\_\+checks} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_aba58bba442a0d22604801632a73a0b38}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_aba58bba442a0d22604801632a73a0b38}} 
+\index{django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}!add\_arguments@{add\_arguments}}
+\index{add\_arguments@{add\_arguments}!django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}}
+\doxysubsubsection{\texorpdfstring{add\_arguments()}{add\_arguments()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+commands.\+migrate.\+Command.\+add\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Entry point for subclassed commands to add custom arguments.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_base_command_a8672816c9bdb7d4255f17328a0ca874e}{django.\+core.\+management.\+base.\+Base\+Command}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a33b9566a1184e716c360da247a6050d8}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a33b9566a1184e716c360da247a6050d8}} 
+\index{django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}!describe\_operation@{describe\_operation}}
+\index{describe\_operation@{describe\_operation}!django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}}
+\doxysubsubsection{\texorpdfstring{describe\_operation()}{describe\_operation()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+commands.\+migrate.\+Command.\+describe\+\_\+operation (\begin{DoxyParamCaption}\item[{}]{operation,  }\item[{}]{backwards }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Return a string that describes a migration operation for --plan.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a0a514c50c496fa64329ee697cc56a11a}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a0a514c50c496fa64329ee697cc56a11a}} 
+\index{django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}!handle@{handle}}
+\index{handle@{handle}!django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+commands.\+migrate.\+Command.\+handle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The actual logic of the command. Subclasses must implement
+this method.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_base_command_a4d1dd995513fbf6017729595dbae4ef3}{django.\+core.\+management.\+base.\+Base\+Command}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a7a5d94245072abb5b6dfee1d9d490640}\label{classdjango_1_1core_1_1management_1_1commands_1_1migrate_1_1_command_a7a5d94245072abb5b6dfee1d9d490640}} 
+\index{django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}!sync\_apps@{sync\_apps}}
+\index{sync\_apps@{sync\_apps}!django.core.management.commands.migrate.Command@{django.core.management.commands.migrate.Command}}
+\doxysubsubsection{\texorpdfstring{sync\_apps()}{sync\_apps()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+commands.\+migrate.\+Command.\+sync\+\_\+apps (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection,  }\item[{}]{app\+\_\+labels }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the old syncdb-style operation on a list of app_labels.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/management/commands/migrate.\+py\end{DoxyCompactItemize}

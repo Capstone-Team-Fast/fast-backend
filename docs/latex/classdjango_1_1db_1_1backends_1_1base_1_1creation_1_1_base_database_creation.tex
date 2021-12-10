@@ -1,0 +1,160 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation}{}\doxysection{django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation}\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_abe7aab96b40e7783a5d10b8b8db04824}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_abe7aab96b40e7783a5d10b8b8db04824}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connection)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ac2cef781528967a343c7062bb888f738}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ac2cef781528967a343c7062bb888f738}} 
+def {\bfseries log} (self, msg)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ae16f8066cf432bbd1216c0ebd2be0335}{create\+\_\+test\+\_\+db}} (self, verbosity=1, autoclobber=False, serialize=True, keepdb=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_aa63affcc86a0aa34af4f6575e4c062cd}{set\+\_\+as\+\_\+test\+\_\+mirror}} (self, primary\+\_\+settings\+\_\+dict)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a4a0ec16fd437a39d10a1c1bcea55d1ec}{serialize\+\_\+db\+\_\+to\+\_\+string}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ad76483a11aa346a5d3923e34a8c777cd}{deserialize\+\_\+db\+\_\+from\+\_\+string}} (self, data)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a344a83db17647d4446c20ba56a374902}{clone\+\_\+test\+\_\+db}} (self, suffix, verbosity=1, autoclobber=False, keepdb=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a889e0c8da32b19ae88190c24d706c6d8}{get\+\_\+test\+\_\+db\+\_\+clone\+\_\+settings}} (self, suffix)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a8436668bf2aca737489ab1cdc5fe2c63}{destroy\+\_\+test\+\_\+db}} (self, old\+\_\+database\+\_\+name=None, verbosity=1, keepdb=False, suffix=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a0c657cb0a2587e6b816c7c82baf3cb33}{mark\+\_\+expected\+\_\+failures\+\_\+and\+\_\+skips}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a10388a5b719c58cdc6e6cdaf0ad79387}{sql\+\_\+table\+\_\+creation\+\_\+suffix}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a06bf3377408aaa99e8fadfe3815664a4}{test\+\_\+db\+\_\+signature}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a736b527d1b26dd7a703d206cc0b0ce76}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a736b527d1b26dd7a703d206cc0b0ce76}} 
+{\bfseries connection}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Encapsulate backend-specific differences pertaining to creation and
+destruction of the test database.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a344a83db17647d4446c20ba56a374902}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a344a83db17647d4446c20ba56a374902}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!clone\_test\_db@{clone\_test\_db}}
+\index{clone\_test\_db@{clone\_test\_db}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{clone\_test\_db()}{clone\_test\_db()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+clone\+\_\+test\+\_\+db (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{suffix,  }\item[{}]{verbosity = {\ttfamily 1},  }\item[{}]{autoclobber = {\ttfamily False},  }\item[{}]{keepdb = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Clone a test database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ae16f8066cf432bbd1216c0ebd2be0335}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ae16f8066cf432bbd1216c0ebd2be0335}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!create\_test\_db@{create\_test\_db}}
+\index{create\_test\_db@{create\_test\_db}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{create\_test\_db()}{create\_test\_db()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+create\+\_\+test\+\_\+db (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{verbosity = {\ttfamily 1},  }\item[{}]{autoclobber = {\ttfamily False},  }\item[{}]{serialize = {\ttfamily True},  }\item[{}]{keepdb = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a test database, prompting the user for confirmation if the
+database already exists. Return the name of the test database created.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ad76483a11aa346a5d3923e34a8c777cd}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_ad76483a11aa346a5d3923e34a8c777cd}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!deserialize\_db\_from\_string@{deserialize\_db\_from\_string}}
+\index{deserialize\_db\_from\_string@{deserialize\_db\_from\_string}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{deserialize\_db\_from\_string()}{deserialize\_db\_from\_string()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+deserialize\+\_\+db\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reload the database with data from a string generated by
+the serialize_db_to_string() method.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a8436668bf2aca737489ab1cdc5fe2c63}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a8436668bf2aca737489ab1cdc5fe2c63}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!destroy\_test\_db@{destroy\_test\_db}}
+\index{destroy\_test\_db@{destroy\_test\_db}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{destroy\_test\_db()}{destroy\_test\_db()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+destroy\+\_\+test\+\_\+db (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{old\+\_\+database\+\_\+name = {\ttfamily None},  }\item[{}]{verbosity = {\ttfamily 1},  }\item[{}]{keepdb = {\ttfamily False},  }\item[{}]{suffix = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Destroy a test database, prompting the user for confirmation if the
+database already exists.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a889e0c8da32b19ae88190c24d706c6d8}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a889e0c8da32b19ae88190c24d706c6d8}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!get\_test\_db\_clone\_settings@{get\_test\_db\_clone\_settings}}
+\index{get\_test\_db\_clone\_settings@{get\_test\_db\_clone\_settings}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{get\_test\_db\_clone\_settings()}{get\_test\_db\_clone\_settings()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+get\+\_\+test\+\_\+db\+\_\+clone\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{suffix }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a modified connection settings dict for the n-th clone of a DB.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1creation_1_1_database_creation_a653ecfc4f6c1f7ca6f84a08603bbe769}{django.\+db.\+backends.\+sqlite3.\+creation.\+Database\+Creation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a0c657cb0a2587e6b816c7c82baf3cb33}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a0c657cb0a2587e6b816c7c82baf3cb33}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!mark\_expected\_failures\_and\_skips@{mark\_expected\_failures\_and\_skips}}
+\index{mark\_expected\_failures\_and\_skips@{mark\_expected\_failures\_and\_skips}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{mark\_expected\_failures\_and\_skips()}{mark\_expected\_failures\_and\_skips()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+mark\+\_\+expected\+\_\+failures\+\_\+and\+\_\+skips (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Mark tests in Django's test suite which are expected failures on this
+database and test which should be skipped on this database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a4a0ec16fd437a39d10a1c1bcea55d1ec}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a4a0ec16fd437a39d10a1c1bcea55d1ec}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!serialize\_db\_to\_string@{serialize\_db\_to\_string}}
+\index{serialize\_db\_to\_string@{serialize\_db\_to\_string}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{serialize\_db\_to\_string()}{serialize\_db\_to\_string()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+serialize\+\_\+db\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serialize all data in the database into a JSON string.
+Designed only for test runner usage; will not handle large
+amounts of data.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_aa63affcc86a0aa34af4f6575e4c062cd}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_aa63affcc86a0aa34af4f6575e4c062cd}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!set\_as\_test\_mirror@{set\_as\_test\_mirror}}
+\index{set\_as\_test\_mirror@{set\_as\_test\_mirror}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{set\_as\_test\_mirror()}{set\_as\_test\_mirror()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+set\+\_\+as\+\_\+test\+\_\+mirror (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{primary\+\_\+settings\+\_\+dict }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set this database up to be used in testing as a mirror of a primary
+database whose settings are given.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1creation_1_1_database_creation_a234cf7be9efeea54c7b955efb9b0e4de}{django.\+db.\+backends.\+oracle.\+creation.\+Database\+Creation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a10388a5b719c58cdc6e6cdaf0ad79387}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a10388a5b719c58cdc6e6cdaf0ad79387}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!sql\_table\_creation\_suffix@{sql\_table\_creation\_suffix}}
+\index{sql\_table\_creation\_suffix@{sql\_table\_creation\_suffix}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{sql\_table\_creation\_suffix()}{sql\_table\_creation\_suffix()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+sql\+\_\+table\+\_\+creation\+\_\+suffix (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}SQL to append to the end of the test table creation statements.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1creation_1_1_database_creation_a40379e0d804709a060a280e202fc25b1}{django.\+db.\+backends.\+mysql.\+creation.\+Database\+Creation}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1postgresql_1_1creation_1_1_database_creation_a5e78f0d94a5315195c27d03c396424fa}{django.\+db.\+backends.\+postgresql.\+creation.\+Database\+Creation}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a06bf3377408aaa99e8fadfe3815664a4}\label{classdjango_1_1db_1_1backends_1_1base_1_1creation_1_1_base_database_creation_a06bf3377408aaa99e8fadfe3815664a4}} 
+\index{django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}!test\_db\_signature@{test\_db\_signature}}
+\index{test\_db\_signature@{test\_db\_signature}!django.db.backends.base.creation.BaseDatabaseCreation@{django.db.backends.base.creation.BaseDatabaseCreation}}
+\doxysubsubsection{\texorpdfstring{test\_db\_signature()}{test\_db\_signature()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+base.\+creation.\+Base\+Database\+Creation.\+test\+\_\+db\+\_\+signature (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a tuple with elements of self.connection.settings_dict (a
+DATABASES setting value) that uniquely identify a database
+accordingly to the RDBMS particularities.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1creation_1_1_database_creation_a9911601a6225515fe692b7763b02f716}{django.\+db.\+backends.\+oracle.\+creation.\+Database\+Creation}}, and \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1creation_1_1_database_creation_a65a8535dd6f407c3ec991c39e97cb867}{django.\+db.\+backends.\+sqlite3.\+creation.\+Database\+Creation}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/base/creation.\+py\end{DoxyCompactItemize}

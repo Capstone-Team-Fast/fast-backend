@@ -1,0 +1,61 @@
+\hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store}{}\doxysection{django.\+contrib.\+sessions.\+backends.\+cached\+\_\+db.\+Session\+Store Class Reference}
+\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store}\index{django.contrib.sessions.backends.cached\_db.SessionStore@{django.contrib.sessions.backends.cached\_db.SessionStore}}
+
+
+Inheritance diagram for django.\+contrib.\+sessions.\+backends.\+cached\+\_\+db.\+Session\+Store\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+sessions.\+backends.\+cached\+\_\+db.\+Session\+Store\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a08c5da110b21b6a800be4a8ad86e3b7d}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a08c5da110b21b6a800be4a8ad86e3b7d}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, session\+\_\+key=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a560b491f41444b32b6aca635b5a4d183}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a560b491f41444b32b6aca635b5a4d183}} 
+def {\bfseries cache\+\_\+key} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a9351ddf17d9557507b07575e8cbafa66}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a9351ddf17d9557507b07575e8cbafa66}} 
+def {\bfseries load} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_adb2a92b69573a172329c32daba268aaa}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_adb2a92b69573a172329c32daba268aaa}} 
+def {\bfseries exists} (self, session\+\_\+key)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_ae458836dbc791f94011900b52bc6ec82}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_ae458836dbc791f94011900b52bc6ec82}} 
+def {\bfseries save} (self, must\+\_\+create=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a6efda5f3f79226efc62531d3d5982ece}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a6efda5f3f79226efc62531d3d5982ece}} 
+def {\bfseries delete} (self, session\+\_\+key=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a689a0a07d929dd4e1dd252d82104a655}{flush}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a5f48477fab4e1fe955a39da0f4bf7721}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a5f48477fab4e1fe955a39da0f4bf7721}} 
+{\bfseries cache\+\_\+key\+\_\+prefix} = KEY\+\_\+\+PREFIX
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Implement cached, database backed sessions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a689a0a07d929dd4e1dd252d82104a655}\label{classdjango_1_1contrib_1_1sessions_1_1backends_1_1cached__db_1_1_session_store_a689a0a07d929dd4e1dd252d82104a655}} 
+\index{django.contrib.sessions.backends.cached\_db.SessionStore@{django.contrib.sessions.backends.cached\_db.SessionStore}!flush@{flush}}
+\index{flush@{flush}!django.contrib.sessions.backends.cached\_db.SessionStore@{django.contrib.sessions.backends.cached\_db.SessionStore}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily def django.\+contrib.\+sessions.\+backends.\+cached\+\_\+db.\+Session\+Store.\+flush (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove the current session data from the database and regenerate the
+key.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/sessions/backends/cached\+\_\+db.\+py\end{DoxyCompactItemize}

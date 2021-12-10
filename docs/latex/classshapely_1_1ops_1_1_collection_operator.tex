@@ -1,0 +1,98 @@
+\hypertarget{classshapely_1_1ops_1_1_collection_operator}{}\doxysection{shapely.\+ops.\+Collection\+Operator Class Reference}
+\label{classshapely_1_1ops_1_1_collection_operator}\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+
+
+Inheritance diagram for shapely.\+ops.\+Collection\+Operator\+:
+% FIG 0
+
+
+Collaboration diagram for shapely.\+ops.\+Collection\+Operator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_ab7225a5684bc52d5eb4b827379e407a1}\label{classshapely_1_1ops_1_1_collection_operator_ab7225a5684bc52d5eb4b827379e407a1}} 
+def {\bfseries shapeup} (self, ob)
+\item 
+def \mbox{\hyperlink{classshapely_1_1ops_1_1_collection_operator_a25553ba6cfd4f6884a17238fdca9fafa}{polygonize}} (self, lines)
+\item 
+def \mbox{\hyperlink{classshapely_1_1ops_1_1_collection_operator_a77b52a5ff37f4d4f53ab0da9543f13c0}{polygonize\+\_\+full}} (self, lines)
+\item 
+def \mbox{\hyperlink{classshapely_1_1ops_1_1_collection_operator_a2d879cc78da26a7a8622f3db092cf4ad}{linemerge}} (self, lines)
+\item 
+def \mbox{\hyperlink{classshapely_1_1ops_1_1_collection_operator_af573b16d0de9b8f653fc5d23a9a9d4d4}{cascaded\+\_\+union}} (self, geoms)
+\item 
+def \mbox{\hyperlink{classshapely_1_1ops_1_1_collection_operator_a754f9f9418eb78f98de1de2aea0f2d42}{unary\+\_\+union}} (self, geoms)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_af573b16d0de9b8f653fc5d23a9a9d4d4}\label{classshapely_1_1ops_1_1_collection_operator_af573b16d0de9b8f653fc5d23a9a9d4d4}} 
+\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}!cascaded\_union@{cascaded\_union}}
+\index{cascaded\_union@{cascaded\_union}!shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+\doxysubsubsection{\texorpdfstring{cascaded\_union()}{cascaded\_union()}}
+{\footnotesize\ttfamily def shapely.\+ops.\+Collection\+Operator.\+cascaded\+\_\+union (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geoms }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the union of a sequence of geometries
+
+This method was superseded by :meth:`unary_union`.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_a2d879cc78da26a7a8622f3db092cf4ad}\label{classshapely_1_1ops_1_1_collection_operator_a2d879cc78da26a7a8622f3db092cf4ad}} 
+\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}!linemerge@{linemerge}}
+\index{linemerge@{linemerge}!shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+\doxysubsubsection{\texorpdfstring{linemerge()}{linemerge()}}
+{\footnotesize\ttfamily def shapely.\+ops.\+Collection\+Operator.\+linemerge (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lines }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Merges all connected lines from a source
+
+The source may be a MultiLineString, a sequence of LineString objects,
+or a sequence of objects than can be adapted to LineStrings.  Returns a
+LineString or MultiLineString when lines are not contiguous.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_a25553ba6cfd4f6884a17238fdca9fafa}\label{classshapely_1_1ops_1_1_collection_operator_a25553ba6cfd4f6884a17238fdca9fafa}} 
+\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}!polygonize@{polygonize}}
+\index{polygonize@{polygonize}!shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+\doxysubsubsection{\texorpdfstring{polygonize()}{polygonize()}}
+{\footnotesize\ttfamily def shapely.\+ops.\+Collection\+Operator.\+polygonize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lines }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates polygons from a source of lines
+
+The source may be a MultiLineString, a sequence of LineString objects,
+or a sequence of objects than can be adapted to LineStrings.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_a77b52a5ff37f4d4f53ab0da9543f13c0}\label{classshapely_1_1ops_1_1_collection_operator_a77b52a5ff37f4d4f53ab0da9543f13c0}} 
+\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}!polygonize\_full@{polygonize\_full}}
+\index{polygonize\_full@{polygonize\_full}!shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+\doxysubsubsection{\texorpdfstring{polygonize\_full()}{polygonize\_full()}}
+{\footnotesize\ttfamily def shapely.\+ops.\+Collection\+Operator.\+polygonize\+\_\+full (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lines }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates polygons from a source of lines, returning the polygons
+and leftover geometries.
+
+The source may be a MultiLineString, a sequence of LineString objects,
+or a sequence of objects than can be adapted to LineStrings.
+
+Returns a tuple of objects: (polygons, dangles, cut edges, invalid ring
+lines). Each are a geometry collection.
+
+Dangles are edges which have one or both ends which are not incident on
+another edge endpoint. Cut edges are connected at both ends but do not
+form part of polygon. Invalid ring lines form rings which are invalid
+(bowties, etc).
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classshapely_1_1ops_1_1_collection_operator_a754f9f9418eb78f98de1de2aea0f2d42}\label{classshapely_1_1ops_1_1_collection_operator_a754f9f9418eb78f98de1de2aea0f2d42}} 
+\index{shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}!unary\_union@{unary\_union}}
+\index{unary\_union@{unary\_union}!shapely.ops.CollectionOperator@{shapely.ops.CollectionOperator}}
+\doxysubsubsection{\texorpdfstring{unary\_union()}{unary\_union()}}
+{\footnotesize\ttfamily def shapely.\+ops.\+Collection\+Operator.\+unary\+\_\+union (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{geoms }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the union of a sequence of geometries
+
+This method replaces :meth:`cascaded_union` as the
+prefered method for dissolving many polygons.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/shapely/ops.\+py\end{DoxyCompactItemize}

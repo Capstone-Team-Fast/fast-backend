@@ -1,0 +1,42 @@
+\hypertarget{namespacerest__framework_1_1urls}{}\doxysection{rest\+\_\+framework.\+urls Namespace Reference}
+\label{namespacerest__framework_1_1urls}\index{rest\_framework.urls@{rest\_framework.urls}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacerest__framework_1_1urls_a935cd588fd3fa131ea9396eb01c57a07}\label{namespacerest__framework_1_1urls_a935cd588fd3fa131ea9396eb01c57a07}} 
+string {\bfseries app\+\_\+name} = \textquotesingle{}rest\+\_\+framework\textquotesingle{}
+\item 
+list \mbox{\hyperlink{namespacerest__framework_1_1urls_a81ce46796989a01ffd6ce6e49edefde2}{urlpatterns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Login and logout views for the browsable API.
+
+Add these to your root URLconf if you're using the browsable API and
+your API requires authentication:
+
+    urlpatterns = [
+        ...
+        path('auth/', include('rest_framework.urls'))
+    ]
+
+You should make sure your authentication settings include `SessionAuthentication`.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1urls_a81ce46796989a01ffd6ce6e49edefde2}\label{namespacerest__framework_1_1urls_a81ce46796989a01ffd6ce6e49edefde2}} 
+\index{rest\_framework.urls@{rest\_framework.urls}!urlpatterns@{urlpatterns}}
+\index{urlpatterns@{urlpatterns}!rest\_framework.urls@{rest\_framework.urls}}
+\doxysubsubsection{\texorpdfstring{urlpatterns}{urlpatterns}}
+{\footnotesize\ttfamily list rest\+\_\+framework.\+urls.\+urlpatterns}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2     path(\textcolor{stringliteral}{'login/'}, views.LoginView.as\_view(template\_name=\textcolor{stringliteral}{'rest\_framework/login.html'}), name=\textcolor{stringliteral}{'login'}),}
+\DoxyCodeLine{3     path(\textcolor{stringliteral}{'logout/'}, views.LogoutView.as\_view(), name=\textcolor{stringliteral}{'logout'}),}
+\DoxyCodeLine{4 ]}
+
+\end{DoxyCode}

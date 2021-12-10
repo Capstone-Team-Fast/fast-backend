@@ -1,0 +1,170 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field}{}\doxysection{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field}\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ad2209fb402d5d5ff222512033ae1a061}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, verbose\+\_\+name=None, dim=2, geography=False, $\ast$extent=(-\/180.\+0, -\/90.\+0, 180.\+0, 90.\+0), tolerance=0.\+05, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a7b28adcc481365762083bd4a521cdfa0}{deconstruct}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ab2763a847429b3b1b844418cc0c8c45c}{contribute\+\_\+to\+\_\+class}} (self, cls, name, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a693e22b19878b5a4a1dfd0db82fd36ee}{formfield}} (self, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aee7735cda7848a42aaed3e889d0828f5}{select\+\_\+format}} (self, compiler, sql, params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_af487b25a54cd4ad377d36ea27a5c2c6a}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_af487b25a54cd4ad377d36ea27a5c2c6a}} 
+{\bfseries dim}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a24eaafed0b25098f12d5b27a9a879738}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a24eaafed0b25098f12d5b27a9a879738}} 
+{\bfseries geography}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_af5056c2bcf43f3da162f05813b220321}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_af5056c2bcf43f3da162f05813b220321}} 
+{\bfseries description} = \+\_\+(\textquotesingle{}The base Geometry field — maps to the Open\+GIS Specification Geometry type.\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a557fce76996892225d4e9ec0b2a259e7}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a557fce76996892225d4e9ec0b2a259e7}} 
+{\bfseries form\+\_\+class} = forms.\+Geometry\+Field
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aeb41003d83c64e0f7e5d93959b2fb466}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aeb41003d83c64e0f7e5d93959b2fb466}} 
+string {\bfseries geom\+\_\+type} = \textquotesingle{}GEOMETRY\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ae11b0a4c07fca674894b454af64de16c}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ae11b0a4c07fca674894b454af64de16c}} 
+{\bfseries geom\+\_\+class} = None
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The base Geometry field -- maps to the OpenGIS Specification Geometry type.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ad2209fb402d5d5ff222512033ae1a061}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ad2209fb402d5d5ff222512033ae1a061}} 
+\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{verbose\+\_\+name = {\ttfamily None},  }\item[{}]{dim = {\ttfamily 2},  }\item[{}]{geography = {\ttfamily False},  }\item[{$\ast$}]{extent = {\ttfamily (-\/180.0,~-\/90.0,~180.0,~90.0)},  }\item[{}]{tolerance = {\ttfamily 0.05},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The initialization function for geometry fields. In addition to the
+parameters from BaseSpatialField, it takes the following as keyword
+arguments:
+
+dim:
+ The number of dimensions for this geometry.  Defaults to 2.
+
+extent:
+ Customize the extent, in a 4-tuple of WGS 84 coordinates, for the
+ geometry field entry in the `USER_SDO_GEOM_METADATA` table.  Defaults
+ to (-180.0, -90.0, 180.0, 90.0).
+
+tolerance:
+ Define the tolerance, in meters, to use for the geometry field
+ entry in the `USER_SDO_GEOM_METADATA` table.  Defaults to 0.05.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_acb554b6c3c22314934888d42786905aa}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ab2763a847429b3b1b844418cc0c8c45c}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_ab2763a847429b3b1b844418cc0c8c45c}} 
+\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}!contribute\_to\_class@{contribute\_to\_class}}
+\index{contribute\_to\_class@{contribute\_to\_class}!django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+\doxysubsubsection{\texorpdfstring{contribute\_to\_class()}{contribute\_to\_class()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field.\+contribute\+\_\+to\+\_\+class (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cls,  }\item[{}]{name,  }\item[{$\ast$$\ast$}]{private\+\_\+only }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the field with the model class it belongs to.
+
+If private_only is True, create a separate instance of this field
+for every subclass of cls, even if cls is not an abstract model.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_acab2ae6fc6638ecd8714d5ef7b6ed404}{django.\+db.\+models.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a7b28adcc481365762083bd4a521cdfa0}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a7b28adcc481365762083bd4a521cdfa0}} 
+\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}!deconstruct@{deconstruct}}
+\index{deconstruct@{deconstruct}!django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+\doxysubsubsection{\texorpdfstring{deconstruct()}{deconstruct()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field.\+deconstruct (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return enough information to recreate the field as a 4-tuple:
+
+ * The name of the field on the model, if contribute_to_class() has
+   been run.
+ * The import path of the field, including the class:e.g.
+   django.db.models.IntegerField This should be the most portable
+   version, so less specific may be better.
+ * A list of positional arguments.
+ * A dict of keyword arguments.
+
+Note that the positional or keyword arguments must contain values of
+the following types (including inner values of collection types):
+
+ * None, bool, str, int, float, complex, set, frozenset, list, tuple,
+   dict
+ * UUID
+ * datetime.datetime (naive), datetime.date
+ * top-level classes, top-level functions - will be referenced by their
+   full import path
+ * Storage instances - these have their own deconstruct() method
+
+This is because the values here must be serialized into a text format
+(possibly new Python code, possibly JSON) and these are the only types
+with encoding handlers defined.
+
+There's no need to return the exact way the field was instantiated this
+time, just ensure that the resulting field is the same - prefer keyword
+arguments over positional ones, and omit parameters with their default
+values.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_base_spatial_field_a1d1bb0545b8f7aede0afb9f2ba4a8fcf}{django.\+contrib.\+gis.\+db.\+models.\+fields.\+Base\+Spatial\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a693e22b19878b5a4a1dfd0db82fd36ee}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_a693e22b19878b5a4a1dfd0db82fd36ee}} 
+\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}!formfield@{formfield}}
+\index{formfield@{formfield}!django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+\doxysubsubsection{\texorpdfstring{formfield()}{formfield()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field.\+formfield (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{form\+\_\+class }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a django.forms.Field instance for this field.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_ad7d7c2eb92e666a755e16ad82ba3a68e}{django.\+db.\+models.\+fields.\+Field}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aee7735cda7848a42aaed3e889d0828f5}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1fields_1_1_geometry_field_aee7735cda7848a42aaed3e889d0828f5}} 
+\index{django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}!select\_format@{select\_format}}
+\index{select\_format@{select\_format}!django.contrib.gis.db.models.fields.GeometryField@{django.contrib.gis.db.models.fields.GeometryField}}
+\doxysubsubsection{\texorpdfstring{select\_format()}{select\_format()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+models.\+fields.\+Geometry\+Field.\+select\+\_\+format (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{sql,  }\item[{}]{params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the selection format string, depending on the requirements
+of the spatial backend. For example, Oracle and MySQL require custom
+selection formats in order to retrieve geometries in OGC WKB.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_field_a106a15d3035116d54baed872c00f07fb}{django.\+db.\+models.\+fields.\+Field}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/models/fields.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1srs}{}\doxysection{django.\+contrib.\+gis.\+gdal.\+srs Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1gis_1_1gdal_1_1srs}\index{django.contrib.gis.gdal.srs@{django.contrib.gis.gdal.srs}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1gdal_1_1srs_1_1_axis_order}{Axis\+Order}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1gdal_1_1srs_1_1_coord_transform}{Coord\+Transform}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1gdal_1_1srs_1_1_spatial_reference}{Spatial\+Reference}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}  The Spatial Reference class, represents OGR Spatial Reference objects.
+
+  Example:
+  >>> from django.contrib.gis.gdal import SpatialReference
+  >>> srs = SpatialReference('WGS84')
+  >>> print(srs)
+  GEOGCS["WGS 84",
+      DATUM["WGS_1984",
+          SPHEROID["WGS 84",6378137,298.257223563,
+              AUTHORITY["EPSG","7030"]],
+          TOWGS84[0,0,0,0,0,0,0],
+          AUTHORITY["EPSG","6326"]],
+      PRIMEM["Greenwich",0,
+          AUTHORITY["EPSG","8901"]],
+      UNIT["degree",0.01745329251994328,
+          AUTHORITY["EPSG","9122"]],
+      AUTHORITY["EPSG","4326"]]
+  >>> print(srs.proj)
+  +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+  >>> print(srs.ellipsoid)
+  (6378137.0, 6356752.3142451793, 298.25722356300003)
+  >>> print(srs.projected, srs.geographic)
+  False True
+  >>> srs.import_epsg(32140)
+  >>> print(srs.name)
+  NAD83 / Texas South Central
+\end{DoxyVerb}
+ 

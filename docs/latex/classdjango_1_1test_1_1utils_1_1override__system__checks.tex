@@ -1,0 +1,85 @@
+\hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks}{}\doxysection{django.\+test.\+utils.\+override\+\_\+system\+\_\+checks Class Reference}
+\label{classdjango_1_1test_1_1utils_1_1override__system__checks}\index{django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}}
+
+
+Inheritance diagram for django.\+test.\+utils.\+override\+\_\+system\+\_\+checks\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+test.\+utils.\+override\+\_\+system\+\_\+checks\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__system__checks_a72de47ebf80cad5fa198580d19356f6f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, new\+\_\+checks, deployment\+\_\+checks=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__system__checks_a8dcaf455b4ae8b10b40d38f454cf3cc8}{enable}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1override__system__checks_a06f640710a8718a4edd9d4d4fa838125}{disable}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_ad4dc0c28ee831ab7839ff2a7afb8368f}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_ad4dc0c28ee831ab7839ff2a7afb8368f}} 
+{\bfseries registry}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_af5345d12704c0d11d24d397923ee99bc}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_af5345d12704c0d11d24d397923ee99bc}} 
+{\bfseries new\+\_\+checks}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a104f078735d7e138e31e7103c52caeca}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a104f078735d7e138e31e7103c52caeca}} 
+{\bfseries deployment\+\_\+checks}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a41c27705c9086b35a23d6217eaf8e5fd}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a41c27705c9086b35a23d6217eaf8e5fd}} 
+{\bfseries old\+\_\+checks}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a924f4d1f7568c0bf2ff06138a25c3640}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a924f4d1f7568c0bf2ff06138a25c3640}} 
+{\bfseries old\+\_\+deployment\+\_\+checks}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Act as a decorator. Override list of registered system checks.
+Useful when you override `INSTALLED_APPS`, e.g. if you exclude `auth` app,
+you also need to exclude its system checks.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a72de47ebf80cad5fa198580d19356f6f}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a72de47ebf80cad5fa198580d19356f6f}} 
+\index{django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+system\+\_\+checks.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+\_\+checks,  }\item[{}]{deployment\+\_\+checks = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a06f640710a8718a4edd9d4d4fa838125}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a06f640710a8718a4edd9d4d4fa838125}} 
+\index{django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}!disable@{disable}}
+\index{disable@{disable}!django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+system\+\_\+checks.\+disable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+\mbox{\Hypertarget{classdjango_1_1test_1_1utils_1_1override__system__checks_a8dcaf455b4ae8b10b40d38f454cf3cc8}\label{classdjango_1_1test_1_1utils_1_1override__system__checks_a8dcaf455b4ae8b10b40d38f454cf3cc8}} 
+\index{django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}!enable@{enable}}
+\index{enable@{enable}!django.test.utils.override\_system\_checks@{django.test.utils.override\_system\_checks}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily def django.\+test.\+utils.\+override\+\_\+system\+\_\+checks.\+enable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1utils_1_1_test_context_decorator}{django.\+test.\+utils.\+Test\+Context\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/utils.\+py\end{DoxyCompactItemize}

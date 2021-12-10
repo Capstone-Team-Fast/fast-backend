@@ -1,0 +1,144 @@
+\hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry}{}\doxysection{django.\+contrib.\+admin.\+models.\+Log\+Entry Class Reference}
+\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry}\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+
+
+Inheritance diagram for django.\+contrib.\+admin.\+models.\+Log\+Entry\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+admin.\+models.\+Log\+Entry\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a252358230b079c90b8ba0b03cd14020a}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a252358230b079c90b8ba0b03cd14020a}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a9181921762ee29ac203181b78e047bae}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a9181921762ee29ac203181b78e047bae}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a5fc7128b2ba9ef2c4c2ff04b940d324c}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a5fc7128b2ba9ef2c4c2ff04b940d324c}} 
+def {\bfseries is\+\_\+addition} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a014e0131930ca86c1762ba99fd621d73}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a014e0131930ca86c1762ba99fd621d73}} 
+def {\bfseries is\+\_\+change} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a731f2d067f10fe20a2966df0ff204898}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a731f2d067f10fe20a2966df0ff204898}} 
+def {\bfseries is\+\_\+deletion} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a12adcbaf7f42e936c14a66e98ac2514d}{get\+\_\+change\+\_\+message}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a6eb5721255d01d593dd84c18e0729dba}{get\+\_\+edited\+\_\+object}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a4445b31a6b979c91d814a860ac59fa3b}{get\+\_\+admin\+\_\+url}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_afde0df50896e234cbdbf2afb51de87f7}{action\+\_\+time}}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_ae6e76be9eb0bb06a26e58b22b296678a}{user}}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_aa6cf9a31df5b9ff9b1a680c5b08de809}{content\+\_\+type}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a1cc1fd7db58885217bb404a1c420e33f}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a1cc1fd7db58885217bb404a1c420e33f}} 
+{\bfseries object\+\_\+id} = models.\+Text\+Field(\+\_\+(\textquotesingle{}object id\textquotesingle{}), blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a4bb7d852e0e1bbaa6cb7f3013443d96d}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a4bb7d852e0e1bbaa6cb7f3013443d96d}} 
+{\bfseries object\+\_\+repr} = models.\+Char\+Field(\+\_\+(\textquotesingle{}object repr\textquotesingle{}), max\+\_\+length=200)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_adc64a7d3b9e22223b13bf27538cbdf22}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_adc64a7d3b9e22223b13bf27538cbdf22}} 
+{\bfseries action\+\_\+flag} = models.\+Positive\+Small\+Integer\+Field(\+\_\+(\textquotesingle{}action flag\textquotesingle{}), choices=ACTION\+\_\+\+FLAG\+\_\+\+CHOICES)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_ad6c0075506f18bc443cea451130b1428}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_ad6c0075506f18bc443cea451130b1428}} 
+{\bfseries change\+\_\+message} = models.\+Text\+Field(\+\_\+(\textquotesingle{}change message\textquotesingle{}), blank=True)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a7c3a99d941026029fb14dd8246d67315}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a7c3a99d941026029fb14dd8246d67315}} 
+{\bfseries objects} = \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_manager}{Log\+Entry\+Manager}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a4445b31a6b979c91d814a860ac59fa3b}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a4445b31a6b979c91d814a860ac59fa3b}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!get\_admin\_url@{get\_admin\_url}}
+\index{get\_admin\_url@{get\_admin\_url}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{get\_admin\_url()}{get\_admin\_url()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+models.\+Log\+Entry.\+get\+\_\+admin\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the admin URL to edit the object represented by this log entry.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a12adcbaf7f42e936c14a66e98ac2514d}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a12adcbaf7f42e936c14a66e98ac2514d}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!get\_change\_message@{get\_change\_message}}
+\index{get\_change\_message@{get\_change\_message}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{get\_change\_message()}{get\_change\_message()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+models.\+Log\+Entry.\+get\+\_\+change\+\_\+message (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If self.change_message is a JSON structure, interpret it as a change
+string, properly translated.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a6eb5721255d01d593dd84c18e0729dba}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_a6eb5721255d01d593dd84c18e0729dba}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!get\_edited\_object@{get\_edited\_object}}
+\index{get\_edited\_object@{get\_edited\_object}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{get\_edited\_object()}{get\_edited\_object()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+models.\+Log\+Entry.\+get\+\_\+edited\+\_\+object (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the edited object represented by this log entry.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_afde0df50896e234cbdbf2afb51de87f7}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_afde0df50896e234cbdbf2afb51de87f7}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!action\_time@{action\_time}}
+\index{action\_time@{action\_time}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{action\_time}{action\_time}}
+{\footnotesize\ttfamily django.\+contrib.\+admin.\+models.\+Log\+Entry.\+action\+\_\+time\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.DateTimeField(}
+\DoxyCodeLine{        \_(\textcolor{stringliteral}{'action time'}),}
+\DoxyCodeLine{        default=timezone.now,}
+\DoxyCodeLine{        editable=\textcolor{keyword}{False},}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_aa6cf9a31df5b9ff9b1a680c5b08de809}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_aa6cf9a31df5b9ff9b1a680c5b08de809}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!content\_type@{content\_type}}
+\index{content\_type@{content\_type}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{content\_type}{content\_type}}
+{\footnotesize\ttfamily django.\+contrib.\+admin.\+models.\+Log\+Entry.\+content\+\_\+type\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.ForeignKey(}
+\DoxyCodeLine{        ContentType,}
+\DoxyCodeLine{        models.SET\_NULL,}
+\DoxyCodeLine{        verbose\_name=\_(\textcolor{stringliteral}{'content type'}),}
+\DoxyCodeLine{        blank=\textcolor{keyword}{True}, null=\textcolor{keyword}{True},}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_ae6e76be9eb0bb06a26e58b22b296678a}\label{classdjango_1_1contrib_1_1admin_1_1models_1_1_log_entry_ae6e76be9eb0bb06a26e58b22b296678a}} 
+\index{django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}!user@{user}}
+\index{user@{user}!django.contrib.admin.models.LogEntry@{django.contrib.admin.models.LogEntry}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily django.\+contrib.\+admin.\+models.\+Log\+Entry.\+user\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.ForeignKey(}
+\DoxyCodeLine{        settings.AUTH\_USER\_MODEL,}
+\DoxyCodeLine{        models.CASCADE,}
+\DoxyCodeLine{        verbose\_name=\_(\textcolor{stringliteral}{'user'}),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/admin/models.\+py\end{DoxyCompactItemize}

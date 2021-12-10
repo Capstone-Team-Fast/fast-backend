@@ -1,0 +1,134 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view}{}\doxysection{django.\+contrib.\+auth.\+views.\+Login\+View Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view}\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+views.\+Login\+View\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+auth.\+views.\+Login\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a649b8b4c80137d7ea8d923018c821f09}{dispatch}} (self, request, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a5159017e2e9e211718b32691b93d7d20}{get\+\_\+success\+\_\+url}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a8b4c3af080df3c4b69b0d8f422557c27}{get\+\_\+redirect\+\_\+url}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a265c421bfdf5068a6653c43e11b43e38}{get\+\_\+form\+\_\+class}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acfe4d8339fbf103b4d0a3ab00ca515cb}{get\+\_\+form\+\_\+kwargs}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a579dcaf480c70b0e02887a5a35a7eae0}{form\+\_\+valid}} (self, form)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acff2e1c7aa1e0c6dc66cb3e8e26a5ea1}{get\+\_\+context\+\_\+data}} (self, $\ast$$\ast$kwargs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a97107bf1bbdc16f231a70c8871df00ea}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a97107bf1bbdc16f231a70c8871df00ea}} 
+{\bfseries form\+\_\+class} = \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_authentication_form}{Authentication\+Form}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a51928766c8e97abc4a82af82711fc81f}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a51928766c8e97abc4a82af82711fc81f}} 
+{\bfseries authentication\+\_\+form} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a699c8d982f292bc69a019241a828a9b0}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a699c8d982f292bc69a019241a828a9b0}} 
+{\bfseries redirect\+\_\+field\+\_\+name} = REDIRECT\+\_\+\+FIELD\+\_\+\+NAME
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_ac06feb188b98745165b601cf7eb46176}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_ac06feb188b98745165b601cf7eb46176}} 
+string {\bfseries template\+\_\+name} = \textquotesingle{}registration/login.\+html\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_add45000b6602ef1d03b5cf04af9f09ab}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_add45000b6602ef1d03b5cf04af9f09ab}} 
+bool {\bfseries redirect\+\_\+authenticated\+\_\+user} = False
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a86d85d7f64f6954f9ebafc687e4f2641}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a86d85d7f64f6954f9ebafc687e4f2641}} 
+{\bfseries extra\+\_\+context} = None
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Display the login form and handle the login action.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a649b8b4c80137d7ea8d923018c821f09}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a649b8b4c80137d7ea8d923018c821f09}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+dispatch (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1base_1_1_view}{django.\+views.\+generic.\+base.\+View}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a579dcaf480c70b0e02887a5a35a7eae0}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a579dcaf480c70b0e02887a5a35a7eae0}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!form\_valid@{form\_valid}}
+\index{form\_valid@{form\_valid}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{form\_valid()}{form\_valid()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+form\+\_\+valid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{form }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Security check complete. Log the user in.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1edit_1_1_form_mixin_a722bb417ab07c30c054dae782cbecb2f}{django.\+views.\+generic.\+edit.\+Form\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acff2e1c7aa1e0c6dc66cb3e8e26a5ea1}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acff2e1c7aa1e0c6dc66cb3e8e26a5ea1}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!get\_context\_data@{get\_context\_data}}
+\index{get\_context\_data@{get\_context\_data}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{get\_context\_data()}{get\_context\_data()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+get\+\_\+context\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Insert the form into the context dict.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1edit_1_1_form_mixin_a255005d366a84c6e9cb8558c5591a182}{django.\+views.\+generic.\+edit.\+Form\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a265c421bfdf5068a6653c43e11b43e38}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a265c421bfdf5068a6653c43e11b43e38}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!get\_form\_class@{get\_form\_class}}
+\index{get\_form\_class@{get\_form\_class}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{get\_form\_class()}{get\_form\_class()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+get\+\_\+form\+\_\+class (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the form class to use.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1edit_1_1_form_mixin_a9d5bf20e41415e95630dc370223da2f5}{django.\+views.\+generic.\+edit.\+Form\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acfe4d8339fbf103b4d0a3ab00ca515cb}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_acfe4d8339fbf103b4d0a3ab00ca515cb}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!get\_form\_kwargs@{get\_form\_kwargs}}
+\index{get\_form\_kwargs@{get\_form\_kwargs}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{get\_form\_kwargs()}{get\_form\_kwargs()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+get\+\_\+form\+\_\+kwargs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the keyword arguments for instantiating the form.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1edit_1_1_form_mixin_a39553a35fb3f5f55c90d9f6355a57b78}{django.\+views.\+generic.\+edit.\+Form\+Mixin}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a8b4c3af080df3c4b69b0d8f422557c27}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a8b4c3af080df3c4b69b0d8f422557c27}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!get\_redirect\_url@{get\_redirect\_url}}
+\index{get\_redirect\_url@{get\_redirect\_url}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{get\_redirect\_url()}{get\_redirect\_url()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+get\+\_\+redirect\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the user-originating redirect URL if it's safe.\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a5159017e2e9e211718b32691b93d7d20}\label{classdjango_1_1contrib_1_1auth_1_1views_1_1_login_view_a5159017e2e9e211718b32691b93d7d20}} 
+\index{django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}!get\_success\_url@{get\_success\_url}}
+\index{get\_success\_url@{get\_success\_url}!django.contrib.auth.views.LoginView@{django.contrib.auth.views.LoginView}}
+\doxysubsubsection{\texorpdfstring{get\_success\_url()}{get\_success\_url()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+views.\+Login\+View.\+get\+\_\+success\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the URL to redirect to after processing a valid form.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1views_1_1generic_1_1edit_1_1_form_mixin_a1963c32f622b4afe221d71b5b826e091}{django.\+views.\+generic.\+edit.\+Form\+Mixin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/views.\+py\end{DoxyCompactItemize}

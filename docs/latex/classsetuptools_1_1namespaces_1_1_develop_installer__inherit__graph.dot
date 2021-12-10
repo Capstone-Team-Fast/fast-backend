@@ -1,0 +1,11 @@
+digraph "setuptools.namespaces.DevelopInstaller"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="setuptools.namespaces.Develop\lInstaller",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="setuptools.namespaces.Installer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1namespaces_1_1_installer.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="setuptools.command.develop.develop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsetuptools_1_1command_1_1develop_1_1develop.html",tooltip=" "];
+}

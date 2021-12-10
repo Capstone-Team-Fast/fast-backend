@@ -1,0 +1,39 @@
+\hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi}{}\doxysection{asgiref.\+wsgi.\+Wsgi\+To\+Asgi Class Reference}
+\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi}\index{asgiref.wsgi.WsgiToAsgi@{asgiref.wsgi.WsgiToAsgi}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_ab9dd9d41bb6a499be6b0ccbb4fb19ac3}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_ab9dd9d41bb6a499be6b0ccbb4fb19ac3}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, wsgi\+\_\+application)
+\item 
+def \mbox{\hyperlink{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_a3d9e48aaf9b90742ce1d1d6935d59154}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, scope, receive, send)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_ac4e764f4b5f6fe10cff4a3b5ba096952}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_ac4e764f4b5f6fe10cff4a3b5ba096952}} 
+{\bfseries wsgi\+\_\+application}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Wraps a WSGI application to make it into an ASGI application.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_a3d9e48aaf9b90742ce1d1d6935d59154}\label{classasgiref_1_1wsgi_1_1_wsgi_to_asgi_a3d9e48aaf9b90742ce1d1d6935d59154}} 
+\index{asgiref.wsgi.WsgiToAsgi@{asgiref.wsgi.WsgiToAsgi}!\_\_call\_\_@{\_\_call\_\_}}
+\index{\_\_call\_\_@{\_\_call\_\_}!asgiref.wsgi.WsgiToAsgi@{asgiref.wsgi.WsgiToAsgi}}
+\doxysubsubsection{\texorpdfstring{\_\_call\_\_()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def asgiref.\+wsgi.\+Wsgi\+To\+Asgi.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scope,  }\item[{}]{receive,  }\item[{}]{send }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}ASGI application instantiation point.
+We return a new WsgiToAsgiInstance here with the WSGI app
+and the scope, ready to respond when it is __call__ed.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/asgiref/wsgi.\+py\end{DoxyCompactItemize}

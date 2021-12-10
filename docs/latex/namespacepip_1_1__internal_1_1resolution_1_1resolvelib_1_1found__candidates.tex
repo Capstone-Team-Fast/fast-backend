@@ -1,0 +1,26 @@
+\hypertarget{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates}{}\doxysection{pip.\+\_\+internal.\+resolution.\+resolvelib.\+found\+\_\+candidates Namespace Reference}
+\label{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates}\index{pip.\_internal.resolution.resolvelib.found\_candidates@{pip.\_internal.resolution.resolvelib.found\_candidates}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_1_1_found_candidates}{Found\+Candidates}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_a5dc497406a3176c6265b8c383ee1ca94}\label{namespacepip_1_1__internal_1_1resolution_1_1resolvelib_1_1found__candidates_a5dc497406a3176c6265b8c383ee1ca94}} 
+{\bfseries Index\+Candidate\+Info} = Tuple\mbox{[}\mbox{\hyperlink{classpip_1_1__vendor_1_1packaging_1_1version_1_1___base_version}{\+\_\+\+Base\+Version}}, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, Optional\mbox{[}\mbox{\hyperlink{classpip_1_1__internal_1_1resolution_1_1resolvelib_1_1base_1_1_candidate}{Candidate}}\mbox{]}\mbox{]}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Utilities to lazily create and visit candidates found.
+
+Creating and visiting a candidate is a *very* costly operation. It involves
+fetching, extracting, potentially building modules from source, and verifying
+distribution metadata. It is therefore crucial for performance to keep
+everything here lazy all the way down, so we only touch candidates that we
+absolutely need, and not "download the world" when we only need one version of
+something.
+\end{DoxyVerb}
+ 

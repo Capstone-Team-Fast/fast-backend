@@ -1,0 +1,44 @@
+\hypertarget{namespacedjango_1_1contrib_1_1auth_1_1management}{}\doxysection{django.\+contrib.\+auth.\+management Namespace Reference}
+\label{namespacedjango_1_1contrib_1_1auth_1_1management}\index{django.contrib.auth.management@{django.contrib.auth.management}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1auth_1_1management_a173d8b0206c1d6383dccac5b7a26e682}\label{namespacedjango_1_1contrib_1_1auth_1_1management_a173d8b0206c1d6383dccac5b7a26e682}} 
+def {\bfseries create\+\_\+permissions} (app\+\_\+config, verbosity=2, interactive=True, using=DEFAULT\+\_\+\+DB\+\_\+\+ALIAS, apps=global\+\_\+apps, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1auth_1_1management_aada845bc6eed9154c36549c10b357c28}{get\+\_\+system\+\_\+username}} ()
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1contrib_1_1auth_1_1management_ac773629891b99872cbafe0746497bf76}{get\+\_\+default\+\_\+username}} (check\+\_\+db=True, database=DEFAULT\+\_\+\+DB\+\_\+\+ALIAS)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Creates permissions for all installed apps that need permissions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1contrib_1_1auth_1_1management_ac773629891b99872cbafe0746497bf76}\label{namespacedjango_1_1contrib_1_1auth_1_1management_ac773629891b99872cbafe0746497bf76}} 
+\index{django.contrib.auth.management@{django.contrib.auth.management}!get\_default\_username@{get\_default\_username}}
+\index{get\_default\_username@{get\_default\_username}!django.contrib.auth.management@{django.contrib.auth.management}}
+\doxysubsubsection{\texorpdfstring{get\_default\_username()}{get\_default\_username()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+management.\+get\+\_\+default\+\_\+username (\begin{DoxyParamCaption}\item[{}]{check\+\_\+db = {\ttfamily True},  }\item[{}]{database = {\ttfamily DEFAULT\+\_\+DB\+\_\+ALIAS} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Try to determine the current system user's username to use as a default.
+
+:param check_db: If ``True``, requires that the username does not match an
+    existing ``auth.User`` (otherwise returns an empty string).
+:param database: The database where the unique check will be performed.
+:returns: The username, or an empty string if no username can be
+    determined or the suggested username is already taken.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1contrib_1_1auth_1_1management_aada845bc6eed9154c36549c10b357c28}\label{namespacedjango_1_1contrib_1_1auth_1_1management_aada845bc6eed9154c36549c10b357c28}} 
+\index{django.contrib.auth.management@{django.contrib.auth.management}!get\_system\_username@{get\_system\_username}}
+\index{get\_system\_username@{get\_system\_username}!django.contrib.auth.management@{django.contrib.auth.management}}
+\doxysubsubsection{\texorpdfstring{get\_system\_username()}{get\_system\_username()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+management.\+get\+\_\+system\+\_\+username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the current system user's username, or an empty string if the
+username could not be determined.
+\end{DoxyVerb}
+ 

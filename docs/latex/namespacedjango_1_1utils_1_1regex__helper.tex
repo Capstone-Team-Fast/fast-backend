@@ -1,0 +1,148 @@
+\hypertarget{namespacedjango_1_1utils_1_1regex__helper}{}\doxysection{django.\+utils.\+regex\+\_\+helper Namespace Reference}
+\label{namespacedjango_1_1utils_1_1regex__helper}\index{django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1utils_1_1regex__helper_1_1_choice}{Choice}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1utils_1_1regex__helper_1_1_group}{Group}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1utils_1_1regex__helper_1_1_non_capture}{Non\+Capture}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a9ffb5696f45efda4a440f9f57a1d4b30}{normalize}} (pattern)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a5a7a225e2dca4c88224e7142f95bdcb1}{next\+\_\+char}} (input\+\_\+iter)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a483ded51f2bfc4d0581020a2add8aa26}{walk\+\_\+to\+\_\+end}} (ch, input\+\_\+iter)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a93124e222b88eee3933d6d7dfe80d140}{get\+\_\+quantifier}} (ch, input\+\_\+iter)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a1732fab255048b7d3d07a4373fc4c2fe}{contains}} (source, inst)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_a7d52a3f9a13a7a8b3444f950ecbcc365}{flatten\+\_\+result}} (source)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespacedjango_1_1utils_1_1regex__helper_acf74ea4a49a8007876a94c6d2fb5d022}{ESCAPE\+\_\+\+MAPPINGS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Functions for reversing a regular expression (used in reverse URL resolving).
+Used internally by Django and not intended for external use.
+
+This is not, and is not intended to be, a complete reg-exp decompiler. It
+should be good enough for a large class of URLS, however.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a1732fab255048b7d3d07a4373fc4c2fe}\label{namespacedjango_1_1utils_1_1regex__helper_a1732fab255048b7d3d07a4373fc4c2fe}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!contains@{contains}}
+\index{contains@{contains}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+contains (\begin{DoxyParamCaption}\item[{}]{source,  }\item[{}]{inst }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return True if the "source" contains an instance of "inst". False,
+otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a7d52a3f9a13a7a8b3444f950ecbcc365}\label{namespacedjango_1_1utils_1_1regex__helper_a7d52a3f9a13a7a8b3444f950ecbcc365}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!flatten\_result@{flatten\_result}}
+\index{flatten\_result@{flatten\_result}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{flatten\_result()}{flatten\_result()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+flatten\+\_\+result (\begin{DoxyParamCaption}\item[{}]{source }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Turn the given source sequence into a list of reg-exp possibilities and
+their arguments. Return a list of strings and a list of argument lists.
+Each of the two lists will be of the same length.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a93124e222b88eee3933d6d7dfe80d140}\label{namespacedjango_1_1utils_1_1regex__helper_a93124e222b88eee3933d6d7dfe80d140}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!get\_quantifier@{get\_quantifier}}
+\index{get\_quantifier@{get\_quantifier}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{get\_quantifier()}{get\_quantifier()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+get\+\_\+quantifier (\begin{DoxyParamCaption}\item[{}]{ch,  }\item[{}]{input\+\_\+iter }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse a quantifier from the input, where "ch" is the first character in the
+quantifier.
+
+Return the minimum number of occurrences permitted by the quantifier and
+either None or the next character from the input_iter if the next character
+is not part of the quantifier.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a5a7a225e2dca4c88224e7142f95bdcb1}\label{namespacedjango_1_1utils_1_1regex__helper_a5a7a225e2dca4c88224e7142f95bdcb1}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!next\_char@{next\_char}}
+\index{next\_char@{next\_char}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{next\_char()}{next\_char()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+next\+\_\+char (\begin{DoxyParamCaption}\item[{}]{input\+\_\+iter }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}An iterator that yields the next character from "pattern_iter", respecting
+escape sequences. An escaped character is replaced by a representative of
+its class (e.g. \w -> "x"). If the escaped character is one that is
+skipped, it is not returned (the next character is returned instead).
+
+Yield the next character, along with a boolean indicating whether it is a
+raw (unescaped) character or not.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a9ffb5696f45efda4a440f9f57a1d4b30}\label{namespacedjango_1_1utils_1_1regex__helper_a9ffb5696f45efda4a440f9f57a1d4b30}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!normalize@{normalize}}
+\index{normalize@{normalize}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+normalize (\begin{DoxyParamCaption}\item[{}]{pattern }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a reg-exp pattern, normalize it to an iterable of forms that
+suffice for reverse matching. This does the following:
+
+(1) For any repeating sections, keeps the minimum number of occurrences
+    permitted (this means zero for optional groups).
+(2) If an optional group includes parameters, include one occurrence of
+    that group (along with the zero occurrence case from step (1)).
+(3) Select the first (essentially an arbitrary) element from any character
+    class. Select an arbitrary character for any unordered class (e.g. '.'
+    or '\w') in the pattern.
+(4) Ignore look-ahead and look-behind assertions.
+(5) Raise an error on any disjunctive ('|') constructs.
+
+Django's URLs for forward resolving are either all positional arguments or
+all keyword arguments. That is assumed here, as well. Although reverse
+resolving can be done using positional args when keyword args are
+specified, the two cannot be mixed in the same reverse() call.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_a483ded51f2bfc4d0581020a2add8aa26}\label{namespacedjango_1_1utils_1_1regex__helper_a483ded51f2bfc4d0581020a2add8aa26}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!walk\_to\_end@{walk\_to\_end}}
+\index{walk\_to\_end@{walk\_to\_end}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{walk\_to\_end()}{walk\_to\_end()}}
+{\footnotesize\ttfamily def django.\+utils.\+regex\+\_\+helper.\+walk\+\_\+to\+\_\+end (\begin{DoxyParamCaption}\item[{}]{ch,  }\item[{}]{input\+\_\+iter }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The iterator is currently inside a capturing group. Walk to the close of
+this group, skipping over any nested groups and handling escaped
+parentheses correctly.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1utils_1_1regex__helper_acf74ea4a49a8007876a94c6d2fb5d022}\label{namespacedjango_1_1utils_1_1regex__helper_acf74ea4a49a8007876a94c6d2fb5d022}} 
+\index{django.utils.regex\_helper@{django.utils.regex\_helper}!ESCAPE\_MAPPINGS@{ESCAPE\_MAPPINGS}}
+\index{ESCAPE\_MAPPINGS@{ESCAPE\_MAPPINGS}!django.utils.regex\_helper@{django.utils.regex\_helper}}
+\doxysubsubsection{\texorpdfstring{ESCAPE\_MAPPINGS}{ESCAPE\_MAPPINGS}}
+{\footnotesize\ttfamily dictionary django.\+utils.\+regex\+\_\+helper.\+ESCAPE\+\_\+\+MAPPINGS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  \{}
+\DoxyCodeLine{2     \textcolor{stringliteral}{"{}A"{}}: \textcolor{keywordtype}{None},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{"{}b"{}}: \textcolor{keywordtype}{None},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{"{}B"{}}: \textcolor{keywordtype}{None},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{"{}d"{}}: \textcolor{stringliteral}{"{}0"{}},}
+\DoxyCodeLine{6     \textcolor{stringliteral}{"{}D"{}}: \textcolor{stringliteral}{"{}x"{}},}
+\DoxyCodeLine{7     \textcolor{stringliteral}{"{}s"{}}: \textcolor{stringliteral}{"{} "{}},}
+\DoxyCodeLine{8     \textcolor{stringliteral}{"{}S"{}}: \textcolor{stringliteral}{"{}x"{}},}
+\DoxyCodeLine{9     \textcolor{stringliteral}{"{}w"{}}: \textcolor{stringliteral}{"{}x"{}},}
+\DoxyCodeLine{10     \textcolor{stringliteral}{"{}W"{}}: \textcolor{stringliteral}{"{}!"{}},}
+\DoxyCodeLine{11     \textcolor{stringliteral}{"{}Z"{}}: \textcolor{keywordtype}{None},}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}

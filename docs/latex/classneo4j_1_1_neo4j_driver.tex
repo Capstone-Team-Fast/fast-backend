@@ -1,0 +1,95 @@
+\hypertarget{classneo4j_1_1_neo4j_driver}{}\doxysection{neo4j.\+Neo4j\+Driver Class Reference}
+\label{classneo4j_1_1_neo4j_driver}\index{neo4j.Neo4jDriver@{neo4j.Neo4jDriver}}
+
+
+Inheritance diagram for neo4j.\+Neo4j\+Driver\+:
+% FIG 0
+
+
+Collaboration diagram for neo4j.\+Neo4j\+Driver\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1_neo4j_driver_a4edc606bd9dea190858ed9da53917933}\label{classneo4j_1_1_neo4j_driver_a4edc606bd9dea190858ed9da53917933}} 
+def {\bfseries open} (cls, $\ast$targets, auth=None, routing\+\_\+context=None, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a25bf47fe55e1731de69f5f7de40c1db2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, pool, default\+\_\+workspace\+\_\+config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a0f416c3d106546209d3054e7ff9fec91}{session}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a10f5e931e59655cb0701f52c6487e7ad}{pipeline}} (self, $\ast$$\ast$config)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1_neo4j_driver_a51263b579cb9f20962a8bc878e195dea}{verify\+\_\+connectivity}} (self, $\ast$$\ast$config)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} A :class:`.Neo4jDriver` is created from a ``neo4j`` URI. The
+routing behaviour works in tandem with Neo4j's `Causal Clustering
+<https://neo4j.com/docs/operations-manual/current/clustering/>`_
+feature by directing read and write behaviour to appropriate
+cluster members.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneo4j_1_1_neo4j_driver_a25bf47fe55e1731de69f5f7de40c1db2}\label{classneo4j_1_1_neo4j_driver_a25bf47fe55e1731de69f5f7de40c1db2}} 
+\index{neo4j.Neo4jDriver@{neo4j.Neo4jDriver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neo4j.Neo4jDriver@{neo4j.Neo4jDriver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neo4j.\+Neo4j\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pool,  }\item[{}]{default\+\_\+workspace\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_routing}{neo4j.\+Routing}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1_neo4j_driver_a10f5e931e59655cb0701f52c6487e7ad}\label{classneo4j_1_1_neo4j_driver_a10f5e931e59655cb0701f52c6487e7ad}} 
+\index{neo4j.Neo4jDriver@{neo4j.Neo4jDriver}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!neo4j.Neo4jDriver@{neo4j.Neo4jDriver}}
+\doxysubsubsection{\texorpdfstring{pipeline()}{pipeline()}}
+{\footnotesize\ttfamily def neo4j.\+Neo4j\+Driver.\+pipeline (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Create a pipeline.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_a3a0176f0015c7debcbb0de531164f738}{neo4j.\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_neo4j_driver_a0f416c3d106546209d3054e7ff9fec91}\label{classneo4j_1_1_neo4j_driver_a0f416c3d106546209d3054e7ff9fec91}} 
+\index{neo4j.Neo4jDriver@{neo4j.Neo4jDriver}!session@{session}}
+\index{session@{session}!neo4j.Neo4jDriver@{neo4j.Neo4jDriver}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily def neo4j.\+Neo4j\+Driver.\+session (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a session, see :ref:`session-construction-ref`
+
+:param config: session configuration key-word arguments, see :ref:`session-configuration-ref` for available key-word arguments.
+
+:returns: new :class:`neo4j.Session` object
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_ae260b432170f65edaf3f6854af2fa6ee}{neo4j.\+Driver}}.
+
+\mbox{\Hypertarget{classneo4j_1_1_neo4j_driver_a51263b579cb9f20962a8bc878e195dea}\label{classneo4j_1_1_neo4j_driver_a51263b579cb9f20962a8bc878e195dea}} 
+\index{neo4j.Neo4jDriver@{neo4j.Neo4jDriver}!verify\_connectivity@{verify\_connectivity}}
+\index{verify\_connectivity@{verify\_connectivity}!neo4j.Neo4jDriver@{neo4j.Neo4jDriver}}
+\doxysubsubsection{\texorpdfstring{verify\_connectivity()}{verify\_connectivity()}}
+{\footnotesize\ttfamily def neo4j.\+Neo4j\+Driver.\+verify\+\_\+connectivity (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:raise ServiceUnavailable: raised if the server does not support routing or if routing support is broken.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classneo4j_1_1_driver_abe1d9e1c75334c7a5d67697005a0889f}{neo4j.\+Driver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/\+\_\+\+\_\+init\+\_\+\+\_\+.\+py\end{DoxyCompactItemize}

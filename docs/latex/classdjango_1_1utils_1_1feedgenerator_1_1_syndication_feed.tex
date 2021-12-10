@@ -1,0 +1,134 @@
+\hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed}{}\doxysection{django.\+utils.\+feedgenerator.\+Syndication\+Feed Class Reference}
+\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed}\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+
+
+Inheritance diagram for django.\+utils.\+feedgenerator.\+Syndication\+Feed\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a3426e0f4b82927210a6e863a753d5899}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a3426e0f4b82927210a6e863a753d5899}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, title, link, description, language=None, author\+\_\+email=None, author\+\_\+name=None, author\+\_\+link=None, subtitle=None, categories=None, feed\+\_\+url=None, feed\+\_\+copyright=None, feed\+\_\+guid=None, ttl=None, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a581b1cda4798116e5c961f20818edbb6}{add\+\_\+item}} (self, title, link, description, author\+\_\+email=None, author\+\_\+name=None, author\+\_\+link=None, pubdate=None, comments=None, unique\+\_\+id=None, unique\+\_\+id\+\_\+is\+\_\+permalink=None, categories=(), item\+\_\+copyright=None, ttl=None, updateddate=None, enclosures=None, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_ac4508916ebded00c0764dbc66cf5a9af}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_ac4508916ebded00c0764dbc66cf5a9af}} 
+def {\bfseries num\+\_\+items} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a7aacecac01beaf5df93f1ce566a33f45}{root\+\_\+attributes}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a365d4cfea8f4e492bc0bf233ca202b5e}{add\+\_\+root\+\_\+elements}} (self, handler)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_ac545499704f6bc352445d987e57939f9}{item\+\_\+attributes}} (self, item)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abf5400b7aa445b56e46fadbe62886bfa}{add\+\_\+item\+\_\+elements}} (self, handler, item)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a390ee897decdfa762bdbe1e8c391f820}{write}} (self, outfile, encoding)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a653e32eda7a1ebf1cc88e51a4f8496f1}{write\+String}} (self, encoding)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_acb91f3a383f15b6ec997db8c443b440e}{latest\+\_\+post\+\_\+date}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a5a7f858770e5d0072bc4121dcb4a21fb}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a5a7f858770e5d0072bc4121dcb4a21fb}} 
+{\bfseries feed}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abd15d701c0043adae04d750a2ea4c729}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abd15d701c0043adae04d750a2ea4c729}} 
+{\bfseries items}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a581b1cda4798116e5c961f20818edbb6}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a581b1cda4798116e5c961f20818edbb6}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!add\_item@{add\_item}}
+\index{add\_item@{add\_item}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{add\_item()}{add\_item()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+add\+\_\+item (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{title,  }\item[{}]{link,  }\item[{}]{description,  }\item[{}]{author\+\_\+email = {\ttfamily None},  }\item[{}]{author\+\_\+name = {\ttfamily None},  }\item[{}]{author\+\_\+link = {\ttfamily None},  }\item[{}]{pubdate = {\ttfamily None},  }\item[{}]{comments = {\ttfamily None},  }\item[{}]{unique\+\_\+id = {\ttfamily None},  }\item[{}]{unique\+\_\+id\+\_\+is\+\_\+permalink = {\ttfamily None},  }\item[{}]{categories = {\ttfamily ()},  }\item[{}]{item\+\_\+copyright = {\ttfamily None},  }\item[{}]{ttl = {\ttfamily None},  }\item[{}]{updateddate = {\ttfamily None},  }\item[{}]{enclosures = {\ttfamily None},  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add an item to the feed. All args are expected to be strings except
+pubdate and updateddate, which are datetime.datetime objects, and
+enclosures, which is an iterable of instances of the Enclosure class.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abf5400b7aa445b56e46fadbe62886bfa}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abf5400b7aa445b56e46fadbe62886bfa}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!add\_item\_elements@{add\_item\_elements}}
+\index{add\_item\_elements@{add\_item\_elements}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{add\_item\_elements()}{add\_item\_elements()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+add\+\_\+item\+\_\+elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{handler,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add elements on each item (i.e. item/entry) element.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_r_s_s_feed_a9bcefdfb7e6d4af86edc67f4099f6087}{django.\+contrib.\+gis.\+feeds.\+Geo\+RSSFeed}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_ade1edb44af2921a14352b52a69f5add9}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_w3_c_geo_feed_aa9f9b8c66117e6a1da478048c1fed1b8}{django.\+contrib.\+gis.\+feeds.\+W3\+CGeo\+Feed}}, \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_rss_userland091_feed_a8519d2b8f9572d70fe0eca7a6e476504}{django.\+utils.\+feedgenerator.\+Rss\+Userland091\+Feed}}, \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_rss201rev2_feed_aa0dfa5e0ca72596cd7d2e19e34ce08ac}{django.\+utils.\+feedgenerator.\+Rss201rev2\+Feed}}, and \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a088dd3cf3c90498f17907de109eca16f}{django.\+utils.\+feedgenerator.\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a365d4cfea8f4e492bc0bf233ca202b5e}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a365d4cfea8f4e492bc0bf233ca202b5e}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!add\_root\_elements@{add\_root\_elements}}
+\index{add\_root\_elements@{add\_root\_elements}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{add\_root\_elements()}{add\_root\_elements()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+add\+\_\+root\+\_\+elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{handler }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add elements in the root (i.e. feed/channel) element. Called
+from write().
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_r_s_s_feed_a26a091137cae209c52aab79960b69ba7}{django.\+contrib.\+gis.\+feeds.\+Geo\+RSSFeed}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_a1f430a7c600c45e28b9f1eb560c20b0f}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_w3_c_geo_feed_a2e8809bff3ae78b90b41f3ffcb665645}{django.\+contrib.\+gis.\+feeds.\+W3\+CGeo\+Feed}}, \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_rss_feed_a2695fd8d27ef5dd19127fffcd3796b08}{django.\+utils.\+feedgenerator.\+Rss\+Feed}}, and \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a3fb3c960923723e1eb0769332f4b7f17}{django.\+utils.\+feedgenerator.\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_ac545499704f6bc352445d987e57939f9}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_ac545499704f6bc352445d987e57939f9}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!item\_attributes@{item\_attributes}}
+\index{item\_attributes@{item\_attributes}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{item\_attributes()}{item\_attributes()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+item\+\_\+attributes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return extra attributes to place on each item (i.e. item/entry) element.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_acb91f3a383f15b6ec997db8c443b440e}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_acb91f3a383f15b6ec997db8c443b440e}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!latest\_post\_date@{latest\_post\_date}}
+\index{latest\_post\_date@{latest\_post\_date}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{latest\_post\_date()}{latest\_post\_date()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+latest\+\_\+post\+\_\+date (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the latest item's pubdate or updateddate. If no items
+have either of these attributes this return the current UTC date/time.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a7aacecac01beaf5df93f1ce566a33f45}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a7aacecac01beaf5df93f1ce566a33f45}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!root\_attributes@{root\_attributes}}
+\index{root\_attributes@{root\_attributes}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{root\_attributes()}{root\_attributes()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+root\+\_\+attributes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return extra attributes to place on the root (i.e. feed/channel) element.
+Called from write().
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_a21d5c8087a075d54c1f3b84b75a71b04}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}, and \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a7777172209cb713dd4ded535c341e34c}{django.\+utils.\+feedgenerator.\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a390ee897decdfa762bdbe1e8c391f820}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a390ee897decdfa762bdbe1e8c391f820}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!write@{write}}
+\index{write@{write}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{outfile,  }\item[{}]{encoding }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Output the feed in the given encoding to outfile, which is a file-like
+object. Subclasses should override this.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_rss_feed_aa4949e5bd3c397a1a6ce7ce18979ec62}{django.\+utils.\+feedgenerator.\+Rss\+Feed}}, and \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_aa8093ef9722606e13397dedd0b73bda7}{django.\+utils.\+feedgenerator.\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a653e32eda7a1ebf1cc88e51a4f8496f1}\label{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a653e32eda7a1ebf1cc88e51a4f8496f1}} 
+\index{django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}!writeString@{writeString}}
+\index{writeString@{writeString}!django.utils.feedgenerator.SyndicationFeed@{django.utils.feedgenerator.SyndicationFeed}}
+\doxysubsubsection{\texorpdfstring{writeString()}{writeString()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Syndication\+Feed.\+write\+String (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{encoding }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the feed in the given encoding as a string.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/feedgenerator.\+py\end{DoxyCompactItemize}

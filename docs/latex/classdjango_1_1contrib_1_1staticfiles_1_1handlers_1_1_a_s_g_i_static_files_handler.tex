@@ -1,0 +1,66 @@
+\hypertarget{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler}{}\doxysection{django.\+contrib.\+staticfiles.\+handlers.\+ASGIStatic\+Files\+Handler Class Reference}
+\label{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler}\index{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler@{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler}}
+
+
+Inheritance diagram for django.\+contrib.\+staticfiles.\+handlers.\+ASGIStatic\+Files\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+staticfiles.\+handlers.\+ASGIStatic\+Files\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a2862c252addca9d979b7836a1112d27b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, application)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_abd7754c73a95bce9a9b6888f35710320}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, scope, receive, send)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a11047f0829c3aaf30f386f4b6a42a732}\label{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a11047f0829c3aaf30f386f4b6a42a732}} 
+{\bfseries application}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a7f26061bff6dfa9e56884f00cb1a363b}\label{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a7f26061bff6dfa9e56884f00cb1a363b}} 
+{\bfseries base\+\_\+url}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}ASGI application which wraps another and intercepts requests for static
+files, passing them off to Django's static file serving.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a2862c252addca9d979b7836a1112d27b}\label{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_a2862c252addca9d979b7836a1112d27b}} 
+\index{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler@{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.staticfiles.handlers.ASGIStaticFilesHandler@{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+staticfiles.\+handlers.\+ASGIStatic\+Files\+Handler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{application }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1handlers_1_1asgi_1_1_a_s_g_i_handler}{django.\+core.\+handlers.\+asgi.\+ASGIHandler}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_abd7754c73a95bce9a9b6888f35710320}\label{classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_a_s_g_i_static_files_handler_abd7754c73a95bce9a9b6888f35710320}} 
+\index{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler@{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler}!\_\_call\_\_@{\_\_call\_\_}}
+\index{\_\_call\_\_@{\_\_call\_\_}!django.contrib.staticfiles.handlers.ASGIStaticFilesHandler@{django.contrib.staticfiles.handlers.ASGIStaticFilesHandler}}
+\doxysubsubsection{\texorpdfstring{\_\_call\_\_()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+staticfiles.\+handlers.\+ASGIStatic\+Files\+Handler.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scope,  }\item[{}]{receive,  }\item[{}]{send }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Async entrypoint - parses the request and hands off to get_response.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1handlers_1_1asgi_1_1_a_s_g_i_handler_a8f3bd2b3bb8eb0f38a403ff94ff532ba}{django.\+core.\+handlers.\+asgi.\+ASGIHandler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/staticfiles/handlers.\+py\end{DoxyCompactItemize}

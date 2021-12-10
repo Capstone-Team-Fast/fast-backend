@@ -1,0 +1,72 @@
+\hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory}{}\doxysection{pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory Class Reference}
+\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory}\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+
+
+Inheritance diagram for pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_ab8977ab866889ed4df9d2965c4e9c496}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_ab8977ab866889ed4df9d2965c4e9c496}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, path=None, delete=\+\_\+default, kind=\char`\"{}temp\char`\"{}, globally\+\_\+managed=False)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a4254ada0d1dd48d528785750384678e8}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a4254ada0d1dd48d528785750384678e8}} 
+def {\bfseries path} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a26d453c441a425e881d085ca73f9e533}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a26d453c441a425e881d085ca73f9e533}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a191a67a9dcf2b815dfee2d2ffe902f3b}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a191a67a9dcf2b815dfee2d2ffe902f3b}} 
+def {\bfseries \+\_\+\+\_\+enter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a2c52b40b2941dce70af3e8ce8e2fc394}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a2c52b40b2941dce70af3e8ce8e2fc394}} 
+def {\bfseries \+\_\+\+\_\+exit\+\_\+\+\_\+} (self, exc, value, tb)
+\item 
+def \mbox{\hyperlink{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a7a824e4ae2fd92d7f158affea644f137}{cleanup}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a951c8f73bc5a1641a0114be38296e19a}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a951c8f73bc5a1641a0114be38296e19a}} 
+{\bfseries delete}
+\item 
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_afd9502a9ce40c538fd406e7f80562fde}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_afd9502a9ce40c538fd406e7f80562fde}} 
+{\bfseries kind}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helper class that owns and cleans up a temporary directory.
+
+This class can be used as a context manager or as an OO representation of a
+temporary directory.
+
+Attributes:
+    path
+        Location to the created temporary directory
+    delete
+        Whether the directory should be deleted when exiting
+        (when used as a contextmanager)
+
+Methods:
+    cleanup()
+        Deletes the temporary directory
+
+When used as a context manager, if the delete attribute is True, on
+exiting the context the temporary directory is deleted.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a7a824e4ae2fd92d7f158affea644f137}\label{classpip_1_1__internal_1_1utils_1_1temp__dir_1_1_temp_directory_a7a824e4ae2fd92d7f158affea644f137}} 
+\index{pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!pip.\_internal.utils.temp\_dir.TempDirectory@{pip.\_internal.utils.temp\_dir.TempDirectory}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily def pip.\+\_\+internal.\+utils.\+temp\+\_\+dir.\+Temp\+Directory.\+cleanup (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove the temporary directory created and reset state\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/pip/\+\_\+internal/utils/temp\+\_\+dir.\+py\end{DoxyCompactItemize}

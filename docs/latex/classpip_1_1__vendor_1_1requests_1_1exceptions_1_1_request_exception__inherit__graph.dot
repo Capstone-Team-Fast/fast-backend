@@ -1,0 +1,51 @@
+digraph "pip._vendor.requests.exceptions.RequestException"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.exceptions.\lRequestException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="IOError",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="pip._vendor.requests.exceptions.\lChunkedEncodingError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_chunked_encoding_error.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="pip._vendor.requests.exceptions.\lConnectionError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_connection_error.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="pip._vendor.requests.exceptions.\lConnectTimeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_connect_timeout.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="pip._vendor.requests.exceptions.\lProxyError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_proxy_error.html",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="pip._vendor.requests.exceptions.\lSSLError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_s_s_l_error.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="pip._vendor.requests.exceptions.\lContentDecodingError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_content_decoding_error.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="pip._vendor.requests.exceptions.\lHTTPError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_h_t_t_p_error.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="pip._vendor.requests.exceptions.\lInvalidHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_invalid_header.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="pip._vendor.requests.exceptions.\lInvalidJSONError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_invalid_j_s_o_n_error.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="pip._vendor.requests.exceptions.\lInvalidSchema",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_invalid_schema.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="pip._vendor.requests.exceptions.\lInvalidURL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_invalid_u_r_l.html",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="pip._vendor.requests.exceptions.\lInvalidProxyURL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_invalid_proxy_u_r_l.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="pip._vendor.requests.exceptions.\lMissingSchema",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_missing_schema.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="pip._vendor.requests.exceptions.\lRetryError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_retry_error.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="pip._vendor.requests.exceptions.\lStreamConsumedError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_stream_consumed_error.html",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="pip._vendor.requests.exceptions.\lTimeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_timeout.html",tooltip=" "];
+  Node18 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="pip._vendor.requests.exceptions.\lReadTimeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_read_timeout.html",tooltip=" "];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="pip._vendor.requests.exceptions.\lTooManyRedirects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_too_many_redirects.html",tooltip=" "];
+  Node1 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="pip._vendor.requests.exceptions.\lURLRequired",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_u_r_l_required.html",tooltip=" "];
+  Node1 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="pip._vendor.requests.exceptions.\lUnrewindableBodyError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1requests_1_1exceptions_1_1_unrewindable_body_error.html",tooltip=" "];
+}

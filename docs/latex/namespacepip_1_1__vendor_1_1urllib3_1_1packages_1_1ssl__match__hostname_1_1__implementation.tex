@@ -1,0 +1,39 @@
+\hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation}{}\doxysection{pip.\+\_\+vendor.\+urllib3.\+packages.\+ssl\+\_\+match\+\_\+hostname.\+\_\+implementation Namespace Reference}
+\label{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation}\index{pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation@{pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_1_1_certificate_error}{Certificate\+Error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_ab0ddb7d7bb7cc93f470a4f1c1a244fe7}{match\+\_\+hostname}} (cert, hostname)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_ac80eca726dd9c6d28e1bcbf3a6453746}\label{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_ac80eca726dd9c6d28e1bcbf3a6453746}} 
+{\bfseries ipaddress} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The match_hostname() function from Python 3.3.3, essential when using SSL.\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_ab0ddb7d7bb7cc93f470a4f1c1a244fe7}\label{namespacepip_1_1__vendor_1_1urllib3_1_1packages_1_1ssl__match__hostname_1_1__implementation_ab0ddb7d7bb7cc93f470a4f1c1a244fe7}} 
+\index{pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation@{pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation}!match\_hostname@{match\_hostname}}
+\index{match\_hostname@{match\_hostname}!pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation@{pip.\_vendor.urllib3.packages.ssl\_match\_hostname.\_implementation}}
+\doxysubsubsection{\texorpdfstring{match\_hostname()}{match\_hostname()}}
+{\footnotesize\ttfamily def pip.\+\_\+vendor.\+urllib3.\+packages.\+ssl\+\_\+match\+\_\+hostname.\+\_\+implementation.\+match\+\_\+hostname (\begin{DoxyParamCaption}\item[{}]{cert,  }\item[{}]{hostname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Verify that *cert* (in decoded format as returned by
+SSLSocket.getpeercert()) matches the *hostname*.  RFC 2818 and RFC 6125
+rules are followed, but IP addresses are not accepted for *hostname*.
+
+CertificateError is raised on failure. On success, the function
+returns nothing.
+\end{DoxyVerb}
+ 

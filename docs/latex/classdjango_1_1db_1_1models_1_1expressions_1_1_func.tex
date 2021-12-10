@@ -1,0 +1,180 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func}{}\doxysection{django.\+db.\+models.\+expressions.\+Func Class Reference}
+\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func}\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+
+
+Inherits \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_s_q_lite_numeric_mixin}{django.\+db.\+models.\+expressions.\+SQLite\+Numeric\+Mixin}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression}{django.\+db.\+models.\+expressions.\+Expression}}.
+
+
+
+Inherited by \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1operations_1_1_s_t___polygon}{django.\+contrib.\+gis.\+db.\+backends.\+postgis.\+operations.\+ST\+\_\+\+Polygon}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_geo_func}{django.\+contrib.\+gis.\+db.\+models.\+functions.\+Geo\+Func}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1functions_1_1_random_u_u_i_d}{django.\+contrib.\+postgres.\+functions.\+Random\+UUID}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1functions_1_1_transaction_now}{django.\+contrib.\+postgres.\+functions.\+Transaction\+Now}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1indexes_1_1_op_class}{django.\+contrib.\+postgres.\+indexes.\+Op\+Class}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_headline}{django.\+contrib.\+postgres.\+search.\+Search\+Headline}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_query}{django.\+contrib.\+postgres.\+search.\+Search\+Query}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_rank}{django.\+contrib.\+postgres.\+search.\+Search\+Rank}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector}{django.\+contrib.\+postgres.\+search.\+Search\+Vector}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_trigram_base}{django.\+contrib.\+postgres.\+search.\+Trigram\+Base}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_interval_to_seconds}{django.\+db.\+backends.\+oracle.\+functions.\+Interval\+To\+Seconds}}, \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1oracle_1_1functions_1_1_seconds_to_interval}{django.\+db.\+backends.\+oracle.\+functions.\+Seconds\+To\+Interval}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate}{django.\+db.\+models.\+aggregates.\+Aggregate}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_expression_list}{django.\+db.\+models.\+expressions.\+Expression\+List}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_cast}{django.\+db.\+models.\+functions.\+comparison.\+Cast}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_coalesce}{django.\+db.\+models.\+functions.\+comparison.\+Coalesce}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate}{django.\+db.\+models.\+functions.\+comparison.\+Collate}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_greatest}{django.\+db.\+models.\+functions.\+comparison.\+Greatest}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_j_s_o_n_object}{django.\+db.\+models.\+functions.\+comparison.\+JSONObject}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_least}{django.\+db.\+models.\+functions.\+comparison.\+Least}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_null_if}{django.\+db.\+models.\+functions.\+comparison.\+Null\+If}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_now}{django.\+db.\+models.\+functions.\+datetime.\+Now}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_a_tan2}{django.\+db.\+models.\+functions.\+math.\+ATan2}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_log}{django.\+db.\+models.\+functions.\+math.\+Log}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_mod}{django.\+db.\+models.\+functions.\+math.\+Mod}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_pi}{django.\+db.\+models.\+functions.\+math.\+Pi}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_power}{django.\+db.\+models.\+functions.\+math.\+Power}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1math_1_1_random}{django.\+db.\+models.\+functions.\+math.\+Random}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_concat}{django.\+db.\+models.\+functions.\+text.\+Concat}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_concat_pair}{django.\+db.\+models.\+functions.\+text.\+Concat\+Pair}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_l_pad}{django.\+db.\+models.\+functions.\+text.\+LPad}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_left}{django.\+db.\+models.\+functions.\+text.\+Left}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_repeat}{django.\+db.\+models.\+functions.\+text.\+Repeat}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_replace}{django.\+db.\+models.\+functions.\+text.\+Replace}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_str_index}{django.\+db.\+models.\+functions.\+text.\+Str\+Index}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_substr}{django.\+db.\+models.\+functions.\+text.\+Substr}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_cume_dist}{django.\+db.\+models.\+functions.\+window.\+Cume\+Dist}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_dense_rank}{django.\+db.\+models.\+functions.\+window.\+Dense\+Rank}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_first_value}{django.\+db.\+models.\+functions.\+window.\+First\+Value}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_lag_lead_function}{django.\+db.\+models.\+functions.\+window.\+Lag\+Lead\+Function}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_last_value}{django.\+db.\+models.\+functions.\+window.\+Last\+Value}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_nth_value}{django.\+db.\+models.\+functions.\+window.\+Nth\+Value}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_ntile}{django.\+db.\+models.\+functions.\+window.\+Ntile}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_percent_rank}{django.\+db.\+models.\+functions.\+window.\+Percent\+Rank}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_rank}{django.\+db.\+models.\+functions.\+window.\+Rank}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1window_1_1_row_number}{django.\+db.\+models.\+functions.\+window.\+Row\+Number}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1indexes_1_1_index_expression}{django.\+db.\+models.\+indexes.\+Index\+Expression}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1lookups_1_1_transform}{django.\+db.\+models.\+lookups.\+Transform}}.
+
+
+
+Collaboration diagram for django.\+db.\+models.\+expressions.\+Func\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a63ccae428757a4645ab1f8ebd40deec3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$expressions, output\+\_\+field=None, $\ast$$\ast$extra)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_aeb3888f2b72b6430e690b07c72c4e429}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_aeb3888f2b72b6430e690b07c72c4e429}} 
+def {\bfseries \+\_\+\+\_\+repr\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_aba6fe854ceb43261d1e8270b9f488151}{get\+\_\+source\+\_\+expressions}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a110ccdcccc62bee9e010b41a511cbf36}{set\+\_\+source\+\_\+expressions}} (self, exprs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ad831ab3b8c4ec8e2c9ea0353d6790d38}{resolve\+\_\+expression}} (self, query=None, allow\+\_\+joins=True, reuse=None, summarize=False, for\+\_\+save=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}{as\+\_\+sql}} (self, compiler, connection, function=None, template=None, arg\+\_\+joiner=None, $\ast$$\ast$extra\+\_\+context)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a46db61ba5b52127f08d7efb8b7d1ddd2}{copy}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a81e4b718ac63790bc4ee0c7a144b56f0}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a81e4b718ac63790bc4ee0c7a144b56f0}} 
+{\bfseries source\+\_\+expressions}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a215eacfd5a1ae19ed3f76974a26bc33b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a215eacfd5a1ae19ed3f76974a26bc33b}} 
+{\bfseries extra}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a9f7567c42c4fd379290b79b5a01fea08}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a9f7567c42c4fd379290b79b5a01fea08}} 
+{\bfseries function} = None
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a053b6df2b0fbe34d7cc3be7fe8cf6d1b}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a053b6df2b0fbe34d7cc3be7fe8cf6d1b}} 
+string {\bfseries template} = \textquotesingle{}\%(function)s(\%(expressions)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a53abe5b48b8b11bbc08827aa3511f119}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a53abe5b48b8b11bbc08827aa3511f119}} 
+string {\bfseries arg\+\_\+joiner} = \textquotesingle{}, \textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ab70ab71bfb5b6a7470a9e28103e57b3f}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ab70ab71bfb5b6a7470a9e28103e57b3f}} 
+{\bfseries arity} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An SQL function call.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a63ccae428757a4645ab1f8ebd40deec3}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a63ccae428757a4645ab1f8ebd40deec3}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{expressions,  }\item[{}]{output\+\_\+field = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_left_aa59d5bb9c9a604b6552cb49e046c5d2c}{django.\+db.\+models.\+functions.\+text.\+Left}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1text_1_1_substr_a4b245d5d9bf4d0875b3eb22794458d66}{django.\+db.\+models.\+functions.\+text.\+Substr}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_abc1a02ae604c1a4cbed091d822bca877}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection,  }\item[{}]{function = {\ttfamily None},  }\item[{}]{template = {\ttfamily None},  }\item[{}]{arg\+\_\+joiner = {\ttfamily None},  }\item[{$\ast$$\ast$}]{extra\+\_\+context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_a1e3dc450362441952ec060b3711b681a}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1lookups_1_1_raster_band_transform_a1741b07e75707114d7d862943d79544c}{django.\+contrib.\+gis.\+db.\+models.\+lookups.\+Raster\+Band\+Transform}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_len_transform_a58938fe07246957113dda8460195727e}{django.\+contrib.\+postgres.\+fields.\+array.\+Array\+Len\+Transform}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_index_transform_addd9ecc08c0afb97e95b06874fc6b36e}{django.\+contrib.\+postgres.\+fields.\+array.\+Index\+Transform}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_slice_transform_a271837800e81b102b5d21251fb4e1d9f}{django.\+contrib.\+postgres.\+fields.\+array.\+Slice\+Transform}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1fields_1_1hstore_1_1_key_transform_a3a66abc8c18cf4b1414e61e7650b2e84}{django.\+contrib.\+postgres.\+fields.\+hstore.\+Key\+Transform}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_extract_a8183ab134c9bc84796a4f29ed8587b9f}{django.\+db.\+models.\+functions.\+datetime.\+Extract}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_base_a2875100800e5a5268ca5dcb704e259ac}{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Base}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_aefff5a148e8819f998e594cad77aafbd}{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Date}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_time_ad162a7d20876fc727b72dea9cc158dd2}{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Time}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_a86af10d7994d4f7a535cb7476201db71}{django.\+db.\+models.\+aggregates.\+Aggregate}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_cast_a010e365ade29d50da0332d4f46b95cf0}{django.\+db.\+models.\+functions.\+comparison.\+Cast}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_collate_a9c965f74a5add5fafb33658bd56563c0}{django.\+db.\+models.\+functions.\+comparison.\+Collate}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1comparison_1_1_j_s_o_n_object_a7ea48a9164c15f6c04fa1851987b0be4}{django.\+db.\+models.\+functions.\+comparison.\+JSONObject}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1aggregates_1_1_geo_aggregate_a129bfb83cb8d965d40be63e974594fa7}{django.\+contrib.\+gis.\+db.\+models.\+aggregates.\+Geo\+Aggregate}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a20b770d5d88a5d8d2c6b3f60feb66e07}{django.\+contrib.\+postgres.\+search.\+Search\+Vector}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_query_a08057a93d8da31c23329543b1d429539}{django.\+contrib.\+postgres.\+search.\+Search\+Query}}, and \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_headline_a7b036484282edf2b56f64572a2b6dae0}{django.\+contrib.\+postgres.\+search.\+Search\+Headline}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a46db61ba5b52127f08d7efb8b7d1ddd2}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a46db61ba5b52127f08d7efb8b7d1ddd2}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!copy@{copy}}
+\index{copy@{copy}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+copy (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_aba6fe854ceb43261d1e8270b9f488151}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_aba6fe854ceb43261d1e8270b9f488151}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!get\_source\_expressions@{get\_source\_expressions}}
+\index{get\_source\_expressions@{get\_source\_expressions}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{get\_source\_expressions()}{get\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+get\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ad831ab3b8c4ec8e2c9ea0353d6790d38}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_ad831ab3b8c4ec8e2c9ea0353d6790d38}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!resolve\_expression@{resolve\_expression}}
+\index{resolve\_expression@{resolve\_expression}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{resolve\_expression()}{resolve\_expression()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+resolve\+\_\+expression (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{query = {\ttfamily None},  }\item[{}]{allow\+\_\+joins = {\ttfamily True},  }\item[{}]{reuse = {\ttfamily None},  }\item[{}]{summarize = {\ttfamily False},  }\item[{}]{for\+\_\+save = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provide the chance to do any preprocessing or validation before being
+added to the query.
+
+Arguments:
+ * query: the backend query implementation
+ * allow_joins: boolean allowing or denying use of joins
+   in this query
+ * reuse: a set of reusable joins for multijoins
+ * summarize: a terminal aggregate clause
+ * for_save: whether this expression about to be used in a save or update
+
+Return: an Expression to be added to the query.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression_aa13750acce26e49830dd7f797f938bdc}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1aggregates_1_1_geo_aggregate_aff28d2e0df62eacfdda3a13cc42929ca}{django.\+contrib.\+gis.\+db.\+models.\+aggregates.\+Geo\+Aggregate}}, \mbox{\hyperlink{classdjango_1_1contrib_1_1postgres_1_1search_1_1_search_vector_a85b56d98effffcc5ae139d1cf5a087c7}{django.\+contrib.\+postgres.\+search.\+Search\+Vector}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1aggregates_1_1_aggregate_af01f19f273c47ee8225d50465a384703}{django.\+db.\+models.\+aggregates.\+Aggregate}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_extract_aeb6d39c09f71cfc98e3cf85592d805ed}{django.\+db.\+models.\+functions.\+datetime.\+Extract}}, \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_base_a313ec0958f1c6b0b2f19349e7c5b6ae7}{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Base}}, and \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1indexes_1_1_index_expression_ae39ac90454fba3ff53ac2d342cd5feea}{django.\+db.\+models.\+indexes.\+Index\+Expression}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a110ccdcccc62bee9e010b41a511cbf36}\label{classdjango_1_1db_1_1models_1_1expressions_1_1_func_a110ccdcccc62bee9e010b41a511cbf36}} 
+\index{django.db.models.expressions.Func@{django.db.models.expressions.Func}!set\_source\_expressions@{set\_source\_expressions}}
+\index{set\_source\_expressions@{set\_source\_expressions}!django.db.models.expressions.Func@{django.db.models.expressions.Func}}
+\doxysubsubsection{\texorpdfstring{set\_source\_expressions()}{set\_source\_expressions()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+expressions.\+Func.\+set\+\_\+source\+\_\+expressions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exprs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression}{django.\+db.\+models.\+expressions.\+Base\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/expressions.\+py\end{DoxyCompactItemize}

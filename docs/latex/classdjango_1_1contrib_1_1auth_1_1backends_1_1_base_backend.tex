@@ -1,0 +1,62 @@
+\hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend}{}\doxysection{django.\+contrib.\+auth.\+backends.\+Base\+Backend Class Reference}
+\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend}\index{django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}}
+
+
+Inheritance diagram for django.\+contrib.\+auth.\+backends.\+Base\+Backend\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_a63dcd7c413039acbf338e6d7241f20aa}{authenticate}} (self, request, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_ab935553523a74e6f5ddb761220815558}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_ab935553523a74e6f5ddb761220815558}} 
+def {\bfseries get\+\_\+user} (self, user\+\_\+id)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_abbed0513a3797976367c5cf6502c7e67}{get\+\_\+user\+\_\+permissions}} (self, user\+\_\+obj, obj=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_adec4f038529c25782257c583f180cdda}{get\+\_\+group\+\_\+permissions}} (self, user\+\_\+obj, obj=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_ae4c84a2a4c6ed03801bbbe949d5c5806}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_ae4c84a2a4c6ed03801bbbe949d5c5806}} 
+def {\bfseries get\+\_\+all\+\_\+permissions} (self, user\+\_\+obj, obj=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_a032ceb97032261fa07639c7fc83600a4}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_a032ceb97032261fa07639c7fc83600a4}} 
+def {\bfseries has\+\_\+perm} (self, user\+\_\+obj, perm, obj=None)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_a63dcd7c413039acbf338e6d7241f20aa}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_a63dcd7c413039acbf338e6d7241f20aa}} 
+\index{django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+backends.\+Base\+Backend.\+authenticate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{request,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_remote_user_backend_ac8cf8664a101ff979ca3d3c4ff6f7bc7}{django.\+contrib.\+auth.\+backends.\+Remote\+User\+Backend}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_adec4f038529c25782257c583f180cdda}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_adec4f038529c25782257c583f180cdda}} 
+\index{django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}!get\_group\_permissions@{get\_group\_permissions}}
+\index{get\_group\_permissions@{get\_group\_permissions}!django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}}
+\doxysubsubsection{\texorpdfstring{get\_group\_permissions()}{get\_group\_permissions()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+backends.\+Base\+Backend.\+get\+\_\+group\+\_\+permissions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user\+\_\+obj,  }\item[{}]{obj = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_model_backend_aaa64689bb804ed118d4a4a84971ca62a}{django.\+contrib.\+auth.\+backends.\+Model\+Backend}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_abbed0513a3797976367c5cf6502c7e67}\label{classdjango_1_1contrib_1_1auth_1_1backends_1_1_base_backend_abbed0513a3797976367c5cf6502c7e67}} 
+\index{django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}!get\_user\_permissions@{get\_user\_permissions}}
+\index{get\_user\_permissions@{get\_user\_permissions}!django.contrib.auth.backends.BaseBackend@{django.contrib.auth.backends.BaseBackend}}
+\doxysubsubsection{\texorpdfstring{get\_user\_permissions()}{get\_user\_permissions()}}
+{\footnotesize\ttfamily def django.\+contrib.\+auth.\+backends.\+Base\+Backend.\+get\+\_\+user\+\_\+permissions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user\+\_\+obj,  }\item[{}]{obj = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1backends_1_1_model_backend_a4fd27154416352bef1edfc9e168d3fd7}{django.\+contrib.\+auth.\+backends.\+Model\+Backend}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/auth/backends.\+py\end{DoxyCompactItemize}

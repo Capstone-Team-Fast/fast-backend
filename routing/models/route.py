@@ -1,159 +1,199 @@
 import copy
+import json
 import os
 import sys
 from collections import deque
 from datetime import datetime
 
-from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, IntegerProperty
+from neomodel import StructuredNode, RelationshipTo, FloatProperty, DateTimeProperty, UniqueIdProperty, One, \
+    DoesNotExist
 
-working_dir = os.path.abspath(os.path.join('.'))
-if working_dir not in sys.path:
-    sys.path.append(working_dir)
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
-from routing.managers import LocationManager
-from routing.models.location import Location, Pair
+from routing import constant
+from routing.models.location import Pair, Location
 from routing.exceptions import EmptyRouteException, RouteStateException
 
 
 class Route(StructuredNode):
-    id = IntegerProperty()
-    total_quantity = FloatProperty(index=True)
-    total_distance = FloatProperty(index=True)
-    total_duration = FloatProperty(index=True)
-    created_on = DateTimeProperty(default=datetime.now)
+    uid = UniqueIdProperty()
+    __quantity = FloatProperty(index=True, default=None)
+    __distance = FloatProperty(index=True, default=None)
+    __duration = FloatProperty(index=True, default=None)
+    __created_on = DateTimeProperty(default=datetime.now)
 
-    assigned_to = RelationshipTo('routing.models.driver.Driver', 'ASSIGNED_TO')
+    assigned_to = RelationshipTo(cls_name='routing.models.driver.Driver', rel_type='ASSIGNED_TO', cardinality=One)
 
     def __init__(self, *args, **kwargs):
         super(Route, self).__init__(*args, **kwargs)
-        self.locations_queue: deque = deque()
-        self.total_quantity: float = 0
-        self.total_duration: float = 0
-        self.total_distance: float = 0
-        self.is_open: bool = True
-        self.departure = None
-        self.stop = None
-        self.tail = None
+        self.__locations_queue: deque = deque()
+        self.__total_duration: float = 0
+        self.__total_distance: float = 0
+        self.__total_quantity: float = 0
+        self.__is_open: bool = True
+        self.__departure = None
+        self.__stop = None
+        self.__tail = None
 
     @property
-    def previous(self):
-        return self.locations_queue[-1] if len(self.locations_queue) > 0 else None
+    def driver(self):
+        try:
+            return self.assigned_to.get()
+        except DoesNotExist:
+            return None
+
+    @property
+    def is_open(self) -> bool:
+        return self.__is_open
+
+    @property
+    def departure(self) -> Location:
+        return self.__departure
+
+    @property
+    def last_stop(self) -> Location:
+        return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
+
+    @property
+    def previous(self) -> Location:
+        return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
+
+    @property
+    def total_distance(self) -> float:
+        return self.__total_distance
+
+    @property
+    def total_duration(self) -> float:
+        return self.__total_duration
+
+    @property
+    def total_demand(self) -> float:
+        return self.__total_quantity
+
+    @property
+    def created_on(self):
+        return self.__created_on
+
+    @property
+    def is_empty(self):
+        return len(self.__locations_queue) == 0 or len(self.__locations_queue) == 1
+
+    @property
+    def itinerary(self):
+        return list(self.__locations_queue)
+
+    def set_departure(self, departure: Location):
+        self.__departure = copy.deepcopy(departure)
 
     def add(self, location: Location, pair: Pair) -> bool:
         """
         Add a location to route based on insertion rules. Return True is addition was successful, otherwise,
         return False
         """
-        if self.is_open:
-            print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mState:\033[0m {}'
-                  .format(location, location.demand, location.is_assigned))
-            if len(self.locations_queue) == 0:
-                if self.departure is None:
+        if pair and self.__is_open:
+            if len(self.__locations_queue) == 0:
+                if self.__departure is None:
                     raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-                self.locations_queue.append(self.departure)
-                self.departure.is_assigned = True
-                self.tail = self.departure
-            if (location is not None) and (not location.is_assigned):
-                if (
-                        (
-                                pair.is_first(location) or pair.is_last(location)
-                        )
-                        and
-                        (
-                                pair.first not in self.locations_queue and pair.last not in self.locations_queue
-                        )
-                ):
-                    self.insert_front(location=location)
-                elif pair.is_first(location):
-                    print(f'Location {location} is first and head is {self.departure.next}')
-                    if self.is_exterior(pair.last):
+                self.__locations_queue.append(self.__departure)
+                # self.departure.is_assigned = True
+                self.__tail = self.__departure
+            if location and (not location.is_assigned):
+                if len(self.__locations_queue) == 1:
+                    self.__insert_front(location=location)
+                elif pair.is_first(location) and not pair.first.is_assigned:
+                    print(f'Location {location} is first and head is {self.__departure.next}')
+                    if self.__is_exterior(pair.last):
                         print(f'Location {pair.last} is exterior')
-                        if pair.last == self.departure.next:
-                            if self.departure.next.next is None:
-                                self.insert_front(location)
+                        if pair.last == self.__departure.next:
+                            if self.__departure.next.next is None:
+                                self.__insert_front(location)
                                 print(f'Inserting {location} to the front')
                             else:
-                                self.insert_back(location=location)
+                                self.__insert_back(location=location)
                                 print(f'Inserting {location} to the back')
-                        elif pair.last == self.tail:
-                            self.insert_front(location=location)
+                        elif pair.last == self.__tail:
+                            self.__insert_front(location=location)
                             print(f'Inserting {location} to the front')
-                elif pair.is_last(location):
-                    print(f'Location {location} is last and tail is {self.tail}')
-                    if self.is_exterior(pair.first):
+                elif pair.is_last(location) and not pair.last.is_assigned:
+                    print(f'Location {location} is last and tail is {self.__tail}')
+                    if self.__is_exterior(pair.first):
                         print(f'Location {pair.first} is exterior')
-                        if pair.first == self.departure.next:
-                            if self.departure.next.next is None:
-                                self.insert_front(location)
+                        if pair.first == self.__departure.next:
+                            if self.__departure.next.next is None:
+                                self.__insert_front(location)
                                 print(f'Inserting {location} to the front')
                             else:
-                                self.insert_back(location)
+                                self.__insert_back(location)
                                 print(f'Inserting {location} to the back')
-                        elif pair.first == self.tail:
-                            self.insert_front(location)
+                        elif pair.first == self.__tail:
+                            self.__insert_front(location)
                             print(f'Inserting {location} to the front')
+                print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mAssigned:\033[0m {}'
+                      .format(location, location.demand, location.is_assigned))
                 print('\t\t\t\033[1mLocations: \033[0m {}'.format(self))
                 return True
             else:
-                print(f'{location} is already assigned.')
-            if self.previous == self.departure:
+                if location:
+                    print(f'{location} is already assigned.')
+            if self.previous == self.__departure:
                 self.undo()
         return False if location is None else location.is_assigned
 
-    def insert_front(self, location: Location):
+    def __insert_front(self, location: Location):
         """Inserts this location at the beginning of this route.
 
         This location is inserted after the departure.
         """
-        if len(self.locations_queue) == 0 or self.departure is None:
+        if len(self.__locations_queue) == 0 or self.__departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         else:
-            self.total_duration += LocationManager.get_duration(location1=self.tail, location2=location)
-            self.total_distance += LocationManager.get_distance(location1=self.tail, location2=location)
-            self.total_quantity += location.demand
+            self.__total_duration += self.__tail.duration(other=location)
+            self.__total_distance += self.__tail.distance(other=location)
+            self.__total_quantity += location.demand
 
-            if len(self.locations_queue) == 1:
-                self.departure.next = location
-                location.previous = self.departure
+            if len(self.__locations_queue) == 1:
+                self.__departure.next = location
+                location.previous = self.__departure
             else:
-                location.previous = self.tail
-                self.tail.next = location
-            self.tail = location
-            self.locations_queue.append(location)
+                location.previous = self.__tail
+                self.__tail.next = location
+            self.__tail = location
+            self.__locations_queue.append(location)
             location.is_assigned = True
 
-    def insert_back(self, location: Location):
+    def __insert_back(self, location: Location):
         """Insert this location at the end of this route."""
-        if len(self.locations_queue) == 0 or self.departure is None:
+        if len(self.__locations_queue) == 0 or self.__departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
-        elif len(self.locations_queue) == 1:
+        elif len(self.__locations_queue) == 1:
             raise RouteStateException('No insertion can\'t be made on the rear.')
         else:
-            self.total_duration = (
-                    self.total_duration
-                    - LocationManager.get_duration(location1=self.departure, location2=self.departure.next)
-                    + LocationManager.get_duration(self.departure, location)
-                    + LocationManager.get_duration(location, self.departure.next)
+            self.__total_duration = (
+                    self.__total_duration
+                    - self.__departure.duration(self.__departure.next)
+                    + self.__departure.duration(location)
+                    + self.__departure.next.duration(location)
             )
-            self.total_distance = (
-                    self.total_distance
-                    - LocationManager.get_distance(location1=self.departure, location2=self.departure.next)
-                    + LocationManager.get_distance(self.departure, location)
-                    + LocationManager.get_distance(location, self.departure.next)
+            self.__total_distance = (
+                    self.__total_distance
+                    - self.__departure.distance(self.__departure.next)
+                    + self.__departure.distance(location)
+                    + self.__departure.next.distance(location)
             )
-            self.total_quantity += location.demand
-            location.next = self.departure.next
-            self.departure.next.previous = location
-            location.previous = self.departure
-            self.departure.next = location
-            self.locations_queue.append(location)
+            self.__total_quantity += location.demand
+            location.next = self.__departure.next
+            self.__departure.next.previous = location
+            location.previous = self.__departure
+            self.__departure.next = location
+            self.__locations_queue.append(location)
             location.is_assigned = True
 
-    def is_exterior(self, location: Location):
-        if len(self.locations_queue) == 0:
+    def __is_exterior(self, location: Location):
+        if len(self.__locations_queue) == 0:
             raise EmptyRouteException('This route is empty')
 
-        return self.departure.next == location or self.tail == location
+        return self.__departure.next == location or self.__tail == location
 
     def undo(self):
         """Removes last inserted location.
@@ -161,76 +201,76 @@ class Route(StructuredNode):
         The last inserted location is the last entry in the deque. It is either the head or the tail of the route.
         """
         if self.previous is not None:
-            last_inserted = self.locations_queue.pop()
-            if last_inserted == self.departure:
-                self.locations_queue.append(last_inserted)
-                self.total_quantity = 0
-                self.total_duration = 0
-                self.total_distance = 0
+            last_inserted = self.__locations_queue.pop()
+            if last_inserted == self.__departure:
+                self.__locations_queue.append(last_inserted)
+                self.__total_quantity = 0
+                self.__total_duration = 0
+                self.__total_distance = 0
+                self.__tail = self.__departure
             else:
-                if last_inserted == self.departure.next:
-                    last_inserted.previous.next = last_inserted.next
-                    last_inserted.next.previous = last_inserted.previous
+                if last_inserted == self.__departure.next:
+                    self.__total_duration -= self.__departure.duration(last_inserted)
+                    self.__total_distance -= self.__departure.distance(last_inserted)
 
-                    self.total_duration = (
-                            self.total_duration - LocationManager.get_duration(self.departure, last_inserted)
-                            - LocationManager.get_duration(last_inserted, self.departure.next)
-                            + LocationManager.get_duration(self.departure, self.departure.next)
-                    )
+                    if last_inserted.next:
+                        self.__total_duration = (
+                                self.__total_duration
+                                - last_inserted.duration(last_inserted.next)
+                                + self.__departure.duration(last_inserted.next)
+                        )
+                        self.__total_distance = (
+                                self.__total_distance
+                                - last_inserted.distance(last_inserted.next)
+                                + self.__departure.distance(last_inserted.next)
+                        )
 
-                    self.total_distance = (
-                            self.total_distance - LocationManager.get_distance(self.departure, last_inserted)
-                            - LocationManager.get_distance(last_inserted, self.departure.next)
-                            + LocationManager.get_distance(self.departure, self.departure.next)
-                    )
-                elif last_inserted == self.tail:
+                        last_inserted.next.previous = last_inserted.previous
                     last_inserted.previous.next = last_inserted.next
-                    self.tail = last_inserted.previous
+                elif last_inserted == self.__tail:
+                    last_inserted.previous.next = last_inserted.next
 
                     # Adjust route distance and duration
-                    self.total_duration = (
-                            self.total_duration - LocationManager.get_duration(self.previous, last_inserted)
+                    self.__total_duration = (
+                            self.__total_duration - self.previous.duration(last_inserted)
                     )
-                    self.total_distance = (
-                            self.total_distance - LocationManager.get_distance(self.previous, last_inserted)
+                    self.__total_distance = (
+                            self.__total_distance - self.previous.distance(last_inserted)
                     )
-                self.total_quantity -= last_inserted.demand
+                self.__total_quantity -= last_inserted.demand
+                self.__tail = last_inserted.previous
                 last_inserted.is_assigned = False
 
-    def last_location(self) -> Location:
-        return self.locations_queue[-1] if len(self.locations_queue) > 0 else None
-
     def close_route(self):
-        if self.departure not in self.locations_queue:
-            raise RouteStateException('This route does not start with the departure {}'.format(self.departure))
-        self.stop = copy.deepcopy(self.departure)
-        self.locations_queue.append(self.stop)
-        self.stop.previous = self.tail
-        self.tail.next = self.stop
-        self.stop.next = None
-        self.tail = self.stop
-        self.stop.is_assigned = True
-        self.is_open = False
-        self.total_duration += LocationManager.get_duration(self.tail, self.stop)
-        self.total_distance += LocationManager.get_distance(self.tail, self.stop)
+        if self.__departure and self.__departure.next is None:
+            self.__locations_queue = deque()
+            self.__departure = None
+        elif self.__is_open:
+            self.__stop = copy.deepcopy(self.__departure)
+            self.__locations_queue.append(self.__stop)
+            self.__stop.previous = self.__tail
+            self.__tail.next = self.__stop
+            self.__stop.next = None
+            self.__tail = self.__stop
+            self.__stop.is_assigned = True
+            self.__is_open = False
+            self.__total_duration += self.__tail.duration(self.__stop)
+            self.__total_distance += self.__tail.distance(self.__stop)
 
-    def get_total_distance(self):
-        return self.total_distance
+    def set_total_distance(self):
+        self.__distance = self.total_distance
 
-    def get_total_duration(self):
-        return self.total_duration
+    def set_total_duration(self):
+        self.__duration = self.total_duration
 
-    def get_total_demand(self):
-        return self.total_quantity
-
-    def get_created_on(self):
-        return self.created_on
+    def set_total_demand(self):
+        self.__quantity = self.total_demand
 
     def __len__(self):
-        return len(self.locations_queue)
+        return len(self.__locations_queue)
 
     def __str__(self):
-        location = self.departure
+        location = self.__departure
         path = ''
         while location:
             if location.next:
@@ -244,11 +284,37 @@ class Route(StructuredNode):
         if not isinstance(other, type(self)):
             return NotImplemented
 
-        if len(self.locations_queue) != len(other.locations_queue):
+        if len(self.__locations_queue) != len(other.__locations_queue):
             return False
 
-        for index in range(len(self.locations_queue)):
-            if self.locations_queue[index] != other.locations_queue[index]:
+        for index in range(len(self.__locations_queue)):
+            if self.__locations_queue[index] != other.__locations_queue[index]:
                 return False
 
         return True
+
+    def serialize(self):
+        itinerary = []
+        if not self.is_empty:
+            for stop in self.__locations_queue:
+                itinerary.append(json.loads(stop.serialize()))
+
+        if self.driver:
+            driver = json.loads(self.driver.serialize())
+        else:
+            driver = None
+
+        obj = json.dumps({
+            "id": self.id,
+            "created_on": self.__created_on.strftime(constant.DATETIME_FORMAT),
+            "total_quantity": self.__total_quantity,
+            "total_distance": self.__total_distance,
+            "total_duration": self.__total_duration,
+            "assigned_to": driver,
+            "itinerary": itinerary
+        })
+        return obj
+
+    @classmethod
+    def category(cls):
+        pass

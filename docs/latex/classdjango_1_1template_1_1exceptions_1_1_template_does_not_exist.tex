@@ -1,0 +1,52 @@
+\hypertarget{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist}{}\doxysection{django.\+template.\+exceptions.\+Template\+Does\+Not\+Exist Class Reference}
+\label{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist}\index{django.template.exceptions.TemplateDoesNotExist@{django.template.exceptions.TemplateDoesNotExist}}
+
+
+Inheritance diagram for django.\+template.\+exceptions.\+Template\+Does\+Not\+Exist\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+template.\+exceptions.\+Template\+Does\+Not\+Exist\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_a6c07a16a567f243fcee1902db21f5e6c}\label{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_a6c07a16a567f243fcee1902db21f5e6c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, msg, tried=None, backend=None, chain=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_afd0ea83ff6cfb6bac72e54ab146f05dc}\label{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_afd0ea83ff6cfb6bac72e54ab146f05dc}} 
+{\bfseries backend}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_a3ae2e8f32ccc5e9c7837377cde851f87}\label{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_a3ae2e8f32ccc5e9c7837377cde851f87}} 
+{\bfseries tried}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_ae2b0e881f859bef3e1783e683ce194a0}\label{classdjango_1_1template_1_1exceptions_1_1_template_does_not_exist_ae2b0e881f859bef3e1783e683ce194a0}} 
+{\bfseries chain}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The exception used when a template does not exist. Optional arguments:
+
+backend
+    The template backend class used when raising this exception.
+
+tried
+    A list of sources that were tried when finding the template. This
+    is formatted as a list of tuples containing (origin, status), where
+    origin is an Origin object or duck type and status is a string with the
+    reason the template wasn't found.
+
+chain
+    A list of intermediate TemplateDoesNotExist exceptions. This is used to
+    encapsulate multiple exceptions when loading templates from multiple
+    engines.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/exceptions.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect}{}\doxysection{django.\+contrib.\+redirects.\+models.\+Redirect Class Reference}
+\label{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect}\index{django.contrib.redirects.models.Redirect@{django.contrib.redirects.models.Redirect}}
+
+
+Inheritance diagram for django.\+contrib.\+redirects.\+models.\+Redirect\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+redirects.\+models.\+Redirect\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_ab60246eeaaf959940306e4b8af612a2c}\label{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_ab60246eeaaf959940306e4b8af612a2c}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a06991258337f3e054bd32da30c0b867d}\label{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a06991258337f3e054bd32da30c0b867d}} 
+{\bfseries site} = models.\+Foreign\+Key(\mbox{\hyperlink{classdjango_1_1contrib_1_1sites_1_1models_1_1_site}{Site}}, models.\+CASCADE, verbose\+\_\+name=\+\_\+(\textquotesingle{}site\textquotesingle{}))
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a0ef2f9976caa94d83d33a626dee56002}{old\+\_\+path}}
+\item 
+\mbox{\hyperlink{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a83d8dc93ef85aaebf76667c87c5691e3}{new\+\_\+path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a83d8dc93ef85aaebf76667c87c5691e3}\label{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a83d8dc93ef85aaebf76667c87c5691e3}} 
+\index{django.contrib.redirects.models.Redirect@{django.contrib.redirects.models.Redirect}!new\_path@{new\_path}}
+\index{new\_path@{new\_path}!django.contrib.redirects.models.Redirect@{django.contrib.redirects.models.Redirect}}
+\doxysubsubsection{\texorpdfstring{new\_path}{new\_path}}
+{\footnotesize\ttfamily django.\+contrib.\+redirects.\+models.\+Redirect.\+new\+\_\+path\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.CharField(}
+\DoxyCodeLine{        \_(\textcolor{stringliteral}{'redirect to'}),}
+\DoxyCodeLine{        max\_length=200,}
+\DoxyCodeLine{        blank=\textcolor{keyword}{True},}
+\DoxyCodeLine{        help\_text=\_(}
+\DoxyCodeLine{            \textcolor{stringliteral}{'This can be either an absolute path (as above) or a full URL '}}
+\DoxyCodeLine{            \textcolor{stringliteral}{'starting with a scheme such as “https://”.'}}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a0ef2f9976caa94d83d33a626dee56002}\label{classdjango_1_1contrib_1_1redirects_1_1models_1_1_redirect_a0ef2f9976caa94d83d33a626dee56002}} 
+\index{django.contrib.redirects.models.Redirect@{django.contrib.redirects.models.Redirect}!old\_path@{old\_path}}
+\index{old\_path@{old\_path}!django.contrib.redirects.models.Redirect@{django.contrib.redirects.models.Redirect}}
+\doxysubsubsection{\texorpdfstring{old\_path}{old\_path}}
+{\footnotesize\ttfamily django.\+contrib.\+redirects.\+models.\+Redirect.\+old\+\_\+path\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  models.CharField(}
+\DoxyCodeLine{        \_(\textcolor{stringliteral}{'redirect from'}),}
+\DoxyCodeLine{        max\_length=200,}
+\DoxyCodeLine{        db\_index=\textcolor{keyword}{True},}
+\DoxyCodeLine{        help\_text=\_(\textcolor{stringliteral}{'This should be an absolute path, excluding the domain name. Example: “/events/search/”.'}),}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/redirects/models.\+py\end{DoxyCompactItemize}

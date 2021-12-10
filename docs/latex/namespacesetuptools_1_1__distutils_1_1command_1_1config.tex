@@ -1,0 +1,45 @@
+\hypertarget{namespacesetuptools_1_1__distutils_1_1command_1_1config}{}\doxysection{setuptools.\+\_\+distutils.\+command.\+config Namespace Reference}
+\label{namespacesetuptools_1_1__distutils_1_1command_1_1config}\index{setuptools.\_distutils.command.config@{setuptools.\_distutils.command.config}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsetuptools_1_1__distutils_1_1command_1_1config_1_1config}{config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacesetuptools_1_1__distutils_1_1command_1_1config_a14d629feb642a36dfbbca61817af59a2}{dump\+\_\+file}} (filename, head=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1command_1_1config_a4d5a8b0f2b4af26efa668e723bec19a9}\label{namespacesetuptools_1_1__distutils_1_1command_1_1config_a4d5a8b0f2b4af26efa668e723bec19a9}} 
+dictionary {\bfseries LANG\+\_\+\+EXT} = \{\char`\"{}c\char`\"{}\+: \char`\"{}.c\char`\"{}, \char`\"{}c++\char`\"{}\+: \char`\"{}.cxx\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}distutils.command.config
+
+Implements the Distutils 'config' command, a (mostly) empty command class
+that exists mainly to be sub-classed by specific module distributions and
+applications.  The idea is that while every "config" command is different,
+at least they're all named the same, and users always see "config" in the
+list of standard commands.  Also, this is a good place to put common
+configure-like tasks: "try to compile this C code", or "figure out where
+this header file lives".
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesetuptools_1_1__distutils_1_1command_1_1config_a14d629feb642a36dfbbca61817af59a2}\label{namespacesetuptools_1_1__distutils_1_1command_1_1config_a14d629feb642a36dfbbca61817af59a2}} 
+\index{setuptools.\_distutils.command.config@{setuptools.\_distutils.command.config}!dump\_file@{dump\_file}}
+\index{dump\_file@{dump\_file}!setuptools.\_distutils.command.config@{setuptools.\_distutils.command.config}}
+\doxysubsubsection{\texorpdfstring{dump\_file()}{dump\_file()}}
+{\footnotesize\ttfamily def setuptools.\+\_\+distutils.\+command.\+config.\+dump\+\_\+file (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{head = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dumps a file content into log.info.
+
+If head is not None, will be dumped before the file content.
+\end{DoxyVerb}
+ 

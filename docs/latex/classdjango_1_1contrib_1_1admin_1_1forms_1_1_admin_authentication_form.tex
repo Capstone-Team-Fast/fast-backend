@@ -1,0 +1,76 @@
+\hypertarget{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form}{}\doxysection{django.\+contrib.\+admin.\+forms.\+Admin\+Authentication\+Form Class Reference}
+\label{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form}\index{django.contrib.admin.forms.AdminAuthenticationForm@{django.contrib.admin.forms.AdminAuthenticationForm}}
+
+
+Inheritance diagram for django.\+contrib.\+admin.\+forms.\+Admin\+Authentication\+Form\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+admin.\+forms.\+Admin\+Authentication\+Form\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_ac34a3509d4259931eb33fd8b4503b81e}{confirm\+\_\+login\+\_\+allowed}} (self, user)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_af344334bfdbe923a6485c87dafcfd3a3}{error\+\_\+messages}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_a196ef40c25a4a9e6f30416ea4376b685}\label{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_a196ef40c25a4a9e6f30416ea4376b685}} 
+string {\bfseries required\+\_\+css\+\_\+class} = \textquotesingle{}required\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A custom authentication form used in the admin app.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_ac34a3509d4259931eb33fd8b4503b81e}\label{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_ac34a3509d4259931eb33fd8b4503b81e}} 
+\index{django.contrib.admin.forms.AdminAuthenticationForm@{django.contrib.admin.forms.AdminAuthenticationForm}!confirm\_login\_allowed@{confirm\_login\_allowed}}
+\index{confirm\_login\_allowed@{confirm\_login\_allowed}!django.contrib.admin.forms.AdminAuthenticationForm@{django.contrib.admin.forms.AdminAuthenticationForm}}
+\doxysubsubsection{\texorpdfstring{confirm\_login\_allowed()}{confirm\_login\_allowed()}}
+{\footnotesize\ttfamily def django.\+contrib.\+admin.\+forms.\+Admin\+Authentication\+Form.\+confirm\+\_\+login\+\_\+allowed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controls whether the given User may log in. This is a policy setting,
+independent of end-user authentication. This default behavior is to
+allow login by active users, and reject login by inactive users.
+
+If the given user cannot log in, this method should raise a
+``ValidationError``.
+
+If the given user may log in, this method should return None.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1contrib_1_1auth_1_1forms_1_1_authentication_form_ab6ff6af31835bca7456c853853931809}{django.\+contrib.\+auth.\+forms.\+Authentication\+Form}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_af344334bfdbe923a6485c87dafcfd3a3}\label{classdjango_1_1contrib_1_1admin_1_1forms_1_1_admin_authentication_form_af344334bfdbe923a6485c87dafcfd3a3}} 
+\index{django.contrib.admin.forms.AdminAuthenticationForm@{django.contrib.admin.forms.AdminAuthenticationForm}!error\_messages@{error\_messages}}
+\index{error\_messages@{error\_messages}!django.contrib.admin.forms.AdminAuthenticationForm@{django.contrib.admin.forms.AdminAuthenticationForm}}
+\doxysubsubsection{\texorpdfstring{error\_messages}{error\_messages}}
+{\footnotesize\ttfamily dictionary django.\+contrib.\+admin.\+forms.\+Admin\+Authentication\+Form.\+error\+\_\+messages\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        **AuthenticationForm.error\_messages,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'invalid\_login'}: \_(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}Please enter the correct \%(username)s and password for a staff "{}}}
+\DoxyCodeLine{            \textcolor{stringliteral}{"{}account. Note that both fields may be case-\/sensitive."{}}}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/admin/forms.\+py\end{DoxyCompactItemize}

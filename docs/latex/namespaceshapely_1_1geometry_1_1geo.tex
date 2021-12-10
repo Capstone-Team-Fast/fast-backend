@@ -1,0 +1,129 @@
+\hypertarget{namespaceshapely_1_1geometry_1_1geo}{}\doxysection{shapely.\+geometry.\+geo Namespace Reference}
+\label{namespaceshapely_1_1geometry_1_1geo}\index{shapely.geometry.geo@{shapely.geometry.geo}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1geometry_1_1geo_a25d4fb1c6060d768e5feb8cf73c52f41}{box}} (minx, miny, maxx, maxy, ccw=True)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1geometry_1_1geo_a56efdee4852c778f7b53b2471763860d}{shape}} (context)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1geometry_1_1geo_af6f072cb0d6071dc5b8c18fa0cc4744c}{as\+Shape}} (context)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1geometry_1_1geo_ae4b4ddcdeb0c883ccce4f7611542b45f}{mapping}} (ob)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Geometry factories based on the geo interface
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1geometry_1_1geo_af6f072cb0d6071dc5b8c18fa0cc4744c}\label{namespaceshapely_1_1geometry_1_1geo_af6f072cb0d6071dc5b8c18fa0cc4744c}} 
+\index{shapely.geometry.geo@{shapely.geometry.geo}!asShape@{asShape}}
+\index{asShape@{asShape}!shapely.geometry.geo@{shapely.geometry.geo}}
+\doxysubsubsection{\texorpdfstring{asShape()}{asShape()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+geo.\+as\+Shape (\begin{DoxyParamCaption}\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adapts the context to a geometry interface. The coordinates remain
+stored in the context, and changes to them will be reflected in the
+returned geometry object.
+
+Parameters
+----------
+context :
+    a GeoJSON-like dict, which provides a "type" member describing the type
+    of the geometry and "coordinates" member providing a list of coordinates,
+    or an object which implements __geo_interface__.
+
+Returns
+-------
+Geometry object
+
+Notes
+-----
+The Adapter classes returned by this function trade performance for
+reduced storage of coordinate values. In general, the shape() function
+should be used instead.
+
+Example
+-------
+Create a Point and Polygon from GeoJSON, change the coordinates of the Point's
+context and show that the corresponding geometry is changed, as well.
+
+>>> point_context = {'type': 'Point', 'coordinates': [0.5, 0.5]}
+>>> poly_context = {'type': 'Polygon', 'coordinates': [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]}
+>>> point, poly = asShape(point_context), asShape(poly_context)
+>>> poly.intersects(point)
+True
+>>> point_context['coordinates'][0] = 1.5
+>>> poly.intersects(point)
+False
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1geometry_1_1geo_a25d4fb1c6060d768e5feb8cf73c52f41}\label{namespaceshapely_1_1geometry_1_1geo_a25d4fb1c6060d768e5feb8cf73c52f41}} 
+\index{shapely.geometry.geo@{shapely.geometry.geo}!box@{box}}
+\index{box@{box}!shapely.geometry.geo@{shapely.geometry.geo}}
+\doxysubsubsection{\texorpdfstring{box()}{box()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+geo.\+box (\begin{DoxyParamCaption}\item[{}]{minx,  }\item[{}]{miny,  }\item[{}]{maxx,  }\item[{}]{maxy,  }\item[{}]{ccw = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a rectangular polygon with configurable normal vector\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1geometry_1_1geo_ae4b4ddcdeb0c883ccce4f7611542b45f}\label{namespaceshapely_1_1geometry_1_1geo_ae4b4ddcdeb0c883ccce4f7611542b45f}} 
+\index{shapely.geometry.geo@{shapely.geometry.geo}!mapping@{mapping}}
+\index{mapping@{mapping}!shapely.geometry.geo@{shapely.geometry.geo}}
+\doxysubsubsection{\texorpdfstring{mapping()}{mapping()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+geo.\+mapping (\begin{DoxyParamCaption}\item[{}]{ob }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a GeoJSON-like mapping from a Geometry or any
+object which implements __geo_interface__
+
+Parameters
+----------
+ob :
+    An object which implements __geo_interface__.
+
+Returns
+-------
+dict
+
+Example
+-------
+>>> pt = Point(0, 0)
+>>> mapping(p)
+{'type': 'Point', 'coordinates': (0.0, 0.0)}
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1geometry_1_1geo_a56efdee4852c778f7b53b2471763860d}\label{namespaceshapely_1_1geometry_1_1geo_a56efdee4852c778f7b53b2471763860d}} 
+\index{shapely.geometry.geo@{shapely.geometry.geo}!shape@{shape}}
+\index{shape@{shape}!shapely.geometry.geo@{shapely.geometry.geo}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily def shapely.\+geometry.\+geo.\+shape (\begin{DoxyParamCaption}\item[{}]{context }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a new, independent geometry with coordinates *copied* from the
+context. Changes to the original context will not be reflected in the
+geometry object.
+
+Parameters
+----------
+context :
+    a GeoJSON-like dict, which provides a "type" member describing the type
+    of the geometry and "coordinates" member providing a list of coordinates,
+    or an object which implements __geo_interface__.
+
+Returns
+-------
+Geometry object
+
+Example
+-------
+Create a Point from GeoJSON, and then create a copy using __geo_interface__.
+
+>>> context = {'type': 'Point', 'coordinates': [0, 1]}
+>>> geom = shape(context)
+>>> geom.type == 'Point'
+True
+>>> geom.wkt
+'POINT (0 1)'
+>>> geom2 = shape(geom)
+>>> geom == geom2
+True
+\end{DoxyVerb}
+ 

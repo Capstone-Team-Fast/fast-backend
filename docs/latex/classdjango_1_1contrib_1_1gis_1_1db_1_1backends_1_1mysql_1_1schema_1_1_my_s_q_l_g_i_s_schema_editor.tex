@@ -1,0 +1,129 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor}\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aebcec31a58d3c7ffdfea683dd663d402}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_af30cbca71cd4410ff53369d279d72d3b}{skip\+\_\+default}} (self, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a98aff062e6db3a5a0ee94aeff5abe557}{column\+\_\+sql}} (self, model, field, include\+\_\+default=False)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a831def04f7cc7012f883d1dfbddfb0ad}{create\+\_\+model}} (self, model)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a94ce85f9c5cd65e0ffde1168b8761714}{add\+\_\+field}} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aeac2b7bb24c2522a7e582486de7014bb}{remove\+\_\+field}} (self, model, field)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a94936670a023e9acac913dfdfa551f5f}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a94936670a023e9acac913dfdfa551f5f}} 
+def {\bfseries create\+\_\+spatial\+\_\+indexes} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a33ea65de2579eb48ad5df4e855d2743e}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a33ea65de2579eb48ad5df4e855d2743e}} 
+{\bfseries geometry\+\_\+sql}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_ab8f866efc06afd13cb4a26d9d332dadc}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_ab8f866efc06afd13cb4a26d9d332dadc}} 
+string {\bfseries sql\+\_\+add\+\_\+spatial\+\_\+index} = \textquotesingle{}CREATE SPATIAL INDEX \%(index)s ON \%(table)s(\%(column)s)\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a90af7b91c2f5ddfb903d578622c22ddb}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a90af7b91c2f5ddfb903d578622c22ddb}} 
+string {\bfseries sql\+\_\+drop\+\_\+spatial\+\_\+index} = \textquotesingle{}DROP INDEX \%(index)s ON \%(table)s\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aebcec31a58d3c7ffdfea683dd663d402}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aebcec31a58d3c7ffdfea683dd663d402}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a94ce85f9c5cd65e0ffde1168b8761714}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a94ce85f9c5cd65e0ffde1168b8761714}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!add\_field@{add\_field}}
+\index{add\_field@{add\_field}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{add\_field()}{add\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+add\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a field on a model. Usually involves adding a column, but may
+involve adding a table instead (for M2M fields).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1schema_1_1_database_schema_editor_aaf7a2aa1f29921bab1bcb2ad3ba19a99}{django.\+db.\+backends.\+mysql.\+schema.\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a98aff062e6db3a5a0ee94aeff5abe557}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a98aff062e6db3a5a0ee94aeff5abe557}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!column\_sql@{column\_sql}}
+\index{column\_sql@{column\_sql}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{column\_sql()}{column\_sql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+column\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field,  }\item[{}]{include\+\_\+default = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a field and return its column definition.
+The field must already have had set_attributes_from_name() called.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a3c71e3787e1a84a050554e69d3fe1fb7}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a831def04f7cc7012f883d1dfbddfb0ad}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_a831def04f7cc7012f883d1dfbddfb0ad}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!create\_model@{create\_model}}
+\index{create\_model@{create\_model}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{create\_model()}{create\_model()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+create\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a table and any accompanying indexes or unique constraints for
+the given `model`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a7150ab080c86d910615971eaa1bfef49}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aeac2b7bb24c2522a7e582486de7014bb}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_aeac2b7bb24c2522a7e582486de7014bb}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!remove\_field@{remove\_field}}
+\index{remove\_field@{remove\_field}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{remove\_field()}{remove\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+remove\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a field from a model. Usually involves deleting a column,
+but for M2Ms may involve deleting a table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a6f95ae52a38e653d923168aaed385c5c}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_af30cbca71cd4410ff53369d279d72d3b}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1mysql_1_1schema_1_1_my_s_q_l_g_i_s_schema_editor_af30cbca71cd4410ff53369d279d72d3b}} 
+\index{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}!skip\_default@{skip\_default}}
+\index{skip\_default@{skip\_default}!django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor@{django.contrib.gis.db.backends.mysql.schema.MySQLGISSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{skip\_default()}{skip\_default()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+mysql.\+schema.\+My\+SQLGISSchema\+Editor.\+skip\+\_\+default (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Some backends don't accept default values for certain columns types
+(i.e. MySQL longtext and longblob).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1mysql_1_1schema_1_1_database_schema_editor_a7ff3cf0786a0f01320bc88622247c6a8}{django.\+db.\+backends.\+mysql.\+schema.\+Database\+Schema\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/backends/mysql/schema.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement}{}\doxysection{django.\+db.\+backends.\+ddl\+\_\+references.\+Statement Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement}\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+ddl\+\_\+references.\+Statement\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+ddl\+\_\+references.\+Statement\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_aa23fffb789b64e476ee9833b2416e2a4}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_aa23fffb789b64e476ee9833b2416e2a4}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, template, $\ast$$\ast$parts)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a4f28f71e1dee36718bd74091103315c0}{references\+\_\+table}} (self, table)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af5f532dea0795a02390d434f25af17b9}{references\+\_\+column}} (self, table, column)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af54a7a28561a9445b1c6025449357474}{rename\+\_\+table\+\_\+references}} (self, old\+\_\+table, new\+\_\+table)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f4fe0f8f986c21a2c9642ccc4bcdc36}{rename\+\_\+column\+\_\+references}} (self, table, old\+\_\+column, new\+\_\+column)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f402c2ab61cbe1f8dd1383b97042d74}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a4c85ef478f88817e12485947db41e2ea}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a4c85ef478f88817e12485947db41e2ea}} 
+{\bfseries template}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a7b907f2b12caf04119ec32a9fafd3e7c}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a7b907f2b12caf04119ec32a9fafd3e7c}} 
+{\bfseries parts}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Statement template and formatting parameters container.
+
+Allows keeping a reference to a statement without interpolating identifiers
+that might have to be adjusted if they're referencing a table or column
+that is removed
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f402c2ab61cbe1f8dd1383b97042d74}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f402c2ab61cbe1f8dd1383b97042d74}} 
+\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+ddl\+\_\+references.\+Statement.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_reference}{django.\+db.\+backends.\+ddl\+\_\+references.\+Reference}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af5f532dea0795a02390d434f25af17b9}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af5f532dea0795a02390d434f25af17b9}} 
+\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}!references\_column@{references\_column}}
+\index{references\_column@{references\_column}!django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+\doxysubsubsection{\texorpdfstring{references\_column()}{references\_column()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+ddl\+\_\+references.\+Statement.\+references\+\_\+column (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table,  }\item[{}]{column }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether or not this instance references the specified column.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_reference_a8bef155297570a22a11946da4d30162f}{django.\+db.\+backends.\+ddl\+\_\+references.\+Reference}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a4f28f71e1dee36718bd74091103315c0}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a4f28f71e1dee36718bd74091103315c0}} 
+\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}!references\_table@{references\_table}}
+\index{references\_table@{references\_table}!django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+\doxysubsubsection{\texorpdfstring{references\_table()}{references\_table()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+ddl\+\_\+references.\+Statement.\+references\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return whether or not this instance references the specified table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_reference_ae4a23d8d6fdaae94a9f8b162910c8eb2}{django.\+db.\+backends.\+ddl\+\_\+references.\+Reference}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f4fe0f8f986c21a2c9642ccc4bcdc36}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_a6f4fe0f8f986c21a2c9642ccc4bcdc36}} 
+\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}!rename\_column\_references@{rename\_column\_references}}
+\index{rename\_column\_references@{rename\_column\_references}!django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+\doxysubsubsection{\texorpdfstring{rename\_column\_references()}{rename\_column\_references()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+ddl\+\_\+references.\+Statement.\+rename\+\_\+column\+\_\+references (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table,  }\item[{}]{old\+\_\+column,  }\item[{}]{new\+\_\+column }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rename all references to the old_column to the new_column.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_reference_a22a46a43a0172fad75f086c87b17b438}{django.\+db.\+backends.\+ddl\+\_\+references.\+Reference}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af54a7a28561a9445b1c6025449357474}\label{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_statement_af54a7a28561a9445b1c6025449357474}} 
+\index{django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}!rename\_table\_references@{rename\_table\_references}}
+\index{rename\_table\_references@{rename\_table\_references}!django.db.backends.ddl\_references.Statement@{django.db.backends.ddl\_references.Statement}}
+\doxysubsubsection{\texorpdfstring{rename\_table\_references()}{rename\_table\_references()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+ddl\+\_\+references.\+Statement.\+rename\+\_\+table\+\_\+references (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{old\+\_\+table,  }\item[{}]{new\+\_\+table }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rename all references to the old_name to the new_table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1ddl__references_1_1_reference_a243e143db3c77c00dd703fd58cd512ca}{django.\+db.\+backends.\+ddl\+\_\+references.\+Reference}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/ddl\+\_\+references.\+py\end{DoxyCompactItemize}

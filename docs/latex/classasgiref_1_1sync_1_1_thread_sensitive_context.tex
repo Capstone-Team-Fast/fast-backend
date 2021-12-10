@@ -1,0 +1,54 @@
+\hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context}{}\doxysection{asgiref.\+sync.\+Thread\+Sensitive\+Context Class Reference}
+\label{classasgiref_1_1sync_1_1_thread_sensitive_context}\index{asgiref.sync.ThreadSensitiveContext@{asgiref.sync.ThreadSensitiveContext}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_acfd6df5a002ab5a1d22143a18bdb7de4}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_acfd6df5a002ab5a1d22143a18bdb7de4}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_a0c7fa4de033ac1aadf26fc577e62959d}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_a0c7fa4de033ac1aadf26fc577e62959d}} 
+def {\bfseries \+\_\+\+\_\+aenter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_a6506a4458664ceb938a92f4fe8999f04}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_a6506a4458664ceb938a92f4fe8999f04}} 
+def {\bfseries \+\_\+\+\_\+aexit\+\_\+\+\_\+} (self, exc, value, tb)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_a0c7fa4de033ac1aadf26fc577e62959d}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_a0c7fa4de033ac1aadf26fc577e62959d}} 
+def {\bfseries \+\_\+\+\_\+aenter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_a6506a4458664ceb938a92f4fe8999f04}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_a6506a4458664ceb938a92f4fe8999f04}} 
+def {\bfseries \+\_\+\+\_\+aexit\+\_\+\+\_\+} (self, exc, value, tb)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classasgiref_1_1sync_1_1_thread_sensitive_context_af4d5aa71c80f7569cf9ff8ae0be1f384}\label{classasgiref_1_1sync_1_1_thread_sensitive_context_af4d5aa71c80f7569cf9ff8ae0be1f384}} 
+{\bfseries token}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Async context manager to manage context for thread sensitive mode
+
+This context manager controls which thread pool executor is used when in
+thread sensitive mode. By default, a single thread pool executor is shared
+within a process.
+
+In Python 3.7+, the ThreadSensitiveContext() context manager may be used to
+specify a thread pool per context.
+
+In Python 3.6, usage of this context manager has no effect.
+
+This context manager is re-entrant, so only the outer-most call to
+ThreadSensitiveContext will set the context.
+
+Usage:
+
+>>> import time
+>>> async with ThreadSensitiveContext():
+...     await sync_to_async(time.sleep, 1)()
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/asgiref/sync.\+py\end{DoxyCompactItemize}

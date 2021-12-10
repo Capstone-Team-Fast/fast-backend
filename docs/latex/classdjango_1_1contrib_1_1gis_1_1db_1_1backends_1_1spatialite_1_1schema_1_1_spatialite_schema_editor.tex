@@ -1,0 +1,218 @@
+\hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor}{}\doxysection{django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor Class Reference}
+\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor}\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+
+
+Inheritance diagram for django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a67f1ff1b6cec4f00615fbc43bd6a7956}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ac9beb282a60efcfe9ba60c061a0b0504}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ac9beb282a60efcfe9ba60c061a0b0504}} 
+def {\bfseries geo\+\_\+quote\+\_\+name} (self, name)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a0421b7e77616a121487fd068d53ee024}{column\+\_\+sql}} (self, model, field, include\+\_\+default=False)
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a88c6323321ff9055088977172c3e2254}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a88c6323321ff9055088977172c3e2254}} 
+def {\bfseries remove\+\_\+geometry\+\_\+metadata} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_afe72784dbd83f11f480baa347e690370}{create\+\_\+model}} (self, model)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a6b9280bdda8121896811437f1457bf89}{delete\+\_\+model}} (self, model, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_abb80ee8b31babcd12964eee5f00210e8}{add\+\_\+field}} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ae704facf1353d9f9d66ccaf943f660b9}{remove\+\_\+field}} (self, model, field)
+\item 
+def \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa633662c58f852bcf5fbe971a6a3ca2a}{alter\+\_\+db\+\_\+table}} (self, model, old\+\_\+db\+\_\+table, new\+\_\+db\+\_\+table, disable\+\_\+constraints=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a1e6a1a5ccc216e9b61450d3e59eac112}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a1e6a1a5ccc216e9b61450d3e59eac112}} 
+{\bfseries geometry\+\_\+sql}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a872951a7cf39a068970af7c0781945ea}{sql\+\_\+add\+\_\+geometry\+\_\+column}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ad39c7d94ba7fe8fa4f197c9cab8827ad}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ad39c7d94ba7fe8fa4f197c9cab8827ad}} 
+string {\bfseries sql\+\_\+add\+\_\+spatial\+\_\+index} = \char`\"{}SELECT Create\+Spatial\+Index(\%(table)s, \%(column)s)\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a617a1a55855fcecdf2c7eacc7eb59855}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a617a1a55855fcecdf2c7eacc7eb59855}} 
+string {\bfseries sql\+\_\+drop\+\_\+spatial\+\_\+index} = \char`\"{}DROP TABLE idx\+\_\+\%(table)s\+\_\+\%(column)s\char`\"{}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa992f23e18f646bbc1f8326298269a38}{sql\+\_\+recover\+\_\+geometry\+\_\+metadata}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a4786d5f186583637e2456d176e5227b1}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a4786d5f186583637e2456d176e5227b1}} 
+string {\bfseries sql\+\_\+remove\+\_\+geometry\+\_\+metadata} = \char`\"{}SELECT Discard\+Geometry\+Column(\%(table)s, \%(column)s)\char`\"{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a5fff8c568bd495c56c96342b7c972cde}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a5fff8c568bd495c56c96342b7c972cde}} 
+string {\bfseries sql\+\_\+discard\+\_\+geometry\+\_\+columns} = \char`\"{}DELETE FROM \%(geom\+\_\+table)s WHERE f\+\_\+table\+\_\+name = \%(table)s\char`\"{}
+\item 
+tuple \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a81fdd79738120dfeb7a6d66ea708f1be}{sql\+\_\+update\+\_\+geometry\+\_\+columns}}
+\item 
+list \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa9769069f0469b84fdfcd1deb9a4661e}{geometry\+\_\+tables}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a67f1ff1b6cec4f00615fbc43bd6a7956}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a67f1ff1b6cec4f00615fbc43bd6a7956}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_abb80ee8b31babcd12964eee5f00210e8}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_abb80ee8b31babcd12964eee5f00210e8}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!add\_field@{add\_field}}
+\index{add\_field@{add\_field}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{add\_field()}{add\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+add\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a field on a model. Usually involves adding a column, but may
+involve adding a table instead (for M2M fields).
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a9722f8978554d928cf1edf3c523fc63b}{django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa633662c58f852bcf5fbe971a6a3ca2a}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa633662c58f852bcf5fbe971a6a3ca2a}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!alter\_db\_table@{alter\_db\_table}}
+\index{alter\_db\_table@{alter\_db\_table}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{alter\_db\_table()}{alter\_db\_table()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+alter\+\_\+db\+\_\+table (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{old\+\_\+db\+\_\+table,  }\item[{}]{new\+\_\+db\+\_\+table,  }\item[{}]{disable\+\_\+constraints = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Rename the table a model points to.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_a1337bce19b2ac96ebb53132de645dd45}{django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a0421b7e77616a121487fd068d53ee024}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a0421b7e77616a121487fd068d53ee024}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!column\_sql@{column\_sql}}
+\index{column\_sql@{column\_sql}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{column\_sql()}{column\_sql()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+column\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field,  }\item[{}]{include\+\_\+default = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Take a field and return its column definition.
+The field must already have had set_attributes_from_name() called.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a3c71e3787e1a84a050554e69d3fe1fb7}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_afe72784dbd83f11f480baa347e690370}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_afe72784dbd83f11f480baa347e690370}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!create\_model@{create\_model}}
+\index{create\_model@{create\_model}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{create\_model()}{create\_model()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+create\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a table and any accompanying indexes or unique constraints for
+the given `model`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor_a7150ab080c86d910615971eaa1bfef49}{django.\+db.\+backends.\+base.\+schema.\+Base\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a6b9280bdda8121896811437f1457bf89}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a6b9280bdda8121896811437f1457bf89}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!delete\_model@{delete\_model}}
+\index{delete\_model@{delete\_model}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{delete\_model()}{delete\_model()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+delete\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Delete a model from the database.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_af8f3ffd1f32155372ae07a05aec9d00a}{django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor}}.
+
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ae704facf1353d9f9d66ccaf943f660b9}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_ae704facf1353d9f9d66ccaf943f660b9}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!remove\_field@{remove\_field}}
+\index{remove\_field@{remove\_field}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{remove\_field()}{remove\_field()}}
+{\footnotesize\ttfamily def django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+remove\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{model,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Remove a field from a model. Usually involves deleting a column,
+but for M2Ms may involve deleting a table.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor_ae22ee9d32c96a0b4655ecb64f293e39b}{django.\+db.\+backends.\+sqlite3.\+schema.\+Database\+Schema\+Editor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa9769069f0469b84fdfcd1deb9a4661e}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa9769069f0469b84fdfcd1deb9a4661e}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!geometry\_tables@{geometry\_tables}}
+\index{geometry\_tables@{geometry\_tables}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{geometry\_tables}{geometry\_tables}}
+{\footnotesize\ttfamily list django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+geometry\+\_\+tables\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}geometry\_columns"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}geometry\_columns\_auth"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}geometry\_columns\_time"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}geometry\_columns\_statistics"{}},}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a872951a7cf39a068970af7c0781945ea}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a872951a7cf39a068970af7c0781945ea}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!sql\_add\_geometry\_column@{sql\_add\_geometry\_column}}
+\index{sql\_add\_geometry\_column@{sql\_add\_geometry\_column}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{sql\_add\_geometry\_column}{sql\_add\_geometry\_column}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+sql\+\_\+add\+\_\+geometry\+\_\+column\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}SELECT AddGeometryColumn(\%(table)s, \%(column)s, \%(srid)s, "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\%(geom\_type)s, \%(dim)s, \%(null)s)"{}}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa992f23e18f646bbc1f8326298269a38}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_aa992f23e18f646bbc1f8326298269a38}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!sql\_recover\_geometry\_metadata@{sql\_recover\_geometry\_metadata}}
+\index{sql\_recover\_geometry\_metadata@{sql\_recover\_geometry\_metadata}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{sql\_recover\_geometry\_metadata}{sql\_recover\_geometry\_metadata}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+sql\+\_\+recover\+\_\+geometry\+\_\+metadata\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}SELECT RecoverGeometryColumn(\%(table)s, \%(column)s, \%(srid)s, "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\%(geom\_type)s, \%(dim)s)"{}}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a81fdd79738120dfeb7a6d66ea708f1be}\label{classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor_a81fdd79738120dfeb7a6d66ea708f1be}} 
+\index{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}!sql\_update\_geometry\_columns@{sql\_update\_geometry\_columns}}
+\index{sql\_update\_geometry\_columns@{sql\_update\_geometry\_columns}!django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor@{django.contrib.gis.db.backends.spatialite.schema.SpatialiteSchemaEditor}}
+\doxysubsubsection{\texorpdfstring{sql\_update\_geometry\_columns}{sql\_update\_geometry\_columns}}
+{\footnotesize\ttfamily tuple django.\+contrib.\+gis.\+db.\+backends.\+spatialite.\+schema.\+Spatialite\+Schema\+Editor.\+sql\+\_\+update\+\_\+geometry\+\_\+columns\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}UPDATE \%(geom\_table)s SET f\_table\_name = \%(new\_table)s "{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}WHERE f\_table\_name = \%(old\_table)s"{}}}
+\DoxyCodeLine{    )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/contrib/gis/db/backends/spatialite/schema.\+py\end{DoxyCompactItemize}

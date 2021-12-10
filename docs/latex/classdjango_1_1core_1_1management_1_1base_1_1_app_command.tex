@@ -1,0 +1,85 @@
+\hypertarget{classdjango_1_1core_1_1management_1_1base_1_1_app_command}{}\doxysection{django.\+core.\+management.\+base.\+App\+Command Class Reference}
+\label{classdjango_1_1core_1_1management_1_1base_1_1_app_command}\index{django.core.management.base.AppCommand@{django.core.management.base.AppCommand}}
+
+
+Inheritance diagram for django.\+core.\+management.\+base.\+App\+Command\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+core.\+management.\+base.\+App\+Command\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a1a5425d979ba41f89db277e8a21a60d5}{add\+\_\+arguments}} (self, parser)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_app_command_ac3fe06aaba55489030ab8ab58a728fd6}{handle}} (self, $\ast$app\+\_\+labels, $\ast$$\ast$options)
+\item 
+def \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a13ad5be73de80534aeec4212f94e2ab6}{handle\+\_\+app\+\_\+config}} (self, app\+\_\+config, $\ast$$\ast$options)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1base_1_1_app_command_ac14f9fb9c26efb292e43d75d51631848}\label{classdjango_1_1core_1_1management_1_1base_1_1_app_command_ac14f9fb9c26efb292e43d75d51631848}} 
+string {\bfseries missing\+\_\+args\+\_\+message} = \char`\"{}Enter at least one application label.\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A management command which takes one or more installed application labels
+as arguments, and does something with each of them.
+
+Rather than implementing ``handle()``, subclasses must implement
+``handle_app_config()``, which will be called once for each application.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a1a5425d979ba41f89db277e8a21a60d5}\label{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a1a5425d979ba41f89db277e8a21a60d5}} 
+\index{django.core.management.base.AppCommand@{django.core.management.base.AppCommand}!add\_arguments@{add\_arguments}}
+\index{add\_arguments@{add\_arguments}!django.core.management.base.AppCommand@{django.core.management.base.AppCommand}}
+\doxysubsubsection{\texorpdfstring{add\_arguments()}{add\_arguments()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+base.\+App\+Command.\+add\+\_\+arguments (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parser }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Entry point for subclassed commands to add custom arguments.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_base_command_a8672816c9bdb7d4255f17328a0ca874e}{django.\+core.\+management.\+base.\+Base\+Command}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1sqlsequencereset_1_1_command_acd09cc1b208a9a997ececde93118e997}{django.\+core.\+management.\+commands.\+sqlsequencereset.\+Command}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1base_1_1_app_command_ac3fe06aaba55489030ab8ab58a728fd6}\label{classdjango_1_1core_1_1management_1_1base_1_1_app_command_ac3fe06aaba55489030ab8ab58a728fd6}} 
+\index{django.core.management.base.AppCommand@{django.core.management.base.AppCommand}!handle@{handle}}
+\index{handle@{handle}!django.core.management.base.AppCommand@{django.core.management.base.AppCommand}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+base.\+App\+Command.\+handle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The actual logic of the command. Subclasses must implement
+this method.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1base_1_1_base_command_a4d1dd995513fbf6017729595dbae4ef3}{django.\+core.\+management.\+base.\+Base\+Command}}.
+
+\mbox{\Hypertarget{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a13ad5be73de80534aeec4212f94e2ab6}\label{classdjango_1_1core_1_1management_1_1base_1_1_app_command_a13ad5be73de80534aeec4212f94e2ab6}} 
+\index{django.core.management.base.AppCommand@{django.core.management.base.AppCommand}!handle\_app\_config@{handle\_app\_config}}
+\index{handle\_app\_config@{handle\_app\_config}!django.core.management.base.AppCommand@{django.core.management.base.AppCommand}}
+\doxysubsubsection{\texorpdfstring{handle\_app\_config()}{handle\_app\_config()}}
+{\footnotesize\ttfamily def django.\+core.\+management.\+base.\+App\+Command.\+handle\+\_\+app\+\_\+config (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{app\+\_\+config,  }\item[{$\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Perform the command's actions for app_config, an AppConfig instance
+corresponding to an application label given on the command line.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1core_1_1management_1_1commands_1_1sqlsequencereset_1_1_command_af2efa8d9f74c6c4e1001167267d40dc8}{django.\+core.\+management.\+commands.\+sqlsequencereset.\+Command}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/core/management/base.\+py\end{DoxyCompactItemize}

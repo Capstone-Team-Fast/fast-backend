@@ -1,0 +1,319 @@
+\hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper}{}\doxysection{django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper Class Reference}
+\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper}\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+
+
+Inheritance diagram for django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a593897ae28f0ba04b8f51df79eb60067}{get\+\_\+connection\+\_\+params}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a384a3c16724a1b157f21debc28cfd928}{get\+\_\+new\+\_\+connection}} (self, conn\+\_\+params)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ac91b61df052371f2cbc99f56d3dd2772}{init\+\_\+connection\+\_\+state}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_acf00e673d7bb81b915ea3192d6f1abc3}{create\+\_\+cursor}} (self, name=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2bf73e368c6645c2af663435bca4d3fb}{close}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a7916d34e902d81b5a45ac09955c5fdb6}{disable\+\_\+constraint\+\_\+checking}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_afdf841b3a3dd923b399983669d83db07}{enable\+\_\+constraint\+\_\+checking}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2edd858dd7ae67016815283abab76185}{check\+\_\+constraints}} (self, table\+\_\+names=None)
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aecb477de60f021e997c4f7ecf7d89c52}{is\+\_\+usable}} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a588a6d513cc0fb33528e51163e5b3376}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a588a6d513cc0fb33528e51163e5b3376}} 
+def {\bfseries is\+\_\+in\+\_\+memory\+\_\+db} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ae9721b3aefbe6ec9455d035421469330}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ae9721b3aefbe6ec9455d035421469330}} 
+string {\bfseries vendor} = \textquotesingle{}sqlite\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a1df47b6ed30129235324aa0902122ec4}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a1df47b6ed30129235324aa0902122ec4}} 
+string {\bfseries display\+\_\+name} = \textquotesingle{}SQLite\textquotesingle{}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a448dc484c3febba23a7a39805ffb4572}{data\+\_\+types}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aeb03f6be3981ee4bb2f2d406ff705a0e}{data\+\_\+type\+\_\+check\+\_\+constraints}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a8316cd601ae3ab6134964a1b0699b035}{data\+\_\+types\+\_\+suffix}}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a33557f8d4c1c1b031371fa4ff7a08e29}{operators}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_af7f3496a6526c37b9385c43bfac35906}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_af7f3496a6526c37b9385c43bfac35906}} 
+string {\bfseries pattern\+\_\+esc} = r\char`\"{}REPLACE(REPLACE(REPLACE(\{\}, \textquotesingle{}\textbackslash{}\textquotesingle{}, \textquotesingle{}\textbackslash{}\textbackslash{}\textquotesingle{}), \textquotesingle{}\%\%\textquotesingle{}, \textquotesingle{}\textbackslash{}\%\%\textquotesingle{}), \textquotesingle{}\+\_\+\textquotesingle{}, \textquotesingle{}\textbackslash{}\+\_\+\textquotesingle{})\char`\"{}
+\item 
+dictionary \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ae554c2f7a2b020fd45fb970a129e0273}{pattern\+\_\+ops}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a756f1c42210446596c09feac24c3b615}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a756f1c42210446596c09feac24c3b615}} 
+{\bfseries Database} = Database
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2faae0855d891ab3b26bf1b4eeed0e9a}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2faae0855d891ab3b26bf1b4eeed0e9a}} 
+{\bfseries Schema\+Editor\+Class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor}{Database\+Schema\+Editor}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a46b938a6603af7e2fbcc2e3300251a97}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a46b938a6603af7e2fbcc2e3300251a97}} 
+{\bfseries client\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1client_1_1_database_client}{Database\+Client}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_abdb7d1cacfc52ade13197deaf337e662}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_abdb7d1cacfc52ade13197deaf337e662}} 
+{\bfseries creation\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1creation_1_1_database_creation}{Database\+Creation}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a74417e70f1557dfff6254b081550a19e}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a74417e70f1557dfff6254b081550a19e}} 
+{\bfseries features\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1features_1_1_database_features}{Database\+Features}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a40d65badc6d7ac5c4c63c4ae714c5182}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a40d65badc6d7ac5c4c63c4ae714c5182}} 
+{\bfseries introspection\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1introspection_1_1_database_introspection}{Database\+Introspection}}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a9c5cf2ed5c54a498c3b050e9f7a25a1d}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a9c5cf2ed5c54a498c3b050e9f7a25a1d}} 
+{\bfseries ops\+\_\+class} = \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1operations_1_1_database_operations}{Database\+Operations}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2edd858dd7ae67016815283abab76185}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2edd858dd7ae67016815283abab76185}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!check\_constraints@{check\_constraints}}
+\index{check\_constraints@{check\_constraints}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{check\_constraints()}{check\_constraints()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+check\+\_\+constraints (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{table\+\_\+names = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check each table name in `table_names` for rows with invalid foreign
+key references. This method is intended to be used in conjunction with
+`disable_constraint_checking()` and `enable_constraint_checking()`, to
+determine if rows with invalid references were entered while constraint
+checks were off.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a7829e0ce168f51be005968fbf4aa4d8f}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2bf73e368c6645c2af663435bca4d3fb}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a2bf73e368c6645c2af663435bca4d3fb}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!close@{close}}
+\index{close@{close}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+close (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Close the connection to the database.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a5e2f5642f3f4943bf2530f10ffd792c0}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_acf00e673d7bb81b915ea3192d6f1abc3}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_acf00e673d7bb81b915ea3192d6f1abc3}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!create\_cursor@{create\_cursor}}
+\index{create\_cursor@{create\_cursor}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{create\_cursor()}{create\_cursor()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+create\+\_\+cursor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a cursor. Assume that a connection is established.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a23e6d6f03fe1d09192c7d7e7b1ba9e41}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a7916d34e902d81b5a45ac09955c5fdb6}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a7916d34e902d81b5a45ac09955c5fdb6}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!disable\_constraint\_checking@{disable\_constraint\_checking}}
+\index{disable\_constraint\_checking@{disable\_constraint\_checking}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{disable\_constraint\_checking()}{disable\_constraint\_checking()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+disable\+\_\+constraint\+\_\+checking (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Backends can implement as needed to temporarily disable foreign key
+constraint checking. Should return True if the constraints were
+disabled and will need to be reenabled.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a8a5515d41f4cb14916d0185872860d21}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_afdf841b3a3dd923b399983669d83db07}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_afdf841b3a3dd923b399983669d83db07}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!enable\_constraint\_checking@{enable\_constraint\_checking}}
+\index{enable\_constraint\_checking@{enable\_constraint\_checking}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{enable\_constraint\_checking()}{enable\_constraint\_checking()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+enable\+\_\+constraint\+\_\+checking (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Backends can implement as needed to re-enable foreign key constraint
+checking.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_ac5fc695bfae4945c088590e9d7d52a07}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a593897ae28f0ba04b8f51df79eb60067}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a593897ae28f0ba04b8f51df79eb60067}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!get\_connection\_params@{get\_connection\_params}}
+\index{get\_connection\_params@{get\_connection\_params}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{get\_connection\_params()}{get\_connection\_params()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+get\+\_\+connection\+\_\+params (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dict of parameters suitable for get_new_connection.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a234d438e1a6ce82a4af9642e4583b38d}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a384a3c16724a1b157f21debc28cfd928}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a384a3c16724a1b157f21debc28cfd928}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!get\_new\_connection@{get\_new\_connection}}
+\index{get\_new\_connection@{get\_new\_connection}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{get\_new\_connection()}{get\_new\_connection()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+get\+\_\+new\+\_\+connection (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{conn\+\_\+params }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Open a connection to the database.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_a0a487b4ed2e268924de4b5bee31d4b69}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ac91b61df052371f2cbc99f56d3dd2772}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ac91b61df052371f2cbc99f56d3dd2772}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!init\_connection\_state@{init\_connection\_state}}
+\index{init\_connection\_state@{init\_connection\_state}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{init\_connection\_state()}{init\_connection\_state()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+init\+\_\+connection\+\_\+state (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the database connection settings.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_ac8e6b55535a33b4b8cb0029ec6f90446}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aecb477de60f021e997c4f7ecf7d89c52}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aecb477de60f021e997c4f7ecf7d89c52}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!is\_usable@{is\_usable}}
+\index{is\_usable@{is\_usable}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{is\_usable()}{is\_usable()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+is\+\_\+usable (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Test if the database connection is usable.
+
+This method may assume that self.connection is not None.
+
+Actual implementations should take care not to raise exceptions
+as that may prevent Django from recycling unusable connections.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper_ae35789bf6639a13cb1495509535d1438}{django.\+db.\+backends.\+base.\+base.\+Base\+Database\+Wrapper}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aeb03f6be3981ee4bb2f2d406ff705a0e}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_aeb03f6be3981ee4bb2f2d406ff705a0e}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!data\_type\_check\_constraints@{data\_type\_check\_constraints}}
+\index{data\_type\_check\_constraints@{data\_type\_check\_constraints}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{data\_type\_check\_constraints}{data\_type\_check\_constraints}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+data\+\_\+type\+\_\+check\+\_\+constraints\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveBigIntegerField'}: \textcolor{stringliteral}{'"{}\%(column)s"{} >= 0'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'JSONField'}: \textcolor{stringliteral}{'(JSON\_VALID("{}\%(column)s"{}) OR "{}\%(column)s"{} IS NULL)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveIntegerField'}: \textcolor{stringliteral}{'"{}\%(column)s"{} >= 0'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveSmallIntegerField'}: \textcolor{stringliteral}{'"{}\%(column)s"{} >= 0'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a448dc484c3febba23a7a39805ffb4572}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a448dc484c3febba23a7a39805ffb4572}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!data\_types@{data\_types}}
+\index{data\_types@{data\_types}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{data\_types}{data\_types}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+data\+\_\+types\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'AutoField'}: \textcolor{stringliteral}{'integer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BigAutoField'}: \textcolor{stringliteral}{'integer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BinaryField'}: \textcolor{stringliteral}{'BLOB'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BooleanField'}: \textcolor{stringliteral}{'bool'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'CharField'}: \textcolor{stringliteral}{'varchar(\%(max\_length)s)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DateField'}: \textcolor{stringliteral}{'date'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DateTimeField'}: \textcolor{stringliteral}{'datetime'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DecimalField'}: \textcolor{stringliteral}{'decimal'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'DurationField'}: \textcolor{stringliteral}{'bigint'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'FileField'}: \textcolor{stringliteral}{'varchar(\%(max\_length)s)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'FilePathField'}: \textcolor{stringliteral}{'varchar(\%(max\_length)s)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'FloatField'}: \textcolor{stringliteral}{'real'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'IntegerField'}: \textcolor{stringliteral}{'integer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BigIntegerField'}: \textcolor{stringliteral}{'bigint'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'IPAddressField'}: \textcolor{stringliteral}{'char(15)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'GenericIPAddressField'}: \textcolor{stringliteral}{'char(39)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'JSONField'}: \textcolor{stringliteral}{'text'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'NullBooleanField'}: \textcolor{stringliteral}{'bool'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'OneToOneField'}: \textcolor{stringliteral}{'integer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveBigIntegerField'}: \textcolor{stringliteral}{'bigint unsigned'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveIntegerField'}: \textcolor{stringliteral}{'integer unsigned'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'PositiveSmallIntegerField'}: \textcolor{stringliteral}{'smallint unsigned'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SlugField'}: \textcolor{stringliteral}{'varchar(\%(max\_length)s)'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SmallAutoField'}: \textcolor{stringliteral}{'integer'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SmallIntegerField'}: \textcolor{stringliteral}{'smallint'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TextField'}: \textcolor{stringliteral}{'text'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TimeField'}: \textcolor{stringliteral}{'time'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'UUIDField'}: \textcolor{stringliteral}{'char(32)'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a8316cd601ae3ab6134964a1b0699b035}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a8316cd601ae3ab6134964a1b0699b035}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!data\_types\_suffix@{data\_types\_suffix}}
+\index{data\_types\_suffix@{data\_types\_suffix}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{data\_types\_suffix}{data\_types\_suffix}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+data\+\_\+types\+\_\+suffix\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'AutoField'}: \textcolor{stringliteral}{'AUTOINCREMENT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'BigAutoField'}: \textcolor{stringliteral}{'AUTOINCREMENT'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'SmallAutoField'}: \textcolor{stringliteral}{'AUTOINCREMENT'},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a33557f8d4c1c1b031371fa4ff7a08e29}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_a33557f8d4c1c1b031371fa4ff7a08e29}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!operators@{operators}}
+\index{operators@{operators}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{operators}{operators}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+operators\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'exact'}: \textcolor{stringliteral}{'= \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iexact'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'contains'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'icontains'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'regex'}: \textcolor{stringliteral}{'REGEXP \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iregex'}: \textcolor{stringliteral}{"{}REGEXP '(?i)' || \%s"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'gt'}: \textcolor{stringliteral}{'> \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'gte'}: \textcolor{stringliteral}{'>= \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'lt'}: \textcolor{stringliteral}{'< \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'lte'}: \textcolor{stringliteral}{'<= \%s'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'startswith'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'endswith'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'istartswith'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iendswith'}: \textcolor{stringliteral}{"{}LIKE \%s ESCAPE '\(\backslash\)\(\backslash\)'"{}},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ae554c2f7a2b020fd45fb970a129e0273}\label{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper_ae554c2f7a2b020fd45fb970a129e0273}} 
+\index{django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}!pattern\_ops@{pattern\_ops}}
+\index{pattern\_ops@{pattern\_ops}!django.db.backends.sqlite3.base.DatabaseWrapper@{django.db.backends.sqlite3.base.DatabaseWrapper}}
+\doxysubsubsection{\texorpdfstring{pattern\_ops}{pattern\_ops}}
+{\footnotesize\ttfamily dictionary django.\+db.\+backends.\+sqlite3.\+base.\+Database\+Wrapper.\+pattern\+\_\+ops\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'contains'}: \textcolor{stringliteral}{r"{}LIKE '\%\%' || \{\} || '\%\%' ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'icontains'}: \textcolor{stringliteral}{r"{}LIKE '\%\%' || UPPER(\{\}) || '\%\%' ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'startswith'}: \textcolor{stringliteral}{r"{}LIKE \{\} || '\%\%' ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'istartswith'}: \textcolor{stringliteral}{r"{}LIKE UPPER(\{\}) || '\%\%' ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'endswith'}: \textcolor{stringliteral}{r"{}LIKE '\%\%' || \{\} ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iendswith'}: \textcolor{stringliteral}{r"{}LIKE '\%\%' || UPPER(\{\}) ESCAPE '\(\backslash\)'"{}},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/backends/sqlite3/base.\+py\end{DoxyCompactItemize}

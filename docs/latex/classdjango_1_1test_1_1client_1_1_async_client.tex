@@ -1,0 +1,76 @@
+\hypertarget{classdjango_1_1test_1_1client_1_1_async_client}{}\doxysection{django.\+test.\+client.\+Async\+Client Class Reference}
+\label{classdjango_1_1test_1_1client_1_1_async_client}\index{django.test.client.AsyncClient@{django.test.client.AsyncClient}}
+
+
+Inheritance diagram for django.\+test.\+client.\+Async\+Client\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+test.\+client.\+Async\+Client\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_client_a83a53b29f60f0aed202d29d6d0870f45}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, enforce\+\_\+csrf\+\_\+checks=False, raise\+\_\+request\+\_\+exception=True, $\ast$$\ast$defaults)
+\item 
+def \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_client_a38330cfdf01cb69d3dd0bdb8b9777bd9}{request}} (self, $\ast$$\ast$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a7ad0d8b2c28ecd8b8b9b476574af6f4b}\label{classdjango_1_1test_1_1client_1_1_async_client_a7ad0d8b2c28ecd8b8b9b476574af6f4b}} 
+{\bfseries handler}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a1872c0aba67db49778778d7acc182d0b}\label{classdjango_1_1test_1_1client_1_1_async_client_a1872c0aba67db49778778d7acc182d0b}} 
+{\bfseries raise\+\_\+request\+\_\+exception}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a9af2468edf99cb297bbac6edd9255e16}\label{classdjango_1_1test_1_1client_1_1_async_client_a9af2468edf99cb297bbac6edd9255e16}} 
+{\bfseries exc\+\_\+info}
+\item 
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a6602dc2cc52cb976d592f052374e8d0c}\label{classdjango_1_1test_1_1client_1_1_async_client_a6602dc2cc52cb976d592f052374e8d0c}} 
+{\bfseries extra}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}An async version of Client that creates ASGIRequests and calls through an
+async request path.
+
+Does not currently support "follow" on its methods.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a83a53b29f60f0aed202d29d6d0870f45}\label{classdjango_1_1test_1_1client_1_1_async_client_a83a53b29f60f0aed202d29d6d0870f45}} 
+\index{django.test.client.AsyncClient@{django.test.client.AsyncClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!django.test.client.AsyncClient@{django.test.client.AsyncClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Async\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{enforce\+\_\+csrf\+\_\+checks = {\ttfamily False},  }\item[{}]{raise\+\_\+request\+\_\+exception = {\ttfamily True},  }\item[{$\ast$$\ast$}]{defaults }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_request_factory}{django.\+test.\+client.\+Request\+Factory}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1test_1_1client_1_1_async_client_a38330cfdf01cb69d3dd0bdb8b9777bd9}\label{classdjango_1_1test_1_1client_1_1_async_client_a38330cfdf01cb69d3dd0bdb8b9777bd9}} 
+\index{django.test.client.AsyncClient@{django.test.client.AsyncClient}!request@{request}}
+\index{request@{request}!django.test.client.AsyncClient@{django.test.client.AsyncClient}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily def django.\+test.\+client.\+Async\+Client.\+request (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$$\ast$}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The master request method. Compose the scope dictionary and pass to the
+handler, return the result of the handler. Assume defaults for the
+query environment, which can be overridden using the arguments to the
+request.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1test_1_1client_1_1_async_request_factory_a8dcee74bc0f05203aa2aa2aad95555a9}{django.\+test.\+client.\+Async\+Request\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/test/client.\+py\end{DoxyCompactItemize}

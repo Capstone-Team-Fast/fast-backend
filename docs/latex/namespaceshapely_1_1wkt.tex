@@ -1,0 +1,106 @@
+\hypertarget{namespaceshapely_1_1wkt}{}\doxysection{shapely.\+wkt Namespace Reference}
+\label{namespaceshapely_1_1wkt}\index{shapely.wkt@{shapely.wkt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkt_a202af1b4d639336287ccc3e1911d29db}{loads}} (data)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkt_a524460d9afe722668da2346957eed7f0}{load}} (fp)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkt_a9cba0e3fcbace0da27ed2d3fb4097aaf}{dumps}} (ob, trim=False, $\ast$$\ast$kw)
+\item 
+def \mbox{\hyperlink{namespaceshapely_1_1wkt_a80080a2f9354d35d949fa97504e3b604}{dump}} (ob, fp, $\ast$$\ast$settings)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Load/dump geometries using the well-known text (WKT) format
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceshapely_1_1wkt_a80080a2f9354d35d949fa97504e3b604}\label{namespaceshapely_1_1wkt_a80080a2f9354d35d949fa97504e3b604}} 
+\index{shapely.wkt@{shapely.wkt}!dump@{dump}}
+\index{dump@{dump}!shapely.wkt@{shapely.wkt}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily def shapely.\+wkt.\+dump (\begin{DoxyParamCaption}\item[{}]{ob,  }\item[{}]{fp,  }\item[{$\ast$$\ast$}]{settings }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dump a geometry to an open file.
+
+Parameters
+----------
+ob :
+    A geometry object of any type to be dumped to WKT.
+fp :
+    A file-like object which implements a `write` method.
+trim : bool, default False
+    Remove excess decimals from the WKT.
+rounding_precision (GEOS 3.3+) : int
+    Round output to the specified number of digits.
+    Default behavior returns full precision.
+output_dimension (GEOS 3.3+): int, default 3
+    Force removal of dimensions above the one specified.
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkt_a9cba0e3fcbace0da27ed2d3fb4097aaf}\label{namespaceshapely_1_1wkt_a9cba0e3fcbace0da27ed2d3fb4097aaf}} 
+\index{shapely.wkt@{shapely.wkt}!dumps@{dumps}}
+\index{dumps@{dumps}!shapely.wkt@{shapely.wkt}}
+\doxysubsubsection{\texorpdfstring{dumps()}{dumps()}}
+{\footnotesize\ttfamily def shapely.\+wkt.\+dumps (\begin{DoxyParamCaption}\item[{}]{ob,  }\item[{}]{trim = {\ttfamily False},  }\item[{$\ast$$\ast$}]{kw }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Dump a WKT representation of a geometry to a string.
+
+Parameters
+----------
+ob :
+    A geometry object of any type to be dumped to WKT.
+trim : bool, default False
+    Remove excess decimals from the WKT.
+rounding_precision (GEOS 3.3+) : int
+    Round output to the specified number of digits.
+    Default behavior returns full precision.
+output_dimension (GEOS 3.3+): int, default 3
+    Force removal of dimensions above the one specified.
+
+Returns
+-------
+input geometry as WKT string
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkt_a524460d9afe722668da2346957eed7f0}\label{namespaceshapely_1_1wkt_a524460d9afe722668da2346957eed7f0}} 
+\index{shapely.wkt@{shapely.wkt}!load@{load}}
+\index{load@{load}!shapely.wkt@{shapely.wkt}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def shapely.\+wkt.\+load (\begin{DoxyParamCaption}\item[{}]{fp }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a geometry from an open file.
+
+Parameters
+----------
+fp :
+    A file-like object which implements a `read` method.
+
+Returns
+-------
+Shapely geometry object
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceshapely_1_1wkt_a202af1b4d639336287ccc3e1911d29db}\label{namespaceshapely_1_1wkt_a202af1b4d639336287ccc3e1911d29db}} 
+\index{shapely.wkt@{shapely.wkt}!loads@{loads}}
+\index{loads@{loads}!shapely.wkt@{shapely.wkt}}
+\doxysubsubsection{\texorpdfstring{loads()}{loads()}}
+{\footnotesize\ttfamily def shapely.\+wkt.\+loads (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load a geometry from a WKT string.
+
+Parameters
+----------
+data : str
+    A WKT string
+
+Returns
+-------
+Shapely geometry object
+\end{DoxyVerb}
+ 

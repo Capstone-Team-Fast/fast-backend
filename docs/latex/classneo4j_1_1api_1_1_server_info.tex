@@ -1,0 +1,90 @@
+\hypertarget{classneo4j_1_1api_1_1_server_info}{}\doxysection{neo4j.\+api.\+Server\+Info Class Reference}
+\label{classneo4j_1_1api_1_1_server_info}\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_a540011ea2f04f8f518c1f792d1f806ed}\label{classneo4j_1_1api_1_1_server_info_a540011ea2f04f8f518c1f792d1f806ed}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_a05b0cf23fb03be339783906fa4990b94}{address}}, \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_ac614012c1a0c72a047dfdda247e87365}{protocol\+\_\+version}})
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_a05b0cf23fb03be339783906fa4990b94}{address}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_ac614012c1a0c72a047dfdda247e87365}{protocol\+\_\+version}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_aa950deee537b2f0202f06d6c96defd1f}{agent}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_a1b5ef0fa05598084a13ea5b51df6ad78}{connection\+\_\+id}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_a184600ccc1b2b3d7cea1500b27bb23db}{version\+\_\+info}} (self)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1api_1_1_server_info_aeae7ac7a365e9ba90dd96b77eae326ec}{update}} (self, metadata)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Represents a package of information relating to a Neo4j server.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_a05b0cf23fb03be339783906fa4990b94}\label{classneo4j_1_1api_1_1_server_info_a05b0cf23fb03be339783906fa4990b94}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!address@{address}}
+\index{address@{address}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{address()}{address()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+address (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Network address of the remote server.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_aa950deee537b2f0202f06d6c96defd1f}\label{classneo4j_1_1api_1_1_server_info_aa950deee537b2f0202f06d6c96defd1f}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!agent@{agent}}
+\index{agent@{agent}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{agent()}{agent()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+agent (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Server agent string by which the remote server identifies
+itself.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_a1b5ef0fa05598084a13ea5b51df6ad78}\label{classneo4j_1_1api_1_1_server_info_a1b5ef0fa05598084a13ea5b51df6ad78}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!connection\_id@{connection\_id}}
+\index{connection\_id@{connection\_id}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{connection\_id()}{connection\_id()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+connection\+\_\+id (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Unique identifier for the remote server connection.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_ac614012c1a0c72a047dfdda247e87365}\label{classneo4j_1_1api_1_1_server_info_ac614012c1a0c72a047dfdda247e87365}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!protocol\_version@{protocol\_version}}
+\index{protocol\_version@{protocol\_version}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{protocol\_version()}{protocol\_version()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+protocol\+\_\+version (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Bolt protocol version with which the remote server
+communicates. This is returned as a :class:`.Version`
+object, which itself extends a simple 2-tuple of
+(major, minor) integers.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_aeae7ac7a365e9ba90dd96b77eae326ec}\label{classneo4j_1_1api_1_1_server_info_aeae7ac7a365e9ba90dd96b77eae326ec}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!update@{update}}
+\index{update@{update}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{metadata }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Update server information with extra metadata. This is
+typically drawn from the metadata received after successful
+connection initialisation.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1api_1_1_server_info_a184600ccc1b2b3d7cea1500b27bb23db}\label{classneo4j_1_1api_1_1_server_info_a184600ccc1b2b3d7cea1500b27bb23db}} 
+\index{neo4j.api.ServerInfo@{neo4j.api.ServerInfo}!version\_info@{version\_info}}
+\index{version\_info@{version\_info}!neo4j.api.ServerInfo@{neo4j.api.ServerInfo}}
+\doxysubsubsection{\texorpdfstring{version\_info()}{version\_info()}}
+{\footnotesize\ttfamily def neo4j.\+api.\+Server\+Info.\+version\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return the server version if available.
+
+:return: Server Version or None
+:rtype: tuple
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/api.\+py\end{DoxyCompactItemize}

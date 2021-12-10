@@ -1,0 +1,48 @@
+\hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings}{}\doxysection{rest\+\_\+framework.\+settings.\+APISettings Class Reference}
+\label{classrest__framework_1_1settings_1_1_a_p_i_settings}\index{rest\_framework.settings.APISettings@{rest\_framework.settings.APISettings}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_ab5268c15920cd1050922f3fd3451078f}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_ab5268c15920cd1050922f3fd3451078f}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, user\+\_\+settings=None, defaults=None, import\+\_\+strings=None)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_aadbe0691ecaf584dbc5a1471b918830e}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_aadbe0691ecaf584dbc5a1471b918830e}} 
+def {\bfseries user\+\_\+settings} (self)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_afd765156eb0ae9abc74f36910a0c9bd1}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_afd765156eb0ae9abc74f36910a0c9bd1}} 
+def {\bfseries \+\_\+\+\_\+getattr\+\_\+\+\_\+} (self, attr)
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_ab0b08b324ede10e93088ad62de35732e}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_ab0b08b324ede10e93088ad62de35732e}} 
+def {\bfseries reload} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_a1b4b5a7f98ada9c6508ee5b7973918de}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_a1b4b5a7f98ada9c6508ee5b7973918de}} 
+{\bfseries defaults}
+\item 
+\mbox{\Hypertarget{classrest__framework_1_1settings_1_1_a_p_i_settings_abfbfb2515bca98ebe182710d9b883281}\label{classrest__framework_1_1settings_1_1_a_p_i_settings_abfbfb2515bca98ebe182710d9b883281}} 
+{\bfseries import\+\_\+strings}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A settings object that allows REST Framework settings to be accessed as
+properties. For example:
+
+    from rest_framework.settings import api_settings
+    print(api_settings.DEFAULT_RENDERER_CLASSES)
+
+Any setting with string import paths will be automatically resolved
+and return the class, rather than the string literal.
+
+Note:
+This is an internal class that is only compatible with settings namespaced
+under the REST_FRAMEWORK name. It is not intended to be used by 3rd-party
+apps, and test helpers like `override_settings` may not work as expected.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/rest\+\_\+framework/settings.\+py\end{DoxyCompactItemize}

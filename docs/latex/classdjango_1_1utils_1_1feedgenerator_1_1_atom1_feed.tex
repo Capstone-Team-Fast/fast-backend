@@ -1,0 +1,105 @@
+\hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed}{}\doxysection{django.\+utils.\+feedgenerator.\+Atom1\+Feed Class Reference}
+\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed}\index{django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}}
+
+
+Inheritance diagram for django.\+utils.\+feedgenerator.\+Atom1\+Feed\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+utils.\+feedgenerator.\+Atom1\+Feed\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_aa8093ef9722606e13397dedd0b73bda7}{write}} (self, outfile, encoding)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a7777172209cb713dd4ded535c341e34c}{root\+\_\+attributes}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a3fb3c960923723e1eb0769332f4b7f17}{add\+\_\+root\+\_\+elements}} (self, handler)
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_ad8098b4b7597800df4abdae43c439877}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_ad8098b4b7597800df4abdae43c439877}} 
+def {\bfseries write\+\_\+items} (self, handler)
+\item 
+def \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a088dd3cf3c90498f17907de109eca16f}{add\+\_\+item\+\_\+elements}} (self, handler, item)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a55a882b73c886e6ef2e0edf741143ac7}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a55a882b73c886e6ef2e0edf741143ac7}} 
+string {\bfseries content\+\_\+type} = \textquotesingle{}application/atom+xml; charset=utf-\/8\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a9ee5221c5d15cd177068056df6c8144c}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a9ee5221c5d15cd177068056df6c8144c}} 
+string {\bfseries ns} = \char`\"{}http\+://www.\+w3.\+org/2005/Atom\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a088dd3cf3c90498f17907de109eca16f}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a088dd3cf3c90498f17907de109eca16f}} 
+\index{django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}!add\_item\_elements@{add\_item\_elements}}
+\index{add\_item\_elements@{add\_item\_elements}!django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}}
+\doxysubsubsection{\texorpdfstring{add\_item\_elements()}{add\_item\_elements()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Atom1\+Feed.\+add\+\_\+item\+\_\+elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{handler,  }\item[{}]{item }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add elements on each item (i.e. item/entry) element.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_abf5400b7aa445b56e46fadbe62886bfa}{django.\+utils.\+feedgenerator.\+Syndication\+Feed}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_ade1edb44af2921a14352b52a69f5add9}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a3fb3c960923723e1eb0769332f4b7f17}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a3fb3c960923723e1eb0769332f4b7f17}} 
+\index{django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}!add\_root\_elements@{add\_root\_elements}}
+\index{add\_root\_elements@{add\_root\_elements}!django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}}
+\doxysubsubsection{\texorpdfstring{add\_root\_elements()}{add\_root\_elements()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Atom1\+Feed.\+add\+\_\+root\+\_\+elements (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{handler }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add elements in the root (i.e. feed/channel) element. Called
+from write().
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a365d4cfea8f4e492bc0bf233ca202b5e}{django.\+utils.\+feedgenerator.\+Syndication\+Feed}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_a1f430a7c600c45e28b9f1eb560c20b0f}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a7777172209cb713dd4ded535c341e34c}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_a7777172209cb713dd4ded535c341e34c}} 
+\index{django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}!root\_attributes@{root\_attributes}}
+\index{root\_attributes@{root\_attributes}!django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}}
+\doxysubsubsection{\texorpdfstring{root\_attributes()}{root\_attributes()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Atom1\+Feed.\+root\+\_\+attributes (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return extra attributes to place on the root (i.e. feed/channel) element.
+Called from write().
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a7aacecac01beaf5df93f1ce566a33f45}{django.\+utils.\+feedgenerator.\+Syndication\+Feed}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classdjango_1_1contrib_1_1gis_1_1feeds_1_1_geo_atom1_feed_a21d5c8087a075d54c1f3b84b75a71b04}{django.\+contrib.\+gis.\+feeds.\+Geo\+Atom1\+Feed}}.
+
+\mbox{\Hypertarget{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_aa8093ef9722606e13397dedd0b73bda7}\label{classdjango_1_1utils_1_1feedgenerator_1_1_atom1_feed_aa8093ef9722606e13397dedd0b73bda7}} 
+\index{django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}!write@{write}}
+\index{write@{write}!django.utils.feedgenerator.Atom1Feed@{django.utils.feedgenerator.Atom1Feed}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def django.\+utils.\+feedgenerator.\+Atom1\+Feed.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{outfile,  }\item[{}]{encoding }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Output the feed in the given encoding to outfile, which is a file-like
+object. Subclasses should override this.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1utils_1_1feedgenerator_1_1_syndication_feed_a390ee897decdfa762bdbe1e8c391f820}{django.\+utils.\+feedgenerator.\+Syndication\+Feed}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/utils/feedgenerator.\+py\end{DoxyCompactItemize}

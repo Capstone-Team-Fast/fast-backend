@@ -1,0 +1,64 @@
+\hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base}{}\doxysection{django.\+db.\+backends.\+sqlite3.\+base Namespace Reference}
+\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base}\index{django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_database_wrapper}{Database\+Wrapper}}
+\item 
+class \mbox{\hyperlink{classdjango_1_1db_1_1backends_1_1sqlite3_1_1base_1_1_s_q_lite_cursor_wrapper}{SQLite\+Cursor\+Wrapper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a0619812668fb5171138097c0199e1d3a}{decoder}} (conv\+\_\+func)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_aa0cddaaab3067e41a0aef8eec415c3d8}{none\+\_\+guard}} (func)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a5896926834c3b13889d1d14c2f4d5e62}{list\+\_\+aggregate}} (function)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_aca7c2e76289c998553b85db6b109eaaa}\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_aca7c2e76289c998553b85db6b109eaaa}} 
+def {\bfseries check\+\_\+sqlite\+\_\+version} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_ae8b2b6f9b749dca4cc7a137ea86b79b4}\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_ae8b2b6f9b749dca4cc7a137ea86b79b4}} 
+{\bfseries FORMAT\+\_\+\+QMARK\+\_\+\+REGEX} = \+\_\+lazy\+\_\+re\+\_\+compile(r\textquotesingle{}(?$<$!\%)\%s\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}SQLite backend for the sqlite3 module in the standard library.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a0619812668fb5171138097c0199e1d3a}\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a0619812668fb5171138097c0199e1d3a}} 
+\index{django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}!decoder@{decoder}}
+\index{decoder@{decoder}!django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}}
+\doxysubsubsection{\texorpdfstring{decoder()}{decoder()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+decoder (\begin{DoxyParamCaption}\item[{}]{conv\+\_\+func }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert bytestrings from Python's sqlite3 interface to a regular string.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a5896926834c3b13889d1d14c2f4d5e62}\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_a5896926834c3b13889d1d14c2f4d5e62}} 
+\index{django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}!list\_aggregate@{list\_aggregate}}
+\index{list\_aggregate@{list\_aggregate}!django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}}
+\doxysubsubsection{\texorpdfstring{list\_aggregate()}{list\_aggregate()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+list\+\_\+aggregate (\begin{DoxyParamCaption}\item[{}]{function }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return an aggregate class that accumulates values in a list and applies
+the provided function to the data.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_aa0cddaaab3067e41a0aef8eec415c3d8}\label{namespacedjango_1_1db_1_1backends_1_1sqlite3_1_1base_aa0cddaaab3067e41a0aef8eec415c3d8}} 
+\index{django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}!none\_guard@{none\_guard}}
+\index{none\_guard@{none\_guard}!django.db.backends.sqlite3.base@{django.db.backends.sqlite3.base}}
+\doxysubsubsection{\texorpdfstring{none\_guard()}{none\_guard()}}
+{\footnotesize\ttfamily def django.\+db.\+backends.\+sqlite3.\+base.\+none\+\_\+guard (\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Decorator that returns None if any of the arguments to the decorated
+function are None. Many SQL functions return NULL if any of their arguments
+are NULL. This decorator simplifies the implementation of this for the
+custom functions registered below.
+\end{DoxyVerb}
+ 

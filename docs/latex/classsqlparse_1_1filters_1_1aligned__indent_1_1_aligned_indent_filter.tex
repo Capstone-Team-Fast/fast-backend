@@ -1,0 +1,80 @@
+\hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter}{}\doxysection{sqlparse.\+filters.\+aligned\+\_\+indent.\+Aligned\+Indent\+Filter Class Reference}
+\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter}\index{sqlparse.filters.aligned\_indent.AlignedIndentFilter@{sqlparse.filters.aligned\_indent.AlignedIndentFilter}}
+
+
+Collaboration diagram for sqlparse.\+filters.\+aligned\+\_\+indent.\+Aligned\+Indent\+Filter\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_ac7998b0769f2f8faa4e31c7564d9dc18}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_ac7998b0769f2f8faa4e31c7564d9dc18}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, char=\textquotesingle{} \textquotesingle{}, n=\textquotesingle{}\textbackslash{}n\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a53124b5fba808e0c6f0b4129c9605f59}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a53124b5fba808e0c6f0b4129c9605f59}} 
+def {\bfseries nl} (self, offset=1)
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a3d7ebe81aa3c37378de85d5f2350ede4}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a3d7ebe81aa3c37378de85d5f2350ede4}} 
+def {\bfseries process} (self, stmt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a219a91a2c59e3b47d5719f3be0e0581a}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a219a91a2c59e3b47d5719f3be0e0581a}} 
+{\bfseries n}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a677ddc1da17c13e3f35bd69da2e53a16}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a677ddc1da17c13e3f35bd69da2e53a16}} 
+{\bfseries offset}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_afcf0ad244117b6f1c75fc015452bf722}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_afcf0ad244117b6f1c75fc015452bf722}} 
+{\bfseries indent}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a0a9abf2fbc1158db87aa4f714957bbf6}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a0a9abf2fbc1158db87aa4f714957bbf6}} 
+{\bfseries char}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_acfa81d6317cd5face462443a8eddb3e2}{join\+\_\+words}}
+\item 
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a5e1a87a4c4a7762bdb6bd4dfd0aed423}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a5e1a87a4c4a7762bdb6bd4dfd0aed423}} 
+string {\bfseries by\+\_\+words} = r\textquotesingle{}(GROUP$\vert$ORDER)\textbackslash{}s+BY\textbackslash{}b\textquotesingle{}
+\item 
+tuple \mbox{\hyperlink{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a0337efed03c74fa48b8b3439e7b4c854}{split\+\_\+words}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_acfa81d6317cd5face462443a8eddb3e2}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_acfa81d6317cd5face462443a8eddb3e2}} 
+\index{sqlparse.filters.aligned\_indent.AlignedIndentFilter@{sqlparse.filters.aligned\_indent.AlignedIndentFilter}!join\_words@{join\_words}}
+\index{join\_words@{join\_words}!sqlparse.filters.aligned\_indent.AlignedIndentFilter@{sqlparse.filters.aligned\_indent.AlignedIndentFilter}}
+\doxysubsubsection{\texorpdfstring{join\_words}{join\_words}}
+{\footnotesize\ttfamily tuple sqlparse.\+filters.\+aligned\+\_\+indent.\+Aligned\+Indent\+Filter.\+join\+\_\+words\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (\textcolor{stringliteral}{r'((LEFT\(\backslash\)s+|RIGHT\(\backslash\)s+|FULL\(\backslash\)s+)?'}}
+\DoxyCodeLine{                  \textcolor{stringliteral}{r'(INNER\(\backslash\)s+|OUTER\(\backslash\)s+|STRAIGHT\(\backslash\)s+)?|'}}
+\DoxyCodeLine{                  \textcolor{stringliteral}{r'(CROSS\(\backslash\)s+|NATURAL\(\backslash\)s+)?)?JOIN\(\backslash\)b'})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a0337efed03c74fa48b8b3439e7b4c854}\label{classsqlparse_1_1filters_1_1aligned__indent_1_1_aligned_indent_filter_a0337efed03c74fa48b8b3439e7b4c854}} 
+\index{sqlparse.filters.aligned\_indent.AlignedIndentFilter@{sqlparse.filters.aligned\_indent.AlignedIndentFilter}!split\_words@{split\_words}}
+\index{split\_words@{split\_words}!sqlparse.filters.aligned\_indent.AlignedIndentFilter@{sqlparse.filters.aligned\_indent.AlignedIndentFilter}}
+\doxysubsubsection{\texorpdfstring{split\_words}{split\_words}}
+{\footnotesize\ttfamily tuple sqlparse.\+filters.\+aligned\+\_\+indent.\+Aligned\+Indent\+Filter.\+split\+\_\+words\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  (\textcolor{stringliteral}{'FROM'},}
+\DoxyCodeLine{                   join\_words, \textcolor{stringliteral}{'ON'}, by\_words,}
+\DoxyCodeLine{                   \textcolor{stringliteral}{'WHERE'}, \textcolor{stringliteral}{'AND'}, \textcolor{stringliteral}{'OR'},}
+\DoxyCodeLine{                   \textcolor{stringliteral}{'HAVING'}, \textcolor{stringliteral}{'LIMIT'},}
+\DoxyCodeLine{                   \textcolor{stringliteral}{'UNION'}, \textcolor{stringliteral}{'VALUES'},}
+\DoxyCodeLine{                   \textcolor{stringliteral}{'SET'}, \textcolor{stringliteral}{'BETWEEN'}, \textcolor{stringliteral}{'EXCEPT'})}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/sqlparse/filters/aligned\+\_\+indent.\+py\end{DoxyCompactItemize}

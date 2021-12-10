@@ -1,0 +1,96 @@
+\hypertarget{classdjango_1_1template_1_1base_1_1_template}{}\doxysection{django.\+template.\+base.\+Template Class Reference}
+\label{classdjango_1_1template_1_1base_1_1_template}\index{django.template.base.Template@{django.template.base.Template}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a6017e4ee9631070cccb321b5fad8c1df}\label{classdjango_1_1template_1_1base_1_1_template_a6017e4ee9631070cccb321b5fad8c1df}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, template\+\_\+string, origin=None, name=None, engine=None)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_ade85deb121909661d08be4a14990da68}\label{classdjango_1_1template_1_1base_1_1_template_ade85deb121909661d08be4a14990da68}} 
+def {\bfseries \+\_\+\+\_\+iter\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a5ac4803f380104bb97eca214146d61ea}\label{classdjango_1_1template_1_1base_1_1_template_a5ac4803f380104bb97eca214146d61ea}} 
+def {\bfseries render} (self, context)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_template_a9122682e2d9f36018e9fe0c7426cffe0}{compile\+\_\+nodelist}} (self)
+\item 
+def \mbox{\hyperlink{classdjango_1_1template_1_1base_1_1_template_ad09b086861e75d63e491c6b27eb5d3a3}{get\+\_\+exception\+\_\+info}} (self, exception, token)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a584d8bed0e6237dde6e8dbe2f3ee3949}\label{classdjango_1_1template_1_1base_1_1_template_a584d8bed0e6237dde6e8dbe2f3ee3949}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a2e6f8a2776132d31894c44a12620a93a}\label{classdjango_1_1template_1_1base_1_1_template_a2e6f8a2776132d31894c44a12620a93a}} 
+{\bfseries origin}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a35513043d697eb7b68b5e5711601c3aa}\label{classdjango_1_1template_1_1base_1_1_template_a35513043d697eb7b68b5e5711601c3aa}} 
+{\bfseries engine}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a0c5ac0172cf8cc78569d88ed26b8e31f}\label{classdjango_1_1template_1_1base_1_1_template_a0c5ac0172cf8cc78569d88ed26b8e31f}} 
+{\bfseries source}
+\item 
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a01719c2305fd06790a2ee1a68ef06c72}\label{classdjango_1_1template_1_1base_1_1_template_a01719c2305fd06790a2ee1a68ef06c72}} 
+{\bfseries nodelist}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_a9122682e2d9f36018e9fe0c7426cffe0}\label{classdjango_1_1template_1_1base_1_1_template_a9122682e2d9f36018e9fe0c7426cffe0}} 
+\index{django.template.base.Template@{django.template.base.Template}!compile\_nodelist@{compile\_nodelist}}
+\index{compile\_nodelist@{compile\_nodelist}!django.template.base.Template@{django.template.base.Template}}
+\doxysubsubsection{\texorpdfstring{compile\_nodelist()}{compile\_nodelist()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+Template.\+compile\+\_\+nodelist (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse and compile the template source into a nodelist. If debug
+is True and an exception occurs during parsing, the exception is
+annotated with contextual line information where it occurred in the
+template source.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdjango_1_1template_1_1base_1_1_template_ad09b086861e75d63e491c6b27eb5d3a3}\label{classdjango_1_1template_1_1base_1_1_template_ad09b086861e75d63e491c6b27eb5d3a3}} 
+\index{django.template.base.Template@{django.template.base.Template}!get\_exception\_info@{get\_exception\_info}}
+\index{get\_exception\_info@{get\_exception\_info}!django.template.base.Template@{django.template.base.Template}}
+\doxysubsubsection{\texorpdfstring{get\_exception\_info()}{get\_exception\_info()}}
+{\footnotesize\ttfamily def django.\+template.\+base.\+Template.\+get\+\_\+exception\+\_\+info (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exception,  }\item[{}]{token }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return a dictionary containing contextual line information of where
+the exception occurred in the template. The following information is
+provided:
+
+message
+    The message of the exception raised.
+
+source_lines
+    The lines before, after, and including the line the exception
+    occurred on.
+
+line
+    The line number the exception occurred on.
+
+before, during, after
+    The line the exception occurred on split into three parts:
+    1. The content before the token that raised the error.
+    2. The token that raised the error.
+    3. The content after the token that raised the error.
+
+total
+    The number of lines in source_lines.
+
+top
+    The line number where source_lines starts.
+
+bottom
+    The line number where source_lines ends.
+
+start
+    The start position of the token in the template source.
+
+end
+    The end position of the token in the template source.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/template/base.\+py\end{DoxyCompactItemize}

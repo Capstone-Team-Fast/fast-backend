@@ -1,0 +1,91 @@
+\hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point}{}\doxysection{neomodel.\+contrib.\+spatial\+\_\+properties.\+Neomodel\+Point Class Reference}
+\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point}\index{neomodel.contrib.spatial\_properties.NeomodelPoint@{neomodel.contrib.spatial\_properties.NeomodelPoint}}
+
+
+Inheritance diagram for neomodel.\+contrib.\+spatial\+\_\+properties.\+Neomodel\+Point\+:
+% FIG 0
+
+
+Collaboration diagram for neomodel.\+contrib.\+spatial\+\_\+properties.\+Neomodel\+Point\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_aeee3f966eef59fa4fe3bc6921d6116d8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a219fab9e531063295a4b600159c1e03a}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a219fab9e531063295a4b600159c1e03a}} 
+def {\bfseries crs} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a8df3fd4d0246563f9bc71160c378b84b}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a8df3fd4d0246563f9bc71160c378b84b}} 
+def {\bfseries x} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a46a4a345b1ae5cc5d40aaf8fbd35a6ca}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a46a4a345b1ae5cc5d40aaf8fbd35a6ca}} 
+def {\bfseries y} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a7148807ca8f722fbe7acaad812f45d96}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a7148807ca8f722fbe7acaad812f45d96}} 
+def {\bfseries z} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a0d01c0e2d59f1a6c04303f27bda2e9b0}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a0d01c0e2d59f1a6c04303f27bda2e9b0}} 
+def {\bfseries latitude} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_ad9638279f6d093f5ab691d748655f6ae}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_ad9638279f6d093f5ab691d748655f6ae}} 
+def {\bfseries longitude} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a49dd9595da971abc3ff209bf073cac31}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a49dd9595da971abc3ff209bf073cac31}} 
+def {\bfseries height} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a26a8d423ff103537ead35be921949899}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_a26a8d423ff103537ead35be921949899}} 
+def {\bfseries \+\_\+\+\_\+copy\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_aec442453dfdcc5da60a4b1f50a3b2297}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_aec442453dfdcc5da60a4b1f50a3b2297}} 
+def {\bfseries \+\_\+\+\_\+deepcopy\+\_\+\+\_\+} (self, memo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Abstracts the Point spatial data type of Neo4j.
+
+Note:
+At the time of writing, Neo4j supports 2 main variants of Point:
+    1. A generic point defined over a Cartesian plane
+        * The minimum data to define a point is x, y [,z] when crs is either "cartesian" or "cartesian-3d"
+    2. A generic point defined over the WGS84 ellipsoid
+        * The minimum data to define a point is longitude, latitude [,Height] and the crs is then assumed
+          to be "wgs-84".
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_aeee3f966eef59fa4fe3bc6921d6116d8}\label{classneomodel_1_1contrib_1_1spatial__properties_1_1_neomodel_point_aeee3f966eef59fa4fe3bc6921d6116d8}} 
+\index{neomodel.contrib.spatial\_properties.NeomodelPoint@{neomodel.contrib.spatial\_properties.NeomodelPoint}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!neomodel.contrib.spatial\_properties.NeomodelPoint@{neomodel.contrib.spatial\_properties.NeomodelPoint}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def neomodel.\+contrib.\+spatial\+\_\+properties.\+Neomodel\+Point.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a NeomodelPoint.
+
+:param args: Positional arguments to emulate the behaviour of Shapely's Point (and specifically the copy
+constructor)
+:type args: list
+:param crs: Coordinate Reference System, must be one of ['cartesian', 'cartesian-3d', 'wgs-84', 'wgs-84-3d']
+:type crs: str
+:param x: x coordinate of point
+:type x: float
+:param y: y coordinate of point
+:type y: float
+:param z: z coordinate of point if the crs is cartesian-3d
+:type z: float
+:param latitude: Latitude of point
+:type latitude: float
+:param longitude: Longitude of point
+:type longitude: float
+:param height: Height of point if the crs is wgs-84-3d
+:type height: float
+:param kwargs: Dictionary of keyword arguments
+:type kwargs: dict
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neomodel/contrib/spatial\+\_\+properties.\+py\end{DoxyCompactItemize}

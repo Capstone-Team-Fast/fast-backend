@@ -1,0 +1,82 @@
+\hypertarget{classneo4j_1_1io_1_1__common_1_1_response}{}\doxysection{neo4j.\+io.\+\_\+common.\+Response Class Reference}
+\label{classneo4j_1_1io_1_1__common_1_1_response}\index{neo4j.io.\_common.Response@{neo4j.io.\_common.Response}}
+
+
+Inheritance diagram for neo4j.\+io.\+\_\+common.\+Response\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a5e79f310f59c6416c162ca18d0b8ef32}\label{classneo4j_1_1io_1_1__common_1_1_response_a5e79f310f59c6416c162ca18d0b8ef32}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, connection, $\ast$$\ast$handlers)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1__common_1_1_response_aa089d9dd1f2fd70c62cc368419d1bc07}{on\+\_\+records}} (self, records)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1__common_1_1_response_a806e6049e107d7bded7979c250359227}{on\+\_\+success}} (self, metadata)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1__common_1_1_response_a594f65721cf334b5058c1ca8cd1e0862}{on\+\_\+failure}} (self, metadata)
+\item 
+def \mbox{\hyperlink{classneo4j_1_1io_1_1__common_1_1_response_a613598e427239846304276dcdbbffa2c}{on\+\_\+ignored}} (self, metadata=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a4c214c350be5a1b7bcd04bb45f6e47b9}\label{classneo4j_1_1io_1_1__common_1_1_response_a4c214c350be5a1b7bcd04bb45f6e47b9}} 
+{\bfseries connection}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a2cf72e509abd130c3d7782f20b191dc2}\label{classneo4j_1_1io_1_1__common_1_1_response_a2cf72e509abd130c3d7782f20b191dc2}} 
+{\bfseries handlers}
+\item 
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a8cd67692a8b6c669077ed42c8651ceef}\label{classneo4j_1_1io_1_1__common_1_1_response_a8cd67692a8b6c669077ed42c8651ceef}} 
+{\bfseries complete}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} Subscriber object for a full response (zero or
+more detail messages followed by one summary message).
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a594f65721cf334b5058c1ca8cd1e0862}\label{classneo4j_1_1io_1_1__common_1_1_response_a594f65721cf334b5058c1ca8cd1e0862}} 
+\index{neo4j.io.\_common.Response@{neo4j.io.\_common.Response}!on\_failure@{on\_failure}}
+\index{on\_failure@{on\_failure}!neo4j.io.\_common.Response@{neo4j.io.\_common.Response}}
+\doxysubsubsection{\texorpdfstring{on\_failure()}{on\_failure()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+\_\+common.\+Response.\+on\+\_\+failure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{metadata }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Called when a FAILURE message has been received.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classneo4j_1_1io_1_1__common_1_1_init_response_a72aaa9439785c0d52dff364815fe6e8c}{neo4j.\+io.\+\_\+common.\+Init\+Response}}.
+
+\mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a613598e427239846304276dcdbbffa2c}\label{classneo4j_1_1io_1_1__common_1_1_response_a613598e427239846304276dcdbbffa2c}} 
+\index{neo4j.io.\_common.Response@{neo4j.io.\_common.Response}!on\_ignored@{on\_ignored}}
+\index{on\_ignored@{on\_ignored}!neo4j.io.\_common.Response@{neo4j.io.\_common.Response}}
+\doxysubsubsection{\texorpdfstring{on\_ignored()}{on\_ignored()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+\_\+common.\+Response.\+on\+\_\+ignored (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{metadata = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Called when an IGNORED message has been received.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_aa089d9dd1f2fd70c62cc368419d1bc07}\label{classneo4j_1_1io_1_1__common_1_1_response_aa089d9dd1f2fd70c62cc368419d1bc07}} 
+\index{neo4j.io.\_common.Response@{neo4j.io.\_common.Response}!on\_records@{on\_records}}
+\index{on\_records@{on\_records}!neo4j.io.\_common.Response@{neo4j.io.\_common.Response}}
+\doxysubsubsection{\texorpdfstring{on\_records()}{on\_records()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+\_\+common.\+Response.\+on\+\_\+records (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{records }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Called when one or more RECORD messages have been received.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classneo4j_1_1io_1_1__common_1_1_response_a806e6049e107d7bded7979c250359227}\label{classneo4j_1_1io_1_1__common_1_1_response_a806e6049e107d7bded7979c250359227}} 
+\index{neo4j.io.\_common.Response@{neo4j.io.\_common.Response}!on\_success@{on\_success}}
+\index{on\_success@{on\_success}!neo4j.io.\_common.Response@{neo4j.io.\_common.Response}}
+\doxysubsubsection{\texorpdfstring{on\_success()}{on\_success()}}
+{\footnotesize\ttfamily def neo4j.\+io.\+\_\+common.\+Response.\+on\+\_\+success (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{metadata }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Called when a SUCCESS message has been received.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/neo4j/io/\+\_\+common.\+py\end{DoxyCompactItemize}

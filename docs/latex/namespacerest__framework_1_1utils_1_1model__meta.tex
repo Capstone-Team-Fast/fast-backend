@@ -1,0 +1,85 @@
+\hypertarget{namespacerest__framework_1_1utils_1_1model__meta}{}\doxysection{rest\+\_\+framework.\+utils.\+model\+\_\+meta Namespace Reference}
+\label{namespacerest__framework_1_1utils_1_1model__meta}\index{rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1utils_1_1model__meta_a3b4144c787743944a2c3a72d5ba8fc3b}{get\+\_\+field\+\_\+info}} (model)
+\item 
+def \mbox{\hyperlink{namespacerest__framework_1_1utils_1_1model__meta_aa85e64f2c46451f91d3a3670eb647f95}{is\+\_\+abstract\+\_\+model}} (model)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacerest__framework_1_1utils_1_1model__meta_adbb845cb295d2c42b880910fffb655fb}{Field\+Info}}
+\item 
+\mbox{\hyperlink{namespacerest__framework_1_1utils_1_1model__meta_a330c2665631fe02421c69ded28150128}{Relation\+Info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Helper function for returning the field information that is associated
+with a model class. This includes returning all the forward and reverse
+relationships and their associated metadata.
+
+Usage: `get_field_info(model)` returns a `FieldInfo` instance.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1utils_1_1model__meta_a3b4144c787743944a2c3a72d5ba8fc3b}\label{namespacerest__framework_1_1utils_1_1model__meta_a3b4144c787743944a2c3a72d5ba8fc3b}} 
+\index{rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}!get\_field\_info@{get\_field\_info}}
+\index{get\_field\_info@{get\_field\_info}!rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}}
+\doxysubsubsection{\texorpdfstring{get\_field\_info()}{get\_field\_info()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+utils.\+model\+\_\+meta.\+get\+\_\+field\+\_\+info (\begin{DoxyParamCaption}\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a model class, returns a `FieldInfo` instance, which is a
+`namedtuple`, containing metadata about the various field types on the model
+including information about their relationships.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerest__framework_1_1utils_1_1model__meta_aa85e64f2c46451f91d3a3670eb647f95}\label{namespacerest__framework_1_1utils_1_1model__meta_aa85e64f2c46451f91d3a3670eb647f95}} 
+\index{rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}!is\_abstract\_model@{is\_abstract\_model}}
+\index{is\_abstract\_model@{is\_abstract\_model}!rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}}
+\doxysubsubsection{\texorpdfstring{is\_abstract\_model()}{is\_abstract\_model()}}
+{\footnotesize\ttfamily def rest\+\_\+framework.\+utils.\+model\+\_\+meta.\+is\+\_\+abstract\+\_\+model (\begin{DoxyParamCaption}\item[{}]{model }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Given a model class, returns a boolean True if it is abstract and False if it is not.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerest__framework_1_1utils_1_1model__meta_adbb845cb295d2c42b880910fffb655fb}\label{namespacerest__framework_1_1utils_1_1model__meta_adbb845cb295d2c42b880910fffb655fb}} 
+\index{rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}!FieldInfo@{FieldInfo}}
+\index{FieldInfo@{FieldInfo}!rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}}
+\doxysubsubsection{\texorpdfstring{FieldInfo}{FieldInfo}}
+{\footnotesize\ttfamily rest\+\_\+framework.\+utils.\+model\+\_\+meta.\+Field\+Info}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  namedtuple(\textcolor{stringliteral}{'FieldResult'}, [}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'pk'},  \textcolor{comment}{\# Model field instance}}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'fields'},  \textcolor{comment}{\# Dict of field name -\/> model field instance}}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'forward\_relations'},  \textcolor{comment}{\# Dict of field name -\/> RelationInfo}}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'reverse\_relations'},  \textcolor{comment}{\# Dict of field name -\/> RelationInfo}}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'fields\_and\_pk'},  \textcolor{comment}{\# Shortcut for 'pk' + 'fields'}}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'relations'}  \textcolor{comment}{\# Shortcut for 'forward\_relations' + 'reverse\_relations'}}
+\DoxyCodeLine{8 ])}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacerest__framework_1_1utils_1_1model__meta_a330c2665631fe02421c69ded28150128}\label{namespacerest__framework_1_1utils_1_1model__meta_a330c2665631fe02421c69ded28150128}} 
+\index{rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}!RelationInfo@{RelationInfo}}
+\index{RelationInfo@{RelationInfo}!rest\_framework.utils.model\_meta@{rest\_framework.utils.model\_meta}}
+\doxysubsubsection{\texorpdfstring{RelationInfo}{RelationInfo}}
+{\footnotesize\ttfamily rest\+\_\+framework.\+utils.\+model\+\_\+meta.\+Relation\+Info}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  namedtuple(\textcolor{stringliteral}{'RelationInfo'}, [}
+\DoxyCodeLine{2     \textcolor{stringliteral}{'model\_field'},}
+\DoxyCodeLine{3     \textcolor{stringliteral}{'related\_model'},}
+\DoxyCodeLine{4     \textcolor{stringliteral}{'to\_many'},}
+\DoxyCodeLine{5     \textcolor{stringliteral}{'to\_field'},}
+\DoxyCodeLine{6     \textcolor{stringliteral}{'has\_through\_model'},}
+\DoxyCodeLine{7     \textcolor{stringliteral}{'reverse'}}
+\DoxyCodeLine{8 ])}
+
+\end{DoxyCode}

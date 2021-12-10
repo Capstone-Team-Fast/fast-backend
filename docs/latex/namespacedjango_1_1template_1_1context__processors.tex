@@ -1,0 +1,69 @@
+\hypertarget{namespacedjango_1_1template_1_1context__processors}{}\doxysection{django.\+template.\+context\+\_\+processors Namespace Reference}
+\label{namespacedjango_1_1template_1_1context__processors}\index{django.template.context\_processors@{django.template.context\_processors}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1context__processors_ae7127b351b7ec02487a887102d5482c3}{csrf}} (request)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1context__processors_a9e111ee1b81568d69cacde884597af05}{debug}} (request)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_abc28dff80bcceb4b5916e97edf2e25d6}\label{namespacedjango_1_1template_1_1context__processors_abc28dff80bcceb4b5916e97edf2e25d6}} 
+def {\bfseries i18n} (request)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_a3c14c7424452cbcd6c2eb4bf956fc1b8}\label{namespacedjango_1_1template_1_1context__processors_a3c14c7424452cbcd6c2eb4bf956fc1b8}} 
+def {\bfseries tz} (request)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1context__processors_a30a1743abfdb39d5441883a0c04168aa}{static}} (request)
+\item 
+def \mbox{\hyperlink{namespacedjango_1_1template_1_1context__processors_a27d7b67bd87020936585fe70411222af}{media}} (request)
+\item 
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_a391148cd50a5ba2fe5fe2098cfe9cf02}\label{namespacedjango_1_1template_1_1context__processors_a391148cd50a5ba2fe5fe2098cfe9cf02}} 
+def {\bfseries request} (request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A set of request processors that return dictionaries to be merged into a
+template context. Each function takes the request object as its only parameter
+and returns a dictionary to add to the context.
+
+These are referenced from the 'context_processors' option of the configuration
+of a DjangoTemplates backend and used by RequestContext.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_ae7127b351b7ec02487a887102d5482c3}\label{namespacedjango_1_1template_1_1context__processors_ae7127b351b7ec02487a887102d5482c3}} 
+\index{django.template.context\_processors@{django.template.context\_processors}!csrf@{csrf}}
+\index{csrf@{csrf}!django.template.context\_processors@{django.template.context\_processors}}
+\doxysubsubsection{\texorpdfstring{csrf()}{csrf()}}
+{\footnotesize\ttfamily def django.\+template.\+context\+\_\+processors.\+csrf (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Context processor that provides a CSRF token, or the string 'NOTPROVIDED' if
+it has not been provided by either a view decorator or the middleware
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_a9e111ee1b81568d69cacde884597af05}\label{namespacedjango_1_1template_1_1context__processors_a9e111ee1b81568d69cacde884597af05}} 
+\index{django.template.context\_processors@{django.template.context\_processors}!debug@{debug}}
+\index{debug@{debug}!django.template.context\_processors@{django.template.context\_processors}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily def django.\+template.\+context\+\_\+processors.\+debug (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Return context variables helpful for debugging.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_a27d7b67bd87020936585fe70411222af}\label{namespacedjango_1_1template_1_1context__processors_a27d7b67bd87020936585fe70411222af}} 
+\index{django.template.context\_processors@{django.template.context\_processors}!media@{media}}
+\index{media@{media}!django.template.context\_processors@{django.template.context\_processors}}
+\doxysubsubsection{\texorpdfstring{media()}{media()}}
+{\footnotesize\ttfamily def django.\+template.\+context\+\_\+processors.\+media (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add media-related context variables to the context.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedjango_1_1template_1_1context__processors_a30a1743abfdb39d5441883a0c04168aa}\label{namespacedjango_1_1template_1_1context__processors_a30a1743abfdb39d5441883a0c04168aa}} 
+\index{django.template.context\_processors@{django.template.context\_processors}!static@{static}}
+\index{static@{static}!django.template.context\_processors@{django.template.context\_processors}}
+\doxysubsubsection{\texorpdfstring{static()}{static()}}
+{\footnotesize\ttfamily def django.\+template.\+context\+\_\+processors.\+static (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add static-related context variables to the context.
+\end{DoxyVerb}
+ 

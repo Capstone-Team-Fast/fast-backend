@@ -1,0 +1,42 @@
+digraph "pip._vendor.chardet.charsetprober.CharSetProber"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.chardet.charsetprober.\lCharSetProber",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="pip._vendor.chardet.charsetgroupprober.\lCharSetGroupProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1charsetgroupprober_1_1_char_set_group_prober.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="pip._vendor.chardet.mbcsgroupprober.\lMBCSGroupProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1mbcsgroupprober_1_1_m_b_c_s_group_prober.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="pip._vendor.chardet.sbcsgroupprober.\lSBCSGroupProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1sbcsgroupprober_1_1_s_b_c_s_group_prober.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="pip._vendor.chardet.escprober.\lEscCharSetProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1escprober_1_1_esc_char_set_prober.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="pip._vendor.chardet.hebrewprober.\lHebrewProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1hebrewprober_1_1_hebrew_prober.html",tooltip="General ideas of the Hebrew charset recognition ###."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="pip._vendor.chardet.latin1prober.\lLatin1Prober",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1latin1prober_1_1_latin1_prober.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="pip._vendor.chardet.mbcharsetprober.\lMultiByteCharSetProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1mbcharsetprober_1_1_multi_byte_char_set_prober.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="pip._vendor.chardet.big5prober.\lBig5Prober",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1big5prober_1_1_big5_prober.html",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="pip._vendor.chardet.cp949prober.\lCP949Prober",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1cp949prober_1_1_c_p949_prober.html",tooltip=" "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="pip._vendor.chardet.eucjpprober.\lEUCJPProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1eucjpprober_1_1_e_u_c_j_p_prober.html",tooltip=" "];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="pip._vendor.chardet.euckrprober.\lEUCKRProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1euckrprober_1_1_e_u_c_k_r_prober.html",tooltip=" "];
+  Node9 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="pip._vendor.chardet.euctwprober.\lEUCTWProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1euctwprober_1_1_e_u_c_t_w_prober.html",tooltip=" "];
+  Node9 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="pip._vendor.chardet.gb2312prober.\lGB2312Prober",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1gb2312prober_1_1_g_b2312_prober.html",tooltip=" "];
+  Node9 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="pip._vendor.chardet.sjisprober.\lSJISProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1sjisprober_1_1_s_j_i_s_prober.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="pip._vendor.chardet.sbcharsetprober.\lSingleByteCharSetProber",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1sbcharsetprober_1_1_single_byte_char_set_prober.html",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="pip._vendor.chardet.utf8prober.\lUTF8Prober",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1chardet_1_1utf8prober_1_1_u_t_f8_prober.html",tooltip=" "];
+}

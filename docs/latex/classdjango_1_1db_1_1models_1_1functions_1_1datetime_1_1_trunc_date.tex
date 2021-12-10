@@ -1,0 +1,70 @@
+\hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date}{}\doxysection{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Date Class Reference}
+\label{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date}\index{django.db.models.functions.datetime.TruncDate@{django.db.models.functions.datetime.TruncDate}}
+
+
+Inheritance diagram for django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Date\+:
+% FIG 0
+
+
+Collaboration diagram for django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Date\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_aefff5a148e8819f998e594cad77aafbd}{as\+\_\+sql}} (self, compiler, connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_a8fece3c54d1ce449bb33cf4be6ef03af}\label{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_a8fece3c54d1ce449bb33cf4be6ef03af}} 
+string {\bfseries kind} = \textquotesingle{}date\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_a27cdb21966e8154238b55cf01ea2d48f}\label{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_a27cdb21966e8154238b55cf01ea2d48f}} 
+string {\bfseries lookup\+\_\+name} = \textquotesingle{}date\textquotesingle{}
+\item 
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_acf6dace3336af6c58e614c7a2a11db04}\label{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_acf6dace3336af6c58e614c7a2a11db04}} 
+{\bfseries output\+\_\+field} = \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1fields_1_1_date_field}{Date\+Field}}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_aefff5a148e8819f998e594cad77aafbd}\label{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_date_aefff5a148e8819f998e594cad77aafbd}} 
+\index{django.db.models.functions.datetime.TruncDate@{django.db.models.functions.datetime.TruncDate}!as\_sql@{as\_sql}}
+\index{as\_sql@{as\_sql}!django.db.models.functions.datetime.TruncDate@{django.db.models.functions.datetime.TruncDate}}
+\doxysubsubsection{\texorpdfstring{as\_sql()}{as\_sql()}}
+{\footnotesize\ttfamily def django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Date.\+as\+\_\+sql (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{compiler,  }\item[{}]{connection }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Responsible for returning a (sql, [params]) tuple to be included
+in the current query.
+
+Different backends can provide their own implementation, by
+providing an `as_{vendor}` method and patching the Expression:
+
+```
+def override_as_sql(self, compiler, connection):
+    # custom logic
+    return super().as_sql(compiler, connection)
+setattr(Expression, 'as_' + connection.vendor, override_as_sql)
+```
+
+Arguments:
+ * compiler: the query compiler responsible for generating the query.
+   Must have a compile method, returning a (sql, [params]) tuple.
+   Calling compiler(value) will return a quoted `value`.
+
+ * connection: the database connection used for the current query.
+
+Return: (sql, params)
+  Where `sql` is a string containing ordered sql parameters to be
+  replaced with the elements of the list `params`.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classdjango_1_1db_1_1models_1_1functions_1_1datetime_1_1_trunc_base_a2875100800e5a5268ca5dcb704e259ac}{django.\+db.\+models.\+functions.\+datetime.\+Trunc\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+venv/\+Lib/site-\/packages/django/db/models/functions/datetime.\+py\end{DoxyCompactItemize}
