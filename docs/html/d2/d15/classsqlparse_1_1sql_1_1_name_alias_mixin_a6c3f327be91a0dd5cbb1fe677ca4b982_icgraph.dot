@@ -1,0 +1,44 @@
+digraph "sqlparse.sql.NameAliasMixin.get_alias"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="sqlparse.sql.NameAliasMixin.get\l_alias",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sqlparse.sql.TokenList.get_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a058cdb380fa6143831cad07e32a84c07",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.renderers.\lBrowsableAPIRenderer.get\l_context",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d45/classrest__framework_1_1renderers_1_1_browsable_a_p_i_renderer.html#a7f197df21e6d1696d478ad887aae5f44",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.renderers.\lBrowsableAPIRenderer.render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d45/classrest__framework_1_1renderers_1_1_browsable_a_p_i_renderer.html#aa2ef416d8d47a555b8811e3924fa8c94",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.template.loader\l_tags.BlockNode.render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dfa/classdjango_1_1template_1_1loader__tags_1_1_block_node.html#a840c8b5b54cff3a1cba18e73de19b508",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.template.base.Node.render\l_annotated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d54/classdjango_1_1template_1_1base_1_1_node.html#a9d62819c7eb55a5f470cb8cd8ea3aa27",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rest_framework.renderers.\lAdminRenderer.render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d9f/classrest__framework_1_1renderers_1_1_admin_renderer.html#a9e255d58b131c5961d2b6b6fae15c3db",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.forms.widgets.Widget.render",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d5e/classdjango_1_1forms_1_1widgets_1_1_widget.html#a27300ff55e61161d68d823c090e4ed35",tooltip=" "];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="setuptools._distutils.dist.\lDistributionMetadata.write\l_pkg_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d53/classsetuptools_1_1__distutils_1_1dist_1_1_distribution_metadata.html#a921d583635d0bc0574df79343e6ad60d",tooltip=" "];
+  Node9 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="setuptools._distutils.dist.\lDistributionMetadata.write\l_pkg_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d53/classsetuptools_1_1__distutils_1_1dist_1_1_distribution_metadata.html#a0991ae41b387cdfc66e684f1dcd7037f",tooltip=" "];
+  Node10 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="sqlparse.sql.TokenList.has\l_alias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#aa5f850b95a684fb62f57f5a207389dce",tooltip=" "];
+  Node11 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

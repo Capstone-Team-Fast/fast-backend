@@ -1,0 +1,19 @@
+digraph "pip._internal.commands.install.InstallCommand"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.commands.install.\lInstallCommand",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.cli.req\l_command.RequirementCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/classpip_1_1__internal_1_1cli_1_1req__command_1_1_requirement_command.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.cli.req\l_command.IndexGroupCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d79/classpip_1_1__internal_1_1cli_1_1req__command_1_1_index_group_command.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.cli.base\l_command.Command",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/da8/classpip_1_1__internal_1_1cli_1_1base__command_1_1_command.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._internal.cli.command\l_context.CommandContextMixIn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d41/classpip_1_1__internal_1_1cli_1_1command__context_1_1_command_context_mix_in.html",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.cli.req\l_command.SessionCommandMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d76/classpip_1_1__internal_1_1cli_1_1req__command_1_1_session_command_mixin.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,47 @@
+digraph "rest_framework.routers.BaseRouter.get_urls"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.routers.Base\lRouter.get_urls",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.sitemaps.\lSitemap._urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d3f/classdjango_1_1contrib_1_1sitemaps_1_1_sitemap.html#aa7dfb19858a7094e39241ecb9bf54829",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.admin.options.\lModelAdmin.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#abb863eb8bd16bc64644d6648d1ab0995",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.admin.sites.\lAdminSite.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dba/classdjango_1_1contrib_1_1admin_1_1sites_1_1_admin_site.html#a8da6fce50427f7e2f99ed13dc21c14e3",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.auth.admin.\lUserAdmin.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3c/classdjango_1_1contrib_1_1auth_1_1admin_1_1_user_admin.html#ab8885c1442b762a4155bc698fafe1974",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rest_framework.routers.Simple\lRouter.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#aa4b53a859fc3d34aa8a876b00ce2489a",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rest_framework.routers.Simple\lRouter.get_lookup_regex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#a686c89a36bb155b027b0fae65d154bd3",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rest_framework.routers.Simple\lRouter.get_method_map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#a0df7173033513860c84e95b50bbb86f5",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rest_framework.routers.Simple\lRouter.get_routes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#aa62bf0350e7f17f9facdf51ca4c3b0a7",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="rest_framework.routers.Simple\lRouter._get_dynamic_route",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#addc97ee80b68f80a1373f008ab19a600",tooltip=" "];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="rest_framework.routers.escape\l_curly_brackets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/de7/namespacerest__framework_1_1routers.html#adb4e57d7f28754e2d17ee39fa3185aff",tooltip=" "];
+  Node9 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="rest_framework.routers.flatten",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/de7/namespacerest__framework_1_1routers.html#ad49a5ef3a14d7c59e5c08fed51381b59",tooltip=" "];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="rest_framework.routers.Default\lRouter.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/da0/classrest__framework_1_1routers_1_1_default_router.html#a6be2b67be2c197ce68a0983ef392def4",tooltip=" "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="rest_framework.routers.Default\lRouter.get_api_root_view",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/da0/classrest__framework_1_1routers_1_1_default_router.html#ac926b93175e0a85e231a21b451e4b869",tooltip=" "];
+  Node14 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.contrib.gis.sitemaps.kml.\lKMLSitemap.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dea/classdjango_1_1contrib_1_1gis_1_1sitemaps_1_1kml_1_1_k_m_l_sitemap.html#a7d19135707b0e36b9c86972b98212367",tooltip=" "];
+  Node15 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="django.contrib.sitemaps.\lSitemap.get_urls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d3f/classdjango_1_1contrib_1_1sitemaps_1_1_sitemap.html#a8b6269d0e21f58f5b08296b8ee703ce3",tooltip=" "];
+}

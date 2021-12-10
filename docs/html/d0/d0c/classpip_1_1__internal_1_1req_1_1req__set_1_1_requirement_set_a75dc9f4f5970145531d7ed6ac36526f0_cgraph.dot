@@ -1,0 +1,15 @@
+digraph "pip._internal.req.req_set.RequirementSet.add_requirement"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.req.req\l_set.RequirementSet.add\l_requirement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.req.req\l_set.RequirementSet.add\l_named_requirement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0c/classpip_1_1__internal_1_1req_1_1req__set_1_1_requirement_set.html#a70686d50122dba1ecd53d844aa346220",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.req.req\l_set.RequirementSet.add\l_unnamed_requirement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0c/classpip_1_1__internal_1_1req_1_1req__set_1_1_requirement_set.html#ad37f233a59ffe8b49c43a6134bd8d2eb",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.req.req\l_set.RequirementSet.get\l_requirement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0c/classpip_1_1__internal_1_1req_1_1req__set_1_1_requirement_set.html#ac157ecb51d66efd369fcd0dedd2c4b7d",tooltip=" "];
+}

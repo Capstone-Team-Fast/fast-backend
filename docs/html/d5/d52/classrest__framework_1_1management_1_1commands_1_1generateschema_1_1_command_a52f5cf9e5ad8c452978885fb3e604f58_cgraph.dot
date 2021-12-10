@@ -1,0 +1,15 @@
+digraph "rest_framework.management.commands.generateschema.Command.handle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.management.commands.generateschema.\lCommand.handle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.management.commands.generateschema.\lCommand.get_generator_class",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d52/classrest__framework_1_1management_1_1commands_1_1generateschema_1_1_command.html#a47f25dee50a041986bc791f8d0f6ce7c",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.management.commands.generateschema.\lCommand.get_mode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d52/classrest__framework_1_1management_1_1commands_1_1generateschema_1_1_command.html#a3ef84e054ac464560ae339c2e09209d2",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.management.commands.generateschema.\lCommand.get_renderer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d52/classrest__framework_1_1management_1_1commands_1_1generateschema_1_1_command.html#a1ada6d44b3e80bb11081819cb00796d3",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,16 @@
+digraph "setuptools._distutils.sysconfig.get_makefile_filename"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools._distutils.sysconfig.get\l_makefile_filename",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools._distutils.sysconfig.get\l_python_lib",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a1ec7e0c564e204dd18365fb4a5dfb46d",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools._distutils.sysconfig.get\l_python_version",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a89f553c60c49aa98ccb15aeedb84c43b",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

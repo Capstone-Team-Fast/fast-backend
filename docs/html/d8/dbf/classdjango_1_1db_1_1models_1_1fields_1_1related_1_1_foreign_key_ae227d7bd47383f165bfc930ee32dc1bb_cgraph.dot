@@ -1,0 +1,11 @@
+digraph "django.db.models.fields.related.ForeignKey.target_field"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.models.fields.related.\lForeignKey.target_field",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.fields.related.\lForeignObject.foreign_related_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dbd/classdjango_1_1db_1_1models_1_1fields_1_1related_1_1_foreign_object.html#ae306b3e0f856b2b23fd7d819a2206f81",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

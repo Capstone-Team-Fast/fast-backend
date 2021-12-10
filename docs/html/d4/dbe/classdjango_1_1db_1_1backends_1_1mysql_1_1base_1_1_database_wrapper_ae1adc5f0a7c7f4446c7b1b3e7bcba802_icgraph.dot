@@ -1,0 +1,15 @@
+digraph "django.db.backends.mysql.base.DatabaseWrapper.disable_constraint_checking"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.db.backends.mysql.base.\lDatabaseWrapper.disable_constraint\l_checking",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.backends.mysql.base.\lDatabaseWrapper.check_constraints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dbe/classdjango_1_1db_1_1backends_1_1mysql_1_1base_1_1_database_wrapper.html#a670daf984262e9e55113b0c1eaee7dc4",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.backends.base.base.\lBaseDatabaseWrapper.constraint\l_checks_disabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d62/classdjango_1_1db_1_1backends_1_1base_1_1base_1_1_base_database_wrapper.html#ab8c5e2ba641006ec98caa227ed5edbaf",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

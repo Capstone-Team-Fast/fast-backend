@@ -1,0 +1,15 @@
+digraph "django.db.migrations.executor.MigrationExecutor.detect_soft_applied"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.db.migrations.executor.\lMigrationExecutor.detect\l_soft_applied",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.migrations.executor.\lMigrationExecutor.apply_migration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/classdjango_1_1db_1_1migrations_1_1executor_1_1_migration_executor.html#a1e1eb6d938bf7835a7e11f8e27e98060",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.migrations.executor.\lMigrationExecutor.migrate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/classdjango_1_1db_1_1migrations_1_1executor_1_1_migration_executor.html#a514f979505a984f2f64cac3e53409c63",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

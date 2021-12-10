@@ -1,0 +1,12 @@
+digraph "pip._internal.network.download.sanitize_content_filename"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pip._internal.network.download.sanitize\l_content_filename",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.network.download.parse\l_content_disposition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d20/namespacepip_1_1__internal_1_1network_1_1download.html#a86fd58558cc366a62a60fd8368675c6b",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

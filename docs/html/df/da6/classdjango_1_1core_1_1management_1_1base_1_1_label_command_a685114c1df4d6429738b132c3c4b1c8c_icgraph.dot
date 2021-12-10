@@ -1,0 +1,18 @@
+digraph "django.core.management.base.LabelCommand.add_arguments"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.core.management.base.\lLabelCommand.add_arguments",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.core.management.base.\lBaseCommand.create_parser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/da3/classdjango_1_1core_1_1management_1_1base_1_1_base_command.html#ab4e1c4edfd287809f23b694a5ce3cb2c",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.core.management.base.\lBaseCommand.print_help",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/da3/classdjango_1_1core_1_1management_1_1base_1_1_base_command.html#a6215bea942013c5a060e5a21c0c40e95",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.core.management.base.\lBaseCommand.run_from_argv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/da3/classdjango_1_1core_1_1management_1_1base_1_1_base_command.html#a101b82321848e3c6056974fceb4ca635",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

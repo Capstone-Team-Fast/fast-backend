@@ -1,0 +1,11 @@
+digraph "pip._internal.resolution.resolvelib.requirements.RequiresPythonRequirement.name"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.resolution.resolvelib.requirements.\lRequiresPythonRequirement.name",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.req.req\l_install.InstallRequirement.specifier",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/daa/classpip_1_1__internal_1_1req_1_1req__install_1_1_install_requirement.html#acae90848c7cc902a1454d87d4697647b",tooltip=" "];
+}

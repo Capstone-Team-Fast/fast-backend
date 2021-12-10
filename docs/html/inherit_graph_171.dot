@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3440 [label="socketserver.ThreadingMixIn",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3440 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.core.servers.basehttp.\lThreadedWSGIServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d14/classdjango_1_1core_1_1servers_1_1basehttp_1_1_threaded_w_s_g_i_server.html",tooltip=" "];
+  Node3661 [label="simple_server.WSGIServer",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3661 -> Node3662 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3662 [label="django.core.servers.basehttp.\lWSGIServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dcc/classdjango_1_1core_1_1servers_1_1basehttp_1_1_w_s_g_i_server.html",tooltip=" "];
+  Node3662 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

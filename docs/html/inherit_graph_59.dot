@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.contrib.auth.password\l_validation.UserAttributeSimilarity\lValidator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/df5/classdjango_1_1contrib_1_1auth_1_1password__validation_1_1_user_attribute_similarity_validator.html",tooltip=" "];
+}

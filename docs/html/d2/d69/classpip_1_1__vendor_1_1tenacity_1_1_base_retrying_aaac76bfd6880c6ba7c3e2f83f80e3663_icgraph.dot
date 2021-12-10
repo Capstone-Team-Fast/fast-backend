@@ -1,0 +1,24 @@
+digraph "pip._vendor.tenacity.BaseRetrying.statistics"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pip._vendor.tenacity.Base\lRetrying.statistics",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.gdal.raster.band.\lGDALBand.max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4d/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1band_1_1_g_d_a_l_band.html#ac19c2fb02df85b563876b0c0ab70a3d6",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.gdal.raster.band.\lGDALBand.mean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4d/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1band_1_1_g_d_a_l_band.html#adebfb40c0e724757bfb3292a86d4d192",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.gis.gdal.raster.band.\lGDALBand.min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4d/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1band_1_1_g_d_a_l_band.html#ab1e4fa8f3929b47d2726da65638b661c",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.gis.gdal.raster.band.\lGDALBand.std",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4d/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1band_1_1_g_d_a_l_band.html#ac422482b34548a2c8e89aa3bf1d2ed9a",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.tenacity.Base\lRetrying.wraps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d69/classpip_1_1__vendor_1_1tenacity_1_1_base_retrying.html#ac425e76589ab1ebafc9603fc6f5d6784",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

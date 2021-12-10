@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1797 [label="httplib.HTTPS",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1797 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pip._vendor.distlib.util.\lHTTPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/de7/classpip_1_1__vendor_1_1distlib_1_1util_1_1_h_t_t_p_s.html",tooltip=" "];
+}

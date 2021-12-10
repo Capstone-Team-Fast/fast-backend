@@ -1,0 +1,20 @@
+digraph "pip._vendor.urllib3.exceptions.SecurityWarning"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.urllib3.exceptions.\lSecurityWarning",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.urllib3.exceptions.\lHTTPWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/db4/classpip_1_1__vendor_1_1urllib3_1_1exceptions_1_1_h_t_t_p_warning.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Warning",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.urllib3.exceptions.\lInsecurePlatformWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db0/classpip_1_1__vendor_1_1urllib3_1_1exceptions_1_1_insecure_platform_warning.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.urllib3.exceptions.\lInsecureRequestWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dae/classpip_1_1__vendor_1_1urllib3_1_1exceptions_1_1_insecure_request_warning.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.urllib3.exceptions.\lSubjectAltNameWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6f/classpip_1_1__vendor_1_1urllib3_1_1exceptions_1_1_subject_alt_name_warning.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.urllib3.exceptions.\lSystemTimeWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dac/classpip_1_1__vendor_1_1urllib3_1_1exceptions_1_1_system_time_warning.html",tooltip=" "];
+}

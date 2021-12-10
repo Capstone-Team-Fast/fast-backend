@@ -1,0 +1,15 @@
+digraph "pip._vendor.pkg_resources.Distribution.get_entry_map"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.pkg_resources.\lDistribution.get_entry_map",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.pkg_resources.\lDistribution._get_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/ddb/classpip_1_1__vendor_1_1pkg__resources_1_1_distribution.html#afb412e48215aa26610c2b5e8a2f7dedf",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pkg_resources.Distribution.\l_get_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d25/classpkg__resources_1_1_distribution.html#aef94e0673364008155aef7b4d2475601",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.database.\lEggInfoDistribution._get\l_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d4f/classpip_1_1__vendor_1_1distlib_1_1database_1_1_egg_info_distribution.html#ae8dd9d5435eea9e26a2ed5242e9fafd0",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

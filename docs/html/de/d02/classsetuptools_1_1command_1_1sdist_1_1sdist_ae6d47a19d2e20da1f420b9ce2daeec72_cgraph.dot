@@ -1,0 +1,11 @@
+digraph "setuptools.command.sdist.sdist.make_distribution"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.command.sdist.sdist.make\l_distribution",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.command.sdist.sdist.\l_remove_os_link",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/classsetuptools_1_1command_1_1sdist_1_1sdist.html#a39166804b37dc6ed81d6b8ebfe64a7c8",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

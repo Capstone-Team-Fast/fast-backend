@@ -1,0 +1,13 @@
+digraph "setuptools.sandbox.DirectorySandbox.open"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.sandbox.Directory\lSandbox.open",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.sandbox.Directory\lSandbox._ok",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d0b/classsetuptools_1_1sandbox_1_1_directory_sandbox.html#a6e4163b46171da2cf495a55cbfec2165",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.sandbox.Directory\lSandbox._violation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d0b/classsetuptools_1_1sandbox_1_1_directory_sandbox.html#aab414190b69d78aed54e357f5b724a4c",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

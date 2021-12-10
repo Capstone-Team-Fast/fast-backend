@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="neo4j.io._common.Response",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d18/classneo4j_1_1io_1_1__common_1_1_response.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="neo4j.io._common.CommitResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d21/classneo4j_1_1io_1_1__common_1_1_commit_response.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.io._common.InitResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d77/classneo4j_1_1io_1_1__common_1_1_init_response.html",tooltip=" "];
+}

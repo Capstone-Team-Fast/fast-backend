@@ -1,0 +1,15 @@
+digraph "shapely.affinity.skew"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shapely.affinity.skew",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shapely.affinity.affine\l_transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#acdde8225c7a319feea21e28e879e9069",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shapely.affinity.interpret\l_origin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#a18e57d283665b042cc701d1aa622f597",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

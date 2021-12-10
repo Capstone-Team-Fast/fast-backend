@@ -1,0 +1,54 @@
+digraph "django.contrib.gis.geos.collections.GeometryCollection.__init__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.gis.geos.collections.\lGeometryCollection.__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.geos.mutable\l_list.ListMixin._check_allowed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0e/classdjango_1_1contrib_1_1gis_1_1geos_1_1mutable__list_1_1_list_mixin.html#ab2c45f75fdb6bbd438ebd265b963d690",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.geos.collections.\lGeometryCollection._create_collection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d82/classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection.html#aae81a2484dea8e3e34e96e53536ca9c5",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.gis.geos.collections.\lGeometryCollection._get_single\l_internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d82/classdjango_1_1contrib_1_1gis_1_1geos_1_1collections_1_1_geometry_collection.html#ab78f97402100b2738396cd68249e7475",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.gis.geos.polygon.\lPolygon._get_single_internal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d1d/classdjango_1_1contrib_1_1gis_1_1geos_1_1polygon_1_1_polygon.html#a553a5806b8372bce988dfac335a5daaf",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.gis.geos.geometry.\lGEOSGeometryBase.num_geom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d97/classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_base.html#a07cc6d2b86517e449597aef7755903be",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.gis.ptr.CPointer\lBase.ptr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc5/classdjango_1_1contrib_1_1gis_1_1ptr_1_1_c_pointer_base.html#a234177319d249573c7dd6508c5ca9095",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.contrib.gis.gdal.raster.source.\lGDALRaster.srid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dff/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1source_1_1_g_d_a_l_raster.html#abb1a0c5b76ca4f874311778d1317b753",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.contrib.gis.db.backends.base.models.\lSpatialRefSysMixin.srs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d73/classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1base_1_1models_1_1_spatial_ref_sys_mixin.html#a872cc376b9ec7a9d3e0f5d3529890ef5",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.contrib.gis.gdal.layer.\lLayer.srs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d84/classdjango_1_1contrib_1_1gis_1_1gdal_1_1layer_1_1_layer.html#ad884cafef725038c4ca1d5d8cedd62ef",tooltip=" "];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.contrib.gis.geos.geometry.\lGEOSGeometryBase.srs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d97/classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_base.html#ac6e2fa1f2df958d4cdcf458cbe80931e",tooltip=" "];
+  Node9 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.contrib.gis.db.backends.oracle.models.\lOracleSpatialRefSys.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d01/classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1oracle_1_1models_1_1_oracle_spatial_ref_sys.html#a33a4d6d15ef9343433e22b0e054fbbb9",tooltip=" "];
+  Node9 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="django.contrib.gis.db.backends.postgis.models.\lPostGISSpatialRefSys.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0c/classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1postgis_1_1models_1_1_post_g_i_s_spatial_ref_sys.html#af94c6e5b425c4e4970359efa3d18b462",tooltip=" "];
+  Node9 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="django.contrib.gis.db.backends.spatialite.models.\lSpatialiteSpatialRefSys.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6c/classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1models_1_1_spatialite_spatial_ref_sys.html#af3b227001855b7da989bec791b74522b",tooltip=" "];
+  Node9 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.contrib.gis.gdal.envelope.\lEnvelope.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d58/classdjango_1_1contrib_1_1gis_1_1gdal_1_1envelope_1_1_envelope.html#a924f9f4b5a76ff41cd09a0f85a4abfd3",tooltip=" "];
+  Node9 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="django.contrib.gis.gdal.geometries.\lOGRGeometry.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d78/classdjango_1_1contrib_1_1gis_1_1gdal_1_1geometries_1_1_o_g_r_geometry.html#a194b6fa1ac4083f71d6c37a5ee8e7e93",tooltip=" "];
+  Node9 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="django.contrib.gis.gdal.srs.\lSpatialReference.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dda/classdjango_1_1contrib_1_1gis_1_1gdal_1_1srs_1_1_spatial_reference.html#a47da10621a8069002296ed1d3695e50e",tooltip=" "];
+  Node9 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="django.contrib.gis.geos.geometry.\lGEOSGeometryBase.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d97/classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_g_e_o_s_geometry_base.html#a71810fffa3b3b28251d1c85fc886fa02",tooltip=" "];
+  Node9 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="shapely.geometry.base.Base\lGeometry.wkt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d41/classshapely_1_1geometry_1_1base_1_1_base_geometry.html#abf0b9711eb517c381bb636ef058feeb4",tooltip=" "];
+  Node19 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="django.contrib.gis.gdal.srs.\lSpatialReference.srid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dda/classdjango_1_1contrib_1_1gis_1_1gdal_1_1srs_1_1_spatial_reference.html#a0cc788e40b30278bebe00a9146de2fbf",tooltip=" "];
+  Node1 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="django.contrib.gis.geos.prototypes.io.\lWKBWriter.srid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db5/classdjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1io_1_1_w_k_b_writer.html#af41f8fab147304182f500da25e0a4bda",tooltip=" "];
+}

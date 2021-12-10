@@ -1,0 +1,52 @@
+digraph "psycopg2.pool.AbstractConnectionPool.__init__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="psycopg2.pool.AbstractConnection\lPool.__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.work.Workspace.\l_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0d/classneo4j_1_1work_1_1_workspace.html#a39763623f4f67c8d7d2f3f206b49e9e2",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neo4j.work.simple.Session.\l_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d69/classneo4j_1_1work_1_1simple_1_1_session.html#a1f2e91597f64e8fe3c91ece0f2168d64",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="psycopg2.pool.AbstractConnection\lPool._connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d73/classpsycopg2_1_1pool_1_1_abstract_connection_pool.html#a32e8bbfdcb6a476b4f8af96fbc36ffc5",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="psycopg2.pool.AbstractConnection\lPool._getkey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d73/classpsycopg2_1_1pool_1_1_abstract_connection_pool.html#afbffeb41d8411e175d35df2627a71b34",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.gis.geos.geometry.\lLinearGeometryMixin.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d56/classdjango_1_1contrib_1_1gis_1_1geos_1_1geometry_1_1_linear_geometry_mixin.html#af3191ba60c38539950aae62ae5580909",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.gis.ptr.CPointer\lBase.ptr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc5/classdjango_1_1contrib_1_1gis_1_1ptr_1_1_c_pointer_base.html#a234177319d249573c7dd6508c5ca9095",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.core.files.utils.\lFileProxyMixin.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dc9/classdjango_1_1core_1_1files_1_1utils_1_1_file_proxy_mixin.html#af092d7e2cbd4ba2482ab29203e378b23",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.db.models.fields.files.\lFieldFile.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d02/classdjango_1_1db_1_1models_1_1fields_1_1files_1_1_field_file.html#af3b8e8d3a0113157819b6c44dd6ee7f4",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="neo4j.io.Bolt.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dec/classneo4j_1_1io_1_1_bolt.html#a10aee2620e74eac58be141a5edf5e52c",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="neo4j.io._bolt3.Bolt3.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d66/classneo4j_1_1io_1_1__bolt3_1_1_bolt3.html#a8faf54e60dca83ed95c0a0c0a0d8283d",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="neo4j.io._bolt4.Bolt4x0.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dd8/classneo4j_1_1io_1_1__bolt4_1_1_bolt4x0.html#a225de1a95899b9e4983883bac62cbe1f",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="neo4j.work.transaction.Transaction.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/da3/classneo4j_1_1work_1_1transaction_1_1_transaction.html#ad4ce83d7cc0b1f935426ec77ca11cf8e",tooltip=" "];
+  Node13 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="neobolt.direct.Connection.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db4/classneobolt_1_1direct_1_1_connection.html#a165d22880ed85bcbfc4609f24e4b2b95",tooltip=" "];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="neobolt.direct.AbstractConnection\lPool.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dec/classneobolt_1_1direct_1_1_abstract_connection_pool.html#a554145fd4502cab0def40d197d975010",tooltip=" "];
+  Node15 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="pip._internal.network.lazy\l_wheel.LazyZipOverHTTP.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d67/classpip_1_1__internal_1_1network_1_1lazy__wheel_1_1_lazy_zip_over_h_t_t_p.html#a9b81a2e658e40d9ca0f0e41c5b874e44",tooltip=" "];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="setuptools.sandbox.Directory\lSandbox._file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d0b/classsetuptools_1_1sandbox_1_1_directory_sandbox.html#aebaa4bbc5882d7bfe9bbb0b60c598d10",tooltip=" "];
+  Node16 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="pip._vendor.colorama.ansitowin32.\lStreamWrapper.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d37/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_stream_wrapper.html#a6d3234e192b23abc051af465d71fb399",tooltip=" "];
+  Node1 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="pip._vendor.urllib3.response.\lHTTPResponse.closed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d5a/classpip_1_1__vendor_1_1urllib3_1_1response_1_1_h_t_t_p_response.html#a0d284ed4e05cc604f96639e3f1d02048",tooltip=" "];
+  Node1 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="psycopg2.connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d28/namespacepsycopg2.html#a6993e83efd857982cad3ae52d173a3a0",tooltip=" "];
+  Node20 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

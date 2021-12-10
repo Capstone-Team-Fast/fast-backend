@@ -1,0 +1,13 @@
+digraph "django.contrib.staticfiles.handlers.ASGIStaticFilesHandler.__call__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.staticfiles.handlers.\lASGIStaticFilesHandler.__call__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.staticfiles.handlers.\lStaticFilesHandlerMixin._should_handle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd5/classdjango_1_1contrib_1_1staticfiles_1_1handlers_1_1_static_files_handler_mixin.html#a0d41a2bc396d5484ff7cbe57b942f8f4",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.test.testcases.FSFiles\lHandler._should_handle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d70/classdjango_1_1test_1_1testcases_1_1_f_s_files_handler.html#ae9613eacc43d96b802a5d3333da7f356",tooltip=" "];
+}

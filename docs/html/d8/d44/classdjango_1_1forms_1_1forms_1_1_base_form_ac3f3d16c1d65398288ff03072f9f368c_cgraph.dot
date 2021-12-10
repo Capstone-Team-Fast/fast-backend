@@ -1,0 +1,12 @@
+digraph "django.forms.forms.BaseForm.visible_fields"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.forms.forms.BaseForm.visible\l_fields",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.forms.forms.BaseForm.hidden\l_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d44/classdjango_1_1forms_1_1forms_1_1_base_form.html#a733ea1e39aa96dfb2f10fa115762bb09",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

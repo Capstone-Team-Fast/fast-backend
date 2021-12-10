@@ -1,0 +1,23 @@
+digraph "asgiref.testing.ApplicationCommunicator.wait"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="asgiref.testing.Application\lCommunicator.wait",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.runner.Remote\lTestResult.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d66/classdjango_1_1test_1_1runner_1_1_remote_test_result.html#acb5c68b249c6a573f239dc63a9893532",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.utils.autoreload.\lBaseReloader.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db4/classdjango_1_1utils_1_1autoreload_1_1_base_reloader.html#a223687cdfa975bfa1121d09c3e343718",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.utils.autoreload.\lWatchmanReloader.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d97/classdjango_1_1utils_1_1autoreload_1_1_watchman_reloader.html#ad6b4c677e064da00c74b43e434397254",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="neo4j.debug.Watcher.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d7d/classneo4j_1_1debug_1_1_watcher.html#a80a785b4e68ee1ea8d6f06fb2c1a846a",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="neobolt.diagnostics.Watcher.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d9f/classneobolt_1_1diagnostics_1_1_watcher.html#a328d84b093001a31308b1f5c13f0ca3e",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.distlib.util.\lProgress.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8e/classpip_1_1__vendor_1_1distlib_1_1util_1_1_progress.html#a2758af67e089f3caaf3ff8c713e53c11",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="asgiref.testing.Application\lCommunicator.stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d46/classasgiref_1_1testing_1_1_application_communicator.html#a7843fc07220085225cb782ff7cabc442",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

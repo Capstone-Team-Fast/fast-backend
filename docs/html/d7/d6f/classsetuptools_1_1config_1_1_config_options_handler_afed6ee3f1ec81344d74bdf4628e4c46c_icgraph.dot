@@ -1,0 +1,19 @@
+digraph "setuptools.config.ConfigOptionsHandler.parse_section_packages__find"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="setuptools.config.Config\lOptionsHandler.parse_section\l_packages__find",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.config.Config\lOptionsHandler.parsers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/classsetuptools_1_1config_1_1_config_options_handler.html#a84db64d7a8a64c2816c2967a1ba1a486",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.config.Config\lHandler.parsers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#aae6195fe85e3caf2da8bf0b41644e234",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.request.Request.successful\l_authenticator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d48/classrest__framework_1_1request_1_1_request.html#ad80ff174e3b5f114b95b2b0cbb67def5",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

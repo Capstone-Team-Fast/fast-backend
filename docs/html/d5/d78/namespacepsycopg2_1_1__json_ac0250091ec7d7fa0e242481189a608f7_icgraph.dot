@@ -1,0 +1,16 @@
+digraph "psycopg2._json.register_json"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="psycopg2._json.register_json",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="psycopg2._json.register\l_default_json",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d78/namespacepsycopg2_1_1__json.html#af7164c5bc7d1223f601eef273ff2c2ca",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="psycopg2._json.register\l_default_jsonb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d78/namespacepsycopg2_1_1__json.html#ab4b647baf57d905ee1fc2600d0ead5a5",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,18 @@
+digraph "asgiref.server.StatelessServer.get_or_create_application_instance"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="asgiref.server.Stateless\lServer.get_or_create_application\l_instance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Application instance management."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="asgiref.server.Stateless\lServer.application_send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d61/classasgiref_1_1server_1_1_stateless_server.html#a6f1266212fa7da08d4c616e0d68fdb34",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="asgiref.server.Stateless\lServer.delete_oldest_application\l_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d61/classasgiref_1_1server_1_1_stateless_server.html#acedbc4b394293ff032be824b0ebc205d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="asgiref.server.Stateless\lServer.delete_application\l_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d61/classasgiref_1_1server_1_1_stateless_server.html#a189dc220a846a8daaed9f8c9fddf32be",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

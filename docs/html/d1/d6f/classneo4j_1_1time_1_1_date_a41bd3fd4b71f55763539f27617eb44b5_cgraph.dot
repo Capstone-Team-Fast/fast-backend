@@ -1,0 +1,13 @@
+digraph "neo4j.time.Date.from_ordinal"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="neo4j.time.Date.from\l_ordinal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.time.Date.__new",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6f/classneo4j_1_1time_1_1_date.html#a9b4cba54f01b690074391e0cb169c2d3",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neo4j.time.Time.__new",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d2a/classneo4j_1_1time_1_1_time.html#aac5692086e6276ca4d35ce287937aa16",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

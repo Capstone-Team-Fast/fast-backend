@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3101 [label="PendingDeprecationWarning",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3101 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.utils.deprecation.\lRemovedInDjango41Warning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6a/classdjango_1_1utils_1_1deprecation_1_1_removed_in_django41_warning.html",tooltip=" "];
+  Node3101 -> Node3103 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3103 [label="rest_framework.RemovedIn\lDRF314Warning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d41/classrest__framework_1_1_removed_in_d_r_f314_warning.html",tooltip=" "];
+}

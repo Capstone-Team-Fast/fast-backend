@@ -1,0 +1,15 @@
+digraph "setuptools.dist.Distribution.parse_config_files"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.dist.Distribution.parse\l_config_files",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.dist.Distribution.\l_finalize_license_files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#a7ed3bf28c6be092aeaff059f8467711d",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.dist.Distribution.\l_finalize_requires",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#ac9a3734b77064ea1d1dc4836e3e1111a",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools.dist.Distribution.\l_parse_config_files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#a550eb5d1be372b070c840a2752c76094",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

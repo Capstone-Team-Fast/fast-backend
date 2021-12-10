@@ -1,0 +1,25 @@
+digraph "django.test.testcases.SimpleTestCase.debug"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.test.testcases.Simple\lTestCase.debug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.testcases.Simple\lTestCase.__call__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6b/classdjango_1_1test_1_1testcases_1_1_simple_test_case.html#afc43d209daeb0583a44d4499d8128a18",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.test.testcases.Simple\lTestCase._setup_and_call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6b/classdjango_1_1test_1_1testcases_1_1_simple_test_case.html#a3a2da7e431bc522899429533874d94ee",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.test.testcases.Simple\lTestCase._post_teardown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6b/classdjango_1_1test_1_1testcases_1_1_simple_test_case.html#a544867447b9c215daca6449e04a8d951",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.test.testcases.Transaction\lTestCase._post_teardown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d37/classdjango_1_1test_1_1testcases_1_1_transaction_test_case.html#a870dd8b52d90d04733e657abe9e53e44",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.test.testcases.Simple\lTestCase._pre_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6b/classdjango_1_1test_1_1testcases_1_1_simple_test_case.html#a02587c37e6ca76c017ff0fd704f0de83",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.test.testcases.Transaction\lTestCase._pre_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d37/classdjango_1_1test_1_1testcases_1_1_transaction_test_case.html#a1b0b05177f9fafc01f1e5f31250998a3",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.utils.autoreload.\lWatchmanReloader.client",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d97/classdjango_1_1utils_1_1autoreload_1_1_watchman_reloader.html#aac44e2e91b812e6bc637a4f2aec7ff6c",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

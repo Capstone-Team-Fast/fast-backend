@@ -1,0 +1,32 @@
+digraph "django.views.generic.dates.BaseTodayArchiveView"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.views.generic.dates.\lBaseTodayArchiveView",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.views.generic.dates.\lBaseDayArchiveView",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/de2/classdjango_1_1views_1_1generic_1_1dates_1_1_base_day_archive_view.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.views.generic.dates.\lYearMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/ddf/classdjango_1_1views_1_1generic_1_1dates_1_1_year_mixin.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" year_format" ,fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.views.generic.dates.\lMonthMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d58/classdjango_1_1views_1_1generic_1_1dates_1_1_month_mixin.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" month_format" ,fontname="Helvetica"];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.views.generic.dates.\lDayMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d20/classdjango_1_1views_1_1generic_1_1dates_1_1_day_mixin.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" day_format" ,fontname="Helvetica"];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.views.generic.dates.\lBaseDateListView",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d86/classdjango_1_1views_1_1generic_1_1dates_1_1_base_date_list_view.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.views.generic.list.\lMultipleObjectMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/db8/classdjango_1_1views_1_1generic_1_1list_1_1_multiple_object_mixin.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.views.generic.base.\lContextMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d6a/classdjango_1_1views_1_1generic_1_1base_1_1_context_mixin.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" page_kwarg" ,fontname="Helvetica"];
+  Node10 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.views.generic.dates.\lDateMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d82/classdjango_1_1views_1_1generic_1_1dates_1_1_date_mixin.html",tooltip=" "];
+  Node11 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.views.generic.base.View",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/ddc/classdjango_1_1views_1_1generic_1_1base_1_1_view.html",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" date_list_period" ,fontname="Helvetica"];
+}

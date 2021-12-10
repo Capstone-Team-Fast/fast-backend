@@ -1,0 +1,16 @@
+digraph "pip._vendor.pkg_resources.WorkingSet.resolve"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.pkg_resources.\lWorkingSet.resolve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.pkg_resources.\lWorkingSet.add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d4f/classpip_1_1__vendor_1_1pkg__resources_1_1_working_set.html#a721315d2a4a0a3ead71bf8d1b83261ce",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.pkg_resources.\lWorkingSet._added_new",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d4f/classpip_1_1__vendor_1_1pkg__resources_1_1_working_set.html#a8bad467ae767e4e25b9e90d91aca5c65",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pkg_resources.WorkingSet.\l_added_new",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d96/classpkg__resources_1_1_working_set.html#a19911c0ac0fd2a9a0f658a36141e3158",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

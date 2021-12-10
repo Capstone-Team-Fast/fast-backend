@@ -1,0 +1,32 @@
+digraph "setuptools.Command"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.Command",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="_Command",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.command.bdist\l_egg.bdist_egg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/daa/classsetuptools_1_1command_1_1bdist__egg_1_1bdist__egg.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools.command.easy\l_install.easy_install",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools.command.develop.develop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d3d/classsetuptools_1_1command_1_1develop_1_1develop.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="setuptools.command.egg\l_info.egg_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd5/classsetuptools_1_1command_1_1egg__info_1_1egg__info.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="setuptools.command.install\l_egg_info.install_egg_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d62/classsetuptools_1_1command_1_1install__egg__info_1_1install__egg__info.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="setuptools.command.rotate.rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d6e/classsetuptools_1_1command_1_1rotate_1_1rotate.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="setuptools.command.setopt.option_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dbd/classsetuptools_1_1command_1_1setopt_1_1option__base.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="setuptools.command.alias.alias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d2f/classsetuptools_1_1command_1_1alias_1_1alias.html",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="setuptools.command.saveopts.saveopts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dd1/classsetuptools_1_1command_1_1saveopts_1_1saveopts.html",tooltip=" "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="setuptools.command.setopt.setopt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d7c/classsetuptools_1_1command_1_1setopt_1_1setopt.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="setuptools.command.test.test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d1e/classsetuptools_1_1command_1_1test_1_1test.html",tooltip=" "];
+}

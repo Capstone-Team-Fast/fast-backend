@@ -1,0 +1,31 @@
+digraph "django.contrib.admin.options.BaseModelAdmin.has_delete_permission"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.contrib.admin.options.\lBaseModelAdmin.has_delete\l_permission",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.options.\lModelAdmin.get_deleted_objects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#a4877a3cf067df66ce015e5fa410dc343",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.admin.options.\lInlineModelAdmin.get_formset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbb/classdjango_1_1contrib_1_1admin_1_1options_1_1_inline_model_admin.html#a1641ef603d6e68a212701c78caa297cb",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.contenttypes.admin.\lGenericInlineModelAdmin.get_formset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dec/classdjango_1_1contrib_1_1contenttypes_1_1admin_1_1_generic_inline_model_admin.html#a5849da1284eb52bd0665631a9fec4537",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.admin.options.\lModelAdmin.get_model_perms",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#a8367954850e2693afe42cf730ef76aff",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.admin.options.\lModelAdmin.save_related",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#a765325eaac5c72bca4c5d2977c87d6fc",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.admin.options.\lModelAdmin.changelist_view",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#acb272476a6f9516740fba4c30665b094",tooltip=" "];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.contrib.admin.options.\lModelAdmin.get_changeform\l_initial_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d05/classdjango_1_1contrib_1_1admin_1_1options_1_1_model_admin.html#a0a240a707ea381d1b8ec1579f8955fb7",tooltip=" "];
+  Node8 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

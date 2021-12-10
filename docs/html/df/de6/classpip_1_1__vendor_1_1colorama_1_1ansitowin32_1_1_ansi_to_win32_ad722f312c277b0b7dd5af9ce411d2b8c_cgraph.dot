@@ -1,0 +1,27 @@
+digraph "pip._vendor.colorama.ansitowin32.AnsiToWin32.write_and_convert"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.write_and_convert",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.call_win32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_ansi_to_win32.html#a4c2d1ac2d58f37344273402e51ba4c09",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.utils.baseconv.Base\lConverter.convert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dcc/classdjango_1_1utils_1_1baseconv_1_1_base_converter.html#a9a27b2a7db45e50683bb29e578593afb",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.compat.\lBaseConfigurator.convert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d1f/classpip_1_1__vendor_1_1distlib_1_1compat_1_1_base_configurator.html#a9a6c1c008baaf93514e9e760b9d44fce",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.convert_ansi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_ansi_to_win32.html#ac7c8287fb20a3935cd14a125640fde95",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.convert_osc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_ansi_to_win32.html#a6ad7fe3d2c5dd9ca1108f1f4b70f85b0",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.extract_params",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_ansi_to_win32.html#a4861073b74dd6115cd31dcb890179bc0",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="psycopg2.sql.Literal.wrapped",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d7e/classpsycopg2_1_1sql_1_1_literal.html#a7644bcf208e3a27c25103d09b7fae554",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._vendor.colorama.ansitowin32.\lAnsiToWin32.write_plain_text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classpip_1_1__vendor_1_1colorama_1_1ansitowin32_1_1_ansi_to_win32.html#aa914722156e152368d73c19982726ce6",tooltip=" "];
+}

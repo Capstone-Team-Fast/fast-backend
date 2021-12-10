@@ -1,0 +1,16 @@
+digraph "rest_framework.authentication.BaseAuthentication"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.authentication.\lBaseAuthentication",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.authentication.\lBasicAuthentication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/classrest__framework_1_1authentication_1_1_basic_authentication.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.authentication.\lRemoteUserAuthentication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8a/classrest__framework_1_1authentication_1_1_remote_user_authentication.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.authentication.\lSessionAuthentication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dce/classrest__framework_1_1authentication_1_1_session_authentication.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.authentication.\lTokenAuthentication",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/de0/classrest__framework_1_1authentication_1_1_token_authentication.html",tooltip=" "];
+}

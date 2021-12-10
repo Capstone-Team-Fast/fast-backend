@@ -1,0 +1,37 @@
+digraph "django.utils.translation.trans_real.DjangoTranslation.__init__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.utils.translation.trans\l_real.DjangoTranslation.__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.utils.translation.trans\l_real.DjangoTranslation._add\l_fallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a2f69a950669bcbd3d72e7fc5050959b6",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.utils.translation.trans\l_real.DjangoTranslation._add\l_installed_apps_translations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a9ca621b64c92134879d3f57833f22c39",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.utils.translation.trans\l_real.DjangoTranslation._add\l_local_translations",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#ae3e59788ef8c69fe6bf5623176ec36ff",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.utils.translation.trans\l_real.DjangoTranslation._init\l_translation_catalog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a106faf6f4c4ed60976ade17acf5d7105",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.utils.translation.trans\l_real.DjangoTranslation._new\l_gnu_trans",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#afaaeb78cbda044bd54ec0cb91a6c7480",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.forms.widgets.Media.merge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d46/classdjango_1_1forms_1_1widgets_1_1_media.html#a5a9774464a5353dcd61cd393dd71fd03",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.utils.translation.trans\l_real.DjangoTranslation.merge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a6dd900d20105d28f8f7c38353a0af8f6",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.utils.translation.trans\l_real.TranslationCatalog.plural",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d59/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_translation_catalog.html#ae3ad0379defc2a52878ca57d0cfa1335",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.utils.translation.trans\l_real.DjangoTranslation.to\l_language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a08080efbc4f16b57559b99625bb41575",tooltip=" "];
+  Node10 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.utils.translation.to\l_locale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd9/namespacedjango_1_1utils_1_1translation.html#aad019bee05041d9f143049c5939441c7",tooltip=" "];
+  Node11 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.utils.translation.trans\l_real.translation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a76c32c3c5651451b1314bd35068ab45e",tooltip=" "];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

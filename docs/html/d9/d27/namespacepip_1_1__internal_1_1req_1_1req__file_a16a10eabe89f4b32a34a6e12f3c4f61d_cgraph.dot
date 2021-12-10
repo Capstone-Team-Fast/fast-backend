@@ -1,0 +1,18 @@
+digraph "pip._internal.req.req_file.preprocess"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.req.req\l_file.preprocess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.req.req\l_file.expand_env_variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#aaa2783c13f9c17b7d9df8fe14ab757ca",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.req.req\l_file.ignore_comments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a40df00a3ee6fabe682d935acd7533287",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.req.req\l_file.join_lines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a93269fd95a1a9d8803053e948a293ef4",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

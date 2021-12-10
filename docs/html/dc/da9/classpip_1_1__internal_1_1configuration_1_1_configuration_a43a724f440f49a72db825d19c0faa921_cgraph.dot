@@ -1,0 +1,11 @@
+digraph "pip._internal.configuration.Configuration.items"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.configuration.\lConfiguration.items",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.configuration.\lConfiguration._dictionary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/da9/classpip_1_1__internal_1_1configuration_1_1_configuration.html#abaf2d55a077dead78b33bad3bcbbc0c8",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

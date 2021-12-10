@@ -1,0 +1,19 @@
+digraph "django.utils.tree.Node.__init__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.utils.tree.Node.\l__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.core.serializers.json.\lDjangoJSONEncoder.default",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4a/classdjango_1_1core_1_1serializers_1_1json_1_1_django_j_s_o_n_encoder.html#af8357b876eafa2bceaa034dfe19a4243",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.metadata.pkg\l_resources.Environment.default",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dc3/classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_environment.html#a9a8dc37ac2070a7534dc2db018f98e90",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.messages.storage.cookie.\lMessageEncoder.default",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d49/classdjango_1_1contrib_1_1messages_1_1storage_1_1cookie_1_1_message_encoder.html#aec6d7e0564bb099aed7808b68ff9297a",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._internal.metadata.base.\lBaseEnvironment.default",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d5d/classpip_1_1__internal_1_1metadata_1_1base_1_1_base_environment.html#aeb459d4ba734c39de0a759ac6dc8ab1c",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rest_framework.utils.encoders.\lJSONEncoder.default",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/ddf/classrest__framework_1_1utils_1_1encoders_1_1_j_s_o_n_encoder.html#a46fa2b4fbc9719959e40aaffddc1cb06",tooltip=" "];
+}

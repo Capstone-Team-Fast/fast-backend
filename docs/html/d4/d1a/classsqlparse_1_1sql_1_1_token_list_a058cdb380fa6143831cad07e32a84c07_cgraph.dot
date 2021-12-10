@@ -1,0 +1,29 @@
+digraph "sqlparse.sql.TokenList.get_name"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sqlparse.sql.TokenList.get_name",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sqlparse.sql.NameAliasMixin.get\l_alias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d15/classsqlparse_1_1sql_1_1_name_alias_mixin.html#a6c3f327be91a0dd5cbb1fe677ca4b982",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sqlparse.sql.TokenList.\l_get_first_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a1db47da5f67acba0ef325d2b83e1375d",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sqlparse.sql.TokenList.token\l_next_by",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a9c759859fae364b4c6fb161e55643a71",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.html5lib.treewalkers.genshi.\lTreeWalker.tokens",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d04/classpip_1_1__vendor_1_1html5lib_1_1treewalkers_1_1genshi_1_1_tree_walker.html#aaa7cd4013932d988edef6e126ab998a3",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sqlparse.sql.TokenList.get\l_alias",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a9f27a93f3f0fa30520b8435471400a9e",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sqlparse.sql.NameAliasMixin.get\l_real_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d15/classsqlparse_1_1sql_1_1_name_alias_mixin.html#a9ac1785df0dde6604e38d89f60040ba5",tooltip=" "];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sqlparse.sql.TokenList.get\l_real_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#ac68ea243a1a9f247c23ebe65417643fc",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

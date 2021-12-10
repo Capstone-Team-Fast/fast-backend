@@ -1,0 +1,11 @@
+digraph "neo4j.time.metaclasses.TimeType.__getattr__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="neo4j.time.metaclasses.Time\lType.__getattr__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.conf.LazySettings.configured",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d44/classdjango_1_1conf_1_1_lazy_settings.html#a7ed7bcef467d27210611e7d9dceeac14",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

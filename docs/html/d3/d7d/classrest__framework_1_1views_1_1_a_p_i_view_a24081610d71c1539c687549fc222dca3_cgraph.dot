@@ -1,0 +1,21 @@
+digraph "rest_framework.views.APIView.initialize_request"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.views.APIView.initialize\l_request",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.views.APIView.get\l_authenticators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7d/classrest__framework_1_1views_1_1_a_p_i_view.html#af69abf86891d1fa8fda994bf32e876dd",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.views.APIView.get\l_content_negotiator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7d/classrest__framework_1_1views_1_1_a_p_i_view.html#aa1c1b47680a420075b2334c2a3a61125",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.views.APIView.get\l_parser_context",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7d/classrest__framework_1_1views_1_1_a_p_i_view.html#ad4ccc040934307704abd17d19cf4ff6b",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.views.APIView.get\l_parsers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7d/classrest__framework_1_1views_1_1_a_p_i_view.html#a3829139e884154407b085b7b83a81138",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

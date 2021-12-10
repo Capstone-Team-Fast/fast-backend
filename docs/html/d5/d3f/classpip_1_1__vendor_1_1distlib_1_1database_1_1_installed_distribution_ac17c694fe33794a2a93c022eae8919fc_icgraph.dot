@@ -1,0 +1,18 @@
+digraph "pip._vendor.distlib.database.InstalledDistribution.get_distinfo_file"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pip._vendor.distlib.database.\lInstalledDistribution.get\l_distinfo_file",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.distlib.database.\lInstalledDistribution.check\l_installed_files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d3f/classpip_1_1__vendor_1_1distlib_1_1database_1_1_installed_distribution.html#af02e7290aefa70861a60fe1885285e16",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.distlib.database.\lInstalledDistribution.write\l_exports",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d3f/classpip_1_1__vendor_1_1distlib_1_1database_1_1_installed_distribution.html#a8089a042171558c55789b80c442fae39",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.database.\lInstalledDistribution.write\l_installed_files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d3f/classpip_1_1__vendor_1_1distlib_1_1database_1_1_installed_distribution.html#a3b799b28c162cab4fd480fda0f2a852e",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

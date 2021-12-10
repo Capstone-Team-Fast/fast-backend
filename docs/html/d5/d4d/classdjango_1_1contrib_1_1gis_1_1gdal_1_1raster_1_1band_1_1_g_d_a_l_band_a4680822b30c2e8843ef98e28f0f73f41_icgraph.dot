@@ -1,0 +1,24 @@
+digraph "django.contrib.gis.gdal.raster.band.GDALBand.description"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.contrib.gis.gdal.raster.band.\lGDALBand.description",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.viewsets.\lViewSetMixin.as_view",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d8d/classrest__framework_1_1viewsets_1_1_view_set_mixin.html#ab57221a68375dfaf9b829641d1c712e4",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.schemas.coreapi.\lSchemaGenerator.get_schema",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d76/classrest__framework_1_1schemas_1_1coreapi_1_1_schema_generator.html#a2ec11493e5ca0f62eb2918703ae99a63",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools._distutils.dist.\lDistributionMetadata.read\l_pkg_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d53/classsetuptools_1_1__distutils_1_1dist_1_1_distribution_metadata.html#accf5cd8961b4c252be35cca56dc483c8",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools._distutils.dist.\lDistributionMetadata.write\l_pkg_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d53/classsetuptools_1_1__distutils_1_1dist_1_1_distribution_metadata.html#a921d583635d0bc0574df79343e6ad60d",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="setuptools._distutils.dist.\lDistributionMetadata.write\l_pkg_info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d53/classsetuptools_1_1__distutils_1_1dist_1_1_distribution_metadata.html#a0991ae41b387cdfc66e684f1dcd7037f",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

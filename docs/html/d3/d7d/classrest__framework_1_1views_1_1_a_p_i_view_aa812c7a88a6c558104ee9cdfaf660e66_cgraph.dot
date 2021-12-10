@@ -1,0 +1,20 @@
+digraph "rest_framework.views.APIView.as_view"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.views.APIView.as_view",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.filters.\lListFilter.queryset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/ddb/classdjango_1_1contrib_1_1admin_1_1filters_1_1_list_filter.html#aed1f92493175185d1714cb763f6efa08",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.admin.filters.\lFieldListFilter.queryset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d72/classdjango_1_1contrib_1_1admin_1_1filters_1_1_field_list_filter.html#a51704150dec2abf76f7d4dc23dcc64ab",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.admin.filters.\lEmptyFieldListFilter.queryset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dde/classdjango_1_1contrib_1_1admin_1_1filters_1_1_empty_field_list_filter.html#a953c03e160e6f12fda9bf700c93d09c2",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.models.expressions.\lBaseExpression.field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d6b/classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression.html#ac6460ecaca5a7cac6b4bee69bce606fb",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

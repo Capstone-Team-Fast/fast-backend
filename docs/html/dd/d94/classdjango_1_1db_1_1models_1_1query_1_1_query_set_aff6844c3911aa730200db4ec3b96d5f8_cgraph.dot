@@ -1,0 +1,28 @@
+digraph "django.db.models.query.QuerySet.first"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.models.query.Query\lSet.first",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.query.Query\lSet.order_by",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#aa6926d680c6185b10c815b8f4e54d1a5",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.models.query.Query\lSet._chain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a7e1b5806921e30da5ca203c9d1d4c2d5",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.query.Query\lSet.query",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a122ab2492eab3285ee368fba53d18a13",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shapely.strtree.STRtree.query",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd0/classshapely_1_1strtree_1_1_s_t_rtree.html#a36091f1859b35aa145800837553ec921",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="neomodel.match.NodeSet.order_by",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/de5/classneomodel_1_1match_1_1_node_set.html#a03109556c232ba4739d1a4f6e4d31310",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.db.models.query.Query\lSet.ordered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#ad0ecbc4fee7bc9c7b0b2ce74dd9bd84e",tooltip="PUBLIC INTROSPECTION ATTRIBUTES #."];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

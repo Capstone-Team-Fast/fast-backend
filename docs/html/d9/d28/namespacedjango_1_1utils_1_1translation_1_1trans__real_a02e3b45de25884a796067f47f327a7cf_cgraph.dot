@@ -1,0 +1,33 @@
+digraph "django.utils.translation.trans_real.get_language_from_request"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.utils.translation.trans\l_real.get_language_from_request",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.utils.translation.trans\l_real.check_for_language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a68e9a552988809a9730e486064260c58",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.utils.translation.trans\l_real.all_locale_paths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#ae1d4865bbddfed3852cd9dad0e68c83e",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.utils.translation.to\l_locale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd9/namespacedjango_1_1utils_1_1translation.html#aad019bee05041d9f143049c5939441c7",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.utils.translation.trans\l_real.get_language_from_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a11bc38f3e263ccda5e39a947cd4b7266",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.utils.translation.trans\l_real.get_supported_language_variant",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a9088f18fe6833fafbfcc42549aafb7c1",tooltip=" "];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.utils.translation.trans\l_real.get_languages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a1e62357f8574d66e656cd4c389a5c23a",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.utils.translation.trans\l_real.parse_accept_lang_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d28/namespacedjango_1_1utils_1_1translation_1_1trans__real.html#a20cb657d37a2311403fb668082e98dab",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

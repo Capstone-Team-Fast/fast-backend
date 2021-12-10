@@ -1,0 +1,22 @@
+digraph "django.forms.boundfield.BoundField.as_widget"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.forms.boundfield.\lBoundField.as_widget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.forms.boundfield.\lBoundField.__str__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d92/classdjango_1_1forms_1_1boundfield_1_1_bound_field.html#aef5376be33b126ba2a62c9e40bfe6e98",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.forms.boundfield.\lBoundField.as_hidden",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d92/classdjango_1_1forms_1_1boundfield_1_1_bound_field.html#a5a16f2c57046601792e0be41e7f11263",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.forms.boundfield.\lBoundField.as_text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d92/classdjango_1_1forms_1_1boundfield_1_1_bound_field.html#ad72f30035f03fb13af90f3eca7802697",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.forms.boundfield.\lBoundField.as_textarea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d92/classdjango_1_1forms_1_1boundfield_1_1_bound_field.html#ae9c7d86d311e348382eb809fb1214b62",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

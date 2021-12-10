@@ -1,0 +1,37 @@
+digraph "django.test.runner.DiscoverRunner.run_tests"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.test.runner.Discover\lRunner.run_tests",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.runner.Discover\lRunner.build_suite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#aaa3949da5d01e6a980998d91d7c7f689",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.test.runner.Discover\lRunner.get_databases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#a6b1dbc9c73037fcffbd2e32716a29080",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.core.checks.registry.\lCheckRegistry.run_checks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d32/classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry.html#a022691b4c75e0710389ee4b74022ceb8",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.core.checks.registry.\lCheckRegistry.get_checks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d32/classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry.html#ab7fd3a82685594c9216802bba63115d4",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.core.checks.registry.\lCheckRegistry.tags_available",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d32/classdjango_1_1core_1_1checks_1_1registry_1_1_check_registry.html#a01384d6dd86647900f3f75d490e978ac",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.test.runner.Discover\lRunner.run_checks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#ab2fae4be4716deb2dd30be68dac11e18",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.test.runner.Discover\lRunner.run_suite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#a1a70fb374f125791fe75f63e3b8a80e3",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.test.runner.Discover\lRunner.setup_databases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#aefbdc31f2bcc0593f698a0ee343ac35a",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.test.runner.Discover\lRunner.setup_test_environment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#a91b5ed2764a7c3818c34d9df60457c67",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.test.runner.Discover\lRunner.suite_result",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#af74e6d9069fa0fc4658e21693305abff",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.test.runner.Discover\lRunner.teardown_databases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#a79170c299e1b020ff0b044a9fbb186ed",tooltip=" "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="django.test.runner.Discover\lRunner._get_databases",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#a3ba878a8f4e56a7f8d19298d61a67ee0",tooltip=" "];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="django.test.runner.Discover\lRunner.teardown_test_environment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d69/classdjango_1_1test_1_1runner_1_1_discover_runner.html#aa643552788f72b5a87a1faa95728aa4b",tooltip=" "];
+}

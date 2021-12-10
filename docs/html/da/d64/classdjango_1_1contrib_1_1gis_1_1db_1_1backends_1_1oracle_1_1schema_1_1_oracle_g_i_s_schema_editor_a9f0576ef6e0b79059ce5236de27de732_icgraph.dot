@@ -1,0 +1,44 @@
+digraph "django.contrib.gis.db.backends.oracle.schema.OracleGISSchemaEditor.column_sql"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.contrib.gis.db.backends.oracle.schema.\lOracleGISSchemaEditor.column_sql",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.db.backends.spatialite.schema.\lSpatialiteSchemaEditor.add_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dec/classdjango_1_1contrib_1_1gis_1_1db_1_1backends_1_1spatialite_1_1schema_1_1_spatialite_schema_editor.html#abb80ee8b31babcd12964eee5f00210e8",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.backends.oracle.schema.\lDatabaseSchemaEditor.alter_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db6/classdjango_1_1db_1_1backends_1_1oracle_1_1schema_1_1_database_schema_editor.html#a5b01701c9307285a003263949056a7d9",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.backends.base.schema.\lBaseDatabaseSchemaEditor.alter_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor.html#a1e98c7754ae075b963c62a50de4b3009",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.backends.base.schema.\lBaseDatabaseSchemaEditor.add_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor.html#a84ef3042191ba412b44109adbff44be7",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.db.backends.sqlite3.schema.\lDatabaseSchemaEditor.remove_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dfb/classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor.html#ae22ee9d32c96a0b4655ecb64f293e39b",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.db.backends.base.schema.\lBaseDatabaseSchemaEditor.table_sql",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor.html#aafce4ec4267e234655026bcaa897d931",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.db.backends.base.schema.\lBaseDatabaseSchemaEditor.create_model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classdjango_1_1db_1_1backends_1_1base_1_1schema_1_1_base_database_schema_editor.html#a7150ab080c86d910615971eaa1bfef49",tooltip=" "];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.db.backends.sqlite3.schema.\lDatabaseSchemaEditor.add_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dfb/classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor.html#a9722f8978554d928cf1edf3c523fc63b",tooltip=" "];
+  Node9 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.db.backends.sqlite3.schema.\lDatabaseSchemaEditor.alter_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dfb/classdjango_1_1db_1_1backends_1_1sqlite3_1_1schema_1_1_database_schema_editor.html#a7d46751f4c7f167f0e2d6416c2e6b155",tooltip=" "];
+  Node10 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

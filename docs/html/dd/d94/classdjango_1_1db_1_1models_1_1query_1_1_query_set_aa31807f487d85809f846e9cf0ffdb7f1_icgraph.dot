@@ -1,0 +1,12 @@
+digraph "django.db.models.query.QuerySet.defer"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.db.models.query.Query\lSet.defer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.query.Query\lSet.only",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a33392fff7d8f7a90c5570b168abf4db6",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

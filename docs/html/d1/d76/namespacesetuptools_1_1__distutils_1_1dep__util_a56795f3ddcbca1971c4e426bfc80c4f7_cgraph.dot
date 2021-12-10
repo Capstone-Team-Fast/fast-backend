@@ -1,0 +1,12 @@
+digraph "setuptools._distutils.dep_util.newer_pairwise"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools._distutils.dep\l_util.newer_pairwise",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools._distutils.dep\l_util.newer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d76/namespacesetuptools_1_1__distutils_1_1dep__util.html#a1a74a87b034b2430cec5fc9b6dfac5ce",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

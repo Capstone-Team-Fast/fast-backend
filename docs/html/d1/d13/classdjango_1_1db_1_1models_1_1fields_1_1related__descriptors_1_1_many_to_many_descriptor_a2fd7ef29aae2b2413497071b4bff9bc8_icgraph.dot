@@ -1,0 +1,11 @@
+digraph "django.db.models.fields.related_descriptors.ManyToManyDescriptor.related_manager_cls"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.db.models.fields.related\l_descriptors.ManyToManyDescriptor.related\l_manager_cls",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.fields.related\l_descriptors.ReverseManyToOneDescriptor.__get__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dff/classdjango_1_1db_1_1models_1_1fields_1_1related__descriptors_1_1_reverse_many_to_one_descriptor.html#a5a9b698d1e02acafcd7cc0f830768562",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

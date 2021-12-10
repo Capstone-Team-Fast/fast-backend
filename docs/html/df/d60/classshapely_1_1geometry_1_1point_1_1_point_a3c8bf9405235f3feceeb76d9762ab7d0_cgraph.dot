@@ -1,0 +1,15 @@
+digraph "shapely.geometry.point.Point.__geo_interface__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shapely.geometry.point.Point.\l__geo_interface__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.geoip2.base.\lGeoIP2.coords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/de3/classdjango_1_1contrib_1_1gis_1_1geoip2_1_1base_1_1_geo_i_p2.html#a6d4c21a8e508c7828d04cb53207fa7c2",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shapely.geometry.base.Base\lMultipartGeometry.coords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d4a/classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry.html#af23aac88edc750c02c60474200ce0f6e",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shapely.geometry.polygon.\lPolygon.coords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d80/classshapely_1_1geometry_1_1polygon_1_1_polygon.html#ae365b0bbf4f4b40186b0bbcde9158838",tooltip=" "];
+}

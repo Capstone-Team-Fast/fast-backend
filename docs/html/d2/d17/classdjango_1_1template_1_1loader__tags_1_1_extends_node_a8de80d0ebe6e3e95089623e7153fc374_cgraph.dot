@@ -1,0 +1,16 @@
+digraph "django.template.loader_tags.ExtendsNode.find_template"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.template.loader\l_tags.ExtendsNode.find\l_template",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.template.engine.Engine.find\l_template",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d3d/classdjango_1_1template_1_1engine_1_1_engine.html#a3ce265ee3a15f7b39ef2e00a96da4243",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.gdal.raster.source.\lGDALRaster.origin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dff/classdjango_1_1contrib_1_1gis_1_1gdal_1_1raster_1_1source_1_1_g_d_a_l_raster.html#a433b9aa9055047626aa4837393528b83",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.template.backends.django.\lTemplate.origin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/df8/classdjango_1_1template_1_1backends_1_1django_1_1_template.html#a678dac33e64567f332d32f87660cbe4c",tooltip=" "];
+}

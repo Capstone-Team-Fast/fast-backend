@@ -1,0 +1,11 @@
+digraph "django.db.backends.oracle.operations.DatabaseOperations.last_insert_id"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.backends.oracle.operations.\lDatabaseOperations.last_insert_id",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.backends.oracle.operations.\lDatabaseOperations._get_sequence_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc4/classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations.html#a0485dbd34b5ace8592ad770ac3105d80",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

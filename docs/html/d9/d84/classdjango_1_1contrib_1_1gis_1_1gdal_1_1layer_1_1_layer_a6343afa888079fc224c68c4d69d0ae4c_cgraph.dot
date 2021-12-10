@@ -1,0 +1,13 @@
+digraph "django.contrib.gis.gdal.layer.Layer.fields"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.gis.gdal.layer.\lLayer.fields",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.gdal.feature.\lFeature.num_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d34/classdjango_1_1contrib_1_1gis_1_1gdal_1_1feature_1_1_feature.html#aa20b731576b9ff788c6bca88aace9acc",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.gdal.layer.\lLayer.num_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d84/classdjango_1_1contrib_1_1gis_1_1gdal_1_1layer_1_1_layer.html#a0c7ed3b68c3dd10a7d8c8fa9b0dab08e",tooltip=" "];
+}

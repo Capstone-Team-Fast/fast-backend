@@ -1,0 +1,12 @@
+digraph "django.contrib.gis.geos.geometry.GEOSGeometryBase.convex_hull"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.contrib.gis.geos.geometry.\lGEOSGeometryBase.convex_hull",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shapely.geometry.base.Base\lGeometry.minimum_rotated\l_rectangle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d41/classshapely_1_1geometry_1_1base_1_1_base_geometry.html#a8c3218e574a7e9bbf9c7bb5e848568f5",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

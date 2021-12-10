@@ -1,0 +1,15 @@
+digraph "setuptools.monkey.get_unpatched_class"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.monkey.get\l_unpatched_class",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.monkey.patch\l_for_msvc_specialized\l_compiler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0b/namespacesetuptools_1_1monkey.html#a496bc1769e481213444b1d53185b1b89",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.monkey.patch_func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d0b/namespacesetuptools_1_1monkey.html#ac6c1bb45a1d90ebcaf099ada0682616b",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

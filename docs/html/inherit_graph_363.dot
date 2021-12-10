@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1717 [label="logging.Formatter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1717 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.utils.log.ServerFormatter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d98/classdjango_1_1utils_1_1log_1_1_server_formatter.html",tooltip=" "];
+  Node1717 -> Node1719 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1719 [label="pip._internal.utils.logging.\lIndentingFormatter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/df2/classpip_1_1__internal_1_1utils_1_1logging_1_1_indenting_formatter.html",tooltip=" "];
+  Node1717 -> Node1720 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1720 [label="pip._vendor.pep517.colorlog.\lLogFormatter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dce/classpip_1_1__vendor_1_1pep517_1_1colorlog_1_1_log_formatter.html",tooltip=" "];
+}

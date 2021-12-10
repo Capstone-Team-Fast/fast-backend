@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.contrib.flatpages.forms.\lFlatpageForm.Meta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df9/classdjango_1_1contrib_1_1flatpages_1_1forms_1_1_flatpage_form_1_1_meta.html",tooltip=" "];
+}

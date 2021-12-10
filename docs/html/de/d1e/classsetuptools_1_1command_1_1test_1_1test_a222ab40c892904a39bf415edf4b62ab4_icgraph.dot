@@ -1,0 +1,15 @@
+digraph "setuptools.command.test.test.paths_on_pythonpath"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="setuptools.command.test.test.paths\l_on_pythonpath",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.command.test.test.install\l_dists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d1e/classsetuptools_1_1command_1_1test_1_1test.html#af0362ad01b35d885c41cb12f395c6987",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.command.test.test.with\l_project_on_sys_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d1e/classsetuptools_1_1command_1_1test_1_1test.html#a6031bb41469603a2f2ddc6a0ce6070e6",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

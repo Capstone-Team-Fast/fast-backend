@@ -1,0 +1,22 @@
+digraph "pkg_resources.get_default_cache"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pkg_resources.get_default\l_cache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pkg_resources.ResourceManager.extraction\l_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classpkg__resources_1_1_resource_manager.html#a39f27f35ad11069273856a00d26df314",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.pkg_resources.\lResourceManager.get_cache_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d86/classpip_1_1__vendor_1_1pkg__resources_1_1_resource_manager.html#abb9704b64700741ee3a3ad67f7cad5bd",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pkg_resources.ResourceManager.get\l_cache_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classpkg__resources_1_1_resource_manager.html#a79de123f8cc5bf426ae33bd6b6b21e0c",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pkg_resources.ResourceManager.set\l_extraction_path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d39/classpkg__resources_1_1_resource_manager.html#aa07a3bbaed612c6837984c00c8d162eb",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,18 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="rest_framework.versioning.\lBaseVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dec/classrest__framework_1_1versioning_1_1_base_versioning.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="rest_framework.versioning.\lAcceptHeaderVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/db0/classrest__framework_1_1versioning_1_1_accept_header_versioning.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.versioning.\lHostNameVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dd1/classrest__framework_1_1versioning_1_1_host_name_versioning.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.versioning.\lNamespaceVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/da2/classrest__framework_1_1versioning_1_1_namespace_versioning.html",tooltip=" "];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.versioning.\lQueryParameterVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d60/classrest__framework_1_1versioning_1_1_query_parameter_versioning.html",tooltip=" "];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.versioning.\lURLPathVersioning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/da9/classrest__framework_1_1versioning_1_1_u_r_l_path_versioning.html",tooltip=" "];
+}

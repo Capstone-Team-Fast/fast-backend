@@ -1,0 +1,45 @@
+digraph "shapely.geometry.collection.GeometryCollection.geoms"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="shapely.geometry.collection.\lGeometryCollection.geoms",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shapely.geometry.base.Base\lMultipartGeometry.__array\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d4a/classshapely_1_1geometry_1_1base_1_1_base_multipart_geometry.html#aa57caf9f9556c733425dee5dc556ac05",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shapely.geometry.collection.\lGeometryCollection.__geo\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d4d/classshapely_1_1geometry_1_1collection_1_1_geometry_collection.html#a2043e9e33044335e9831a9ae0799751a",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shapely.geometry.multilinestring.\lMultiLineString.__geo_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d6a/classshapely_1_1geometry_1_1multilinestring_1_1_multi_line_string.html#a3e00a6c8b10ab78516c82a99de2db7bf",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shapely.geometry.multipoint.\lMultiPoint.__geo_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbf/classshapely_1_1geometry_1_1multipoint_1_1_multi_point.html#a5709dbf257dbd0346018aa8df4de88d0",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="shapely.geometry.multipolygon.\lMultiPolygon.__geo_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dfe/classshapely_1_1geometry_1_1multipolygon_1_1_multi_polygon.html#a622f2f34424ed09f9287374d32228982",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="shapely.geometry.multipoint.\lMultiPoint.array_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbf/classshapely_1_1geometry_1_1multipoint_1_1_multi_point.html#acbcfab1e9cf501ddcf37ee5be2a45143",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="shapely.geometry.linestring.\lLineStringAdapter.__array\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d23/classshapely_1_1geometry_1_1linestring_1_1_line_string_adapter.html#a60c0b0dd5c5557629a78c5aa0a624eaa",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="shapely.geometry.multipoint.\lMultiPointAdapter.__array\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dd1/classshapely_1_1geometry_1_1multipoint_1_1_multi_point_adapter.html#a37f2088edbf2b7af198f6558914da37f",tooltip=" "];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="shapely.geometry.point.Point\lAdapter.__array_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dc8/classshapely_1_1geometry_1_1point_1_1_point_adapter.html#ac7d34feacd8cabef4e276924c97b5d85",tooltip=" "];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="shapely.geometry.multipoint.\lMultiPoint.ctypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbf/classshapely_1_1geometry_1_1multipoint_1_1_multi_point.html#aa0bcf44f2ad3a74ecd15a9ae9537a977",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="shapely.coords.Coordinate\lSequence.array_interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d23/classshapely_1_1coords_1_1_coordinate_sequence.html#a4182ff00ae01525b6d6238839b4807d6",tooltip=" "];
+  Node12 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="shapely.geometry.base.Base\lGeometry.ctypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d41/classshapely_1_1geometry_1_1base_1_1_base_geometry.html#ad7092ff19dc25c45be5aa41de6780ce3",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

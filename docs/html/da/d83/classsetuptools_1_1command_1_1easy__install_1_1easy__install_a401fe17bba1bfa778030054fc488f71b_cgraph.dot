@@ -1,0 +1,39 @@
+digraph "setuptools.command.easy_install.easy_install.installation_report"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.command.easy\l_install.easy_install.installation\l_report",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.command.easy\l_install.easy_install.\l_set_fetcher_options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html#aa74e640241858b88152d69132a24dc80",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools._distutils.command.build\l_py.build_py.byte_compile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d1f/classsetuptools_1_1__distutils_1_1command_1_1build__py_1_1build__py.html#a35025668f2196c23335e62e543bc13ac",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools._distutils.command.install\l_lib.install_lib.byte_compile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3b/classsetuptools_1_1__distutils_1_1command_1_1install__lib_1_1install__lib.html#a18efba012f527ae4595d5c652b5e30a2",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.distlib.util.\lFileOperator.byte_compile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db3/classpip_1_1__vendor_1_1distlib_1_1util_1_1_file_operator.html#ad3919b43a573b10b426e7f2a1b5713cc",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="setuptools.command.easy\l_install.easy_install.byte\l_compile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html#ac60bc1c1e9e4c905fc13e10a873fc46f",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.distlib.scripts.\lScriptMaker.dry_run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dcc/classpip_1_1__vendor_1_1distlib_1_1scripts_1_1_script_maker.html#ab788624a4b1688e66c95f02b42674a4f",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="setuptools.command.easy\l_install.easy_install.install_egg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html#a04769d37e9ac958b38314bf794fed23d",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.db.migrations.optimizer.\lMigrationOptimizer.optimize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d33/classdjango_1_1db_1_1migrations_1_1optimizer_1_1_migration_optimizer.html#a9a19ed4669927c018a19285834fa80cd",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.db.migrations.optimizer.\lMigrationOptimizer.optimize_inner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d33/classdjango_1_1db_1_1migrations_1_1optimizer_1_1_migration_optimizer.html#a6f17eda0fac71a05ef9b5449e9c1e495",tooltip=" "];
+  Node10 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="setuptools.command.easy\l_install.easy_install.run_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html#aff0f996fb5c3f10a22f9537a6a77a0a9",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="setuptools.build_meta.\l_BuildMetaBackend.run_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d07/classsetuptools_1_1build__meta_1_1___build_meta_backend.html#a53ec68b77c60e1208e2413bde8361d9f",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="setuptools.build_meta.\l_BuildMetaLegacyBackend.run_setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dca/classsetuptools_1_1build__meta_1_1___build_meta_legacy_backend.html#ac8173cf8710f0f54706b4769efe93ca8",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="setuptools.command.easy\l_install.easy_install.unpack\l_progress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d83/classsetuptools_1_1command_1_1easy__install_1_1easy__install.html#a3b605b714f5561607bf7d4615ee7ced9",tooltip=" "];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="pip._internal.utils.\l_log.VerboseLogger.verbose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d31/classpip_1_1__internal_1_1utils_1_1__log_1_1_verbose_logger.html#a90fd10af98376ab040013ddb2e7bb102",tooltip=" "];
+}

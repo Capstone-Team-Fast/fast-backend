@@ -1,0 +1,42 @@
+digraph "setuptools.extension.Extension.__init__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.extension.Extension.\l__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.utils.translation.trans\l_real.DjangoTranslation.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d65/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_django_translation.html#a6d4c88bce8da55b9f290bceb1ac53bab",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.chardet.big5prober.\lBig5Prober.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d97/classpip_1_1__vendor_1_1chardet_1_1big5prober_1_1_big5_prober.html#afd9d15354d56e820245fa4567abfae51",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.chardet.charsetgroupprober.\lCharSetGroupProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d8f/classpip_1_1__vendor_1_1chardet_1_1charsetgroupprober_1_1_char_set_group_prober.html#abf98124d05d0bb98c439b1fca791bd3f",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.chardet.codingstatemachine.\lCodingStateMachine.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d67/classpip_1_1__vendor_1_1chardet_1_1codingstatemachine_1_1_coding_state_machine.html#a614d534b5c14959315e4b64155104567",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.chardet.cp949prober.\lCP949Prober.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7e/classpip_1_1__vendor_1_1chardet_1_1cp949prober_1_1_c_p949_prober.html#ac8fe448002c774b4ff5d8b7f0332fbb3",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.chardet.escprober.\lEscCharSetProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d37/classpip_1_1__vendor_1_1chardet_1_1escprober_1_1_esc_char_set_prober.html#a1768393ac33fa52ebdce13a8a471e2a5",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pip._vendor.chardet.eucjpprober.\lEUCJPProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d73/classpip_1_1__vendor_1_1chardet_1_1eucjpprober_1_1_e_u_c_j_p_prober.html#aed402fd71c8687729cf8545f2b10102a",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._vendor.chardet.euckrprober.\lEUCKRProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d98/classpip_1_1__vendor_1_1chardet_1_1euckrprober_1_1_e_u_c_k_r_prober.html#ae0af5ccf866ab59e7d7547b00f75d200",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pip._vendor.chardet.euctwprober.\lEUCTWProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d8f/classpip_1_1__vendor_1_1chardet_1_1euctwprober_1_1_e_u_c_t_w_prober.html#aabf34a5568ac9527ce72e36254031795",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pip._vendor.chardet.gb2312prober.\lGB2312Prober.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d05/classpip_1_1__vendor_1_1chardet_1_1gb2312prober_1_1_g_b2312_prober.html#a4eecf0514f79e6fa01e511d8344c1111",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="pip._vendor.chardet.hebrewprober.\lHebrewProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/db2/classpip_1_1__vendor_1_1chardet_1_1hebrewprober_1_1_hebrew_prober.html#a0ebc7c3d6a351f58682178da11ec421c",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="pip._vendor.chardet.latin1prober.\lLatin1Prober.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d9c/classpip_1_1__vendor_1_1chardet_1_1latin1prober_1_1_latin1_prober.html#a1df41411b438778c9d2253835ef046b6",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="pip._vendor.chardet.mbcharsetprober.\lMultiByteCharSetProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d40/classpip_1_1__vendor_1_1chardet_1_1mbcharsetprober_1_1_multi_byte_char_set_prober.html#aa1f7851ce3bf7ad59164bfa41285a3a4",tooltip=" "];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="pip._vendor.chardet.sbcharsetprober.\lSingleByteCharSetProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d89/classpip_1_1__vendor_1_1chardet_1_1sbcharsetprober_1_1_single_byte_char_set_prober.html#ad86bfea350cea90d3e0d3c9aeb5a5834",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="pip._vendor.chardet.sjisprober.\lSJISProber.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dba/classpip_1_1__vendor_1_1chardet_1_1sjisprober_1_1_s_j_i_s_prober.html#a8365c10e80d3a5ae5bbdf036335ff219",tooltip=" "];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="pip._vendor.chardet.utf8prober.\lUTF8Prober.language",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d49/classpip_1_1__vendor_1_1chardet_1_1utf8prober_1_1_u_t_f8_prober.html#a0ca12107b57022c80e8de6573fb6f692",tooltip=" "];
+}

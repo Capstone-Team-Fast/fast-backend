@@ -1,0 +1,12 @@
+digraph "django.test.testcases.SimpleTestCase.assertURLEqual"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.test.testcases.Simple\lTestCase.assertURLEqual",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.testcases.Simple\lTestCase.assertRedirects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6b/classdjango_1_1test_1_1testcases_1_1_simple_test_case.html#a12383790b4403326d902c151a907c791",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,36 @@
+digraph "pip._internal.req.req_file.RequirementsFileParser.parse"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.req.req\l_file.RequirementsFileParser.parse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.req.req\l_file.RequirementsFileParser.\l_parse_and_recurse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d5c/classpip_1_1__internal_1_1req_1_1req__file_1_1_requirements_file_parser.html#a92f7f34fb83f6360a6c6f49903f0b37d",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.config.Config\lHandler._parse_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#ac3a3e661578af81b7dd99bcb934eef66",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.req.req\l_file.RequirementsFileParser.\l_parse_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d5c/classpip_1_1__internal_1_1req_1_1req__file_1_1_requirements_file_parser.html#aa3f34650d4f46adba1f8d72fc5aeffd0",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._internal.req.req\l_file.break_args_options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#adca49b696e4748bf27133819a32630bb",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.req.req\l_file.build_parser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a9bdfec2f7212b3d02233e15697accf0e",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._internal.req.req\l_file.get_file_content",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a5ed17b2cb10a68a923360641e20c9292",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pip._internal.req.req\l_file.preprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a16a10eabe89f4b32a34a6e12f3c4f61d",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._internal.req.req\l_file.expand_env_variables",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#aaa2783c13f9c17b7d9df8fe14ab757ca",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pip._internal.req.req\l_file.ignore_comments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a40df00a3ee6fabe682d935acd7533287",tooltip=" "];
+  Node10 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pip._internal.req.req\l_file.join_lines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d27/namespacepip_1_1__internal_1_1req_1_1req__file.html#a93269fd95a1a9d8803053e948a293ef4",tooltip=" "];
+  Node11 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

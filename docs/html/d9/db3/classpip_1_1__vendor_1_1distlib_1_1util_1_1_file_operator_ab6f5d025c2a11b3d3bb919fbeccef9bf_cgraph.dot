@@ -1,0 +1,20 @@
+digraph "pip._vendor.distlib.util.FileOperator.copy_file"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.distlib.util.\lFileOperator.copy_file",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.distlib.scripts.\lScriptMaker.dry_run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dcc/classpip_1_1__vendor_1_1distlib_1_1scripts_1_1_script_maker.html#ab788624a4b1688e66c95f02b42674a4f",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.distlib.util.\lFileOperator.ensure_dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db3/classpip_1_1__vendor_1_1distlib_1_1util_1_1_file_operator.html#a8120aac76979a816cab95f1590e5c4f3",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.util.\lFileOperator.newer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db3/classpip_1_1__vendor_1_1distlib_1_1util_1_1_file_operator.html#ac18845caf1450573b6a89cda6982db17",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.distlib.util.\lFileOperator.record_as\l_written",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db3/classpip_1_1__vendor_1_1distlib_1_1util_1_1_file_operator.html#a90b884b39270a7e8f4dd5194ad2c103c",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.distlib.util.\lFileOperator.write_binary_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db3/classpip_1_1__vendor_1_1distlib_1_1util_1_1_file_operator.html#a51dd5e88311a499a63552fa0d1f0e3f1",tooltip=" "];
+}

@@ -1,0 +1,15 @@
+digraph "pip._vendor.html5lib.html5parser.HTMLParser.documentEncoding"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.html5lib.html5parser.\lHTMLParser.documentEncoding",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.html5lib.html5parser.\lHTMLParser.isHTMLIntegrationPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dcc/classpip_1_1__vendor_1_1html5lib_1_1html5parser_1_1_h_t_m_l_parser.html#a9cca5f1a0e9f2be6cf1031b51aa4021a",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.html5lib.html5parser.\lHTMLParser.isMathMLTextIntegrationPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dcc/classpip_1_1__vendor_1_1html5lib_1_1html5parser_1_1_h_t_m_l_parser.html#a742ed787b3b3651f57fb706cf2dc88e4",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.html5lib.html5parser.\lHTMLParser.parseError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dcc/classpip_1_1__vendor_1_1html5lib_1_1html5parser_1_1_h_t_m_l_parser.html#a9c5fbf983ca2c56198830912ab893a7e",tooltip=" "];
+}

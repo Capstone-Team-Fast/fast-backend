@@ -1,0 +1,15 @@
+digraph "django.db.backends.postgresql.operations.DatabaseOperations.datetime_cast_time_sql"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.backends.postgresql.operations.\lDatabaseOperations.datetime_cast_time_sql",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.backends.mysql.operations.\lDatabaseOperations._convert\l_field_to_tz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d0c/classdjango_1_1db_1_1backends_1_1mysql_1_1operations_1_1_database_operations.html#afd51801f91b52a96afa67de844c2cfcc",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.backends.oracle.operations.\lDatabaseOperations._convert_field_to_tz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc4/classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations.html#aa00384ec2fb1fe3b52b4f20060acf22c",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.backends.postgresql.operations.\lDatabaseOperations._convert_field_to_tz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d25/classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations.html#a5fdbc9132abf6368eaee412b7a192020",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

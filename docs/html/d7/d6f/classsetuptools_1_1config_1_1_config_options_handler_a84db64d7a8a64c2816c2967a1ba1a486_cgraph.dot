@@ -1,0 +1,29 @@
+digraph "setuptools.config.ConfigOptionsHandler.parsers"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.config.Config\lOptionsHandler.parsers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.config.Config\lHandler._parse_bool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#aaa2a1f90fc5efd539bdf9b4061e66c1a",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.config.Config\lOptionsHandler._parse\l_cmdclass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/classsetuptools_1_1config_1_1_config_options_handler.html#af3b6093377dde739a4fa3f33549c8311",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools.config.Config\lHandler._parse_dict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#a48d29b987a470a70da7a1cd03370cc09",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools.config.Config\lHandler._parse_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#ac3a3e661578af81b7dd99bcb934eef66",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.req.req\l_file.RequirementsFileParser.\l_parse_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d5c/classpip_1_1__internal_1_1req_1_1req__file_1_1_requirements_file_parser.html#aa3f34650d4f46adba1f8d72fc5aeffd0",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="setuptools.config.Config\lHandler._parse_list",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#a53bdaadbf9ca6e60f15b06528c5c03ca",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="setuptools.config.Config\lOptionsHandler._parse\l_packages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/classsetuptools_1_1config_1_1_config_options_handler.html#a46c69972155da2b5753614c9dda88541",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="setuptools.config.Config\lOptionsHandler.parse_section\l_packages__find",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/classsetuptools_1_1config_1_1_config_options_handler.html#afed6ee3f1ec81344d74bdf4628e4c46c",tooltip=" "];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="setuptools.config.Config\lHandler._parse_section\l_to_dict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d75/classsetuptools_1_1config_1_1_config_handler.html#ac7467d9c88e5da8b3c5565be4efe7aaf",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

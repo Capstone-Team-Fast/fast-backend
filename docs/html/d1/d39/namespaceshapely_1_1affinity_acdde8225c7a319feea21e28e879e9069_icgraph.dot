@@ -1,0 +1,21 @@
+digraph "shapely.affinity.affine_transform"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="shapely.affinity.affine\l_transform",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shapely.affinity.rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#a261f06f833e10c87c289a980c36945b2",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shapely.affinity.scale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#a4e19f1b20281a3124f778d3f8e73443d",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shapely.affinity.skew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#aae624dc2c44a7051e5d8992daff58475",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shapely.affinity.translate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d39/namespaceshapely_1_1affinity.html#aa3126ddad612e8f05254c3f2ace27026",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

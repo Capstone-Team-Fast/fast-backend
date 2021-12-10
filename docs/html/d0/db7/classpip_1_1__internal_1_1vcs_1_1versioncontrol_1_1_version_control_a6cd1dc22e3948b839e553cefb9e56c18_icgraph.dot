@@ -1,0 +1,26 @@
+digraph "pip._internal.vcs.versioncontrol.VersionControl.obtain"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pip._internal.vcs.versioncontrol.\lVersionControl.obtain",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.pkg_resources.\lEnvironment.best_match",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d79/classpip_1_1__vendor_1_1pkg__resources_1_1_environment.html#ae73299e5eb450a7149014b90332bbc9c",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pkg_resources.Environment.best\l_match",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d81/classpkg__resources_1_1_environment.html#a7738575eddd2a89e35eff52f3462f20b",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.vcs.versioncontrol.\lVersionControl.get_url_rev_options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/db7/classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1_version_control.html#add1eb71a89bb58fae48a50f88ebec4e1",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._internal.vcs.versioncontrol.\lVersionControl.make_rev_args",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/db7/classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1_version_control.html#aaa527596c67661e61f407396615688d5",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.vcs.versioncontrol.\lVersionControl.unpack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/db7/classpip_1_1__internal_1_1vcs_1_1versioncontrol_1_1_version_control.html#aa999e293571b16d8a23255f9a7365f68",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

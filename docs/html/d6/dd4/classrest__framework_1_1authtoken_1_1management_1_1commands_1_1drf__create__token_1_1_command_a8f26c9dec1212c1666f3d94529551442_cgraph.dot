@@ -1,0 +1,11 @@
+digraph "rest_framework.authtoken.management.commands.drf_create_token.Command.handle"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.authtoken.management.commands.drf\l_create_token.Command.handle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.authtoken.management.commands.drf\l_create_token.Command.create_user_token",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/dd4/classrest__framework_1_1authtoken_1_1management_1_1commands_1_1drf__create__token_1_1_command.html#a5f0c0f451047c1a94d7b99f50ca740b7",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

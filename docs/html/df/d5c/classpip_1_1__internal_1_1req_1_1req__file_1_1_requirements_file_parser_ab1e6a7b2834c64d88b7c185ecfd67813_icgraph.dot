@@ -1,0 +1,26 @@
+digraph "pip._internal.req.req_file.RequirementsFileParser.parse"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pip._internal.req.req\l_file.RequirementsFileParser.parse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.pkg_resources.\lEntryPoint.parse_group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d51/classpip_1_1__vendor_1_1pkg__resources_1_1_entry_point.html#a7a073b57c2523016366e96901108b1e3",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.pkg_resources.\lEntryPoint.parse_map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d51/classpip_1_1__vendor_1_1pkg__resources_1_1_entry_point.html#a49afd2196172292b203587c86ced6b78",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pkg_resources.EntryPoint.parse_map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dfa/classpkg__resources_1_1_entry_point.html#a925bbccfaed5f41e1f676adb88199afa",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pkg_resources.EntryPoint.parse\l_group",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dfa/classpkg__resources_1_1_entry_point.html#aa6103add7859c9b6e0338b6866fe44ba",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="psycopg2.extras.HstoreAdapter.parse\l_unicode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/da9/classpsycopg2_1_1extras_1_1_hstore_adapter.html#ac2c03c70ca59b238becac7520001375b",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

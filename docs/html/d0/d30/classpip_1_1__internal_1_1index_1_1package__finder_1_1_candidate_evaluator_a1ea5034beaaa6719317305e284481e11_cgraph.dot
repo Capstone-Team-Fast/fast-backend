@@ -1,0 +1,21 @@
+digraph "pip._internal.index.package_finder.CandidateEvaluator.compute_best_candidate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.index.package\l_finder.CandidateEvaluator.compute\l_best_candidate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.index.package\l_finder.CandidateEvaluator.get\l_applicable_candidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/classpip_1_1__internal_1_1index_1_1package__finder_1_1_candidate_evaluator.html#a2e1c89b23b125e7c164a93fe90085ed7",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.index.package\l_finder.CandidateEvaluator.\l_sort_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/classpip_1_1__internal_1_1index_1_1package__finder_1_1_candidate_evaluator.html#a6b46a2e7e38f36cd766d45bdfd49feb4",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.index.package\l_finder.filter_unallowed_hashes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dff/namespacepip_1_1__internal_1_1index_1_1package__finder.html#a835d6821144421e0dbc636ccaa250de4",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._internal.index.package\l_finder.CandidateEvaluator.sort\l_best_candidate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/classpip_1_1__internal_1_1index_1_1package__finder_1_1_candidate_evaluator.html#a28a061cad02fba9771adaf4e194e03f3",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

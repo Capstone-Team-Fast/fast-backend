@@ -1,0 +1,16 @@
+digraph "pip._vendor.distlib.version.Version"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.distlib.version.\lVersion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.distlib.version.\lLegacyVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d22/classpip_1_1__vendor_1_1distlib_1_1version_1_1_legacy_version.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.distlib.version.\lNormalizedVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/classpip_1_1__vendor_1_1distlib_1_1version_1_1_normalized_version.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.distlib.version.\lSemanticVersion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/deb/classpip_1_1__vendor_1_1distlib_1_1version_1_1_semantic_version.html",tooltip=" "];
+}

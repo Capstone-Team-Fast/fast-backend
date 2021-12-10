@@ -1,0 +1,20 @@
+digraph "neobolt.routing.RoutingConnectionPool.update_routing_table"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="neobolt.routing.RoutingConnection\lPool.update_routing_table",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.io.Neo4jPool.ensure\l_routing_table_is_fresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dee/classneo4j_1_1io_1_1_neo4j_pool.html#a02426f7388de94e2c41bd9646d600796",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neobolt.routing.RoutingConnection\lPool.acquire",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df7/classneobolt_1_1routing_1_1_routing_connection_pool.html#a2b9873acaddbbdfa059cd66e903e689d",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="neobolt.routing.RoutingConnection\lPool.ensure_routing_table_is_fresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df7/classneobolt_1_1routing_1_1_routing_connection_pool.html#ae743d6f33bb4d6770edfcf6eb3b054d9",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

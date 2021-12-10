@@ -1,0 +1,11 @@
+digraph "rest_framework.renderers.JSONRenderer.render"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.renderers.\lJSONRenderer.render",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.renderers.\lJSONRenderer.get_indent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d93/classrest__framework_1_1renderers_1_1_j_s_o_n_renderer.html#ae5cece3b58b326528078e7c61635c797",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

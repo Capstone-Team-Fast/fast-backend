@@ -1,0 +1,42 @@
+digraph "pip._vendor.requests.adapters.HTTPAdapter.add_headers"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.adapters.\lHTTPAdapter.add_headers",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.requests.adapters.\lHTTPAdapter.send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#a6b8cb9b4129cbc1c9aa685dc69f869a4",tooltip=" "];
+  Node2 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.requests.adapters.\lHTTPAdapter.build_response",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#ae82a7e8c98f9f7e8317f903249a59444",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.cachecontrol.adapter.\lCacheControlAdapter.build_response",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/def/classpip_1_1__vendor_1_1cachecontrol_1_1adapter_1_1_cache_control_adapter.html#a3989016f8c12cf716f18d8436eeb5416",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.requests.adapters.\lHTTPAdapter.cert_verify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#a52325d2ffdf6e613ebbbe516c989ff08",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.network.session.\lInsecureHTTPAdapter.cert_verify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d87/classpip_1_1__internal_1_1network_1_1session_1_1_insecure_h_t_t_p_adapter.html#a4beed4d750b24a0b84e980a8289e6a83",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._internal.network.session.\lInsecureCacheControlAdapter.cert_verify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d3d/classpip_1_1__internal_1_1network_1_1session_1_1_insecure_cache_control_adapter.html#a47f49b0e5cb0c5b227cad72a0763e730",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.core.mail.message.\lEmailMessage.get_connection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d6b/classdjango_1_1core_1_1mail_1_1message_1_1_email_message.html#a959bf9cad820942e92f8d1fc36a69d3b",tooltip=" "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._vendor.requests.adapters.\lHTTPAdapter.get_connection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#aa378d84f3fc4067c3bbe88ebc8304f9b",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pip._vendor.requests.adapters.\lHTTPAdapter.proxy_manager_for",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#a333d4c4e1a67a2f2b7ef66508c290d77",tooltip=" "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pip._vendor.requests.adapters.\lHTTPAdapter.proxy_headers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#a10a2069cfdc982d7d30efcf8327e27e6",tooltip=" "];
+  Node11 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="pip._vendor.requests.adapters.\lHTTPAdapter.request_url",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dd8/classpip_1_1__vendor_1_1requests_1_1adapters_1_1_h_t_t_p_adapter.html#aada71ac3613d6c3fcdc7e2049d49854e",tooltip=" "];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

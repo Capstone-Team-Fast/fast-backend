@@ -1,0 +1,40 @@
+digraph "neomodel.exceptions.NeomodelException"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="neomodel.exceptions.Neomodel\lException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neomodel.exceptions.Attempted\lCardinalityViolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dfd/classneomodel_1_1exceptions_1_1_attempted_cardinality_violation.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="neomodel.exceptions.Cardinality\lViolation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de9/classneomodel_1_1exceptions_1_1_cardinality_violation.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="neomodel.exceptions.Constraint\lValidationFailed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d66/classneomodel_1_1exceptions_1_1_constraint_validation_failed.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="neomodel.exceptions.Unique\lProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d60/classneomodel_1_1exceptions_1_1_unique_property.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="neomodel.exceptions.Deflate\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df8/classneomodel_1_1exceptions_1_1_deflate_error.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="neomodel.exceptions.Does\lNotExist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dee/classneomodel_1_1exceptions_1_1_does_not_exist.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="neomodel.exceptions.Inflate\lConflict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d26/classneomodel_1_1exceptions_1_1_inflate_conflict.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="neomodel.exceptions.Deflate\lConflict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d44/classneomodel_1_1exceptions_1_1_deflate_conflict.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="neomodel.exceptions.Inflate\lError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/db0/classneomodel_1_1exceptions_1_1_inflate_error.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="neomodel.exceptions.Model\lDefinitionException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d17/classneomodel_1_1exceptions_1_1_model_definition_exception.html",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="neomodel.exceptions.Class\lAlreadyDefined",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d8a/classneomodel_1_1exceptions_1_1_class_already_defined.html",tooltip=" "];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="neomodel.exceptions.Model\lDefinitionMismatch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dcf/classneomodel_1_1exceptions_1_1_model_definition_mismatch.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="neomodel.exceptions.Multiple\lNodesReturned",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0c/classneomodel_1_1exceptions_1_1_multiple_nodes_returned.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="neomodel.exceptions.NotConnected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d88/classneomodel_1_1exceptions_1_1_not_connected.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="neomodel.exceptions.Required\lProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/ded/classneomodel_1_1exceptions_1_1_required_property.html",tooltip=" "];
+}

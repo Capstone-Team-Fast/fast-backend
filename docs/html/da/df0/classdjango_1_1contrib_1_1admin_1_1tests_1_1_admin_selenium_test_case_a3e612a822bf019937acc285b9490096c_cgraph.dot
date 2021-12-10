@@ -1,0 +1,23 @@
+digraph "django.contrib.admin.tests.AdminSeleniumTestCase.admin_login"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.admin.tests.\lAdminSeleniumTestCase.admin_login",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.selenium.Selenium\lTestCase.live_server_url",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dac/classdjango_1_1test_1_1selenium_1_1_selenium_test_case.html#aeacfcb69be1fe64f396d1de8d4c3484e",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.test.testcases.Live\lServerTestCase.live_server_url",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/dd6/classdjango_1_1test_1_1testcases_1_1_live_server_test_case.html#a5a0c31a662f1ab3b490422c4dd0af991",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.admin.tests.\lAdminSeleniumTestCase.wait\l_page_loaded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/df0/classdjango_1_1contrib_1_1admin_1_1tests_1_1_admin_selenium_test_case.html#ad4ad288ae2d66481660c19911985a9c4",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.admin.tests.\lAdminSeleniumTestCase.wait\l_page_ready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/df0/classdjango_1_1contrib_1_1admin_1_1tests_1_1_admin_selenium_test_case.html#a51887fe7a1fd45c00e9d6c73b27395b8",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.admin.tests.\lAdminSeleniumTestCase.wait_until",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/df0/classdjango_1_1contrib_1_1admin_1_1tests_1_1_admin_selenium_test_case.html#a02fd30e72ff536ffd536a012867d8dcb",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

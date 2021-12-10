@@ -1,0 +1,15 @@
+digraph "django.http.request.HttpRequest.get_host"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.http.request.Http\lRequest.get_host",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.requests.cookies.\lMockRequest.add_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d29/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_mock_request.html#ad39c402ac97aae9d784304260b308c45",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.http.request.Http\lRequest.build_absolute_uri",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/ded/classdjango_1_1http_1_1request_1_1_http_request.html#acda6ee1aa44ebe5161a855fbb9b9cf7c",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

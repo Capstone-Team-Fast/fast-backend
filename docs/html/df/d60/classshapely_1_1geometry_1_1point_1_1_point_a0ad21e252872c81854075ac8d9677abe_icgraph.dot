@@ -1,0 +1,15 @@
+digraph "shapely.geometry.point.Point.array_interface"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="shapely.geometry.point.Point.array\l_interface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="shapely.geometry.linestring.\lLineStringAdapter.__array\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d23/classshapely_1_1geometry_1_1linestring_1_1_line_string_adapter.html#a60c0b0dd5c5557629a78c5aa0a624eaa",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="shapely.geometry.multipoint.\lMultiPointAdapter.__array\l_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dd1/classshapely_1_1geometry_1_1multipoint_1_1_multi_point_adapter.html#a37f2088edbf2b7af198f6558914da37f",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="shapely.geometry.point.Point\lAdapter.__array_interface__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dc8/classshapely_1_1geometry_1_1point_1_1_point_adapter.html#ac7d34feacd8cabef4e276924c97b5d85",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

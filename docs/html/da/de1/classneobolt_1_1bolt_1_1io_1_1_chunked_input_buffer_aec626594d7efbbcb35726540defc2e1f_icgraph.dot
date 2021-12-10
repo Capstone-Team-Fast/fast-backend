@@ -1,0 +1,12 @@
+digraph "neobolt.bolt.io.ChunkedInputBuffer.frame_message"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="neobolt.bolt.io.ChunkedInput\lBuffer.frame_message",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neobolt.bolt.io.ChunkedInput\lBuffer.receive_message",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/de1/classneobolt_1_1bolt_1_1io_1_1_chunked_input_buffer.html#ae48e338b6cea42db7605ef893452c46a",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,11 @@
+digraph "django.utils.translation.trans_real.DjangoTranslation.merge"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.utils.translation.trans\l_real.DjangoTranslation.merge",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.utils.translation.trans\l_real.TranslationCatalog.plural",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d59/classdjango_1_1utils_1_1translation_1_1trans__real_1_1_translation_catalog.html#ae3ad0379defc2a52878ca57d0cfa1335",tooltip=" "];
+}

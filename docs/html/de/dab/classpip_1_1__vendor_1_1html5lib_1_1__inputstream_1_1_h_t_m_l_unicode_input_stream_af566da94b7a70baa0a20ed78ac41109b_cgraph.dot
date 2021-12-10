@@ -1,0 +1,13 @@
+digraph "pip._vendor.html5lib._inputstream.HTMLUnicodeInputStream.openStream"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.html5lib.\l_inputstream.HTMLUnicodeInput\lStream.openStream",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.io._common.Outbox.chunk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dce/classneo4j_1_1io_1_1__common_1_1_outbox.html#aec86093df52b805838d898968024bd27",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neobolt.bolt.io.ChunkedOutput\lBuffer.chunk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d4e/classneobolt_1_1bolt_1_1io_1_1_chunked_output_buffer.html#a09144805b8e2234c43e2c10b3961f535",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

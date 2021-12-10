@@ -1,0 +1,12 @@
+digraph "django.contrib.admin.views.main.ChangeList.get_filters_params"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.contrib.admin.views.main.\lChangeList.get_filters_params",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.views.main.\lChangeList.get_ordering_field_columns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d58/classdjango_1_1contrib_1_1admin_1_1views_1_1main_1_1_change_list.html#ad365f8c2acd6830baf1c62ed771da06d",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

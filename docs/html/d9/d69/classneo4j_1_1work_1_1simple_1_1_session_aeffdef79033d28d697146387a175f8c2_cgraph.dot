@@ -1,0 +1,15 @@
+digraph "neo4j.work.simple.Session.begin_transaction"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="neo4j.work.simple.Session.begin\l_transaction",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="neo4j.work.simple.Session.\l_disconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d69/classneo4j_1_1work_1_1simple_1_1_session.html#a3a236ff716fd3c1ec4c214687670d05b",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="neo4j.work.Workspace.\l_disconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0d/classneo4j_1_1work_1_1_workspace.html#af1809f3b6d98fabac70c043d173c7603",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="neo4j.work.simple.Session.\l_open_transaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d69/classneo4j_1_1work_1_1simple_1_1_session.html#a41b009e4db9c1a08005e21381e7ff2e7",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

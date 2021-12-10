@@ -1,0 +1,16 @@
+digraph "pip._internal.network.session.PipSession.add_trusted_host"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.network.session.\lPipSession.add_trusted_host",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.network.session.\lPipSession.iter_secure_origins",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc2/classpip_1_1__internal_1_1network_1_1session_1_1_pip_session.html#aad106c813d9e42455312b4a56067a517",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.distlib.wheel.\lWheel.mount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d0b/classpip_1_1__vendor_1_1distlib_1_1wheel_1_1_wheel.html#a63bb3e266ae4ce08b7856466b24f7de8",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.requests.sessions.\lSession.mount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/de9/classpip_1_1__vendor_1_1requests_1_1sessions_1_1_session.html#accd92e91eedda19ac042cde49548a489",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

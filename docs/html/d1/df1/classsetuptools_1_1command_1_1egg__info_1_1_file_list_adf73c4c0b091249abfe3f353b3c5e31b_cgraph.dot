@@ -1,0 +1,14 @@
+digraph "setuptools.command.egg_info.FileList.recursive_exclude"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.command.egg\l_info.FileList.recursive\l_exclude",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.command.egg\l_info.FileList._remove_files",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/df1/classsetuptools_1_1command_1_1egg__info_1_1_file_list.html#a25aaca5cbf0b7ae91d227787ef95317c",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.command.egg\l_info.translate_pattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d7b/namespacesetuptools_1_1command_1_1egg__info.html#aa144258099051fcc4002b9750d064587",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

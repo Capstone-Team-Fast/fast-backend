@@ -1,0 +1,14 @@
+digraph "pip._vendor.requests.cookies.RequestsCookieJar.set"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.set_cookie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a4434bf004fda76eb0eb1b9d87fab45b0",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.http.response.Http\lResponseBase.set_cookie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/db4/classdjango_1_1http_1_1response_1_1_http_response_base.html#abd202fc643ff2a862e2fdcfe72dd57ca",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

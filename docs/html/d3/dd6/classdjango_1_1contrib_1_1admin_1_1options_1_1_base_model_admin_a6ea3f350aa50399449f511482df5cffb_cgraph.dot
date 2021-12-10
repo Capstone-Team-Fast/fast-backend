@@ -1,0 +1,21 @@
+digraph "django.contrib.admin.options.BaseModelAdmin.has_view_permission"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.admin.options.\lBaseModelAdmin.has_view_permission",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.options.\lBaseModelAdmin.has_change\l_permission",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dd6/classdjango_1_1contrib_1_1admin_1_1options_1_1_base_model_admin.html#a4277a867d799a4ba8c1b113bd891b48b",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.admin.options.\lInlineModelAdmin.has_change\l_permission",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbb/classdjango_1_1contrib_1_1admin_1_1options_1_1_inline_model_admin.html#a055fbe72f6d25685cb0c8aeba33312bc",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.admin.options.\lInlineModelAdmin._has_any\l_perms_for_target_model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbb/classdjango_1_1contrib_1_1admin_1_1options_1_1_inline_model_admin.html#a9a848b57ecdac8d4f211a53e62720523",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.admin.options.\lInlineModelAdmin.has_view\l_permission",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbb/classdjango_1_1contrib_1_1admin_1_1options_1_1_inline_model_admin.html#a53c09225125f5ccc8de8f93a6801a8d0",tooltip=" "];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3695 [label="BytesIO",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3695 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.utils.text.Streaming\lBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d23/classdjango_1_1utils_1_1text_1_1_streaming_buffer.html",tooltip=" "];
+}

@@ -1,0 +1,25 @@
+digraph "rest_framework.routers.SimpleRouter.get_urls"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.routers.Simple\lRouter.get_urls",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.routers.Simple\lRouter.get_lookup_regex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#a686c89a36bb155b027b0fae65d154bd3",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.routers.Simple\lRouter.get_method_map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#a0df7173033513860c84e95b50bbb86f5",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.routers.Simple\lRouter.get_routes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#aa62bf0350e7f17f9facdf51ca4c3b0a7",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.routers.Simple\lRouter._get_dynamic_route",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d99/classrest__framework_1_1routers_1_1_simple_router.html#addc97ee80b68f80a1373f008ab19a600",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rest_framework.routers.escape\l_curly_brackets",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/de7/namespacerest__framework_1_1routers.html#adb4e57d7f28754e2d17ee39fa3185aff",tooltip=" "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rest_framework.routers.flatten",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/de7/namespacerest__framework_1_1routers.html#ad49a5ef3a14d7c59e5c08fed51381b59",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

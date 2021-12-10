@@ -1,0 +1,17 @@
+digraph "rest_framework.filters.OrderingFilter.get_ordering"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.filters.Ordering\lFilter.get_ordering",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.filters.Ordering\lFilter.get_default_ordering",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d16/classrest__framework_1_1filters_1_1_ordering_filter.html#aa2dd8540757a9013497d3d0ca6d1123c",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.filters.Ordering\lFilter.get_default_valid_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d16/classrest__framework_1_1filters_1_1_ordering_filter.html#a51d26012f5aa637e7de4621330f36818",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.filters.Ordering\lFilter.get_valid_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d16/classrest__framework_1_1filters_1_1_ordering_filter.html#a92b2b578e296e9cc66248f4144f1cddc",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.filters.Ordering\lFilter.remove_invalid_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d16/classrest__framework_1_1filters_1_1_ordering_filter.html#a3dcde4cf637b6922673069463aa62542",tooltip=" "];
+}

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.contrib.postgres.fields.ranges.\lRangeOperators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d61/classdjango_1_1contrib_1_1postgres_1_1fields_1_1ranges_1_1_range_operators.html",tooltip=" "];
+}

@@ -1,0 +1,17 @@
+digraph "django.db.models.query.normalize_prefetch_lookups"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.models.query.normalize\l_prefetch_lookups",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.query.prefetch\l_related_objects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dc6/namespacedjango_1_1db_1_1models_1_1query.html#a2669eb06c4cc9652fd20fbd8522c12cc",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.models.query.get\l_prefetcher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dc6/namespacedjango_1_1db_1_1models_1_1query.html#ad55affecf3e8554a0d34164f8cdb70fa",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.query.prefetch\l_one_level",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dc6/namespacedjango_1_1db_1_1models_1_1query.html#a15fe9400adc265d2aeb133ba8f4299c7",tooltip=" "];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

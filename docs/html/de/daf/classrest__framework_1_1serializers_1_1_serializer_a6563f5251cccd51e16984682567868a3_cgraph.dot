@@ -1,0 +1,11 @@
+digraph "rest_framework.serializers.Serializer.run_validators"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.serializers.\lSerializer.run_validators",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.serializers.\lSerializer._read_only_defaults",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/daf/classrest__framework_1_1serializers_1_1_serializer.html#a0675430a8eb3cfcfd813227d313a9bcf",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

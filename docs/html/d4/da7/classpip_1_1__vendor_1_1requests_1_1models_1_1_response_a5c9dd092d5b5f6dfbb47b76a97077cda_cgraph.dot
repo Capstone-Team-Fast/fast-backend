@@ -1,0 +1,11 @@
+digraph "pip._vendor.requests.models.Response.is_permanent_redirect"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.models.\lResponse.is_permanent_redirect",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.http.request.Http\lRequest.headers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/ded/classdjango_1_1http_1_1request_1_1_http_request.html#a0fed8b781301745131bfbbcaf6a415f9",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

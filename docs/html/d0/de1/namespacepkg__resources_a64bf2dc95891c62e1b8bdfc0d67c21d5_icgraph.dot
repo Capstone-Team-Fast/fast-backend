@@ -1,0 +1,15 @@
+digraph "pkg_resources.register_finder"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pkg_resources.register\l_finder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pkg_resources.find\l_eggs_in_zip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de1/namespacepkg__resources.html#a36b4f55e7e31b83cee4451daf5966e7f",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pkg_resources.resolve\l_egg_link",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de1/namespacepkg__resources.html#a6ae462ea407849fd77ba2ee61c3ba24c",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

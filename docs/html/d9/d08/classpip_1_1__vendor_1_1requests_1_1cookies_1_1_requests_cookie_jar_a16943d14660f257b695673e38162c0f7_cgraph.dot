@@ -1,0 +1,43 @@
+digraph "pip._vendor.requests.cookies.RequestsCookieJar.items"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.items",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.distlib.compat.\lOrderedDict.iteritems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dae/classpip_1_1__vendor_1_1distlib_1_1compat_1_1_ordered_dict.html#a3d627da27acea3538e9861ee670fc289",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.iteritems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a4fdf3181e667a99344da4f476540ad1c",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.iterkeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a7844c31a11df29b737f6d2899743abaa",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.itervalues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a3ba97d46a1ab3f9106097d4e8f918779",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._vendor.urllib3.\l_collections.HTTPHeaderDict.iteritems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dc7/classpip_1_1__vendor_1_1urllib3_1_1__collections_1_1_h_t_t_p_header_dict.html#acab3544e4616ea2ad432954ed716960a",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.keys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a356a2e63096d6709bc43973d389208d3",tooltip=" "];
+  Node7 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pip._vendor.distlib.compat.\lOrderedDict.iterkeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dae/classpip_1_1__vendor_1_1distlib_1_1compat_1_1_ordered_dict.html#a3b4c1a9145ab532da5e134d099863dfd",tooltip=" "];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.values",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#ab1664c19386b98ad1335989e85f40ce0",tooltip=" "];
+  Node9 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pip._vendor.distlib.compat.\lOrderedDict.itervalues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dae/classpip_1_1__vendor_1_1distlib_1_1compat_1_1_ordered_dict.html#aad4371d22b46e3d2483fc544afd0aadf",tooltip=" "];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

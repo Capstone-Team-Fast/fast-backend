@@ -1,0 +1,13 @@
+digraph "pip._internal.cache.Cache"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="pip._internal.cache.Cache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.cache.Simple\lWheelCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dbb/classpip_1_1__internal_1_1cache_1_1_simple_wheel_cache.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.cache.Ephem\lWheelCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d7d/classpip_1_1__internal_1_1cache_1_1_ephem_wheel_cache.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._internal.cache.Wheel\lCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d59/classpip_1_1__internal_1_1cache_1_1_wheel_cache.html",tooltip=" "];
+}

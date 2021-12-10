@@ -1,0 +1,15 @@
+digraph "pip._internal.req.req_uninstall.UninstallPathSet.remove"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._internal.req.req\l_uninstall.UninstallPathSet.remove",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.req.req\l_uninstall.UninstallPathSet.\l_allowed_to_proceed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d6e/classpip_1_1__internal_1_1req_1_1req__uninstall_1_1_uninstall_path_set.html#a4ed4ff56b3e11f2aadf144c42ea1360b",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.pkg_resources.\lVersionConflict.dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d23/classpip_1_1__vendor_1_1pkg__resources_1_1_version_conflict.html#ab3d8caac5c0236cd06cdfafaae139b5c",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pkg_resources.VersionConflict.dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d54/classpkg__resources_1_1_version_conflict.html#aa9fbb5b0a8a3eca7fd7b68590df60925",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

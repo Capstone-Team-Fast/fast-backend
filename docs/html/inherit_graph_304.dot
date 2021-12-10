@@ -1,0 +1,34 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3843 [label="Node",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3843 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.templatetags.cache.\lCacheNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d45/classdjango_1_1templatetags_1_1cache_1_1_cache_node.html",tooltip=" "];
+  Node3843 -> Node3845 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3845 [label="django.templatetags.i18n.\lBlockTranslateNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d04/classdjango_1_1templatetags_1_1i18n_1_1_block_translate_node.html",tooltip=" "];
+  Node3843 -> Node3846 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3846 [label="django.templatetags.i18n.\lGetAvailableLanguagesNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dd5/classdjango_1_1templatetags_1_1i18n_1_1_get_available_languages_node.html",tooltip=" "];
+  Node3843 -> Node3847 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3847 [label="django.templatetags.i18n.\lGetCurrentLanguageBidiNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d3c/classdjango_1_1templatetags_1_1i18n_1_1_get_current_language_bidi_node.html",tooltip=" "];
+  Node3843 -> Node3848 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3848 [label="django.templatetags.i18n.\lGetCurrentLanguageNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/df3/classdjango_1_1templatetags_1_1i18n_1_1_get_current_language_node.html",tooltip=" "];
+  Node3843 -> Node3849 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3849 [label="django.templatetags.i18n.\lGetLanguageInfoListNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d67/classdjango_1_1templatetags_1_1i18n_1_1_get_language_info_list_node.html",tooltip=" "];
+  Node3843 -> Node3850 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3850 [label="django.templatetags.i18n.\lGetLanguageInfoNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1b/classdjango_1_1templatetags_1_1i18n_1_1_get_language_info_node.html",tooltip=" "];
+  Node3843 -> Node3851 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3851 [label="django.templatetags.i18n.\lLanguageNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d50/classdjango_1_1templatetags_1_1i18n_1_1_language_node.html",tooltip=" "];
+  Node3843 -> Node3852 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3852 [label="django.templatetags.i18n.\lTranslateNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d12/classdjango_1_1templatetags_1_1i18n_1_1_translate_node.html",tooltip=" "];
+  Node3843 -> Node3853 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3853 [label="django.templatetags.l10n.\lLocalizeNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dba/classdjango_1_1templatetags_1_1l10n_1_1_localize_node.html",tooltip=" "];
+  Node3843 -> Node3854 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3854 [label="django.templatetags.tz.Get\lCurrentTimezoneNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d11/classdjango_1_1templatetags_1_1tz_1_1_get_current_timezone_node.html",tooltip=" "];
+  Node3843 -> Node3855 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3855 [label="django.templatetags.tz.Local\lTimeNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d21/classdjango_1_1templatetags_1_1tz_1_1_local_time_node.html",tooltip=" "];
+  Node3843 -> Node3856 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3856 [label="django.templatetags.tz.TimezoneNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/classdjango_1_1templatetags_1_1tz_1_1_timezone_node.html",tooltip=" "];
+}

@@ -1,0 +1,11 @@
+digraph "django.core.handlers.wsgi.WSGIRequest.FILES"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.core.handlers.wsgi.\lWSGIRequest.FILES",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.request.Request.successful\l_authenticator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d48/classrest__framework_1_1request_1_1_request.html#ad80ff174e3b5f114b95b2b0cbb67def5",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

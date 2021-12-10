@@ -1,0 +1,13 @@
+digraph "django.db.models.fields.BinaryField.deconstruct"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.models.fields.\lBinaryField.deconstruct",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._internal.metadata.base.\lBaseDistribution.editable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d34/classpip_1_1__internal_1_1metadata_1_1base_1_1_base_distribution.html#a7acfc03ed76590ba1d091b6535b172c3",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._internal.metadata.pkg\l_resources.Distribution.editable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/df0/classpip_1_1__internal_1_1metadata_1_1pkg__resources_1_1_distribution.html#a4ea77ebec11830e2bb2732fea7d63b97",tooltip=" "];
+}

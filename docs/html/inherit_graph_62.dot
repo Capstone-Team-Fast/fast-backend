@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3768 [label="ForeignObjectRel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3768 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="django.contrib.contenttypes.fields.\lGenericRel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dab/classdjango_1_1contrib_1_1contenttypes_1_1fields_1_1_generic_rel.html",tooltip=" "];
+}

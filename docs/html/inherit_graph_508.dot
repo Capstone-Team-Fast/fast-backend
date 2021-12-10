@@ -1,0 +1,26 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node842 [label="codecs.Codec",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node842 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pip._vendor.idna.codec.Codec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da9/classpip_1_1__vendor_1_1idna_1_1codec_1_1_codec.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pip._vendor.idna.codec.Stream\lReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d76/classpip_1_1__vendor_1_1idna_1_1codec_1_1_stream_reader.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.idna.codec.Stream\lWriter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dd9/classpip_1_1__vendor_1_1idna_1_1codec_1_1_stream_writer.html",tooltip=" "];
+  Node842 -> Node846 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node846 [label="pip._vendor.webencodings.x\l_user_defined.Codec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d57/classpip_1_1__vendor_1_1webencodings_1_1x__user__defined_1_1_codec.html",tooltip="Codec APIs."];
+  Node846 -> Node847 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node847 [label="pip._vendor.webencodings.x\l_user_defined.StreamReader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dfb/classpip_1_1__vendor_1_1webencodings_1_1x__user__defined_1_1_stream_reader.html",tooltip=" "];
+  Node846 -> Node848 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node848 [label="pip._vendor.webencodings.x\l_user_defined.StreamWriter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d53/classpip_1_1__vendor_1_1webencodings_1_1x__user__defined_1_1_stream_writer.html",tooltip=" "];
+  Node3372 [label="codecs.StreamReader",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3372 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3372 -> Node847 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3373 [label="codecs.StreamWriter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3373 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3373 -> Node848 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,18 @@
+digraph "setuptools._distutils.command.register.register.post_to_server"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools._distutils.command.register.register.post\l_to_server",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools._distutils.config.\lPyPIRCCommand._read_pypi\l_response",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/daa/classsetuptools_1_1__distutils_1_1config_1_1_py_p_i_r_c_command.html#aedf4569ae7dfaede227f6e37241f5986",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools._distutils.ccompiler.\lCCompiler.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/daa/classsetuptools_1_1__distutils_1_1ccompiler_1_1_c_compiler.html#a501761e2a8ba78e759bf2242efe4ba54",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools._distutils.cmd.\lCommand.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/classsetuptools_1_1__distutils_1_1cmd_1_1_command.html#ab051d658feebbec119884df4a99be332",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools._distutils.dist.\lDistribution.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d14/classsetuptools_1_1__distutils_1_1dist_1_1_distribution.html#a85ea7f395fff4cb35acfc0bbd365d797",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

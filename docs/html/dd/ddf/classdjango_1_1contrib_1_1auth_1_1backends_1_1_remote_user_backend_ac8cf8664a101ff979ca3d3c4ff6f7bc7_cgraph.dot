@@ -1,0 +1,27 @@
+digraph "django.contrib.auth.backends.RemoteUserBackend.authenticate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.auth.backends.\lRemoteUserBackend.authenticate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.auth.backends.\lRemoteUserBackend.clean_username",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/ddf/classdjango_1_1contrib_1_1auth_1_1backends_1_1_remote_user_backend.html#a9f9b271e93cc575b10dfa0a132addf3f",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.auth.middleware.\lRemoteUserMiddleware.clean\l_username",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d11/classdjango_1_1contrib_1_1auth_1_1middleware_1_1_remote_user_middleware.html#adf328662e2d470e0cde2d82721308296",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.contrib.auth.backends.\lRemoteUserBackend.configure_user",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/ddf/classdjango_1_1contrib_1_1auth_1_1backends_1_1_remote_user_backend.html#a37c324f8729ca1379043ba9d4696e3d2",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.contrib.auth.backends.\lModelBackend.user_can_authenticate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d40/classdjango_1_1contrib_1_1auth_1_1backends_1_1_model_backend.html#a975db86c12c2ffcdb467340075f1a540",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.contrib.auth.backends.\lAllowAllUsersModelBackend.user\l_can_authenticate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d32/classdjango_1_1contrib_1_1auth_1_1backends_1_1_allow_all_users_model_backend.html#ae1d29b5e077951b8f034a65c0bc6a005",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.contrib.auth.backends.\lAllowAllUsersRemoteUserBackend.user\l_can_authenticate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de3/classdjango_1_1contrib_1_1auth_1_1backends_1_1_allow_all_users_remote_user_backend.html#a70dbde0982a4734d89365b229c41a9da",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

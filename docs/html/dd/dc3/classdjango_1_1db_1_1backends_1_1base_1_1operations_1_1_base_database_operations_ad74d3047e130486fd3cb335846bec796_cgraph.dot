@@ -1,0 +1,18 @@
+digraph "django.db.backends.base.operations.BaseDatabaseOperations.year_lookup_bounds_for_date_field"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.backends.base.operations.\lBaseDatabaseOperations.year\l_lookup_bounds_for_date_field",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.backends.base.operations.\lBaseDatabaseOperations.adapt\l_datefield_value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/dc3/classdjango_1_1db_1_1backends_1_1base_1_1operations_1_1_base_database_operations.html#a0ef5ad22a04db8a44017885a9a800122",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.backends.oracle.operations.\lDatabaseOperations.adapt_datefield_value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc4/classdjango_1_1db_1_1backends_1_1oracle_1_1operations_1_1_database_operations.html#a73aabafbc83914375d0525368cdfe7b7",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.backends.postgresql.operations.\lDatabaseOperations.adapt_datefield_value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d25/classdjango_1_1db_1_1backends_1_1postgresql_1_1operations_1_1_database_operations.html#ac87fd27e4aa95c0dfa4d18a67560e442",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

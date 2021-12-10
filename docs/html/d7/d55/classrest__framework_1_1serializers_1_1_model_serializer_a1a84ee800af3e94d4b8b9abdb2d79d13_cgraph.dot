@@ -1,0 +1,30 @@
+digraph "rest_framework.serializers.ModelSerializer.build_field"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rest_framework.serializers.\lModelSerializer.build_field",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rest_framework.serializers.\lModelSerializer.build_nested_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#a51ac07db884b975d816da398ce6bb48b",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rest_framework.serializers.\lHyperlinkedModelSerializer.build\l_nested_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d8e/classrest__framework_1_1serializers_1_1_hyperlinked_model_serializer.html#ad321cf42782f08133db02f6b6946ac04",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rest_framework.serializers.\lModelSerializer.build_property_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#ac2a1ea0d741c7afb2641bb9f64e9b25f",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rest_framework.serializers.\lModelSerializer.build_relational_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#a99f4643c2278b69e90e4b2f119609373",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rest_framework.serializers.\lModelSerializer.build_standard_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#abdff6db751b107b9ec5805a43f2b9dc6",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rest_framework.serializers.\lModelSerializer.build_unknown_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#ae7f091233059052ce5511e77aaeacef4",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rest_framework.serializers.\lModelSerializer.build_url_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d55/classrest__framework_1_1serializers_1_1_model_serializer.html#af9c5966402df97cdbc063fec4292a8a6",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

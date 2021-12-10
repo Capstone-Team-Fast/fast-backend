@@ -1,0 +1,15 @@
+digraph "sqlparse.sql.NameAliasMixin.get_alias"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sqlparse.sql.NameAliasMixin.get\l_alias",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sqlparse.sql.TokenList.\l_get_first_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a1db47da5f67acba0ef325d2b83e1375d",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sqlparse.sql.TokenList.token\l_next_by",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d1a/classsqlparse_1_1sql_1_1_token_list.html#a9c759859fae364b4c6fb161e55643a71",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pip._vendor.html5lib.treewalkers.genshi.\lTreeWalker.tokens",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d04/classpip_1_1__vendor_1_1html5lib_1_1treewalkers_1_1genshi_1_1_tree_walker.html#aaa7cd4013932d988edef6e126ab998a3",tooltip=" "];
+}

@@ -1,0 +1,32 @@
+digraph "setuptools._distutils.sysconfig.get_python_lib"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="setuptools._distutils.sysconfig.get\l_python_lib",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools._distutils.sysconfig.expand\l_makefile_vars",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a90d216e1605d30720ae20edec827b572",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools._distutils.sysconfig.get\l_makefile_filename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a54f9461ef3ea72829409f22730b1b57c",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools._distutils.sysconfig.get\l_config_vars",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a561afb012e626071f4835e1127e4d964",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools._distutils.sysconfig.customize\l_compiler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a39184aa4767e425939a4b038b24eb974",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="setuptools._distutils.sysconfig.get\l_config_var",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#af15382b8afd67ab2f138f8d446d0fa4e",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="setuptools._distutils.sysconfig.get\l_python_inc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#a3c7b105160c06122eca6182428eecb3b",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="setuptools._distutils.sysconfig.get\l_config_h_filename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/namespacesetuptools_1_1__distutils_1_1sysconfig.html#ae6fb6b585fe013858034390dbca0fb37",tooltip=" "];
+  Node8 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,25 @@
+digraph "pkg_resources.extern.VendorImporter.load_module"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="pkg_resources.extern.Vendor\lImporter.load_module",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.six._SixMeta\lPathImporter.get_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d4e/classpip_1_1__vendor_1_1six_1_1___six_meta_path_importer.html#aeb9eb8552551acdadedec1576e83552e",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.urllib3.packages.six.\l_SixMetaPathImporter.get_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d2f/classpip_1_1__vendor_1_1urllib3_1_1packages_1_1six_1_1___six_meta_path_importer.html#a11b5cf92304c07efaffd7bb5fe2a7dc8",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="six._SixMetaPathImporter.get_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d4d/classsix_1_1___six_meta_path_importer.html#af17c478b4ec0437d4d86d040295261f9",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools.extern.Vendor\lImporter.load_module",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/deb/classsetuptools_1_1extern_1_1_vendor_importer.html#a1d782aed41c8f30932f3be255f1f9b37",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

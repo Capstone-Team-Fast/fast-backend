@@ -1,0 +1,46 @@
+digraph "django.core.mail.message.EmailMultiAlternatives.attach_alternative"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.core.mail.message.\lEmailMultiAlternatives.attach\l_alternative",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.core.mail.message.\lEmailMultiAlternatives.\l_create_alternatives",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d4e/classdjango_1_1core_1_1mail_1_1message_1_1_email_multi_alternatives.html#a2305cac9fbdcac27bce5989a9828c0ee",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.core.mail.message.\lEmailMessage._create_attachments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d6b/classdjango_1_1core_1_1mail_1_1message_1_1_email_message.html#a66e75329e56243bd391f7f065be450b1",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.core.mail.message.\lEmailMessage._create_mime\l_attachment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d6b/classdjango_1_1core_1_1mail_1_1message_1_1_email_message.html#abeef522d0baba8589df563770cc98bad",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.http.request.Http\lRequest.body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/ded/classdjango_1_1http_1_1request_1_1_http_request.html#a671ce3b0fef6b03c17fbbb0247add996",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pip._internal.exceptions.\lHashError.body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d33/classpip_1_1__internal_1_1exceptions_1_1_hash_error.html#a9b89535522b4de9758f62636848d4f62",tooltip=" "];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pip._vendor.pkg_resources.\lVersionConflict.req",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d23/classpip_1_1__vendor_1_1pkg__resources_1_1_version_conflict.html#a575a61fcd835fa61b81fb5e92f89eed1",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pip._vendor.pkg_resources.\lDistributionNotFound.req",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd2/classpip_1_1__vendor_1_1pkg__resources_1_1_distribution_not_found.html#a544f707bf24ba1dd0358de79f6afc3fb",tooltip=" "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pkg_resources.VersionConflict.req",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d54/classpkg__resources_1_1_version_conflict.html#aa58b2603058699b5edf24f1e207bfd21",tooltip=" "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pkg_resources.Distribution\lNotFound.req",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d33/classpkg__resources_1_1_distribution_not_found.html#a8e314724660036b768d78dc21103c22f",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pip._internal.exceptions.\lHashMissing.body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dcb/classpip_1_1__internal_1_1exceptions_1_1_hash_missing.html#ac0e1ecc6b10c6d140adc7b1e3d4d3f78",tooltip=" "];
+  Node11 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="pip._internal.exceptions.\lHashMismatch.body",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc1/classpip_1_1__internal_1_1exceptions_1_1_hash_mismatch.html#a291b79ce98fe4b95dd32dfdb2bde1fd3",tooltip=" "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="pip._internal.exceptions.\lHashMismatch._hash_comparison",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc1/classpip_1_1__internal_1_1exceptions_1_1_hash_mismatch.html#adb4e0de3908007d74409d5971f5951de",tooltip=" "];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="pip._internal.exceptions.\lHashError._requirement_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d33/classpip_1_1__internal_1_1exceptions_1_1_hash_error.html#a0c851522499ffd4dbff93c18ca43b6e4",tooltip=" "];
+  Node12 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.contrib.gis.gdal.feature.\lFeature.encoding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d34/classdjango_1_1contrib_1_1gis_1_1gdal_1_1feature_1_1_feature.html#ad4eed8c25ca7f7ea25c54147e5bfb047",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="pip._internal.utils.misc.\lStreamWrapper.encoding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d7e/classpip_1_1__internal_1_1utils_1_1misc_1_1_stream_wrapper.html#abd72847a018a5b210883a79e389ab598",tooltip=" "];
+}

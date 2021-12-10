@@ -1,0 +1,24 @@
+digraph "django.views.generic.dates.BaseDateListView.get_dated_queryset"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="django.views.generic.dates.\lBaseDateListView.get_dated\l_queryset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.views.generic.dates.\lBaseArchiveIndexView.get\l_dated_items",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d24/classdjango_1_1views_1_1generic_1_1dates_1_1_base_archive_index_view.html#adc077b96bd9dabdc84b3dcf787176920",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.views.generic.dates.\lBaseYearArchiveView.get\l_dated_items",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d9e/classdjango_1_1views_1_1generic_1_1dates_1_1_base_year_archive_view.html#a854c061ed0f25330a77a32809beb3063",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.views.generic.dates.\lBaseMonthArchiveView.get\l_dated_items",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/da8/classdjango_1_1views_1_1generic_1_1dates_1_1_base_month_archive_view.html#a38271cc2f15dbe5f9a9e62448834c72c",tooltip=" "];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.views.generic.dates.\lBaseWeekArchiveView.get\l_dated_items",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dac/classdjango_1_1views_1_1generic_1_1dates_1_1_base_week_archive_view.html#aeee752c9270fad80424038e4c1777e66",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.views.generic.dates.\lBaseDayArchiveView.get_dated_items",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/de2/classdjango_1_1views_1_1generic_1_1dates_1_1_base_day_archive_view.html#a7fcb6d97397e195869cfd5a3ca5baa4e",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

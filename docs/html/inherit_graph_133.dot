@@ -1,0 +1,18 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="django.contrib.staticfiles.storage.\lHashedFilesMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/classdjango_1_1contrib_1_1staticfiles_1_1storage_1_1_hashed_files_mixin.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="django.contrib.staticfiles.storage.\lManifestFilesMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d7f/classdjango_1_1contrib_1_1staticfiles_1_1storage_1_1_manifest_files_mixin.html",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.staticfiles.storage.\lManifestStaticFilesStorage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d66/classdjango_1_1contrib_1_1staticfiles_1_1storage_1_1_manifest_static_files_storage.html",tooltip=" "];
+  Node3367 [label="django.core.files.storage.\lStorage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dad/classdjango_1_1core_1_1files_1_1storage_1_1_storage.html",tooltip=" "];
+  Node3367 -> Node3368 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3368 [label="django.core.files.storage.\lFileSystemStorage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/da8/classdjango_1_1core_1_1files_1_1storage_1_1_file_system_storage.html",tooltip=" "];
+  Node3368 -> Node3369 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3369 [label="django.contrib.staticfiles.storage.\lStaticFilesStorage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/db9/classdjango_1_1contrib_1_1staticfiles_1_1storage_1_1_static_files_storage.html",tooltip=" "];
+  Node3369 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

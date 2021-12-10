@@ -1,0 +1,15 @@
+digraph "pip._vendor.requests.cookies.RequestsCookieJar.__getitem__"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.__getitem__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.requests.cookies.\lRequestsCookieJar._find_no\l_duplicates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#aefb961734c54cece73df0ed9a85ac515",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pip._vendor.requests.cookies.\lRequestsCookieJar.get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d08/classpip_1_1__vendor_1_1requests_1_1cookies_1_1_requests_cookie_jar.html#a5c12745e77ca2dca5e951e65ed6ce6cb",tooltip=" "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

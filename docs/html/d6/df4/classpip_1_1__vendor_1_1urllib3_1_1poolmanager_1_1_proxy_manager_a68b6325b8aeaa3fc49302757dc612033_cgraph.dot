@@ -1,0 +1,13 @@
+digraph "pip._vendor.urllib3.poolmanager.ProxyManager.urlopen"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pip._vendor.urllib3.poolmanager.\lProxyManager.urlopen",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pip._vendor.urllib3.poolmanager.\lProxyManager._set_proxy_headers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df4/classpip_1_1__vendor_1_1urllib3_1_1poolmanager_1_1_proxy_manager.html#ae2ad40d138bf4f332d41cd3a0e697b81",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.http.request.Http\lRequest.headers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/ded/classdjango_1_1http_1_1request_1_1_http_request.html#a0fed8b781301745131bfbbcaf6a415f9",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

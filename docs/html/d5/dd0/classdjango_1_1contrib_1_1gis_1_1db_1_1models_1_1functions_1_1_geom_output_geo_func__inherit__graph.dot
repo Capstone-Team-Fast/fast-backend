@@ -1,0 +1,52 @@
+digraph "django.contrib.gis.db.models.functions.GeomOutputGeoFunc"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.contrib.gis.db.models.functions.\lGeomOutputGeoFunc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.gis.db.models.functions.\lGeoFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d0d/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_geo_func.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.contrib.gis.db.models.functions.\lGeoFuncMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d5c/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_geo_func_mixin.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.expressions.Func",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d57/classdjango_1_1db_1_1models_1_1expressions_1_1_func.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.models.expressions.\lSQLiteNumericMixin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dbc/classdjango_1_1db_1_1models_1_1expressions_1_1_s_q_lite_numeric_mixin.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.db.models.expressions.\lExpression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dca/classdjango_1_1db_1_1models_1_1expressions_1_1_expression.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.db.models.expressions.\lBaseExpression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d6b/classdjango_1_1db_1_1models_1_1expressions_1_1_base_expression.html",tooltip=" "];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.db.models.expressions.\lCombinable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d99/classdjango_1_1db_1_1models_1_1expressions_1_1_combinable.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.contrib.gis.db.models.functions.\lBoundingCircle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/db8/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_bounding_circle.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.contrib.gis.db.models.functions.\lCentroid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8d/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_centroid.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.contrib.gis.db.models.functions.\lDifference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d40/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_difference.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.contrib.gis.db.models.functions.\lEnvelope",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d16/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_envelope.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="django.contrib.gis.db.models.functions.\lForcePolygonCW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d7a/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_force_polygon_c_w.html",tooltip=" "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="django.contrib.gis.db.models.functions.\lIntersection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d6a/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_intersection.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.contrib.gis.db.models.functions.\lMakeValid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d55/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_make_valid.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="django.contrib.gis.db.models.functions.\lPointOnSurface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dbe/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_point_on_surface.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="django.contrib.gis.db.models.functions.\lScale",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db6/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_scale.html",tooltip=" "];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="django.contrib.gis.db.models.functions.\lTranslate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d80/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_translate.html",tooltip=" "];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="django.contrib.gis.db.models.functions.\lSnapToGrid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d7d/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_snap_to_grid.html",tooltip=" "];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="django.contrib.gis.db.models.functions.\lSymDifference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d98/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_sym_difference.html",tooltip=" "];
+  Node1 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="django.contrib.gis.db.models.functions.\lTransform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d6b/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_transform.html",tooltip=" "];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="django.contrib.gis.db.models.functions.\lIsValid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d6f/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_is_valid.html",tooltip=" "];
+  Node1 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="django.contrib.gis.db.models.functions.\lUnion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/df3/classdjango_1_1contrib_1_1gis_1_1db_1_1models_1_1functions_1_1_union.html",tooltip=" "];
+}

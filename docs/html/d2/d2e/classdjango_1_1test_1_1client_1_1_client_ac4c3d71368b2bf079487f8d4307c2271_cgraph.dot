@@ -1,0 +1,23 @@
+digraph "django.test.client.Client.patch"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.test.client.Client.patch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.test.client.Client.\l_handle_redirects",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d2e/classdjango_1_1test_1_1client_1_1_client.html#a06374d6a7dfc24007b154be9ef296063",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.models.query.Query\lSet.extra",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a1405bbe85d19b17ccd4c18090c8785a4",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.query.Query\lSet._chain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a7e1b5806921e30da5ca203c9d1d4c2d5",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.models.query.Query\lSet._not_support_combined\l_queries",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a861c2ecefc16eb29d7ad4e326ac03fe3",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.db.models.query.Query\lSet.query",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d94/classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a122ab2492eab3285ee368fba53d18a13",tooltip=" "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="shapely.strtree.STRtree.query",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd0/classshapely_1_1strtree_1_1_s_t_rtree.html#a36091f1859b35aa145800837553ec921",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

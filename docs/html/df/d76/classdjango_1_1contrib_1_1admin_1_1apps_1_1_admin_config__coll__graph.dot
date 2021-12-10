@@ -1,0 +1,13 @@
+digraph "django.contrib.admin.apps.AdminConfig"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="django.contrib.admin.apps.\lAdminConfig",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.contrib.admin.apps.\lSimpleAdminConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df6/classdjango_1_1contrib_1_1admin_1_1apps_1_1_simple_admin_config.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.apps.config.AppConfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/de0/classdjango_1_1apps_1_1config_1_1_app_config.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" default_auto_field\ndefault_site\nname" ,fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

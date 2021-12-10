@@ -1,0 +1,58 @@
+digraph "django.db.models.base.Model.clean"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="django.db.models.base.Model.clean",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="django.db.models.base.Model.clean\l_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a549f5dea41d0ce039d2939bbe12b8e13",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="django.db.models.base.Model.\l_check_column_name_clashes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#aa6c22b6e7517efbcb929ba371615c039",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="django.db.models.base.Model.\l_check_constraints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a3ca7f9c59e71ddaf6e95932900d01a5a",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="django.db.models.base.Model.\l_check_default_pk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a0ba260fe7a5482ada7a70260b3e17f8d",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="django.db.models.base.Model.\l_check_field_name_clashes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#ae912b8ad8be8af5dc9886f9f6fc97675",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="django.db.models.base.Model.\l_check_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a23addf58e43545bb4d631f6f1124702e",tooltip=" "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="django.contrib.admin.checks.\lBaseModelAdminChecks._check_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/classdjango_1_1contrib_1_1admin_1_1checks_1_1_base_model_admin_checks.html#af1a0de7b65775da886ec2e1a8c845a83",tooltip=" "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="django.db.models.base.Model.\l_check_id_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a8b178645fafe7239c649d7c9cc371791",tooltip=" "];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="django.db.models.base.Model.\l_check_index_together",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a9cee0df9bd7fefcbdaca41c4e9b70557",tooltip=" "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="django.db.models.base.Model.\l_check_indexes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#afc76824e8a94561b08401279e9ac8027",tooltip=" "];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="django.db.models.base.Model.\l_check_local_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a50ce84b7cd6f279c17d685fb4617b20e",tooltip=" "];
+  Node2 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="django.db.models.base.Model.\l_check_long_column_names",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#af7d4af070244463bcccff7498a381d4f",tooltip=" "];
+  Node2 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="django.db.models.base.Model.\l_check_m2m_through_same_relationship",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a25806e4057d3c5f1447ea1d3d9e71bf9",tooltip=" "];
+  Node2 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="django.db.models.base.Model.\l_check_managers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#af2e491d14e3aa6f63bfa6c070bae79b8",tooltip=" "];
+  Node2 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="django.db.models.base.Model.\l_check_model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a9c2a09547ee6a7f6931ab57712b085cc",tooltip=" "];
+  Node2 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="django.db.models.base.Model.\l_check_model_name_db_lookup\l_clashes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#ab8fe0e9457769b74e32e17424884d14d",tooltip=" "];
+  Node2 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="django.db.models.base.Model.\l_check_ordering",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#ad6cc1c1564854aaae0a9408a5273aae3",tooltip=" "];
+  Node2 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="django.contrib.admin.checks.\lBaseModelAdminChecks._check\l_ordering",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/classdjango_1_1contrib_1_1admin_1_1checks_1_1_base_model_admin_checks.html#a2252f3b91beb4a6c778a9fb68e800025",tooltip=" "];
+  Node2 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="django.db.models.base.Model.\l_check_property_name_related\l_field_accessor_clashes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a203f8218a8c1daabe96282f71ccf4fbe",tooltip=" "];
+  Node2 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="django.db.models.base.Model.\l_check_single_primary_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a461200cb618e04440979be79bbcca6ac",tooltip=" "];
+  Node2 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="django.db.models.base.Model.\l_check_swappable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#aea555e9fcc5c30cb3b2843d6cf08052b",tooltip=" "];
+  Node2 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="django.db.models.base.Model.\l_check_unique_together",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a339d0316077b6471ab9ee9475ad79d69",tooltip=" "];
+  Node2 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="django.db.models.base.Model.\l_get_expr_references",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d39/classdjango_1_1db_1_1models_1_1base_1_1_model.html#a8f31c0b4a1a340ce66853d06f57676e7",tooltip=" "];
+  Node2 -> Node25 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="django_neomodel.DjangoNode._meta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dc5/classdjango__neomodel_1_1_django_node.html#abd0c469b835cfd2c9903601051c67742",tooltip=" "];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

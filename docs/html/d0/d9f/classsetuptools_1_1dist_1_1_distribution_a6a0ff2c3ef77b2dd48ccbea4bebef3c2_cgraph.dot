@@ -1,0 +1,36 @@
+digraph "setuptools.dist.Distribution.exclude"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="setuptools.dist.Distribution.exclude",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.dist.Distribution.\l_exclude_misc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#ace87eb84e921c9f82e6244e0d0664fca",tooltip=" "];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="setuptools.dist.Distribution.exclude\l_package",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#afc5f2e32b85d40dbd223aa3e1bd33cf9",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="setuptools._distutils.dist.\lDistribution.get_command_class",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d14/classsetuptools_1_1__distutils_1_1dist_1_1_distribution.html#ae4d2002cf3e5eae8943b655ff03f1c9e",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="setuptools._distutils.dist.\lDistribution.get_command\l_packages",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d14/classsetuptools_1_1__distutils_1_1dist_1_1_distribution.html#a0a4e6195d41a730220461eefd9abb64b",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="setuptools.dist.Distribution.get\l_command_class",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#a76159456291f4bb9ed2ccb935d480240",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="setuptools.dist.Distribution.fetch\l_build_egg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9f/classsetuptools_1_1dist_1_1_distribution.html#a17bce0b77bfb0a4d06aa9422f1e5e0bf",tooltip=" "];
+  Node7 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="setuptools._distutils.dist.\lDistribution.get_option_dict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d14/classsetuptools_1_1__distutils_1_1dist_1_1_distribution.html#acc19458816eb97768561cd08f2fba634",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="setuptools._distutils.ccompiler.\lCCompiler.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/daa/classsetuptools_1_1__distutils_1_1ccompiler_1_1_c_compiler.html#a501761e2a8ba78e759bf2242efe4ba54",tooltip=" "];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="setuptools._distutils.cmd.\lCommand.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/classsetuptools_1_1__distutils_1_1cmd_1_1_command.html#ab051d658feebbec119884df4a99be332",tooltip=" "];
+  Node10 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="setuptools._distutils.dist.\lDistribution.announce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d14/classsetuptools_1_1__distutils_1_1dist_1_1_distribution.html#a85ea7f395fff4cb35acfc0bbd365d797",tooltip=" "];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

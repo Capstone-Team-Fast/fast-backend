@@ -1,0 +1,11 @@
+digraph "setuptools.build_meta._BuildMetaLegacyBackend"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="setuptools.build_meta.\l_BuildMetaLegacyBackend",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="setuptools.build_meta.\l_BuildMetaBackend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d07/classsetuptools_1_1build__meta_1_1___build_meta_backend.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}
