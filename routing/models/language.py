@@ -5,8 +5,16 @@ from neomodel import StructuredNode, StringProperty, IntegerProperty
 
 class Language(StructuredNode):
     """This  class provides the basic mechanism for creating and working with a node representing world languages.
+
+        Typical usage example:
+
+        foo = Language(language='Armenian')
     """
+
+    """An integer representing the id of this language. Each language is assigned a unique id."""
     external_id = IntegerProperty(required=False, unique_index=True)
+
+    """A string representing the name of this language. Each language is unique."""
     language = StringProperty(required=True, unique_index=True)
 
     @staticmethod
@@ -23,6 +31,7 @@ class Language(StructuredNode):
 
         Two LANGUAGES are equal if they are semantically and alphabetically the same, regardless of letters' cases.
 
+        @param: other object to compare to.
         @return: True if the objects being compared are semantically and alphabetically equal, regardless of letters'
             cases.
         @raise: TypeError if the objects being compared are not LANGUAGE objects.
@@ -36,6 +45,7 @@ class Language(StructuredNode):
 
         A LANGUAGE is less that another if it is alphabetically less than the other, regardless of letters' cases.
 
+        @param: other object to compare to.
         @return: True if this object is alphabetically less than the other, regardless of letters' cases.
         @raise: TypeError if the objects being compared are not LANGUAGE objects.
         """
@@ -57,6 +67,12 @@ class Language(StructuredNode):
         """Serializes this language.
 
         The serializer uses the JavaScript Object Notation, JSON, and serializes this language.
+
+            Format:
+                {
+                    'id': [INTEGER],
+                    'day': [STRING]
+                }
 
         @return: A JSON object representing this LANGUAGE.
         """

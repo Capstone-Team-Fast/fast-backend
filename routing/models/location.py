@@ -12,43 +12,83 @@ if os.getcwd() not in sys.path:
 from routing.exceptions import LocationStateException
 
 
-class Weight(StructuredRel):
+class _Weight(StructuredRel):
+    """This class defines the edge between two Addresses.
+
+    An edge have distance and duration, and may have a savings.
+    """
     distance = FloatProperty(required=True)
     duration = FloatProperty(required=True)
     savings = FloatProperty()
 
 
 class Address(StructuredNode):
+    """This class defines an Address node.
+
+    An address is a standard US address and has the following properties:
+        address, city, state, zipcode, country.
+
+        Typical usage example:
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182)
+        address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182, country='US')
+    """
+
+    """A unique id assigned upon creating this object"""
     uid = UniqueIdProperty()
+
+    """A string representing the street of this address. It is a required property."""
     address = StringProperty(index=True, required=True)
+
+    """A string representing the city of this address. It is a required property."""
     city = StringProperty(index=True, required=True)
+
+    """A string representing the state of this address. It is a required property."""
     state = StringProperty(index=True, required=True)
+
+    """A string representing the zipcode of this address. It is a required property."""
     zipcode = IntegerProperty(index=True, required=True)
+
+    """A string representing the country of this address. If no value is provided it defaults to 'United States'."""
+    country = StringProperty(index=True, default='United States')
+
+    """A float representing the latitude of this address. It is an optional property."""
     latitude = FloatProperty(index=True)
+
+    """A float representing the longitude of this address. It is an optional property."""
     longitude = FloatProperty(index=True)
+
+    """An integer representing the maximum number of addresses this driver can deliver to."""
     created_on = DateTimeProperty(index=True, default=datetime.now)
+
+    """A datetime object representing the last modified datetime of this driver."""
     modified_on = DateTimeProperty(index=True, default_now=True)
+
+    """An integer representing the id of this driver."""
     external_id = IntegerProperty(required=False, unique_index=True)
 
-    neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=Weight)
+    """A relationship addresses that can be reached from this address."""
+    neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=_Weight)
 
     def __init__(self, *args, **kwargs):
+        """Creates an Address.
+
+            Typical usage example:
+
+            address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182)
+            address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182, country='US')
+        """
         super(Address, self).__init__(*args, **kwargs)
 
-    def __hash__(self):
-        return hash((self.address, self.city, self.state, self.zipcode))
-
-    def __eq__(self, other):
-        if isinstance(other, type(self)):
-            return (self.address == other.address and self.city == other.city
-                    and self.state == other.state and self.zipcode == other.zipcode)
-        raise TypeError(f'{type(other)} not supported.')
-
-    def __str__(self):
-        return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
-                                                             zipcode=self.zipcode)
-
     def distance(self, other):
+        """Provides the mechanism for getting the distance between this address and another address.
+
+        This method returns a positive float value if one address is directly connected to another. Otherwise, None is
+        returned.
+
+        @param
+        @return
+        @raise
+        """
         if isinstance(other, type(self)):
             if self == other:
                 return 0.0
@@ -94,6 +134,19 @@ class Address(StructuredNode):
             }
         })
         return obj
+
+    def __hash__(self):
+        return hash((self.address, self.city, self.state, self.zipcode))
+
+    def __eq__(self, other):
+        if isinstance(other, type(self)):
+            return (self.address == other.address and self.city == other.city
+                    and self.state == other.state and self.zipcode == other.zipcode)
+        raise TypeError(f'{type(other)} not supported.')
+
+    def __str__(self):
+        return '{address}, {city}, {state} {zipcode}'.format(address=self.address, city=self.city, state=self.state,
+                                                             zipcode=self.zipcode)
 
 
 class Location(StructuredNode):
