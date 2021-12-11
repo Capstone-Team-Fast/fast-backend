@@ -1,9 +1,0 @@
-digraph "django.db.backends.base.schema.BaseDatabaseSchemaEditor"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="django.db.backends.base.schema.\lBaseDatabaseSchemaEditor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sql_alter_column\nsql_alter_column_collate\nsql_alter_column_default\nsql_alter_column_no_default\nsql_alter_column_no_default\l_null\nsql_alter_column_not_null\nsql_alter_column_null\nsql_alter_column_type\nsql_check_constraint\nsql_constraint\n..." ,fontname="Helvetica"];
-  Node2 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-}

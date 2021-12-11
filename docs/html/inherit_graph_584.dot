@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="psycopg2.extensions.SQL_IN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpsycopg2_1_1extensions_1_1_s_q_l___i_n.html",tooltip=" "];
-}

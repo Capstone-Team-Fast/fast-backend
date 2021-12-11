@@ -3,6 +3,7 @@ import datetime
 import enum
 import json
 import sys
+from typing import Set
 
 import neomodel
 from neomodel import UniqueIdProperty
@@ -379,7 +380,7 @@ class RouteManager:
                     final_locations = copy.deepcopy(locations)
         return global_objective_function_value, best_allocation, objective_function_values_list, final_locations
 
-    def __tally_locations(self, locations: list) -> set[UniqueIdProperty]:
+    def __tally_locations(self, locations: list) -> Set[UniqueIdProperty]:
         tally = set()
         if locations:
             for location in locations:
@@ -387,8 +388,8 @@ class RouteManager:
         return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
-        assigned_locations_list: set[UniqueIdProperty] = set()
-        locations_to_insert: set[UniqueIdProperty] = set()
+        assigned_locations_list: Set[UniqueIdProperty] = set()
+        locations_to_insert: Set[UniqueIdProperty] = set()
         if len(locations) == 1:
             locations_to_insert = self.__tally_locations(locations)
             try:
