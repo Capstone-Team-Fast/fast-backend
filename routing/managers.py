@@ -5,6 +5,7 @@ import json
 import sys
 
 import neomodel
+from neomodel import UniqueIdProperty
 
 from routing.exceptions import RouteStateException, GeocodeError
 from routing.models.availability import Availability
@@ -234,11 +235,11 @@ class RouteManager:
 
     __NUMBER_OF_ITERATIONS = 1
     __Response = {
-        'solver_status': '',    # Different status code based on one of 3 scenarios
-        'message': '',          # Short description
-        'description': '',      # Detailed description
-        'others': [],           # Clients' id not assigned
-        'routes': [],           # List of routes assigned to driver
+        'solver_status': '',  # Different status code based on one of 3 scenarios
+        'message': '',  # Short description
+        'description': '',  # Detailed description
+        'others': [],  # Clients' id not assigned
+        'routes': [],  # List of routes assigned to driver
     }
 
     def __init__(self, db_connection: str):
@@ -378,7 +379,7 @@ class RouteManager:
                     final_locations = copy.deepcopy(locations)
         return global_objective_function_value, best_allocation, objective_function_values_list, final_locations
 
-    def __tally_locations(self, locations: list):
+    def __tally_locations(self, locations: list) -> set[UniqueIdProperty]:
         tally = set()
         if locations:
             for location in locations:
@@ -386,8 +387,8 @@ class RouteManager:
         return tally
 
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
-        assigned_locations_list = set()
-        locations_to_insert = set()
+        assigned_locations_list: set[UniqueIdProperty] = set()
+        locations_to_insert: set[UniqueIdProperty] = set()
         if len(locations) == 1:
             locations_to_insert = self.__tally_locations(locations)
             try:
@@ -481,8 +482,7 @@ class RouteManager:
                 RouteManager.__Response['description'] = 'Assignment is infeasible.'
             else:
                 RouteManager.__Response['description'] = 'Some addresses were assigned.'
-            RouteManager.__Response['others'] = [address.external_id for address in
-                                                 locations_to_insert.difference(assigned_locations_list)]
+            RouteManager.__Response['others'] = list(locations_to_insert.difference(assigned_locations_list))
         else:
             RouteManager.__Response['solver_status'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.name

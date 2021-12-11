@@ -111,7 +111,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_request_route_with_invalid_addresses(self):
         departure = data.departure
-        customers = data.get_random_customers(n=1)
+        customers = data.get_random_customers(n=6)
         drivers = data.get_random_drivers(n=1)
 
         # Create routes
