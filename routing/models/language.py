@@ -4,58 +4,78 @@ from neomodel import StructuredNode, StringProperty, IntegerProperty
 
 
 class Language(StructuredNode):
-    __LANGUAGES = {'Afrikaans': 'Afrikaans', 'Albanian': 'Albanian', 'Amharic': 'Amharic', 'Arabic': 'Arabic',
-                   'Armenian': 'Armenian', 'Assamese': 'Assamese', 'Aymara': 'Aymara', 'Azeri': 'Azeri',
-                   'Belarusian': 'Belarusian', 'Bengali': 'Bengali', 'Bislama': 'Bislama', 'Bosnian': 'Bosnian',
-                   'Bulgarian': 'Bulgarian', 'Burmese': 'Burmese', 'Catalan': 'Catalan', 'Chinese': 'Chinese',
-                   'Croatian': 'Croatian', 'Czech': 'Czech', 'Danish': 'Danish', 'Dari': 'Dari', 'Dhivehi': 'Dhivehi',
-                   'Dutch': 'Dutch', 'Dzongkha': 'Dzongkha', 'English': 'English', 'Estonian': 'Estonian',
-                   'Fijian': 'Fijian', 'Filipino': 'Filipino', 'Finnish': 'Finnish', 'French': 'French',
-                   'Gagauz': 'Gagauz', 'Georgian': 'Georgian', 'German': 'German', 'Greek': 'Greek',
-                   'Gujarati': 'Gujarati', 'Haitian Creole': 'Haitian Creole', 'Hebrew': 'Hebrew', 'Hindi': 'Hindi',
-                   'Hiri Motu': 'Hiri Motu', 'Hungarian': 'Hungarian', 'Icelandic': 'Icelandic',
-                   'Indonesian': 'Indonesian', 'Irish Gaelic': 'Irish Gaelic', 'Italian': 'Italian',
-                   'Japanese': 'Japanese', 'Kannada': 'Kannada', 'Kashmiri': 'Kashmiri', 'Kazakh': 'Kazakh',
-                   'Khmer': 'Khmer', 'Korean': 'Korean', 'Kurdish': 'Kurdish', 'Kyrgyz': 'Kyrgyz',
-                   'Lao': 'Lao', 'Latvian': 'Latvian', 'Lithuanian': 'Lithuanian', 'Luxembourgish': 'Luxembourgish',
-                   'Macedonian': 'Macedonian', 'Malagasy': 'Malagasy', 'Malay': 'Malay', 'Malayalam': 'Malayalam',
-                   'Maltese': 'Maltese', 'Mandarin': 'Mandarin', 'Marathi': 'Marathi', 'Moldovan': 'Moldovan',
-                   'Mongolian': 'Mongolian', 'Montenegrin': 'Montenegrin', 'Ndebele': 'Ndebele', 'Nepali': 'Nepali',
-                   'New Zealand Sign Language': 'New Zealand Sign Language', 'Northern Sotho': 'Northern Sotho',
-                   'Norwegian': 'Norwegian', 'Oriya': 'Oriya', 'Papiamento': 'Papiamento', 'Pashto': 'Pashto',
-                   'Persian': 'Persian', 'Polish': 'Polish', 'Portuguese': 'Portuguese', 'Punjabi': 'Punjabi',
-                   'Quechua': 'Quechua', 'Romanian': 'Romanian', 'Russian': 'Russian', 'Somali': 'Somali',
-                   'Sotho': 'Sotho', 'Spanish': 'Spanish', 'Sudanese': 'Sudanese', 'Swahili': 'Swahili',
-                   'Swati': 'Swati', 'Swedish': 'Swedish', 'Tajik': 'Tajik', 'Tamil': 'Tamil', 'Telugu': 'Telugu',
-                   'Tetum': 'Tetum', 'Thai': 'Thai', 'Tok Pisin': 'Tok Pisin', 'Tsonga': 'Tsonga', 'Tswana': 'Tswana',
-                   'West Frisian': 'West Frisian', 'Yiddish': 'Yiddish', 'Zulu': 'Zulu'}
+    """This  class provides the basic mechanism for creating and working with a node representing world languages.
 
+        Typical usage example:
+
+        foo = Language(language='Armenian')
+    """
+
+    """An integer representing the id of this language. Each language is assigned a unique id."""
     external_id = IntegerProperty(required=False, unique_index=True)
-    language = StringProperty(required=True, unique_index=True, choices=__LANGUAGES)
+
+    """A string representing the name of this language. Each language is unique."""
+    language = StringProperty(required=True, unique_index=True)
 
     @staticmethod
     def options() -> list:
-        return list(Language.__LANGUAGES.keys())
-
-    @staticmethod
-    def add_languages(language: str):
-        if language not in Language.__LANGUAGES:
-            Language.__LANGUAGES[language.capitalize()] = language.capitalize()
+        """A utility function that returns a list of languages stored in the graph database.
+        """
+        stored_languages = []
+        for language in Language.nodes.all():
+            stored_languages.append(language.language)
+        return stored_languages
 
     def __eq__(self, other):
+        """Provides the mechanism for comparing two objects of type LANGUAGE.
+
+        Two LANGUAGES are equal if they are semantically and alphabetically the same, regardless of letters' cases.
+
+        @param: other object to compare to.
+        @return: True if the objects being compared are semantically and alphabetically equal, regardless of letters'
+            cases.
+        @raise: TypeError if the objects being compared are not LANGUAGE objects.
+        """
         if isinstance(other, type(self)):
             return str(self.language).lower() == str(other.language).lower()
         raise TypeError(f'{type(other)} not supported.')
 
     def __lt__(self, other):
+        """Provides the mechanism for comparing two objects of type LANGUAGE.
+
+        A LANGUAGE is less that another if it is alphabetically less than the other, regardless of letters' cases.
+
+        @param: other object to compare to.
+        @return: True if this object is alphabetically less than the other, regardless of letters' cases.
+        @raise: TypeError if the objects being compared are not LANGUAGE objects.
+        """
         if isinstance(other, type(self)):
             return str(self.language).lower() < str(other.language).lower()
         raise TypeError(f'{type(other)} not supported.')
 
     def __str__(self):
-        return '{}'.format(str(self.language).capitalize())
+        """Returns a readable format for this language.
+
+        The returned value is capitalized. If the language contains more than one token, each token is capitalized.
+
+        @return: a String representing a readable format for this language.
+        """
+        tokens = [token.capitalize() for token in str(self.language).split(' ')]
+        return '{}'.format(' '.join(tokens))
 
     def serialize(self):
+        """Serializes this language.
+
+        The serializer uses the JavaScript Object Notation, JSON, and serializes this language.
+
+            Format:
+                {
+                    'id': [INTEGER],
+                    'day': [STRING]
+                }
+
+        @return: A JSON object representing this LANGUAGE.
+        """
         obj = json.dumps({
             'id': self.external_id,
             'language': str(self.language)
