@@ -30,6 +30,14 @@ The most essential aspects of the routing algorithm are implemented at this poin
 ### Backend:
 For Milestone 4, we have completed the bulk uploading of clients and drivers. We have edited their models and made a few changes based on feedback from Dr. Vitor and compatibility with the routing app.
 
+## Milestone 5: Release Notes
+
+### Routing algorithm:
+
+
+### Backend:
+For Milestone 5, we finished linking our routing app and the main backend for api requests. In doing so, we added a new model: route_list. A route_list has a one to many relation with routes, so that we know what routes are generated together. We ran into issues with Django's Rest Framework Serializers. Having multiple nested serializers caused issues with the relations between the route_list, route, and client models. This was solved by saving the itinerary(clients) as JSON in the database. An added bonus to this structure, meant it was easy to keep the order of the itinerary.
+
 # Installation
 ## Install and update Python
 
