@@ -20,26 +20,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(language.serialize(), expected_result)
         language.delete()
 
-    def test_language_valid_choices(self):
-        languages = ['english', 'spanish', 'mandarin', 'chinese', 'arabic', 'sudanese',
-                     'EnGlisH', 'spaNish', 'manDARin', 'CHinese', 'araBIC', 'Sudanese']
-        [self.assertTrue(language.capitalize() in Language.options()) for language in languages]
-
-    def test_language_invalid_choices(self):
-        languages = ['language1', 'language2', 'language3', 'italian', 'portuguese']
-        [self.assertFalse(language.capitalize() in Language.options()) for language in languages]
-
-    def test_language_new_language(self):
-        with self.assertRaises(DeflateError):
-            language = Language(language='Hindi').save()
-
     def test_language_handling_new_language(self):
         language_names = ['Hindi', 'Malagasy']
         for language_name in language_names:
             if language_name in Language.options():
                 language = Language(language=language_name)
             else:
-                Language.add_languages(language_name)
+                language_name = ' '.join([token.capitalize() for token in language_name.split(' ')])
                 language = Language(language=language_name)
 
             self.assertEqual(language, Language(language=language_name))
