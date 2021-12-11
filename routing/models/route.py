@@ -17,12 +17,21 @@ from routing.exceptions import EmptyRouteException, RouteStateException
 
 
 class Route(StructuredNode):
+    """This class defines a Route node.
+
+    A Route is constructed as a linked list. Each node represent a Location.
+    """
+
+    """A unique id assigned upon creating this object"""
     uid = UniqueIdProperty()
+
     __quantity = FloatProperty(index=True, default=None)
     __distance = FloatProperty(index=True, default=None)
     __duration = FloatProperty(index=True, default=None)
     __created_on = DateTimeProperty(default=datetime.now)
 
+    """A relationship to the driver that is assigned to this route. This relationship ensures a 1-1 between driver 
+    and route"""
     assigned_to = RelationshipTo(cls_name='routing.models.driver.Driver', rel_type='ASSIGNED_TO', cardinality=One)
 
     def __init__(self, *args, **kwargs):
@@ -38,6 +47,12 @@ class Route(StructuredNode):
 
     @property
     def driver(self):
+        """A property to retrieve the driver assign to this route.
+
+        If no driver is assigned, return None.
+
+        @return: The Driver assigned to this route. Otherwise, None.
+        """
         try:
             return self.assigned_to.get()
         except DoesNotExist:
@@ -45,58 +60,110 @@ class Route(StructuredNode):
 
     @property
     def is_open(self) -> bool:
+        """A property to determine if this route is open.
+
+        A route is open when new locations can be added to it.
+
+        @return: True if more locations can be added to this route. Otherwise, False.
+
+        """
         return self.__is_open
 
     @property
     def departure(self) -> Location:
+        """A property to get the departure of this route.
+
+        @return: The location representing the departure of this route. If no departure, then return None.
+        """
         return self.__departure
 
     @property
     def last_stop(self) -> Location:
+        """A property to get the last location of this route.
+
+        The last location is effectively not the departure.
+        @return the last location of this route.
+        """
         return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
 
     @property
     def previous(self) -> Location:
+        """A property to get the last location of this route.
+
+        The last location is effectively not the departure.
+        @return the last location of this route.
+        """
         return self.__locations_queue[-1] if len(self.__locations_queue) > 0 else None
 
     @property
     def total_distance(self) -> float:
+        """A property to get the total distance (in miles) to travel this route.
+
+        @return a float representing the total distance to travel this route.
+        """
         return self.__total_distance
 
     @property
     def total_duration(self) -> float:
+        """A property to get the total duration (in minutes) to travel this route.
+
+        @return a float representing the total duration to travel this route.
+        """
         return self.__total_duration
 
     @property
     def total_demand(self) -> float:
+        """A property to get the total demand of this route.
+
+        @return a float representing the total demand of this route.
+        """
         return self.__total_quantity
 
     @property
     def created_on(self):
+        """A property to get the creation datetime of this route.
+
+        @return A datetime object representing the creation datetime of this route.
+        """
         return self.__created_on
 
     @property
     def is_empty(self):
+        """A property to determine if this route is empty.
+
+        A route is empty if it contains at a departure, or one location.
+        """
         return len(self.__locations_queue) == 0 or len(self.__locations_queue) == 1
 
     @property
     def itinerary(self):
+        """A property to get the path of this route.
+
+        Locations are returned in their order of insertion.
+
+        @return a list representing the locations of this route.
+        """
         return list(self.__locations_queue)
 
     def set_departure(self, departure: Location):
+        """Set the departure of this route.
+
+        @param: departure: A location representing the departure of this route.
+        """
+
         self.__departure = copy.deepcopy(departure)
 
     def add(self, location: Location, pair: Pair) -> bool:
-        """
-        Add a location to route based on insertion rules. Return True is addition was successful, otherwise,
-        return False
+        """Provides the mechanism for add a location this route.
+
+        @return True is addition was successful. Otherwise, return False
+        @raise RouteStateException if the departure has not been set.
         """
         if pair and self.__is_open:
             if len(self.__locations_queue) == 0:
                 if self.__departure is None:
                     raise RouteStateException('This route has no departure. Set the departure before proceeding.')
                 self.__locations_queue.append(self.__departure)
-                # self.departure.is_assigned = True
                 self.__tail = self.__departure
             if location and (not location.is_assigned):
                 if len(self.__locations_queue) == 1:
@@ -143,7 +210,10 @@ class Route(StructuredNode):
     def __insert_front(self, location: Location):
         """Inserts this location at the beginning of this route.
 
-        This location is inserted after the departure.
+        Insertion maximizes the savings between locations.
+
+        @param location: Location to insert to the front of this route.
+        @raise RouteStateException if the departure has not been set.
         """
         if len(self.__locations_queue) == 0 or self.__departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
@@ -163,7 +233,13 @@ class Route(StructuredNode):
             location.is_assigned = True
 
     def __insert_back(self, location: Location):
-        """Insert this location at the end of this route."""
+        """Insert this location at the end of this route.
+
+        Insertion maximizes the savings between locations.
+
+        @param location: Location to insert to the front of this route.
+        @raise RouteStateException if the departure has not been set.
+        """
         if len(self.__locations_queue) == 0 or self.__departure is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
         elif len(self.__locations_queue) == 1:
@@ -242,6 +318,10 @@ class Route(StructuredNode):
                 last_inserted.is_assigned = False
 
     def close_route(self):
+        """Provides the mechanism to close this route.
+
+        A route is closed when the last location is effectively the departure.
+        """
         if self.__departure and self.__departure.next is None:
             self.__locations_queue = deque()
             self.__departure = None
@@ -258,12 +338,15 @@ class Route(StructuredNode):
             self.__total_distance += self.__tail.distance(self.__stop)
 
     def set_total_distance(self):
+        """Sets the total distance to travel this route."""
         self.__distance = self.total_distance
 
     def set_total_duration(self):
+        """Sets the total duration to travel this route."""
         self.__duration = self.total_duration
 
     def set_total_demand(self):
+        """Sets the total demand of this route."""
         self.__quantity = self.total_demand
 
     def __len__(self):
@@ -294,6 +377,23 @@ class Route(StructuredNode):
         return True
 
     def serialize(self):
+        """Serializes this route.
+
+        The serializer uses the JavaScript Object Notation, JSON, and serializes this route.
+
+                Format:
+                {
+                    'id': [INTEGER],
+                    'created_on': [DATETIME],
+                    'total_quantity': [FLOAT],
+                    'total_distance': [FLOAT],
+                    'total_duration': [FLOAT],
+                    'assigned_to': [DRIVER]
+                    'itinerary': []
+                }
+
+        @return: A JSON object representing this ROUTE.
+        """
         itinerary = []
         if not self.is_empty:
             for stop in self.__locations_queue:

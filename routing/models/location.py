@@ -57,7 +57,7 @@ class Address(StructuredNode):
     """A float representing the longitude of this address. It is an optional property."""
     longitude = FloatProperty(index=True)
 
-    """An integer representing the maximum number of addresses this driver can deliver to."""
+    """A datetime object representing the creation datetime of this driver."""
     created_on = DateTimeProperty(index=True, default=datetime.now)
 
     """A datetime object representing the last modified datetime of this driver."""
@@ -66,7 +66,7 @@ class Address(StructuredNode):
     """An integer representing the id of this driver."""
     external_id = IntegerProperty(required=False, unique_index=True)
 
-    """A relationship addresses that can be reached from this address."""
+    """A relationship to addresses that can be reached from this address."""
     neighbor = Relationship(cls_name='Address', rel_type='CONNECTED_TO', model=_Weight)
 
     def __init__(self, *args, **kwargs):

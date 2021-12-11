@@ -1,9 +1,0 @@
-digraph "pip._internal.index.sources._FlatDirectorySource"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="pip._internal.index.sources.\l_FlatDirectorySource",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="pip._internal.index.sources.\lLinkSource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d57/classpip_1_1__internal_1_1index_1_1sources_1_1_link_source.html",tooltip=" "];
-}

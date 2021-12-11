@@ -1,9 +1,0 @@
-digraph "django.core.cache.backends.locmem.LocMemCache"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="django.core.cache.backends.locmem.\lLocMemCache",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="django.core.cache.backends.base.\lBaseCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d87/classdjango_1_1core_1_1cache_1_1backends_1_1base_1_1_base_cache.html",tooltip=" "];
-}

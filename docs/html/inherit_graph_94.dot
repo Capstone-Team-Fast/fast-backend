@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="django.contrib.gis.geos.prototypes.threadsafe.\lGEOSFunc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/ddf/classdjango_1_1contrib_1_1gis_1_1geos_1_1prototypes_1_1threadsafe_1_1_g_e_o_s_func.html",tooltip=" "];
-}

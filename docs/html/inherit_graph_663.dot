@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="setuptools._distutils.fancy\l_getopt.OptionDummy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d20/classsetuptools_1_1__distutils_1_1fancy__getopt_1_1_option_dummy.html",tooltip=" "];
-}

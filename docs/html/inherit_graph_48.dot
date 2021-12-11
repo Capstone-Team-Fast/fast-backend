@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="django.contrib.auth.forms.\lUserCreationForm.Meta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dac/classdjango_1_1contrib_1_1auth_1_1forms_1_1_user_creation_form_1_1_meta.html",tooltip=" "];
-}

@@ -1,8 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="django.contrib.gis.serializers.geojson.\lDeserializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d37/classdjango_1_1contrib_1_1gis_1_1serializers_1_1geojson_1_1_deserializer.html",tooltip=" "];
-}

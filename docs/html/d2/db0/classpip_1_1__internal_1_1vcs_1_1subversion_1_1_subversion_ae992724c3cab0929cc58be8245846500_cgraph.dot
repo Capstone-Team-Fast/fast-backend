@@ -1,9 +1,0 @@
-digraph "pip._internal.vcs.subversion.Subversion.should_add_vcs_url_prefix"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="pip._internal.vcs.subversion.\lSubversion.should_add_vcs\l_url_prefix",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-}
