@@ -16,13 +16,18 @@ from routing.models.location import Address, Pair, Location, Customer, Depot
 from routing.services import BingGeocodeService, BingMatrixService
 
 
-class DriverManager:
-    def __init__(self):
-        self.drivers = list()
-
-
 class LocationManager:
+    """This class provides the mechanism for manipulating Location nodes used as part of the routing algorithm.
+
+        This implementation supports locations with the same address. That is, there needs not be a one-one relationship
+        between locations and addresses for the operations defines in this class to work as expected.
+    """
     def __init__(self, db_connection: neomodel.db, depot: Location):
+        """Creates a LocationManager.
+
+            @param db_connection: A string representing the connection string to a neo4j graph database.
+            @param depot: The departure location for the locations managed by this manager.
+        """
         self.__depot = depot
         self.__connection = db_connection
         self.__locations = set()
@@ -31,22 +36,41 @@ class LocationManager:
 
     @property
     def depot(self):
+        """A property to retrieve the departure point for the locations managed by this manager.
+
+            @return the departure point for the locations managed by this manager.
+        """
         return self.__depot
 
     @property
     def connection(self):
+        """A property to retrieve the connection string of the neo4j graph database used by this manager.
+
+            @return the connection string of the neo4j graph database used by this manager.
+        """
         return self.__connection
 
     @property
     def locations(self) -> list:
+        """A property to retrieve the list of locations managed by this manager.
+
+            @return the list of locations managed by this manager.
+        """
         return list(self.__locations)
 
     @property
     def size(self):
-        """Gets the number of locations being currently managed."""
+        """A property to retrieve the number of locations being currently managed.
+
+            @return the number of locations being currently managed.
+        """
         return len(self.__locations)
 
     def remove(self, location: Location):
+        """Provides the mechanism to remove a location from the underlining data structure.
+
+            @param location: The location to remove from the list of locations being managed.
+        """
         if len(self.__locations) == 0:
             raise StopIteration
         if not isinstance(location, Location):
@@ -58,10 +82,13 @@ class LocationManager:
                 del self.__addresses[location.address]
 
     def add(self, location: Location):
-        """Add the location argument to the graph database.
+        """Adds the location argument to the graph database.
 
-        This method ensures that a location, by the time it is added to the graph database, has its coordinates set.
-        The coordinates consist of a latitude and a longitude.
+            This method ensures that a location, by the time it is added to the graph database, has its coordinates set.
+            The coordinates consist of a latitude and a longitude.
+
+            @param location: A location to add to the graph database. This location must be of type
+            'routing.models.location.Location'.
         """
         if location:
             if location not in self.__locations:
@@ -96,17 +123,28 @@ class LocationManager:
     def add_collection(self, locations: list):
         """Adds this list of locations to the graph database.
 
-        If locations is None, no change occurs. Otherwise, each location in this list is added to the graph
-        database.
+            If locations is None, no change occurs. Otherwise, each location in this list is added to the graph
+            database.
+
+            @param locations: A list of locations to add to the graph database. Each of these locations must be of type
+            'routing.models.location.Location'.
         """
         if locations:
             for location in locations:
                 self.add(location)
 
     def get_distance_savings(self, location1: Location, location2: Location):
-        """Gets the savings (in meters) between these two locations.
+        """Provides the mechanism to compute the savings (in miles) between these two locations.
 
-        This implementation guarantees that either location is in the graph database.
+            This implementation guarantees that either location is in the graph database and that they are connected.
+
+            The savings distance is computing as follows:
+                    S = d_{*i} + d_{*j} - d_{ij}, where * representing the location of departure.
+
+            @param location1: Address of the starting location. This location representing the starting point.
+            @param location2: Address of the destination. This location representing the arrival point.
+            @return the savings distance between the two locations.
+            @raise RouteStateException when the departure location is not set prior to calling this method.
         """
         if self.__depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
@@ -124,9 +162,17 @@ class LocationManager:
         return self.__get_distance_saved(location1, location2)
 
     def get_duration_savings(self, location1: Location, location2: Location):
-        """Gets the savings (in minutes) between these two locations.
+        """Provides the mechanism to compute the savings (in minutes) between these two locations.
 
-        This implementation guarantees that either location is in the graph database.
+            This implementation guarantees that either location is in the graph database and that they are connected.
+
+            The savings duration is computing as follows:
+                    S = d_{*i} + d_{*j} - d_{ij}, where * representing the location of departure.
+
+            @param location1: Address of the starting location. This location representing the starting point.
+            @param location2: Address of the destination. This location representing the arrival point.
+            @return the savings duration between the two locations.
+            @raise RouteStateException when the departure location is not set prior to calling this method.
         """
         if self.__depot is None:
             raise RouteStateException('This route has no departure. Set the departure before proceeding.')
@@ -146,29 +192,65 @@ class LocationManager:
     def __get_distance_saved(self, location1: Address, location2: Address):
         """Computes the savings distance between two locations.
 
-        This helper function ensures that there is an edge between the two locations.
+            This helper function ensures that there is an edge between the two locations. The savings distance is
+            computing as follows:
+                S = d_{*i} + d_{*j} - d_{ij}, where * representing the location of departure.
+
+            @param location1: Address of the starting location. This location representing the starting point.
+            @param location2: Address of the destination. This location representing the arrival point.
+            @return the savings duration between the two locations.
         """
         return self.__depot.distance(location1) + self.__depot.distance(location2) - location1.distance(location2)
 
     def __get_duration_saved(self, location1: Address, location2: Address):
         """Computes the savings duration between two locations.
 
-        This helper function ensures that there is an edge between the two locations.
+            This helper function ensures that there is an edge between the two locations. The savings duration is
+            computing as follows:
+                S = d_{*i} + d_{*j} - d_{ij}, where * representing the location of departure.
+
+            @param location1: Address of the starting location. This location representing the starting point.
+            @param location2: Address of the destination. This location representing the arrival point.
+            @return the savings duration between the two locations.
         """
         return self.__depot.duration(location1) + self.__depot.duration(location2) - location1.duration(location2)
 
 
 class SavingsManager:
+    """This class provides the mechanism for computing the savings distance between any pair of locations used by the
+    routing algorithm.
+
+        This class implements the __next__ method as well as __iter__.
+    """
     def __init__(self, db_connection: str, depot: Address, locations: list):
+        """Creates a new SavingsManager.
+
+            @param db_connection: A string representing the connection string to a neo4j graph database.
+            @param depot: The departure location for the locations managed by this manager.
+            @param locations: A list of locations to used in the computation of the savings distance. Each of these
+            locations must be of type 'routing.models.location.Location'.
+        """
         self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
         self.__heap, self.__valid_locations, self.__invalid_locations = self.__heapify(locations=locations)
 
     @property
     def invalid_locations(self):
+        """A property to retrieve the list of invalid locations.
+
+            A location is invalid is its address cannot be geocoded.
+
+            @return the list of invalid locations.
+        """
         return list(self.__invalid_locations)
 
     @property
     def valid_locations(self):
+        """A property to retrieve the list of valid locations.
+
+            A location is valid is its address can be geocoded.
+
+            @return the list of invalid locations.
+        """
         return list(self.__valid_locations)
 
     def __heapify(self, locations: list):

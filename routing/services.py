@@ -10,24 +10,58 @@ from routing.models.location import Address
 
 
 class GeocodeService(ABC):
+    """This abstract class provides the template to be extended by any Geocoding Service.
 
+        This class provides one method, GET_GEOCODE, which provides the signature for geocoding a node of type ADDRESS.
+    """
     @staticmethod
     def get_geocode(location: Address, payload=None, headers=None):
+        """This static method provides the template for geocoding a node of type ADDRESS.
+
+        @param location: Address is to be geocoded. Address must be of type routing.models.location.Address
+        @param payload: Http connection payload. Default is None
+        @param headers: Http connection header. Default is None
+        """
         pass
 
 
 class BingGeocodeService(GeocodeService):
+    """This class extends GeocodeService and provides the mechanism to geocode a physical address using the Bing
+    Geocoding Service.
+
+        This class encapsulates the Bing Geocoding Service endpoint as well as a developer key. The developer key is
+        defined in the settings file under the backend app.
+
+        Typical usage example:
+
+        coordinates = BingGeocodeService.get_geocode(address=Address(...))
+        latitude, longitude = BingGeocodeService.get_geocode(address=Address(...))
+    """
     __DEFAULT_URL = 'http://dev.virtualearth.net/REST/v1/Locations'
     __API_KEY = settings.BING_MAPS_API_KEY
 
     @staticmethod
     def get_geocode(address: Address, payload=None, headers=None):
+        """Provides the mechanism for geocoding a physical address.
+
+        @param address: Address is to be geocoded. Address must be of type 'routing.models.location.Address'
+        @param payload: Http connection payload. Default is None
+        @param headers: Http connection header. Default is None
+        @raise GeocodeError when an exception occurs due to geocoding. The geocoding exception can be caused by a
+        variety of reasons. i- A change is the API response structure. ii- Invalid value for latitude or longitude.
+        Latitude values are expected to be between [-90, 90], and longitude values are expected to be between
+        [-180, 180]. When in doubt about the reason for raising this exception, consult the exception message.
+        """
         if payload is None:
             payload = {}
         if headers is None:
             headers = {}
         response = BingGeocodeService.__request_geocode(location=address, payload=payload, headers=headers)
-        return BingGeocodeService.__get_coordinates(response, address)
+        try:
+            coordinates = BingGeocodeService.__get_coordinates(response, address)
+        except GeocodeError as err:
+            raise err
+        return coordinates
 
     @staticmethod
     def __request_geocode(location: Address, payload=None, headers=None):
@@ -68,6 +102,14 @@ class BingGeocodeService(GeocodeService):
 
     @staticmethod
     def __validate_geocode(address_response: dict, address: Address):
+        """Provides mechanism for checking the accuracy of the geocode of this address.
+
+        A geocode is valid if the LOCALITY, POSTAL_CODE, COUNTRY_REGION returned by the Bing Geocode API match the
+        address's.
+
+        @param address_response: A dictionary representing the response returned by the Bing Geocode API.
+        @param address: Address to be geocoded. This address must be of type 'routing.models.location.Address'
+        """
         condition1 = (
                 address_response.get('locality') is not None and address_response.get('postalCode') is not None
                 and address_response.get('countryRegion') is not None
@@ -75,26 +117,47 @@ class BingGeocodeService(GeocodeService):
         condition2 = (
                 address_response.get('locality').lower() == address.city.lower()
                 and int(address_response.get('postalCode')) == address.zipcode
-                and address_response.get('countryRegion').lower() == 'United States'.lower()
+                and address_response.get('countryRegion').lower() == address.country.lower()
         )
 
         return condition1 and condition2
 
 
 class MatrixService(ABC):
+    """This abstract provides the template to be extended by any Distance/Duration Matrix Service."""
 
     @staticmethod
     def build_duration_matrix(start: Address, end: list):
+        """Provides the template for requesting a duration matrix between an address and a list of addresses.
+
+        @param start: The starting address. This address must be of type 'routing.models.location.Address'
+        @param end: A list of destination addresses. Each of these addresses must be of type
+        'routing.models.location.Address'
+        """
         pass
 
     @staticmethod
     def build_distance_matrix(start: Address, end: list):
+        """Provides the template for requesting a distance matrix between an address and a list of addresses.
+
+        @param start: The starting address. This address must be of type 'routing.models.location.Address'.
+        @param end: A list of destination addresses. Each of these addresses must be of type
+        'routing.models.location.Address'.
+        """
         pass
 
 
 class BingMatrixService(MatrixService):
-    """
-    This class defines the logic for retrieving distance and duration matrices of a list of locations.
+    """This class extends MatrixService and provides the mechanism for retrieving distance and duration matrices between
+    a list of locations.
+
+        This class encapsulates the Bing Matrix Service endpoint as well as a developer key. The developer key is
+        defined in the settings file under the backend app.
+
+        Typical usage example:
+
+        coordinates = BingGeocodeService.get_geocode(address=Address(...))
+        latitude, longitude = BingGeocodeService.get_geocode(address=Address(...))
     """
     __DEFAULT_URL = 'https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix'
     __API_KEY = settings.BING_MAPS_API_KEY
@@ -103,6 +166,29 @@ class BingMatrixService(MatrixService):
 
     @staticmethod
     def build_matrices(start: Address, end: list, travel_mode: str = 'driving', chunk_size: int = 25) -> bool:
+        """Provides the mechanism for getting the distance and duration matrices between an address and a list of
+        addresses. It uses a POST request as described by the Bing Matrix documentation.
+
+            Distance and duration between pairs of addresses are stored as properties in the underlining neo4j graph
+            database. By default, distances are in miles and duration in minutes. Therefore, the underlining nodes
+            distance and duration properties are altered.
+
+            @param start: The starting address. This address must be of type 'routing.models.location.Address'.
+            @param end: A list of destination addresses. Each of these addresses must be of type
+            'routing.models.location.Address'.
+            @param travel_mode: A string representing the transportation mode used. The default option is 'driving'. For
+            up-to-date option consult Bing Matrix Service official documentation.
+            @param chunk_size: A integer representing the maximum number of destination addresses to map to at a time.
+            @return true if the distance and duration between the starting address and all the destination addresses are
+            set. Otherwise, false.
+            @raise GeocodeError when an exception occurs due to geocoding. The geocoding exception can be caused by a
+            variety of reasons. i- A change is the API response structure. ii- Invalid value for latitude or longitude.
+            Latitude values are expected to be between [-90, 90], and longitude values are expected to be between
+            [-180, 180]. When in doubt about the reason for raising this exception, consult the exception message.
+            @raise MatrixServiceError when an exception during retrieval of the matrices. This exception can be caused
+            either at the API level, i.e., when any HTTP status code other than 200 is returned or when the structure
+            of the Bing Matrix Service changes.
+        """
         if start is None or end is None:
             return False
 
