@@ -358,6 +358,45 @@ class Route(StructuredNode):
         """Sets the total demand of this route."""
         self.__quantity = self.total_demand
 
+    def serialize(self):
+        """Serializes this route.
+
+        The serializer uses the JavaScript Object Notation, JSON, and serializes this route.
+
+                Format:
+                {
+                    'id': [INTEGER],
+                    'created_on': [DATETIME],
+                    'total_quantity': [FLOAT],
+                    'total_distance': [FLOAT],
+                    'total_duration': [FLOAT],
+                    'assigned_to': [DRIVER]
+                    'itinerary': [LIST_OF_LOCATIONS]
+                }
+
+        @return: A JSON object representing this ROUTE.
+        """
+        itinerary = []
+        if not self.is_empty:
+            for stop in self.__locations_queue:
+                itinerary.append(json.loads(stop.serialize()))
+
+        if self.driver:
+            driver = json.loads(self.driver.serialize())
+        else:
+            driver = None
+
+        obj = json.dumps({
+            "id": self.id,
+            "created_on": self.__created_on.strftime(constant.DATETIME_FORMAT),
+            "total_quantity": self.__total_quantity,
+            "total_distance": self.__total_distance,
+            "total_duration": self.__total_duration,
+            "assigned_to": driver,
+            "itinerary": itinerary
+        })
+        return obj
+
     def __len__(self):
         return len(self.__locations_queue)
 
@@ -384,45 +423,6 @@ class Route(StructuredNode):
                 return False
 
         return True
-
-    def serialize(self):
-        """Serializes this route.
-
-        The serializer uses the JavaScript Object Notation, JSON, and serializes this route.
-
-                Format:
-                {
-                    'id': [INTEGER],
-                    'created_on': [DATETIME],
-                    'total_quantity': [FLOAT],
-                    'total_distance': [FLOAT],
-                    'total_duration': [FLOAT],
-                    'assigned_to': [DRIVER]
-                    'itinerary': []
-                }
-
-        @return: A JSON object representing this ROUTE.
-        """
-        itinerary = []
-        if not self.is_empty:
-            for stop in self.__locations_queue:
-                itinerary.append(json.loads(stop.serialize()))
-
-        if self.driver:
-            driver = json.loads(self.driver.serialize())
-        else:
-            driver = None
-
-        obj = json.dumps({
-            "id": self.id,
-            "created_on": self.__created_on.strftime(constant.DATETIME_FORMAT),
-            "total_quantity": self.__total_quantity,
-            "total_distance": self.__total_distance,
-            "total_duration": self.__total_duration,
-            "assigned_to": driver,
-            "itinerary": itinerary
-        })
-        return obj
 
     @classmethod
     def category(cls):

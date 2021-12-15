@@ -1,4 +1,4 @@
-
+"""This file defines a list of constants used in parts of the routing algorithm."""
 DATETIME_FORMAT = '%Y-%m-%dT%H:%M:%S.%fZ'
 
 MONDAY_INT = 1
