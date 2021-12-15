@@ -69,7 +69,7 @@ class Driver(StructuredNode):
     """
     max_delivery = IntegerProperty(default=None)
 
-    """An integer representing the maximum number of addresses this driver can deliver to."""
+    """A datetime object representing the creation datetime of this driver."""
     created_on = DateTimeProperty(default=datetime.now)
 
     """A datetime object representing the last modified datetime of this driver."""

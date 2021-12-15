@@ -1,6 +1,3 @@
-from neomodel import DoesNotExist
-
-
 class GeocodeError(Exception):
     pass
 

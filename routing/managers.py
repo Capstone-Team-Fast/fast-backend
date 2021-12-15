@@ -161,20 +161,20 @@ class LocationManager:
 class SavingsManager:
     def __init__(self, db_connection: str, depot: Address, locations: list):
         self.__location_manager = LocationManager(db_connection=db_connection, depot=depot)
-        self.__heap, self.__valid_addresses, self.__invalid_addresses = self.__heapify(locations=locations)
+        self.__heap, self.__valid_locations, self.__invalid_locations = self.__heapify(locations=locations)
 
     @property
-    def invalid_addresses(self):
-        return list(self.__invalid_addresses)
+    def invalid_locations(self):
+        return list(self.__invalid_locations)
 
     @property
-    def valid_addresses(self):
-        return list(self.__valid_addresses)
+    def valid_locations(self):
+        return list(self.__valid_locations)
 
     def __heapify(self, locations: list):
         savings = []
-        invalid_addresses = set()
-        valid_addresses = set()
+        invalid_locations = set()
+        valid_locations = set()
         if locations:
             for i in range(len(locations)):
                 for j in range(i + 1, len(locations)):
@@ -186,20 +186,20 @@ class SavingsManager:
                                                                                   location2=pair.last)
                             pair.set_saving(saving)
                             savings.append(pair)
-                            valid_addresses.add(pair.first)
-                            valid_addresses.add(pair.last)
+                            valid_locations.add(pair.first)
+                            valid_locations.add(pair.last)
                         except GeocodeError:
                             if pair.first.address.longitude is None or pair.first.address.latitude is None:
-                                invalid_addresses.add(pair.first)
+                                invalid_locations.add(pair.first)
                             else:
-                                valid_addresses.add(pair.first)
+                                valid_locations.add(pair.first)
                             if pair.last.address.longitude is None or pair.last.address.latitude is None:
-                                invalid_addresses.add(pair.last)
+                                invalid_locations.add(pair.last)
                             else:
-                                valid_addresses.add(pair.last)
+                                valid_locations.add(pair.last)
                             continue
         savings.sort(reverse=True)
-        return savings, valid_addresses, invalid_addresses
+        return savings, valid_locations, invalid_locations
 
     def __next__(self):
         if self.__heap:
@@ -255,12 +255,11 @@ class RouteManager:
         self.__objective_function_value = sys.maxsize
         self.__depot = None
         self.__location_manager = None
-        self.__savings_manager = None
         self.__prioritize_volunteer = False
         self.__best_allocation = None
         self.__final_locations = None
         self.__objective_function_values_list = []
-        self.__invalid_addresses = set()
+        self.__invalid_locations = set()
 
     def request_routes(self, departure: str, locations: list, drivers: list):
         self.__drivers = NodeParser.create_drivers(drivers)
@@ -275,7 +274,7 @@ class RouteManager:
         self.__prioritize_volunteer = self.__contains_volunteers()
         self.__drivers_heap = self.__build_driver_heap()
         self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
-        self.__final_locations = self.__build_routes()
+            self.__final_locations = self.__build_routes()
         return self.__build_response()
 
     def __contains_volunteers(self):
@@ -380,7 +379,8 @@ class RouteManager:
                     final_locations = copy.deepcopy(locations)
         return global_objective_function_value, best_allocation, objective_function_values_list, final_locations
 
-    def __tally_locations(self, locations: list) -> Set[UniqueIdProperty]:
+    @staticmethod
+    def __tally_locations(locations: list) -> Set[UniqueIdProperty]:
         tally = set()
         if locations:
             for location in locations:
@@ -391,7 +391,7 @@ class RouteManager:
         assigned_locations_list: Set[UniqueIdProperty] = set()
         locations_to_insert: Set[UniqueIdProperty] = set()
         if len(locations) == 1:
-            locations_to_insert = self.__tally_locations(locations)
+            locations_to_insert = RouteManager.__tally_locations(locations)
             try:
                 print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
                 for driver in drivers_heap[::-1]:
@@ -407,9 +407,9 @@ class RouteManager:
                         break
             except GeocodeError:
                 if locations[0].address.latitude is None or locations[0].address.longitude is None:
-                    self.__invalid_addresses.add(locations[0])
+                    self.__invalid_locations.add(locations[0])
         elif savings_manager:
-            self.__invalid_addresses.update(savings_manager.invalid_addresses)
+            self.__invalid_locations.update(savings_manager.invalid_locations)
             numbers_of_drivers = 0
             max_drivers_count = len(drivers_heap)
             state = RouteManager._State.HARD_SOLVING
@@ -422,10 +422,10 @@ class RouteManager:
                 for driver in drivers:
                     driver.reset()
                 local_savings_manager = copy.deepcopy(savings_manager)
-                locations = local_savings_manager.valid_addresses
-                locations.extend(local_savings_manager.invalid_addresses)
+                locations = local_savings_manager.valid_locations
+                locations.extend(local_savings_manager.invalid_locations)
                 locations_to_insert = self.__tally_locations(locations)
-                self.__invalid_addresses.update(savings_manager.invalid_addresses)
+                self.__invalid_locations.update(savings_manager.invalid_locations)
                 assigned_locations_list = set()
                 for pair in local_savings_manager:
                     try:
@@ -448,9 +448,9 @@ class RouteManager:
                             break
                     except GeocodeError:
                         if pair.first.address.latitude is None or pair.last.address.longitude is None:
-                            self.__invalid_addresses.add(pair.first)
+                            self.__invalid_locations.add(pair.first)
                         if pair.first.address.latitude is None or pair.last.address.longitude is None:
-                            self.__invalid_addresses.add(pair.last)
+                            self.__invalid_locations.add(pair.last)
                         continue
                 if assigned_locations_list == locations_to_insert:
                     state = RouteManager._State.TERMINATED
@@ -471,24 +471,28 @@ class RouteManager:
             RouteManager.__Response['solver_status'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.ALL_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'All locations were assigned.'
-        elif len(locations_to_insert) == 0 or len(self.__invalid_addresses) == len(locations_to_insert):
+        elif len(locations_to_insert) == 0 or len(self.__invalid_locations) == len(locations_to_insert):
             RouteManager.__Response['solver_status'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.NO_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'No address could be geocoded.'
-            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
-        elif len(self.__invalid_addresses) == 0 and assigned_locations_list != locations_to_insert:
+        elif len(self.__invalid_locations) == 0 and assigned_locations_list != locations_to_insert:
             RouteManager.__Response['solver_status'] = RouteManager._Status.OTHER_ERROR.value
             RouteManager.__Response['message'] = RouteManager._Status.OTHER_ERROR.name
             if len(assigned_locations_list) == 0:
                 RouteManager.__Response['description'] = 'Assignment is infeasible.'
             else:
                 RouteManager.__Response['description'] = 'Some addresses were assigned.'
-            RouteManager.__Response['others'] = list(locations_to_insert.difference(assigned_locations_list))
+
+            for uid in list(locations_to_insert.difference(assigned_locations_list)):
+                location = Customer.nodes.get_or_none(uid=uid)
+                if location:
+                    self.__invalid_locations.add(location)
         else:
             RouteManager.__Response['solver_status'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.value
             RouteManager.__Response['message'] = RouteManager._Status.SOME_LOCATIONS_ASSIGNED.name
             RouteManager.__Response['description'] = 'Some addresses could not be geocoded.'
-            RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_addresses]
+
+        RouteManager.__Response['others'] = [address.external_id for address in self.__invalid_locations]
 
         return RouteManager._State.TERMINATED, drivers_heap, locations
 
@@ -501,145 +505,6 @@ class RouteManager:
                 objective_function_distance += driver.route.total_distance
                 objective_function_duration += driver.route.total_duration
         return objective_function_distance, objective_function_duration
-
-    @staticmethod
-    def response_template():
-        return json.dumps({
-            'solver_status': 1,  # Different status code based on one of 3 scenarios
-            'message': '',  # Short description
-            'others': [],  # Clients' id not assigned
-            'description': '',
-            'routes': [
-                {
-                    'id': 1,
-                    'created_on': '2021-10-19T20:44:43.125437Z',
-                    'total_quantity': 9,
-                    'total_distance': 10.2,
-                    'total_duration': 11.3,
-                    'assigned_to': {
-                        'id': 1,
-                        'first_name': 'First_1',
-                        'last_name': 'Last_1',
-                        'capacity': 50,
-                        'employee_status': 'P',
-                        'availability': [
-                            {'id': 1, 'day': 'Sunday'}, {'id': 2, 'day': 'Monday'}, {'id': 3, 'day': 'Tuesday'}
-                        ],
-                        'languages': [
-                            {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
-                            {'id': 3, 'language': 'Spanish'}
-                        ],
-                    },
-                    'itinerary': [
-                        {
-                            'id': 1,
-                            'is_center': True,
-                            'address': {
-                                'id': 1,
-                                'address': 'Center',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68111,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            }
-                        },
-                        {
-                            'id': 2,
-                            'is_center': False,
-                            'address': {
-                                'id': 3,
-                                'address': 'Customer_1',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68123,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            },
-                            'demand': 9,
-                            'languages': [
-                                {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
-                                {'id': 3, 'language': 'Spanish'}
-                            ]
-                        },
-                        {
-                            'id': 1,
-                            'is_center': True,
-                            'address': {
-                                'id': 1,
-                                'address': 'Center',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68111,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            }
-                        },
-                    ],
-                },
-                {
-                    'id': 1,
-                    'created_on': '2021-10-19T20:44:43.125437Z',
-                    'total_quantity': 9,
-                    'total_distance': 10.2,
-                    'total_duration': 11.3,
-                    'assigned_to': {
-                        'id': 2,
-                        'first_name': 'First_2',
-                        'last_name': 'Last_2',
-                        'capacity': 10,
-                        'employee_status': 'P',
-                        'availability': [
-                            {'id': 1, 'day': 'Sunday'}, {'id': 2, 'day': 'Monday'}, {'id': 3, 'day': 'Tuesday'}
-                        ],
-                        'languages': [
-                            {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
-                            {'id': 3, 'language': 'Spanish'}
-                        ],
-                    },
-                    'itinerary': [
-                        {
-                            'id': 1,
-                            'is_center': True,
-                            'address': {
-                                'id': 1,
-                                'address': 'Center',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68111,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            }
-                        },
-                        {
-                            'id': 2,
-                            'is_center': False,
-                            'address': {
-                                'id': 3,
-                                'address': 'Customer_1',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68123,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            },
-                            'demand': 9,
-                            'languages': [
-                                {'id': 1, 'language': 'English'}, {'id': 2, 'language': 'French'},
-                                {'id': 3, 'language': 'Spanish'}
-                            ]
-                        },
-                        {
-                            'id': 1,
-                            'is_center': True,
-                            'address': {
-                                'id': 1,
-                                'address': 'Center',
-                                'city': 'Omaha',
-                                'state': 'NE',
-                                'zipcode': 68111,
-                                'coordinates': {'latitude': 98.23, 'longitude': -23.23}
-                            }
-                        },
-                    ],
-                }
-            ],
-        })
 
 
 class NodeParser:
