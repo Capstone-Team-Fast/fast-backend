@@ -21,44 +21,6 @@ class MyTestCase(unittest.TestCase):
         self.assertIsNone(route_manager.objective_function_value)
         self.assertListEqual(route_manager.objective_function_values, [])
 
-    def test_request_route_template(self):
-        route_manager = RouteManager(config.DATABASE_URL)
-        drivers = [json.dumps({
-            'id': 18,
-            'user': None,
-            'first_name': 'Ben',
-            'last_name': 'Kenobi',
-            'capacity': 5,
-            'employee_status': 'employee',
-            'duration': '3',
-            'delivery_limit': None,
-            'phone': '123-123-4567',
-            'availability': {
-                'id': 16, 'sunday': True, 'monday': False, 'tuesday': True, 'wednesday': True, 'thursday': False,
-                'friday': True, 'saturday': False
-            },
-            'languages': [
-                {'id': 1, 'name': 'English'}, {'id': 2, 'name': 'French'}, {'id': 3, 'name': 'Spanish'}
-            ]
-        })]
-        locations = [json.dumps({
-            'id': 2,
-            'user': None,
-            'first_name': 'Jean-Luc',
-            'last_name': 'Picard',
-            'quantity': 1,
-            'phone': '124-123-4567',
-            'languages': [
-                {'id': 1, 'name': 'English'}, {'id': 2, 'name': 'French'}, {'id': 8, 'name': 'German'}
-            ],
-            'location': {'id': 7, 'address': '9999 Bagel St', 'city': 'Omaha', 'state': 'NE', 'zipcode': 68123,
-                         'is_center': False, 'room_number': '123', 'latitude': None, 'longitude': None}
-        })]
-        departure = data.departure
-
-        response = route_manager.request_routes(departure=departure, locations=locations, drivers=drivers)
-        self.assertEqual(response, route_manager.response_template())
-
     def test_request_route_empty_connection_string(self):
         with self.assertRaises(ValueError):
             route_manager = RouteManager(db_connection='')
@@ -69,9 +31,10 @@ class MyTestCase(unittest.TestCase):
 
     def test_request_route(self):
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
-        response = route_manager.request_routes_test(departure='', locations=[], drivers=[])
+        response = route_manager.request_routes(departure='', locations=[], drivers=[])
         expected_result = json.dumps({
-            'solver_status': '', 'message': '', 'description': '', 'routes': []
+            'solver_status': 5, 'message': 'NO_LOCATIONS_TO_ASSIGN', 'description': 'No location to assign.',
+            'others': [], 'routes': []
         })
         self.assertEqual(response, expected_result)
 
@@ -82,7 +45,7 @@ class MyTestCase(unittest.TestCase):
 
         # Create routes
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
-        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        response = route_manager.request_routes(departure=departure, locations=customers, drivers=drivers)
         log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
         log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
         log_filename = log_filename + '.json'
@@ -99,7 +62,7 @@ class MyTestCase(unittest.TestCase):
 
         # Create routes
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
-        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        response = route_manager.request_routes(departure=departure, locations=customers, drivers=drivers)
         log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
         log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
         log_filename = log_filename + '.json'
@@ -116,7 +79,7 @@ class MyTestCase(unittest.TestCase):
 
         # Create routes
         route_manager = RouteManager(db_connection=settings.NEOMODEL_NEO4J_BOLT_URL)
-        response = route_manager.request_routes_test(departure=departure, locations=customers, drivers=drivers)
+        response = route_manager.request_routes(departure=departure, locations=customers, drivers=drivers)
         log_filename = f'{datetime.datetime.now().strftime(constant.DATETIME_FORMAT)}'
         log_filename = re.sub('[^a-zA-Z\d]', '', log_filename)
         log_filename = log_filename + '.json'

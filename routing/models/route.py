@@ -1,5 +1,6 @@
 import copy
 import json
+import logging
 import os
 import sys
 from collections import deque
@@ -178,40 +179,41 @@ class Route(StructuredNode):
                 if len(self.__locations_queue) == 1:
                     self.__insert_front(location=location)
                 elif pair.is_first(location) and not pair.first.is_assigned:
-                    print(f'Location {location} is first and head is {self.__departure.next}')
+                    logging.info(f'Location {location} is first and head is {self.__departure.next}')
                     if self.__is_exterior(pair.last):
-                        print(f'Location {pair.last} is exterior')
+                        logging.info(f'Location {pair.last} is exterior')
                         if pair.last == self.__departure.next:
                             if self.__departure.next.next is None:
                                 self.__insert_front(location)
-                                print(f'Inserting {location} to the front')
+                                logging.info(f'Inserting {location} to the front')
                             else:
                                 self.__insert_back(location=location)
-                                print(f'Inserting {location} to the back')
+                                logging.info(f'Inserting {location} to the back')
                         elif pair.last == self.__tail:
                             self.__insert_front(location=location)
-                            print(f'Inserting {location} to the front')
+                            logging.info(f'Inserting {location} to the front')
                 elif pair.is_last(location) and not pair.last.is_assigned:
-                    print(f'Location {location} is last and tail is {self.__tail}')
+                    logging.info(f'Location {location} is last and tail is {self.__tail}')
                     if self.__is_exterior(pair.first):
-                        print(f'Location {pair.first} is exterior')
+                        logging.info(f'Location {pair.first} is exterior')
                         if pair.first == self.__departure.next:
                             if self.__departure.next.next is None:
                                 self.__insert_front(location)
-                                print(f'Inserting {location} to the front')
+                                logging.info(f'Inserting {location} to the front')
                             else:
                                 self.__insert_back(location)
-                                print(f'Inserting {location} to the back')
+                                logging.info(f'Inserting {location} to the back')
                         elif pair.first == self.__tail:
                             self.__insert_front(location)
-                            print(f'Inserting {location} to the front')
-                print('\t\t\033[1mProcessing location\033[0m {} \033[1mCapacity:\033[0m {} \033[1mAssigned:\033[0m {}'
+                            logging.info(f'Inserting {location} to the front')
+                logging.info('Processing location {} Capacity: {} '
+                             'Assigned: {} '
                       .format(location, location.demand, location.is_assigned))
-                print('\t\t\t\033[1mLocations: \033[0m {}'.format(self))
+                logging.info('Locations:  {}'.format(self))
                 return True
             else:
                 if location:
-                    print(f'{location} is already assigned.')
+                    logging.info(f'{location} is already assigned.')
             if self.previous == self.__departure:
                 self.undo()
         return False if location is None else location.is_assigned
@@ -405,7 +407,7 @@ class Route(StructuredNode):
         path = ''
         while location:
             if location.next:
-                path += str(location) + '\033[1m --> \033[0m'
+                path += str(location) + ' --> '
             else:
                 path += str(location)
             location = location.next

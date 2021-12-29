@@ -1,5 +1,6 @@
 import enum
 import json
+import logging
 import math
 import os
 import sys
@@ -64,7 +65,7 @@ class Driver(StructuredNode):
     end_time = DateTimeProperty()
 
     """An integer representing the maximum number of addresses this driver can deliver to. 
-    
+
     This number does not include the departure and finishing location. By default, is value is None.
     """
     max_delivery = IntegerProperty(default=None)
@@ -168,23 +169,23 @@ class Driver(StructuredNode):
                         and (self.__route.total_demand < float(str(self.capacity))):
                     if self.max_delivery:
                         if len(self.__route) - 1 == self.max_delivery:
-                            print(f'\nVolunteer reached delivery limit.\n')
+                            logging.info(f'Volunteer reached delivery limit.')
                             self.__route.close_route()
                             return False
                     else:
                         continue
                 elif cumulative_duration == (self.end_time - self.start_time).total_seconds():
-                    print(f'\nDriver has met allocated time.')
+                    logging.info(f'Driver has met allocated time.')
                 elif self.__route.total_demand == self.capacity:
-                    print(f'\nDriver is at capacity.')
+                    logging.info(f'Driver is at capacity.')
                 elif cumulative_duration > (self.end_time - self.start_time).total_seconds():
-                    print(f'Inserting this location lead to overtime. Undoing insertion.')
+                    logging.info(f'Inserting this location lead to overtime. Undoing insertion.')
                     self.__route.undo()
-                    print(f'\nUndid insertion of {location}')
+                    logging.info(f'Undid insertion of {location}')
                 elif self.__route.total_demand > int(str(self.capacity)):
-                    print(f'\nRoute is overcapacity.')
+                    logging.info(f'Route is overcapacity.')
                     self.__route.undo()
-                    print(f'\nUndid insertion of {location}')
+                    logging.info(f'Undid insertion of {location}')
 
             return pair.first.is_assigned and pair.last.is_assigned
         return False

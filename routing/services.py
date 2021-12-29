@@ -1,4 +1,5 @@
 import json
+import logging
 from abc import ABC
 from urllib.parse import quote
 
@@ -124,7 +125,7 @@ class BingMatrixService(MatrixService):
 
         origins = [{'latitude': start.latitude, 'longitude': start.longitude}]
 
-        print(f'\nRequesting matrix between \'{start}\' and \'{end}\'')
+        logging.info(f'Requesting matrix between \'{start}\' and \'{end}\'')
         for index in range(0, len(end), chunk_size):
             if index + chunk_size < len(end):
                 chunks = end[index:index + chunk_size]
@@ -140,7 +141,7 @@ class BingMatrixService(MatrixService):
                         address = node_set[0]
 
                     if address.latitude is None or address.longitude is None:
-                        print(f'\nRetrieving geocode for address {address}\n')
+                        logging.info(f'Retrieving geocode for address {address}')
                         try:
                             address.latitude, address.longitude = BingGeocodeService.get_geocode(address)
                             address.save()
@@ -149,7 +150,7 @@ class BingMatrixService(MatrixService):
                     if address != start and start.neighbor.relationship(address) is None:
                         destinations.append({'latitude': address.latitude, 'longitude': address.longitude})
 
-            print(f'Destinations: {destinations}\n')
+            logging.info(f'Destinations: {destinations}')
 
             if len(destinations) > 0:
                 data = json.dumps({
@@ -161,7 +162,7 @@ class BingMatrixService(MatrixService):
                     'Content-Length': '450',
                     'Content-Type': 'application/json'
                 }
-                print(f'HTTP Data: {data}\n')
+                logging.info(f'HTTP Data: {data}')
 
                 response = requests.request("POST", url=url, data=data, headers=headers)
 
@@ -170,7 +171,7 @@ class BingMatrixService(MatrixService):
 
                 try:
                     origins, destinations, results = BingMatrixService.__get_matrices(response=response.json())
-                    print(f'\nRetrieve the following matrix {results}\n')
+                    logging.info(f'Retrieve the following matrix {results}')
                     BingMatrixService.__insert_matrices(origins=origins, destinations=destinations, results=results)
                 except MatrixServiceError:
                     raise MatrixServiceError('API Error - Could not build matrices from HTTP request')
@@ -232,4 +233,4 @@ class BingMatrixService(MatrixService):
                 if location1 and location2:
                     location1.neighbor.connect(location2, {'distance': result['travelDistance'],
                                                            'duration': result['travelDuration']})
-                    print(f'\nConnected {location1} and {location2}\n')
+                    logging.info(f'Connected {location1} and {location2}')

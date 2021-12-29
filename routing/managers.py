@@ -2,6 +2,7 @@ import copy
 import datetime
 import enum
 import json
+import logging
 import sys
 from typing import Set
 
@@ -74,7 +75,7 @@ class LocationManager:
 
                 address = location.address
                 if address and (address.latitude is None or address.longitude is None):
-                    print(f'\nRetrieving geocode for location {address}\n')
+                    logging.info(f'Retrieving geocode for location {address}')
                     try:
                         address.latitude, address.longitude = BingGeocodeService.get_geocode(address=address)
                         address = address.save()
@@ -82,14 +83,14 @@ class LocationManager:
                         raise err
 
                 if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
-                    print(f'Failed to build matrix between {location} and {self.__locations}')
-                print(f'Added new location {location}')
+                    logging.info(f'Failed to build matrix between {location} and {self.__locations}')
+                logging.info(f'Added new location {location}')
                 self.__locations.add(location)
                 if self.__addresses.get(address):
                     self.__addresses[address] += 1
                 else:
                     self.__addresses[address] = 1
-                print(f'LocationManager State {self.__locations}\n')
+                logging.info(f'LocationManager State {self.__locations}')
                 return True
         return False
 
@@ -265,16 +266,12 @@ class RouteManager:
         self.__drivers = NodeParser.create_drivers(drivers)
         self.__locations = NodeParser.create_customers(locations)
         self.__depot = NodeParser.create_departure(departure)
-        return RouteManager.response_template()
-
-    def request_routes_test(self, departure: str, locations: list, drivers: list):
-        self.__drivers = NodeParser.create_drivers(drivers)
-        self.__locations = NodeParser.create_customers(locations)
-        self.__depot = NodeParser.create_departure(departure)
         self.__prioritize_volunteer = self.__contains_volunteers()
         self.__drivers_heap = self.__build_driver_heap()
-        self.__objective_function_value, self.__best_allocation, self.__objective_function_values_list, \
-            self.__final_locations = self.__build_routes()
+        (self.__objective_function_value,
+         self.__best_allocation,
+         self.__objective_function_values_list,
+         self.__final_locations) = self.__build_routes()
         return self.__build_response()
 
     def __contains_volunteers(self):
@@ -289,27 +286,26 @@ class RouteManager:
             if not driver.route.is_empty:
                 routes.append(json.loads(driver.route.serialize()))
 
-        print()
         for driver in self.__best_allocation:
             if not driver.route.is_empty:
-                print(f'Driver {driver.uid} Status: {driver.employee_status} Delivery Limit: {driver.max_delivery}'
-                      f' itinerary: {driver.route} with total demand {driver.route.total_demand}'
-                      f' with capacity {driver.capacity}')
+                logging.info(
+                    f'Driver {driver.uid} Status: {driver.employee_status} Delivery Limit: {driver.max_delivery}'
+                    f' itinerary: {driver.route} with total demand {driver.route.total_demand}'
+                    f' with capacity {driver.capacity}')
                 for customer in driver.route.itinerary:
                     if not customer.is_center and customer.is_assigned:
-                        print(f'\tCustomer {customer.uid} at {customer.address} with demand {customer.demand} '
-                              f'is assigned')
+                        logging.info(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} '
+                                     f'is assigned')
             else:
-                print(f'Driver {driver.uid} is not used. Capacity = {driver.capacity}')
-            print()
+                logging.info(f'Driver {driver.uid} is not used. Capacity = {driver.capacity}')
 
-        print()
         for customer in self.__final_locations:
             if customer.is_assigned:
-                print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is assigned')
+                logging.info(
+                    f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is assigned')
             else:
-                print(f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
-            print()
+                logging.info(
+                    f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
 
         RouteManager.__Response['routes'] = routes
         return json.dumps(RouteManager.__Response)
@@ -354,7 +350,7 @@ class RouteManager:
         best_allocation = []
         final_locations = []
         for index in range(RouteManager.__NUMBER_OF_ITERATIONS):
-            print(f'\n\033[1m Iteration number \033[0m {index + 1}')
+            logging.info(f'Iteration number  {index + 1}')
             drivers = copy.deepcopy(self.__drivers_heap)
             for driver in drivers:
                 driver.reset()
@@ -393,11 +389,12 @@ class RouteManager:
         if len(locations) == 1:
             locations_to_insert = RouteManager.__tally_locations(locations)
             try:
-                print(f'\n\033[1m Processing single location \033[0m {locations[0]}')
+                logging.info(f'Processing single location  {locations[0]}')
                 for driver in drivers_heap[::-1]:
-                    print(f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m UID:\033[0m {driver.uid} \033[1m '
-                          f'Status:\033[0m {driver.employee_status} '
-                          f'\033[1m Capacity:\033[0m {driver.capacity}')
+                    logging.info(
+                        f'Using driver \'{driver}\' UID: {driver.uid} '
+                        f'Status: {driver.employee_status} '
+                        f'Capacity: {driver.capacity}')
                     if driver.departure is None:
                         driver.set_departure(self.__depot)
                     if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
@@ -417,7 +414,7 @@ class RouteManager:
                 if numbers_of_drivers == max_drivers_count:
                     break
                 numbers_of_drivers = min(numbers_of_drivers + 1, max_drivers_count)
-                print(f'\n==========Using minimum of {numbers_of_drivers} drivers==========\n')
+                logging.info(f'==========Using minimum of {numbers_of_drivers} drivers==========')
                 drivers = drivers_heap[:numbers_of_drivers]
                 for driver in drivers:
                     driver.reset()
@@ -429,17 +426,17 @@ class RouteManager:
                 assigned_locations_list = set()
                 for pair in local_savings_manager:
                     try:
-                        print(f'\n\033[1mProcessing pair\033[0m ({pair.first}, {pair.last})')
+                        logging.info(f'Processing pair ({pair.first}, {pair.last})')
                         for driver in drivers:
-                            print(
-                                f'\tUsing \033[1m driver\033[0m \'{driver}\' \033[1m UID:\033[0m {driver.uid} \033[1m '
-                                f'Capacity:\033[0m {driver.capacity}')
+                            logging.info(
+                                f'Using driver \'{driver}\' UID: {driver.uid} '
+                                f'Capacity: {driver.capacity}')
                             if driver.departure is None:
                                 driver.set_departure(self.__depot)
                             if driver.route.is_open and driver.add(pair=pair):
                                 break
                         if pair.is_assignable():
-                            print(f'{RouteManager._State.INFEASIBLE}')
+                            logging.info(f'{RouteManager._State.INFEASIBLE}')
                         if pair.first.is_assigned:
                             assigned_locations_list.add(pair.first.uid)
                         if pair.last.is_assigned:

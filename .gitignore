@@ -6,6 +6,9 @@ routing/tests/log*
 routing/tests/routing_algorithm_log.txt
 Doxyfile
 
+# Log files
+routing/logs/*
+
 # Local files
 routing/tests/languages.*
 routing/tests/main.py
