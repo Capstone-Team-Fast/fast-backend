@@ -308,6 +308,8 @@ class RouteManager:
                     f'Customer {customer.uid} at {customer.address} with demand {customer.demand} is not assigned')
 
         RouteManager.__Response['routes'] = routes
+
+        logging.info(f'Route Response: {json.dumps(RouteManager.__Response)}')
         return json.dumps(RouteManager.__Response)
 
     @property
