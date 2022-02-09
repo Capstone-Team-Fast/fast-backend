@@ -2,6 +2,10 @@ import datetime
 import logging
 import os
 import re
+import sys
+
+if os.getcwd() not in sys.path:
+    sys.path.insert(0, os.getcwd())
 
 from backend import settings
 from routing import constant

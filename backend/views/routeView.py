@@ -69,7 +69,7 @@ class RoutingView(APIView):
 
         # driver_serializer = DriverSerializer(drivers, many=True)
 
-        route_manager = RouteManager(settings.NEO4J_BOLT_URL)
+        route_manager = RouteManager(settings.NEOMODEL_NEO4J_BOLT_URL)
         routes_json = route_manager.request_routes(departure, clients, drivers)
 
         routes_json = json.loads(routes_json)
@@ -90,6 +90,7 @@ class RoutingView(APIView):
         f.close()
 
         # TODO: ensure routes are correctly going through serializer
+        #print(type(routes_json))
         serializer = RouteListSerializer(data=routes_json)
 
         if serializer.is_valid():
