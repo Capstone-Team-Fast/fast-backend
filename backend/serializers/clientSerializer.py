@@ -39,6 +39,7 @@ class ClientSerializer(serializers.ModelSerializer):
         instance.last_name = validated_data.get('last_name', instance.last_name)
         instance.user = validated_data.get('user', instance.user)
         instance.phone = validated_data.get('phone', instance.phone)
+        instance.quantity = validated_data.get('quantity', instance.quantity)
         instance.comments = validated_data.get('comments', instance.comments)
         instance.languages.clear()
         instance.modified_on = datetime.now()
@@ -46,13 +47,11 @@ class ClientSerializer(serializers.ModelSerializer):
 
 
         location.address = location_data.get('address', location.address)
+        location.room_number = location_data.get('room_number', location.room_number)
         location.city = location_data.get('city', location.city)
         location.state = location_data.get('state', location.state)
         location.zipcode = location_data.get('zipcode', location.zipcode)
         location.is_center = location_data.get('is_center', location.is_center)
-
-        if location_data.get('room_number'):
-            location.room_number = location_data.get('room_number', location.room_number)
 
         if location_data.get('latitude'):
             location.latitude = location_data.get('latitude', location.latitude)

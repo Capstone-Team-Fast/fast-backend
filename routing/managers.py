@@ -149,6 +149,9 @@ class LocationManager:
 
         This helper function ensures that there is an edge between the two locations.
         """
+
+        if self.__depot.distance(location1) is None or self.__depot.distance(location2) is None:
+            return 0.0
         return self.__depot.distance(location1) + self.__depot.distance(location2) - location1.distance(location2)
 
     def __get_duration_saved(self, location1: Address, location2: Address):
@@ -156,6 +159,8 @@ class LocationManager:
 
         This helper function ensures that there is an edge between the two locations.
         """
+        if self.__depot.distance(location1) is None or self.__depot.distance(location2) is None:
+            return 0.0      
         return self.__depot.duration(location1) + self.__depot.duration(location2) - location1.duration(location2)
 
 
@@ -393,10 +398,12 @@ class RouteManager:
     def __build_route_instance(self, savings_manager: SavingsManager, locations: list, drivers_heap: list):
         assigned_locations_list: Set[UniqueIdProperty] = set()
         locations_to_insert: Set[UniqueIdProperty] = set()
-        if len(locations) == 1:
+        num_locations = len(locations)
+        logging.info(f'Number of locations: {num_locations}')
+        if num_locations == 1:
             locations_to_insert = RouteManager.__tally_locations(locations)
             try:
-                logging.info(f'Processing single location  {locations[0]}')
+                logging.info(f'Processing single location {locations[0]}')
                 for driver in drivers_heap[::-1]:
                     logging.info(
                         f'Using driver \'{driver}\' UID: {driver.uid} '
@@ -417,6 +424,8 @@ class RouteManager:
             numbers_of_drivers = 0
             max_drivers_count = len(drivers_heap)
             state = RouteManager._State.HARD_SOLVING
+            num_invalid = len(savings_manager.invalid_locations)
+            logging.info(f'Number of invalid locations: {num_invalid}')
             while state != RouteManager._State.TERMINATED:
                 if numbers_of_drivers == max_drivers_count:
                     break
@@ -427,6 +436,26 @@ class RouteManager:
                     driver.reset()
                 local_savings_manager = copy.deepcopy(savings_manager)
                 locations = local_savings_manager.valid_locations
+                num_valid_locations = len(locations)
+                logging.info(f'Number of valid locations: {num_valid_locations}')
+                if num_valid_locations == 1:
+                    try:
+                        logging.info(f"Processing single location {locations[0]}")
+                        for driver in drivers_heap[::-1]:
+                            logging.info(
+                                f'Using driver \'{driver}\' UID: {driver.uid} '
+                                f'Status: {driver.employee_status} '
+                                f'Capacity: {driver.capacity}')
+                            if driver.departure is None:
+                                driver.set_departure(self.__depot)
+                            if driver.route.is_open and driver.add(pair=Pair(locations[0], None)):
+                                break
+                            if locations[0].is_assigned:
+                                assigned_locations_list.add(locations[0].uid)
+                                break
+                    except GeocodeError:
+                        if locations[0].address.latitude is None or locations[0].address.longitude is None:
+                            self.__invalid_locations.add(locations[0])
                 locations.extend(local_savings_manager.invalid_locations)
                 locations_to_insert = self.__tally_locations(locations)
                 self.__invalid_locations.update(savings_manager.invalid_locations)
