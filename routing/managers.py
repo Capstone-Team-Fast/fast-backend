@@ -84,7 +84,7 @@ class LocationManager:
 
                 if not BingMatrixService.build_matrices(start=address, end=list(self.__addresses)):
                     logging.info(f'Failed to build matrix between {location} and {self.__locations}')
-                logging.info(f'Added new location {location}')
+                logging.info(f'Added new location {location} to graph database')
                 self.__locations.add(location)
                 if self.__addresses.get(address):
                     self.__addresses[address] += 1
@@ -182,20 +182,24 @@ class SavingsManager:
                     if locations[i].uid != locations[j].uid:
                         pair = Pair(locations[i], locations[j])
                         pair.set_origin(self.__location_manager.depot)
+                        logging.info(f'Pair Origin set to {self.__location_manager.depot}')
                         try:
                             saving = self.__location_manager.get_distance_savings(location1=pair.first,
                                                                                   location2=pair.last)
                             pair.set_saving(saving)
+                            logging.info(f'Location 1: {pair.first.address}, Location 2: {pair.last.address} have Saving: {saving}')
                             savings.append(pair)
                             valid_locations.add(pair.first)
                             valid_locations.add(pair.last)
-                        except GeocodeError:
+                        except GeocodeError as e:
                             if pair.first.address.longitude is None or pair.first.address.latitude is None:
                                 invalid_locations.add(pair.first)
+                                logging.warning(f'Location 1 {pair.first.address} had Geocode Error: {e}')
                             else:
                                 valid_locations.add(pair.first)
                             if pair.last.address.longitude is None or pair.last.address.latitude is None:
                                 invalid_locations.add(pair.last)
+                                logging.warning(f'Location 2 {pair.last.address} had Geocode Error {e}')
                             else:
                                 valid_locations.add(pair.last)
                             continue
@@ -272,6 +276,7 @@ class RouteManager:
          self.__best_allocation,
          self.__objective_function_values_list,
          self.__final_locations) = self.__build_routes()
+        logging.info(f'Route created with objective function value {self.__objective_function_value}')
         return self.__build_response()
 
     def __contains_volunteers(self):
