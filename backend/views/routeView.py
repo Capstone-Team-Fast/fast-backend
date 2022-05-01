@@ -26,6 +26,10 @@ class RouteView(APIView):
         serializer = RouteSerializer(route)
         return Response(serializer.data)
 
+    def delete(self, request, pk, format=None):
+        route = self.get_object(pk)
+        route.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class RoutingView(APIView):
 
