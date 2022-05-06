@@ -1,0 +1,55 @@
+\hypertarget{classbackend_1_1models_1_1driver_1_1_driver}{}\doxysection{backend.\+models.\+driver.\+Driver Class Reference}
+\label{classbackend_1_1models_1_1driver_1_1_driver}\index{backend.models.driver.Driver@{backend.models.driver.Driver}}
+Inheritance diagram for backend.\+models.\+driver.\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1driver_1_1_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a158f4a2fba08f48130d29e0d2de2caab}\label{classbackend_1_1models_1_1driver_1_1_driver_a158f4a2fba08f48130d29e0d2de2caab}} 
+{\bfseries id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_abb3312ba3e101976838cbfcd484bdce9}\label{classbackend_1_1models_1_1driver_1_1_driver_abb3312ba3e101976838cbfcd484bdce9}} 
+{\bfseries user} = models.\+One\+To\+One\+Field(User, on\+\_\+delete=models.\+CASCADE, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a948f616bf0f5aca3a1f59edab2948aaa}\label{classbackend_1_1models_1_1driver_1_1_driver_a948f616bf0f5aca3a1f59edab2948aaa}} 
+{\bfseries first\+\_\+name} = models.\+Char\+Field(max\+\_\+length=50, default=\char`\"{}Jane\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_afb0df737a137f103e6e87e1792b2dbe5}\label{classbackend_1_1models_1_1driver_1_1_driver_afb0df737a137f103e6e87e1792b2dbe5}} 
+{\bfseries last\+\_\+name} = models.\+Char\+Field(max\+\_\+length=50, default=\char`\"{}Doe\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a85eb420b39a326e23d01cf15a515d050}\label{classbackend_1_1models_1_1driver_1_1_driver_a85eb420b39a326e23d01cf15a515d050}} 
+{\bfseries capacity} = models.\+Positive\+Integer\+Field(null=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_ab083b58d4d8be936120570ba2eb53d6e}\label{classbackend_1_1models_1_1driver_1_1_driver_ab083b58d4d8be936120570ba2eb53d6e}} 
+{\bfseries employee\+\_\+status} = models.\+Char\+Field(max\+\_\+length=15)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_aa6c34b43049e021ce0317a843933ff6f}\label{classbackend_1_1models_1_1driver_1_1_driver_aa6c34b43049e021ce0317a843933ff6f}} 
+{\bfseries phone} = models.\+Char\+Field(max\+\_\+length=15, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a5e26fe8abe4d36f3de1b2a5fe126bbd1}\label{classbackend_1_1models_1_1driver_1_1_driver_a5e26fe8abe4d36f3de1b2a5fe126bbd1}} 
+{\bfseries duration} = models.\+Positive\+Integer\+Field(null=True, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_aabc4cc35343ad1213a0aa65bcc6d82ef}\label{classbackend_1_1models_1_1driver_1_1_driver_aabc4cc35343ad1213a0aa65bcc6d82ef}} 
+{\bfseries delivery\+\_\+limit} = models.\+Positive\+Integer\+Field(null=True, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_ae677bce50d87f0e4cdf4cb4657b92122}\label{classbackend_1_1models_1_1driver_1_1_driver_ae677bce50d87f0e4cdf4cb4657b92122}} 
+{\bfseries availability} = models.\+Foreign\+Key(\mbox{\hyperlink{classbackend_1_1models_1_1availability_1_1_availability}{Availability}}, on\+\_\+delete=models.\+CASCADE)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a9fe60cd806bdf5cc841803d09e93a587}\label{classbackend_1_1models_1_1driver_1_1_driver_a9fe60cd806bdf5cc841803d09e93a587}} 
+{\bfseries languages} = models.\+Many\+To\+Many\+Field(to=\mbox{\hyperlink{classbackend_1_1models_1_1language_1_1_language}{Language}})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a61378e765d2b60f91365d6b247c49263}\label{classbackend_1_1models_1_1driver_1_1_driver_a61378e765d2b60f91365d6b247c49263}} 
+{\bfseries created\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True, editable=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1driver_1_1_driver_a4dc778df34159bfd4cb7d7c3dbc5f83b}\label{classbackend_1_1models_1_1driver_1_1_driver_a4dc778df34159bfd4cb7d7c3dbc5f83b}} 
+{\bfseries modified\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now=True, editable=False)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/driver.\+py\end{DoxyCompactItemize}

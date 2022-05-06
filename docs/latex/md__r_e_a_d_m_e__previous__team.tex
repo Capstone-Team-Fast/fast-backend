@@ -1,0 +1,41 @@
+This project\textquotesingle{}s goal is to create a framework that has been designed to efficiently route delivery drivers coming from a single location. It also provides an easy-\/to-\/use interface (on the frontend) for managers that create routes, as well as the drivers that deliver using those routes.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md4}{}\doxysection{Milestone 1\+: Release Notes}\label{md__r_e_a_d_m_e__previous__team_autotoc_md4}
+Many of the backend features are currently still in development. Right now all of the models are working in the database and we have begun work on the serializers and views. The serializers will be able to transform python objects to JSON and vice versa. The views will handle our API routes and the type of request (get, post, put, etc.).
+
+Currently, our only working API route is {\ttfamily /locations/}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md5}{}\doxysection{Milestone 2\+: Release Notes}\label{md__r_e_a_d_m_e__previous__team_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md6}{}\doxysubsection{Routing algorithm\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md6}
+We wrote much of the API to communicate with external APIs and retrieve geocode and distance/duration matrices. We also set up a graph database using neo4j. One of our objectives was to be able to query a database and retrieve distance/duration between any pair of locations that are not new, thus saving on API. Then, we started implementing a modified version of Clarke and Wright\textquotesingle{}s Savings algorithm with Time Window.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md7}{}\doxysubsection{Backend\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md7}
+For Milestone 2 we have finished all of our API endpoints except for {\ttfamily /route/} post requests. All other views and serializers have been completed.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md8}{}\doxysection{Milestone 3\+: Release Notes}\label{md__r_e_a_d_m_e__previous__team_autotoc_md8}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md9}{}\doxysubsection{Routing algorithm\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md9}
+For this release, we finished writing 90\% of the routing algorithm. We tested features we coded for milestone 2 (using the graph database, geocoding locations, and retrieving distance/duration matrices). We also added the logic to build routes, aka assign locations to drivers available to deliver, under different business constraints.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md10}{}\doxysubsection{Backend\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md10}
+For Milestone 3, we made small changes to the client and driver models and got the {\ttfamily /route/} api endpoint ready for connection to the routing algorithm app.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md11}{}\doxysection{Milestone 4\+: Release Notes}\label{md__r_e_a_d_m_e__previous__team_autotoc_md11}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md12}{}\doxysubsection{Routing algorithm\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md12}
+The most essential aspects of the routing algorithm are implemented at this point. We unit-\/tested all of the non-\/basic classes of the routing algorithm and connected the routing algorithm to the other half of the backend. We also installed neo4j on AWS and got ready for deployment.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md13}{}\doxysubsection{Backend\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md13}
+For Milestone 4, we have completed the bulk uploading of clients and drivers. We have edited their models and made a few changes based on feedback from Dr. Vitor and compatibility with the routing app.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md14}{}\doxysection{Milestone 5\+: Release Notes}\label{md__r_e_a_d_m_e__previous__team_autotoc_md14}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md15}{}\doxysubsection{Routing algorithm\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md15}
+We tested the routing algorithm with real-\/data and fixed bugs as we encounter them. We\textquotesingle{}ve documented some of the code. Documentation still needs to be added to a couple of files.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md16}{}\doxysubsection{Backend\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md16}
+For Milestone 5, we finished linking our routing app and the main backend for api requests. In doing so, we added a new model\+: route\+\_\+list. A route\+\_\+list has a one to many relation with routes, so that we know what routes are generated together. We ran into issues with Django\textquotesingle{}s Rest Framework Serializers. Having multiple nested serializers caused issues with the relations between the route\+\_\+list, route, and client models. This was solved by saving the itinerary(clients) as JSON in the database. An added bonus to this structure, meant it was easy to keep the order of the itinerary.\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md17}{}\doxysection{Installation}\label{md__r_e_a_d_m_e__previous__team_autotoc_md17}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md18}{}\doxysubsection{Install and update Python}\label{md__r_e_a_d_m_e__previous__team_autotoc_md18}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md19}{}\doxysubsection{Create a virtual environment}\label{md__r_e_a_d_m_e__previous__team_autotoc_md19}
+{\ttfamily python3 -\/m venv venv}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md20}{}\doxysubsubsection{For windows\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md20}
+{\ttfamily python -\/m venv venv}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md21}{}\doxysubsection{Start virtual environment}\label{md__r_e_a_d_m_e__previous__team_autotoc_md21}
+\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md22}{}\doxysubsubsection{For linux/mac/git bash}\label{md__r_e_a_d_m_e__previous__team_autotoc_md22}
+{\ttfamily . venv/bin/activate}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md23}{}\doxysubsubsection{For windows\+:}\label{md__r_e_a_d_m_e__previous__team_autotoc_md23}
+{\ttfamily venv\textbackslash{}Scripts\textbackslash{}activate}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md24}{}\doxysubsection{Install/\+Upgrade pip}\label{md__r_e_a_d_m_e__previous__team_autotoc_md24}
+{\ttfamily python -\/m pip install -\/-\/upgrade pip}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md25}{}\doxysubsection{Install packages}\label{md__r_e_a_d_m_e__previous__team_autotoc_md25}
+{\ttfamily pip install -\/r requirements.\+txt}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md26}{}\doxysubsection{Download/\+Install Postgres}\label{md__r_e_a_d_m_e__previous__team_autotoc_md26}
+\href{https://www.postgresql.org/download/}{\texttt{ https\+://www.\+postgresql.\+org/download/}}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md27}{}\doxysubsubsection{Create database}\label{md__r_e_a_d_m_e__previous__team_autotoc_md27}
+{\ttfamily psql -\/U postgres} Then enter in your password. (You may have to add postgres to your path variable)
+
+Create the database {\ttfamily CREATE DATABASE fast\+DB;} you can then quit with {\ttfamily exit;}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md28}{}\doxysubsection{Copy settings}\label{md__r_e_a_d_m_e__previous__team_autotoc_md28}
+{\ttfamily cp backend/settings.\+example backend/settings.\+py}
+
+Change password in {\ttfamily settings.\+py} to same password used in Postgres installation\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md29}{}\doxysubsection{Make Migrations}\label{md__r_e_a_d_m_e__previous__team_autotoc_md29}
+{\ttfamily python manage.\+py makemigrations backend}
+
+Then
+
+{\ttfamily python manage.\+py migrate backend}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md30}{}\doxysubsection{Create superuser}\label{md__r_e_a_d_m_e__previous__team_autotoc_md30}
+{\ttfamily python manage.\+py createsuperuser}
+
+May have to use {\ttfamily winpty python manage.\+py createsuperuser}\hypertarget{md__r_e_a_d_m_e__previous__team_autotoc_md31}{}\doxysubsection{Test Deployment command}\label{md__r_e_a_d_m_e__previous__team_autotoc_md31}
+{\ttfamily python manage.\+py runserver 0.\+0.\+0.\+0\+:8000} 

@@ -1,0 +1,54 @@
+\hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer}{}\doxysection{backend.\+serializers.\+location\+Serializer.\+Location\+Serializer Class Reference}
+\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer}\index{backend.serializers.locationSerializer.LocationSerializer@{backend.serializers.locationSerializer.LocationSerializer}}
+Inheritance diagram for backend.\+serializers.\+location\+Serializer.\+Location\+Serializer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a6dff2e6fc50367a621152b125b8527c0}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a6dff2e6fc50367a621152b125b8527c0}} 
+def {\bfseries create} (self, validated\+\_\+data)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a1e70f7d8fe2a4307da55fb2b172e95b1}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a1e70f7d8fe2a4307da55fb2b172e95b1}} 
+def {\bfseries update} (self, instance, validated\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a92614841a338618c04f476d886d48721}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a92614841a338618c04f476d886d48721}} 
+{\bfseries address} = serializers.\+Char\+Field(max\+\_\+length=100)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_aa742ef8c07b97bc568ffa80b014ce902}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_aa742ef8c07b97bc568ffa80b014ce902}} 
+{\bfseries city} = serializers.\+Char\+Field(max\+\_\+length=250)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a22048da66c771e446a7e0786ba22b42c}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a22048da66c771e446a7e0786ba22b42c}} 
+{\bfseries state} = serializers.\+Char\+Field(max\+\_\+length=50)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a4eb050a5110c9f8f5f97f4e3b0b18f59}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a4eb050a5110c9f8f5f97f4e3b0b18f59}} 
+{\bfseries zipcode} = serializers.\+Integer\+Field()
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a1dc64c822d5719c6d98dd2018519c4c0}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a1dc64c822d5719c6d98dd2018519c4c0}} 
+{\bfseries room\+\_\+number} = serializers.\+Char\+Field(max\+\_\+length=50, required=False, allow\+\_\+null=True, allow\+\_\+blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a856ae1c065d8a05e7f8a36ea64189228}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a856ae1c065d8a05e7f8a36ea64189228}} 
+{\bfseries is\+\_\+center} = serializers.\+Boolean\+Field(default=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a4bbcbc077ebf71d4a884501cf3373903}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a4bbcbc077ebf71d4a884501cf3373903}} 
+{\bfseries latitude} = serializers.\+Decimal\+Field(max\+\_\+digits=18, decimal\+\_\+places=15, required=False, allow\+\_\+null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a22606ea6737c928b248769d54de80423}\label{classbackend_1_1serializers_1_1location_serializer_1_1_location_serializer_a22606ea6737c928b248769d54de80423}} 
+{\bfseries longitude} = serializers.\+Decimal\+Field(max\+\_\+digits=18, decimal\+\_\+places=15, required=False, allow\+\_\+null=True)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/serializers/location\+Serializer.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{classbackend_1_1models_1_1route_1_1_route}{}\doxysection{backend.\+models.\+route.\+Route Class Reference}
+\label{classbackend_1_1models_1_1route_1_1_route}\index{backend.models.route.Route@{backend.models.route.Route}}
+Inheritance diagram for backend.\+models.\+route.\+Route\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1route_1_1_route}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_ab9962f512422fbcca86720d979141c54}\label{classbackend_1_1models_1_1route_1_1_route_ab9962f512422fbcca86720d979141c54}} 
+{\bfseries id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a714aacddde28d01984fbc035555fcfbd}\label{classbackend_1_1models_1_1route_1_1_route_a714aacddde28d01984fbc035555fcfbd}} 
+{\bfseries assigned\+\_\+to} = models.\+Foreign\+Key(\mbox{\hyperlink{classbackend_1_1models_1_1driver_1_1_driver}{Driver}}, on\+\_\+delete=models.\+CASCADE)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_ac24284b8e80ab0ff92185a06c0f1cd10}\label{classbackend_1_1models_1_1route_1_1_route_ac24284b8e80ab0ff92185a06c0f1cd10}} 
+{\bfseries created\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True, editable=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a243e7f070ebba671105a3fd37937d0ad}\label{classbackend_1_1models_1_1route_1_1_route_a243e7f070ebba671105a3fd37937d0ad}} 
+{\bfseries total\+\_\+quantity} = models.\+Positive\+Integer\+Field(blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a369a939ffa867f1abfecb59534f56d6b}\label{classbackend_1_1models_1_1route_1_1_route_a369a939ffa867f1abfecb59534f56d6b}} 
+{\bfseries total\+\_\+distance} = models.\+Decimal\+Field(max\+\_\+digits=40, decimal\+\_\+places=20, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a7b688c48cf85d50021bd737176db5533}\label{classbackend_1_1models_1_1route_1_1_route_a7b688c48cf85d50021bd737176db5533}} 
+{\bfseries total\+\_\+duration} = models.\+Decimal\+Field(max\+\_\+digits=40, decimal\+\_\+places=20, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a627f43fd184640fb23323c127e8d33fe}\label{classbackend_1_1models_1_1route_1_1_route_a627f43fd184640fb23323c127e8d33fe}} 
+{\bfseries itinerary} = models.\+JSONField(null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1route_1_1_route_a3a353656ea8b4decb9e56068c0209db5}\label{classbackend_1_1models_1_1route_1_1_route_a3a353656ea8b4decb9e56068c0209db5}} 
+{\bfseries route\+\_\+list} = models.\+Foreign\+Key(\mbox{\hyperlink{classbackend_1_1models_1_1route_list_1_1_route_list}{Route\+List}}, related\+\_\+name=\textquotesingle{}routes\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, blank=True, null=True)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/route.\+py\end{DoxyCompactItemize}

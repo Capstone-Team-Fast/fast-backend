@@ -1,0 +1,49 @@
+\hypertarget{classbackend_1_1models_1_1client_1_1_client}{}\doxysection{backend.\+models.\+client.\+Client Class Reference}
+\label{classbackend_1_1models_1_1client_1_1_client}\index{backend.models.client.Client@{backend.models.client.Client}}
+Inheritance diagram for backend.\+models.\+client.\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1client_1_1_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_aa2f9e4be52ab72c2e7db371ba81ad160}\label{classbackend_1_1models_1_1client_1_1_client_aa2f9e4be52ab72c2e7db371ba81ad160}} 
+{\bfseries id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_ac54daaa08e8805d0d487f7e4ca6feaec}\label{classbackend_1_1models_1_1client_1_1_client_ac54daaa08e8805d0d487f7e4ca6feaec}} 
+{\bfseries user} = models.\+One\+To\+One\+Field(User, on\+\_\+delete=models.\+CASCADE, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a27f455aff807a8b0f02f3e3f02e07b11}\label{classbackend_1_1models_1_1client_1_1_client_a27f455aff807a8b0f02f3e3f02e07b11}} 
+{\bfseries first\+\_\+name} = models.\+Char\+Field(max\+\_\+length=50, default=\char`\"{}John\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a013563311574631a71ba44a8d16a839d}\label{classbackend_1_1models_1_1client_1_1_client_a013563311574631a71ba44a8d16a839d}} 
+{\bfseries last\+\_\+name} = models.\+Char\+Field(max\+\_\+length=50, default=\char`\"{}Doe\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a651417a10d1b20e47f5ab2ca1636a8e1}\label{classbackend_1_1models_1_1client_1_1_client_a651417a10d1b20e47f5ab2ca1636a8e1}} 
+{\bfseries comments} = models.\+Text\+Field(blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_ad7f79c95c42d4ed9b68af90418ca9995}\label{classbackend_1_1models_1_1client_1_1_client_ad7f79c95c42d4ed9b68af90418ca9995}} 
+{\bfseries quantity} = models.\+Positive\+Integer\+Field(blank=False, default=1)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a81229113722b490dcd58fbbff753e349}\label{classbackend_1_1models_1_1client_1_1_client_a81229113722b490dcd58fbbff753e349}} 
+{\bfseries location} = models.\+Foreign\+Key(to=\mbox{\hyperlink{classbackend_1_1models_1_1location_1_1_location}{Location}}, on\+\_\+delete=models.\+CASCADE, blank=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a27098a18e582b0aaeb199b86387a7202}\label{classbackend_1_1models_1_1client_1_1_client_a27098a18e582b0aaeb199b86387a7202}} 
+{\bfseries phone} = models.\+Char\+Field(max\+\_\+length=15, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_aae68353f2c017fc612b4b4e4032103a1}\label{classbackend_1_1models_1_1client_1_1_client_aae68353f2c017fc612b4b4e4032103a1}} 
+{\bfseries languages} = models.\+Many\+To\+Many\+Field(to=\mbox{\hyperlink{classbackend_1_1models_1_1language_1_1_language}{Language}}, blank=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a79f2b067d47e1a73e4f0630793c31c65}\label{classbackend_1_1models_1_1client_1_1_client_a79f2b067d47e1a73e4f0630793c31c65}} 
+{\bfseries created\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True, editable=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1client_1_1_client_a11409dc977ed245095a0d513ef7dae5b}\label{classbackend_1_1models_1_1client_1_1_client_a11409dc977ed245095a0d513ef7dae5b}} 
+{\bfseries modified\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now=True, editable=False)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/client.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classbackend_1_1migrations_1_10002__savings_1_1_migration}{}\doxysection{backend.\+migrations.0002\+\_\+savings.\+Migration Class Reference}
+\label{classbackend_1_1migrations_1_10002__savings_1_1_migration}\index{backend.migrations.0002\_savings.Migration@{backend.migrations.0002\_savings.Migration}}
+Inheritance diagram for backend.\+migrations.0002\+\_\+savings.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1migrations_1_10002__savings_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classbackend_1_1migrations_1_10002__savings_1_1_migration_a4587bfb5e25d9faad846a709053baaba}{dependencies}}
+\item 
+list \mbox{\hyperlink{classbackend_1_1migrations_1_10002__savings_1_1_migration_af4565c435ab0d9c81c5486ac64e61046}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbackend_1_1migrations_1_10002__savings_1_1_migration_a4587bfb5e25d9faad846a709053baaba}\label{classbackend_1_1migrations_1_10002__savings_1_1_migration_a4587bfb5e25d9faad846a709053baaba}} 
+\index{backend.migrations.0002\_savings.Migration@{backend.migrations.0002\_savings.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!backend.migrations.0002\_savings.Migration@{backend.migrations.0002\_savings.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list backend.\+migrations.\+0002\+\_\+savings.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        (\textcolor{stringliteral}{'backend'}, \textcolor{stringliteral}{'0001\_initial'}),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classbackend_1_1migrations_1_10002__savings_1_1_migration_af4565c435ab0d9c81c5486ac64e61046}\label{classbackend_1_1migrations_1_10002__savings_1_1_migration_af4565c435ab0d9c81c5486ac64e61046}} 
+\index{backend.migrations.0002\_savings.Migration@{backend.migrations.0002\_savings.Migration}!operations@{operations}}
+\index{operations@{operations}!backend.migrations.0002\_savings.Migration@{backend.migrations.0002\_savings.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list backend.\+migrations.\+0002\+\_\+savings.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        migrations.CreateModel(}
+\DoxyCodeLine{            name=\textcolor{stringliteral}{'Savings'},}
+\DoxyCodeLine{            fields=[}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'saving\_id'}, models.AutoField(primary\_key=\textcolor{keyword}{True}, serialize=\textcolor{keyword}{False})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'saving'}, models.PositiveIntegerField(blank=\textcolor{keyword}{True}, null=\textcolor{keyword}{True})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'location1'}, models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE, related\_name=\textcolor{stringliteral}{'loc1'}, to=\textcolor{stringliteral}{'backend.location'})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'location2'}, models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE, related\_name=\textcolor{stringliteral}{'loc2'}, to=\textcolor{stringliteral}{'backend.location'})),}
+\DoxyCodeLine{                (\textcolor{stringliteral}{'origin'}, models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE, related\_name=\textcolor{stringliteral}{'+'}, to=\textcolor{stringliteral}{'backend.location'})),}
+\DoxyCodeLine{            ],}
+\DoxyCodeLine{        ),}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/migrations/0002\+\_\+savings.\+py\end{DoxyCompactItemize}

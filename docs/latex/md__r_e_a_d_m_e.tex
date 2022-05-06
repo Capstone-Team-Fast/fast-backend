@@ -1,0 +1,34 @@
+As noted by Team-\/\+Fast\textquotesingle{}s README file, this project seeks to implement a route generation service for the Intercultural Senior Center to help them create routes for their delivery drivers. Our team, Team 2Fast2\+Furious, aims to build on on the work of the Team-\/\+Fast. To run this application, view the README. ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Milestone 1 Release Notes}\label{md__r_e_a_d_m_e_autotoc_md1}
+We have adjusted the backend enviroment to start on this project\+:
+\begin{DoxyItemize}
+\item Updating Chromedriver to version 98
+\item Set up our own Postgresql and neo4j databases
+\item Added missing dependencies, django-\/cors-\/headers$\sim$=3.\+11.\+0, into requirements.\+txt
+\item Set IPs to local testing enviroment
+\item Created and added our own Bing API Key
+\item Updated settings.\+py to match our changes
+\item Ran testing suite to make sure app was functioning correctly
+\item Starting implementing caching savings between location for faster algorithm performance
+\item Updated installation instructions
+\end{DoxyItemize}
+
+We still do not have the caching for savings working.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Installing}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item Clone this git repo {\ttfamily git clone \href{https://github.com/Atari4800/fast-backend.git}{\texttt{ https\+://github.\+com/\+Atari4800/fast-\/backend.\+git}}}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Set up virtual enviroment {\ttfamily python -\/m venv .venv}
+\item {\ttfamily Install dependencies}pip install -\/r requirements.\+txt\`{}
+\item Install postgres \href{https://www.postgresql.org/download/}{\texttt{ https\+://www.\+postgresql.\+org/download/}} or pg\+Admin4
+\item Change database password in settings.\+py to same password used in Postgres installation
+\item Make migrations {\ttfamily python manage.\+py makemigrations}
+\item Migrate into database {\ttfamily python manage.\+py migrate}
+\item Install neo4j Community Edition \href{https://neo4j.com/download-center/}{\texttt{ https\+://neo4j.\+com/download-\/center/}}
+\item Open up terminal and navigate to {\ttfamily \texorpdfstring{$<$}{<}Install Location\texorpdfstring{$>$}{>}/neo4j-\/community-\/4.4.\+3\textbackslash{}bin}
+\item Run {\ttfamily neo4j console} to start neo4j server
+\item Open up another terminal and navigate to backend repo root
+\item Run {\ttfamily python manage.\+py runserver} to start django server
+\item Continue to installation instructions on frontend READMEmd 
+\end{DoxyEnumerate}

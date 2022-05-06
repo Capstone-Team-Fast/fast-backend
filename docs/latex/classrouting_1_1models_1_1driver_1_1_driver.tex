@@ -1,0 +1,245 @@
+\hypertarget{classrouting_1_1models_1_1driver_1_1_driver}{}\doxysection{routing.\+models.\+driver.\+Driver Class Reference}
+\label{classrouting_1_1models_1_1driver_1_1_driver}\index{routing.models.driver.Driver@{routing.models.driver.Driver}}
+Inheritance diagram for routing.\+models.\+driver.\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrouting_1_1models_1_1driver_1_1_driver}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_1_1_role}{Role}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a7a5de7b965d7f4e5026d44790a90b4bc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a9d6cb0df43e30127a1c53494aaf9bf36}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_aa605d0c50cbf63f12731863126a176cd}{set\+\_\+departure}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot}{Depot}} depot)
+\item 
+\mbox{\hyperlink{classrouting_1_1models_1_1route_1_1_route}{Route}} \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a0135344b4bc11114a71384b1e867df92}{route}} (self)
+\item 
+\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot}{Depot}} \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a67fa1f8782c79097e12b29272c81291a}{departure}} (self)
+\item 
+bool \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a0e48eeca99a80e35e50d37d403abf1aa}{add}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_pair}{Pair}} pair)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a48232cd9262e8c792332a767592f80c8}{get\+\_\+languages}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_aba160f8e728b94dbd6a647d77ed57c1e}{get\+\_\+availability}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_a3d58ed74113b3d45bd7b8a0cf05bb62d}{is\+\_\+volunteer}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_ac9ac8af3bdd739b2a280b5be966434f2}{is\+\_\+full\+\_\+time}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1driver_1_1_driver_ac39cad274dd910f27b5cc1de81f2c243}{serialize}} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a15e01585377b84f8c6ad34fb1b36cc1c}\label{classrouting_1_1models_1_1driver_1_1_driver_a15e01585377b84f8c6ad34fb1b36cc1c}} 
+def {\bfseries category} (cls)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a6ec4b7f4f47f8137d75f1f59c3ccab3d}\label{classrouting_1_1models_1_1driver_1_1_driver_a6ec4b7f4f47f8137d75f1f59c3ccab3d}} 
+def {\bfseries \+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a1e884bf9963f999af66cb2757b27a5d1}\label{classrouting_1_1models_1_1driver_1_1_driver_a1e884bf9963f999af66cb2757b27a5d1}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a66e833681dbe0b0f311fb28262165e9c}\label{classrouting_1_1models_1_1driver_1_1_driver_a66e833681dbe0b0f311fb28262165e9c}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a8bf1d73b1dd72f8b41d38f74a9b6a62b}\label{classrouting_1_1models_1_1driver_1_1_driver_a8bf1d73b1dd72f8b41d38f74a9b6a62b}} 
+{\bfseries uid} = Unique\+Id\+Property()
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a78e6d2caf3fa3a87e2bca324fdf4aad6}\label{classrouting_1_1models_1_1driver_1_1_driver_a78e6d2caf3fa3a87e2bca324fdf4aad6}} 
+{\bfseries external\+\_\+id} = Integer\+Property(required=False, unique\+\_\+index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_ab7662d497155a684b6efbe6b8ee2342c}\label{classrouting_1_1models_1_1driver_1_1_driver_ab7662d497155a684b6efbe6b8ee2342c}} 
+{\bfseries first\+\_\+name} = String\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a0a2eea070e42555c105fa1e370c8d6e3}\label{classrouting_1_1models_1_1driver_1_1_driver_a0a2eea070e42555c105fa1e370c8d6e3}} 
+{\bfseries last\+\_\+name} = String\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a72b29c0d9df98f379740cc48416fffe0}\label{classrouting_1_1models_1_1driver_1_1_driver_a72b29c0d9df98f379740cc48416fffe0}} 
+{\bfseries employee\+\_\+status} = String\+Property(index=True, choices=\+\_\+\+\_\+\+ROLES, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a898115e78bf6b9cd5a6f2a8f7ab3b784}\label{classrouting_1_1models_1_1driver_1_1_driver_a898115e78bf6b9cd5a6f2a8f7ab3b784}} 
+{\bfseries capacity} = Integer\+Property(default=0)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a39fd2027583ea77f6228f68033b90147}\label{classrouting_1_1models_1_1driver_1_1_driver_a39fd2027583ea77f6228f68033b90147}} 
+{\bfseries start\+\_\+time} = Date\+Time\+Property(default\+\_\+now=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a6319b5d98e48a0c67b13863ed0d7bc8c}\label{classrouting_1_1models_1_1driver_1_1_driver_a6319b5d98e48a0c67b13863ed0d7bc8c}} 
+{\bfseries end\+\_\+time} = Date\+Time\+Property()
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a21d4e23e32692bfb061f25cd99691ae2}\label{classrouting_1_1models_1_1driver_1_1_driver_a21d4e23e32692bfb061f25cd99691ae2}} 
+{\bfseries max\+\_\+delivery} = Integer\+Property(default=None)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a28b12f7c5d43dca7989c7e89f0680f76}\label{classrouting_1_1models_1_1driver_1_1_driver_a28b12f7c5d43dca7989c7e89f0680f76}} 
+{\bfseries created\+\_\+on} = Date\+Time\+Property(default=datetime.\+now)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a82d81fdeffc8d085a114c0255fde3bf0}\label{classrouting_1_1models_1_1driver_1_1_driver_a82d81fdeffc8d085a114c0255fde3bf0}} 
+{\bfseries modified\+\_\+on} = Date\+Time\+Property(default\+\_\+now=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_ad02237c60a0cc4d4e38cf1c4670e5087}\label{classrouting_1_1models_1_1driver_1_1_driver_ad02237c60a0cc4d4e38cf1c4670e5087}} 
+{\bfseries serves} = Relationship\+To(\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer}{routing.\+models.\+location.\+Customer}}\textquotesingle{}, \textquotesingle{}SERVES\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a7f5c36644f25ce61bb29fe09d15ce309}\label{classrouting_1_1models_1_1driver_1_1_driver_a7f5c36644f25ce61bb29fe09d15ce309}} 
+{\bfseries is\+\_\+available\+\_\+on} = Relationship\+To(\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1availability_1_1_availability}{routing.\+models.\+availability.\+Availability}}\textquotesingle{}, \textquotesingle{}AVAILABLE\+\_\+\+ON\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a2a6dd63db5c38b1defb2579598740094}\label{classrouting_1_1models_1_1driver_1_1_driver_a2a6dd63db5c38b1defb2579598740094}} 
+{\bfseries language} = Relationship\+To(\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language}{routing.\+models.\+language.\+Language}}\textquotesingle{}, \textquotesingle{}SPEAKS\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class defines a Driver node with its properties.
+
+This node represents a driver object used in the graph database. This object defines various methods for
+querying the graph database for a particular instance of Driver.
+
+    Typical usage example:
+
+    foo = Driver(external_id=1, first_name='John', last_name='Doe', capacity=35, employee_status='P')
+    foo = Driver(first_name='John', last_name='Doe', capacity=35, employee_status='V')
+
+    Note that external_id is not required. employee_status can be either 'P' or 'V'.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a7a5de7b965d7f4e5026d44790a90b4bc}\label{classrouting_1_1models_1_1driver_1_1_driver_a7a5de7b965d7f4e5026d44790a90b4bc}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a Driver and assigns it a Route. Its departure is set to None by default.
+
+    Typical usage example:
+
+    driver = Driver(external_id=1, first_name='John', last_name='Doe', capacity=35, employee_status='P')
+    driver = Driver(first_name='John', last_name='Doe', capacity=35, employee_status='V')
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a0e48eeca99a80e35e50d37d403abf1aa}\label{classrouting_1_1models_1_1driver_1_1_driver_a0e48eeca99a80e35e50d37d403abf1aa}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!add@{add}}
+\index{add@{add}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily  bool routing.\+models.\+driver.\+Driver.\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_pair}{Pair}}}]{pair }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for adding a Pair of Location to the Route assigned to this driver.
+
+This implementation validates the capacity and duration constraints. It handles maximum delivery constraint
+    specific to Volunteers
+
+@param: pair: A Pair of Locations to insert
+@return: True if the locations of this pair are assigned. Otherwise, return False. When, A value of True does
+    not necessarily mean that the two locations are assigned to the same driver, this driver.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a67fa1f8782c79097e12b29272c81291a}\label{classrouting_1_1models_1_1driver_1_1_driver_a67fa1f8782c79097e12b29272c81291a}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!departure@{departure}}
+\index{departure@{departure}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{departure()}{departure()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot}{Depot}} routing.\+models.\+driver.\+Driver.\+departure (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Property for retrieving the departure of this route.\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_aba160f8e728b94dbd6a647d77ed57c1e}\label{classrouting_1_1models_1_1driver_1_1_driver_aba160f8e728b94dbd6a647d77ed57c1e}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!get\_availability@{get\_availability}}
+\index{get\_availability@{get\_availability}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{get\_availability()}{get\_availability()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+get\+\_\+availability (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the availability of this driver.
+
+@return a list of Availability objects representing when this driver is available.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a48232cd9262e8c792332a767592f80c8}\label{classrouting_1_1models_1_1driver_1_1_driver_a48232cd9262e8c792332a767592f80c8}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!get\_languages@{get\_languages}}
+\index{get\_languages@{get\_languages}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{get\_languages()}{get\_languages()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+get\+\_\+languages (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}List of languages spoken by this driver.
+
+@return a list of Language objects representing the languages spoken by this driver.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_ac9ac8af3bdd739b2a280b5be966434f2}\label{classrouting_1_1models_1_1driver_1_1_driver_ac9ac8af3bdd739b2a280b5be966434f2}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!is\_full\_time@{is\_full\_time}}
+\index{is\_full\_time@{is\_full\_time}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{is\_full\_time()}{is\_full\_time()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+is\+\_\+full\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks if this driver is a full-time employer.
+
+@return True if this driver is a full-time (permanent) employee. Otherwise, False.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a3d58ed74113b3d45bd7b8a0cf05bb62d}\label{classrouting_1_1models_1_1driver_1_1_driver_a3d58ed74113b3d45bd7b8a0cf05bb62d}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!is\_volunteer@{is\_volunteer}}
+\index{is\_volunteer@{is\_volunteer}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{is\_volunteer()}{is\_volunteer()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+is\+\_\+volunteer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks if this driver is a volunteer.
+
+@return True if this driver is a volunteer. Otherwise, False.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a9d6cb0df43e30127a1c53494aaf9bf36}\label{classrouting_1_1models_1_1driver_1_1_driver_a9d6cb0df43e30127a1c53494aaf9bf36}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!reset@{reset}}
+\index{reset@{reset}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for creating a new route for this driver.
+
+If a route was assigned to this driver, the previous relationship is deleted and replace with a new one. Upon
+creation, the departure of this route is set to None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_a0135344b4bc11114a71384b1e867df92}\label{classrouting_1_1models_1_1driver_1_1_driver_a0135344b4bc11114a71384b1e867df92}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!route@{route}}
+\index{route@{route}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{route()}{route()}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classrouting_1_1models_1_1route_1_1_route}{Route}} routing.\+models.\+driver.\+Driver.\+route (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Property for retrieving this driver's route.\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_ac39cad274dd910f27b5cc1de81f2c243}\label{classrouting_1_1models_1_1driver_1_1_driver_ac39cad274dd910f27b5cc1de81f2c243}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this driver.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this driver.
+
+        Format:
+        {
+            'id': [INTEGER],
+            'first_name': [STRING],
+            'last_name': [STRING],
+            'capacity': [INTEGER],
+            'employee_status': [CHARACTER],
+            'delivery_limit': [INTEGER]
+            'availability': []
+            'languages': []
+        }
+
+@return: A JSON object representing this DRIVER.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1driver_1_1_driver_aa605d0c50cbf63f12731863126a176cd}\label{classrouting_1_1models_1_1driver_1_1_driver_aa605d0c50cbf63f12731863126a176cd}} 
+\index{routing.models.driver.Driver@{routing.models.driver.Driver}!set\_departure@{set\_departure}}
+\index{set\_departure@{set\_departure}!routing.models.driver.Driver@{routing.models.driver.Driver}}
+\doxysubsubsection{\texorpdfstring{set\_departure()}{set\_departure()}}
+{\footnotesize\ttfamily def routing.\+models.\+driver.\+Driver.\+set\+\_\+departure (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot}{Depot}}}]{depot }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for setting the departure of this driver's route.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/driver.\+py\end{DoxyCompactItemize}

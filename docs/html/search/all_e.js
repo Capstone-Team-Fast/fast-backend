@@ -1,10 +1,20 @@
 var searchData=
 [
-  ['savingsmanager_0',['SavingsManager',['../classrouting_1_1managers_1_1_savings_manager.html',1,'routing::managers']]],
-  ['serialize_1',['serialize',['../classrouting_1_1models_1_1availability_1_1_availability.html#a0a5548bc84cd7ba014649acdb24f5126',1,'routing.models.availability.Availability.serialize()'],['../classrouting_1_1models_1_1driver_1_1_driver.html#ac39cad274dd910f27b5cc1de81f2c243',1,'routing.models.driver.Driver.serialize()'],['../classrouting_1_1models_1_1language_1_1_language.html#ae2802babd63e9dfd4b5d22398398284b',1,'routing.models.language.Language.serialize()'],['../classrouting_1_1models_1_1route_1_1_route.html#a6dc850397d6cdd8280329187dc65ddcc',1,'routing.models.route.Route.serialize()']]],
-  ['set_5fdeparture_2',['set_departure',['../classrouting_1_1models_1_1driver_1_1_driver.html#aa605d0c50cbf63f12731863126a176cd',1,'routing.models.driver.Driver.set_departure()'],['../classrouting_1_1models_1_1route_1_1_route.html#a2218095d8ef1d603423a8d03c3fc4cf0',1,'routing.models.route.Route.set_departure(self, Location departure)']]],
-  ['set_5ftotal_5fdemand_3',['set_total_demand',['../classrouting_1_1models_1_1route_1_1_route.html#a22b2c04ece4652e6c5b1a16b47f88315',1,'routing::models::route::Route']]],
-  ['set_5ftotal_5fdistance_4',['set_total_distance',['../classrouting_1_1models_1_1route_1_1_route.html#a5edcb59d30cc759b57ba6dc6ebf26189',1,'routing::models::route::Route']]],
-  ['set_5ftotal_5fduration_5',['set_total_duration',['../classrouting_1_1models_1_1route_1_1_route.html#a455b3b5ef45f66862acc0cc4171d3b36',1,'routing::models::route::Route']]],
-  ['size_6',['size',['../classrouting_1_1managers_1_1_location_manager.html#a12651ec61539d406ed112658b82746ef',1,'routing::managers::LocationManager']]]
+  ['constant_0',['constant',['../namespacerouting_1_1constant.html',1,'routing']]],
+  ['relationshiperror_1',['RelationshipError',['../classrouting_1_1exceptions_1_1_relationship_error.html',1,'routing::exceptions']]],
+  ['reset_2',['reset',['../classrouting_1_1models_1_1driver_1_1_driver.html#a9d6cb0df43e30127a1c53494aaf9bf36',1,'routing.models.driver.Driver.reset()'],['../classrouting_1_1models_1_1location_1_1_location.html#a7b9caf5a1a3203b9ca28f33fc75f28e1',1,'routing.models.location.Location.reset()']]],
+  ['role_3',['Role',['../classrouting_1_1models_1_1driver_1_1_driver_1_1_role.html',1,'routing::models::driver::Driver']]],
+  ['route_4',['Route',['../classbackend_1_1models_1_1route_1_1_route.html',1,'backend::models::route']]],
+  ['route_5',['route',['../classrouting_1_1models_1_1driver_1_1_driver.html#a0135344b4bc11114a71384b1e867df92',1,'routing::models::driver::Driver']]],
+  ['route_6',['Route',['../classrouting_1_1models_1_1route_1_1_route.html',1,'routing::models::route']]],
+  ['routelist_7',['RouteList',['../classbackend_1_1models_1_1route_list_1_1_route_list.html',1,'backend::models::routeList']]],
+  ['routelistallview_8',['RouteListAllView',['../classbackend_1_1views_1_1route_list_view_1_1_route_list_all_view.html',1,'backend::views::routeListView']]],
+  ['routelistserializer_9',['RouteListSerializer',['../classbackend_1_1serializers_1_1route_list_serializer_1_1_route_list_serializer.html',1,'backend::serializers::routeListSerializer']]],
+  ['routelistview_10',['RouteListView',['../classbackend_1_1views_1_1route_list_view_1_1_route_list_view.html',1,'backend::views::routeListView']]],
+  ['routemanager_11',['RouteManager',['../classrouting_1_1managers_1_1_route_manager.html',1,'routing::managers']]],
+  ['routeserializer_12',['RouteSerializer',['../classbackend_1_1serializers_1_1route_serializer_1_1_route_serializer.html',1,'backend::serializers::routeSerializer']]],
+  ['routestateexception_13',['RouteStateException',['../classrouting_1_1exceptions_1_1_route_state_exception.html',1,'routing::exceptions']]],
+  ['routeview_14',['RouteView',['../classbackend_1_1views_1_1route_view_1_1_route_view.html',1,'backend::views::routeView']]],
+  ['routingconfig_15',['RoutingConfig',['../classrouting_1_1apps_1_1_routing_config.html',1,'routing::apps']]],
+  ['routingview_16',['RoutingView',['../classbackend_1_1views_1_1route_view_1_1_routing_view.html',1,'backend::views::routeView']]]
 ];

@@ -1,0 +1,97 @@
+\hypertarget{classrouting_1_1models_1_1location_1_1_customer}{}\doxysection{routing.\+models.\+location.\+Customer Class Reference}
+\label{classrouting_1_1models_1_1location_1_1_customer}\index{routing.models.location.Customer@{routing.models.location.Customer}}
+Inheritance diagram for routing.\+models.\+location.\+Customer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrouting_1_1models_1_1location_1_1_customer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer_aa98001a68df6d0d3aca657df310e9c24}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer_a2fe0b8589bf8c0fe69865a6373eceb2d}{get\+\_\+languages}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer_a7c3115f5c733a80aebbcfabf9c8e2c09}{serialize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_customer_a0e442759f7233cfb16f74717b2e114a7}\label{classrouting_1_1models_1_1location_1_1_customer_a0e442759f7233cfb16f74717b2e114a7}} 
+{\bfseries demand} = Integer\+Property(index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_customer_a2f23eeaca14e1d015cea3f7d194f2fe1}\label{classrouting_1_1models_1_1location_1_1_customer_a2f23eeaca14e1d015cea3f7d194f2fe1}} 
+{\bfseries language} = Relationship(cls\+\_\+name=\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language}{routing.\+models.\+language.\+Language}}\textquotesingle{}, rel\+\_\+type=\textquotesingle{}SPEAKS\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class defines a Customer node.
+
+A Customer is a special Location which has a demand and a set of Languages.
+
+    Typical usage example:
+
+    customer = Customer()
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_customer_aa98001a68df6d0d3aca657df310e9c24}\label{classrouting_1_1models_1_1location_1_1_customer_aa98001a68df6d0d3aca657df310e9c24}} 
+\index{routing.models.location.Customer@{routing.models.location.Customer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!routing.models.location.Customer@{routing.models.location.Customer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Customer.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a Customer.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{routing.\+models.\+location.\+Location}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_customer_a2fe0b8589bf8c0fe69865a6373eceb2d}\label{classrouting_1_1models_1_1location_1_1_customer_a2fe0b8589bf8c0fe69865a6373eceb2d}} 
+\index{routing.models.location.Customer@{routing.models.location.Customer}!get\_languages@{get\_languages}}
+\index{get\_languages@{get\_languages}!routing.models.location.Customer@{routing.models.location.Customer}}
+\doxysubsubsection{\texorpdfstring{get\_languages()}{get\_languages()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Customer.\+get\+\_\+languages (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism to get the languages spoken by this customer.
+
+The returned values, if any, is an object of LANGUAGE node.
+
+@return the list of languages spoken by this customer, otherwise return None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_customer_a7c3115f5c733a80aebbcfabf9c8e2c09}\label{classrouting_1_1models_1_1location_1_1_customer_a7c3115f5c733a80aebbcfabf9c8e2c09}} 
+\index{routing.models.location.Customer@{routing.models.location.Customer}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.location.Customer@{routing.models.location.Customer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Customer.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this customer.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this customer.
+
+        Format:
+        {
+            'id': [INTEGER],
+            'is_center': [BOOLEAN],
+            'address': [ADDRESS],
+            'demand': [FLOAT],
+            'languages': [LANGUAGE]
+        }
+
+@return: A JSON object representing this CUSTOMER.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a62be2574a0f4182a4bdc957c5e846492}{routing.\+models.\+location.\+Location}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/location.\+py\end{DoxyCompactItemize}

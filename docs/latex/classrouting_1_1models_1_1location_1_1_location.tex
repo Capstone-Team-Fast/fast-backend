@@ -1,0 +1,183 @@
+\hypertarget{classrouting_1_1models_1_1location_1_1_location}{}\doxysection{routing.\+models.\+location.\+Location Class Reference}
+\label{classrouting_1_1models_1_1location_1_1_location}\index{routing.models.location.Location@{routing.models.location.Location}}
+Inheritance diagram for routing.\+models.\+location.\+Location\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrouting_1_1models_1_1location_1_1_location}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_ae9dcdf7ddfb02af1d791d071c95b4e27}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a98ed0ac8b47014484e073bed0d85b855}{set\+\_\+address}} (self, \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a2a92b0b4c554bf84abdea6406c5b9816}{address}})
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a2a92b0b4c554bf84abdea6406c5b9816}{address}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a7b9caf5a1a3203b9ca28f33fc75f28e1}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a67ccfcd7b00fc5bd6f10e75b89145136}{duration}} (self, other)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a494359eff7ca3fda687a43f75fbe9369}{distance}} (self, other)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a62be2574a0f4182a4bdc957c5e846492}{serialize}} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_adbebd707452ce5fd7885c71c9927f5a4}\label{classrouting_1_1models_1_1location_1_1_location_adbebd707452ce5fd7885c71c9927f5a4}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_af2349c09183110bf875b507adfcecf25}\label{classrouting_1_1models_1_1location_1_1_location_af2349c09183110bf875b507adfcecf25}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_aa0d6d33ff2ac3d2143b756920fc9771d}\label{classrouting_1_1models_1_1location_1_1_location_aa0d6d33ff2ac3d2143b756920fc9771d}} 
+def {\bfseries \+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ac82b7abdabd80523749efb4158860525}\label{classrouting_1_1models_1_1location_1_1_location_ac82b7abdabd80523749efb4158860525}} 
+def {\bfseries category} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a3eb53ab94b1d0f82cbb74238366eb019}\label{classrouting_1_1models_1_1location_1_1_location_a3eb53ab94b1d0f82cbb74238366eb019}} 
+{\bfseries is\+\_\+assigned}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a3a1a540effe03c23ccaf409a2414aba2}\label{classrouting_1_1models_1_1location_1_1_location_a3a1a540effe03c23ccaf409a2414aba2}} 
+{\bfseries next}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_aaecf7e8791f862817a9df30c046b6b69}\label{classrouting_1_1models_1_1location_1_1_location_aaecf7e8791f862817a9df30c046b6b69}} 
+{\bfseries previous}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ac31fa6b3a45e2ea621335e0a2460f747}\label{classrouting_1_1models_1_1location_1_1_location_ac31fa6b3a45e2ea621335e0a2460f747}} 
+{\bfseries is\+\_\+center} = Boolean\+Property(index=True, default=False)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a44c841a2031e36083860a1d025096f6d}\label{classrouting_1_1models_1_1location_1_1_location_a44c841a2031e36083860a1d025096f6d}} 
+{\bfseries uid} = Unique\+Id\+Property()
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ac50e0388d11fcd37f84259d1043a17bd}\label{classrouting_1_1models_1_1location_1_1_location_ac50e0388d11fcd37f84259d1043a17bd}} 
+{\bfseries external\+\_\+id} = Integer\+Property(required=False, unique\+\_\+index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_aea58b2b860e5e897eea5cab0192eaecf}\label{classrouting_1_1models_1_1location_1_1_location_aea58b2b860e5e897eea5cab0192eaecf}} 
+{\bfseries created\+\_\+on} = Date\+Time\+Property(index=True, default=datetime.\+now)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ab9639cdc11b67a5df554f9a228062fd7}\label{classrouting_1_1models_1_1location_1_1_location_ab9639cdc11b67a5df554f9a228062fd7}} 
+{\bfseries modified\+\_\+on} = Date\+Time\+Property(index=True, default\+\_\+now=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ae184850ea0d14aa5ecd71fb9f5ff83bd}\label{classrouting_1_1models_1_1location_1_1_location_ae184850ea0d14aa5ecd71fb9f5ff83bd}} 
+{\bfseries is\+\_\+location\+\_\+1\+\_\+of} = Relationship\+To(cls\+\_\+name=\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_pair}{Pair}}\textquotesingle{}, rel\+\_\+type=\textquotesingle{}LOCATION\+\_\+1\+\_\+\+OF\textquotesingle{}, cardinality=One)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_af127230fcdcfa6a8686ac293bd44bebb}\label{classrouting_1_1models_1_1location_1_1_location_af127230fcdcfa6a8686ac293bd44bebb}} 
+{\bfseries is\+\_\+location\+\_\+2\+\_\+of} = Relationship\+To(cls\+\_\+name=\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_pair}{Pair}}\textquotesingle{}, rel\+\_\+type=\textquotesingle{}LOCATION\+\_\+2\+\_\+\+OF\textquotesingle{}, cardinality=One)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ab7f88bbd46cdfb010d26a5719d78d34b}\label{classrouting_1_1models_1_1location_1_1_location_ab7f88bbd46cdfb010d26a5719d78d34b}} 
+{\bfseries is\+\_\+origin\+\_\+of} = Relationship\+To(cls\+\_\+name=\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_pair}{Pair}}\textquotesingle{}, rel\+\_\+type=\textquotesingle{}ORIGIN\+\_\+\+OF\textquotesingle{}, cardinality=One)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This abstract class defines a Location node.
+
+A Location is represented as a linked list node and encapsulation an Address node.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_ae9dcdf7ddfb02af1d791d071c95b4e27}\label{classrouting_1_1models_1_1location_1_1_location_ae9dcdf7ddfb02af1d791d071c95b4e27}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer_aa98001a68df6d0d3aca657df310e9c24}{routing.\+models.\+location.\+Customer}}, and \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot_acb4f0bcba4414f0542ac1967156e3353}{routing.\+models.\+location.\+Depot}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a2a92b0b4c554bf84abdea6406c5b9816}\label{classrouting_1_1models_1_1location_1_1_location_a2a92b0b4c554bf84abdea6406c5b9816}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!address@{address}}
+\index{address@{address}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{address()}{address()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+address (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A property to get the address of this location.
+
+@return the physical address of this location. If no address is assigned, return None.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a494359eff7ca3fda687a43f75fbe9369}\label{classrouting_1_1models_1_1location_1_1_location_a494359eff7ca3fda687a43f75fbe9369}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!distance@{distance}}
+\index{distance@{distance}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism to get the distance (in miles) between these two locations.
+
+This implementation guarantees that either location is in the graph database.
+
+@param other: An object preferably of Location type.
+@return A float representing the distance between this location and another location.
+@raise TypeError if OTHER does not subclass LOCATION.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a67ccfcd7b00fc5bd6f10e75b89145136}\label{classrouting_1_1models_1_1location_1_1_location_a67ccfcd7b00fc5bd6f10e75b89145136}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!duration@{duration}}
+\index{duration@{duration}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{duration()}{duration()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+duration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism to get the duration (in minutes) between these two locations.
+
+This implementation guarantees that either location is in the graph database.
+
+@param other: An object preferably of Location type.
+@return A float representing the duration between this location and another location.
+@raise TypeError if OTHER does not subclass LOCATION.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a7b9caf5a1a3203b9ca28f33fc75f28e1}\label{classrouting_1_1models_1_1location_1_1_location_a7b9caf5a1a3203b9ca28f33fc75f28e1}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!reset@{reset}}
+\index{reset@{reset}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism to clear the next and previous references of this node.\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a62be2574a0f4182a4bdc957c5e846492}\label{classrouting_1_1models_1_1location_1_1_location_a62be2574a0f4182a4bdc957c5e846492}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this location.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this location.
+
+        Format:
+        {
+            'id': [INTEGER],
+            'is_center': [BOOLEAN],
+            'address': [ADDRESS]
+        }
+
+@return: A JSON object representing this LOCATION.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_customer_a7c3115f5c733a80aebbcfabf9c8e2c09}{routing.\+models.\+location.\+Customer}}, and \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot_a4719813198969e0479e9f4cb4e4b977e}{routing.\+models.\+location.\+Depot}}.
+
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_location_a98ed0ac8b47014484e073bed0d85b855}\label{classrouting_1_1models_1_1location_1_1_location_a98ed0ac8b47014484e073bed0d85b855}} 
+\index{routing.models.location.Location@{routing.models.location.Location}!set\_address@{set\_address}}
+\index{set\_address@{set\_address}!routing.models.location.Location@{routing.models.location.Location}}
+\doxysubsubsection{\texorpdfstring{set\_address()}{set\_address()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Location.\+set\+\_\+address (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{address }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for setting the physical address of this location.
+
+This method can also be used to update the address of an existing location. This ensures that a location has one
+and only one address.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/location.\+py\end{DoxyCompactItemize}

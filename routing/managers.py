@@ -8,6 +8,7 @@ from typing import Set
 
 import neomodel
 from neomodel import UniqueIdProperty
+from backend.serializers.savingSerializer import SavingsSerializer
 
 from routing.exceptions import RouteStateException, GeocodeError
 from routing.models.availability import Availability
@@ -182,6 +183,7 @@ class SavingsManager:
         invalid_locations = set()
         valid_locations = set()
         if locations:
+
             for i in range(len(locations)):
                 for j in range(i + 1, len(locations)):
                     if locations[i].uid != locations[j].uid:
@@ -190,7 +192,7 @@ class SavingsManager:
                         logging.info(f'Pair Origin set to {self.__location_manager.depot}')
                         try:
                             saving = self.__location_manager.get_distance_savings(location1=pair.first,
-                                                                                  location2=pair.last)
+                                                                                      location2=pair.last)
                             pair.set_saving(saving)
                             logging.info(f'Location 1: {pair.first.address}, Location 2: {pair.last.address} have Saving: {saving}')
                             savings.append(pair)

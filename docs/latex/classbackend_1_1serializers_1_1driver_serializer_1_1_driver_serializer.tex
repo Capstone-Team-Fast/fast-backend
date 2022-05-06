@@ -1,0 +1,51 @@
+\hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer}{}\doxysection{backend.\+serializers.\+driver\+Serializer.\+Driver\+Serializer Class Reference}
+\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer}\index{backend.serializers.driverSerializer.DriverSerializer@{backend.serializers.driverSerializer.DriverSerializer}}
+Inheritance diagram for backend.\+serializers.\+driver\+Serializer.\+Driver\+Serializer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aa910d4f7bb977b9e4366a7dc9887a198}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aa910d4f7bb977b9e4366a7dc9887a198}} 
+def {\bfseries create} (self, validated\+\_\+data)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aab03fac031bfbe84eddebdfb413c8765}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aab03fac031bfbe84eddebdfb413c8765}} 
+def {\bfseries update} (self, instance, validated\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a2b9498bdac86cf6a5e4e355776644802}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a2b9498bdac86cf6a5e4e355776644802}} 
+{\bfseries availability} = \mbox{\hyperlink{classbackend_1_1serializers_1_1availability_serializer_1_1_availability_serializer}{Availability\+Serializer}}()
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a45080f968296fa64d2ffa10ab63ca514}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a45080f968296fa64d2ffa10ab63ca514}} 
+{\bfseries languages} = \mbox{\hyperlink{classbackend_1_1serializers_1_1language_serializer_1_1_language_serializer}{Language\+Serializer}}(many=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a893f7a56e6dbc8c5b76979fe9aeee9d5}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a893f7a56e6dbc8c5b76979fe9aeee9d5}} 
+{\bfseries capacity} = serializers.\+Integer\+Field(allow\+\_\+null=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_add71e1c2a53a20fd8f2bd097c465bcca}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_add71e1c2a53a20fd8f2bd097c465bcca}} 
+{\bfseries employee\+\_\+status} = serializers.\+Char\+Field(max\+\_\+length=15)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_af8073c73deb38e530c6152a6d874dc21}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_af8073c73deb38e530c6152a6d874dc21}} 
+{\bfseries phone} = serializers.\+Char\+Field(max\+\_\+length=15, allow\+\_\+null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a2cf45c77f65b7a23c570ba5a22e52d8f}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_a2cf45c77f65b7a23c570ba5a22e52d8f}} 
+{\bfseries duration} = serializers.\+Integer\+Field(allow\+\_\+null=True, required=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aaf0d921cc321b1e775a0e77eec9d136e}\label{classbackend_1_1serializers_1_1driver_serializer_1_1_driver_serializer_aaf0d921cc321b1e775a0e77eec9d136e}} 
+{\bfseries delivery\+\_\+limit} = serializers.\+Integer\+Field(allow\+\_\+null=True, required=False)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/serializers/driver\+Serializer.\+py\end{DoxyCompactItemize}
