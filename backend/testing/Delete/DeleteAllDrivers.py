@@ -20,27 +20,16 @@ class UntitledTestCase(unittest.TestCase):
     def test_untitled_test_case(self):
         driver = self.driver
         driver.get("http://localhost:3000/data")
-        driver.find_element_by_id("search").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("james")
-        driver.find_element_by_id("search").send_keys(Keys.ENTER)
-        # self.assertEqual("James", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td").text)
-        # self.assertEqual("James", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr[2]/td").text)
-        driver.find_element_by_xpath("//div[@id='root']/div/div/div/div/div/div").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("jones")
-        # self.assertEqual("Jones", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td[2]").text)
-        driver.find_element_by_xpath("//div[@id='root']/div/div/div/div/div/div").click()
-        driver.find_element_by_id("search").clear()
-        driver.find_element_by_id("search").send_keys("166")
-        # self.assertEqual("402-166-7811", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr/td[3]").text)
-        # self.assertEqual("402-166-7811", driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr[2]/td[3]").text)
+        driver.find_element_by_xpath("//*[@id='root']/div/div[2]/div[1]/div[1]/div/div/div[3]/button").click()
+        time.sleep(3)
+        driver.find_element_by_xpath("/html/body/div[3]/div/div/div[3]/button[2]").click()
+        time.sleep(10)
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
         return True
-    
+
     def is_alert_present(self):
         try: self.driver.switch_to_alert()
         except NoAlertPresentException as e: return False
