@@ -1,0 +1,31 @@
+\hypertarget{classbackend_1_1models_1_1manager_1_1_manager}{}\doxysection{backend.\+models.\+manager.\+Manager Class Reference}
+\label{classbackend_1_1models_1_1manager_1_1_manager}\index{backend.models.manager.Manager@{backend.models.manager.Manager}}
+Inheritance diagram for backend.\+models.\+manager.\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1manager_1_1_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1manager_1_1_manager_aa8a8f8be346c2fd534a7eb730652a029}\label{classbackend_1_1models_1_1manager_1_1_manager_aa8a8f8be346c2fd534a7eb730652a029}} 
+{\bfseries id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1manager_1_1_manager_aa960292b395e3b6ce8e9bf475b879a19}\label{classbackend_1_1models_1_1manager_1_1_manager_aa960292b395e3b6ce8e9bf475b879a19}} 
+{\bfseries user} = models.\+One\+To\+One\+Field(User, on\+\_\+delete=models.\+CASCADE)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1manager_1_1_manager_ae6d1e3521428db2f893996094801fd12}\label{classbackend_1_1models_1_1manager_1_1_manager_ae6d1e3521428db2f893996094801fd12}} 
+{\bfseries phone} = models.\+Char\+Field(max\+\_\+length=15, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1manager_1_1_manager_a5fa651bf9b3ddef352e9b6363233ea09}\label{classbackend_1_1models_1_1manager_1_1_manager_a5fa651bf9b3ddef352e9b6363233ea09}} 
+{\bfseries created\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True, editable=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1manager_1_1_manager_a5f34c9cd64f709f268bea0ced971faa5}\label{classbackend_1_1models_1_1manager_1_1_manager_a5f34c9cd64f709f268bea0ced971faa5}} 
+{\bfseries modified\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now=True, editable=False)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/manager.\+py\end{DoxyCompactItemize}

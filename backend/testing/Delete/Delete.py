@@ -3,13 +3,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 
 class UntitledTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path=r'../chromedriver.exe')
+        s = Service('../chromedriver.exe')
+        self.driver = webdriver.Chrome(service=s)
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
         self.verificationErrors = []
@@ -17,7 +19,7 @@ class UntitledTestCase(unittest.TestCase):
     
     def test_untitled_test_case(self):
         driver = self.driver
-        driver.get("http://3.144.105.249:3000/")
+        driver.get("http://localhost:3000/data")
         driver.find_element_by_xpath("//div[@id='root']/div/div/div/div[2]/table/tbody/tr[5]/td[4]/button").click()
         driver.find_element_by_id("search").click()
         driver.find_element_by_id("search").clear()

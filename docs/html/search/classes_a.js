@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pair_0',['Pair',['../classrouting_1_1models_1_1location_1_1_pair.html',1,'routing::models::location']]]
+  ['nodeparser_0',['NodeParser',['../classrouting_1_1managers_1_1_node_parser.html',1,'routing::managers']]]
 ];

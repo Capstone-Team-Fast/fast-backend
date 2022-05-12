@@ -1,0 +1,28 @@
+\hypertarget{classbackend_1_1models_1_1savings_1_1_savings}{}\doxysection{backend.\+models.\+savings.\+Savings Class Reference}
+\label{classbackend_1_1models_1_1savings_1_1_savings}\index{backend.models.savings.Savings@{backend.models.savings.Savings}}
+Inheritance diagram for backend.\+models.\+savings.\+Savings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1savings_1_1_savings}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1savings_1_1_savings_a598dbe511b078258d1a7aa46ba664e6a}\label{classbackend_1_1models_1_1savings_1_1_savings_a598dbe511b078258d1a7aa46ba664e6a}} 
+{\bfseries saving\+\_\+id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1savings_1_1_savings_a94cca8b341534ce0ca78626782cb0af8}\label{classbackend_1_1models_1_1savings_1_1_savings_a94cca8b341534ce0ca78626782cb0af8}} 
+{\bfseries origin} = models.\+Foreign\+Key(to=\mbox{\hyperlink{classbackend_1_1models_1_1location_1_1_location}{Location}}, null=True, on\+\_\+delete=models.\+SET\+\_\+\+NULL, related\+\_\+name=\char`\"{}orig\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1savings_1_1_savings_a31cec7cc59b0928911b0e1b954f7fc81}\label{classbackend_1_1models_1_1savings_1_1_savings_a31cec7cc59b0928911b0e1b954f7fc81}} 
+{\bfseries location1} = models.\+Foreign\+Key(to=\mbox{\hyperlink{classbackend_1_1models_1_1location_1_1_location}{Location}}, null=True, on\+\_\+delete=models.\+SET\+\_\+\+NULL, related\+\_\+name=\char`\"{}loc1\char`\"{})
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1savings_1_1_savings_a705440fa85a49d3f61479b70c202a415}\label{classbackend_1_1models_1_1savings_1_1_savings_a705440fa85a49d3f61479b70c202a415}} 
+{\bfseries location2} = models.\+Foreign\+Key(to=\mbox{\hyperlink{classbackend_1_1models_1_1location_1_1_location}{Location}}, null=True,on\+\_\+delete=models.\+SET\+\_\+\+NULL, related\+\_\+name=\char`\"{}loc2\char`\"{})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/savings.\+py\end{DoxyCompactItemize}

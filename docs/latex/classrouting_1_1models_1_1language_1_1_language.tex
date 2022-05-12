@@ -1,0 +1,123 @@
+\hypertarget{classrouting_1_1models_1_1language_1_1_language}{}\doxysection{routing.\+models.\+language.\+Language Class Reference}
+\label{classrouting_1_1models_1_1language_1_1_language}\index{routing.models.language.Language@{routing.models.language.Language}}
+Inheritance diagram for routing.\+models.\+language.\+Language\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrouting_1_1models_1_1language_1_1_language}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language_a48613dbbb57c96c3128f8263890b8173}{\+\_\+\+\_\+eq\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language_a145761f09408b1dafdfc71d1f79fe653}{\+\_\+\+\_\+lt\+\_\+\+\_\+}} (self, other)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language_adba417000970a3c6c51a6e3bd8077b24}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language_ae2802babd63e9dfd4b5d22398398284b}{serialize}} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_a1ace3ab13686f39e068242b9f9f3a66a}\label{classrouting_1_1models_1_1language_1_1_language_a1ace3ab13686f39e068242b9f9f3a66a}} 
+def {\bfseries category} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classrouting_1_1models_1_1language_1_1_language_a89964e62aa536611b65865b2920cfa03}{options}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_acc9f5c95292060ad7b5c665ca25ab296}\label{classrouting_1_1models_1_1language_1_1_language_acc9f5c95292060ad7b5c665ca25ab296}} 
+{\bfseries external\+\_\+id} = Integer\+Property(required=False, unique\+\_\+index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_a86cd5ce30f309d42305a0c3d52f03297}\label{classrouting_1_1models_1_1language_1_1_language_a86cd5ce30f309d42305a0c3d52f03297}} 
+{\bfseries language} = String\+Property(required=True, unique\+\_\+index=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This  class provides the basic mechanism for creating and working with a node representing world languages.
+
+    Typical usage example:
+
+    foo = Language(language='Armenian')
+\end{DoxyVerb}
+
+
+\begin{DoxyVerb}An integer representing the id of this language. Each language is assigned a unique id.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_a48613dbbb57c96c3128f8263890b8173}\label{classrouting_1_1models_1_1language_1_1_language_a48613dbbb57c96c3128f8263890b8173}} 
+\index{routing.models.language.Language@{routing.models.language.Language}!\_\_eq\_\_@{\_\_eq\_\_}}
+\index{\_\_eq\_\_@{\_\_eq\_\_}!routing.models.language.Language@{routing.models.language.Language}}
+\doxysubsubsection{\texorpdfstring{\_\_eq\_\_()}{\_\_eq\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+language.\+Language.\+\_\+\+\_\+eq\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for comparing two objects of type LANGUAGE.
+
+Two LANGUAGES are equal if they are semantically and alphabetically the same, regardless of letters' cases.
+
+@param: other object to compare to.
+@return: True if the objects being compared are semantically and alphabetically equal, regardless of letters'
+    cases.
+@raise: TypeError if the objects being compared are not LANGUAGE objects.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_a145761f09408b1dafdfc71d1f79fe653}\label{classrouting_1_1models_1_1language_1_1_language_a145761f09408b1dafdfc71d1f79fe653}} 
+\index{routing.models.language.Language@{routing.models.language.Language}!\_\_lt\_\_@{\_\_lt\_\_}}
+\index{\_\_lt\_\_@{\_\_lt\_\_}!routing.models.language.Language@{routing.models.language.Language}}
+\doxysubsubsection{\texorpdfstring{\_\_lt\_\_()}{\_\_lt\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+language.\+Language.\+\_\+\+\_\+lt\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for comparing two objects of type LANGUAGE.
+
+A LANGUAGE is less that another if it is alphabetically less than the other, regardless of letters' cases.
+
+@param: other object to compare to.
+@return: True if this object is alphabetically less than the other, regardless of letters' cases.
+@raise: TypeError if the objects being compared are not LANGUAGE objects.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_adba417000970a3c6c51a6e3bd8077b24}\label{classrouting_1_1models_1_1language_1_1_language_adba417000970a3c6c51a6e3bd8077b24}} 
+\index{routing.models.language.Language@{routing.models.language.Language}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!routing.models.language.Language@{routing.models.language.Language}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+language.\+Language.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a readable format for this language.
+
+The returned value is capitalized. If the language contains more than one token, each token is capitalized.
+
+@return: a String representing a readable format for this language.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_a89964e62aa536611b65865b2920cfa03}\label{classrouting_1_1models_1_1language_1_1_language_a89964e62aa536611b65865b2920cfa03}} 
+\index{routing.models.language.Language@{routing.models.language.Language}!options@{options}}
+\index{options@{options}!routing.models.language.Language@{routing.models.language.Language}}
+\doxysubsubsection{\texorpdfstring{options()}{options()}}
+{\footnotesize\ttfamily  list routing.\+models.\+language.\+Language.\+options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}A utility function that returns a list of languages stored in the graph database.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1language_1_1_language_ae2802babd63e9dfd4b5d22398398284b}\label{classrouting_1_1models_1_1language_1_1_language_ae2802babd63e9dfd4b5d22398398284b}} 
+\index{routing.models.language.Language@{routing.models.language.Language}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.language.Language@{routing.models.language.Language}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+language.\+Language.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this language.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this language.
+
+    Format:
+        {
+            'id': [INTEGER],
+            'day': [STRING]
+        }
+
+@return: A JSON object representing this LANGUAGE.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/language.\+py\end{DoxyCompactItemize}

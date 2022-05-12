@@ -1,6 +1,0 @@
-<map id="routing.models.location.Location" name="routing.models.location.Location">
-<area shape="rect" id="node1" title=" " alt="" coords="97,80,257,121"/>
-<area shape="rect" id="node3" href="$classrouting_1_1models_1_1location_1_1_customer.html" title=" " alt="" coords="5,169,165,211"/>
-<area shape="rect" id="node4" href="$classrouting_1_1models_1_1location_1_1_depot.html" title=" " alt="" coords="189,169,349,211"/>
-<area shape="rect" id="node2" title=" " alt="" coords="121,5,233,32"/>
-</map>

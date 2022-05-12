@@ -1,0 +1,49 @@
+\hypertarget{classbackend_1_1models_1_1location_1_1_location}{}\doxysection{backend.\+models.\+location.\+Location Class Reference}
+\label{classbackend_1_1models_1_1location_1_1_location}\index{backend.models.location.Location@{backend.models.location.Location}}
+Inheritance diagram for backend.\+models.\+location.\+Location\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbackend_1_1models_1_1location_1_1_location}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a8f2bbb852b0a6d5ebbf19385de0748f3}\label{classbackend_1_1models_1_1location_1_1_location_a8f2bbb852b0a6d5ebbf19385de0748f3}} 
+{\bfseries id} = models.\+Auto\+Field(primary\+\_\+key=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a954fc9c825c25e7abf85640f16637e59}\label{classbackend_1_1models_1_1location_1_1_location_a954fc9c825c25e7abf85640f16637e59}} 
+{\bfseries address} = models.\+Char\+Field(max\+\_\+length=100)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a1a49c507188cac727669d477d97a6542}\label{classbackend_1_1models_1_1location_1_1_location_a1a49c507188cac727669d477d97a6542}} 
+{\bfseries city} = models.\+Char\+Field(max\+\_\+length=250)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a577f1c50bc4b4dd20d3c4df740d1f1c0}\label{classbackend_1_1models_1_1location_1_1_location_a577f1c50bc4b4dd20d3c4df740d1f1c0}} 
+{\bfseries state} = models.\+Char\+Field(max\+\_\+length=50)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a7391ed74584b3abacb9693397f4681ec}\label{classbackend_1_1models_1_1location_1_1_location_a7391ed74584b3abacb9693397f4681ec}} 
+{\bfseries room\+\_\+number} = models.\+Char\+Field(max\+\_\+length=50, null=True, blank=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_af7860d91ac1d68bb57b5d25c45cabe67}\label{classbackend_1_1models_1_1location_1_1_location_af7860d91ac1d68bb57b5d25c45cabe67}} 
+{\bfseries zipcode} = models.\+Positive\+Integer\+Field()
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a359256ac5d9dc9d0b5811165e7d33c64}\label{classbackend_1_1models_1_1location_1_1_location_a359256ac5d9dc9d0b5811165e7d33c64}} 
+{\bfseries is\+\_\+center} = models.\+Boolean\+Field(default=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a956e5be3d03deded6f9944767916ace3}\label{classbackend_1_1models_1_1location_1_1_location_a956e5be3d03deded6f9944767916ace3}} 
+{\bfseries latitude} = models.\+Decimal\+Field(max\+\_\+digits=18, decimal\+\_\+places=15, editable=False, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a0474104c8bd32ace79e0ee0e4ad85701}\label{classbackend_1_1models_1_1location_1_1_location_a0474104c8bd32ace79e0ee0e4ad85701}} 
+{\bfseries longitude} = models.\+Decimal\+Field(max\+\_\+digits=18, decimal\+\_\+places=15, editable=False, blank=True, null=True)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_a41d7a3124db36c26e7587a4af6f00e84}\label{classbackend_1_1models_1_1location_1_1_location_a41d7a3124db36c26e7587a4af6f00e84}} 
+{\bfseries created\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True, editable=False)
+\item 
+\mbox{\Hypertarget{classbackend_1_1models_1_1location_1_1_location_aab2b0f39262d3109d5c88ae8577b1398}\label{classbackend_1_1models_1_1location_1_1_location_aab2b0f39262d3109d5c88ae8577b1398}} 
+{\bfseries modified\+\_\+on} = models.\+Date\+Time\+Field(auto\+\_\+now=True, editable=False)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+backend/models/location.\+py\end{DoxyCompactItemize}

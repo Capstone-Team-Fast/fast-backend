@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['options_0',['options',['../classrouting_1_1models_1_1availability_1_1_availability.html#af13028245cc3255d5c7c4d9d5c9cdf6b',1,'routing.models.availability.Availability.options()'],['../classrouting_1_1models_1_1language_1_1_language.html#a89964e62aa536611b65865b2920cfa03',1,'routing.models.language.Language.options()']]]
+  ['last_0',['last',['../classrouting_1_1models_1_1location_1_1_pair.html#a756c4e0d31cecac180bf9ca412580b01',1,'routing::models::location::Pair']]],
+  ['last_5fstop_1',['last_stop',['../classrouting_1_1models_1_1route_1_1_route.html#a4094e34eae0b819dfefdbab77f069823',1,'routing::models::route::Route']]]
 ];

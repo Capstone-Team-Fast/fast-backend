@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pair_0',['Pair',['../classrouting_1_1models_1_1location_1_1_pair.html',1,'routing::models::location']]],
-  ['previous_1',['previous',['../classrouting_1_1models_1_1route_1_1_route.html#a6cf69f0509fdbbf3591485a6522d40a6',1,'routing::models::route::Route']]]
+  ['options_0',['options',['../classrouting_1_1models_1_1availability_1_1_availability.html#af13028245cc3255d5c7c4d9d5c9cdf6b',1,'routing.models.availability.Availability.options()'],['../classrouting_1_1models_1_1language_1_1_language.html#a89964e62aa536611b65865b2920cfa03',1,'routing.models.language.Language.options()']]],
+  ['origin_1',['origin',['../classrouting_1_1models_1_1location_1_1_pair.html#a69f1dfb5899b6a92c38d10ba0ae818b4',1,'routing::models::location::Pair']]]
 ];

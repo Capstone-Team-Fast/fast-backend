@@ -4,7 +4,7 @@ import sys
 from datetime import datetime
 
 from neomodel import StructuredNode, StringProperty, IntegerProperty, BooleanProperty, FloatProperty, \
-    DateTimeProperty, UniqueIdProperty, Relationship, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
+    DateTimeProperty, UniqueIdProperty, Relationship, RelationshipTo, StructuredRel, One, DoesNotExist, AttemptedCardinalityViolation
 
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
@@ -21,6 +21,8 @@ class _Weight(StructuredRel):
     duration = FloatProperty(required=True)
     savings = FloatProperty()
 
+class Pair_Rel(StructuredRel):
+    pass
 
 class Address(StructuredNode):
     """This class defines an Address node.
@@ -201,6 +203,12 @@ class Location(StructuredNode):
 
     """A relationship representing the physical address of this location."""
     __geographic_location = Relationship(cls_name='Address', rel_type='LOCATED_AT', cardinality=One)
+
+
+    is_location_1_of = RelationshipTo(cls_name='Pair', rel_type='LOCATION_1_OF', cardinality=One)
+    is_location_2_of = RelationshipTo(cls_name='Pair', rel_type='LOCATION_2_OF', cardinality=One)
+    is_origin_of = RelationshipTo(cls_name='Pair', rel_type='ORIGIN_OF', cardinality=One)
+
 
     def __init__(self, *args, **kwargs):
         super(Location, self).__init__(*args, **kwargs)
@@ -387,8 +395,9 @@ class Customer(Location):
 
 
 class Depot(Location):
-    """A boolean to determine if this depot is considered as a departure location. By default, any depot is a
-    departure location."""
+    
+    
+    """A boolean to determine if this depot is considered as a departure location. By default, any depot is a departure location."""
     is_center = BooleanProperty(index=True, default=True)
 
     def __init__(self, *args, **kwargs):
@@ -412,7 +421,7 @@ class Depot(Location):
         return super(Depot, self).serialize()
 
 
-class Pair:
+class Pair(StructuredNode): # made into Structured Node
     """Creates a Pair of locations.
 
     This class is a utility class to compute the savings between two locations.
@@ -434,7 +443,7 @@ class Pair:
     def set_origin(self, origin):
         """Provides the mechanism to set the origin of this pair.
 
-        Viewed in a 2D plan, the origin represents the origin of the plan. The position of any location is relative to
+        Viewed in a 2D plane, the origin represents the origin of the plan. The position of any location is relative to
         the origin. Thus, two pairs with different origins may not have the same properties. Also, changing the origin
         of a pair does not enforce (re)computation of the distance saved from the origin to the locations.
         """
@@ -455,7 +464,7 @@ class Pair:
     def origin(self):
         """A property to retrieve the origin of this pair.
 
-        Viewed in a 2D plan, the origin represents the origin of the plan. The position of any location is relative to
+        Viewed in a 2D plane, the origin represents the origin of the plane. The position of any location is relative to
         the origin.
         """
         return self.__origin
@@ -502,6 +511,9 @@ class Pair:
             return True
 
         return False
+
+    def serialize(self):
+        pass
 
     def __eq__(self, other):
         if isinstance(other, type(self)):

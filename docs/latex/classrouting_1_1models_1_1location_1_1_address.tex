@@ -1,0 +1,164 @@
+\hypertarget{classrouting_1_1models_1_1location_1_1_address}{}\doxysection{routing.\+models.\+location.\+Address Class Reference}
+\label{classrouting_1_1models_1_1location_1_1_address}\index{routing.models.location.Address@{routing.models.location.Address}}
+Inheritance diagram for routing.\+models.\+location.\+Address\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrouting_1_1models_1_1location_1_1_address}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_address_a2cf67bc92e7ba53db82d84e8cc4786d6}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_address_abb71a0deb190b873d3029025e8fe1778}{distance}} (self, other)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_address_afe748ff81ee23b2f5adcfb2b2b981c6a}{duration}} (self, other)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a5c1502a26d2c582f1cffa00fa75775f3}\label{classrouting_1_1models_1_1location_1_1_address_a5c1502a26d2c582f1cffa00fa75775f3}} 
+def {\bfseries category} (cls)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_address_a1f7ae9dbefdc81759432e32713b8b82a}{serialize}} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a2971313511e2cab83977789d2cc64a2c}\label{classrouting_1_1models_1_1location_1_1_address_a2971313511e2cab83977789d2cc64a2c}} 
+def {\bfseries \+\_\+\+\_\+hash\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a50b14473a907e9550689f647336a83b4}\label{classrouting_1_1models_1_1location_1_1_address_a50b14473a907e9550689f647336a83b4}} 
+def {\bfseries \+\_\+\+\_\+eq\+\_\+\+\_\+} (self, other)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a1cf7c5768428b0df9c72ba74a4578ac1}\label{classrouting_1_1models_1_1location_1_1_address_a1cf7c5768428b0df9c72ba74a4578ac1}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a42adfe1ed98ad348716df727984d232c}\label{classrouting_1_1models_1_1location_1_1_address_a42adfe1ed98ad348716df727984d232c}} 
+{\bfseries uid} = Unique\+Id\+Property()
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a67ee04b7371b6b433f7992c6d11917ad}\label{classrouting_1_1models_1_1location_1_1_address_a67ee04b7371b6b433f7992c6d11917ad}} 
+{\bfseries address} = String\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a4014421d5c8dc38c48bc3e27fdc4bad7}\label{classrouting_1_1models_1_1location_1_1_address_a4014421d5c8dc38c48bc3e27fdc4bad7}} 
+{\bfseries city} = String\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a7ea775539c763af025352274ddca5ecf}\label{classrouting_1_1models_1_1location_1_1_address_a7ea775539c763af025352274ddca5ecf}} 
+{\bfseries state} = String\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a4d19d850892575006d875d5c6049c72e}\label{classrouting_1_1models_1_1location_1_1_address_a4d19d850892575006d875d5c6049c72e}} 
+{\bfseries zipcode} = Integer\+Property(index=True, required=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a1ef1a0f35ab458d71bc7a4faba128a92}\label{classrouting_1_1models_1_1location_1_1_address_a1ef1a0f35ab458d71bc7a4faba128a92}} 
+{\bfseries country} = String\+Property(index=True, default=\textquotesingle{}United States\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a84f5800597e6d2c2a4a96e52ddcaa64a}\label{classrouting_1_1models_1_1location_1_1_address_a84f5800597e6d2c2a4a96e52ddcaa64a}} 
+{\bfseries latitude} = Float\+Property(index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a1a5191fb459c76763f38284e2ebfd6ce}\label{classrouting_1_1models_1_1location_1_1_address_a1a5191fb459c76763f38284e2ebfd6ce}} 
+{\bfseries longitude} = Float\+Property(index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a48947cab4f2848ec2dcd498de86bc7c2}\label{classrouting_1_1models_1_1location_1_1_address_a48947cab4f2848ec2dcd498de86bc7c2}} 
+{\bfseries created\+\_\+on} = Date\+Time\+Property(index=True, default=datetime.\+now)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a0fac124c0785a245e7b94fb54796d25e}\label{classrouting_1_1models_1_1location_1_1_address_a0fac124c0785a245e7b94fb54796d25e}} 
+{\bfseries modified\+\_\+on} = Date\+Time\+Property(index=True, default\+\_\+now=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_ad82b4dcdc67fcc05620a252e19bc2393}\label{classrouting_1_1models_1_1location_1_1_address_ad82b4dcdc67fcc05620a252e19bc2393}} 
+{\bfseries external\+\_\+id} = Integer\+Property(required=False, unique\+\_\+index=True)
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a950e21391f88de0b5c4fa3e7f41bbce5}\label{classrouting_1_1models_1_1location_1_1_address_a950e21391f88de0b5c4fa3e7f41bbce5}} 
+{\bfseries neighbor} = Relationship(cls\+\_\+name=\textquotesingle{}\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_address}{Address}}\textquotesingle{}, rel\+\_\+type=\textquotesingle{}CONNECTED\+\_\+\+TO\textquotesingle{}, model=\mbox{\hyperlink{classrouting_1_1models_1_1location_1_1___weight}{\+\_\+\+Weight}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This class defines an Address node.
+
+An address is a standard US address and has the following properties:
+    address, city, state, zipcode, country.
+
+    Typical usage example:
+    address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182)
+    address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182, country='US')
+\end{DoxyVerb}
+
+
+\begin{DoxyVerb}A unique id assigned upon creating this object\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a2cf67bc92e7ba53db82d84e8cc4786d6}\label{classrouting_1_1models_1_1location_1_1_address_a2cf67bc92e7ba53db82d84e8cc4786d6}} 
+\index{routing.models.location.Address@{routing.models.location.Address}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!routing.models.location.Address@{routing.models.location.Address}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Address.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates an Address.
+
+    Typical usage example:
+
+    address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182)
+    address = Address(address='6001 Dodge St', city='Omaha', state='NE', zipcode=68182, country='US')
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_abb71a0deb190b873d3029025e8fe1778}\label{classrouting_1_1models_1_1location_1_1_address_abb71a0deb190b873d3029025e8fe1778}} 
+\index{routing.models.location.Address@{routing.models.location.Address}!distance@{distance}}
+\index{distance@{distance}!routing.models.location.Address@{routing.models.location.Address}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Address.\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for getting the distance between this address and another one.
+
+This method returns a positive float value if these addresses are directly connected. Otherwise, None is
+returned.
+
+@param other: Another object to get the distance in-between.
+@return a float representing the distance between these addresses.
+@raise TypeError if other is not a ADDRESS.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_afe748ff81ee23b2f5adcfb2b2b981c6a}\label{classrouting_1_1models_1_1location_1_1_address_afe748ff81ee23b2f5adcfb2b2b981c6a}} 
+\index{routing.models.location.Address@{routing.models.location.Address}!duration@{duration}}
+\index{duration@{duration}!routing.models.location.Address@{routing.models.location.Address}}
+\doxysubsubsection{\texorpdfstring{duration()}{duration()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Address.\+duration (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the mechanism for getting the duration between this address and another one.
+
+This method returns a positive float value if these addresses are directly connected. Otherwise, None is
+returned.
+
+@param other: Another object to get the duration in-between.
+@return a float representing the duration between these addresses.
+@raise TypeError if OTHER is not a ADDRESS.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_address_a1f7ae9dbefdc81759432e32713b8b82a}\label{classrouting_1_1models_1_1location_1_1_address_a1f7ae9dbefdc81759432e32713b8b82a}} 
+\index{routing.models.location.Address@{routing.models.location.Address}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.location.Address@{routing.models.location.Address}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Address.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this address.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this route.
+
+        Format:
+        {
+            'id': [INTEGER],
+            'address': [STRING],
+            'city': [STRING],
+            'state': [STRING],
+            'zipcode': [INTEGER],
+            'coordinates': {
+                'latitude': [FLOAT],
+                'longitude': [FLOAT]
+            }
+        }
+
+@return: A JSON object representing this ADDRESS.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/location.\+py\end{DoxyCompactItemize}

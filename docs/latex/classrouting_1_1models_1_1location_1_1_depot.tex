@@ -1,0 +1,71 @@
+\hypertarget{classrouting_1_1models_1_1location_1_1_depot}{}\doxysection{routing.\+models.\+location.\+Depot Class Reference}
+\label{classrouting_1_1models_1_1location_1_1_depot}\index{routing.models.location.Depot@{routing.models.location.Depot}}
+Inheritance diagram for routing.\+models.\+location.\+Depot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrouting_1_1models_1_1location_1_1_depot}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot_acb4f0bcba4414f0542ac1967156e3353}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_depot_a4719813198969e0479e9f4cb4e4b977e}{serialize}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_depot_a3ac51a1359edc2c3f7ccc28cd8a0c863}\label{classrouting_1_1models_1_1location_1_1_depot_a3ac51a1359edc2c3f7ccc28cd8a0c863}} 
+{\bfseries is\+\_\+center} = Boolean\+Property(index=True, default=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A boolean to determine if this depot is considered as a departure location. By default, any depot is a departure location.\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_depot_acb4f0bcba4414f0542ac1967156e3353}\label{classrouting_1_1models_1_1location_1_1_depot_acb4f0bcba4414f0542ac1967156e3353}} 
+\index{routing.models.location.Depot@{routing.models.location.Depot}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!routing.models.location.Depot@{routing.models.location.Depot}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Depot.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a Depot node.\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location}{routing.\+models.\+location.\+Location}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrouting_1_1models_1_1location_1_1_depot_a4719813198969e0479e9f4cb4e4b977e}\label{classrouting_1_1models_1_1location_1_1_depot_a4719813198969e0479e9f4cb4e4b977e}} 
+\index{routing.models.location.Depot@{routing.models.location.Depot}!serialize@{serialize}}
+\index{serialize@{serialize}!routing.models.location.Depot@{routing.models.location.Depot}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily def routing.\+models.\+location.\+Depot.\+serialize (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Serializes this depot.
+
+The serializer uses the JavaScript Object Notation, JSON, and serializes this depot.
+
+        Format:
+        {
+            'id': [INTEGER],
+            'is_center': [BOOLEAN],
+            'address': [ADDRESS]
+        }
+
+@return: A JSON object representing this DEPOT.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classrouting_1_1models_1_1location_1_1_location_a62be2574a0f4182a4bdc957c5e846492}{routing.\+models.\+location.\+Location}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+routing/models/location.\+py\end{DoxyCompactItemize}
